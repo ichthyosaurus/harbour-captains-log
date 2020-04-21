@@ -9,6 +9,14 @@ ApplicationWindow
 {
     id: appWindow
 
+    // constants
+    property string timeFormat: qsTr("hh':'mm")
+    property string dateTimeFormat: qsTr("d MMM yyyy, hh':'mm")
+    property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm")
+    property string fullDateFormat: qsTr("ddd d MMM yyyy")
+    property string dbDateFormat: "dd.MM.yyyy | hh:mm"
+    // ---------
+
     property int _lastNotificationId: 0
     property bool unlocked: useCodeProtection.value === 1 ? false : true
 
