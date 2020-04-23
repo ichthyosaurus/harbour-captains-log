@@ -17,6 +17,16 @@ ApplicationWindow
     property string dbDateFormat: "dd.MM.yyyy | hh:mm"
     // ---------
 
+    // global helper functions
+    function parseDate(dbDateString) {
+        var dateTime = dbDateString.split(' | ');
+        var date = dateTime[0].split('.');
+        var time = dateTime[1].split(':');
+        return new Date(parseInt(date[2]), parseInt(date[1]), parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), 0);
+    }
+    // -----------------------
+
+
     property int _lastNotificationId: 0
     property bool unlocked: useCodeProtection.value === 1 ? false : true
 
