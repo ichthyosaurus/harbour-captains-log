@@ -36,6 +36,20 @@ Page {
         anchors.fill: parent
         contentHeight: content.height + Theme.paddingLarge
 
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Edit")
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
+                                       "title": title, "mood": mood, "entry": entry,
+                                       "hashtags": hashtags, "rowid": rowid,
+                                       "creationDate": creationDate, "index": index,
+                                       "acceptDestination": "" // return to the calling page
+                                   })
+                }
+            }
+        }
+
         Column {
             id: content
             width: parent.width
