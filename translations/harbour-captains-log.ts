@@ -28,11 +28,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>mailto: m.gabrielboehme@googlemail.com?subject=Feedback zu Captain&apos;s Log</source>
+        <source>Sources</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sources</source>
+        <source>Feedback</source>
+        <comment>feedback email subject line</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -64,95 +65,21 @@
     </message>
 </context>
 <context>
-    <name>CoverPage</name>
-    <message>
-        <source>Captain&apos;s Log</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>EditPage</name>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edit Entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Changed at: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>How did you really felt?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>fantastic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>good</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>okay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your #hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You might add a title?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Haven&apos;t you something to say?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Everything is better with Hashtags!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Saved your changes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>EntryElement</name>
-    <message>
-        <source>Favorite</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -167,15 +94,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Settings &amp; Export</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add new entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Swipe right to add new entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings and Export</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -197,19 +124,11 @@
 <context>
     <name>ReadPage</name>
     <message>
-        <source>Your Entry</source>
+        <source>Last change: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>#Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Created on: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Last change: </source>
+        <source>mood: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -252,27 +171,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>fantastic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>good</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>okay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search your entries...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter:</source>
+        <comment>the mood filter to apply</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -303,10 +207,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Define your file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Filename</source>
         <translation type="unfinished"></translation>
     </message>
@@ -326,6 +226,14 @@
         <source>Export your data</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Define the file name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data exported to: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>WritePage</name>
@@ -338,7 +246,74 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>How do you feel today?</source>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>#Hashtags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mood:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>How did you feel?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>How do you feel?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add a title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What do you want to say?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>harbour-captains-log</name>
+    <message>
+        <source>hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -362,27 +337,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Your Title</source>
+        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add some Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>#Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood:</source>
+        <source>d MMM yyyy</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
