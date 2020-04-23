@@ -4,170 +4,135 @@ import "../components"
 
 Page {
     id: page
-
-    function getDateString(selection) {
-        var date = selection
-        var year = date.getFullYear()
-        var month = add_leading_zero(date.getMonth()+1) // JS Date starts index with 0
-        var day = add_leading_zero(date.getDate())
-
-        return day+"."+month+"."+year
-    }
-
-    function add_leading_zero(s) {
-        return String("0"+s).slice(-2)
-    }
-
-    function loadModel() {
-        console.log("loadModel() function @ SearchPage was called")
-        py.call("diary.get_filtered_entry_list", [], function(result) {
-            entriesModel.clear()
-            for(var i=0; i<result.length; i++) {
-                entriesModel.append(result[i])
-            }
-            resultList.model = entriesModel
-        }
-        )
-    }
-
-    // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
-    SilicaFlickable {
-        id: content
+    function loadFilteredModel() {
+        console.log("loading filtered model...")
+        py.call("diary.get_filtered_entry_list", [], function(result) {
+            filteredModel.clear()
+            placeholder.enabled = (result.length === 0);
+            for(var i=0; i<result.length; i++) filteredModel.append(result[i])
+        })
+    }
+
+    Component {
+        id: datePicker
+        DatePickerDialog {}
+    }
+
+    DiaryListView {
+        id: listView
         anchors.fill: parent
+        model: ListModel { id: filteredModel }
 
-        PageHeader {
-            id: header
-            title: qsTr("Search")
-        }
+        header: Column {
+            width: parent.width
+            PageHeader {
+                id: header
+                title: qsTr("Search")
+            }
 
-        ComboBox {
-            id: filterCombo
-            anchors.top: header.bottom
-            anchors.right: parent.right
-            anchors.left: parent.left
+            ComboBox {
+                id: filterCombo
+                width: parent.width
 
-            description: qsTr("Filter your results")
-            label: qsTr("Search by:")
-            currentIndex: 0
+                description: qsTr("Filter your results")
+                label: qsTr("Search by:")
+                currentIndex: 0
 
-            menu: ContextMenu {
-                MenuItem {
-                    text: qsTr("Title & Entry")
-                    onClicked: {
-                        entriesModel.clear()
+                menu: ContextMenu {
+                    MenuItem {
+                        property string type: "entry"
+                        text: qsTr("Title and Entry")
+                        onClicked: filteredModel.clear()
                     }
-                }
-                MenuItem {
-                    text: qsTr("Creation date")
-                    onClicked: {
-                        entriesModel.clear()
-                        var selectedDate = pageStack.push(datePicker)
-                        selectedDate.accepted.connect(function() {
-                            var dateStr = add_leading_zero(selectedDate.day)+"."+add_leading_zero(selectedDate.month)+"."+selectedDate.year
-                            py.call("diary.search_date", [dateStr], function() {loadModel()})
-                            pageStack.navigateBack()
+
+                    MenuItem {
+                        property string type: "creation"
+                        text: qsTr("Creation date")
+                        onClicked: {
+                            filteredModel.clear()
+                            var dialog = pageStack.push(datePicker)
+                            dialog.accepted.connect(function() {
+                                var dateString = dialog.date.toLocaleString(Qt.locale(), dbDateFormat)
+                                py.call("diary.search_date", [dateString], function() { loadFilteredModel() })
+                            })
                         }
-                        )
                     }
-                }
-                MenuItem {
-                    text: qsTr("Favorites")
-                    onClicked: {
-                        entriesModel.clear()
-                        py.call("diary.search_favorites", [])
-                        loadModel()
+
+                    MenuItem {
+                        property string type: "favorites"
+                        text: qsTr("Favorites")
+                        onClicked: {
+                            filteredModel.clear()
+                            py.call("diary.search_favorites", [])
+                            loadFilteredModel()
+                        }
                     }
-                }
-                MenuItem {
-                    text: qsTr("Hashtag")
-                    onClicked: {
-                        entriesModel.clear()
+
+                    MenuItem {
+                        property string type: "hashtags"
+                        text: qsTr("Hashtag")
+                        onClicked: filteredModel.clear()
                     }
-                }
-                MenuItem {
-                    text: qsTr("Mood")
-                    onClicked: {
-                        entriesModel.clear()
-                    }
-                }
-            }
-        }
 
-        ComboBox {
-            id: moodCombo
-
-            anchors.top: filterCombo.bottom
-            anchors.right: parent.right
-            anchors.left: parent.left
-
-            // not visible until mood is selected as filter
-            visible: filterCombo.currentIndex === 4 ? true : false
-
-            label: qsTr("Filter:", "the mood filter to apply")
-            description: qsTr("Filter results by mood")
-            currentIndex: -1
-
-            menu: ContextMenu {
-                Repeater {
-                    model: moodTexts
-                    delegate: MenuItem {
-                        text: moodTexts[index]
-                        onClicked: py.call("diary.search_mood", [index], function() {loadModel()})
+                    MenuItem {
+                        property string type: "mood"
+                        text: qsTr("Mood")
+                        onClicked: filteredModel.clear()
                     }
                 }
             }
-        }
 
-        Component {
-            id: datePicker
-            DatePickerDialog {}
-        }
+            ComboBox {
+                id: moodCombo
+                width: parent.width
 
-        SilicaListView {
-            id: resultList
+                // not visible until mood is selected as filter
+                visible: filterCombo.currentItem.type === "mood" ? true : false
 
-            anchors.top: moodCombo.bottom
-            anchors.right: parent.right
-            anchors.left: parent.left
-            anchors.bottom: parent.bottom
+                label: qsTr("Filter:", "the mood filter to apply")
+                description: qsTr("Filter results by mood")
+                currentIndex: -1
 
-            header: SearchField {
+                menu: ContextMenu {
+                    Repeater {
+                        model: moodTexts
+                        delegate: MenuItem {
+                            text: moodTexts[index]
+                            onClicked: py.call("diary.search_mood", [index], function() { loadFilteredModel() })
+                        }
+                    }
+                }
+            }
+
+            SearchField {
                 id: searchField
-
-                // just active in case of text search (title & entry or hashtags)
-                active: filterCombo.currentIndex === 0 || filterCombo.currentIndex === 3 ? true : false
-
                 width: parent.width
                 placeholderText: qsTr("Search your entries...")
+
+                // only active for text search
+                active: filterCombo.currentItem.type === "entry" || filterCombo.currentItem.type === "hashtags" ? true : false
 
                 // Show 'next' icon to indicate pressing Enter will move the
                 // keyboard focus to the next text field in the page
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: {
-                    switch(filterCombo.currentIndex) {
-                    case 0:
-                        py.call("diary.search_entries", [searchField.text], function() {
-                            loadModel()
-                        });
-                        break;
-                    case 3:
-                        py.call("diary.search_hashtags", [searchField.text], function() {
-                            loadModel()
-                        });
-                        break;
+                    var type = filterCombo.currentItem.type
+                    if (type === "entry") {
+                        py.call("diary.search_entries", [searchField.text], function() { loadFilteredModel() });
+                    } else if (type === "hashtags") {
+                        py.call("diary.search_hashtags", [searchField.text], function() { loadFilteredModel() });
                     }
                 }
             }
-
-            clip: true
-            model: entriesModel
-            delegate: EntryElement {}
         }
 
-        ListModel {
-            id: entriesModel
+        ViewPlaceholder {
+            id: placeholder
+            enabled: false
+            text: qsTr("No entries found")
+            hintText: qsTr("No entries matched these criteria.")
         }
     }
 }

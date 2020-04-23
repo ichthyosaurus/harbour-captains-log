@@ -113,7 +113,7 @@ def search_entries(keyword):
 
 def search_date(dateStr):
     """ Search for a date string """
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE creation_date LIKE ? ORDER BY rowid DESC; """, (dateStr+"%", ))
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE creation_date LIKE ? ORDER BY rowid DESC; """, (dateStr.split(' | ')[0]+"%", ))
     rows = cursor.fetchall()
     create_entries_model(rows)
 
