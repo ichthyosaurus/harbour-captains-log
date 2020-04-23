@@ -105,39 +105,16 @@ Page {
             // not visible until mood is selected as filter
             visible: filterCombo.currentIndex === 4 ? true : false
 
-            label: qsTr("Search by:")
+            label: qsTr("Filter:", "the mood filter to apply")
             description: qsTr("Filter results by mood")
             currentIndex: -1
 
             menu: ContextMenu {
-                MenuItem {
-                    text: qsTr("fantastic")
-                    onClicked: {
-                        py.call("diary.search_mood", [0], function() {loadModel()})
-                    }
-                }
-                MenuItem {
-                    text: qsTr("good")
-                    onClicked: {
-                        py.call("diary.search_mood", [1], function() {loadModel()})
-                    }
-                }
-                MenuItem {
-                    text: qsTr("okay")
-                    onClicked: {
-                        py.call("diary.search_mood", [2], function() {loadModel()})
-                    }
-                }
-                MenuItem {
-                    text: qsTr("bad")
-                    onClicked: {
-                        py.call("diary.search_mood", [3], function() {loadModel()})
-                    }
-                }
-                MenuItem {
-                    text: qsTr("horrible")
-                    onClicked: {
-                        py.call("diary.search_mood", [4], function() {loadModel()})
+                Repeater {
+                    model: moodTexts
+                    delegate: MenuItem {
+                        text: moodTexts[index]
+                        onClicked: py.call("diary.search_mood", [index], function() {loadModel()})
                     }
                 }
             }
