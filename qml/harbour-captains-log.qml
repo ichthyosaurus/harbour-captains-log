@@ -31,6 +31,7 @@ ApplicationWindow
         qsTr("bad"),
         qsTr("horrible")
     ]
+    readonly property string appVersionNumber: "1.0"
     // ---------
 
     // global helper functions
