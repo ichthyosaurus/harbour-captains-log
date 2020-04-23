@@ -14,21 +14,54 @@ if os.path.isdir(db_path) == False:
     os.mkdir(db_path)
 
 database = db_path + "/logbuch.db"
+schema = db_path + "/schema_version"
+filtered_entry_list = []
+schema_version = "none"
+
 conn = sqlite3.connect(database)
 cursor = conn.cursor()
 
-filtered_entry_list = []
+def upgrade_schema(from_version):
+    to_version = ""
 
-cursor.execute("""CREATE TABLE IF NOT EXISTS diary
-                  (creation_date TEXT NOT NULL,
-                   modify_date TEXT NOT NULL,
-                   mood INT,
-                   title TEXT,
-                   preview TEXT,
-                   entry TEXT,
-                   favorite BOOL,
-                   hashtags TEXT
-                   );""")
+    if from_version == "none":
+        to_version = "0"
+        cursor.execute("""CREATE TABLE IF NOT EXISTS diary
+                          (creation_date TEXT NOT NULL,
+                           modify_date TEXT NOT NULL,
+                           mood INT,
+                           title TEXT,
+                           preview TEXT,
+                           entry TEXT,
+                           favorite BOOL,
+                           hashtags TEXT
+                           );""")
+    elif from_version == "0":
+        to_version = "1"
+    elif from_version == "1":
+        # we arrived at the latest version; save it and return
+        if schema_version != from_version:
+            conn.commit()
+            with open(schema, "w") as f:
+                f.write(from_version)
+        print("database schema is up-to-date (version: {})".format(from_version))
+        return
+    else:
+        print("Invalid schema version!", from_version)
+        return
+
+    print("upgrading schema from {} to {}...".format(from_version, to_version))
+    upgrade_schema(to_version)
+
+
+if os.path.isfile(schema) == False:
+    schema_version = "none"
+else:
+    with open(schema) as f:
+        schema_version = f.readline().strip()
+
+# make sure database is up-to-date
+upgrade_schema(schema_version)
 
 
 # - - - database functions - - - #
