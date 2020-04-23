@@ -20,7 +20,9 @@ Page {
         py.call("diary.read_all_entries", [], function(result) {
                 entriesModel.clear()
                 for(var i=0; i<result.length; i++) {
-                    entriesModel.append(result[i])
+                    var item = result[i];
+                    item["day"] = item["create_date"].split(' | ')[0];
+                    entriesModel.append(item)
                 }
                 diaryList.model = entriesModel
                 busy.running = false
@@ -54,6 +56,7 @@ Page {
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaListView {
         id: diaryList
+        VerticalScrollDecorator { flickable: diaryList }
 
         Component.onCompleted: {
             // fill with model loading data
@@ -66,7 +69,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
             MenuItem {
-                text: qsTr("Settings & Export")
+                text: qsTr("Settings and Export")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
             MenuItem {
@@ -81,14 +84,47 @@ Page {
             id: header
             title: qsTr("Add new entry")
         }
-        clip: true
+
         contentHeight: Theme.itemSizeHuge
         model: entriesModel
-        delegate: EntryElement {}
+        delegate: EntryElement { }
+        spacing: Theme.paddingMedium
+
+        section {
+            property: "day"
+            delegate: Item {
+                width: parent.width
+                height: childrenRect.height + Theme.paddingSmall
+
+                Label {
+                    id: label
+                    width: parent.width
+                    horizontalAlignment: Text.AlignHCenter
+                    truncationMode: TruncationMode.Fade
+                    color: Theme.highlightColor
+                    text: parseDate(section + " | 0:0").toLocaleString(Qt.locale(), fullDateFormat)
+                }
+                Separator {
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        top: label.baseline
+                        topMargin: 8
+                    }
+                    width: parent.width-2*Theme.horizontalPageMargin
+                    horizontalAlignment: Qt.AlignHCenter
+                    color: Theme.highlightColor
+                }
+            }
+        }
+
+        footer: Item { width: parent.width; height: Theme.horizontalPageMargin }
     }
+
+
     ListModel {
         id: entriesModel
     }
+
     Label {
         id: addEntryLabel
 

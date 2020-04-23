@@ -3,19 +3,24 @@ import Sailfish.Silica 1.0
 
 ListItem {
     id: entryList
+    contentHeight: _isMoodOnly ? iconsColumn.height+Theme.paddingSmall : Theme.itemSizeHuge
 
-    contentHeight: Theme.itemSizeHuge
+    property bool _hasTitle: title !== ""
+    property bool _isMoodOnly: !_hasTitle && preview === ""
 
     function getHashtagText() {
-        if(modify_date.length > 0 && hashtags.length > 0) {
-            return "Edit: "+modify_date + "\t# "+hashtags
-        }
-        else if(modify_date.length > 0 && hashtags.length === 0) {
-            return "Edit: "+modify_date
-        }
-        else {
-            if(hashtags.length > 0) {return hashtags}
-            else {return ""}
+        if (modify_date.length > 0) {
+            var date = parseDate(modify_date).toLocaleString(Qt.locale(), dateTimeFormat);
+            var ret = qsTr("Edit: %1").arg(date)
+
+            if (hashtags.length > 0) {
+                return "%1 – # %2".arg(ret).arg(hashtags)
+            } else {
+                return ret
+            }
+        } else {
+            if (hashtags.length > 0) return "# %1".arg(hashtags)
+            else return ""
         }
     }
 
@@ -23,9 +28,10 @@ ListItem {
         MenuItem {
             text: qsTr("Edit")
             onClicked: {
-                pageStack.push(Qt.resolvedUrl("../pages/EditPage.qml"), {
+                pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                    title_p: title, mood_p: mood, entry_p: entry,
-                                   hashtags_p: hashtags, rowid_p: rowid
+                                   hashtags_p: hashtags, rowid_p: rowid,
+                                   creation_date_p: create_date
                                })
             }
         }
@@ -49,41 +55,60 @@ ListItem {
                        })
     }
 
-    Column {
+    Item {
         id: labels
-        spacing: Theme.paddingSmall
         height: parent.height
         anchors {
+            top: parent.top; bottom: parent.bottom
             left: parent.left; right: icons.left
             leftMargin: Theme.horizontalPageMargin; rightMargin: 0
         }
 
         Label {
             id: createDate
-            font.pixelSize: Theme.fontSizeSmall
+            anchors { top: parent.top }
+            font.pixelSize: Theme.fontSizeMedium
             color: Theme.highlightColor
-            text: create_date
-            font.bold: true
+            // text: create_date
+            text: parseDate(create_date).toLocaleString(Qt.locale(), atTimeFormat)
         }
+
         Label {
             id: titleText
+            anchors { top: createDate.bottom; topMargin: Theme.paddingSmall }
             text: title
+            height: _hasTitle ? contentHeight : 0
             width: parent.width
+            maximumLineCount: 1
+            font.pixelSize: Theme.fontSizeSmall
+            color: Theme.highlightColor
             truncationMode: TruncationMode.Fade
         }
 
         Label {
             id: entryTextPreview
-            text: preview
+            anchors {
+                top: titleText.bottom
+                topMargin: _hasTitle ? Theme.paddingSmall : 0
+                bottom: hashtagsAndModify.top
+            }
+            text: preview !== "" ? preview + "..." : qsTr("mood: %1").arg(moodTexts[mood])
             width: parent.width
-            truncationMode: TruncationMode.Fade
-            font.pixelSize: Theme.fontSizeExtraSmall
+            color: preview !== "" ? Theme.primaryColor : Theme.secondaryColor
+            font.pixelSize: Theme.fontSizeSmall
+            truncationMode: TruncationMode.Elide
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
         }
+
         Label {
             id: hashtagsAndModify
+            anchors { bottom: parent.bottom; bottomMargin: Theme.paddingSmall }
+            width: parent.width
             font.pixelSize: Theme.fontSizeExtraSmall
-            color: Theme.secondaryHighlightColor
+            color: Theme.secondaryColor
             text: entryList.getHashtagText()
+            height: text !== "" ? contentHeight : 0
+            maximumLineCount: 1
             truncationMode: TruncationMode.Fade
         }
     }
