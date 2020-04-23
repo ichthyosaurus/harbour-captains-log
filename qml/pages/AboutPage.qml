@@ -80,8 +80,8 @@ Page {
             text: qsTr("Send Feedback")
             color: Theme.primaryColor
             onClicked: {
-                Qt.openUrlExternally(qsTr("mailto: m.gabrielboehme@googlemail.com" +
-                                      "?subject=Feedback zu Captain's Log"))
+                Qt.openUrlExternally("mailto: m.gabrielboehme@googlemail.com" +
+                                      "?subject=[Captain's Log] %1".arg(qsTr("Feedback", "feedback email subject line")))
             }
         }
         Button {
