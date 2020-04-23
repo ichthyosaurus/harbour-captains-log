@@ -38,6 +38,10 @@ def upgrade_schema(from_version):
                            );""")
     elif from_version == "0":
         to_version = "1"
+
+        # add new mood 'not okay' with index 3, moving 3 to 4, and 4 to 5
+        cursor.execute("""UPDATE diary SET mood=5 WHERE mood=4""")
+        cursor.execute("""UPDATE diary SET mood=4 WHERE mood=3""")
     elif from_version == "1":
         # we arrived at the latest version; save it and return
         if schema_version != from_version:
