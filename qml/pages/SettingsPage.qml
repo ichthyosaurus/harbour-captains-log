@@ -41,13 +41,13 @@ Page {
         anchors.fill: parent
 
         Column {
-
-            width: parent.width - (2*Theme.horizontalPageMargin)
             spacing: Theme.paddingLarge
+            width: parent.width
 
             PageHeader {
                 title: qsTr("Settings")
             }
+
             SectionHeader {
                 text: qsTr("Security")
             }
@@ -57,6 +57,7 @@ Page {
                 text: qsTr("activate code protection")
                 checked: useCodeProtection.value
             }
+
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
 
@@ -66,9 +67,11 @@ Page {
                     pageStack.push(Qt.resolvedUrl("ChangePinPage.qml"))
                 }
             }
+
             SectionHeader {
                 text: qsTr("Export features")
             }
+
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("Export data")
@@ -90,7 +93,7 @@ Page {
             TextField {
                 id: filenameField
                 width: parent.width
-                placeholderText: qsTr("Define your file name...")
+                placeholderText: qsTr("Define the file name...")
                 label: qsTr("Filename")
             }
             ComboBox {
@@ -115,13 +118,13 @@ Page {
         }
         onAccepted: {
             var time = new Date().getTime()
-            var filename = homePath +"/"+ "logbuch_export_"+String(time)+extension
+            var filename = homePath +"/"+ "logbook_export_"+String(time)+extension
 
             if(filenameField.text.length > 0) {
                 filename = homePath +"/"+ filenameField.text+extension
             }
             // notifications are defined in harbour-captains-log.qml
-            showMessage(qsTr("Data exported to: "+filename))
+            showMessage(qsTr("Data exported to: %1").arg(filename))
             py.call("diary.export", [filename, extension])
         }
     }
