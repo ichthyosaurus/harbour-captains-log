@@ -22,14 +22,14 @@ Dialog {
     property alias title: titleField.text
     property alias entry: entryArea.text
     property alias hashtags: hashtagField.text
-    property alias mood: feelCombo.currentIndex
+    property alias mood: feelCombo.selectedIndex
     property int rowid: -1
     property int index: -1
 
     acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
         var creationDate = dbCurrentDate
-        var mood = feelCombo.currentIndex
+        var mood = feelCombo.selectedIndex
         var title_text = titleField.text.trim()
         // regular expression to kick out all newline chars in preview
         var preview = entryArea.text.substring(0, 150).replace(/\r?\n|\r/g, " ").trim()
@@ -84,18 +84,44 @@ Dialog {
 
             ComboBox {
                 id: feelCombo
-
-                currentIndex: 2
+                property int selectedIndex: 2
+                value: moodTexts[selectedIndex]
                 width: parent.width
                 description: editing ? qsTr("How did you feel?") : qsTr("How do you feel?")
                 label: qsTr("Your mood:")
 
                 menu: ContextMenu {
-                    MenuItem { text: moodTexts[0] }
-                    MenuItem { text: moodTexts[1] }
-                    MenuItem { text: moodTexts[2] }
-                    MenuItem { text: moodTexts[3] }
-                    MenuItem { text: moodTexts[4] }
+                    id: menu
+                    Flow {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        property int maxPerLine: Math.floor(parent.width / Theme.itemSizeMedium)
+                        property int itemsPerLine: ((maxPerLine > 3) ? 3 : maxPerLine)
+
+                        width: itemsPerLine*Theme.itemSizeMedium
+                        height: Math.ceil(moodTexts.length/itemsPerLine)*Theme.itemSizeMedium
+
+                        Repeater {
+                            model: moodTexts
+                            delegate: BackgroundItem {
+                                property bool selected: index === feelCombo.selectedIndex
+                                width: Theme.itemSizeMedium; height: width
+                                highlighted: down || selected
+
+                                HighlightImage {
+                                    anchors.centerIn: parent
+                                    source: "../images/mood-%1.png".arg(index)
+                                    highlighted: parent.highlighted
+                                    color: Theme.primaryColor
+                                    highlightColor: Theme.highlightColor
+                                }
+
+                                onClicked: {
+                                    feelCombo.selectedIndex = index
+                                    menu.close()
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
