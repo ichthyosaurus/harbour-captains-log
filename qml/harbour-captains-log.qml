@@ -17,6 +17,13 @@ ApplicationWindow
     property string fullDateFormat: qsTr("ddd d MMM yyyy")
     property string dateFormat: qsTr("d MMM yyyy")
     property string dbDateFormat: "dd.MM.yyyy | hh:mm"
+    property var moodTexts: [
+        qsTr("fantastic"),
+        qsTr("good"),
+        qsTr("okay"),
+        qsTr("bad"),
+        qsTr("horrible")
+    ]
     // ---------
 
     // global helper functions
