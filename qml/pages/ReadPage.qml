@@ -13,85 +13,94 @@ Page {
     property string hashtags_p
     property int rowid
 
-    // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
     SilicaFlickable {
-
         anchors.fill: parent
-        contentHeight: content.height
+        contentHeight: content.height + Theme.paddingLarge
 
         Column {
             id: content
-
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - (2*Theme.horizontalPageMargin)
+            width: parent.width
             spacing: Theme.paddingMedium
 
             PageHeader {
                 id: header
-                title: title_p
+                title: title_p.trim() !== "" ? title_p.trim() : parseDate(creation_date_p).toLocaleString(Qt.locale(), "dddd");
+                description: parseDate(creation_date_p).toLocaleString(Qt.locale(), dateTimeFormat)
+                _titleItem.truncationMode: TruncationMode.Fade
+                _titleItem.maximumLineCount: 2
+                _titleItem.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                _titleItem.horizontalAlignment: Text.AlignRight
+                // TODO show full title below if it is too long
             }
 
-            Label {
-                id: createDateLabel
-                width: parent.width
-                color: Theme.highlightColor
-                text: qsTr("Created on: ")+creation_date_p
-            }
             Label {
                 id: modDateLabel
-                width: parent.width
+                visible: modify_date_p !== ""
+                anchors {
+                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                    right: parent.right; rightMargin: Theme.horizontalPageMargin
+                }
+                horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
-                color: Theme.highlightColor
-                text: qsTr("Last change: ")+modify_date_p
+                color: Theme.secondaryHighlightColor
+                text: modify_date_p !== "" ? qsTr("Last change: %1").arg(parseDate(modify_date_p).toLocaleString(Qt.locale(), dateTimeFormat)) : ""
             }
 
-            Row {
-                spacing: Theme.paddingSmall
+            Item {
+                width: parent.width
+                height: childrenRect.height
 
-                Icon {
+                IconButton {
                     id: favStar
-                    source: favorite_p === 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                    anchors.right: parent.right
+                    icon.source: favorite_p === 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                    onClicked: {} // TODO toggle favorite
                 }
 
-                // Like thumb is rotated to show mood
-                Icon {
-                    anchors.verticalCenter: favStar.verticalCenter
-                    source: "image://theme/icon-s-like"
-                    rotation: {
-                        switch(mood_p) {
-                        case 0:
-                            return 0;
-                        case 1:
-                            return 35;
-                        case 2:
-                            return 75;
-                        case 3:
-                            return 120;
-                        case 4:
-                            return 180
-                        }
+                Label {
+                    anchors {
+                        left: parent.left; leftMargin: Theme.horizontalPageMargin
+                        right: favStar.left; rightMargin: Theme.paddingMedium
+                        verticalCenter: favStar.verticalCenter
                     }
+
+                    text: qsTr("mood: %1").arg(moodTexts[mood_p])
+                    truncationMode: TruncationMode.Fade
                 }
             }
+
             TextArea {
                 id: entryArea
-
+                visible: !moodImage.visible
                 width: parent.width
-                label: qsTr("Your Entry")
                 wrapMode: TextEdit.WordWrap
+                // horizontalAlignment: Text.AlignJustify
                 readOnly: true
                 text: entry_p
             }
+
             TextArea {
                 id: hashtagArea
-
+                visible: !moodImage.visible
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
-                label: qsTr("#Hashtags")
                 readOnly: true
                 text: hashtags_p.length > 0 ? "# "+hashtags_p : ""
+            }
+
+            Item { visible: moodImage.visible; width: parent.width; height: Theme.paddingLarge }
+
+            HighlightImage {
+                id: moodImage
+                visible: entry_p === "" && hashtags_p === ""
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: Math.min(page.width, page.height)/4; height: width
+                fillMode: Image.PreserveAspectFit
+                color: Theme.primaryColor
+                opacity: Theme.opacityLow
+                source: "../images/mood-%1.png".arg(String(mood_p))
             }
         }
     }
