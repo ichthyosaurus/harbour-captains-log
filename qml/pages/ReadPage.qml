@@ -130,7 +130,6 @@ Page {
 
             TextArea {
                 id: hashtagArea
-                visible: !moodImage.visible
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 readOnly: true
@@ -141,7 +140,7 @@ Page {
 
             HighlightImage {
                 id: moodImage
-                visible: entry === "" && hashtags === ""
+                visible: entry === ""
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: Math.min(page.width, page.height)/4; height: width
                 fillMode: Image.PreserveAspectFit
