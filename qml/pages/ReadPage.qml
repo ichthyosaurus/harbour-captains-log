@@ -27,13 +27,10 @@ Page {
 
             PageHeader {
                 id: header
-                title: title_p.trim() !== "" ? title_p.trim() : parseDate(creation_date_p).toLocaleString(Qt.locale(), "dddd");
-                description: parseDate(creation_date_p).toLocaleString(Qt.locale(), dateTimeFormat)
+                title: parseDate(creationDate).toLocaleString(Qt.locale(), "dddd");
+                description: parseDate(creationDate).toLocaleString(Qt.locale(), dateTimeFormat)
                 _titleItem.truncationMode: TruncationMode.Fade
-                _titleItem.maximumLineCount: 2
-                _titleItem.wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                 _titleItem.horizontalAlignment: Text.AlignRight
-                // TODO show full title below if it is too long
             }
 
             Label {
@@ -46,30 +43,49 @@ Page {
                 horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryHighlightColor
-                text: modify_date_p !== "" ? qsTr("Last change: %1").arg(parseDate(modify_date_p).toLocaleString(Qt.locale(), dateTimeFormat)) : ""
+                text: modificationDate !== "" ? qsTr("Last change: %1").arg(parseDate(modificationDate).toLocaleString(Qt.locale(), dateTimeFormat)) : ""
             }
 
-            Item {
+            BackgroundItem {
                 width: parent.width
-                height: childrenRect.height
+                height: Theme.itemSizeSmall
+                onClicked: setFavorite(index, rowid, !favorite)
 
-                IconButton {
+                HighlightImage {
                     id: favStar
-                    anchors.right: parent.right
-                    icon.source: favorite_p === 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
-                    onClicked: {} // TODO toggle favorite
+                    anchors { verticalCenter: parent.verticalCenter; right: parent.right }
+                    highlighted: parent.down
+                    source: favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                }
+
+                Label {
+                    id: moodLabel
+                    anchors { verticalCenter: favStar.verticalCenter; left: parent.left; leftMargin: Theme.horizontalPageMargin }
+                    color: Theme.highlightColor; text: qsTr("mood:")
                 }
 
                 Label {
                     anchors {
-                        left: parent.left; leftMargin: Theme.horizontalPageMargin
-                        right: favStar.left; rightMargin: Theme.paddingMedium
                         verticalCenter: favStar.verticalCenter
+                        left: moodLabel.right; leftMargin: Theme.paddingSmall
+                        right: favStar.left; rightMargin: Theme.paddingMedium
                     }
-
-                    text: qsTr("mood: %1").arg(moodTexts[mood_p])
+                    color: Theme.primaryColor
+                    text: moodTexts[mood]
                     truncationMode: TruncationMode.Fade
                 }
+            }
+
+            Label {
+                anchors {
+                    right: parent.right; rightMargin: Theme.horizontalPageMargin
+                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                }
+                visible: title !== ""
+                text: title
+                wrapMode: Text.WordWrap
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeLarge
             }
 
             TextArea {
