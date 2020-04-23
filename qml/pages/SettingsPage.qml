@@ -62,12 +62,12 @@ Page {
 
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-
                 text: protectionCode.value === "-1" ? qsTr("Set Code") : qsTr("Change Code")
                 visible: protectionSwitch.checked
-                onClicked: {
-                    pageStack.push(Qt.resolvedUrl("ChangePinPage.qml"))
-                }
+                onClicked: pageStack.push(Qt.resolvedUrl("ChangePinPage.qml"), {
+                                              expectedCode: protectionCode.value === "-1" ? "" : protectionCode.value,
+                                              settingsPage: page
+                                          })
             }
 
             SectionHeader {
