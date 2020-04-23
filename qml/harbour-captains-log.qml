@@ -27,6 +27,7 @@ ApplicationWindow
         qsTr("fantastic"),
         qsTr("good"),
         qsTr("okay"),
+        qsTr("not okay"),
         qsTr("bad"),
         qsTr("horrible")
     ]

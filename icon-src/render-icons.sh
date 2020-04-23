@@ -39,7 +39,7 @@
 echo "rendering icons..."
 
 root="../qml/images"
-files=(mood-0@112 mood-1@112 mood-2@112 mood-3@112 mood-4@112)
+files=(mood-0@112 mood-1@112 mood-2@112 mood-3@112 mood-4@112 mood-5@112)
        # harbour-captains-log@256)
 mkdir -p "$root"
 
