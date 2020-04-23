@@ -16,6 +16,22 @@ Page {
 
     allowedOrientations: Orientation.All
 
+    Connections {
+        target: appWindow
+        onEntryFavoriteToggled: {
+            if (index !== page.index) return
+            favorite = isFavorite
+        }
+        onEntryUpdated: {
+            if (rowid !== page.rowid) return
+            modificationDate = changeDate
+            page.mood = mood
+            page.title = title
+            page.entry = entry
+            hashtags = hashs
+        }
+    }
+
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: content.height + Theme.paddingLarge
