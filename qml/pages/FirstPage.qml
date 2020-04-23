@@ -6,32 +6,18 @@ import "../components"
 Page {
     id: firstPage
 
-    ConfigurationValue {
-        id: useCodeProtection
-        key: "/useCodeProtection"
+    Connections {
+        target: appWindow
+        onLoadingStarted: {
+            hint.start()
+            busy.running = true
+            diaryList.visible = false
+        }
+        onLoadingFinished: {
+            busy.running = false
+            diaryList.visible = true
+        }
     }
-
-    function loadModel() {
-        console.log("loadModel() function was called")
-
-        hint.start()
-        busy.running = true
-
-        py.call("diary.read_all_entries", [], function(result) {
-                entriesModel.clear()
-                for(var i=0; i<result.length; i++) {
-                    var item = result[i];
-                    item["day"] = item["create_date"].split(' | ')[0];
-                    entriesModel.append(item)
-                }
-                diaryList.model = entriesModel
-                busy.running = false
-            }
-        )
-    }
-
-    // when code is entered on PinPage, it will set to true
-    property bool unlooked: useCodeProtection.value === 1 ? false : true
 
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
@@ -43,10 +29,6 @@ Page {
     forwardNavigation: true
 
     onStatusChanged: {
-        // loadModel when the page is shown
-        if(status === PageStatus.Activating) {
-            loadModel()
-        }
         // preload WritePage on PageStack
         if(status == PageStatus.Active) {
             pageStack.pushAttached(Qt.resolvedUrl("WritePage.qml"))
@@ -57,10 +39,6 @@ Page {
     SilicaListView {
         id: diaryList
         VerticalScrollDecorator { flickable: diaryList }
-
-        Component.onCompleted: {
-            // fill with model loading data
-        }
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
@@ -120,11 +98,6 @@ Page {
         footer: Item { width: parent.width; height: Theme.horizontalPageMargin }
     }
 
-
-    ListModel {
-        id: entriesModel
-    }
-
     Label {
         id: addEntryLabel
 
@@ -134,6 +107,7 @@ Page {
         text: qsTr("Swipe right to add new entry")
         visible: entriesModel.count === 0 && busy.running === false ? true : false
     }
+
     TouchInteractionHint {
         id: hint
 
@@ -143,10 +117,11 @@ Page {
         visible: addEntryLabel.visible
 
     }
+
     BusyIndicator {
         id: busy
         anchors.centerIn: parent
         size: BusyIndicatorSize.Large
-        running: true
+        running: false
     }
 }

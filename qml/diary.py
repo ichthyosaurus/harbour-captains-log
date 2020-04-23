@@ -58,6 +58,17 @@ def add_entry(creation_date, mood, title, preview, entry, hashs):
                       (creation_date, mood, title, preview, entry, hashs))
     conn.commit()
 
+    entry = {"create_date": creation_date,
+             "modify_date": "",
+             "mood": mood,
+             "title": title.strip(),
+             "preview": preview.strip(),
+             "entry": entry.strip(),
+             "favorite": False,
+             "hashtags": hashs.strip(),
+             "rowid": cursor.lastrowid}
+    return entry
+
 
 def update_entry(modify_date, mood, title, preview, entry, hashs, id):
     """ Updates an entry in the database. """

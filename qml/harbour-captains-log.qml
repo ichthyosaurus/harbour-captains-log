@@ -8,6 +8,12 @@ import "pages"
 ApplicationWindow
 {
     id: appWindow
+    allowedOrientations: defaultAllowedOrientations
+
+    initialPage: useCodeProtection.value === 1 ? pinPage : firstPage
+    cover: Qt.resolvedUrl("cover/CoverPage.qml")
+
+    property ListModel entriesModel: ListModel { }
 
     // constants
     property string timeFormat: qsTr("hh':'mm")
@@ -28,16 +34,70 @@ ApplicationWindow
 
     // global helper functions
     function parseDate(dbDateString) {
+        if (typeof dbDateString === 'undefined' || dbDateString === "") return "";
         var dateTime = dbDateString.split(' | ');
         var date = dateTime[0].split('.');
         var time = dateTime[1].split(':');
         return new Date(parseInt(date[2]), parseInt(date[1]), parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), 0);
     }
-    // -----------------------
 
+    function setFavorite(index, rowid, setTrue) {
+        py.call("diary.update_favorite", [rowid, setTrue])
+        entriesModel.setProperty(index, 'favorite', setTrue)
+        entryFavoriteToggled(index, setTrue)
+    }
+
+    function updateEntry(index, changeDate, mood, title, preview, entry, hashs, rowid) {
+        entriesModel.set(index, { "modify_date": changeDate, "mood": mood, "title": title,
+                             "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid })
+        py.call("diary.update_entry", [changeDate, mood, title, preview, entry, hashs, rowid], function() {
+            console.log("Updated entry in database")
+            entryUpdated(index, changeDate, mood, title, preview, entry, hashs, rowid)
+        })
+    }
+
+    function addEntry(creationDate, mood, title, preview, entry, hashs) {
+        py.call("diary.add_entry", [creationDate, mood, title, preview, entry, hashs], function(entry) {
+            console.log("Added entry to database")
+            entry["day"] = entry["create_date"].split(' | ')[0];
+            entriesModel.insert(0, entry);
+        })
+    }
+
+    function deleteEntry(index, rowid) {
+        py.call("diary.delete_entry", [rowid])
+        entriesModel.remove(index)
+    }
+
+    function loadModel() {
+        loadingStarted()
+
+        py.call("diary.read_all_entries", [], function(result) {
+                entriesModel.clear()
+                for(var i=0; i<result.length; i++) {
+                    var item = result[i];
+                    item["day"] = item["create_date"].split(' | ')[0];
+                    entriesModel.append(item)
+                }
+
+                loadingFinished()
+            }
+        )
+    }
+
+    signal loadingStarted()
+    signal loadingFinished()
+    signal entryUpdated(var index, var changeDate, var mood, var title, var preview, var entry, var hashs, var rowid)
+    signal entryFavoriteToggled(var index, var isFavorite)
+    // -----------------------
 
     property int _lastNotificationId: 0
     property bool unlocked: useCodeProtection.value === 1 ? false : true
+
+    onUnlockedChanged: {
+        if (!unlocked) entriesModel.clear()
+        else if (py.ready) loadModel()
+    }
 
     ConfigurationValue {
         id: useCodeProtection
@@ -67,17 +127,20 @@ ApplicationWindow
         _lastNotificationId = notification.replacesId
     }
 
-    initialPage: useCodeProtection.value === 1 ? pinPage : firstPage
-    cover: Qt.resolvedUrl("cover/CoverPage.qml")
-    allowedOrientations: defaultAllowedOrientations
-
     Python {
         id: py
+        property bool ready: false
 
         Component.onCompleted: {
             // Add the directory of this .qml file to the search path
-            addImportPath(Qt.resolvedUrl('.'));
+            addImportPath(Qt.resolvedUrl('.'))
             importModule("diary", function() {console.log("diary.py loaded")})
+            ready = true
+
+            // Load the model for the first time.
+            // If the app is locked and unlocked, the model will be reloaded
+            // in onUnlockedChanged.
+            loadModel()
         }
     }
 }
