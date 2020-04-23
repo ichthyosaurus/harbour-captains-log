@@ -16,10 +16,9 @@ CONFIG += sailfishapp_qml
 
 DISTFILES += qml/harbour-captains-log.qml \
     qml/cover/CoverPage.qml \
-    qml/imgs/feather_b.png \
-    qml/imgs/feather_w.png \
-    qml/pages/AboutPage.qml \
-    qml/pages/FirstPage.qml \
+    qml/images/*.png \
+    qml/pages/*.qml \
+    qml/components/*.qml \
     rpm/harbour-captains-log.changes.in \
     rpm/harbour-captains-log.changes.run.in \
     rpm/harbour-captains-log.spec \
