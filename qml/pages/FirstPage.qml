@@ -9,13 +9,14 @@ Page {
     Connections {
         target: appWindow
         onLoadingStarted: {
-            hint.start()
             busy.running = true
             diaryList.visible = false
         }
         onLoadingFinished: {
             busy.running = false
             diaryList.visible = true
+            if (entriesModel.count === 0) placeholder.enabled = true
+            else placeholder.enabled = false
         }
     }
 
@@ -60,27 +61,12 @@ Page {
             title: qsTr("Add new entry")
         }
 
+        ViewPlaceholder {
+            id: placeholder
+            enabled: false
+            text: qsTr("No entries yet")
+            hintText: qsTr("Swipe right to add entries")
         }
-    }
-
-    Label {
-        id: addEntryLabel
-
-        anchors.centerIn: firstPage
-
-        font.pixelSize: Theme.fontSizeLarge
-        text: qsTr("Swipe right to add new entry")
-        visible: entriesModel.count === 0 && busy.running === false ? true : false
-    }
-
-    TouchInteractionHint {
-        id: hint
-
-        direction: TouchInteraction.Left
-        interactionMode: TouchInteraction.Swipe
-        loops: Animation.Infinite
-        visible: addEntryLabel.visible
-
     }
 
     BusyIndicator {
