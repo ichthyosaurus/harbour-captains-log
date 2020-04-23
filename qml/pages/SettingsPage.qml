@@ -21,12 +21,14 @@ Page {
 
     onStatusChanged: {
         if(status == PageStatus.Deactivating) {
-            // if protection is switched on AND a protection code is set - save!
-            if(protectionSwitch.checked && protectionCode.value !== "-1") {
+            if (protectionSwitch.checked && protectionCode.value !== "-1") {
+                // if protection is switched on AND a protection code is set - save!
                 useCodeProtection.value = 1
-            }
-            // if not checked or code not set rollback all details
-            else {
+
+                // if the code was just set, make sure the app knows it's unlocked
+                appWindow.unlocked = true
+            } else {
+                // if not checked or code not set rollback all details
                 useCodeProtection.value = 0
                 protectionCode.value = "-1"
             }
