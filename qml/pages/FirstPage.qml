@@ -35,12 +35,11 @@ Page {
         }
     }
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
-    SilicaListView {
+    DiaryListView {
         id: diaryList
-        VerticalScrollDecorator { flickable: diaryList }
+        anchors.fill: parent
+        model: entriesModel
 
-        // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
                 text: qsTr("About")
@@ -56,46 +55,12 @@ Page {
             }
         }
 
-        anchors.fill: parent
-
         header: PageHeader {
             id: header
             title: qsTr("Add new entry")
         }
 
-        contentHeight: Theme.itemSizeHuge
-        model: entriesModel
-        delegate: EntryElement { }
-        spacing: Theme.paddingMedium
-
-        section {
-            property: "day"
-            delegate: Item {
-                width: parent.width
-                height: childrenRect.height + Theme.paddingSmall
-
-                Label {
-                    id: label
-                    width: parent.width
-                    horizontalAlignment: Text.AlignHCenter
-                    truncationMode: TruncationMode.Fade
-                    color: Theme.highlightColor
-                    text: parseDate(section + " | 0:0").toLocaleString(Qt.locale(), fullDateFormat)
-                }
-                Separator {
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        top: label.baseline
-                        topMargin: 8
-                    }
-                    width: parent.width-2*Theme.horizontalPageMargin
-                    horizontalAlignment: Qt.AlignHCenter
-                    color: Theme.highlightColor
-                }
-            }
         }
-
-        footer: Item { width: parent.width; height: Theme.horizontalPageMargin }
     }
 
     Label {
