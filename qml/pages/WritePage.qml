@@ -15,19 +15,20 @@ Dialog {
 
     property string currentDate: new Date().toLocaleString(Qt.locale(), fullDateTimeFormat);
     property string dbCurrentDate: new Date().toLocaleString(Qt.locale(), dbDateFormat);
-    property bool editing: rowid_p > -1
+    property bool editing: rowid > -1
 
-    property string creation_date_p: ""
-    property string change_date_p: dbCurrentDate
-    property alias title_p: titleField.text
-    property alias entry_p: entryArea.text
-    property alias hashtags_p: hashtagField.text
-    property alias mood_p: feelCombo.currentIndex
-    property int rowid_p: -1
+    property string creationDate: ""
+    property string changeDate: dbCurrentDate
+    property alias title: titleField.text
+    property alias entry: entryArea.text
+    property alias hashtags: hashtagField.text
+    property alias mood: feelCombo.currentIndex
+    property int rowid: -1
+    property int index: -1
 
     acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
-        var creation_date = dbCurrentDate
+        var creationDate = dbCurrentDate
         var mood = feelCombo.currentIndex
         var title_text = titleField.text.trim()
         // regular expression to kick out all newline chars in preview
@@ -36,15 +37,9 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            py.call("diary.update_entry", [change_date_p, mood, title_text, preview, entry, hashs, rowid_p], function() {
-                    console.log("Updated entry in database")
-                }
-            )
+            updateEntry(index, changeDate, mood, title_text, preview, entry, hashs, rowid);
         } else {
-            py.call("diary.add_entry", [creation_date, mood, title_text, preview, entry, hashs], function() {
-                    console.log("Added entry to database")
-                }
-            )
+            addEntry(creationDate, mood, title_text, preview, entry, hashs);
         }
     }
 
@@ -71,7 +66,7 @@ Dialog {
                 Row {
                     spacing: Theme.paddingSmall
                     Label { color: Theme.highlightColor; text: qsTr("Created:") }
-                    Label { color: Theme.primaryColor; text: parseDate(creation_date_p).toLocaleString(Qt.locale(), fullDateTimeFormat) }
+                    Label { color: Theme.primaryColor; text: parseDate(creationDate).toLocaleString(Qt.locale(), fullDateTimeFormat) }
                 }
                 Row {
                     spacing: Theme.paddingSmall

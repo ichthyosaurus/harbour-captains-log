@@ -4,14 +4,15 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
-    property string creation_date_p
-    property string modify_date_p
-    property int mood_p
-    property string title_p
-    property string entry_p
-    property int favorite_p
-    property string hashtags_p
+    property string creationDate
+    property string modificationDate
+    property int mood
+    property string title
+    property string entry
+    property bool favorite
+    property string hashtags
     property int rowid
+    property int index
 
     allowedOrientations: Orientation.All
 
@@ -37,7 +38,7 @@ Page {
 
             Label {
                 id: modDateLabel
-                visible: modify_date_p !== ""
+                visible: modificationDate !== ""
                 anchors {
                     left: parent.left; leftMargin: Theme.horizontalPageMargin
                     right: parent.right; rightMargin: Theme.horizontalPageMargin
@@ -78,7 +79,7 @@ Page {
                 wrapMode: TextEdit.WordWrap
                 // horizontalAlignment: Text.AlignJustify
                 readOnly: true
-                text: entry_p
+                text: entry
             }
 
             TextArea {
@@ -87,20 +88,20 @@ Page {
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 readOnly: true
-                text: hashtags_p.length > 0 ? "# "+hashtags_p : ""
+                text: hashtags.length > 0 ? "# "+hashtags : ""
             }
 
             Item { visible: moodImage.visible; width: parent.width; height: Theme.paddingLarge }
 
             HighlightImage {
                 id: moodImage
-                visible: entry_p === "" && hashtags_p === ""
+                visible: entry === "" && hashtags === ""
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: Math.min(page.width, page.height)/4; height: width
                 fillMode: Image.PreserveAspectFit
                 color: Theme.primaryColor
                 opacity: Theme.opacityLow
-                source: "../images/mood-%1.png".arg(String(mood_p))
+                source: "../images/mood-%1.png".arg(String(mood))
             }
         }
     }

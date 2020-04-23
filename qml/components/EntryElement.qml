@@ -30,29 +30,26 @@ ListItem {
             text: qsTr("Edit")
             onClicked: {
                 pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
-                                   title_p: title, mood_p: mood, entry_p: entry,
-                                   hashtags_p: hashtags, rowid_p: rowid,
-                                   creation_date_p: create_date
+                                   "title": title, "mood": mood, "entry": entry,
+                                   "hashtags": hashtags, "rowid": rowid,
+                                   "creationDate": create_date, "index": index
                                })
             }
         }
         MenuItem {
             text: qsTr("Delete")
             onClicked: {
-                entryList.remorseDelete(function () {
-                    py.call("diary.delete_entry", [rowid])
-                    firstPage.loadModel()
-                })
+                entryList.remorseDelete(function () { deleteEntry(index, rowid) })
             }
         }
     }
 
     onClicked: {
         pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
-                           creation_date_p: create_date, modify_date_p: modify_date,
-                           mood_p: mood, title_p: title,
-                           entry_p: entry, favorite_p: favorite,
-                           hashtags_p: hashtags, rowid_p: rowid
+                           "creationDate": create_date, "modificationDate": modify_date,
+                           "mood": mood, "title": title,
+                           "entry": entry, "favorite": favorite,
+                           "hashtags": hashtags, "rowid": rowid, "index": index
                        })
     }
 
@@ -120,11 +117,7 @@ ListItem {
         width: favStar.width + 2*Theme.paddingLarge
         anchors.right: parent.right
 
-        onClicked: {
-            var status = favorite === 1 ? 0 : 1
-            py.call("diary.update_favorite", [rowid, status])
-            firstPage.loadModel()
-        }
+        onClicked: setFavorite(index, rowid, !favorite)
 
         Column {
             id: iconsColumn
@@ -134,7 +127,7 @@ ListItem {
             Icon {
                 id: favStar
                 opacity: Theme.opacityHigh
-                source: favorite === 0 ? "image://theme/icon-m-favorite" : "image://theme/icon-m-favorite-selected"
+                source: favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
             }
 
             HighlightImage {
