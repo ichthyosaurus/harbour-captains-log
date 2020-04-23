@@ -111,26 +111,14 @@ ListItem {
                 source: favorite === 0 ? "image://theme/icon-m-favorite" : "image://theme/icon-m-favorite-selected"
             }
 
-            Label {
-                // TODO use images instead to be consistent across devices
+            HighlightImage {
+                id: moodImage
                 anchors.horizontalCenter: favStar.horizontalCenter
-                font.pixelSize: Theme.fontSizeLarge
+                width: 65; height: width
+                fillMode: Image.PreserveAspectFit
                 color: Theme.primaryColor
                 opacity: 1-Theme.opacityFaint*mood
-                text: {
-                    switch(mood) {
-                    case 0:
-                        return "😄";
-                    case 1:
-                        return "😊";
-                    case 2:
-                        return "😐";
-                    case 3:
-                        return "😞";
-                    case 4:
-                        return "😧";
-                    }
-                }
+                source: "../images/mood-%1.png".arg(String(mood))
             }
         }
     }
