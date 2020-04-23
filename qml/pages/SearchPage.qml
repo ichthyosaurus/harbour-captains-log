@@ -20,7 +20,7 @@ Page {
 
     function loadModel() {
         console.log("loadModel() function @ SearchPage was called")
-        py.call("diary.get_entry_list", [], function(result) {
+        py.call("diary.get_filtered_entry_list", [], function(result) {
             entriesModel.clear()
             for(var i=0; i<result.length; i++) {
                 entriesModel.append(result[i])

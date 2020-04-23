@@ -17,7 +17,7 @@ database = db_path + "/logbuch.db"
 conn = sqlite3.connect(database)
 cursor = conn.cursor()
 
-entry_list = []
+filtered_entry_list = []
 
 cursor.execute("""CREATE TABLE IF NOT EXISTS diary
                   (creation_date TEXT NOT NULL,
@@ -142,7 +142,7 @@ def search_mood(mood):
 def create_entries_model(rows):
     """ Create the QML ListModel to be shown on main page """
 
-    entry_list.clear()
+    filtered_entry_list.clear()
 
     for row in rows:
         entry = {"create_date": row[0],
@@ -154,13 +154,13 @@ def create_entries_model(rows):
                  "favorite": True if row[6] == 1 else False,
                  "hashtags": row[7].strip(),
                  "rowid": row[8]}
-        entry_list.append(entry)
-    return entry_list
+        filtered_entry_list.append(entry)
+    return filtered_entry_list
 
 
-def get_entry_list():
+def get_filtered_entry_list():
     """ return the latest status of the entries list """
-    return entry_list
+    return filtered_entry_list
 
 
 # - - - export features - - - #
@@ -171,7 +171,7 @@ def export(filename, type):
 
     # get latest state of the database
     read_all_entries()
-    rows = get_entry_list()
+    rows = get_filtered_entry_list()
 
     moods = ["Fantastic", "Good", "Okay", "Bad", "Horrible"]
 
