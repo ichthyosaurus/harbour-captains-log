@@ -4,18 +4,13 @@ import Nemo.Configuration 1.0
 
 Page {
     id: page
-
-    ConfigurationValue {
-        id: protectionCode
-        key: "/protectionCode"
-    }
-
-    // attach main page, that can be opened, if pin is accepted
-    onForwardNavigationChanged: pageStack.pushAttached(Qt.resolvedUrl("FirstPage.qml"))
-    canNavigateForward: false
-
-    // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
+
+    property string expectedCode: ""
+    property alias enteredCode: pinField.text
+    property string title: qsTr("Please enter your security code")
+
+    signal accepted
 
     SilicaFlickable {
         id: content
@@ -34,7 +29,7 @@ Page {
             wrapMode: Text.WordWrap
             truncationMode: TruncationMode.Fade
 
-            text: qsTr("Please enter your security code")
+            text: title
             color: Theme.highlightColor
             font.pixelSize: Theme.fontSizeExtraLarge
         }
@@ -114,11 +109,9 @@ Page {
             }
 
             onClicked: {
-                if (pinField.text === protectionCode.value) {
-                    canNavigateForward = true
-                    forwardNavigation = true
+                if (expectedCode === "" || pinField.text === expectedCode) {
                     appWindow.unlocked = true
-                    pageStack.navigateForward()
+                    accepted()
                 } else {
                     pinField.color = Theme.secondaryColor
                     errorLabel.opacity = 1.0

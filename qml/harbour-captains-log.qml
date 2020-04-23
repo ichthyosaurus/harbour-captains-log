@@ -104,7 +104,14 @@ ApplicationWindow
 
     Component {
         id: pinPage
-        PinPage {}
+        PinPage {
+            expectedCode: protectionCode.value
+            onAccepted: pageStack.push(Qt.resolvedUrl("pages/FirstPage.qml"))
+            ConfigurationValue {
+                id: protectionCode
+                key: "/protectionCode"
+            }
+        }
     }
 
     Component  {
