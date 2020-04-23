@@ -59,7 +59,6 @@ ApplicationWindow
     function addEntry(creationDate, mood, title, preview, entry, hashs) {
         py.call("diary.add_entry", [creationDate, mood, title, preview, entry, hashs], function(entry) {
             console.log("Added entry to database")
-            entry["day"] = entry["create_date"].split(' | ')[0];
             entriesModel.insert(0, entry);
         })
     }
@@ -76,7 +75,6 @@ ApplicationWindow
                 entriesModel.clear()
                 for(var i=0; i<result.length; i++) {
                     var item = result[i];
-                    item["day"] = item["create_date"].split(' | ')[0];
                     entriesModel.append(item)
                 }
 
