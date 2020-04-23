@@ -3,11 +3,12 @@ import Sailfish.Silica 1.0
 
 ListItem {
     id: entryList
-    contentHeight: _isMoodOnly ? iconsColumn.height+Theme.paddingSmall : Theme.itemSizeHuge
+    contentHeight: _isMoodOnly ? (iconsColumn.height + (_hasTags ? Theme.paddingLarge : Theme.paddingSmall)) : Theme.itemSizeHuge
     ListView.onRemove: animateRemoval()
 
     property bool _hasTitle: title !== ""
     property bool _isMoodOnly: !_hasTitle && preview === ""
+    property bool _hasTags: hashtagsAndModify.text !== ""
 
     function getHashtagText() {
         if (modify_date.length > 0) {
@@ -90,7 +91,7 @@ ListItem {
                 topMargin: _hasTitle ? Theme.paddingSmall : 0
                 bottom: hashtagsAndModify.top
             }
-            text: preview !== "" ? preview + "..." : qsTr("mood: %1").arg(moodTexts[mood])
+            text: preview !== "" ? preview : qsTr("mood: %1").arg(moodTexts[mood])
             width: parent.width
             color: preview !== "" ? Theme.primaryColor : Theme.secondaryColor
             font.pixelSize: Theme.fontSizeSmall
