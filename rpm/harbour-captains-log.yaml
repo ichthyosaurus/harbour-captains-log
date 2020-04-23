@@ -5,15 +5,15 @@ Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group: Qt/Qt
-URL: http://example.org/
+URL: https://github.com/AlphaX2/Captains-Log-Sailfish
 BuildArch: noarch
-License: LICENSE
+License: GPLv3
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  Short description of my Sailfish OS Application
+  A simple diary application for keeping track of your thoughts.
 Configure: none
 Builder: qmake5
 
