@@ -55,7 +55,7 @@ def add_entry(creation_date, mood, title, preview, entry, hashs):
     """ Add new entry to the database. By default last modification is set to NULL and favorite option to FALSE. """
     cursor.execute("""INSERT INTO diary
                       VALUES (?, "", ?, ?, ?, ?, 0, ?);""",
-                      (creation_date, mood, title, preview, entry, hashs))
+                      (creation_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip()))
     conn.commit()
 
     entry = {"create_date": creation_date,
@@ -81,7 +81,7 @@ def update_entry(modify_date, mood, title, preview, entry, hashs, id):
                               hashtags = ?
                           WHERE
                               rowid = ?;""",
-                              (modify_date, mood, title, preview, entry, hashs, id))
+                              (modify_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), id))
     conn.commit()
 
 
@@ -89,7 +89,7 @@ def update_favorite(id, fav):
     """ Just updates the status of the favorite option """
     cursor.execute(""" UPDATE diary
                        SET favorite = ?
-                       WHERE rowid = ?; """, (fav, id))
+                       WHERE rowid = ?; """, (1 if fav else 0, id))
     conn.commit()
 
 
@@ -148,13 +148,12 @@ def create_entries_model(rows):
         entry = {"create_date": row[0],
                  "modify_date": row[1],
                  "mood": row[2],
-                 "title": row[3],
-                 "preview": row[4],
-                 "entry": row[5],
-                 "favorite": row[6],
-                 "hashtags": row[7],
+                 "title": row[3].strip(),
+                 "preview": row[4].strip(),
+                 "entry": row[5].strip(),
+                 "favorite": True if row[6] == 1 else False,
+                 "hashtags": row[7].strip(),
                  "rowid": row[8]}
-
         entry_list.append(entry)
     return entry_list
 
