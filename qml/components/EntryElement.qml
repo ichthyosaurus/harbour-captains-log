@@ -4,6 +4,7 @@ import Sailfish.Silica 1.0
 ListItem {
     id: entryList
     contentHeight: _isMoodOnly ? iconsColumn.height+Theme.paddingSmall : Theme.itemSizeHuge
+    ListView.onRemove: animateRemoval()
 
     property bool _hasTitle: title !== ""
     property bool _isMoodOnly: !_hasTitle && preview === ""
