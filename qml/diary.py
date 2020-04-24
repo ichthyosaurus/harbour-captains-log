@@ -20,6 +20,7 @@
 import os
 import csv
 import sqlite3
+import re
 
 # - - - basic settings - - - #
 
@@ -118,6 +119,46 @@ else:
 upgrade_schema(schema_version)
 
 
+# - - - add support for regex matching - - - #
+
+def regexp(expr, item):
+    if item is None:
+        return False
+
+    reg = re.compile(expr)
+    return reg.search(item) is not None
+
+
+conn.create_function("REGEXP", 2, regexp)
+
+
+# - - - helper functions - - - #
+
+def _parse_date(date_string):
+    if not date_string:
+        return ()
+
+    date_time = date_string.split(' | ')
+    date = date_time[0].split('.')
+    time = date_time[1].split(':')
+    sec = time[2] if len(time) >= 3 else "0"
+
+    return (int(date[2]), int(date[1]), int(date[0]), int(time[0]), int(time[1]), int(sec))
+
+
+def _format_date(date_string, tz_string):
+    date = _parse_date(date_string)
+    zone = " [{}]".format(tz_string) if tz_string else ""
+
+    if date_string:
+        date_string = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}{tz}".format(
+            date[0], date[1], date[2], date[3], date[4], date[5], tz=zone)
+    else:
+        date_string = "never{tz}".format(tz=zone)
+
+    return date_string
+
+
 # - - - database functions - - - #
 
 def read_all_entries():
@@ -191,11 +232,15 @@ def search_entries(keyword):
     create_entries_model(rows)
 
 
-def search_date(dateStr):
+def search_date(dateString):
     """ Search for a date string """
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE create_date LIKE ? ORDER BY rowid DESC; """, (dateStr.split(' | ')[0]+"%", ))
+    date = _parse_date(dateString)
+    expression = "^0?{}\.0?{}\.{} \| ".format(date[2], date[1], date[0])
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE create_date REGEXP ? ORDER BY rowid DESC; """, (expression, ))
     rows = cursor.fetchall()
     create_entries_model(rows)
+    print(rows)
+
 
 def search_hashtags(hash):
     """ Search for a specific hashtag """
@@ -248,32 +293,6 @@ def get_filtered_entry_list():
 
 
 # - - - export features - - - #
-
-
-def _parse_date(date_string):
-    if not date_string:
-        return ()
-
-    date_time = date_string.split(' | ')
-    date = date_time[0].split('.')
-    time = date_time[1].split(':')
-    sec = time[2] if len(time) >= 3 else "0"
-
-    return (int(date[2]), int(date[1]), int(date[0]), int(time[0]), int(time[1]), int(sec))
-
-
-def _format_date(date_string, tz_string):
-    date = _parse_date(date_string)
-    zone = " [{}]".format(tz_string) if tz_string else ""
-
-    if date_string:
-        date_string = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}{tz}".format(
-            date[0], date[1], date[2], date[3], date[4], date[5], tz=zone)
-    else:
-        date_string = "never{tz}".format(tz=zone)
-
-    return date_string
-
 
 def export(filename, type):
     """ Export to ~/filename as txt or csv """
