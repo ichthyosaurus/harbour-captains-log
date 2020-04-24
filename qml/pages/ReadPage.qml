@@ -13,6 +13,7 @@ Page {
     property string hashtags
     property int rowid
     property int index
+    property var model
 
     property bool editable: true
     allowedOrientations: Orientation.All
@@ -20,7 +21,7 @@ Page {
     Connections {
         target: appWindow
         onEntryFavoriteToggled: {
-            if (index !== page.index) return
+            if (rowid !== page.rowid) return
             favorite = isFavorite
         }
         onEntryUpdated: {
@@ -45,7 +46,7 @@ Page {
                     pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
                                        "hashtags": hashtags, "rowid": rowid,
-                                       "creationDate": creationDate, "index": index,
+                                       "creationDate": creationDate, "index": index, "model": model,
                                        "acceptDestination": "" // return to the calling page
                                    })
                 }
@@ -81,7 +82,7 @@ Page {
             BackgroundItem {
                 width: parent.width
                 height: Theme.itemSizeSmall
-                onClicked: setFavorite(index, rowid, !favorite)
+                onClicked: setFavorite(model, index, rowid, !favorite)
                 enabled: editable
 
                 HighlightImage {

@@ -30,9 +30,10 @@ Page {
     forwardNavigation: true
 
     onStatusChanged: {
-        // preload WritePage on PageStack
         if(status == PageStatus.Active) {
+            // preload WritePage on PageStack
             pageStack.pushAttached(Qt.resolvedUrl("WritePage.qml"))
+            if (_scheduleReload) loadModel()
         }
     }
 

@@ -8,7 +8,11 @@ SilicaListView {
     spacing: Theme.paddingMedium
 
     property bool editable: true
-    delegate: EntryElement { editable: diaryList.editable }
+
+    delegate: EntryElement {
+        realModel: diaryList.model
+        editable: diaryList.editable
+    }
 
     section {
         property: "day"

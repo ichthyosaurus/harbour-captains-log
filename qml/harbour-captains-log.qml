@@ -43,18 +43,20 @@ ApplicationWindow
         return new Date(parseInt(date[2]), parseInt(date[1]), parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), 0);
     }
 
-    function setFavorite(index, rowid, setTrue) {
+    function setFavorite(model, index, rowid, setTrue) {
         py.call("diary.update_favorite", [rowid, setTrue])
-        entriesModel.setProperty(index, 'favorite', setTrue)
-        entryFavoriteToggled(index, setTrue)
+        model.setProperty(index, 'favorite', setTrue)
+        entryFavoriteToggled(rowid, setTrue)
+        if (model !== entriesModel) _scheduleReload = true;
     }
 
-    function updateEntry(index, changeDate, mood, title, preview, entry, hashs, rowid) {
-        entriesModel.set(index, { "modify_date": changeDate, "mood": mood, "title": title,
+    function updateEntry(model, index, changeDate, mood, title, preview, entry, hashs, rowid) {
+        model.set(index, { "modify_date": changeDate, "mood": mood, "title": title,
                              "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid })
         py.call("diary.update_entry", [changeDate, mood, title, preview, entry, hashs, rowid], function() {
             console.log("Updated entry in database")
-            entryUpdated(index, changeDate, mood, title, preview, entry, hashs, rowid)
+            entryUpdated(changeDate, mood, title, preview, entry, hashs, rowid)
+            if (model !== entriesModel) _scheduleReload = true;
         })
     }
 
@@ -65,13 +67,17 @@ ApplicationWindow
         })
     }
 
-    function deleteEntry(index, rowid) {
+    function deleteEntry(model, index, rowid) {
         py.call("diary.delete_entry", [rowid])
-        entriesModel.remove(index)
+        model.remove(index)
+        if (model !== entriesModel) _scheduleReload = true;
     }
 
     function loadModel() {
+        _modelReady = false;
+        _scheduleReload = false;
         loadingStarted()
+        console.log("loading entries...")
 
         py.call("diary.read_all_entries", [], function(result) {
                 entriesModel.clear()
@@ -81,15 +87,19 @@ ApplicationWindow
                 }
 
                 loadingFinished()
+                _modelReady = true;
             }
         )
     }
 
     signal loadingStarted()
     signal loadingFinished()
-    signal entryUpdated(var index, var changeDate, var mood, var title, var preview, var entry, var hashs, var rowid)
-    signal entryFavoriteToggled(var index, var isFavorite)
+    signal entryUpdated(var changeDate, var mood, var title, var preview, var entry, var hashs, var rowid)
+    signal entryFavoriteToggled(var rowid, var isFavorite)
     // -----------------------
+
+    property bool _modelReady: false
+    property bool _scheduleReload: false // schedules the model to be reloaded when FirstPage ist activated
 
     property int _lastNotificationId: 0
     property bool unlocked: useCodeProtection.value === 1 ? false : true

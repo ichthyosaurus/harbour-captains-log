@@ -7,6 +7,7 @@ ListItem {
     ListView.onRemove: animateRemoval()
 
     property bool editable: true
+    property ListModel realModel: model
     property bool _hasTitle: title !== ""
     property bool _isMoodOnly: !_hasTitle && preview === ""
     property bool _hasTags: hashtagsAndModify.text !== ""
@@ -35,14 +36,14 @@ ListItem {
                 pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                    "title": title, "mood": mood, "entry": entry,
                                    "hashtags": hashtags, "rowid": rowid,
-                                   "creationDate": create_date, "index": index
+                                   "creationDate": create_date, "index": index, "model": realModel
                                })
             }
         }
         MenuItem {
             text: qsTr("Delete")
             onClicked: {
-                entryList.remorseDelete(function () { deleteEntry(index, rowid) })
+                entryList.remorseDelete(function () { deleteEntry(realModel, index, rowid) })
             }
         }
     }
@@ -53,7 +54,7 @@ ListItem {
                            "mood": mood, "title": title,
                            "entry": entry, "favorite": favorite,
                            "hashtags": hashtags, "rowid": rowid, "index": index,
-                           "editable": editable
+                           "model": realModel, "editable": editable
                        })
     }
 
@@ -122,7 +123,7 @@ ListItem {
         anchors.right: parent.right
 
         enabled: editable
-        onClicked: setFavorite(index, rowid, !favorite)
+        onClicked: setFavorite(realModel, index, rowid, !favorite)
 
         Column {
             id: iconsColumn

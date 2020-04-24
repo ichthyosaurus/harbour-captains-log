@@ -25,6 +25,7 @@ Dialog {
     property alias mood: feelCombo.selectedIndex
     property int rowid: -1
     property int index: -1
+    property var model: ""
 
     acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
@@ -37,7 +38,7 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            updateEntry(index, changeDate, mood, title_text, preview, entry, hashs, rowid);
+            updateEntry(model, index, changeDate, mood, title_text, preview, entry, hashs, rowid);
         } else {
             addEntry(creationDate, mood, title_text, preview, entry, hashs);
         }
