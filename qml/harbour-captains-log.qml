@@ -16,13 +16,13 @@ ApplicationWindow
     property ListModel entriesModel: ListModel { }
 
     // constants
-    property string timeFormat: qsTr("hh':'mm")
-    property string atTimeFormat: qsTr("'at' hh':'mm")
-    property string dateTimeFormat: qsTr("d MMM yyyy, hh':'mm")
-    property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm")
-    property string fullDateFormat: qsTr("ddd d MMM yyyy")
-    property string dateFormat: qsTr("d MMM yyyy")
-    property string dbDateFormat: "dd.MM.yyyy | hh:mm"
+    readonly property string timeFormat: qsTr("hh':'mm")
+    readonly property string atTimeFormat: qsTr("'at' hh':'mm")
+    readonly property string dateTimeFormat: qsTr("d MMM yyyy, hh':'mm")
+    readonly property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm")
+    readonly property string fullDateFormat: qsTr("ddd d MMM yyyy")
+    readonly property string dateFormat: qsTr("d MMM yyyy")
+    readonly property string dbDateFormat: "dd.MM.yyyy | hh:mm"
     property var moodTexts: [
         qsTr("fantastic"),
         qsTr("good"),
