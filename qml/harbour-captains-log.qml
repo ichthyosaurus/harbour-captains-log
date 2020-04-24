@@ -16,6 +16,7 @@ ApplicationWindow
     property ListModel entriesModel: ListModel { }
 
     // constants
+    readonly property string timezone: new Date().toLocaleString(Qt.locale("C"), "t")
     readonly property string timeFormat: qsTr("hh':'mm")
     readonly property string atTimeFormat: qsTr("'at' hh':'mm")
     readonly property string dateTimeFormat: qsTr("d MMM yyyy, hh':'mm")
@@ -46,8 +47,13 @@ ApplicationWindow
         return new Date(parseInt(date[2]), parseInt(date[1])-1, parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), sec);
     }
 
-    function formatDate(dbDateString, format) {
-        return parseDate(dbDateString).toLocaleString(Qt.locale(), format)
+    function formatDate(dbDateString, format, zone) {
+        var date = parseDate(dbDateString).toLocaleString(Qt.locale(), format)
+        if (zone !== undefined && zone !== "" && zone !== timezone) {
+            return qsTr("%1 (%2)", "1: date, 2: time zone info").arg(date).arg(zone)
+        }
+
+        return date
     }
 
     function setFavorite(model, index, rowid, setTrue) {
