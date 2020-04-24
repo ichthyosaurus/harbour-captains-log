@@ -36,6 +36,12 @@ ApplicationWindow
 
     property ListModel entriesModel: ListModel { }
 
+    // ===============================
+    // ATTENTION UPDATE BEFORE RELEASE
+    // -------------------------------
+    readonly property string appVersionNumber: "2.0.0"
+    // ===============================
+
     // constants
     readonly property string timezone: new Date().toLocaleString(Qt.locale("C"), "t")
     readonly property string timeFormat: qsTr("hh':'mm")
@@ -53,7 +59,6 @@ ApplicationWindow
         qsTr("bad"),
         qsTr("horrible")
     ]
-    readonly property string appVersionNumber: "1.0"
     // ---------
 
     // global helper functions
