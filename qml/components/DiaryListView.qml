@@ -7,7 +7,8 @@ SilicaListView {
     contentHeight: Theme.itemSizeHuge
     spacing: Theme.paddingMedium
 
-    delegate: EntryElement { }
+    property bool editable: true
+    delegate: EntryElement { editable: diaryList.editable }
 
     section {
         property: "day"

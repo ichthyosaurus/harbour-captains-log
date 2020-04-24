@@ -25,6 +25,14 @@ Page {
         anchors.fill: parent
         model: ListModel { id: filteredModel }
 
+        // TODO implement signalling so that we can allow editing from here
+        // Currently, only the main entriesModel is updated and all
+        // update functions expect index values the same. Of course, they
+        // are not the same as for our filteredModel.
+        // We do NOT want Connections in every single EntryElement. That
+        // is horrible for performance.
+        editable: false
+
         header: Column {
             width: parent.width
             PageHeader {

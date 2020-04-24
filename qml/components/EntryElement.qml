@@ -6,6 +6,7 @@ ListItem {
     contentHeight: _isMoodOnly ? (iconsColumn.height + (_hasTags ? Theme.paddingLarge : Theme.paddingSmall)) : Theme.itemSizeHuge
     ListView.onRemove: animateRemoval()
 
+    property bool editable: true
     property bool _hasTitle: title !== ""
     property bool _isMoodOnly: !_hasTitle && preview === ""
     property bool _hasTags: hashtagsAndModify.text !== ""
@@ -27,6 +28,7 @@ ListItem {
     }
 
     menu: ContextMenu {
+        enabled: editable
         MenuItem {
             text: qsTr("Edit")
             onClicked: {
@@ -50,7 +52,8 @@ ListItem {
                            "creationDate": create_date, "modificationDate": modify_date,
                            "mood": mood, "title": title,
                            "entry": entry, "favorite": favorite,
-                           "hashtags": hashtags, "rowid": rowid, "index": index
+                           "hashtags": hashtags, "rowid": rowid, "index": index,
+                           "editable": editable
                        })
     }
 
@@ -118,6 +121,7 @@ ListItem {
         width: favStar.width + 2*Theme.paddingLarge
         anchors.right: parent.right
 
+        enabled: editable
         onClicked: setFavorite(index, rowid, !favorite)
 
         Column {

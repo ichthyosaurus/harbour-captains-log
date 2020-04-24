@@ -14,6 +14,7 @@ Page {
     property int rowid
     property int index
 
+    property bool editable: true
     allowedOrientations: Orientation.All
 
     Connections {
@@ -37,6 +38,7 @@ Page {
         contentHeight: content.height + Theme.paddingLarge
 
         PullDownMenu {
+            enabled: editable
             MenuItem {
                 text: qsTr("Edit")
                 onClicked: {
@@ -80,6 +82,7 @@ Page {
                 width: parent.width
                 height: Theme.itemSizeSmall
                 onClicked: setFavorite(index, rowid, !favorite)
+                enabled: editable
 
                 HighlightImage {
                     id: favStar
