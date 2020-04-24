@@ -74,8 +74,8 @@ Dialog {
                 }
                 Row {
                     spacing: Theme.paddingSmall
-                    Label { color: Theme.secondaryHighlightColor; text: qsTr("Changed:") }
-                    Label { color: Theme.secondaryColor; text: currentDate }
+                    Label { color: Theme.secondaryHighlightColor; text: qsTr("Last changed:") }
+                    Label { color: Theme.secondaryColor; text: modifyDate === "" ? qsTr("never") : formatDate(modifyDate, fullDateTimeFormat, modifyTz) }
                 }
             }
 
