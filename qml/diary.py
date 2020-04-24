@@ -209,15 +209,16 @@ def export(filename, type):
     """ Export to ~/filename as txt or csv """
 
     # get latest state of the database
-    read_all_entries()
-    rows = get_filtered_entry_list()
+    rows = read_all_entries()
 
-    moods = ["Fantastic", "Good", "Okay", "Bad", "Horrible"]
+    moods = ["Fantastic", "Good", "Okay", "Not okay", "Bad", "Horrible"]
 
     # Export as *.txt text file to filename
     if type == ".txt":
         with open(filename, "w") as f:
             for r in rows:
+                # TODO include time zones
+                # TODO use format strings
                 date_str = r["create_date"]+" (changed: "+r["modify_date"]+")\n\n"
                 title_str = "Title: "+r["title"]+"\n\n"
                 entry_str = "Entry:\n"+r["entry"]+"\n\n"
@@ -236,7 +237,8 @@ def export(filename, type):
     # Export as *.csv file to filename
     if type == ".csv":
         with open(filename, "w", newline='') as f:
-            fieldnames = ["rowid", "create_date", "modify_date", "mood", "preview", "title", "entry", "hashtags", "favorite"]
+            # TODO load field names from db
+            fieldnames = ["rowid", "create_date", "creation_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "favorite"]
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
 
             csv_writer.writeheader()
