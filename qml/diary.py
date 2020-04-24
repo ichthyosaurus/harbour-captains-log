@@ -19,6 +19,7 @@ filtered_entry_list = []
 schema_version = "none"
 
 conn = sqlite3.connect(database)
+conn.row_factory = sqlite3.Row
 cursor = conn.cursor()
 
 def upgrade_schema(from_version):
@@ -72,18 +73,7 @@ upgrade_schema(schema_version)
 
 def read_all_entries():
     """ Read all entries to show them on the main page """
-    cursor.execute(""" SELECT creation_date,
-                              modify_date,
-                              mood,
-                              title,
-                              preview,
-                              entry,
-                              favorite,
-                              hashtags,
-                              rowid
-                       FROM diary
-                       ORDER BY rowid DESC; """)
-
+    cursor.execute(""" SELECT *, rowid FROM diary ORDER BY rowid DESC; """)
     rows = cursor.fetchall()
     return create_entries_model(rows)
 
@@ -91,6 +81,7 @@ def read_all_entries():
 def add_entry(creation_date, mood, title, preview, entry, hashs):
     """ Add new entry to the database. By default last modification is set to NULL and favorite option to FALSE. """
     cursor.execute("""INSERT INTO diary
+                      (creation_date, modify_date, mood, title, preview, entry, favorite, hashtags)
                       VALUES (?, "", ?, ?, ?, ?, 0, ?);""",
                       (creation_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip()))
     conn.commit()
@@ -183,16 +174,16 @@ def create_entries_model(rows):
     filtered_entry_list.clear()
 
     for row in rows:
-        entry = {"create_date": row[0],
-                 "day": row[0].split(' | ')[0],
-                 "modify_date": row[1],
-                 "mood": row[2],
-                 "title": row[3].strip(),
-                 "preview": row[4].strip(),
-                 "entry": row[5].strip(),
-                 "favorite": True if row[6] == 1 else False,
-                 "hashtags": row[7].strip(),
-                 "rowid": row[8]}
+        entry = {"create_date": row["creation_date"],
+                 "day": row["creation_date"].split(' | ')[0],
+                 "modify_date": row["modify_date"],
+                 "mood": row["mood"],
+                 "title": row["title"].strip(),
+                 "preview": row["preview"].strip(),
+                 "entry": row["entry"].strip(),
+                 "favorite": True if row["favorite"] == 1 else False,
+                 "hashtags": row["hashtags"].strip(),
+                 "rowid": row["rowid"]}
         filtered_entry_list.append(entry)
     return filtered_entry_list
 
