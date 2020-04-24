@@ -105,8 +105,12 @@ ApplicationWindow
     property bool unlocked: useCodeProtection.value === 1 ? false : true
 
     onUnlockedChanged: {
-        if (!unlocked) entriesModel.clear()
-        else if (py.ready) loadModel()
+        if (!unlocked) {
+            entriesModel.clear()
+            _modelReady = false
+        } else if (py.ready && !_modelReady) {
+            loadModel()
+        }
     }
 
     ConfigurationValue {
