@@ -22,7 +22,7 @@ ApplicationWindow
     readonly property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm")
     readonly property string fullDateFormat: qsTr("ddd d MMM yyyy")
     readonly property string dateFormat: qsTr("d MMM yyyy")
-    readonly property string dbDateFormat: "dd.MM.yyyy | hh:mm"
+    readonly property string dbDateFormat: "dd.MM.yyyy | hh:mm:ss"
     property var moodTexts: [
         qsTr("fantastic"),
         qsTr("good"),
@@ -40,7 +40,10 @@ ApplicationWindow
         var dateTime = dbDateString.split(' | ');
         var date = dateTime[0].split('.');
         var time = dateTime[1].split(':');
-        return new Date(parseInt(date[2]), parseInt(date[1]), parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), 0);
+        var sec = time.length >= 3 ? parseInt(time[2]) : 0
+
+        // Date object interpreted as local time
+        return new Date(parseInt(date[2]), parseInt(date[1])-1, parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), sec);
     }
 
     function setFavorite(model, index, rowid, setTrue) {
