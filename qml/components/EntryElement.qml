@@ -39,8 +39,9 @@ ListItem {
                 pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                    "title": title, "mood": mood, "entry": entry,
                                    "hashtags": hashtags, "rowid": rowid,
-                                   "creationDate": creation_date, "index": index, "model": realModel,
-                                   "modifyTz": modify_tz, "creationTz": creation_tz
+                                   "createDate": create_date, "modifyDate": modify_date,
+                                   "index": index, "model": realModel,
+                                   "modifyTz": modify_tz, "createTz": create_tz
                                })
             }
         }
@@ -54,12 +55,12 @@ ListItem {
 
     onClicked: {
         pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
-                           "creationDate": creation_date, "modificationDate": modify_date,
+                           "createDate": create_date, "modifyDate": modify_date,
                            "mood": mood, "title": title,
                            "entry": entry, "favorite": favorite,
                            "hashtags": hashtags, "rowid": rowid, "index": index,
                            "model": realModel, "editable": editable,
-                           "modifyTz": modify_tz, "creationTz": creation_tz
+                           "modifyTz": modify_tz, "createTz": create_tz
                        })
     }
 
@@ -77,7 +78,7 @@ ListItem {
             anchors { top: parent.top }
             font.pixelSize: Theme.fontSizeMedium
             color: Theme.highlightColor
-            text: formatDate(creation_date, atTimeFormat, creation_tz)
+            text: formatDate(create_date, atTimeFormat, create_tz)
         }
 
         Label {

@@ -4,14 +4,14 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
-    property string creationDate
-    property string modificationDate
+    property string createDate
+    property string modifyDate
     property int mood
     property string title
     property string entry
     property bool favorite
     property string hashtags
-    property string creationTz
+    property string createTz
     property string modifyTz
     property int rowid
     property int index
@@ -28,11 +28,11 @@ Page {
         }
         onEntryUpdated: {
             if (rowid !== page.rowid) return
-            modificationDate = changeDate
+            page.modifyDate = changeDate
             page.mood = mood
             page.title = title
             page.entry = entry
-            hashtags = hashs
+            page.hashtags = hashs
             page.modifyTz = modifyTz
         }
     }
@@ -49,8 +49,8 @@ Page {
                     pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
                                        "hashtags": hashtags, "rowid": rowid,
-                                       "creationDate": creationDate, "index": index, "model": model,
-                                       "modifyTz": modifyTz, "creationTz": creationTz,
+                                       "createDate": createDate, "index": index, "model": model,
+                                       "modifyTz": modifyTz, "createTz": createTz,
                                        "acceptDestination": "" // return to the calling page
                                    })
                 }
@@ -64,15 +64,15 @@ Page {
 
             PageHeader {
                 id: header
-                title: formatDate(creationDate, "dddd")
-                description: formatDate(creationDate, dateTimeFormat, creationTz)
+                title: formatDate(createDate, "dddd")
+                description: formatDate(createDate, dateTimeFormat, createTz)
                 _titleItem.truncationMode: TruncationMode.Fade
                 _titleItem.horizontalAlignment: Text.AlignRight
             }
 
             Label {
                 id: modDateLabel
-                visible: modificationDate !== ""
+                visible: modifyDate !== ""
                 anchors {
                     left: parent.left; leftMargin: Theme.horizontalPageMargin
                     right: parent.right; rightMargin: Theme.horizontalPageMargin
@@ -80,7 +80,7 @@ Page {
                 horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryHighlightColor
-                text: modificationDate !== "" ? qsTr("Last change: %1").arg(formatDate(modificationDate, dateTimeFormat, modifyTz)) : ""
+                text: modifyDate !== "" ? qsTr("Last change: %1").arg(formatDate(modifyDate, dateTimeFormat, modifyTz)) : ""
             }
 
             BackgroundItem {

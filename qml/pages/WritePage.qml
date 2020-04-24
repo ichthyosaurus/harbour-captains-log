@@ -17,13 +17,14 @@ Dialog {
     property string dbCurrentDate: new Date().toLocaleString(Qt.locale(), dbDateFormat);
     property bool editing: rowid > -1
 
-    property string creationDate: ""
-    property string changeDate: dbCurrentDate
+    property string _currentChangeDate: dbCurrentDate
+    property string createDate: ""
+    property string modifyDate: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
     property alias hashtags: hashtagField.text
     property alias mood: feelCombo.selectedIndex
-    property string creationTz: ""
+    property string createTz: ""
     property string modifyTz: ""
     property int rowid: -1
     property int index: -1
@@ -31,7 +32,7 @@ Dialog {
 
     acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
-        var creationDate = dbCurrentDate
+        var createDate = dbCurrentDate
         var mood = feelCombo.selectedIndex
         var title_text = titleField.text.trim()
         // regular expression to kick out all newline chars in preview
@@ -40,9 +41,9 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, changeDate, mood, title_text, preview, entry, hashs, timezone, rowid);
+            updateEntry(model, index, _currentChangeDate, mood, title_text, preview, entry, hashs, timezone, rowid);
         } else {
-            addEntry(creationDate, mood, title_text, preview, entry, hashs);
+            addEntry(createDate, mood, title_text, preview, entry, hashs);
         }
     }
 
@@ -69,7 +70,7 @@ Dialog {
                 Row {
                     spacing: Theme.paddingSmall
                     Label { color: Theme.highlightColor; text: qsTr("Created:") }
-                    Label { color: Theme.primaryColor; text: formatDate(creationDate, fullDateTimeFormat, creationTz) }
+                    Label { color: Theme.primaryColor; text: formatDate(createDate, fullDateTimeFormat, createTz) }
                 }
                 Row {
                     spacing: Theme.paddingSmall

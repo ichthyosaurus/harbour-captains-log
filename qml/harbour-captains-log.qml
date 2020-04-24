@@ -73,8 +73,8 @@ ApplicationWindow
         })
     }
 
-    function addEntry(creationDate, mood, title, preview, entry, hashs) {
-        py.call("diary.add_entry", [creationDate, mood, title, preview, entry, hashs, timezone], function(entry) {
+    function addEntry(createDate, mood, title, preview, entry, hashs) {
+        py.call("diary.add_entry", [createDate, mood, title, preview, entry, hashs, timezone], function(entry) {
             console.log("Added entry to database")
             entriesModel.insert(0, entry);
         })

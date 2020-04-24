@@ -53,6 +53,28 @@ def upgrade_schema(from_version):
         # add column to store an audio file path (not yet used)
         cursor.execute("""ALTER TABLE diary ADD COLUMN audio_path TEXT DEFAULT '';""")
     elif from_version == "2":
+        to_version = "3"
+
+        # rename and reorder columns: creation_date -> create_date and creation_tz -> create_tz
+        cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp
+                          (create_date TEXT NOT NULL,
+                           create_tz TEXT,
+                           modify_date TEXT NOT NULL,
+                           modify_tz TEXT,
+                           mood INT,
+                           title TEXT,
+                           preview TEXT,
+                           entry TEXT,
+                           favorite BOOL,
+                           hashtags TEXT,
+                           audio_path TEXT
+                           );""")
+        cursor.execute("""INSERT INTO diary_temp(create_date, create_tz, modify_date, modify_tz, mood, title, preview, entry, favorite, hashtags, audio_path)
+                            SELECT creation_date, creation_tz, modify_date, modify_tz, mood, title, preview, entry, favorite, hashtags, audio_path
+                            FROM diary;""")
+        cursor.execute("""DROP TABLE diary;""")
+        cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
+    elif from_version == "3":
         # we arrived at the latest version; save it and return
         if schema_version != from_version:
             conn.commit()
@@ -87,16 +109,16 @@ def read_all_entries():
     return create_entries_model(rows)
 
 
-def add_entry(creation_date, mood, title, preview, entry, hashs, timezone):
+def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
     """ Add new entry to the database. By default last modification is set to NULL and favorite option to FALSE. """
     cursor.execute("""INSERT INTO diary
-                      (creation_date, modify_date, mood, title, preview, entry, favorite, hashtags, creation_tz)
+                      (create_date, modify_date, mood, title, preview, entry, favorite, hashtags, create_tz)
                       VALUES (?, "", ?, ?, ?, ?, 0, ?, ?);""",
-                      (creation_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone))
+                      (create_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone))
     conn.commit()
 
-    entry = {"creation_date": creation_date,
-             "day": creation_date.split(' | ')[0],
+    entry = {"create_date": create_date,
+             "day": create_date.split(' | ')[0],
              "modify_date": "",
              "mood": mood,
              "title": title.strip(),
@@ -104,7 +126,7 @@ def add_entry(creation_date, mood, title, preview, entry, hashs, timezone):
              "entry": entry.strip(),
              "favorite": False,
              "hashtags": hashs.strip(),
-             "creation_tz": timezone,
+             "create_tz": timezone,
              "modify_tz": "",
              "rowid": cursor.lastrowid}
     return entry
@@ -153,7 +175,7 @@ def search_entries(keyword):
 
 def search_date(dateStr):
     """ Search for a date string """
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE creation_date LIKE ? ORDER BY rowid DESC; """, (dateStr.split(' | ')[0]+"%", ))
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE create_date LIKE ? ORDER BY rowid DESC; """, (dateStr.split(' | ')[0]+"%", ))
     rows = cursor.fetchall()
     create_entries_model(rows)
 
@@ -186,8 +208,8 @@ def create_entries_model(rows):
     filtered_entry_list.clear()
 
     for row in rows:
-        entry = {"creation_date": row["creation_date"],
-                 "day": row["creation_date"].split(' | ')[0],
+        entry = {"create_date": row["create_date"],
+                 "day": row["create_date"].split(' | ')[0],
                  "modify_date": row["modify_date"],
                  "mood": row["mood"],
                  "title": row["title"].strip(),
@@ -195,7 +217,7 @@ def create_entries_model(rows):
                  "entry": row["entry"].strip(),
                  "favorite": True if row["favorite"] == 1 else False,
                  "hashtags": row["hashtags"].strip(),
-                 "creation_tz": row["creation_tz"],
+                 "create_tz": row["create_tz"],
                  "modify_tz": row["modify_tz"],
                  "rowid": row["rowid"]}
         filtered_entry_list.append(entry)
