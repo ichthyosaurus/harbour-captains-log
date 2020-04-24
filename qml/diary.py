@@ -44,6 +44,15 @@ def upgrade_schema(from_version):
         cursor.execute("""UPDATE diary SET mood=5 WHERE mood=4""")
         cursor.execute("""UPDATE diary SET mood=4 WHERE mood=3""")
     elif from_version == "1":
+        to_version = "2"
+
+        # add columns to store time zone info
+        cursor.execute("""ALTER TABLE diary ADD COLUMN creation_tz TEXT DEFAULT '';""")
+        cursor.execute("""ALTER TABLE diary ADD COLUMN modify_tz TEXT DEFAULT '';""")
+
+        # add column to store an audio file path (not yet used)
+        cursor.execute("""ALTER TABLE diary ADD COLUMN audio_path TEXT DEFAULT '';""")
+    elif from_version == "2":
         # we arrived at the latest version; save it and return
         if schema_version != from_version:
             conn.commit()
