@@ -348,5 +348,10 @@
         <source>not okay</source>
         <translation>nicht okay</translation>
     </message>
+    <message>
+        <source>%1 (%2)</source>
+        <comment>1: date, 2: time zone info</comment>
+        <translation>%1 (%2)</translation>
+    </message>
 </context>
 </TS>
