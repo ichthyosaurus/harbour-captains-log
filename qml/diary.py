@@ -232,45 +232,76 @@ def get_filtered_entry_list():
 # - - - export features - - - #
 
 
+def _parse_date(date_string):
+    if not date_string:
+        return ()
+
+    date_time = date_string.split(' | ')
+    date = date_time[0].split('.')
+    time = date_time[1].split(':')
+    sec = time[2] if len(time) >= 3 else "0"
+
+    return (int(date[2]), int(date[1]), int(date[0]), int(time[0]), int(time[1]), int(sec))
+
+
+def _format_date(date_string, tz_string):
+    date = _parse_date(date_string)
+    zone = " [{}]".format(tz_string) if tz_string else ""
+
+    if date_string:
+        date_string = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}{tz}".format(
+            date[0], date[1], date[2], date[3], date[4], date[5], tz=zone)
+    else:
+        date_string = "never{tz}".format(tz=zone)
+
+    return date_string
+
+
 def export(filename, type):
     """ Export to ~/filename as txt or csv """
 
     # get latest state of the database
-    rows = read_all_entries()
+    entries = read_all_entries()
 
     moods = ["Fantastic", "Good", "Okay", "Not okay", "Bad", "Horrible"]
 
     # Export as *.txt text file to filename
     if type == ".txt":
         with open(filename, "w") as f:
-            for r in rows:
-                # TODO include time zones
-                # TODO use format strings
-                date_str = r["create_date"]+" (changed: "+r["modify_date"]+")\n\n"
-                title_str = "Title: "+r["title"]+"\n\n"
-                entry_str = "Entry:\n"+r["entry"]+"\n\n"
-                hash_str = "Hashtags: "+r["hashtags"]+"\n"
-                if r["favorite"]:
-                    fav_str = "Favorite: Yes!\n"
-                else:
-                    fav_str = "Favorite: - \n"
-                mood_str = "Mood: "+moods[r["mood"]]+"\n\n"
-                split_str = "-------------------------------------------------------------------------------\n\n"
+            for e in entries:
+                created = _format_date(e["create_date"], e["create_tz"])
+                modified = _format_date(e["modify_date"], e["modify_tz"])
+                favorite = "Yes" if e["favorite"] else "No"
+                mood = moods[e["mood"]]
 
-                final_str = date_str + title_str + entry_str + hash_str + fav_str + mood_str + split_str
-                f.write(final_str)
+                line = """
+Created: {}
+Changed: {}
+
+Title: {}
+
+Entry:
+{}
+
+Hashtags: {}
+Favorite: {}
+Mood: {}
+{sep}""".format(created, modified, e["title"], e["entry"], e["hashtags"], favorite, mood, sep="-".rjust(80, "-"))
+
+                f.write(line)
+
             f.close()
 
     # Export as *.csv file to filename
     if type == ".csv":
         with open(filename, "w", newline='') as f:
-            # TODO load field names from db
-            fieldnames = ["rowid", "create_date", "creation_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "favorite"]
+            fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "favorite"]
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
 
             csv_writer.writeheader()
 
-            for r in rows:
-                csv_writer.writerow(r)
+            for e in entries:
+                del e["day"]  # generated field
+                csv_writer.writerow(e)
 
             f.close()

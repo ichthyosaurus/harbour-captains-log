@@ -168,7 +168,7 @@ ApplicationWindow
         Component.onCompleted: {
             // Add the directory of this .qml file to the search path
             addImportPath(Qt.resolvedUrl('.'))
-            importModule("diary", function() {console.log("diary.py loaded")})
+            importModule("diary", function() { console.log("diary.py loaded") })
             ready = true
 
             // Load the model for the first time.
