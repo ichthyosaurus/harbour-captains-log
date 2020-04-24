@@ -39,7 +39,7 @@ ListItem {
                 pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                    "title": title, "mood": mood, "entry": entry,
                                    "hashtags": hashtags, "rowid": rowid,
-                                   "creationDate": create_date, "index": index, "model": realModel,
+                                   "creationDate": creation_date, "index": index, "model": realModel,
                                    "modifyTz": modify_tz, "creationTz": creation_tz
                                })
             }
@@ -54,7 +54,7 @@ ListItem {
 
     onClicked: {
         pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
-                           "creationDate": create_date, "modificationDate": modify_date,
+                           "creationDate": creation_date, "modificationDate": modify_date,
                            "mood": mood, "title": title,
                            "entry": entry, "favorite": favorite,
                            "hashtags": hashtags, "rowid": rowid, "index": index,
@@ -73,17 +73,16 @@ ListItem {
         }
 
         Label {
-            id: createDate
+            id: createDateLabel
             anchors { top: parent.top }
             font.pixelSize: Theme.fontSizeMedium
             color: Theme.highlightColor
-            // text: create_date
-            text: formatDate(create_date, atTimeFormat, creation_tz)
+            text: formatDate(creation_date, atTimeFormat, creation_tz)
         }
 
         Label {
             id: titleText
-            anchors { top: createDate.bottom; topMargin: Theme.paddingSmall }
+            anchors { top: createDateLabel.bottom; topMargin: Theme.paddingSmall }
             text: title
             height: _hasTitle ? contentHeight : 0
             width: parent.width

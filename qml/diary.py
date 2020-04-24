@@ -95,7 +95,7 @@ def add_entry(creation_date, mood, title, preview, entry, hashs, timezone):
                       (creation_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone))
     conn.commit()
 
-    entry = {"create_date": creation_date,
+    entry = {"creation_date": creation_date,
              "day": creation_date.split(' | ')[0],
              "modify_date": "",
              "mood": mood,
@@ -186,7 +186,7 @@ def create_entries_model(rows):
     filtered_entry_list.clear()
 
     for row in rows:
-        entry = {"create_date": row["creation_date"],
+        entry = {"creation_date": row["creation_date"],
                  "day": row["creation_date"].split(' | ')[0],
                  "modify_date": row["modify_date"],
                  "mood": row["mood"],
