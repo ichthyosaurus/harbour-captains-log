@@ -40,28 +40,16 @@
 <context>
     <name>ChangePinPage</name>
     <message>
-        <source>Set your code</source>
-        <translation>Code festlegen</translation>
-    </message>
-    <message>
-        <source>Change your code</source>
-        <translation>Code ändern</translation>
-    </message>
-    <message>
-        <source>Your old code</source>
-        <translation>Ihr alter Code</translation>
-    </message>
-    <message>
-        <source>Your new code</source>
-        <translation>Ihr neuer Code</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation>Speichern</translation>
-    </message>
-    <message>
         <source>Saved your protection code.</source>
         <translation>Der Sicherheitscode wurde gespeichert.</translation>
+    </message>
+    <message>
+        <source>Enter your old security code</source>
+        <translation>Geben Sie Ihren alten Sicherheitscode ein</translation>
+    </message>
+    <message>
+        <source>Enter a new security code</source>
+        <translation>Geben Sie einen neuen Sicherheitscode ein</translation>
     </message>
 </context>
 <context>
@@ -98,27 +86,27 @@
         <translation>Neuen Eintrag erstellen</translation>
     </message>
     <message>
-        <source>Swipe right to add new entry</source>
-        <translation>Wischen Sie zum Eintragen nach rechts</translation>
-    </message>
-    <message>
         <source>Settings and Export</source>
         <translation>Einstellungen und Export</translation>
+    </message>
+    <message>
+        <source>No entries yet</source>
+        <translation>Noch keine Einträge</translation>
+    </message>
+    <message>
+        <source>Swipe right to add entries</source>
+        <translation>Wischen Sie nach rechts, um Einträge hinzuzufügen</translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
-        <source>Enter your code</source>
-        <translation>Code-Eingabe</translation>
+        <source>Please enter your security code</source>
+        <translation>Bitten geben Sie Ihren Sicherheitscode ein</translation>
     </message>
     <message>
-        <source>Access granted</source>
-        <translation>Zugriff gewährt</translation>
-    </message>
-    <message>
-        <source>Please type in your security code:</source>
-        <translation>Bitte geben Sie Ihren Sicherheitscode ein:</translation>
+        <source>please try again</source>
+        <translation>bitte erneut versuchen</translation>
     </message>
 </context>
 <context>
@@ -128,8 +116,12 @@
         <translation>Letzte Änderung: %1</translation>
     </message>
     <message>
-        <source>mood: %1</source>
-        <translation>Stimmung: %1</translation>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <source>mood:</source>
+        <translation>Stimmung:</translation>
     </message>
 </context>
 <context>
@@ -145,10 +137,6 @@
     <message>
         <source>Search by:</source>
         <translation>Suche in:</translation>
-    </message>
-    <message>
-        <source>Title &amp; Entry</source>
-        <translation>Überschrift und Eintrag</translation>
     </message>
     <message>
         <source>Creation date</source>
@@ -172,12 +160,24 @@
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation>Durchsuche deine Einträge...</translation>
+        <translation>Einträge durchsuchen ...</translation>
     </message>
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
         <translation>Filter:</translation>
+    </message>
+    <message>
+        <source>Title and Entry</source>
+        <translation>Überschrift und Eintrag</translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation>Keine Einträge gefunden</translation>
+    </message>
+    <message>
+        <source>No entries matched these criteria.</source>
+        <translation>Keine der Einträge entsprachen den gewählten Kriterien.</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@
     </message>
     <message>
         <source>Select file type:</source>
-        <translation>Wähle Dateitypen:</translation>
+        <translation>Dateityp wählen:</translation>
     </message>
     <message>
         <source>Export data</source>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <source>Export your data</source>
-        <translation>Exportiere deine Daten</translation>
+        <translation>Daten exportieren</translation>
     </message>
     <message>
         <source>Define the file name...</source>
@@ -275,7 +275,7 @@
     </message>
     <message>
         <source>Add a title</source>
-        <translation>Einen Titel hinzufügen</translation>
+        <translation>Eine Überschrift hinzufügen</translation>
     </message>
     <message>
         <source>What do you want to say?</source>
@@ -338,11 +338,15 @@
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation>&apos;um&apos; hh&apos;:&apos;mm &apos;Uhr&apos;</translation>
+        <translation>hh&apos;:&apos;mm &apos;Uhr&apos;</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
         <translation>d. MMM yyyy</translation>
+    </message>
+    <message>
+        <source>not okay</source>
+        <translation>nicht okay</translation>
     </message>
 </context>
 </TS>
