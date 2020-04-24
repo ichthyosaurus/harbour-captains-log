@@ -87,12 +87,12 @@ def read_all_entries():
     return create_entries_model(rows)
 
 
-def add_entry(creation_date, mood, title, preview, entry, hashs):
+def add_entry(creation_date, mood, title, preview, entry, hashs, timezone):
     """ Add new entry to the database. By default last modification is set to NULL and favorite option to FALSE. """
     cursor.execute("""INSERT INTO diary
-                      (creation_date, modify_date, mood, title, preview, entry, favorite, hashtags)
-                      VALUES (?, "", ?, ?, ?, ?, 0, ?);""",
-                      (creation_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip()))
+                      (creation_date, modify_date, mood, title, preview, entry, favorite, hashtags, creation_tz)
+                      VALUES (?, "", ?, ?, ?, ?, 0, ?, ?);""",
+                      (creation_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone))
     conn.commit()
 
     entry = {"create_date": creation_date,
@@ -104,11 +104,13 @@ def add_entry(creation_date, mood, title, preview, entry, hashs):
              "entry": entry.strip(),
              "favorite": False,
              "hashtags": hashs.strip(),
+             "creation_tz": timezone,
+             "modify_tz": "",
              "rowid": cursor.lastrowid}
     return entry
 
 
-def update_entry(modify_date, mood, title, preview, entry, hashs, id):
+def update_entry(modify_date, mood, title, preview, entry, hashs, timezone, rowid):
     """ Updates an entry in the database. """
     cursor.execute("""UPDATE diary
                           SET modify_date = ?,
@@ -116,10 +118,11 @@ def update_entry(modify_date, mood, title, preview, entry, hashs, id):
                               title = ?,
                               preview = ?,
                               entry = ?,
-                              hashtags = ?
+                              hashtags = ?,
+                              modify_tz = ?
                           WHERE
                               rowid = ?;""",
-                              (modify_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), id))
+                              (modify_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone, rowid))
     conn.commit()
 
 
@@ -192,6 +195,8 @@ def create_entries_model(rows):
                  "entry": row["entry"].strip(),
                  "favorite": True if row["favorite"] == 1 else False,
                  "hashtags": row["hashtags"].strip(),
+                 "creation_tz": row["creation_tz"],
+                 "modify_tz": row["modify_tz"],
                  "rowid": row["rowid"]}
         filtered_entry_list.append(entry)
     return filtered_entry_list

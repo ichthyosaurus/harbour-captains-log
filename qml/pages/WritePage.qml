@@ -23,6 +23,8 @@ Dialog {
     property alias entry: entryArea.text
     property alias hashtags: hashtagField.text
     property alias mood: feelCombo.selectedIndex
+    property string creationTz: ""
+    property string modifyTz: ""
     property int rowid: -1
     property int index: -1
     property var model: ""
@@ -38,7 +40,7 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, changeDate, mood, title_text, preview, entry, hashs, rowid);
+            updateEntry(model, index, changeDate, mood, title_text, preview, entry, hashs, timezone, rowid);
         } else {
             addEntry(creationDate, mood, title_text, preview, entry, hashs);
         }
@@ -67,7 +69,7 @@ Dialog {
                 Row {
                     spacing: Theme.paddingSmall
                     Label { color: Theme.highlightColor; text: qsTr("Created:") }
-                    Label { color: Theme.primaryColor; text: formatDate(creationDate, fullDateTimeFormat) }
+                    Label { color: Theme.primaryColor; text: formatDate(creationDate, fullDateTimeFormat, creationTz) }
                 }
                 Row {
                     spacing: Theme.paddingSmall

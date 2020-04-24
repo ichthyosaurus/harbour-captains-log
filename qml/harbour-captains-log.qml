@@ -63,18 +63,18 @@ ApplicationWindow
         if (model !== entriesModel) _scheduleReload = true;
     }
 
-    function updateEntry(model, index, changeDate, mood, title, preview, entry, hashs, rowid) {
-        model.set(index, { "modify_date": changeDate, "mood": mood, "title": title,
+    function updateEntry(model, index, changeDate, mood, title, preview, entry, hashs, modifyTz, rowid) {
+        model.set(index, { "modify_date": changeDate, "modify_tz": modifyTz, "mood": mood, "title": title,
                              "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid })
-        py.call("diary.update_entry", [changeDate, mood, title, preview, entry, hashs, rowid], function() {
+        py.call("diary.update_entry", [changeDate, mood, title, preview, entry, hashs, modifyTz, rowid], function() {
             console.log("Updated entry in database")
-            entryUpdated(changeDate, mood, title, preview, entry, hashs, rowid)
+            entryUpdated(changeDate, mood, title, preview, entry, hashs, modifyTz, rowid)
             if (model !== entriesModel) _scheduleReload = true;
         })
     }
 
     function addEntry(creationDate, mood, title, preview, entry, hashs) {
-        py.call("diary.add_entry", [creationDate, mood, title, preview, entry, hashs], function(entry) {
+        py.call("diary.add_entry", [creationDate, mood, title, preview, entry, hashs, timezone], function(entry) {
             console.log("Added entry to database")
             entriesModel.insert(0, entry);
         })
@@ -107,7 +107,7 @@ ApplicationWindow
 
     signal loadingStarted()
     signal loadingFinished()
-    signal entryUpdated(var changeDate, var mood, var title, var preview, var entry, var hashs, var rowid)
+    signal entryUpdated(var changeDate, var mood, var title, var preview, var entry, var hashs, var modifyTz, var rowid)
     signal entryFavoriteToggled(var rowid, var isFavorite)
     // -----------------------
 

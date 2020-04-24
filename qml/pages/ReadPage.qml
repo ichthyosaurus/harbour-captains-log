@@ -11,6 +11,8 @@ Page {
     property string entry
     property bool favorite
     property string hashtags
+    property string creationTz
+    property string modifyTz
     property int rowid
     property int index
     property var model
@@ -31,6 +33,7 @@ Page {
             page.title = title
             page.entry = entry
             hashtags = hashs
+            page.modifyTz = modifyTz
         }
     }
 
@@ -47,6 +50,7 @@ Page {
                                        "title": title, "mood": mood, "entry": entry,
                                        "hashtags": hashtags, "rowid": rowid,
                                        "creationDate": creationDate, "index": index, "model": model,
+                                       "modifyTz": modifyTz, "creationTz": creationTz,
                                        "acceptDestination": "" // return to the calling page
                                    })
                 }
@@ -61,7 +65,7 @@ Page {
             PageHeader {
                 id: header
                 title: formatDate(creationDate, "dddd")
-                description: formatDate(creationDate, dateTimeFormat)
+                description: formatDate(creationDate, dateTimeFormat, creationTz)
                 _titleItem.truncationMode: TruncationMode.Fade
                 _titleItem.horizontalAlignment: Text.AlignRight
             }
@@ -76,7 +80,7 @@ Page {
                 horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryHighlightColor
-                text: modificationDate !== "" ? qsTr("Last change: %1").arg(formatDate(modificationDate, dateTimeFormat)) : ""
+                text: modificationDate !== "" ? qsTr("Last change: %1").arg(formatDate(modificationDate, dateTimeFormat, modifyTz)) : ""
             }
 
             BackgroundItem {

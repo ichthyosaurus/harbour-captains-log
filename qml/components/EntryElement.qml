@@ -17,7 +17,7 @@ ListItem {
 
     function getHashtagText() {
         if (modify_date.length > 0) {
-            var date = formatDate(modify_date, dateTimeFormat)
+            var date = formatDate(modify_date, dateTimeFormat, modify_tz)
             var ret = qsTr("Edit: %1").arg(date)
 
             if (hashtags.length > 0) {
@@ -39,7 +39,8 @@ ListItem {
                 pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                    "title": title, "mood": mood, "entry": entry,
                                    "hashtags": hashtags, "rowid": rowid,
-                                   "creationDate": create_date, "index": index, "model": realModel
+                                   "creationDate": create_date, "index": index, "model": realModel,
+                                   "modifyTz": modify_tz, "creationTz": creation_tz
                                })
             }
         }
@@ -57,7 +58,8 @@ ListItem {
                            "mood": mood, "title": title,
                            "entry": entry, "favorite": favorite,
                            "hashtags": hashtags, "rowid": rowid, "index": index,
-                           "model": realModel, "editable": editable
+                           "model": realModel, "editable": editable,
+                           "modifyTz": modify_tz, "creationTz": creation_tz
                        })
     }
 
@@ -76,7 +78,7 @@ ListItem {
             font.pixelSize: Theme.fontSizeMedium
             color: Theme.highlightColor
             // text: create_date
-            text: formatDate(create_date, atTimeFormat)
+            text: formatDate(create_date, atTimeFormat, creation_tz)
         }
 
         Label {
