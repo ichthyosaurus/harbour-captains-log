@@ -8,8 +8,11 @@ ListItem {
 
     property bool editable: true
     property ListModel realModel: model
+
+    property string _previewData: entry //preview
+    property bool _hasPreview: _previewData !== ""
     property bool _hasTitle: title !== ""
-    property bool _isMoodOnly: !_hasTitle && preview === ""
+    property bool _isMoodOnly: !_hasTitle && !_hasPreview
     property bool _hasTags: hashtagsAndModify.text !== ""
 
     function getHashtagText() {
@@ -95,9 +98,9 @@ ListItem {
                 topMargin: _hasTitle ? Theme.paddingSmall : 0
                 bottom: hashtagsAndModify.top
             }
-            text: preview !== "" ? preview : qsTr("mood: %1").arg(moodTexts[mood])
+            text: _hasPreview ? _previewData : qsTr("mood: %1").arg(moodTexts[mood])
             width: parent.width
-            color: preview !== "" ? Theme.primaryColor : Theme.secondaryColor
+            color: _hasPreview ? Theme.primaryColor : Theme.secondaryColor
             font.pixelSize: Theme.fontSizeSmall
             truncationMode: TruncationMode.Elide
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
