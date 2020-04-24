@@ -95,6 +95,7 @@ def upgrade_schema(from_version):
         # we arrived at the latest version; save it and return
         if schema_version != from_version:
             conn.commit()
+            conn.execute("""VACUUM;""")
             with open(schema, "w") as f:
                 f.write(from_version)
         print("database schema is up-to-date (version: {})".format(from_version))
