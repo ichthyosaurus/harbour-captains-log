@@ -3,7 +3,9 @@ import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 import Nemo.Notifications 1.0
 import io.thp.pyotherside 1.5
+
 import "pages"
+import "sf-about-page/about.js" as About
 
 ApplicationWindow
 {
@@ -177,5 +179,7 @@ ApplicationWindow
             loadModel()
         }
     }
+
+    Component.onCompleted: About.VERSION_NUMBER = appVersionNumber
 }
 

@@ -1,7 +1,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
+
 import "../components"
+import "../sf-about-page/about.js" as About
 
 Page {
     id: firstPage
@@ -45,7 +47,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("About")
-                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+                onClicked: About.pushAboutPage(pageStack)
             }
             MenuItem {
                 text: qsTr("Settings and Export")
