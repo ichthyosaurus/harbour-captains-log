@@ -4,37 +4,40 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About</source>
-        <translation>Über</translation>
+        <source>About %1</source>
+        <translation>Über %1</translation>
     </message>
     <message>
-        <source>Author:</source>
-        <translation>Autor:</translation>
+        <source>Version %1</source>
+        <translation>Version %1</translation>
     </message>
     <message>
-        <source>License:</source>
-        <translation>Lizenz:</translation>
+        <source>Development</source>
+        <translation>Entwicklung</translation>
     </message>
     <message>
-        <source>Version:</source>
-        <translation>Version:</translation>
+        <source>Author</source>
+        <translation>Autor</translation>
     </message>
     <message>
-        <source>Contact:</source>
-        <translation>Kontakt:</translation>
+        <source>&lt;i&gt;show contributors &lt;/i&gt;</source>
+        <translation>&lt;i&gt;Mitwirkende zeigen &lt;/i&gt;</translation>
     </message>
     <message>
-        <source>Send Feedback</source>
-        <translation>Feedback senden</translation>
+        <source>Website</source>
+        <translation>Website</translation>
     </message>
     <message>
-        <source>Sources</source>
+        <source>License</source>
+        <translation>Lizenz</translation>
+    </message>
+    <message>
+        <source>&lt;i&gt;show license &lt;/i&gt;</source>
+        <translation>&lt;i&gt;Lizenz zeigen &lt;/i&gt;</translation>
+    </message>
+    <message>
+        <source>Source Code</source>
         <translation>Quellcode</translation>
-    </message>
-    <message>
-        <source>Feedback</source>
-        <comment>feedback email subject line</comment>
-        <translation>Feedback</translation>
     </message>
 </context>
 <context>
@@ -50,6 +53,21 @@
     <message>
         <source>Enter a new security code</source>
         <translation>Geben Sie einen neuen Sicherheitscode ein</translation>
+    </message>
+</context>
+<context>
+    <name>ContributorsPage</name>
+    <message>
+        <source>Contributors</source>
+        <translation>Mitwirkende</translation>
+    </message>
+    <message>
+        <source>Development</source>
+        <translation>Entwicklung</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation>Übersetzungen</translation>
     </message>
 </context>
 <context>
@@ -96,6 +114,13 @@
     <message>
         <source>Swipe right to add entries</source>
         <translation>Wischen Sie nach rechts, um Einträge hinzuzufügen</translation>
+    </message>
+</context>
+<context>
+    <name>LicensePage</name>
+    <message>
+        <source>License</source>
+        <translation>Lizenz</translation>
     </message>
 </context>
 <context>
@@ -294,8 +319,52 @@
         <translation>Erstellt:</translation>
     </message>
     <message>
-        <source>Changed:</source>
-        <translation>Geändert:</translation>
+        <source>Last changed:</source>
+        <translation>Zuletzt geändert:</translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation>nie</translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <source>Programming</source>
+        <translation>Programmierung</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Icon-Design</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation>Englisch</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation>Schwedisch</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation>Deutsch</translation>
+    </message>
+    <message>
+        <source>Sources on GitHub</source>
+        <translation>Quellcode auf GitHub</translation>
+    </message>
+    <message>
+        <source>Feedback</source>
+        <comment>feedback email subject line</comment>
+        <translation>Feedback</translation>
+    </message>
+    <message>
+        <source>Send Feedback</source>
+        <translation>Feedback senden</translation>
+    </message>
+    <message>
+        <source>A simple diary application for keeping track of your thoughts.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -18,7 +18,7 @@ var VERSION_NUMBER // set in main.qml's Component.onCompleted
 var APPINFO = {
     appName: "Captain's Log",
     iconPath: "/usr/share/icons/hicolor/172x172/apps/harbour-captains-log.png",
-    description: "A simple diary application for keeping track of your thoughts.",
+    description: qsTr("A simple diary application for keeping track of your thoughts."),
     author: "Gabriel Berkigt",
     sourcesLink: "http://www.github.com/AlphaX2/Captains-Log",
     sourcesText: qsTr("Sources on GitHub"),

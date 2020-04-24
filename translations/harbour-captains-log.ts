@@ -4,36 +4,39 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About</source>
+        <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Author:</source>
+        <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>License:</source>
+        <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Version:</source>
+        <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Contact:</source>
+        <source>&lt;i&gt;show contributors &lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Send Feedback</source>
+        <source>Website</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sources</source>
+        <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Feedback</source>
-        <comment>feedback email subject line</comment>
+        <source>&lt;i&gt;show license &lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source Code</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -49,6 +52,21 @@
     </message>
     <message>
         <source>Enter a new security code</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ContributorsPage</name>
+    <message>
+        <source>Contributors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Development</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -95,6 +113,13 @@
     </message>
     <message>
         <source>Swipe right to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LicensePage</name>
+    <message>
+        <source>License</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -294,7 +319,51 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changed:</source>
+        <source>Last changed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <source>Programming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sources on GitHub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Feedback</source>
+        <comment>feedback email subject line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send Feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple diary application for keeping track of your thoughts.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
