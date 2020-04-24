@@ -40,27 +40,15 @@
 <context>
     <name>ChangePinPage</name>
     <message>
-        <source>Set your code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your old code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your new code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Saved your protection code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter your old security code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a new security code</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -98,26 +86,26 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Swipe right to add new entry</source>
+        <source>Settings and Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Settings and Export</source>
+        <source>No entries yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swipe right to add entries</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
-        <source>Enter your code</source>
+        <source>Please enter your security code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Access granted</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please type in your security code:</source>
+        <source>please try again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -128,7 +116,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>mood: %1</source>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mood:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -144,10 +136,6 @@
     </message>
     <message>
         <source>Search by:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title &amp; Entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -177,6 +165,18 @@
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title and Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries matched these criteria.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -342,6 +342,10 @@
     </message>
     <message>
         <source>d MMM yyyy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not okay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

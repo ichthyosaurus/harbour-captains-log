@@ -40,28 +40,16 @@
 <context>
     <name>ChangePinPage</name>
     <message>
-        <source>Save</source>
-        <translation>Spara</translation>
-    </message>
-    <message>
-        <source>Your old code</source>
-        <translation>Din gamla kod</translation>
-    </message>
-    <message>
-        <source>Set your code</source>
-        <translation>Ange din kod</translation>
-    </message>
-    <message>
-        <source>Change your code</source>
-        <translation>Ändra din kod</translation>
-    </message>
-    <message>
         <source>Saved your protection code.</source>
         <translation>Sparade din säkerhetskod.</translation>
     </message>
     <message>
-        <source>Your new code</source>
-        <translation>Din nya kod</translation>
+        <source>Enter your old security code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a new security code</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -94,10 +82,6 @@
         <translation>Sök</translation>
     </message>
     <message>
-        <source>Swipe right to add new entry</source>
-        <translation>Svep åt höger för att lägga till en ny post</translation>
-    </message>
-    <message>
         <source>Add new entry</source>
         <translation>Lägg till ny post</translation>
     </message>
@@ -105,20 +89,24 @@
         <source>Settings and Export</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>No entries yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swipe right to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
-        <source>Please type in your security code:</source>
-        <translation>Skriv in din säkerhetskod:</translation>
+        <source>Please enter your security code</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enter your code</source>
-        <translation>Ange din kod</translation>
-    </message>
-    <message>
-        <source>Access granted</source>
-        <translation>Åtkomst beviljad</translation>
+        <source>please try again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -128,7 +116,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>mood: %1</source>
+        <source>Edit</source>
+        <translation type="unfinished">Redigera</translation>
+    </message>
+    <message>
+        <source>mood:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -141,10 +133,6 @@
     <message>
         <source>Creation date</source>
         <translation>Skapad</translation>
-    </message>
-    <message>
-        <source>Title &amp; Entry</source>
-        <translation>Titel &amp; post</translation>
     </message>
     <message>
         <source>Filter your results</source>
@@ -177,6 +165,18 @@
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title and Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries matched these criteria.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -342,6 +342,10 @@
     </message>
     <message>
         <source>d MMM yyyy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not okay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
