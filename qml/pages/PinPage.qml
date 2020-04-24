@@ -57,6 +57,9 @@ Page {
 
         Label {
             id: errorLabel
+            property bool haveError: false
+            onHaveErrorChanged: opacity = haveError ? 1.0 : 0.0
+
             anchors.bottom: pinRow.top
             width: parent.width
             horizontalAlignment: Text.AlignHCenter
@@ -90,7 +93,7 @@ Page {
                 onTextChanged: {
                     // reset color and error label after incorrect input
                     color = Theme.highlightColor
-                    errorLabel.opacity = 0.0
+                    errorLabel.haveError = false
                 }
             }
 
@@ -135,7 +138,7 @@ Page {
                     accepted()
                 } else {
                     pinField.color = Theme.secondaryColor
-                    errorLabel.opacity = 1.0
+                    errorLabel.haveError = true
                 }
             }
         }
@@ -150,7 +153,10 @@ Page {
 
             vanityDialNumbersVisible: false
             symbolsVisible: false
-            onClicked: pinField.text = pinField.text + number
+            onClicked: {
+                if (errorLabel.haveError) pinField.text = number // delete wrong pin and try again
+                else pinField.text = pinField.text + number
+            }
         }
 
         Item {
