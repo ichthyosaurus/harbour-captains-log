@@ -60,8 +60,8 @@ Page {
 
             PageHeader {
                 id: header
-                title: parseDate(creationDate).toLocaleString(Qt.locale(), "dddd");
-                description: parseDate(creationDate).toLocaleString(Qt.locale(), dateTimeFormat)
+                title: formatDate(creationDate, "dddd")
+                description: formatDate(creationDate, dateTimeFormat)
                 _titleItem.truncationMode: TruncationMode.Fade
                 _titleItem.horizontalAlignment: Text.AlignRight
             }
@@ -76,7 +76,7 @@ Page {
                 horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryHighlightColor
-                text: modificationDate !== "" ? qsTr("Last change: %1").arg(parseDate(modificationDate).toLocaleString(Qt.locale(), dateTimeFormat)) : ""
+                text: modificationDate !== "" ? qsTr("Last change: %1").arg(formatDate(modificationDate, dateTimeFormat)) : ""
             }
 
             BackgroundItem {

@@ -17,7 +17,7 @@ ListItem {
 
     function getHashtagText() {
         if (modify_date.length > 0) {
-            var date = parseDate(modify_date).toLocaleString(Qt.locale(), dateTimeFormat);
+            var date = formatDate(modify_date, dateTimeFormat)
             var ret = qsTr("Edit: %1").arg(date)
 
             if (hashtags.length > 0) {
@@ -76,7 +76,7 @@ ListItem {
             font.pixelSize: Theme.fontSizeMedium
             color: Theme.highlightColor
             // text: create_date
-            text: parseDate(create_date).toLocaleString(Qt.locale(), atTimeFormat)
+            text: formatDate(create_date, atTimeFormat)
         }
 
         Label {

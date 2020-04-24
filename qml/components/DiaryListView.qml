@@ -26,7 +26,7 @@ SilicaListView {
                 horizontalAlignment: Text.AlignHCenter
                 truncationMode: TruncationMode.Fade
                 color: Theme.highlightColor
-                text: parseDate(section + " | 0:0").toLocaleString(Qt.locale(), fullDateFormat)
+                text: formatDate(section+" | 0:0", fullDateFormat)
             }
             Separator {
                 anchors {

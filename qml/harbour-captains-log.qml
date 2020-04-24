@@ -46,6 +46,10 @@ ApplicationWindow
         return new Date(parseInt(date[2]), parseInt(date[1])-1, parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), sec);
     }
 
+    function formatDate(dbDateString, format) {
+        return parseDate(dbDateString).toLocaleString(Qt.locale(), format)
+    }
+
     function setFavorite(model, index, rowid, setTrue) {
         py.call("diary.update_favorite", [rowid, setTrue])
         model.setProperty(index, 'favorite', setTrue)

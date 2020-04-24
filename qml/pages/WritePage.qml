@@ -67,7 +67,7 @@ Dialog {
                 Row {
                     spacing: Theme.paddingSmall
                     Label { color: Theme.highlightColor; text: qsTr("Created:") }
-                    Label { color: Theme.primaryColor; text: parseDate(creationDate).toLocaleString(Qt.locale(), fullDateTimeFormat) }
+                    Label { color: Theme.primaryColor; text: formatDate(creationDate, fullDateTimeFormat) }
                 }
                 Row {
                     spacing: Theme.paddingSmall
