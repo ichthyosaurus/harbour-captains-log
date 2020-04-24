@@ -15,6 +15,8 @@ Page {
     SilicaFlickable {
         id: content
         anchors.fill: parent
+        contentHeight: Screen.height
+        VerticalScrollDecorator { flickable: content }
 
         Label {
             id: infoLabel
