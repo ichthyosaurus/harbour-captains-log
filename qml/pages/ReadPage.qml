@@ -101,7 +101,7 @@ Page {
                 horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryHighlightColor
-                text: modifyDate !== "" ? qsTr("Last change: %1").arg(formatDate(modifyDate, dateTimeFormat, modifyTz)) : ""
+                text: modifyDate !== "" ? qsTr("changed: %1").arg(formatDate(modifyDate, dateTimeFormat, modifyTz)) : ""
             }
 
             BackgroundItem {

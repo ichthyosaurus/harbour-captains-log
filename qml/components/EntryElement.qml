@@ -24,6 +24,7 @@ ListItem {
     id: entryList
     contentHeight: _isMoodOnly ? (iconsColumn.height + (_hasTags ? Theme.paddingLarge : Theme.paddingSmall)) : Theme.itemSizeHuge
     ListView.onRemove: animateRemoval()
+    openMenuOnPressAndHold: false
 
     property bool editable: true
     property ListModel realModel: model
@@ -50,26 +51,44 @@ ListItem {
         }
     }
 
-    menu: ContextMenu {
-        enabled: editable
-        MenuItem {
-            text: qsTr("Edit")
-            onClicked: {
-                pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
-                                   "title": title, "mood": mood, "entry": entry,
-                                   "hashtags": hashtags, "rowid": rowid,
-                                   "createDate": create_date, "modifyDate": modify_date,
-                                   "index": index, "model": realModel,
-                                   "modifyTz": modify_tz, "createTz": create_tz
-                               })
+    menu: editMenuComponent
+
+    Component {
+        id: moodMenuComponent
+        MoodMenu {
+            selectedIndex: mood
+            onSelectedIndexChanged: updateEntry(realModel, index, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
+        }
+    }
+
+    Component {
+        id: editMenuComponent
+        ContextMenu {
+            enabled: editable
+            MenuItem {
+                text: qsTr("Edit")
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
+                                       "title": title, "mood": mood, "entry": entry,
+                                       "hashtags": hashtags, "rowid": rowid,
+                                       "createDate": create_date, "modifyDate": modify_date,
+                                       "index": index, "model": realModel,
+                                       "modifyTz": modify_tz, "createTz": create_tz
+                                   })
+                }
+            }
+            MenuItem {
+                text: qsTr("Delete")
+                onClicked: {
+                    entryList.remorseDelete(function () { deleteEntry(realModel, index, rowid) })
+                }
             }
         }
-        MenuItem {
-            text: qsTr("Delete")
-            onClicked: {
-                entryList.remorseDelete(function () { deleteEntry(realModel, index, rowid) })
-            }
-        }
+    }
+
+    onPressAndHold: {
+        menu = editMenuComponent
+        openMenu()
     }
 
     onClicked: {
@@ -148,6 +167,11 @@ ListItem {
 
         enabled: editable
         onClicked: setFavorite(realModel, index, rowid, !favorite)
+
+        onPressAndHold: {
+            entryList.menu = moodMenuComponent
+            entryList.openMenu()
+        }
 
         Column {
             id: iconsColumn

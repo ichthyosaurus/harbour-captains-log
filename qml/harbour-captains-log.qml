@@ -89,9 +89,13 @@ ApplicationWindow
         if (model !== entriesModel) _scheduleReload = true;
     }
 
-    function updateEntry(model, index, changeDate, mood, title, preview, entry, hashs, modifyTz, rowid) {
+    function updateEntry(model, index, mood, title, preview, entry, hashs, rowid) {
+        var changeDate = new Date().toLocaleString(Qt.locale(), dbDateFormat)
+        var modifyTz = timezone
+
         model.set(index, { "modify_date": changeDate, "modify_tz": modifyTz, "mood": mood, "title": title,
                              "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid })
+
         py.call("diary.update_entry", [changeDate, mood, title, preview, entry, hashs, modifyTz, rowid], function() {
             console.log("Updated entry in database")
             entryUpdated(changeDate, mood, title, preview, entry, hashs, modifyTz, rowid)
