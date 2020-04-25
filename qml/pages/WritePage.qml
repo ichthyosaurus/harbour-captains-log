@@ -67,12 +67,14 @@ Dialog {
     }
 
     SilicaFlickable {
-        id: content
+        id: flick
         anchors.fill: parent
-        VerticalScrollDecorator { flickable: content }
+        contentHeight: content.height + Theme.paddingLarge
+        VerticalScrollDecorator { flickable: flick }
 
         Column {
-            anchors.fill: parent
+            id: content
+            width: parent.width
             spacing: Theme.paddingMedium
 
             DialogHeader {
