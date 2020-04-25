@@ -137,16 +137,16 @@
 <context>
     <name>ReadPage</name>
     <message>
-        <source>Last change: %1</source>
-        <translation>Letzte Änderung: %1</translation>
-    </message>
-    <message>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
         <source>mood:</source>
         <translation>Stimmung:</translation>
+    </message>
+    <message>
+        <source>changed: %1</source>
+        <translation>geändert: %1</translation>
     </message>
 </context>
 <context>

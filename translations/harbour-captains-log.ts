@@ -137,15 +137,15 @@
 <context>
     <name>ReadPage</name>
     <message>
-        <source>Last change: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>mood:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>changed: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
