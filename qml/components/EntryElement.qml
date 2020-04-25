@@ -190,7 +190,7 @@ ListItem {
                 width: 65; height: width
                 fillMode: Image.PreserveAspectFit
                 color: Theme.primaryColor
-                opacity: 1-Theme.opacityFaint*mood
+                opacity: 1-mood*(1/moodTexts.length)
                 source: "../images/mood-%1.png".arg(String(mood))
             }
         }
