@@ -57,8 +57,10 @@ Page {
     }
 
     SilicaFlickable {
+        id: flick
         anchors.fill: parent
-        contentHeight: content.height + Theme.paddingLarge
+        contentHeight: content.height + Theme.horizontalPageMargin
+        VerticalScrollDecorator { flickable: flick }
 
         PullDownMenu {
             enabled: editable
