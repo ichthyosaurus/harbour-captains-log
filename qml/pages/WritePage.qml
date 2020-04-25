@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../components"
 
 Dialog {
     id: page
@@ -36,13 +37,12 @@ Dialog {
     property string dbCurrentDate: new Date().toLocaleString(Qt.locale(), dbDateFormat);
     property bool editing: rowid > -1
 
-    property string _currentChangeDate: dbCurrentDate
     property string createDate: ""
     property string modifyDate: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
     property alias hashtags: hashtagField.text
-    property alias mood: feelCombo.selectedIndex
+    property alias mood: moodMenu.selectedIndex
     property string createTz: ""
     property string modifyTz: ""
     property int rowid: -1
@@ -52,7 +52,7 @@ Dialog {
     acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
         var createDate = dbCurrentDate
-        var mood = feelCombo.selectedIndex
+        var mood = page.mood
         var title_text = titleField.text.trim()
         // regular expression to kick out all newline chars in preview
         var preview = entryArea.text.substring(0, 150).replace(/\r?\n|\r/g, " ").trim()
@@ -60,7 +60,7 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, _currentChangeDate, mood, title_text, preview, entry, hashs, timezone, rowid);
+            updateEntry(model, index, mood, title_text, preview, entry, hashs, rowid);
         } else {
             addEntry(createDate, mood, title_text, preview, entry, hashs);
         }
@@ -108,45 +108,15 @@ Dialog {
             }
 
             ComboBox {
-                id: feelCombo
-                property int selectedIndex: 2
-                value: moodTexts[selectedIndex]
+                id: moodCombo
+                value: moodTexts[mood]
                 width: parent.width
                 description: editing ? qsTr("How did you feel?") : qsTr("How do you feel?")
                 label: qsTr("Your mood:")
 
-                menu: ContextMenu {
-                    id: menu
-                    Flow {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        property int maxPerLine: Math.floor(parent.width / Theme.itemSizeMedium)
-                        property int itemsPerLine: ((maxPerLine > 3) ? 3 : maxPerLine)
-
-                        width: itemsPerLine*Theme.itemSizeMedium
-                        height: Math.ceil(moodTexts.length/itemsPerLine)*Theme.itemSizeMedium
-
-                        Repeater {
-                            model: moodTexts
-                            delegate: BackgroundItem {
-                                property bool selected: index === feelCombo.selectedIndex
-                                width: Theme.itemSizeMedium; height: width
-                                highlighted: down || selected
-
-                                HighlightImage {
-                                    anchors.centerIn: parent
-                                    source: "../images/mood-%1.png".arg(index)
-                                    highlighted: parent.highlighted
-                                    color: Theme.primaryColor
-                                    highlightColor: Theme.highlightColor
-                                }
-
-                                onClicked: {
-                                    feelCombo.selectedIndex = index
-                                    menu.close()
-                                }
-                            }
-                        }
-                    }
+                menu: MoodMenu {
+                    id: moodMenu
+                    selectedIndex: 2
                 }
             }
 
