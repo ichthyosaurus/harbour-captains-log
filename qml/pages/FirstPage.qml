@@ -35,8 +35,6 @@ Page {
         onLoadingFinished: {
             busy.running = false
             diaryList.visible = true
-            if (entriesModel.count === 0) placeholder.enabled = true
-            else placeholder.enabled = false
         }
     }
 
@@ -84,7 +82,7 @@ Page {
 
         ViewPlaceholder {
             id: placeholder
-            enabled: false
+            enabled: appWindow.initialLoadingDone && (!busy.running && entriesModel.count === 0)
             text: qsTr("No entries yet")
             hintText: qsTr("Swipe right to add entries")
         }

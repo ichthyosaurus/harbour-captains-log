@@ -131,6 +131,7 @@ ApplicationWindow
 
                 loadingFinished()
                 _modelReady = true;
+                initialLoadingDone = true;
             }
         )
     }
@@ -141,6 +142,7 @@ ApplicationWindow
     signal entryFavoriteToggled(var rowid, var isFavorite)
     // -----------------------
 
+    property bool initialLoadingDone: false
     property bool _modelReady: false
     property bool _scheduleReload: false // schedules the model to be reloaded when FirstPage ist activated
 
