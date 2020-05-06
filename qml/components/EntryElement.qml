@@ -80,7 +80,12 @@ ListItem {
             MenuItem {
                 text: qsTr("Delete")
                 onClicked: {
-                    entryList.remorseDelete(function () { deleteEntry(realModel, index, rowid) })
+                    // Somehow, the remorse action is executed without the main context.
+                    // It throws "TypeError: Cannot call method 'deleteEntry' of undefined"
+                    // (and similar errors) if we don't use proxy variables here.
+                    var _realModel = realModel, _index = index, _rowid = rowid;
+                    var deleteProxy = appWindow.deleteEntry;
+                    remorseDelete(function() { deleteProxy(_realModel, _index, _rowid); })
                 }
             }
         }
