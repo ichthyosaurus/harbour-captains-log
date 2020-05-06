@@ -36,7 +36,11 @@ Page {
 
     Component {
         id: datePicker
-        DatePickerDialog {}
+        DatePickerDialog {
+            // Start today and don't show the year selection page.
+            // (The year can still be changed by clicking on the header.)
+            date: new Date()
+        }
     }
 
     DiaryListView {
@@ -71,6 +75,9 @@ Page {
                         property string type: "creation"
                         text: qsTr("Creation date")
                         onClicked: {
+                            // TODO support searching for a range
+                            // This needs a database change to use a more standard format
+                            // so we can use the native Sqlite date functions for comparing.
                             filteredModel.clear()
                             var dialog = pageStack.push(datePicker)
                             dialog.accepted.connect(function() {
