@@ -212,7 +212,7 @@ def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
     conn.commit()
 
     entry = {"create_date": create_date,
-             "day": create_date.split(' | ')[0],
+             "day": create_date.split(' ')[0],
              "modify_date": "",
              "mood": mood,
              "title": title.strip(),
@@ -307,7 +307,7 @@ def create_entries_model(rows):
 
     for row in rows:
         entry = {"create_date": row["create_date"],
-                 "day": row["create_date"].split(' | ')[0],
+                 "day": row["create_date"].split(' ')[0],
                  "modify_date": row["modify_date"],
                  "mood": row["mood"],
                  "title": row["title"].strip(),
