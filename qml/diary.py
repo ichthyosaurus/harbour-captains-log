@@ -50,6 +50,17 @@ def _reformat_date_pre_db4(old_date_string):
 
     print("{} -> {}".format(old_date_string, new_string))
     return new_string
+
+
+def _format_date(date_string, tz_string):
+    zone = " [{}]".format(tz_string) if tz_string else ""
+
+    if not date_string:
+        date_string = "never{tz}".format(tz=zone)
+
+    return date_string
+
+
 # - - - basic settings - - - #
 
 home = os.getenv("HOME")
@@ -153,33 +164,6 @@ else:
 
 # make sure database is up-to-date
 upgrade_schema(schema_version)
-
-
-# - - - helper functions - - - #
-
-def _parse_date(date_string):
-    if not date_string:
-        return ()
-
-    date_time = date_string.split(' | ')
-    date = date_time[0].split('.')
-    time = date_time[1].split(':')
-    sec = time[2] if len(time) >= 3 else "0"
-
-    return (int(date[2]), int(date[1]), int(date[0]), int(time[0]), int(time[1]), int(sec))
-
-
-def _format_date(date_string, tz_string):
-    date = _parse_date(date_string)
-    zone = " [{}]".format(tz_string) if tz_string else ""
-
-    if date_string:
-        date_string = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}{tz}".format(
-            date[0], date[1], date[2], date[3], date[4], date[5], tz=zone)
-    else:
-        date_string = "never{tz}".format(tz=zone)
-
-    return date_string
 
 
 # - - - database functions - - - #
