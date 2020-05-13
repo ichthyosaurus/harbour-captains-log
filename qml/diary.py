@@ -22,6 +22,34 @@ import csv
 import sqlite3
 import re
 
+
+# - - - helper functions - - - #
+def _reformat_date_pre_db4(old_date_string):
+    """Reformat old date strings (prior db version 4) to the new format.
+
+    New date format: 'yyyy-MM-dd hh:mm:ss'.
+    Old date format: 'd.M.yyyy | h:m:s' (with ':s' being optional).
+    - Each field was padded with 0 to be two characters long (not enforced).
+    """
+
+    if not old_date_string:
+        return ""
+
+    reg = re.compile("^(\d{1,2}\.){2}\d{4} \| \d{1,2}:\d{1,2}(:\d{1,2})?$")
+    if reg.search(old_date_string) is None:
+        print("warning: could not convert invalid date '{}'".format(date_string))
+        return ""
+
+    date_time = old_date_string.split(' | ')  # "10.12.2009 | 10:00:01" -> ("1.10.2010", "10:0:01")
+    date = date_time[0].split('.')  # "1.10.2010" -> ("1", "10", "2010")
+    time = date_time[1].split(':')  # "10:0:01" -> ("10", "0", "01")
+    sec = time[2] if len(time) >= 3 else "0"
+
+    new_string = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}".format(
+        int(date[2]), int(date[1]), int(date[0]), int(time[0]), int(time[1]), int(sec))
+
+    print("{} -> {}".format(old_date_string, new_string))
+    return new_string
 # - - - basic settings - - - #
 
 home = os.getenv("HOME")
@@ -93,6 +121,13 @@ def upgrade_schema(from_version):
         cursor.execute("""DROP TABLE diary;""")
         cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
     elif from_version == "3":
+        to_version = "4"
+        conn.create_function("REWRITE_DATE", 1, _reformat_date_pre_db4)
+
+        # rewrite all dates to use a standard format
+        cursor.execute("""UPDATE diary SET create_date=REWRITE_DATE(create_date);""")
+        cursor.execute("""UPDATE diary SET modify_date=REWRITE_DATE(modify_date);""")
+    elif from_version == "4":
         # we arrived at the latest version; save it and return
         if schema_version != from_version:
             conn.commit()
