@@ -68,6 +68,7 @@ conn = sqlite3.connect(database)
 conn.row_factory = sqlite3.Row
 cursor = conn.cursor()
 
+
 def upgrade_schema(from_version):
     to_version = ""
 
@@ -152,19 +153,6 @@ else:
 
 # make sure database is up-to-date
 upgrade_schema(schema_version)
-
-
-# - - - add support for regex matching - - - #
-
-def regexp(expr, item):
-    if item is None:
-        return False
-
-    reg = re.compile(expr)
-    return reg.search(item) is not None
-
-
-conn.create_function("REGEXP", 2, regexp)
 
 
 # - - - helper functions - - - #
@@ -267,11 +255,9 @@ def search_entries(keyword):
     create_entries_model(rows)
 
 
-def search_date(dateString):
+def search_date(date_string):
     """ Search for a date string """
-    date = _parse_date(dateString)
-    expression = "^0?{}\.0?{}\.{} \| ".format(date[2], date[1], date[0])
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE create_date REGEXP ? ORDER BY rowid DESC; """, (expression, ))
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE date(create_date) = date(?) ORDER BY rowid DESC; """, (date_string, ))
     rows = cursor.fetchall()
     create_entries_model(rows)
     print(rows)
