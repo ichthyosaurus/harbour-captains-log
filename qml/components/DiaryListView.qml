@@ -45,7 +45,7 @@ SilicaListView {
                 horizontalAlignment: Text.AlignHCenter
                 truncationMode: TruncationMode.Fade
                 color: Theme.highlightColor
-                text: formatDate(section+" | 0:0", fullDateFormat)
+                text: formatDate(section, fullDateFormat)
             }
             Separator {
                 anchors {

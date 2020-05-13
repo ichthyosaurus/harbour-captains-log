@@ -43,6 +43,7 @@ ApplicationWindow
     // ===============================
 
     // constants
+    // -- important: always use formatDate(...) to format date strings
     readonly property string timezone: new Date().toLocaleString(Qt.locale("C"), "t")
     readonly property string timeFormat: qsTr("hh':'mm")
     readonly property string atTimeFormat: qsTr("'at' hh':'mm")
@@ -50,7 +51,7 @@ ApplicationWindow
     readonly property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm")
     readonly property string fullDateFormat: qsTr("ddd d MMM yyyy")
     readonly property string dateFormat: qsTr("d MMM yyyy")
-    readonly property string dbDateFormat: "dd.MM.yyyy | hh:mm:ss"
+    readonly property string dbDateFormat: "yyyy-MM-dd hh:mm:ss"
     property var moodTexts: [
         qsTr("fantastic"),
         qsTr("good"),
@@ -63,14 +64,16 @@ ApplicationWindow
 
     // global helper functions
     function parseDate(dbDateString) {
+        // This function creates a Date object from a date string that strictly follows dbDateFormat.
+        // We use this function to make sure JS does not calculate some time zone magic when converting.
+        // The resulting Date object is interpreted as "local time" and contains exactly the same
+        // numbers as were given in dbDateString.
         if (typeof dbDateString === 'undefined' || dbDateString === "") return "";
-        var dateTime = dbDateString.split(' | ');
-        var date = dateTime[0].split('.');
-        var time = dateTime[1].split(':');
-        var sec = time.length >= 3 ? parseInt(time[2]) : 0
-
-        // Date object interpreted as local time
-        return new Date(parseInt(date[2]), parseInt(date[1])-1, parseInt(date[0]), parseInt(time[0]), parseInt(time[1]), sec);
+        var dateTime = dbDateString.split(' ');
+        var date = dateTime[0].split('-');
+        var time = ["0", "0", "0"] // set to zero if the string had no time part
+        if (dateTime.length >= 2) time = dateTime[1].split(':');
+        return new Date(parseInt(date[0]), parseInt(date[1])-1, parseInt(date[2]), parseInt(time[0]), parseInt(time[1]), parseInt(time[2]));
     }
 
     function formatDate(dbDateString, format, zone) {
