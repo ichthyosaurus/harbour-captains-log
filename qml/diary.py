@@ -234,17 +234,18 @@ def delete_entry(id):
 
 def search_entries(keyword):
     """ Searches for the keyword in the database """
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE title LIKE ? OR entry LIKE ? OR hashtags LIKE ? ORDER BY rowid DESC; """, ("%"+keyword+"%", "%"+keyword+"%", "%"+keyword+"%"))
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE title LIKE ? OR entry LIKE ? OR hashtags LIKE ? ORDER BY rowid DESC; """,
+                   ("%"+keyword+"%", "%"+keyword+"%", "%"+keyword+"%"))
     rows = cursor.fetchall()
     create_entries_model(rows)
 
 
-def search_date(date_string):
+def search_date(from_date_string, till_date_string):
     """ Search for a date string """
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE date(create_date) = date(?) ORDER BY rowid DESC; """, (date_string, ))
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE date(create_date) >= date(?) AND date(create_date) <= date(?) ORDER BY rowid DESC; """,
+                   (from_date_string, till_date_string))
     rows = cursor.fetchall()
     create_entries_model(rows)
-    print(rows)
 
 
 def search_hashtags(hash):
