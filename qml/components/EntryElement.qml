@@ -57,7 +57,10 @@ ListItem {
         id: moodMenuComponent
         MoodMenu {
             selectedIndex: mood
-            onSelectedIndexChanged: updateEntry(realModel, index, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
+            onSelectedIndexChanged: {
+                if (selectedIndex == mood) return; // only update if it changed
+                updateEntry(realModel, index, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
+            }
         }
     }
 
