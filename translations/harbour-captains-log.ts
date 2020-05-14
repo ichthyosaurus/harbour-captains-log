@@ -71,6 +71,14 @@
     </message>
 </context>
 <context>
+    <name>DateButton</name>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>EntryElement</name>
     <message>
         <source>Edit</source>
@@ -202,6 +210,16 @@
     </message>
     <message>
         <source>No entries matched these criteria.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>from</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>till</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>

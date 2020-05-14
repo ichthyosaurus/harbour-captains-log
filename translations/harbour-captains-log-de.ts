@@ -71,6 +71,14 @@
     </message>
 </context>
 <context>
+    <name>DateButton</name>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation>wählen</translation>
+    </message>
+</context>
+<context>
     <name>EntryElement</name>
     <message>
         <source>Edit</source>
@@ -202,7 +210,17 @@
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation>Keine der Einträge entsprachen den gewählten Kriterien.</translation>
+        <translation>Zu den gewählten Kriterien wurden keine Einträge gefunden.</translation>
+    </message>
+    <message>
+        <source>from</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
+        <translation>von</translation>
+    </message>
+    <message>
+        <source>till</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
+        <translation>bis</translation>
     </message>
 </context>
 <context>
