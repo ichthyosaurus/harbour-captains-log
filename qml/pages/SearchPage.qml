@@ -147,6 +147,10 @@ Page {
                         py.call("diary.search_hashtags", [searchField.text], function() { loadFilteredModel() });
                     }
                 }
+
+                Component.onCompleted: forceActiveFocus()
+            }
+
             Row {
                 id: dateRow
                 anchors.horizontalCenter: parent.horizontalCenter
