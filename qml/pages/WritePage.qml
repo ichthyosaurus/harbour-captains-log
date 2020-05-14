@@ -31,6 +31,10 @@ Dialog {
         if (status !== PageStatus.Activating) return;
         currentDate = new Date().toLocaleString(Qt.locale(), fullDateTimeFormat);
         dbCurrentDate = new Date().toLocaleString(Qt.locale(), dbDateFormat);
+
+        if (!editing) {
+            moodCombo.clicked(null) // open mood menu
+        }
     }
 
     property string currentDate: new Date().toLocaleString(Qt.locale(), fullDateTimeFormat);
