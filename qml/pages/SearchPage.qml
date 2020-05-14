@@ -34,13 +34,9 @@ Page {
         })
     }
 
-    Component {
-        id: datePicker
-        DatePickerDialog {
-            // Start today and don't show the year selection page.
-            // (The year can still be changed by clicking on the header.)
-            date: new Date()
-        }
+    function resetFilteredModel() {
+        filteredModel.clear()
+        placeholder.enabled = false
     }
 
     DiaryListView {
@@ -74,17 +70,7 @@ Page {
                     MenuItem {
                         property string type: "creation"
                         text: qsTr("Creation date")
-                        onClicked: {
-                            // TODO support searching for a range
-                            // This needs a database change to use a more standard format
-                            // so we can use the native Sqlite date functions for comparing.
-                            filteredModel.clear()
-                            var dialog = pageStack.push(datePicker)
-                            dialog.accepted.connect(function() {
-                                var dateString = dialog.date.toLocaleString(Qt.locale(), dbDateFormat)
-                                py.call("diary.search_date", [dateString], function() { loadFilteredModel() })
-                            })
-                        }
+                        onClicked: resetFilteredModel()
                     }
 
                     MenuItem {
@@ -151,6 +137,45 @@ Page {
                     } else if (type === "hashtags") {
                         py.call("diary.search_hashtags", [searchField.text], function() { loadFilteredModel() });
                     }
+                }
+            Row {
+                id: dateRow
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: Theme.paddingMedium
+                height: childrenRect.height + Theme.paddingLarge
+
+                // not visible until creation date is selected as filter
+                visible: filterCombo.currentItem.type === "creation" ? true : false
+                onVisibleChanged: if (visible) refresh()
+
+                function refresh(selectedDate, otherButton) {
+                    if (selectedDate && !otherButton.haveDate) {
+                        otherButton._selectedDate = selectedDate
+                        return
+                    }
+
+                    resetFilteredModel()
+                    var from = fromDate.selectedDateString
+                    var till = tillDate.selectedDateString
+
+                    if (fromDate._selectedDate.getTime() > tillDate._selectedDate.getTime()) {
+                        from = tillDate.selectedDateString
+                        till = fromDate.selectedDateString
+                    }
+
+                    if (from === "" || till === "") return
+                    py.call("diary.search_date", [from, till], function() { loadFilteredModel() })
+                }
+
+                DateButton {
+                    id: fromDate
+                    text: qsTr("from", "search entries between 'from' and 'till'")
+                    on_SelectedDateChanged: dateRow.refresh(_selectedDate, tillDate)
+                }
+                DateButton {
+                    id: tillDate
+                    text: qsTr("till", "search entries between 'from' and 'till'")
+                    on_SelectedDateChanged: dateRow.refresh(_selectedDate, fromDate)
                 }
             }
         }
