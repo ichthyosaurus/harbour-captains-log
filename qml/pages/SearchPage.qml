@@ -129,6 +129,9 @@ Page {
                 width: parent.width
                 property string type: filterCombo.currentItem.type
                 placeholderText: qsTr("Search your entries...")
+                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                EnterKey.onClicked: { focus = false; refresh() }
+                EnterKey.enabled: searchField.text.length > 0
 
                 // only visible for text search
                 visible: filterCombo.currentItem.type === "entry" || filterCombo.currentItem.type === "hashtags" ? true : false
@@ -137,10 +140,6 @@ Page {
 
                 function refresh() {
                     if (searchField.text === "") return
-                // Show 'next' icon to indicate pressing Enter will move the
-                // keyboard focus to the next text field in the page
-                EnterKey.iconSource: "image://theme/icon-m-enter-next"
-                EnterKey.onClicked: {
                     var type = filterCombo.currentItem.type
                     if (type === "entry") {
                         py.call("diary.search_entries", [searchField.text], function() { loadFilteredModel() });
