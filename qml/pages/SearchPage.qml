@@ -28,7 +28,7 @@ Page {
     function loadFilteredModel() {
         console.log("loading filtered model...")
         py.call("diary.get_filtered_entry_list", [], function(result) {
-            filteredModel.clear()
+            resetFilteredModel()
             placeholder.enabled = (result.length === 0);
             for(var i=0; i<result.length; i++) filteredModel.append(result[i])
         })
@@ -64,7 +64,7 @@ Page {
                     MenuItem {
                         property string type: "entry"
                         text: qsTr("Title and Entry")
-                        onClicked: filteredModel.clear()
+                        onClicked: resetFilteredModel()
                     }
 
                     MenuItem {
@@ -77,7 +77,7 @@ Page {
                         property string type: "favorites"
                         text: qsTr("Favorites")
                         onClicked: {
-                            filteredModel.clear()
+                            resetFilteredModel()
                             py.call("diary.search_favorites", [])
                             loadFilteredModel()
                         }
@@ -86,13 +86,13 @@ Page {
                     MenuItem {
                         property string type: "hashtags"
                         text: qsTr("Hashtag")
-                        onClicked: filteredModel.clear()
+                        onClicked: resetFilteredModel()
                     }
 
                     MenuItem {
                         property string type: "mood"
                         text: qsTr("Mood")
-                        onClicked: filteredModel.clear()
+                        onClicked: resetFilteredModel()
                     }
                 }
             }
@@ -100,20 +100,25 @@ Page {
             ComboBox {
                 id: moodCombo
                 width: parent.width
-
-                // not visible until mood is selected as filter
-                visible: filterCombo.currentItem.type === "mood" ? true : false
-
                 label: qsTr("Filter:", "the mood filter to apply")
                 description: qsTr("Filter results by mood")
                 currentIndex: -1
+
+                // not visible until mood is selected as filter
+                visible: filterCombo.currentItem.type === "mood" ? true : false
+                onVisibleChanged: if (visible) refresh(currentIndex)
+
+                function refresh(index) {
+                    if (index < 0) return
+                    py.call("diary.search_mood", [index], function() { loadFilteredModel() })
+                }
 
                 menu: ContextMenu {
                     Repeater {
                         model: moodTexts
                         delegate: MenuItem {
                             text: moodTexts[index]
-                            onClicked: py.call("diary.search_mood", [index], function() { loadFilteredModel() })
+                            onClicked: moodCombo.refresh(index)
                         }
                     }
                 }
@@ -122,11 +127,16 @@ Page {
             SearchField {
                 id: searchField
                 width: parent.width
+                property string type: filterCombo.currentItem.type
                 placeholderText: qsTr("Search your entries...")
 
-                // only active for text search
-                active: filterCombo.currentItem.type === "entry" || filterCombo.currentItem.type === "hashtags" ? true : false
+                // only visible for text search
+                visible: filterCombo.currentItem.type === "entry" || filterCombo.currentItem.type === "hashtags" ? true : false
+                onVisibleChanged: if (visible) refresh()
+                onTypeChanged: if (visible) refresh()
 
+                function refresh() {
+                    if (searchField.text === "") return
                 // Show 'next' icon to indicate pressing Enter will move the
                 // keyboard focus to the next text field in the page
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
