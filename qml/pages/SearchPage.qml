@@ -198,6 +198,7 @@ Page {
             enabled: false
             text: qsTr("No entries found")
             hintText: qsTr("No entries matched these criteria.")
+            verticalOffset: listView.headerItem.height
         }
     }
 }
