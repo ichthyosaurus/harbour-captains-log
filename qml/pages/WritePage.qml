@@ -121,6 +121,7 @@ Dialog {
                 menu: MoodMenu {
                     id: moodMenu
                     selectedIndex: 2
+                    onClosed: if (!editing) entryArea.forceActiveFocus()
                 }
             }
 
@@ -137,7 +138,6 @@ Dialog {
 
             TextArea {
                 id: entryArea
-
                 width: parent.width
                 placeholderText: editing ? qsTr("What do you want to say?") : qsTr("Entry...")
                 label: qsTr("Entry")
@@ -146,7 +146,6 @@ Dialog {
 
             TextField {
                 id: hashtagField
-
                 width: parent.width
                 placeholderText: qsTr("Hashtags")
                 font.pixelSize: Theme.fontSizeExtraSmall
