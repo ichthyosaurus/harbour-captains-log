@@ -301,15 +301,16 @@ def get_filtered_entry_list():
 # - - - export features - - - #
 
 def export(filename, type):
-    """ Export to ~/filename as txt or csv """
+    """ Export to 'filename' as 'type' """
 
     # get latest state of the database
     entries = read_all_entries()
 
+    # TODO support translations
     moods = ["Fantastic", "Good", "Okay", "Not okay", "Bad", "Horrible"]
 
-    # Export as *.txt text file to filename
-    if type == ".txt":
+    # Export as plain text file to filename
+    if type == "txt":
         with open(filename, "w") as f:
             for e in entries:
                 created = _format_date(e["create_date"], e["create_tz"])
@@ -335,8 +336,8 @@ Mood: {}
 
             f.close()
 
-    # Export as *.csv file to filename
-    if type == ".csv":
+    # Export as CSV file to filename
+    elif type == "csv":
         with open(filename, "w", newline='') as f:
             fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "favorite"]
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)

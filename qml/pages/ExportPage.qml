@@ -27,27 +27,24 @@ Dialog {
             label: qsTr("Select file type:")
 
             menu: ContextMenu {
-                MenuItem {
-                    text: ".txt"
-                }
-                MenuItem {
-                    text: ".csv"
-                }
+                MenuItem { text: qsTr("Plain text"); property string extension: "txt" }
+                MenuItem { text: qsTr("Comma-separated values (CSV)"); property string extension: "csv" }
             }
             onCurrentIndexChanged: {
-                extension = fileTypeCombo.value
+                extension = fileTypeCombo.currentItem.extension
             }
         }
     }
     onAccepted: {
         var time = new Date().getTime()
-        var filename = homePath +"/"+ "logbook_export_"+String(time)+extension
+        var filenameFormat = "%1/%2.%3"
+        var filename = filenameFormat.arg(homePath).arg("logbook_export_"+String(time)).arg(extension)
 
         if(filenameField.text.length > 0) {
-            filename = homePath +"/"+ filenameField.text+extension
+            filename = filenameFormat.arg(homePath).arg(filenameField.text).arg(extension)
         }
-        // notifications are defined in harbour-captains-log.qml
-        showMessage(qsTr("Data exported to: %1").arg(filename))
+
+        showMessage(qsTr("Data exported to: %1").arg(filename)) // defined in harbour-captains-log.qml
         py.call("diary.export", [filename, extension])
     }
 }
