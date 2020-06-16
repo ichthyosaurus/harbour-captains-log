@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -37,6 +33,10 @@
     </message>
     <message>
         <source>Source Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About this app</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -94,6 +94,98 @@
     </message>
     <message>
         <source>Edit: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <source>Export your data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Define the file name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export file type selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select file type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comma-separated values (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Markdown for Pandoc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry:
+{}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmark: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diary from {} until {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data exported to: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -250,31 +342,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Filename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select file type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export your data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data exported to: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -372,16 +440,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Feedback</source>
-        <comment>feedback email subject line</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Send Feedback</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About Captain&apos;s Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Authors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About %1</source>
-        <translation>Über %1</translation>
-    </message>
-    <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
     </message>
@@ -38,6 +34,10 @@
     <message>
         <source>Source Code</source>
         <translation>Quellcode</translation>
+    </message>
+    <message>
+        <source>About this app</source>
+        <translation>Über diese App</translation>
     </message>
 </context>
 <context>
@@ -95,6 +95,99 @@
     <message>
         <source>Edit: %1</source>
         <translation>Bearbeitet: %1</translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <source>Export your data</source>
+        <translation>Daten exportieren</translation>
+    </message>
+    <message>
+        <source>Define the file name...</source>
+        <translation>Dateinamen angeben ...</translation>
+    </message>
+    <message>
+        <source>Filename</source>
+        <translation>Dateiname</translation>
+    </message>
+    <message>
+        <source>Export file type selection</source>
+        <translation>Auswahl des Export-Dateitypen</translation>
+    </message>
+    <message>
+        <source>Select file type:</source>
+        <translation>Dateityp wählen:</translation>
+    </message>
+    <message>
+        <source>Plain text</source>
+        <translation>Einfacher Text</translation>
+    </message>
+    <message>
+        <source>Comma-separated values (CSV)</source>
+        <translation>Komma-getrennte Werte (CSV)</translation>
+    </message>
+    <message>
+        <source>Plain Markdown</source>
+        <translation>Reines Markdown</translation>
+    </message>
+    <message>
+        <source>Markdown for Pandoc</source>
+        <translation>Markdown für Pandoc</translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation>nie</translation>
+    </message>
+    <message>
+        <source>Created: {}</source>
+        <translation>Erstellt: {}</translation>
+    </message>
+    <message>
+        <source>Changed: {}</source>
+        <translation>Geändert: {}</translation>
+    </message>
+    <message>
+        <source>changed: {}</source>
+        <translation>geändert: {}</translation>
+    </message>
+    <message>
+        <source>Title: {}</source>
+        <translation>Titel: {}</translation>
+    </message>
+    <message>
+        <source>Entry:
+{}</source>
+        <translation>Eintrag:
+{}</translation>
+    </message>
+    <message>
+        <source>Hashtags: {}</source>
+        <translation>Hashtags: {}</translation>
+    </message>
+    <message>
+        <source>Bookmark: {}</source>
+        <translation>Lesezeichen: {}</translation>
+    </message>
+    <message>
+        <source>Mood: {}</source>
+        <translation>Stimmung: {}</translation>
+    </message>
+    <message>
+        <source>Diary from {} until {}</source>
+        <translation>Tagebuch vom {} bis {}</translation>
+    </message>
+    <message>
+        <source>Data exported to: %1</source>
+        <translation>Daten exportiert nach: %1</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>ja</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>nein</translation>
     </message>
 </context>
 <context>
@@ -250,32 +343,8 @@
         <translation>Export-Möglichkeiten</translation>
     </message>
     <message>
-        <source>Filename</source>
-        <translation>Dateiname</translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation>Auswahl des Export-Dateitypen</translation>
-    </message>
-    <message>
-        <source>Select file type:</source>
-        <translation>Dateityp wählen:</translation>
-    </message>
-    <message>
         <source>Export data</source>
         <translation>Daten exportieren</translation>
-    </message>
-    <message>
-        <source>Export your data</source>
-        <translation>Daten exportieren</translation>
-    </message>
-    <message>
-        <source>Define the file name...</source>
-        <translation>Dateinamen angeben ...</translation>
-    </message>
-    <message>
-        <source>Data exported to: %1</source>
-        <translation>Daten exportiert nach: %1</translation>
     </message>
 </context>
 <context>
@@ -372,17 +441,20 @@
         <translation>Quellcode auf GitHub</translation>
     </message>
     <message>
-        <source>Feedback</source>
-        <comment>feedback email subject line</comment>
-        <translation>Feedback</translation>
-    </message>
-    <message>
-        <source>Send Feedback</source>
-        <translation>Feedback senden</translation>
-    </message>
-    <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About Captain&apos;s Log</source>
+        <translation>Über Captain&apos;s Log</translation>
+    </message>
+    <message>
+        <source>Authors</source>
+        <translation>Autoren</translation>
+    </message>
+    <message>
+        <source>Swedish: %1</source>
+        <translation>Schwedisch: %1</translation>
     </message>
 </context>
 <context>

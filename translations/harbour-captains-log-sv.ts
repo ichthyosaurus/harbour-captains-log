@@ -4,10 +4,6 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -37,6 +33,10 @@
     </message>
     <message>
         <source>Source Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About this app</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -98,6 +98,98 @@
     </message>
 </context>
 <context>
+    <name>ExportPage</name>
+    <message>
+        <source>Export your data</source>
+        <translation>Exportera din data</translation>
+    </message>
+    <message>
+        <source>Define the file name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filename</source>
+        <translation>Filnamn</translation>
+    </message>
+    <message>
+        <source>Export file type selection</source>
+        <translation>Exportfilsformat</translation>
+    </message>
+    <message>
+        <source>Select file type:</source>
+        <translation>Välj filtyp:</translation>
+    </message>
+    <message>
+        <source>Plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comma-separated values (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Markdown for Pandoc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry:
+{}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmark: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diary from {} until {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data exported to: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
@@ -146,7 +238,7 @@
     <name>ReadPage</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished">Redigera</translation>
+        <translation>Redigera</translation>
     </message>
     <message>
         <source>mood:</source>
@@ -226,20 +318,8 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>Filename</source>
-        <translation>Filnamn</translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation>Exportfilsformat</translation>
-    </message>
-    <message>
         <source>Export data</source>
         <translation>Exportera data</translation>
-    </message>
-    <message>
-        <source>Export your data</source>
-        <translation>Exportera din data</translation>
     </message>
     <message>
         <source>Security</source>
@@ -262,20 +342,8 @@
         <translation>Ändra kod</translation>
     </message>
     <message>
-        <source>Select file type:</source>
-        <translation>Välj filtyp:</translation>
-    </message>
-    <message>
         <source>activate code protection</source>
         <translation>Aktivera kodsäkerhet</translation>
-    </message>
-    <message>
-        <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data exported to: %1</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -306,7 +374,7 @@
     </message>
     <message>
         <source>Edit Entry</source>
-        <translation type="unfinished">Redigera post</translation>
+        <translation>Redigera post</translation>
     </message>
     <message>
         <source>How did you feel?</source>
@@ -372,16 +440,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Feedback</source>
-        <comment>feedback email subject line</comment>
+        <source>A simple diary application for keeping track of your thoughts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Send Feedback</source>
-        <translation type="unfinished">Skicka återkoppling</translation>
+        <source>About Captain&apos;s Log</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A simple diary application for keeping track of your thoughts.</source>
+        <source>Authors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -405,23 +476,23 @@
     </message>
     <message>
         <source>fantastic</source>
-        <translation type="unfinished">fantastiskt</translation>
+        <translation>fantastiskt</translation>
     </message>
     <message>
         <source>good</source>
-        <translation type="unfinished">bra</translation>
+        <translation>bra</translation>
     </message>
     <message>
         <source>okay</source>
-        <translation type="unfinished">okay</translation>
+        <translation>okay</translation>
     </message>
     <message>
         <source>bad</source>
-        <translation type="unfinished">dåligt</translation>
+        <translation>dåligt</translation>
     </message>
     <message>
         <source>horrible</source>
-        <translation type="unfinished">fruktansvärt</translation>
+        <translation>fruktansvärt</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
