@@ -20,6 +20,8 @@ Dialog {
             width: parent.width
             placeholderText: qsTr("Define the file name...")
             label: qsTr("Filename")
+            text: defaultFileName
+            inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
         }
         ComboBox {
             id: fileTypeCombo
