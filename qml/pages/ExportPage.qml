@@ -49,6 +49,20 @@ Dialog {
 
         var translations = {
             'moodTexts': moodTexts,
+            'never': qsTr('never'),
+            'Created: {}': qsTr('Created: {}'),
+            'Changed: {}': qsTr('Changed: {}'),
+            'changed: {}': qsTr('changed: {}'),
+            'Title: {}': qsTr('Title: {}'),
+            'Entry:\n{}': qsTr('Entry:\n{}'),
+            'Hashtags: {}': qsTr('Hashtags: {}'),
+            'Bookmark: {}': qsTr('Bookmark: {}'),
+            'Mood: {}': qsTr('Mood: {}'),
+            'Diary from {} until {}': qsTr('Diary from {} until {}'),
+            'yes': qsTr('yes'),
+            'no': qsTr('no'),
+            // '': qsTr(''),
+            // ': {}': qsTr(': {}'),
         }
 
         showMessage(qsTr("Data exported to: %1").arg(filename)) // defined in harbour-captains-log.qml

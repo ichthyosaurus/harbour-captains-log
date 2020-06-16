@@ -342,11 +342,11 @@ def export(filename, type, translations):
             for e in entries:
                 lines = [
                     tr('Created: {}').format(_format_date(e["create_date"], e["create_tz"])),
-                    tr('Changed: {}').format(_format_date(e["modify_date"], e["modify_tz"])), '',
+                    tr('Changed: {}').format(tr(_format_date(e["modify_date"], e["modify_tz"]))), '',
                     tr('Title: {}').format(e['title']), '',
                     tr('Entry:\n{}').format(e['entry']), '',
                     tr('Hashtags: {}').format(e['hashtags']),
-                    tr('Bookmark: {}').format(tr("Yes") if e["bookmark"] else tr("No")),
+                    tr('Bookmark: {}').format(tr("yes") if e["bookmark"] else tr("no")),
                     tr('Mood: {}').format(trMood(e["mood"])),
                     "-".rjust(80, "-"), '',
                 ]
