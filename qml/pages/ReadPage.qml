@@ -28,7 +28,7 @@ Page {
     property int mood
     property string title
     property string entry
-    property bool favorite
+    property bool bookmark
     property string hashtags
     property string createTz
     property string modifyTz
@@ -41,9 +41,9 @@ Page {
 
     Connections {
         target: appWindow
-        onEntryFavoriteToggled: {
+        onEntryBookmarkToggled: {
             if (rowid !== page.rowid) return
-            favorite = isFavorite
+            bookmark = isBookmark
         }
         onEntryUpdated: {
             if (rowid !== page.rowid) return
@@ -107,14 +107,14 @@ Page {
             BackgroundItem {
                 width: parent.width
                 height: Theme.itemSizeSmall
-                onClicked: setFavorite(model, index, rowid, !favorite)
+                onClicked: setBookmark(model, index, rowid, !bookmark)
                 enabled: editable
 
                 HighlightImage {
                     id: favStar
                     anchors { verticalCenter: parent.verticalCenter; right: parent.right }
                     highlighted: parent.down
-                    source: favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                    source: bookmark ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
                 }
 
                 Label {

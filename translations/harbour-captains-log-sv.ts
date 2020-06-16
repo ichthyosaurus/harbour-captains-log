@@ -188,8 +188,8 @@
         <translation>Sök i dina poster...</translation>
     </message>
     <message>
-        <source>Favorites</source>
-        <translation>Favoriter</translation>
+        <source>Bookmarks</source>
+        <translation>Bokmärke</translation>
     </message>
     <message>
         <source>Hashtag</source>

@@ -103,7 +103,7 @@ ListItem {
         pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
                            "createDate": create_date, "modifyDate": modify_date,
                            "mood": mood, "title": title,
-                           "entry": entry, "favorite": favorite,
+                           "entry": entry, "bookmark": bookmark,
                            "hashtags": hashtags, "rowid": rowid, "index": index,
                            "model": realModel, "editable": editable,
                            "modifyTz": modify_tz, "createTz": create_tz
@@ -174,7 +174,7 @@ ListItem {
         anchors.right: parent.right
 
         enabled: editable
-        onClicked: setFavorite(realModel, index, rowid, !favorite)
+        onClicked: setBookmark(realModel, index, rowid, !bookmark)
 
         onPressAndHold: {
             entryList.menu = moodMenuComponent
@@ -189,7 +189,7 @@ ListItem {
             Icon {
                 id: favStar
                 opacity: Theme.opacityHigh
-                source: favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                source: bookmark ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
             }
 
             HighlightImage {

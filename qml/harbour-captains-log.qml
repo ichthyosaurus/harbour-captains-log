@@ -85,10 +85,10 @@ ApplicationWindow
         return date
     }
 
-    function setFavorite(model, index, rowid, setTrue) {
-        py.call("diary.update_favorite", [rowid, setTrue])
-        model.setProperty(index, 'favorite', setTrue)
-        entryFavoriteToggled(rowid, setTrue)
+    function setBookmark(model, index, rowid, setTrue) {
+        py.call("diary.update_bookmark", [rowid, setTrue])
+        model.setProperty(index, 'bookmark', setTrue)
+        entryBookmarkToggled(rowid, setTrue)
         if (model !== entriesModel) _scheduleReload = true;
     }
 
@@ -142,7 +142,7 @@ ApplicationWindow
     signal loadingStarted()
     signal loadingFinished()
     signal entryUpdated(var changeDate, var mood, var title, var preview, var entry, var hashs, var modifyTz, var rowid)
-    signal entryFavoriteToggled(var rowid, var isFavorite)
+    signal entryBookmarkToggled(var rowid, var isBookmark)
     // -----------------------
 
     property bool initialLoadingDone: false

@@ -74,11 +74,11 @@ Page {
                     }
 
                     MenuItem {
-                        property string type: "favorites"
-                        text: qsTr("Favorites")
+                        property string type: "bookmarks"
+                        text: qsTr("Bookmarks")
                         onClicked: {
                             resetFilteredModel()
-                            py.call("diary.search_favorites", [])
+                            py.call("diary.search_bookmarks", [])
                             loadFilteredModel()
                         }
                     }

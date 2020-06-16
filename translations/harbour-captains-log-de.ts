@@ -176,8 +176,8 @@
         <translation>Erstellungsdatum</translation>
     </message>
     <message>
-        <source>Favorites</source>
-        <translation>Favoriten</translation>
+        <source>Bookmarks</source>
+        <translation>Lesezeichen</translation>
     </message>
     <message>
         <source>Hashtag</source>

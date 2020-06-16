@@ -140,6 +140,20 @@ def upgrade_schema(from_version):
         cursor.execute("""UPDATE diary SET create_date=REWRITE_DATE(create_date);""")
         cursor.execute("""UPDATE diary SET modify_date=REWRITE_DATE(modify_date);""")
     elif from_version == "4":
+        to_version = "5"
+
+        # rename column 'favorite' to 'bookmark'
+        cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp
+                          (create_date TEXT NOT NULL, create_tz TEXT, modify_date TEXT NOT NULL, modify_tz TEXT,
+                           mood INT, title TEXT, preview TEXT, entry TEXT,
+                           bookmark BOOL,
+                           hashtags TEXT, audio_path TEXT);""")
+        cursor.execute("""INSERT INTO diary_temp(create_date, create_tz, modify_date, modify_tz, mood, title, preview, entry, bookmark, hashtags, audio_path)
+                            SELECT create_date, create_tz, modify_date, modify_tz, mood, title, preview, entry, favorite, hashtags, audio_path
+                            FROM diary;""")
+        cursor.execute("""DROP TABLE diary;""")
+        cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
+    elif from_version == "5":
         # we arrived at the latest version; save it and return
         if schema_version != from_version:
             conn.commit()
@@ -176,9 +190,9 @@ def read_all_entries():
 
 
 def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
-    """ Add new entry to the database. By default last modification is set to NULL and favorite option to FALSE. """
+    """ Add new entry to the database. By default last modification is set to NULL and bookmark option to FALSE. """
     cursor.execute("""INSERT INTO diary
-                      (create_date, modify_date, mood, title, preview, entry, favorite, hashtags, create_tz)
+                      (create_date, modify_date, mood, title, preview, entry, bookmark, hashtags, create_tz)
                       VALUES (?, "", ?, ?, ?, ?, 0, ?, ?);""",
                       (create_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone))
     conn.commit()
@@ -190,7 +204,7 @@ def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
              "title": title.strip(),
              "preview": preview.strip(),
              "entry": entry.strip(),
-             "favorite": False,
+             "bookmark": False,
              "hashtags": hashs.strip(),
              "create_tz": timezone,
              "modify_tz": "",
@@ -214,11 +228,11 @@ def update_entry(modify_date, mood, title, preview, entry, hashs, timezone, rowi
     conn.commit()
 
 
-def update_favorite(id, fav):
-    """ Just updates the status of the favorite option """
+def update_bookmark(id, mark):
+    """ Just updates the status of the bookmark option """
     cursor.execute(""" UPDATE diary
-                       SET favorite = ?
-                       WHERE rowid = ?; """, (1 if fav else 0, id))
+                       SET bookmark = ?
+                       WHERE rowid = ?; """, (1 if mark else 0, id))
     conn.commit()
 
 
@@ -255,9 +269,9 @@ def search_hashtags(hash):
     create_entries_model(rows)
 
 
-def search_favorites():
-    """ Returns list of all favorites """
-    cursor.execute(""" SELECT *, rowid FROM diary WHERE favorite = 1 ORDER BY rowid DESC; """)
+def search_bookmarks():
+    """ Returns list of all bookmarks """
+    cursor.execute(""" SELECT *, rowid FROM diary WHERE bookmark = 1 ORDER BY rowid DESC; """)
     rows = cursor.fetchall()
     create_entries_model(rows)
 
@@ -284,7 +298,7 @@ def create_entries_model(rows):
                  "title": row["title"].strip(),
                  "preview": row["preview"].strip(),
                  "entry": row["entry"].strip(),
-                 "favorite": True if row["favorite"] == 1 else False,
+                 "bookmark": True if row["bookmark"] == 1 else False,
                  "hashtags": row["hashtags"].strip(),
                  "create_tz": row["create_tz"],
                  "modify_tz": row["modify_tz"],
@@ -306,16 +320,19 @@ def export(filename, type):
     # get latest state of the database
     entries = read_all_entries()
 
+    if not entries:
+        return  # nothing to export
+
     # TODO support translations
     moods = ["Fantastic", "Good", "Okay", "Not okay", "Bad", "Horrible"]
 
-    # Export as plain text file to filename
     if type == "txt":
-        with open(filename, "w") as f:
+        # Export as plain text file
+        with open(filename, "w+", encoding='utf-8') as f:
             for e in entries:
                 created = _format_date(e["create_date"], e["create_tz"])
                 modified = _format_date(e["modify_date"], e["modify_tz"])
-                favorite = "Yes" if e["favorite"] else "No"
+                bookmark = "Yes" if e["bookmark"] else "No"
                 mood = moods[e["mood"]]
 
                 line = """
@@ -328,9 +345,9 @@ Entry:
 {}
 
 Hashtags: {}
-Favorite: {}
+Bookmark: {}
 Mood: {}
-{sep}""".format(created, modified, e["title"], e["entry"], e["hashtags"], favorite, mood, sep="-".rjust(80, "-"))
+{sep}""".format(created, modified, e["title"], e["entry"], e["hashtags"], bookmark, mood, sep="-".rjust(80, "-"))
 
                 f.write(line)
 
