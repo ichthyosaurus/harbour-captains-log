@@ -350,11 +350,10 @@ Mood: {}
 {sep}""".format(created, modified, e["title"], e["entry"], e["hashtags"], bookmark, mood, sep="-".rjust(80, "-"))
 
                 f.write(line)
-
-    # Export as CSV file to filename
     elif type == "csv":
-        with open(filename, "w", newline='') as f:
-            fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "favorite"]
+        # Export as CSV file
+        with open(filename, "w+", newline='', encoding='utf-8') as f:
+            fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "bookmark"]
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
 
             csv_writer.writeheader()
