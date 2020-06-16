@@ -361,4 +361,53 @@ def export(filename, type, translations):
             for e in entries:
                 del e["day"]  # generated field
                 csv_writer.writerow(e)
+    elif type == "md":
+        # Export as plain Markdown file
+        with open(filename, "w+", encoding='utf-8') as f:
+            with open(filename, "w+", encoding='utf-8') as f:
+                from_date = _format_date(entries[-1]["create_date"], entries[-1]["create_tz"])
+                till_date = _format_date(entries[0]["create_date"], entries[0]["create_tz"])
+                f.write('# '+tr('Diary from {} until {}').format(from_date, till_date)+'\n\n')
 
+                for e in entries:
+                    bookmark = " *" if e["bookmark"] else ""
+                    title = "** {} **\n".format(e["title"]) if e["title"] else ""
+                    mood = trMood(e["mood"])
+                    hashtags = "\\# *" + e["hashtags"] + "*" if e["hashtags"] else ""
+
+                    lines = [
+                        '## ' + _format_date(e["create_date"], e["create_tz"]) + bookmark, '',
+                        title + e['entry'], '',
+                        tr('Mood: {}').format(mood),
+                        tr('Changed: {}').format(tr(_format_date(e["modify_date"], e["modify_tz"]))),
+                        '', hashtags, '',
+                    ]
+                    f.write('\n'.join(lines))
+    elif type == "tex.md":
+        # Export as Markdown file to be converted using Pandoc
+        with open(filename, "w+", encoding='utf-8') as f:
+            from_date = _format_date(entries[-1]["create_date"], entries[-1]["create_tz"])
+            till_date = _format_date(entries[0]["create_date"], entries[0]["create_tz"])
+            head = [
+                '% '+tr('Diary from {} until {}').format(from_date, till_date),
+                '%',
+                '% '+'',  # TODO add export date
+                '',
+            ]
+            f.write('\n'.join(head)+'\n')
+
+            for e in entries:
+                bookmark = " $\\ast$" if e["bookmark"] else ""
+                title = "** {} **\n".format(e["title"]) if e["title"] else ""
+                mood = trMood(e["mood"])
+                hashtags = "\\# \\emph{" + e["hashtags"] + "}" if e["hashtags"] else ""
+
+                lines = [
+                    '# ' + _format_date(e["create_date"], e["create_tz"]) + bookmark, '',
+                    title + e['entry'], '',
+                    '\\begin{small}',
+                    '{}\\hfill {}'.format(tr('Mood: {}').format(mood), tr('changed: {}').format(tr(_format_date(e["modify_date"], e["modify_tz"])))),
+                    hashtags,
+                    '\\end{small}\n', '',
+                ]
+                f.write('\n'.join(lines))

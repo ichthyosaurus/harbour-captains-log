@@ -33,6 +33,8 @@ Dialog {
             menu: ContextMenu {
                 MenuItem { text: qsTr("Plain text"); property string extension: "txt" }
                 MenuItem { text: qsTr("Comma-separated values (CSV)"); property string extension: "csv" }
+                MenuItem { text: qsTr("Plain Markdown"); property string extension: "md" }
+                MenuItem { text: qsTr("Markdown for Pandoc"); property string extension: "tex.md" }
             }
             onCurrentIndexChanged: {
                 extension = fileTypeCombo.currentItem.extension
