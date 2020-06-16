@@ -163,7 +163,7 @@ def upgrade_schema(from_version):
         print("database schema is up-to-date (version: {})".format(from_version))
         return
     else:
-        print("Invalid schema version!", from_version)
+        print("error: cannot use database with invalid schema version '{}'".format(from_version))
         return
 
     print("upgrading schema from {} to {}...".format(from_version, to_version))
