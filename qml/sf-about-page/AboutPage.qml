@@ -15,7 +15,26 @@
  * You should have received a copy of the GNU General Public License
  * along with sf-about-page.  If not, see <http://www.gnu.org/licenses/>.
  *
- * FILE VERSION: 2.0 (2020-04-24)
+ * *** CHANGELOG: ***
+ *
+ * 2020-06-16:
+ * - make author section title and about page title configurable
+ *
+ * 2020-05-09:
+ * - remove appName property (makes translations easier)
+ *
+ * 2020-04-25:
+ * - remove version numbers, use changelog instead
+ * - backwards-incompatible changes are marked with "[breaking]"
+ *
+ * 2020-04-24 [breaking]:
+ * - make 'data' fields more usable as 'extra info' fields
+ *
+ * 2020-04-18:
+ * - highlight missing version number
+ *
+ * 2020-04-17:
+ * - initial release
  *
  */
 
@@ -26,7 +45,6 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
-    property string appName: "this app"   // the name of your app
     property string iconPath: ""          // e.g. "/usr/share/icons/hicolor/172x172/apps/harbour-jammy.png"
     property string versionNumber: "??"   // e.g. 'VERSION_NUMBER' if you configured it via C++
     property string description: ""       // a rich text description of your app
@@ -44,6 +62,10 @@ Page {
     property var contribDevelopment: []
     property var contribTranslations: []
 
+    // variables that can be tweaked in special cases
+    property string _aboutPageTitle: qsTr("About this app")
+    property string _authorSectionTitle: qsTr("Author")
+
     // don't change this unless you change license.html
     property string shortLicenseText: "GNU GPL version 3 or later.\n" +
                                       "This is free software: you are free to change and redistribute it." +
@@ -56,9 +78,7 @@ Page {
         Column {
             id: column
 
-            PageHeader {
-                title: qsTr("About %1").arg(appName)
-            }
+            PageHeader { title: _aboutPageTitle }
 
             width: parent.width
             spacing: Theme.paddingLarge
@@ -105,7 +125,7 @@ Page {
 
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        text: enableContributorsPage ? qsTr("Development") : qsTr("Author")
+                        text: enableContributorsPage ? qsTr("Development") : _authorSectionTitle
                         color: Theme.secondaryHighlightColor
                         font.pixelSize: Theme.fontSizeLarge
                     }
