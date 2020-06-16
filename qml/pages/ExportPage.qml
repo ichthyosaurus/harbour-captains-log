@@ -6,6 +6,8 @@ Dialog {
     property string homePath: StandardPaths.home
     property string extension: "txt"
 
+    property string defaultFileName: "logbook_export_"+String(new Date().getTime())
+
     Column {
         width: parent.width
         spacing: Theme.paddingMedium
@@ -36,15 +38,18 @@ Dialog {
         }
     }
     onAccepted: {
-        var time = new Date().getTime()
         var filenameFormat = "%1/%2.%3"
-        var filename = filenameFormat.arg(homePath).arg("logbook_export_"+String(time)).arg(extension)
+        var filename = filenameFormat.arg(homePath).arg(defaultFileName).arg(extension)
 
         if(filenameField.text.length > 0) {
             filename = filenameFormat.arg(homePath).arg(filenameField.text).arg(extension)
         }
 
+        var translations = {
+            'moodTexts': moodTexts,
+        }
+
         showMessage(qsTr("Data exported to: %1").arg(filename)) // defined in harbour-captains-log.qml
-        py.call("diary.export", [filename, extension])
+        py.call("diary.export", [filename, extension, translations])
     }
 }

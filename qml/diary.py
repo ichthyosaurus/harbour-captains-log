@@ -314,48 +314,48 @@ def get_filtered_entry_list():
 
 # - - - export features - - - #
 
-def export(filename, type):
-    """ Export to 'filename' as 'type' """
+def export(filename, type, translations):
+    """ Export all entries to 'filename' as 'type'.
 
-    # get latest state of the database
-    entries = read_all_entries()
+    'translations' is a JS object containing translations for exported strings.
+    The field 'moodTexts' must contain a list of translated string for all moods.
+    Cf. ExportPage.qml for the main definition.
+    """
+
+    entries = read_all_entries()  # get latest state of the database
 
     if not entries:
         return  # nothing to export
 
-    # TODO support translations
-    moods = ["Fantastic", "Good", "Okay", "Not okay", "Bad", "Horrible"]
+    def tr(string):
+        # return the translation for 'string' or 'string' if none is available
+        return translations.get(string, string)
+
+    def trMood(index):
+        # cf. tr()
+        moodTexts = translations.get('moodTexts', [])
+        return moodTexts[index] if len(moodTexts) > index else str(index)
 
     if type == "txt":
         # Export as plain text file
         with open(filename, "w+", encoding='utf-8') as f:
             for e in entries:
-                created = _format_date(e["create_date"], e["create_tz"])
-                modified = _format_date(e["modify_date"], e["modify_tz"])
-                bookmark = "Yes" if e["bookmark"] else "No"
-                mood = moods[e["mood"]]
-
-                line = """
-Created: {}
-Changed: {}
-
-Title: {}
-
-Entry:
-{}
-
-Hashtags: {}
-Bookmark: {}
-Mood: {}
-{sep}""".format(created, modified, e["title"], e["entry"], e["hashtags"], bookmark, mood, sep="-".rjust(80, "-"))
-
-                f.write(line)
+                lines = [
+                    tr('Created: {}').format(_format_date(e["create_date"], e["create_tz"])),
+                    tr('Changed: {}').format(_format_date(e["modify_date"], e["modify_tz"])), '',
+                    tr('Title: {}').format(e['title']), '',
+                    tr('Entry:\n{}').format(e['entry']), '',
+                    tr('Hashtags: {}').format(e['hashtags']),
+                    tr('Bookmark: {}').format(tr("Yes") if e["bookmark"] else tr("No")),
+                    tr('Mood: {}').format(trMood(e["mood"])),
+                    "-".rjust(80, "-"), '',
+                ]
+                f.write('\n'.join(lines))
     elif type == "csv":
         # Export as CSV file
         with open(filename, "w+", newline='', encoding='utf-8') as f:
             fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "bookmark"]
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
-
             csv_writer.writeheader()
 
             for e in entries:
