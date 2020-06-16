@@ -351,8 +351,6 @@ Mood: {}
 
                 f.write(line)
 
-            f.close()
-
     # Export as CSV file to filename
     elif type == "csv":
         with open(filename, "w", newline='') as f:
@@ -365,4 +363,3 @@ Mood: {}
                 del e["day"]  # generated field
                 csv_writer.writerow(e)
 
-            f.close()
