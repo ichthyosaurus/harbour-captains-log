@@ -10,7 +10,7 @@ Name:       harbour-captains-log
 
 Summary:    Simple Diary application
 Version:    2.0.0
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    GPLv3
 BuildArch:  noarch

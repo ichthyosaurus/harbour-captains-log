@@ -228,7 +228,7 @@
     <name>PinPage</name>
     <message>
         <source>Please enter your security code</source>
-        <translation>Bitten geben Sie Ihren Sicherheitscode ein</translation>
+        <translation>Bitte geben Sie Ihren Sicherheitscode ein</translation>
     </message>
     <message>
         <source>please try again</source>
