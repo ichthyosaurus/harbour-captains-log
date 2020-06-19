@@ -1,97 +1,181 @@
+/*
+ * This file is part of harbour-captains-log.
+ * Copyright (C) 2020  Gabriel Berkigt, Mirian Margiani
+ *
+ * harbour-captains-log is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * harbour-captains-log is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with harbour-captains-log.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Page {
     id: page
 
-    property string creation_date_p
-    property string modify_date_p
-    property int mood_p
-    property string title_p
-    property string entry_p
-    property int favorite_p
-    property string hashtags_p
+    property string createDate
+    property string modifyDate
+    property int mood
+    property string title
+    property string entry
+    property bool bookmark
+    property string hashtags
+    property string createTz
+    property string modifyTz
     property int rowid
+    property int index
+    property var model
 
-    // The effective value will be restricted by ApplicationWindow.allowedOrientations
+    property bool editable: true
     allowedOrientations: Orientation.All
 
-    SilicaFlickable {
+    Connections {
+        target: appWindow
+        onEntryBookmarkToggled: {
+            if (rowid !== page.rowid) return
+            bookmark = isBookmark
+        }
+        onEntryUpdated: {
+            if (rowid !== page.rowid) return
+            page.modifyDate = changeDate
+            page.mood = mood
+            page.title = title
+            page.entry = entry
+            page.hashtags = hashs
+            page.modifyTz = modifyTz
+        }
+    }
 
+    SilicaFlickable {
+        id: flick
         anchors.fill: parent
-        contentHeight: content.height
+        contentHeight: content.height + Theme.horizontalPageMargin
+        VerticalScrollDecorator { flickable: flick }
+
+        PullDownMenu {
+            enabled: editable
+            MenuItem {
+                text: qsTr("Edit")
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
+                                       "title": title, "mood": mood, "entry": entry,
+                                       "hashtags": hashtags, "rowid": rowid,
+                                       "createDate": createDate, "index": index, "model": model,
+                                       "modifyTz": modifyTz, "createTz": createTz,
+                                       "acceptDestination": "" // return to the calling page
+                                   })
+                }
+            }
+        }
 
         Column {
             id: content
-
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - (2*Theme.horizontalPageMargin)
+            width: parent.width
             spacing: Theme.paddingMedium
 
             PageHeader {
                 id: header
-                title: title_p
+                title: formatDate(createDate, "dddd")
+                description: formatDate(createDate, dateTimeFormat, createTz)
+                _titleItem.truncationMode: TruncationMode.Fade
+                _titleItem.horizontalAlignment: Text.AlignRight
             }
 
-            Label {
-                id: createDateLabel
-                width: parent.width
-                color: Theme.highlightColor
-                text: qsTr("Created on: ")+creation_date_p
-            }
             Label {
                 id: modDateLabel
-                width: parent.width
+                visible: modifyDate !== ""
+                anchors {
+                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                    right: parent.right; rightMargin: Theme.horizontalPageMargin
+                }
+                horizontalAlignment: Text.AlignRight
                 font.pixelSize: Theme.fontSizeExtraSmall
-                color: Theme.highlightColor
-                text: qsTr("Last change: ")+modify_date_p
+                color: Theme.secondaryHighlightColor
+                text: modifyDate !== "" ? qsTr("changed: %1").arg(formatDate(modifyDate, dateTimeFormat, modifyTz)) : ""
             }
 
-            Row {
-                spacing: Theme.paddingSmall
+            BackgroundItem {
+                width: parent.width
+                height: Theme.itemSizeSmall
+                onClicked: setBookmark(model, index, rowid, !bookmark)
+                enabled: editable
 
-                Icon {
+                HighlightImage {
                     id: favStar
-                    source: favorite_p === 1 ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                    anchors { verticalCenter: parent.verticalCenter; right: parent.right }
+                    highlighted: parent.down
+                    source: bookmark ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
                 }
 
-                // Like thumb is rotated to show mood
-                Icon {
-                    anchors.verticalCenter: favStar.verticalCenter
-                    source: "image://theme/icon-s-like"
-                    rotation: {
-                        switch(mood_p) {
-                        case 0:
-                            return 0;
-                        case 1:
-                            return 35;
-                        case 2:
-                            return 75;
-                        case 3:
-                            return 120;
-                        case 4:
-                            return 180
-                        }
+                Label {
+                    id: moodLabel
+                    anchors { verticalCenter: favStar.verticalCenter; left: parent.left; leftMargin: Theme.horizontalPageMargin }
+                    color: Theme.highlightColor; text: qsTr("mood:")
+                }
+
+                Label {
+                    anchors {
+                        verticalCenter: favStar.verticalCenter
+                        left: moodLabel.right; leftMargin: Theme.paddingSmall
+                        right: favStar.left; rightMargin: Theme.paddingMedium
                     }
+                    color: Theme.primaryColor
+                    text: moodTexts[mood]
+                    truncationMode: TruncationMode.Fade
                 }
             }
+
+            Label {
+                anchors {
+                    right: parent.right; rightMargin: Theme.horizontalPageMargin
+                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                }
+                visible: title !== ""
+                text: title
+                wrapMode: Text.WordWrap
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeLarge
+            }
+
             TextArea {
                 id: entryArea
-
+                visible: !moodImage.visible
                 width: parent.width
-                label: qsTr("Your Entry")
                 wrapMode: TextEdit.WordWrap
+                // horizontalAlignment: Text.AlignJustify
                 readOnly: true
-                text: entry_p
+                text: entry
             }
+
             TextArea {
                 id: hashtagArea
-
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
-                label: qsTr("#Hashtags")
                 readOnly: true
-                text: hashtags_p.length > 0 ? "# "+hashtags_p : ""
+                text: hashtags.length > 0 ? "# "+hashtags : ""
+            }
+
+            Item { visible: moodImage.visible; width: parent.width; height: Theme.paddingLarge }
+
+            HighlightImage {
+                id: moodImage
+                visible: entry === ""
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: Math.min(page.width, page.height)/4; height: width
+                fillMode: Image.PreserveAspectFit
+                color: Theme.primaryColor
+                opacity: Theme.opacityLow
+                source: "../images/mood-%1.png".arg(String(mood))
             }
         }
     }

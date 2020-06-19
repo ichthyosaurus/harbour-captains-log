@@ -4,155 +4,188 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <source>About</source>
+        <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Author:</source>
+        <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>License:</source>
+        <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Version:</source>
+        <source>&lt;i&gt;show contributors &lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Contact:</source>
+        <source>Website</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Send Feedback</source>
+        <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>mailto: m.gabrielboehme@googlemail.com?subject=Feedback zu Captain&apos;s Log</source>
+        <source>&lt;i&gt;show license &lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sources</source>
+        <source>Source Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About this app</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ChangePinPage</name>
     <message>
-        <source>Set your code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your old code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your new code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Saved your protection code.</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>CoverPage</name>
     <message>
-        <source>Captain&apos;s Log</source>
+        <source>Enter your old security code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a new security code</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>EditPage</name>
+    <name>ContributorsPage</name>
     <message>
-        <source>Save</source>
+        <source>Contributors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit Entry</source>
+        <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changed at: </source>
+        <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>DateButton</name>
     <message>
-        <source>How did you really felt?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>fantastic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>good</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>okay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change your #hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You might add a title?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Haven&apos;t you something to say?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Everything is better with Hashtags!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Saved your changes.</source>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
-        <source>Favorite</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <source>Export your data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Define the file name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export file type selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select file type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comma-separated values (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Markdown for Pandoc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry:
+{}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmark: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diary from {} until {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data exported to: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -167,49 +200,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Settings &amp; Export</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add new entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Swipe right to add new entry</source>
+        <source>Settings and Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swipe right to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LicensePage</name>
+    <message>
+        <source>License</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
-        <source>Enter your code</source>
+        <source>Please enter your security code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Access granted</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please type in your security code:</source>
+        <source>please try again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ReadPage</name>
     <message>
-        <source>Your Entry</source>
+        <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>#Hashtags</source>
+        <source>mood:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Created on: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Last change: </source>
+        <source>changed: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -228,15 +264,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Title &amp; Entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Creation date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Favorites</source>
+        <source>Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -252,27 +284,34 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>fantastic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>good</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>okay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search your entries...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter:</source>
+        <comment>the mood filter to apply</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title and Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries matched these criteria.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>from</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>till</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -303,27 +342,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Define your file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select file type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export your data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -338,7 +357,121 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>How do you feel today?</source>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>#Hashtags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mood:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>How did you feel?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>How do you feel?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add a title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What do you want to say?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last changed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <source>Programming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sources on GitHub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple diary application for keeping track of your thoughts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About Captain&apos;s Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Authors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>harbour-captains-log</name>
+    <message>
+        <source>hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -362,27 +495,20 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Your Title</source>
+        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Title</source>
+        <source>d MMM yyyy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Entry</source>
+        <source>not okay</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add some Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>#Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood:</source>
+        <source>%1 (%2)</source>
+        <comment>1: date, 2: time zone info</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>

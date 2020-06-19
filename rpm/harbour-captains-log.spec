@@ -9,12 +9,12 @@ Name:       harbour-captains-log
 # << macros
 
 Summary:    Simple Diary application
-Version:    1.0
-Release:    1
+Version:    2.0.0
+Release:    2
 Group:      Qt/Qt
-License:    LICENSE
+License:    GPLv3
 BuildArch:  noarch
-URL:        http://example.org/
+URL:        https://github.com/AlphaX2/Captains-Log-Sailfish
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-captains-log.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
@@ -26,7 +26,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Short description of my Sailfish OS Application
+A simple diary application for keeping track of your thoughts.
 
 
 %prep

@@ -16,16 +16,19 @@ CONFIG += sailfishapp_qml
 
 DISTFILES += qml/harbour-captains-log.qml \
     qml/cover/CoverPage.qml \
-    qml/imgs/feather_b.png \
-    qml/imgs/feather_w.png \
-    qml/pages/AboutPage.qml \
-    qml/pages/FirstPage.qml \
+    qml/images/*.png \
+    qml/pages/*.qml \
+    qml/components/*.qml \
     rpm/harbour-captains-log.changes.in \
     rpm/harbour-captains-log.changes.run.in \
     rpm/harbour-captains-log.spec \
     rpm/harbour-captains-log.yaml \
     translations/*.ts \
     harbour-captains-log.desktop
+
+DISTFILES += qml/sf-about-page/*.qml \
+    qml/sf-about-page/license.html \
+    qml/sf-about-page/about.js
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 

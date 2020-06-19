@@ -2,101 +2,262 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sv">
 <context>
-    <name>EditPage</name>
+    <name>AboutPage</name>
     <message>
-        <source>bad</source>
-        <translation>dåligt</translation>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation>Spara</translation>
+        <source>Development</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>good</source>
-        <translation>bra</translation>
+        <source>Author</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>okay</source>
-        <translation>okay</translation>
+        <source>&lt;i&gt;show contributors &lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Your mood:</source>
-        <translation>Ditt humör:</translation>
+        <source>Website</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Everything is better with Hashtags!</source>
-        <translation>Allt är bättre med hashtaggar!</translation>
+        <source>License</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>fantastic</source>
-        <translation>fantastiskt</translation>
+        <source>&lt;i&gt;show license &lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Change your #hashtags</source>
-        <translation>Ändra dina #hashtaggar</translation>
+        <source>Source Code</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit Entry</source>
-        <translation>Redigera post</translation>
+        <source>About this app</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ChangePinPage</name>
+    <message>
+        <source>Saved your protection code.</source>
+        <translation>Sparade din säkerhetskod.</translation>
     </message>
     <message>
-        <source>horrible</source>
-        <translation>fruktansvärt</translation>
+        <source>Enter your old security code</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>You might add a title?</source>
-        <translation>Du kanske vill lägga till en titel?</translation>
+        <source>Enter a new security code</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ContributorsPage</name>
+    <message>
+        <source>Contributors</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>How did you really felt?</source>
-        <translation>Hur kände du dig egentligen?</translation>
+        <source>Development</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Haven&apos;t you something to say?</source>
-        <translation>Har du inte något att säga?</translation>
+        <source>Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DateButton</name>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EntryElement</name>
+    <message>
+        <source>Edit</source>
+        <translation>Redigera</translation>
     </message>
     <message>
-        <source>Change your entry</source>
-        <translation>Ändra din post</translation>
+        <source>Delete</source>
+        <translation>Ta bort</translation>
     </message>
     <message>
-        <source>Change your Title</source>
-        <translation>Ändra din titel</translation>
+        <source>mood: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Saved your changes.</source>
-        <translation>Sparade dina ändringar.</translation>
+        <source>Edit: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <source>Export your data</source>
+        <translation>Exportera din data</translation>
     </message>
     <message>
-        <source>Changed at: </source>
-        <translation>Ändrad: </translation>
+        <source>Define the file name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filename</source>
+        <translation>Filnamn</translation>
+    </message>
+    <message>
+        <source>Export file type selection</source>
+        <translation>Exportfilsformat</translation>
+    </message>
+    <message>
+        <source>Select file type:</source>
+        <translation>Välj filtyp:</translation>
+    </message>
+    <message>
+        <source>Plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comma-separated values (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Markdown for Pandoc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>changed: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry:
+{}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmark: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood: {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diary from {} until {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data exported to: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FirstPage</name>
+    <message>
+        <source>About</source>
+        <translation>Om</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation>Sök</translation>
+    </message>
+    <message>
+        <source>Add new entry</source>
+        <translation>Lägg till ny post</translation>
+    </message>
+    <message>
+        <source>Settings and Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No entries yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swipe right to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LicensePage</name>
+    <message>
+        <source>License</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PinPage</name>
+    <message>
+        <source>Please enter your security code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>please try again</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ReadPage</name>
+    <message>
+        <source>Edit</source>
+        <translation>Redigera</translation>
+    </message>
+    <message>
+        <source>mood:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>changed: %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
-        <source>bad</source>
-        <translation>dåligt</translation>
-    </message>
-    <message>
         <source>Mood</source>
         <translation>Humör</translation>
     </message>
     <message>
-        <source>good</source>
-        <translation>bra</translation>
-    </message>
-    <message>
-        <source>okay</source>
-        <translation>okay</translation>
-    </message>
-    <message>
         <source>Creation date</source>
         <translation>Skapad</translation>
-    </message>
-    <message>
-        <source>Title &amp; Entry</source>
-        <translation>Titel &amp; post</translation>
     </message>
     <message>
         <source>Filter your results</source>
@@ -105,14 +266,6 @@
     <message>
         <source>Search</source>
         <translation>Sök</translation>
-    </message>
-    <message>
-        <source>fantastic</source>
-        <translation>fantastiskt</translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation>fruktansvärt</translation>
     </message>
     <message>
         <source>Search by:</source>
@@ -127,136 +280,46 @@
         <translation>Sök i dina poster...</translation>
     </message>
     <message>
-        <source>Favorites</source>
-        <translation>Favoriter</translation>
+        <source>Bookmarks</source>
+        <translation>Bokmärke</translation>
     </message>
     <message>
         <source>Hashtag</source>
         <translation>Hashtagg</translation>
     </message>
-</context>
-<context>
-    <name>WritePage</name>
     <message>
-        <source>bad</source>
-        <translation>dåligt</translation>
+        <source>Filter:</source>
+        <comment>the mood filter to apply</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation>Spara</translation>
+        <source>Title and Entry</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>good</source>
-        <translation>bra</translation>
+        <source>No entries found</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>okay</source>
-        <translation>okay</translation>
+        <source>No entries matched these criteria.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Entry</source>
-        <translation>Post</translation>
+        <source>from</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Title</source>
-        <translation>Titel</translation>
-    </message>
-    <message>
-        <source>Add some Hashtags</source>
-        <translation>Lägg till några hashtaggar</translation>
-    </message>
-    <message>
-        <source>Your Title</source>
-        <translation>Din titel</translation>
-    </message>
-    <message>
-        <source>Your mood:</source>
-        <translation>Ditt humör:</translation>
-    </message>
-    <message>
-        <source>fantastic</source>
-        <translation>fantastiskt</translation>
-    </message>
-    <message>
-        <source>How do you feel today?</source>
-        <translation>Hur mår du i dag?</translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation>fruktansvärt</translation>
-    </message>
-    <message>
-        <source>#Hashtags</source>
-        <translation>#Hashtaggar</translation>
-    </message>
-    <message>
-        <source>New Entry</source>
-        <translation>Ny post</translation>
-    </message>
-</context>
-<context>
-    <name>EntryElement</name>
-    <message>
-        <source>Edit</source>
-        <translation>Redigera</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Ta bort</translation>
-    </message>
-    <message>
-        <source>Favorite</source>
-        <translation>Favorit</translation>
-    </message>
-</context>
-<context>
-    <name>ChangePinPage</name>
-    <message>
-        <source>Save</source>
-        <translation>Spara</translation>
-    </message>
-    <message>
-        <source>Your old code</source>
-        <translation>Din gamla kod</translation>
-    </message>
-    <message>
-        <source>Set your code</source>
-        <translation>Ange din kod</translation>
-    </message>
-    <message>
-        <source>Change your code</source>
-        <translation>Ändra din kod</translation>
-    </message>
-    <message>
-        <source>Saved your protection code.</source>
-        <translation>Sparade din säkerhetskod.</translation>
-    </message>
-    <message>
-        <source>Your new code</source>
-        <translation>Din nya kod</translation>
+        <source>till</source>
+        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>Filename</source>
-        <translation>Filnamn</translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation>Exportfilsformat</translation>
-    </message>
-    <message>
-        <source>Define your file name...</source>
-        <translation>Ange ditt filnamn...</translation>
-    </message>
-    <message>
         <source>Export data</source>
         <translation>Exportera data</translation>
-    </message>
-    <message>
-        <source>Export your data</source>
-        <translation>Exportera din data</translation>
     </message>
     <message>
         <source>Security</source>
@@ -279,104 +342,174 @@
         <translation>Ändra kod</translation>
     </message>
     <message>
-        <source>Select file type:</source>
-        <translation>Välj filtyp:</translation>
-    </message>
-    <message>
         <source>activate code protection</source>
         <translation>Aktivera kodsäkerhet</translation>
     </message>
 </context>
 <context>
-    <name>AboutPage</name>
+    <name>WritePage</name>
     <message>
-        <source>About</source>
-        <translation>Om</translation>
+        <source>Save</source>
+        <translation>Spara</translation>
     </message>
     <message>
-        <source>Send Feedback</source>
-        <translation>Skicka återkoppling</translation>
+        <source>Entry</source>
+        <translation>Post</translation>
     </message>
     <message>
-        <source>mailto: m.gabrielboehme@googlemail.com?subject=Feedback zu Captain&apos;s Log</source>
-        <translation>mailto: m.gabrielboehme@googlemail.com?subject=Feedback zu Captain&apos;s Log</translation>
+        <source>Title</source>
+        <translation>Titel</translation>
     </message>
     <message>
-        <source>Contact:</source>
-        <translation>Kontakt:</translation>
-    </message>
-    <message>
-        <source>Author:</source>
-        <translation>Utvecklare:</translation>
-    </message>
-    <message>
-        <source>Sources</source>
-        <translation>Källkod</translation>
-    </message>
-    <message>
-        <source>Version:</source>
-        <translation>Version:</translation>
-    </message>
-    <message>
-        <source>License:</source>
-        <translation>Licens:</translation>
-    </message>
-</context>
-<context>
-    <name>FirstPage</name>
-    <message>
-        <source>About</source>
-        <translation>Om</translation>
-    </message>
-    <message>
-        <source>Settings &amp; Export</source>
-        <translation>Inställningar &amp; Export</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Sök</translation>
-    </message>
-    <message>
-        <source>Swipe right to add new entry</source>
-        <translation>Svep åt höger för att lägga till en ny post</translation>
-    </message>
-    <message>
-        <source>Add new entry</source>
-        <translation>Lägg till ny post</translation>
-    </message>
-</context>
-<context>
-    <name>PinPage</name>
-    <message>
-        <source>Please type in your security code:</source>
-        <translation>Skriv in din säkerhetskod:</translation>
-    </message>
-    <message>
-        <source>Enter your code</source>
-        <translation>Ange din kod</translation>
-    </message>
-    <message>
-        <source>Access granted</source>
-        <translation>Åtkomst beviljad</translation>
-    </message>
-</context>
-<context>
-    <name>ReadPage</name>
-    <message>
-        <source>Your Entry</source>
-        <translation>Din post</translation>
+        <source>Your mood:</source>
+        <translation>Ditt humör:</translation>
     </message>
     <message>
         <source>#Hashtags</source>
         <translation>#Hashtaggar</translation>
     </message>
     <message>
-        <source>Last change: </source>
-        <translation>Senast ändrad: </translation>
+        <source>New Entry</source>
+        <translation>Ny post</translation>
     </message>
     <message>
-        <source>Created on: </source>
-        <translation>Skapad: </translation>
+        <source>Edit Entry</source>
+        <translation>Redigera post</translation>
+    </message>
+    <message>
+        <source>How did you feel?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>How do you feel?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add a title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What do you want to say?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashtags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last changed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>never</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <source>Programming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sources on GitHub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple diary application for keeping track of your thoughts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About Captain&apos;s Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Authors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>harbour-captains-log</name>
+    <message>
+        <source>hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>fantastic</source>
+        <translation>fantastiskt</translation>
+    </message>
+    <message>
+        <source>good</source>
+        <translation>bra</translation>
+    </message>
+    <message>
+        <source>okay</source>
+        <translation>okay</translation>
+    </message>
+    <message>
+        <source>bad</source>
+        <translation>dåligt</translation>
+    </message>
+    <message>
+        <source>horrible</source>
+        <translation>fruktansvärt</translation>
+    </message>
+    <message>
+        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>d MMM yyyy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>not okay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <comment>1: date, 2: time zone info</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

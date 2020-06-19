@@ -1,132 +1,205 @@
+/*
+ * This file is part of harbour-captains-log.
+ * Copyright (C) 2020  Gabriel Berkigt, Mirian Margiani
+ *
+ * harbour-captains-log is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * harbour-captains-log is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with harbour-captains-log.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-Component {
-    ListItem {
-        id: entryList
+ListItem {
+    id: entryList
+    contentHeight: _isMoodOnly ? (iconsColumn.height + (_hasTags ? Theme.paddingLarge : Theme.paddingSmall)) : Theme.itemSizeHuge
+    ListView.onRemove: animateRemoval()
+    openMenuOnPressAndHold: false
 
-        contentHeight: Theme.itemSizeHuge
+    property bool editable: true
+    property ListModel realModel: model
 
-        function getHashtagText() {
-            if(modify_date.length > 0 && hashtags.length > 0) {
-                return "Edit: "+modify_date + "\t# "+hashtags
+    property string _previewData: entry //preview
+    property bool _hasPreview: _previewData !== ""
+    property bool _hasTitle: title !== ""
+    property bool _isMoodOnly: !_hasTitle && !_hasPreview
+    property bool _hasTags: hashtagsAndModify.text !== ""
+
+    function getHashtagText() {
+        if (modify_date.length > 0) {
+            var date = formatDate(modify_date, dateTimeFormat, modify_tz)
+            var ret = qsTr("Edit: %1").arg(date)
+
+            if (hashtags.length > 0) {
+                return "%1 – # %2".arg(ret).arg(hashtags)
+            } else {
+                return ret
             }
-            else if(modify_date.length > 0 && hashtags.length === 0) {
-                return "Edit: "+modify_date
-            }
-            else {
-                if(hashtags.length > 0) {return hashtags}
-                else {return ""}
+        } else {
+            if (hashtags.length > 0) return "# %1".arg(hashtags)
+            else return ""
+        }
+    }
+
+    menu: editMenuComponent
+
+    Component {
+        id: moodMenuComponent
+        MoodMenu {
+            selectedIndex: mood
+            onSelectedIndexChanged: {
+                if (selectedIndex == mood) return; // only update if it changed
+                updateEntry(realModel, index, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
             }
         }
+    }
 
-        menu: ContextMenu {
-            MenuItem {
-                text: qsTr("Favorite")
-                onClicked: {
-                    var status = favorite === 1 ? 0 : 1
-                    py.call("diary.update_favorite", [rowid, status])
-                    firstPage.loadModel()
-                }
-            }
+    Component {
+        id: editMenuComponent
+        ContextMenu {
+            enabled: editable
             MenuItem {
                 text: qsTr("Edit")
                 onClicked: {
-                    pageStack.pushAttached(Qt.resolvedUrl("../pages/EditPage.qml"),
-                                           {title_p: title, mood_p: mood, entry_p: entry, hashtags_p: hashtags, rowid_p: rowid})
-                    pageStack.navigateForward()
+                    pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
+                                       "title": title, "mood": mood, "entry": entry,
+                                       "hashtags": hashtags, "rowid": rowid,
+                                       "createDate": create_date, "modifyDate": modify_date,
+                                       "index": index, "model": realModel,
+                                       "modifyTz": modify_tz, "createTz": create_tz
+                                   })
                 }
             }
             MenuItem {
                 text: qsTr("Delete")
                 onClicked: {
-                    entryList.remorseDelete(function () {
-                        py.call("diary.delete_entry", [rowid])
-                        firstPage.loadModel()
-                    })
+                    // Somehow, the remorse action is executed without the main context.
+                    // It throws "TypeError: Cannot call method 'deleteEntry' of undefined"
+                    // (and similar errors) if we don't use proxy variables here.
+                    var _realModel = realModel, _index = index, _rowid = rowid;
+                    var deleteProxy = appWindow.deleteEntry;
+                    remorseDelete(function() { deleteProxy(_realModel, _index, _rowid); })
                 }
             }
         }
+    }
 
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width - (2*Theme.horizontalPageMargin)
+    onPressAndHold: {
+        menu = editMenuComponent
+        openMenu()
+    }
 
-        onClicked: {
-            pageStack.pushAttached(Qt.resolvedUrl("../pages/ReadPage.qml"),
-                                        { creation_date_p: create_date, modify_date_p: "", mood_p: mood, title_p: title, entry_p: entry, favorite_p: favorite, hashtags_p: hashtags, rowid_p: rowid })
-            pageStack.navigateForward()
+    onClicked: {
+        pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
+                           "createDate": create_date, "modifyDate": modify_date,
+                           "mood": mood, "title": title,
+                           "entry": entry, "bookmark": bookmark,
+                           "hashtags": hashtags, "rowid": rowid, "index": index,
+                           "model": realModel, "editable": editable,
+                           "modifyTz": modify_tz, "createTz": create_tz
+                       })
+    }
+
+    Item {
+        id: labels
+        height: parent.height
+        anchors {
+            top: parent.top; bottom: parent.bottom
+            left: parent.left; right: icons.left
+            leftMargin: Theme.horizontalPageMargin; rightMargin: 0
         }
 
-        Row {
+        Label {
+            id: createDateLabel
+            anchors { top: parent.top }
+            font.pixelSize: Theme.fontSizeMedium
+            color: Theme.highlightColor
+            text: formatDate(create_date, atTimeFormat, create_tz)
+        }
+
+        Label {
+            id: titleText
+            anchors { top: createDateLabel.bottom; topMargin: Theme.paddingSmall }
+            text: title
+            height: _hasTitle ? contentHeight : 0
             width: parent.width
-            height: parent.height
-            spacing: Theme.paddingMedium
+            maximumLineCount: 1
+            font.pixelSize: Theme.fontSizeSmall
+            color: Theme.highlightColor
+            truncationMode: TruncationMode.Fade
+        }
 
-            Column {
-                id: labels
-                spacing: Theme.paddingSmall
-                width: parent.width - icons.width
+        Label {
+            id: entryTextPreview
+            anchors {
+                top: titleText.bottom
+                topMargin: _hasTitle ? Theme.paddingSmall : 0
+                bottom: hashtagsAndModify.top
+            }
+            text: _hasPreview ? _previewData : qsTr("mood: %1").arg(moodTexts[mood])
+            width: parent.width
+            color: _hasPreview ? Theme.primaryColor : Theme.secondaryColor
+            font.pixelSize: Theme.fontSizeSmall
+            truncationMode: TruncationMode.Elide
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        }
 
-                Label {
-                    id: createDate
-                    font.pixelSize: Theme.fontSizeSmall
-                    color: Theme.highlightColor
-                    text: create_date
-                    font.bold: true
-                }
-                Label {
-                    id: titleText
-                    text: title
-                    width: parent.width
-                    truncationMode: TruncationMode.Fade
-                }
+        Label {
+            id: hashtagsAndModify
+            anchors { bottom: parent.bottom; bottomMargin: Theme.paddingSmall }
+            width: parent.width
+            font.pixelSize: Theme.fontSizeExtraSmall
+            color: Theme.secondaryColor
+            text: entryList.getHashtagText()
+            height: text !== "" ? contentHeight : 0
+            maximumLineCount: 1
+            truncationMode: TruncationMode.Fade
+        }
+    }
 
-                Label {
-                    id: entryTextPreview
-                    text: preview
-                    width: parent.width
-                    truncationMode: TruncationMode.Fade
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    id: hashtagsAndModify
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    color: Theme.secondaryHighlightColor
-                    text: entryList.getHashtagText()
-                    truncationMode: TruncationMode.Fade
-                }
+    BackgroundItem {
+        id: icons
+        height: parent.height
+        width: favStar.width + 2*Theme.paddingLarge
+        anchors.right: parent.right
+
+        enabled: editable
+        onClicked: setBookmark(realModel, index, rowid, !bookmark)
+
+        onPressAndHold: {
+            entryList.menu = moodMenuComponent
+            entryList.openMenu()
+        }
+
+        Column {
+            id: iconsColumn
+            spacing: Theme.paddingSmall
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Icon {
+                id: favStar
+                opacity: Theme.opacityHigh
+                source: bookmark ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
             }
 
-            Column {
-                id: icons
-                spacing: Theme.paddingSmall
-
-                Icon {
-                    id: favStar
-                    source: favorite === 0 ? "image://theme/icon-m-favorite" : "image://theme/icon-m-favorite-selected"
-                }
-
-                // Like thumb is rotated to show mood
-                Icon {
-                    id: feel
-
-                    anchors.horizontalCenter: favStar.horizontalCenter
-                    source: "image://theme/icon-s-like"
-                    rotation: {
-                        switch(mood) {
-                        case 0:
-                            return 0;
-                        case 1:
-                            return 35;
-                        case 2:
-                            return 75;
-                        case 3:
-                            return 120;
-                        case 4:
-                            return 180
-                        }
-                    }
-                }
+            HighlightImage {
+                id: moodImage
+                anchors.horizontalCenter: favStar.horizontalCenter
+                width: 65; height: width
+                fillMode: Image.PreserveAspectFit
+                color: Theme.primaryColor
+                opacity: 1-mood*(1/moodTexts.length)
+                source: "../images/mood-%1.png".arg(String(mood))
             }
         }
     }
