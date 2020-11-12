@@ -9,8 +9,8 @@ Name:       harbour-captains-log
 # << macros
 
 Summary:    Simple Diary application
-Version:    2.0.0
-Release:    2
+Version:    2.0.1
+Release:    0
 Group:      Qt/Qt
 License:    GPLv3
 BuildArch:  noarch
