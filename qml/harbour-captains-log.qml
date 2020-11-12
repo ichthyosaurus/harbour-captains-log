@@ -39,7 +39,7 @@ ApplicationWindow
     // ===============================
     // ATTENTION UPDATE BEFORE RELEASE
     // -------------------------------
-    readonly property string appVersionNumber: "2.0.0"
+    readonly property string appVersionNumber: "2.0.1"
     // ===============================
 
     // constants
