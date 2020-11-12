@@ -291,18 +291,20 @@ def create_entries_model(rows):
     filtered_entry_list.clear()
 
     for row in rows:
-        entry = {"create_date": row["create_date"],
-                 "day": row["create_date"].split(' ')[0],
-                 "modify_date": row["modify_date"],
-                 "mood": row["mood"],
-                 "title": row["title"].strip(),
-                 "preview": row["preview"].strip(),
-                 "entry": row["entry"].strip(),
+        # default values are only used if database is corrupted
+        entry = {"create_date": row["create_date"] if row["create_date"] else "",
+                 "day": (row["create_date"] if row["create_date"] else "").split(' ')[0],
+                 "modify_date": row["modify_date"] if row["modify_date"] else "",
+                 "mood": row["mood"] if row["mood"] is not None else 2,  # default to 2=okay
+                 "title": (row["title"] if row["title"] else "").strip(),
+                 "preview": (row["preview"] if row["preview"] else "").strip(),
+                 "entry": (row["entry"] if row["entry"] else "").strip(),
                  "bookmark": True if row["bookmark"] == 1 else False,
-                 "hashtags": row["hashtags"].strip(),
-                 "create_tz": row["create_tz"],
-                 "modify_tz": row["modify_tz"],
-                 "rowid": row["rowid"]}
+                 "hashtags": (row["hashtags"] if row["hashtags"] else "").strip(),
+                 "create_tz": row["create_tz"] if row["create_tz"] else "",
+                 "modify_tz": row["modify_tz"] if row["modify_tz"] else "",
+                 "rowid": row["rowid"]  # rowid cannot be empty
+                 }
         filtered_entry_list.append(entry)
     return filtered_entry_list
 
