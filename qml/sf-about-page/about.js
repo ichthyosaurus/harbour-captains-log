@@ -1,7 +1,10 @@
+// This file is part of Captain's Log.
+// SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 .pragma library
 // This script is a library. This improves performance, but it means that no
 // variables from the outside can be accessed.
-
 
 // -- TRANSLATORS
 // Please add yourself to the list of contributors. If your language is already

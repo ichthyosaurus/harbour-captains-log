@@ -1,3 +1,8 @@
+# This file is part of File Browser.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2020 Gabriel Berkigt
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+
 # NOTICE:
 #
 # Application name defined in TARGET has a corresponding QML filename.
