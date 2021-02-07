@@ -96,4 +96,4 @@ Sources of legacy versions are also available [on Github](https://github.com/Alp
 All documentation is released under the terms of the
 [GNU Free Documentation License v1.3 (or later)](https://spdx.org/licenses/GFDL-1.3-or-later.html).
 
-This project strives follows the [REUSE specification](https://api.reuse.software/info/github.com/ichthyosaurus/harbour-captains-log).
+This project follows the [REUSE specification](https://api.reuse.software/info/github.com/ichthyosaurus/harbour-captains-log).
