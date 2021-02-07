@@ -66,7 +66,7 @@ Page {
     property string _aboutPageTitle: qsTr("About this app")
     property string _authorSectionTitle: qsTr("Author")
 
-    // don't change this unless you change license.html
+    // don't change this unless you change LICENSE.html
     property string shortLicenseText: "GNU GPL version 3 or later.\n" +
                                       "This is free software: you are free to change and redistribute it." +
                                       "There is NO WARRANTY, to the extent permitted by law."

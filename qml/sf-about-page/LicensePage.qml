@@ -26,13 +26,13 @@ import Sailfish.Silica 1.0
  * This page is automatically made available through AboutPage.qml.
  *
  * You don't have to configure this file. It will load the Rich Text
- * formatted license text from the file 'license.html'. The example
+ * formatted license text from the file 'LICENSE.html'. The example
  * license included in the sf-about-page repository is the GNU GPL v3.
- * You can simply replace the 'license.html' file to use a different license.
+ * You can simply replace the 'LICENSE.html' file to use a different license.
  *
  */
 Page {
-    readonly property string licenseFile: "license.html"
+    readonly property string licenseFile: "LICENSE.html"
     allowedOrientations: Orientation.All
 
     SilicaFlickable {

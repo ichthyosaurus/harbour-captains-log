@@ -27,7 +27,7 @@ DISTFILES += qml/harbour-captains-log.qml \
     harbour-captains-log.desktop
 
 DISTFILES += qml/sf-about-page/*.qml \
-    qml/sf-about-page/license.html \
+    qml/sf-about-page/LICENSE.html \
     qml/sf-about-page/about.js
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
