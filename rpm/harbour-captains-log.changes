@@ -1,0 +1,40 @@
+# This file is part of Captain's Log.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2021 Mirian Margiani
+#
+# FORMAT:
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+
+* Thu Nov 12 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.0.1-1
+- fixed a serious bug where entries could not be opened or edited
+
+* Thu Jun 18 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.0.0-2
+- hotfix: fixed a typo in the German translation
+
+* Thu Jun 18 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.0.0-1
+- completely overhauled the user interface
+- added the GPL where necessary
+- added support for automated database schema upgrades
+- changed the database layout (database updates itself)
+-   > added support for time zones
+-   > added field for possible future feature: audio notes
+-   > changed internal date format from "dd.MM.yyyy | hh:mm" to (standard) "yyyy-MM-dd hh:mm:ss"
+-   > save seconds
+-   > renamed 'favorites' to 'bookmarks' (an important entry is not necessarily my favorite)
+- added a new cover page
+- simplified reloading, improving performance (changes no longer require a full reload)
+- added new mood "not okay": "okay" is slightly positive, "not okay" is slightly negative; there is no "neutral" mood (database updates itself)
+- refactored export features
+-   > made exports translatable
+-   > added new export options: plain markdown and markdown for pandoc
+- updated the German translation to use polite "Sie"
+- replaced app icon by new, more "sailfishy" variant
+- implemented quickly changing the mood of an entry in the overview list
+- implemented searching for entries between two dates
+
+* Sun Apr 19 2020 Gabriel Berkigt <m.gabrielboehme@googlemail.com> 1.0-2
+- added Swedish translation
+
+* Wed Apr 15 2020 Gabriel Berkigt <m.gabrielboehme@googlemail.com> 1.0-1
+- initial release
