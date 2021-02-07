@@ -1,86 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="128"
-   height="128"
-   viewBox="0 0 33.866666 33.866668"
-   version="1.1"
-   id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="mood-1.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="6.40625"
-     inkscape:cx="64"
-     inkscape:cy="64"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:pagecheckerboard="false"
-     borderlayer="true"
-     inkscape:showpageshadow="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     units="px" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-        <dc:creator>
-          <cc:Agent>
-            <dc:title>Mirian Margiani</dc:title>
-          </cc:Agent>
-        </dc:creator>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-263.1333)">
-    <path
-       style="fill:#000000;stroke:none;stroke-width:0.09785376"
-       inkscape:connector-curvature="0"
-       id="path12"
-       d="m 23.648452,264.16535 c 4.194048,1.96343 9.070852,7.85379 9.851142,11.97705 1.365502,7.55928 -1.072898,13.64597 -7.412742,17.86737 -15.020551,10.30813 -33.3573313,-8.1483 -23.1160445,-23.26687 1.1704318,-1.7671 3.3162275,-4.12325 4.7792665,-5.20313 3.316227,-2.45433 11.801862,-3.2397 15.898378,-1.37442 z m -14.3377996,3.23967 c -3.9989786,2.06164 -6.6324522,7.1666 -6.6324522,13.15514 0,4.81045 0.2926073,5.49764 4.2915859,9.42454 3.9014419,4.02507 4.5841959,4.31961 9.4609959,4.31961 10.143751,0 16.971275,-8.44284 14.532873,-17.86741 -2.633474,-9.52271 -12.484614,-13.74415 -21.6530026,-9.03188 z" />
-    <path
-       style="fill:#000000;stroke:none;stroke-width:0.09785376"
-       inkscape:connector-curvature="0"
-       id="path14"
-       d="m 25.501637,272.9027 c 1.95072,2.74883 1.95072,3.73056 0.195085,3.73056 -0.682754,0 -1.658115,-0.98173 -1.950722,-2.25797 l -0.585218,-2.15979 -1.950719,2.35612 c -2.438403,2.84702 -3.706372,2.06164 -2.145793,-1.37442 1.365502,-3.04334 4.486656,-3.14152 6.437379,-0.2945 z" />
-    <path
-       style="fill:#000000;stroke:none;stroke-width:0.09785376"
-       inkscape:connector-curvature="0"
-       id="path16"
-       d="m 14.577599,273.1972 c 1.560576,3.43606 0.292608,4.22144 -2.145792,1.37442 l -1.950723,-2.35612 -0.5852171,2.15979 c -0.2926072,1.27624 -1.2679684,2.25797 -1.9507196,2.25797 -1.755649,0 -1.755649,-0.98173 0.1950568,-3.73056 1.9507219,-2.84702 5.0718769,-2.74884 6.4373819,0.2945 z" />
-    <path
-       style="fill:#000000;stroke:none;stroke-width:0.09785376"
-       inkscape:connector-curvature="0"
-       id="path18"
-       d="m 26.086852,285.95962 c 0,2.06165 -5.071874,4.41777 -9.65607,4.41777 -3.998975,0 -10.143747,-3.9269 -8.680708,-5.49765 0.4876806,-0.39268 1.5605784,0 2.633473,0.98173 3.121155,2.84699 8.583175,3.14153 11.801863,0.6872 3.413764,-2.4543 3.901442,-2.55248 3.901442,-0.58905 z" />
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg8" width="128" height="128" version="1.1" viewBox="0 0 33.867 33.867" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata5">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Mirian Margiani</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:date>2020-2021</dc:date>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(0 -263.13)">
+  <path id="path12" d="m23.648 264.17c4.194 1.9634 9.0709 7.8538 9.8511 11.977 1.3655 7.5593-1.0729 13.646-7.4127 17.867-15.021 10.308-33.357-8.1483-23.116-23.267 1.1704-1.7671 3.3162-4.1232 4.7793-5.2031 3.3162-2.4543 11.802-3.2397 15.898-1.3744zm-14.338 3.2397c-3.999 2.0616-6.6325 7.1666-6.6325 13.155 0 4.8104 0.29261 5.4976 4.2916 9.4245 3.9014 4.0251 4.5842 4.3196 9.461 4.3196 10.144 0 16.971-8.4428 14.533-17.867-2.6335-9.5227-12.485-13.744-21.653-9.0319z"/>
+  <path id="path14" d="m25.502 272.9c1.9507 2.7488 1.9507 3.7306 0.19508 3.7306-0.68275 0-1.6581-0.98173-1.9507-2.258l-0.58522-2.1598-1.9507 2.3561c-2.4384 2.847-3.7064 2.0616-2.1458-1.3744 1.3655-3.0433 4.4867-3.1415 6.4374-0.2945z"/>
+  <path id="path16" d="m14.578 273.2c1.5606 3.4361 0.29261 4.2214-2.1458 1.3744l-1.9507-2.3561-0.58522 2.1598c-0.29261 1.2762-1.268 2.258-1.9507 2.258-1.7556 0-1.7556-0.98173 0.19506-3.7306 1.9507-2.847 5.0719-2.7488 6.4374 0.2945z"/>
+  <path id="path18" d="m26.087 285.96c0 2.0616-5.0719 4.4178-9.6561 4.4178-3.999 0-10.144-3.9269-8.6807-5.4976 0.48768-0.39268 1.5606 0 2.6335 0.98173 3.1212 2.847 8.5832 3.1415 11.802 0.6872 3.4138-2.4543 3.9014-2.5525 3.9014-0.58905z"/>
+ </g>
 </svg>
