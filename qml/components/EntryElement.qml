@@ -23,7 +23,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 ListItem {
-    id: entryList
+    id: root
     contentHeight: _isMoodOnly ? (iconsColumn.height + (_hasTags ? Theme.paddingLarge : Theme.paddingSmall)) : Theme.itemSizeHuge
     ListView.onRemove: animateRemoval()
     openMenuOnPressAndHold: false
@@ -112,7 +112,7 @@ ListItem {
                        })
     }
 
-    Item {
+    SilicaItem {
         id: labels
         height: parent.height
         anchors {
@@ -124,20 +124,20 @@ ListItem {
         Label {
             id: createDateLabel
             anchors { top: parent.top }
+            palette.primaryColor: Theme.highlightColor
             font.pixelSize: Theme.fontSizeMedium
-            color: Theme.highlightColor
             text: formatDate(create_date, atTimeFormat, create_tz)
         }
 
         Label {
             id: titleText
             anchors { top: createDateLabel.bottom; topMargin: Theme.paddingSmall }
+            palette.primaryColor: Theme.highlightColor
             text: title
             height: _hasTitle ? contentHeight : 0
             width: parent.width
             maximumLineCount: 1
             font.pixelSize: Theme.fontSizeSmall
-            color: Theme.highlightColor
             truncationMode: TruncationMode.Fade
         }
 
@@ -148,9 +148,12 @@ ListItem {
                 topMargin: _hasTitle ? Theme.paddingSmall : 0
                 bottom: hashtagsAndModify.top
             }
+            palette {
+                primaryColor: _hasPreview ? Theme.primaryColor : Theme.secondaryColor
+                highlightColor: _hasPreview ? Theme.highlightColor : Theme.secondaryHighlightColor
+            }
             text: _hasPreview ? _previewData : qsTr("mood: %1").arg(moodTexts[mood])
             width: parent.width
-            color: _hasPreview ? Theme.primaryColor : Theme.secondaryColor
             font.pixelSize: Theme.fontSizeSmall
             truncationMode: TruncationMode.Elide
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
@@ -159,10 +162,13 @@ ListItem {
         Label {
             id: hashtagsAndModify
             anchors { bottom: parent.bottom; bottomMargin: Theme.paddingSmall }
+            palette {
+                primaryColor: Theme.secondaryColor
+                highlightColor: Theme.secondaryHighlightColor
+            }
             width: parent.width
             font.pixelSize: Theme.fontSizeExtraSmall
-            color: Theme.secondaryColor
-            text: entryList.getHashtagText()
+            text: root.getHashtagText()
             height: text !== "" ? contentHeight : 0
             maximumLineCount: 1
             truncationMode: TruncationMode.Fade
@@ -179,8 +185,8 @@ ListItem {
         onClicked: setBookmark(realModel, index, rowid, !bookmark)
 
         onPressAndHold: {
-            entryList.menu = moodMenuComponent
-            entryList.openMenu()
+            root.menu = moodMenuComponent
+            root.openMenu()
         }
 
         Column {
@@ -188,10 +194,12 @@ ListItem {
             spacing: Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
 
-            Icon {
+            HighlightImage {
                 id: favStar
+                highlighted: icons.highlighted || root.highlighted
                 opacity: Theme.opacityHigh
                 source: bookmark ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                color: Theme.primaryColor
             }
 
             HighlightImage {
@@ -199,6 +207,7 @@ ListItem {
                 anchors.horizontalCenter: favStar.horizontalCenter
                 width: 65; height: width
                 fillMode: Image.PreserveAspectFit
+                highlighted: icons.highlighted || root.highlighted
                 color: Theme.primaryColor
                 opacity: 1-mood*(1/moodTexts.length)
                 source: "../images/mood-%1.png".arg(String(mood))
