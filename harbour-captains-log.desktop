@@ -14,3 +14,7 @@ Name=Captain's Log
 # Remember to comment out the following line, if you do not want to use
 # a different app name in German locale (de).
 Name[de]=Captain's Log
+
+[X-HarbourBackup]
+BackupPathList=.local/share/harbour-captains-log/
+BackupConfigList=/apps/harbour-captains-log/
