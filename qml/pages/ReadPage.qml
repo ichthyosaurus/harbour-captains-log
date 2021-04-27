@@ -131,7 +131,6 @@ Page {
                         left: moodLabel.right; leftMargin: Theme.paddingSmall
                         right: favStar.left; rightMargin: Theme.paddingMedium
                     }
-                    color: Theme.primaryColor
                     text: moodTexts[mood]
                     truncationMode: TruncationMode.Fade
                 }
