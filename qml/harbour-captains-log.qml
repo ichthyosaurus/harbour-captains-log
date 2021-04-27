@@ -32,9 +32,8 @@ ApplicationWindow
 {
     id: appWindow
     allowedOrientations: defaultAllowedOrientations
-
-    initialPage: useCodeProtection.value === 1 ? pinPage : firstPage
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
+    initialPage: null
 
     property ListModel entriesModel: ListModel { }
 
@@ -152,7 +151,7 @@ ApplicationWindow
     property bool _scheduleReload: false // schedules the model to be reloaded when FirstPage ist activated
 
     property int _lastNotificationId: 0
-    property bool unlocked: useCodeProtection.value === 1 ? false : true
+    property bool unlocked: config.useCodeProtection ? false : true
 
     onUnlockedChanged: {
         if (!unlocked) {
@@ -163,20 +162,32 @@ ApplicationWindow
         }
     }
 
-    ConfigurationValue {
-        id: useCodeProtection
-        key: "/useCodeProtection"
+    property ConfigurationGroup config: ConfigurationGroup {
+        path: "/apps/harbour-captains-log"
+        property int configMigrated: 0
+        property bool useCodeProtection: false
+        property string protectionCode: "-1"
+
+        function migrate() {
+            if (configMigrated === 0) {
+                var _legacyConfig0 = Qt.createQmlObject(
+                            "import Nemo.Configuration 1.0; ConfigurationGroup { path: '/' }",
+                            appWindow, 'LegacyConfiguration0')
+                useCodeProtection = (_legacyConfig0.value('/useCodeProtection', 0) === 0) ? false : true
+                protectionCode = _legacyConfig0.value('/protectionCode', '-1')
+                configMigrated = 1
+                _legacyConfig0.setValue('/useCodeProtection', undefined)
+                _legacyConfig0.setValue('/protectionCode', undefined)
+                _legacyConfig0.destroy()
+            }
+        }
     }
 
     Component {
         id: pinPage
         PinPage {
-            expectedCode: protectionCode.value
+            expectedCode: config.protectionCode
             onAccepted: pageStack.push(Qt.resolvedUrl("pages/FirstPage.qml"))
-            ConfigurationValue {
-                id: protectionCode
-                key: "/protectionCode"
-            }
         }
     }
 
@@ -215,6 +226,12 @@ ApplicationWindow
         }
     }
 
-    Component.onCompleted: About.VERSION_NUMBER = appVersionNumber
-}
+    Component.onCompleted: {
+        About.VERSION_NUMBER = appVersionNumber
 
+        if (config.configMigrated < 1) {
+            config.migrate()
+        }
+        pageStack.replaceAbove(null, config.useCodeProtection ? pinPage : firstPage)
+    }
+}

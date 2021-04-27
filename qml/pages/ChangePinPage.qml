@@ -23,11 +23,6 @@ import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 
 PinPage {
-    ConfigurationValue {
-        id: protectionCode
-        key: "/protectionCode"
-    }
-
     property var settingsPage // settings page instance
     expectedCode: "" // has to be set by settings page
 
@@ -35,7 +30,7 @@ PinPage {
     onAccepted: {
         if (expectedCode === "") {
             // set new pin
-            protectionCode.value = enteredCode
+            config.protectionCode = enteredCode
             pageStack.pop(settingsPage) // pop back to settings page
             showMessage(qsTr("Saved your protection code."))
         } else {

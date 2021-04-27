@@ -26,29 +26,18 @@ import Nemo.Configuration 1.0
 Page {
     id: page
 
-    ConfigurationValue {
-        id: useCodeProtection
-        key: "/useCodeProtection"
-    }
-
-    ConfigurationValue {
-        id: protectionCode
-        key: "/protectionCode"
-        defaultValue: "-1"
-    }
-
     onStatusChanged: {
         if(status == PageStatus.Deactivating) {
-            if (protectionSwitch.checked && protectionCode.value !== "-1") {
+            if (protectionSwitch.checked && config.protectionCode !== "-1") {
                 // if protection is switched on AND a protection code is set - save!
-                useCodeProtection.value = 1
+                config.useCodeProtection = true
 
                 // if the code was just set, make sure the app knows it's unlocked
                 appWindow.unlocked = true
             } else {
                 // if not checked or code not set rollback all details
-                useCodeProtection.value = 0
-                protectionCode.value = "-1"
+                config.useCodeProtection = false
+                config.protectionCode = "-1"
             }
         }
     }
@@ -75,15 +64,15 @@ Page {
             TextSwitch {
                 id: protectionSwitch
                 text: qsTr("activate code protection")
-                checked: useCodeProtection.value
+                checked: config.useCodeProtection
             }
 
             Button {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: protectionCode.value === "-1" ? qsTr("Set Code") : qsTr("Change Code")
+                text: config.protectionCode === "-1" ? qsTr("Set Code") : qsTr("Change Code")
                 visible: protectionSwitch.checked
                 onClicked: pageStack.push(Qt.resolvedUrl("ChangePinPage.qml"), {
-                                              expectedCode: protectionCode.value === "-1" ? "" : protectionCode.value,
+                                              expectedCode: config.protectionCode === "-1" ? "" : config.protectionCode,
                                               settingsPage: page
                                           })
             }
