@@ -29,9 +29,7 @@ Captain's Log. Previous versions were developed by the original author
 
 **Note:** Captain's Log can hide your entries behind a protection code but it's
 nothing special. Your data is neither encrypted nor otherwise protected against
-a bad guy with physical access to your device.
-
-Captain's Log is written in pure Python and QML.
+a bad guy with physical (or SSH) access to your device.
 
 #### Planned features
 
@@ -45,15 +43,15 @@ Captain's Log is written in pure Python and QML.
 
 You are welcome to leave a comment on
 [OpenRepos](https://openrepos.net/content/ichthyosaurus/captains-log-updated) or
-(soon) in the Jolla store.
+in the Jolla store.
 
 ## Translations
 
 It would be wonderful if the app could be translated in as many languages as possible!
 
 If you just found a minor problem, you can
-[leave a comment in the forum](https://forum.sailfishos.org/t/captains-log-support-and-feedback-thread/4566)
-or [open an issue](https://github.com/ichthyosaurus/harbour-captains-log/issues/new).
+<!--[leave a comment in the forum](https://forum.sailfishos.org/t/captains-log-support-and-feedback-thread/4566)
+or--> [open an issue](https://github.com/ichthyosaurus/harbour-captains-log/issues/new).
 
 Please include the following details:
 
@@ -88,6 +86,9 @@ Please do not forget to add yourself to the list of contributors in
 [qml/sf-about-page/about.js](qml/sf-about-page/about.js)!
 
 ## License
+
+> Copyright (C) 2020-2021  Mirian Margiani
+> Copyright (C) 2020  AlphaX2
 
 Captain's Log is Free Software released under the terms of the
 [GNU General Public License v3 (or later)](https://spdx.org/licenses/GPL-3.0-or-later.html).
