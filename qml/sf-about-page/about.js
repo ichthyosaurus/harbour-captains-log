@@ -21,6 +21,7 @@ var TRANSLATIONS = [
     {label: qsTr("English"), values: ["Gabriel Berkigt"]},
     {label: qsTr("Swedish"), values: ["Åke Engelbrektson"]},
     {label: qsTr("German"), values: ["Gabriel Berkigt", "Mirian Margiani"]},
+    {label: qsTr("Chinese (China)"), values: ["dashinfantry"]}
 ]
 
 
