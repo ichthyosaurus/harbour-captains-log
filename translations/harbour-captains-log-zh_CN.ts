@@ -48,7 +48,7 @@
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation><请输入你的旧安全码。/translation>
+        <translation>请输入你的旧安全码。</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
