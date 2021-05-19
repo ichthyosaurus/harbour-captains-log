@@ -5,39 +5,39 @@
     <name>AboutPage</name>
     <message>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Version %1</translation>
     </message>
     <message>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Utveckling</translation>
     </message>
     <message>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Utvecklare</translation>
     </message>
     <message>
         <source>&lt;i&gt;show contributors &lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;visa medarbetare &lt;/i&gt;</translation>
     </message>
     <message>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Webbplats</translation>
     </message>
     <message>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licens</translation>
     </message>
     <message>
         <source>&lt;i&gt;show license &lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;visa licens &lt;/i&gt;</translation>
     </message>
     <message>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Källkod</translation>
     </message>
     <message>
         <source>About this app</source>
-        <translation type="unfinished"></translation>
+        <translation>Om den här appen</translation>
     </message>
 </context>
 <context>
@@ -48,26 +48,26 @@
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange din gamla säkerhetskod</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange en ny säkerhetskod</translation>
     </message>
 </context>
 <context>
     <name>ContributorsPage</name>
     <message>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Medarbetare</translation>
     </message>
     <message>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Utveckling</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Översättning</translation>
     </message>
 </context>
 <context>
@@ -75,7 +75,7 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished"></translation>
+        <translation>Välj</translation>
     </message>
 </context>
 <context>
@@ -90,11 +90,11 @@
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>humör: %1</translation>
     </message>
     <message>
         <source>Edit: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Redigera: %1</translation>
     </message>
 </context>
 <context>
@@ -105,7 +105,7 @@
     </message>
     <message>
         <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange filnamnet...</translation>
     </message>
     <message>
         <source>Filename</source>
@@ -121,72 +121,73 @@
     </message>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>Oformaterad text</translation>
     </message>
     <message>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommaseparerade värden (CSV)</translation>
     </message>
     <message>
         <source>Plain Markdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ren Markdown</translation>
     </message>
     <message>
         <source>Markdown for Pandoc</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown för Pandoc</translation>
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>aldrig</translation>
     </message>
     <message>
         <source>Created: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Skapad: {}</translation>
     </message>
     <message>
         <source>Changed: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändrad: {}</translation>
     </message>
     <message>
         <source>changed: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>ändrad: {}</translation>
     </message>
     <message>
         <source>Title: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel: {}</translation>
     </message>
     <message>
         <source>Entry:
 {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Text:
+{}</translation>
     </message>
     <message>
         <source>Hashtags: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Hashtaggar: {}</translation>
     </message>
     <message>
         <source>Bookmark: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Bokmärken: {}</translation>
     </message>
     <message>
         <source>Mood: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Humör: {}</translation>
     </message>
     <message>
         <source>Diary from {} until {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Dagbok från {} till {}</translation>
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Data exporterad till: %1</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>ja</translation>
     </message>
     <message>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>nej</translation>
     </message>
 </context>
 <context>
@@ -205,33 +206,33 @@
     </message>
     <message>
         <source>Settings and Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar och export</translation>
     </message>
     <message>
         <source>No entries yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Inga poster ännu</translation>
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Svep åt vänster för att lägga till poster</translation>
     </message>
 </context>
 <context>
     <name>LicensePage</name>
     <message>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licens</translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
         <source>Please enter your security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange din säkerhetskod</translation>
     </message>
     <message>
         <source>please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>försök igen</translation>
     </message>
 </context>
 <context>
@@ -242,11 +243,11 @@
     </message>
     <message>
         <source>mood:</source>
-        <translation type="unfinished"></translation>
+        <translation>humör:</translation>
     </message>
     <message>
         <source>changed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ändrad: %1</translation>
     </message>
 </context>
 <context>
@@ -290,29 +291,29 @@
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel och text</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished"></translation>
+        <translation>Inga poster hittades</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inga poster matchade dessa kriterier.</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>från</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>till</translation>
     </message>
 </context>
 <context>
@@ -378,101 +379,101 @@
     </message>
     <message>
         <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Hur mådde du?</translation>
     </message>
     <message>
         <source>How do you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Hur mår du?</translation>
     </message>
     <message>
         <source>Add a title</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till en titel</translation>
     </message>
     <message>
         <source>What do you want to say?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vad vill du säga?</translation>
     </message>
     <message>
         <source>Entry...</source>
-        <translation type="unfinished"></translation>
+        <translation>Text...</translation>
     </message>
     <message>
         <source>Hashtags</source>
-        <translation type="unfinished"></translation>
+        <translation>Hashtaggar</translation>
     </message>
     <message>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Skapad:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändrad:</translation>
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>aldrig</translation>
     </message>
 </context>
 <context>
     <name>about</name>
     <message>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmering</translation>
     </message>
     <message>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikondesign</translation>
     </message>
     <message>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Engelska</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Svenska</translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyska</translation>
     </message>
     <message>
         <source>Sources on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>Källkod på GitHub</translation>
     </message>
     <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>En enkel dagboksapp, för att hålla koll på dina tankar.</translation>
     </message>
     <message>
         <source>About Captain&apos;s Log</source>
-        <translation type="unfinished"></translation>
+        <translation>Om Captain&apos;s Log</translation>
     </message>
     <message>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Utvecklare</translation>
     </message>
     <message>
         <source>Swedish: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Svenska: %1</translation>
     </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
     <message>
         <source>hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>fantastic</source>
@@ -496,20 +497,20 @@
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>d MMM yyyy</translation>
     </message>
     <message>
         <source>not okay</source>
-        <translation type="unfinished"></translation>
+        <translation>inte okay</translation>
     </message>
     <message>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2)</translation>
     </message>
 </context>
 </TS>
