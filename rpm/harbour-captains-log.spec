@@ -12,13 +12,11 @@ Summary:    Simple Diary application
 Version:    2.0.1
 Release:    0
 Group:      Qt/Qt
-License:    GPLv3
-BuildArch:  noarch
+License:    GPL-3.0-or-later
 URL:        https://github.com/AlphaX2/Captains-Log-Sailfish
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-captains-log.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires:   libsailfishapp-launcher
 Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.5.0
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.3
 BuildRequires:  pkgconfig(Qt5Core)
@@ -40,7 +38,9 @@ A simple diary application for keeping track of your thoughts.
 # >> build pre
 # << build pre
 
-%qmake5 
+%qmake5  \
+    VERSION=%{version} \
+    RELEASE=%{release}
 
 make %{?_smp_mflags}
 
@@ -62,7 +62,7 @@ desktop-file-install --delete-original       \
 
 %files
 %defattr(-,root,root,-)
-%defattr(0644,root,root,-)
+%{_bindir}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png

@@ -11,8 +11,7 @@ Release: 0
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group: Qt/Qt
 URL: https://github.com/AlphaX2/Captains-Log-Sailfish
-BuildArch: noarch
-License: GPLv3
+License: GPL-3.0-or-later
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.
 Sources:
@@ -21,6 +20,9 @@ Description: |
   A simple diary application for keeping track of your thoughts.
 Configure: none
 Builder: qmake5
+QMakeOptions:
+    - VERSION=%{version}
+    - RELEASE=%{release}
 
 # This section specifies build dependencies that are resolved using pkgconfig.
 # This is the preferred way of specifying build dependencies for your package.
@@ -37,12 +39,11 @@ PkgConfigBR:
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
-  - libsailfishapp-launcher
   - pyotherside-qml-plugin-python3-qt5 >= 1.5.0
 
 # All installed files
 Files:
-  - '%defattr(0644,root,root,-)'
+  - '%{_bindir}'
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'

@@ -17,7 +17,9 @@
 # The name of your application
 TARGET = harbour-captains-log
 
-CONFIG += sailfishapp_qml
+CONFIG += sailfishapp
+
+SOURCES += src/harbour-captains-log.cpp
 
 DISTFILES += qml/harbour-captains-log.qml \
     qml/cover/CoverPage.qml \
@@ -47,3 +49,10 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-captains-log-de.ts \
     translations/harbour-captains-log-sv.ts
+
+QML_IMPORT_PATH += qml/modules
+
+# Note: version number is configured in yaml
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
+include(libs/opal-cached-defines.pri)
