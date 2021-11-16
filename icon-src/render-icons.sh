@@ -27,8 +27,9 @@ cTARGETS=(../icons/RESXxRESY)
 render_batch
 
 cNAME="mood icons"
-cITEMS=(mood-{0,1,2,3,4,5})
-cRESOLUTIONS=(112)
+cITEMS=(mood-{0,1,2,3,4,5}@112
+        harbour-captains-log@256)
+cRESOLUTIONS=(F1)
 cTARGETS=(../qml/images)
 render_batch
 
