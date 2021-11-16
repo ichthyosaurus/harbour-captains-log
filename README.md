@@ -67,7 +67,7 @@ You can follow these steps to manually add or update a translation:
 1. *If it did not exists before*, create a new catalog for your language by copying the
    base file [translations/harbour-captains-log.ts](translations/harbour-captains-log.ts).
    Then add the new translation to [harbour-captains-log.pro](harbour-captains-log.pro).
-2. Add yourself to the list of contributors in [qml/sf-about-page/about.js](qml/sf-about-page/about.js).
+2. Add yourself to the list of contributors in [qml/pages/AboutPage.qml](qml/pages/AboutPage.qml).
 
 See [the Qt documentation](https://doc.qt.io/qt-5/qml-qtqml-date.html#details) for
 details on how to translate date formats to your *local* format.
@@ -83,7 +83,7 @@ details on how to translate date formats to your *local* format.
    the RPM packages will be in the RPMS folder
 
 Please do not forget to add yourself to the list of contributors in
-[qml/sf-about-page/about.js](qml/sf-about-page/about.js)!
+[qml/pages/AboutPage.qml](qml/pages/AboutPage.qml)!
 
 ## License
 
