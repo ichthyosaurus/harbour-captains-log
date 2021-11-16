@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_CH">
+<TS version="2.1" language="en_US">
 <context>
     <name>AboutPage</name>
     <message>
         <source>Development</source>
-        <translation>Entwicklung</translation>
+        <translation>Development</translation>
     </message>
     <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation>Ein schlichtes Tagebuch um das Gedankenchaos zu zähmen.</translation>
+        <translation>A simple diary application for keeping track of your thoughts.</translation>
     </message>
     <message>
         <source>Programming</source>
-        <translation>Programmierung</translation>
+        <translation>Programming</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation>Übersetzungen</translation>
+        <translation>Translations</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation>Schwedisch</translation>
+        <translation>Swedish</translation>
     </message>
     <message>
         <source>Chinese</source>
-        <translation>Chinesisch</translation>
+        <translation>Chinese</translation>
     </message>
     <message>
         <source>German</source>
-        <translation>Deutsch</translation>
+        <translation>German</translation>
     </message>
 </context>
 <context>
     <name>ChangePinPage</name>
     <message>
         <source>Saved your protection code.</source>
-        <translation>Der Sicherheitscode wurde gespeichert.</translation>
+        <translation>Saved your protection code.</translation>
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation>Geben Sie Ihren alten Sicherheitscode ein</translation>
+        <translation>Enter your old security code</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
-        <translation>Geben Sie einen neuen Sicherheitscode ein</translation>
+        <translation>Enter a new security code</translation>
     </message>
 </context>
 <context>
@@ -52,90 +52,90 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation>wählen</translation>
+        <translation>Select</translation>
     </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
         <source>Edit</source>
-        <translation>Bearbeiten</translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation>Löschen</translation>
+        <translation>Delete</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation>Stimmung: %1</translation>
+        <translation>mood: %1</translation>
     </message>
     <message>
         <source>Edit: %1</source>
-        <translation>Bearbeitet: %1</translation>
+        <translation>Edit: %1</translation>
     </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
-        <translation>Daten exportieren</translation>
+        <translation>Export your data</translation>
     </message>
     <message>
         <source>Define the file name...</source>
-        <translation>Dateinamen angeben ...</translation>
+        <translation>Define the file name...</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation>Dateiname</translation>
+        <translation>Filename</translation>
     </message>
     <message>
         <source>Export file type selection</source>
-        <translation>Auswahl des Export-Dateitypen</translation>
+        <translation>Export file type selection</translation>
     </message>
     <message>
         <source>Select file type:</source>
-        <translation>Dateityp wählen:</translation>
+        <translation>Select file type:</translation>
     </message>
     <message>
         <source>Plain text</source>
-        <translation>Einfacher Text</translation>
+        <translation>Plain text</translation>
     </message>
     <message>
         <source>Comma-separated values (CSV)</source>
-        <translation>Komma-getrennte Werte (CSV)</translation>
+        <translation>Comma-separated values (CSV)</translation>
     </message>
     <message>
         <source>Plain Markdown</source>
-        <translation>Reines Markdown</translation>
+        <translation>Plain Markdown</translation>
     </message>
     <message>
         <source>Markdown for Pandoc</source>
-        <translation>Markdown für Pandoc</translation>
+        <translation>Markdown for Pandoc</translation>
     </message>
     <message>
         <source>never</source>
-        <translation>nie</translation>
+        <translation>never</translation>
     </message>
     <message>
         <source>Created: {}</source>
-        <translation>Erstellt: {}</translation>
+        <translation>Created: {}</translation>
     </message>
     <message>
         <source>Changed: {}</source>
-        <translation>Geändert: {}</translation>
+        <translation>Changed: {}</translation>
     </message>
     <message>
         <source>changed: {}</source>
-        <translation>geändert: {}</translation>
+        <translation>changed: {}</translation>
     </message>
     <message>
         <source>Title: {}</source>
-        <translation>Titel: {}</translation>
+        <translation>Title: {}</translation>
     </message>
     <message>
         <source>Entry:
 {}</source>
-        <translation>Eintrag:
+        <translation>Entry:
 {}</translation>
     </message>
     <message>
@@ -144,61 +144,61 @@
     </message>
     <message>
         <source>Bookmark: {}</source>
-        <translation>Lesezeichen: {}</translation>
+        <translation>Bookmark: {}</translation>
     </message>
     <message>
         <source>Mood: {}</source>
-        <translation>Stimmung: {}</translation>
+        <translation>Mood: {}</translation>
     </message>
     <message>
         <source>Diary from {} until {}</source>
-        <translation>Tagebuch vom {} bis {}</translation>
+        <translation>Diary from {} until {}</translation>
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation>Daten exportiert nach: %1</translation>
+        <translation>Data exported to: %1</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation>ja</translation>
+        <translation>yes</translation>
     </message>
     <message>
         <source>no</source>
-        <translation>nein</translation>
+        <translation>no</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation>Über</translation>
+        <translation>About</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation>Suche</translation>
+        <translation>Search</translation>
     </message>
     <message>
         <source>Add new entry</source>
-        <translation>Neuen Eintrag erstellen</translation>
+        <translation>Add new entry</translation>
     </message>
     <message>
         <source>Settings and Export</source>
-        <translation>Einstellungen und Export</translation>
+        <translation>Settings and Export</translation>
     </message>
     <message>
         <source>No entries yet</source>
-        <translation>Noch keine Einträge</translation>
+        <translation>No entries yet</translation>
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation>Wischen Sie nach rechts, um Einträge hinzuzufügen</translation>
+        <translation>Swipe right to add entries</translation>
     </message>
 </context>
 <context>
     <name>Opal.About</name>
     <message>
         <source>About</source>
-        <translation>Über</translation>
+        <translation>About</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -210,54 +210,54 @@
     </message>
     <message>
         <source>Development</source>
-        <translation>Entwicklung</translation>
+        <translation>Development</translation>
     </message>
     <message>
         <source>show contributors</source>
-        <translation>Mitwirkende zeigen</translation>
+        <translation>show contributors</translation>
     </message>
     <message>
         <source>Homepage</source>
-        <translation>Webseite</translation>
+        <translation>Homepage</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation>Übersetzungen</translation>
+        <translation>Translations</translation>
     </message>
     <message>
         <source>Source Code</source>
-        <translation>Quellcode</translation>
+        <translation>Source Code</translation>
     </message>
     <message>
         <source>Donations</source>
-        <translation>Spenden</translation>
+        <translation>Donations</translation>
     </message>
     <message>
         <source>License</source>
-        <translation>Lizenz</translation>
+        <translation>License</translation>
     </message>
     <message numerus="yes">
         <source>show license(s)</source>
         <translation>
-            <numerusform>Lizenz zeigen</numerusform>
-            <numerusform>Lizenzen zeigen</numerusform>
+            <numerusform>show license</numerusform>
+            <numerusform>show licenses</numerusform>
         </translation>
     </message>
     <message>
         <source>show details</source>
-        <translation>Details zeigen</translation>
+        <translation>show details</translation>
     </message>
     <message>
         <source>Contributors</source>
-        <translation>Mitwirkende</translation>
+        <translation>Contributors</translation>
     </message>
     <message>
         <source>Acknowledgements</source>
-        <translation>Danksagungen</translation>
+        <translation>Acknowledgements</translation>
     </message>
     <message>
         <source>Thank you!</source>
-        <translation>Vielen Dank!</translation>
+        <translation>Thank you!</translation>
     </message>
     <message>
         <source>Details</source>
@@ -265,102 +265,102 @@
     </message>
     <message>
         <source>External Link</source>
-        <translation>Externer Link</translation>
+        <translation>External Link</translation>
     </message>
     <message>
         <source>Open in browser</source>
-        <translation>Im Browser öffnen</translation>
+        <translation>Open in browser</translation>
     </message>
     <message>
         <source>Copied to clipboard: %1</source>
-        <translation>In die Zwischenablage kopiert: %1</translation>
+        <translation>Copied to clipboard: %1</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation>In die Zwischenablage kopieren</translation>
+        <translation>Copy to clipboard</translation>
     </message>
     <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Bitte beachten Sie &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+        <translation>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
-        <translation>Lizenztexte herunterladen</translation>
+        <translation>Download license texts</translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
         <translation>
-            <numerusform>Lizenz</numerusform>
-            <numerusform>Lizenzen</numerusform>
+            <numerusform>License</numerusform>
+            <numerusform>Licenses</numerusform>
         </translation>
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Hinweis: Bitte prüfen Sie den Quellcode für alle Einzelheiten.</translation>
+        <translation>Note: please check the source code for most accurate information.</translation>
     </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Sie können mir gerne einen Kaffee spendieren, wenn Sie meine Arbeit unterstützen möchten.</translation>
+        <translation>If you want to support my work, you can buy me a cup of coffee.</translation>
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Sie können dieses Projekt durch Ihre Mitarbeit oder durch eine Spende über einen dieser Dienste unterstützen.</translation>
+        <translation>You can support this project by contributing, or by donating using any of these services.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Ihre Mitarbeit bei Übersetzungen oder der Programmierung wäre eine große Hilfe.</translation>
+        <translation>Your contributions to translations or code would be most welcome.</translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
         <source>Please enter your security code</source>
-        <translation>Bitte geben Sie Ihren Sicherheitscode ein</translation>
+        <translation>Please enter your security code</translation>
     </message>
     <message>
         <source>please try again</source>
-        <translation>bitte erneut versuchen</translation>
+        <translation>please try again</translation>
     </message>
 </context>
 <context>
     <name>ReadPage</name>
     <message>
         <source>Edit</source>
-        <translation>Bearbeiten</translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <source>mood:</source>
-        <translation>Stimmung:</translation>
+        <translation>mood:</translation>
     </message>
     <message>
         <source>changed: %1</source>
-        <translation>geändert: %1</translation>
+        <translation>changed: %1</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
         <source>Search</source>
-        <translation>Suche</translation>
+        <translation>Search</translation>
     </message>
     <message>
         <source>Filter your results</source>
-        <translation>Ergebnisse filtern</translation>
+        <translation>Filter your results</translation>
     </message>
     <message>
         <source>Search by:</source>
-        <translation>Suche in:</translation>
+        <translation>Search by:</translation>
     </message>
     <message>
         <source>Creation date</source>
-        <translation>Erstellungsdatum</translation>
+        <translation>Creation date</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation>Lesezeichen</translation>
+        <translation>Bookmarks</translation>
     </message>
     <message>
         <source>Hashtag</source>
@@ -368,15 +368,15 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation>Stimmung</translation>
+        <translation>Mood</translation>
     </message>
     <message>
         <source>Filter results by mood</source>
-        <translation>Ergebnisse nach Stimmung filtern</translation>
+        <translation>Filter results by mood</translation>
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation>Einträge durchsuchen ...</translation>
+        <translation>Search your entries...</translation>
     </message>
     <message>
         <source>Filter:</source>
@@ -385,75 +385,75 @@
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation>Überschrift und Eintrag</translation>
+        <translation>Title and Entry</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation>Keine Einträge gefunden</translation>
+        <translation>No entries found</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation>Zu den gewählten Kriterien wurden keine Einträge gefunden.</translation>
+        <translation>No entries matched these criteria.</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>von</translation>
+        <translation>from</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>bis</translation>
+        <translation>till</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>Einstellungen</translation>
+        <translation>Settings</translation>
     </message>
     <message>
         <source>activate code protection</source>
-        <translation>Sicherheitscode aktivieren</translation>
+        <translation>activate code protection</translation>
     </message>
     <message>
         <source>Set Code</source>
-        <translation>Code festlegen</translation>
+        <translation>Set Code</translation>
     </message>
     <message>
         <source>Change Code</source>
-        <translation>Code ändern</translation>
+        <translation>Change Code</translation>
     </message>
     <message>
         <source>Security</source>
-        <translation>Sicherheit</translation>
+        <translation>Security</translation>
     </message>
     <message>
         <source>Export features</source>
-        <translation>Export-Möglichkeiten</translation>
+        <translation>Export features</translation>
     </message>
     <message>
         <source>Export data</source>
-        <translation>Daten exportieren</translation>
+        <translation>Export data</translation>
     </message>
 </context>
 <context>
     <name>WritePage</name>
     <message>
         <source>Save</source>
-        <translation>Speichern</translation>
+        <translation>Save</translation>
     </message>
     <message>
         <source>New Entry</source>
-        <translation>Neuer Eintrag</translation>
+        <translation>New Entry</translation>
     </message>
     <message>
         <source>Title</source>
-        <translation>Überschrift</translation>
+        <translation>Title</translation>
     </message>
     <message>
         <source>Entry</source>
-        <translation>Eintrag</translation>
+        <translation>Entry</translation>
     </message>
     <message>
         <source>#Hashtags</source>
@@ -461,31 +461,31 @@
     </message>
     <message>
         <source>Your mood:</source>
-        <translation>Ihre Stimmung:</translation>
+        <translation>Your mood:</translation>
     </message>
     <message>
         <source>Edit Entry</source>
-        <translation>Eintrag bearbeiten</translation>
+        <translation>Edit Entry</translation>
     </message>
     <message>
         <source>How did you feel?</source>
-        <translation>Wie haben Sie sich gefühlt?</translation>
+        <translation>How did you feel?</translation>
     </message>
     <message>
         <source>How do you feel?</source>
-        <translation>Wie fühlen Sie sich?</translation>
+        <translation>How do you feel?</translation>
     </message>
     <message>
         <source>Add a title</source>
-        <translation>Eine Überschrift hinzufügen</translation>
+        <translation>Add a title</translation>
     </message>
     <message>
         <source>What do you want to say?</source>
-        <translation>Was haben Sie zu sagen?</translation>
+        <translation>What do you want to say?</translation>
     </message>
     <message>
         <source>Entry...</source>
-        <translation>Eintrag ...</translation>
+        <translation>Entry...</translation>
     </message>
     <message>
         <source>Hashtags</source>
@@ -493,15 +493,15 @@
     </message>
     <message>
         <source>Created:</source>
-        <translation>Erstellt:</translation>
+        <translation>Created:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation>Zuletzt geändert:</translation>
+        <translation>Last changed:</translation>
     </message>
     <message>
         <source>never</source>
-        <translation>nie</translation>
+        <translation>never</translation>
     </message>
 </context>
 <context>
@@ -512,23 +512,23 @@
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation>d. MMM yyyy, hh&apos;:&apos;mm &apos;Uhr&apos;</translation>
+        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation>ddd, d. MMM yyyy, hh&apos;:&apos;mm &apos;Uhr&apos;</translation>
+        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation>ddd, d. MMM yyyy</translation>
+        <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>fantastic</source>
-        <translation>ausgezeichnet</translation>
+        <translation>fantastic</translation>
     </message>
     <message>
         <source>good</source>
-        <translation>gut</translation>
+        <translation>good</translation>
     </message>
     <message>
         <source>okay</source>
@@ -536,23 +536,23 @@
     </message>
     <message>
         <source>bad</source>
-        <translation>schlecht</translation>
+        <translation>bad</translation>
     </message>
     <message>
         <source>horrible</source>
-        <translation>schrecklich</translation>
+        <translation>horrible</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation>hh&apos;:&apos;mm &apos;Uhr&apos;</translation>
+        <translation>&apos;at&apos; hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
-        <translation>d. MMM yyyy</translation>
+        <translation>d MMM yyyy</translation>
     </message>
     <message>
         <source>not okay</source>
-        <translation>nicht okay</translation>
+        <translation>not okay</translation>
     </message>
     <message>
         <source>%1 (%2)</source>
