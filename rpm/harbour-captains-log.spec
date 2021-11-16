@@ -11,7 +11,7 @@ Name:       harbour-captains-log
 
 Summary:    Simple Diary application
 Version:    2.0.1
-Release:    0
+Release:    1
 Group:      Qt/Qt
 License:    GPL-3.0-or-later
 URL:        https://github.com/AlphaX2/Captains-Log-Sailfish
