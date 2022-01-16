@@ -16,6 +16,7 @@ Name=Captain's Log
 # should be the limit. If your language uses a different script than Latin,
 # please test it before submitting your translation.
 Name[de]=Captain's Log
+Name[fi]=Lokikirja
 
 [X-HarbourBackup]
 BackupPathList=.local/share/harbour-captains-log/
