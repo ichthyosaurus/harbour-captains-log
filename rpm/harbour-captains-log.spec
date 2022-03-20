@@ -10,7 +10,7 @@ Name:       harbour-captains-log
 # << macros
 
 Summary:    Simple Diary application
-Version:    2.0.1
+Version:    2.1.0
 Release:    1
 Group:      Qt/Qt
 License:    GPL-3.0-or-later
