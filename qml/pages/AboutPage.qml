@@ -1,21 +1,7 @@
 /*
  * This file is part of Captain's Log.
- *
- * SPDX-FileCopyrightText: 2021 Mirian Margiani
- *
+ * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * Captain's Log is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * Captain's Log is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 /*
@@ -47,7 +33,7 @@ AboutPageBase {
     appVersion: APP_VERSION
     appRelease: APP_RELEASE
     description: qsTr("A simple diary application for keeping track of your thoughts.")
-    mainAttributions: ["2020-2021 Mirian Margiani", "2020 Gabriel Berkigt"]
+    mainAttributions: ["2020-2022 Mirian Margiani", "2020 Gabriel Berkigt"]
     sourcesUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
     homepageUrl: "https://openrepos.net/content/ichthyosaurus/captains-log-updated"
 
@@ -61,8 +47,14 @@ AboutPageBase {
             homepage: "https://thp.io/2011/pyotherside/"
         },
         Attribution {
+            name: "OSMScout Migration"
+            entries: ["2021 Lukáš Karas"]
+            licenses: License { spdxId: "GPL-2.0-or-later" }
+            sources: "https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
+        },
+        Attribution {
             name: "Opal.About"
-            entries: "2018-2021 Mirian Margiani"
+            entries: "2018-2022 Mirian Margiani"
             licenses: License { spdxId: "GPL-3.0-or-later"}
             sources: "https://github.com/Pretty-SFOS/opal-about"
             homepage: "https://github.com/Pretty-SFOS/opal"
