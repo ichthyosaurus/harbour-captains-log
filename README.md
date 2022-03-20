@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2021 Mirian Margiani
+SPDX-FileCopyrightText: 2021-2022 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
@@ -38,6 +38,12 @@ a bad guy with physical (or SSH) access to your device.
 - save and browse revisions after editing an entry
 - improved translations
 - improved export, if possible directly to PDF
+
+### Permissions
+
+Captain's Log requires the following permissions:
+
+- Documents: required to export the database to different file formats
 
 ## Help and support
 
@@ -87,7 +93,7 @@ Please do not forget to add yourself to the list of contributors in
 
 ## License
 
-> Copyright (C) 2020-2021  Mirian Margiani
+> Copyright (C) 2020-2022  Mirian Margiani
 > Copyright (C) 2020  AlphaX2
 
 Captain's Log is Free Software released under the terms of the
