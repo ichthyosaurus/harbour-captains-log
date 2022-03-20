@@ -10,6 +10,7 @@ Page{property list<ContributionSection>sections
 property list<Attribution>attributions
 property var mainAttributions:[]
 property string appName
+property bool allowDownloadingLicenses:false
 property list<Attribution>_defaultAttributions
 allowedOrientations:Orientation.All
 SilicaFlickable{anchors.fill:parent
@@ -47,7 +48,7 @@ if(modelData.sources!==""&&modelData.homepage!==""){append=qsTranslate("Opal.Abo
 }else if(modelData.sources!==""){append=qsTranslate("Opal.About","Source Code")
 }else{append=qsTranslate("Opal.About","Homepage")
 }return[modelData.name,append+"  • • •"]
-}}onClicked:{if(values[values.length-1]===spdxString){pageStack.animatorPush("LicensePage.qml",{"attributions":[modelData],"enableSourceHint":true,"pageDescription":modelData.name,"mainSources":modelData.source,"mainHomepage":modelData.homepage})
+}}onClicked:{if(values[values.length-1]===spdxString){pageStack.animatorPush("LicensePage.qml",{"attributions":[modelData],"enableSourceHint":true,"pageDescription":modelData.name,"mainSources":modelData.source,"mainHomepage":modelData.homepage,"allowDownloadingLicenses":allowDownloadingLicenses})
 }else{var pages=[]
 if(modelData.homepage!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.homepage,"title":qsTranslate("Opal.About","Homepage")}})
 if(modelData.sources!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.sources,"title":qsTranslate("Opal.About","Source Code")}})

@@ -13,12 +13,15 @@ property alias pageDescription:pageHeader.description
 property string appName
 property string mainSources
 property string mainHomepage
+property bool allowDownloadingLicenses:false
 allowedOrientations:Orientation.All
 function _downloadLicenses(){for(var lic in licenses){licenses[lic].__online=true
 }for(var attr in attributions){for(var lic in attributions[attr].licenses){attributions[attr].licenses[lic].__online=true
 }}}SilicaFlickable{anchors.fill:parent
 contentHeight:column.height+Theme.horizontalPageMargin
-VerticalScrollDecorator{}PullDownMenu{MenuItem{text:qsTranslate("Opal.About","Download license texts")
+VerticalScrollDecorator{}PullDownMenu{visible:allowDownloadingLicenses
+enabled:visible
+MenuItem{text:qsTranslate("Opal.About","Download license texts")
 onClicked:_downloadLicenses()
 }}Column{id:column
 width:parent.width

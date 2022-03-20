@@ -20,6 +20,7 @@ property string sourcesUrl:""
 property string translationsUrl:""
 property string homepageUrl:""
 property list<License>licenses
+property bool allowDownloadingLicenses:false
 property list<Attribution>attributions
 readonly property DonationsGroup donations:DonationsGroup{}
 property list<InfoSection>extraSections
@@ -95,7 +96,7 @@ title:qsTranslate("Opal.About","Development")
 enabled:contributionSections.length>0||attributions.length>0
 text:__effectiveMainAttribs.join(", ")
 showMoreLabel:qsTranslate("Opal.About","show contributors")
-onClicked:{pageStack.animatorPush("private/ContributorsPage.qml",{"appName":appName,"sections":contributionSections,"attributions":attributions,"mainAttributions":__effectiveMainAttribs})
+onClicked:{pageStack.animatorPush("private/ContributorsPage.qml",{"appName":appName,"sections":contributionSections,"attributions":attributions,"mainAttributions":__effectiveMainAttribs,"allowDownloadingLicenses":allowDownloadingLicenses})
 }buttons:[InfoButton{text:qsTranslate("Opal.About","Homepage")
 onClicked:openOrCopyUrl(homepageUrl)
 enabled:homepageUrl!==""
@@ -119,7 +120,7 @@ __donationButtons:donations.services
 width:parent.width
 title:qsTranslate("Opal.About","License")
 enabled:licenses.length>0
-onClicked:pageStack.animatorPush("private/LicensePage.qml",{"appName":appName,"licenses":licenses,"attributions":attributions,"mainSources":sourcesUrl,"mainHomepage":homepageUrl})
+onClicked:pageStack.animatorPush("private/LicensePage.qml",{"appName":appName,"licenses":licenses,"attributions":attributions,"mainSources":sourcesUrl,"mainHomepage":homepageUrl,"allowDownloadingLicenses":allowDownloadingLicenses})
 text:enabled===false?"This component has been improperly configured. Please report this bug.":((licenses[0].name!==""&&licenses[0].error!==true)?licenses[0].name:licenses[0].spdxId)
 smallPrint:licenses[0].customShortText
 showMoreLabel:qsTranslate("Opal.About","show license(s)","",licenses.length+attributions.length)
