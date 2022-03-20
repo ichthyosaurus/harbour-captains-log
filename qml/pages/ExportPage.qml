@@ -23,10 +23,10 @@ import Sailfish.Silica 1.0
 
 Dialog {
     id: exportDialog
-    property string homePath: StandardPaths.home
+    property string homePath: StandardPaths.documents  // Sailjail permission required
     property string extension: "txt"
 
-    property string defaultFileName: "logbook_export_"+String(new Date().getTime())
+    property string defaultFileName: "logbook_export_" + String(new Date().getTime())
 
     Column {
         width: parent.width
