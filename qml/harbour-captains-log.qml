@@ -210,13 +210,24 @@ ApplicationWindow
         Component.onCompleted: {
             // Add the directory of this .qml file to the search path
             addImportPath(Qt.resolvedUrl('.'))
-            importModule("diary", function() { console.log("diary.py loaded") })
-            ready = true
+            importModule("diary", function() {
+                console.log("diary.py loaded")
 
-            // Load the model for the first time.
-            // If the app is locked and unlocked, the model will be reloaded
-            // in onUnlockedChanged.
-            loadModel()
+                py.call("diary.initialize",
+                        [StandardPaths.data, DB_DATA_FILE, DB_VERSION_FILE],
+                        function(success) {
+                            if (success) {
+                                // Load the model for the first time.
+                                // If the app is locked and unlocked, the model will be reloaded
+                                // in onUnlockedChanged.
+                                loadModel()
+                                ready = true
+                            } else {
+                                // TODO improve error reporting
+                                console.log('[FATAL] failed to initialize backend')
+                            }
+                        })
+            })
         }
     }
 
