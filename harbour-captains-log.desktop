@@ -1,7 +1,7 @@
 # This file is part of Captain's Log.
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2020 Gabriel Berkigt
-# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
@@ -16,6 +16,11 @@ Name=Captain's Log
 # should be the limit. If your language uses a different script than Latin,
 # please test it before submitting your translation.
 Name[de]=Captain's Log
+
+[X-Sailjail]
+Permissions=Documents
+OrganizationName=harbour-captains-log
+ApplicationName=harbour-captains-log
 
 [X-HarbourBackup]
 BackupPathList=.local/share/harbour-captains-log/
