@@ -1,21 +1,22 @@
 //@ This file is part of opal-about.
 //@ https://github.com/Pretty-SFOS/opal-about
-//@ SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import".."
 Page{id:root
-property list<License>licenses
+property Attribution mainAttribution
 property list<Attribution>attributions
 property bool enableSourceHint:true
 property alias pageDescription:pageHeader.description
+property bool allowDownloadingLicenses:false
+property list<License>licenses
 property string appName
 property string mainSources
 property string mainHomepage
-property bool allowDownloadingLicenses:false
 allowedOrientations:Orientation.All
-function _downloadLicenses(){for(var lic in licenses){licenses[lic].__online=true
+function _downloadLicenses(){for(var lic in mainAttribution.licenses){mainAttribution.licenses[lic].__online=true
 }for(var attr in attributions){for(var lic in attributions[attr].licenses){attributions[attr].licenses[lic].__online=true
 }}}SilicaFlickable{anchors.fill:parent
 contentHeight:column.height+Theme.horizontalPageMargin
@@ -27,8 +28,8 @@ onClicked:_downloadLicenses()
 width:parent.width
 spacing:Theme.paddingMedium
 PageHeader{id:pageHeader
-title:qsTranslate("Opal.About","License(s)","",licenses.length+attributions.length)
-description:appName
+title:root.mainAttribution.licenses.length+attributions.length===0?qsTranslate("Opal.About","Details"):qsTranslate("Opal.About","License(s)","",root.mainAttribution.licenses.length+attributions.length)
+description:mainAttribution.name
 }Label{visible:enableSourceHint
 width:parent.width-2*Theme.horizontalPageMargin
 height:visible?implicitHeight+Theme.paddingLarge:0
@@ -38,18 +39,21 @@ wrapMode:Text.Wrap
 font.pixelSize:Theme.fontSizeExtraSmall
 color:Theme.highlightColor
 text:qsTranslate("Opal.About","Note: please check the source code for most accurate information.")
-}LicenseListPart{visible:root.licenses.length>0
-title:appName
-headerVisible:appName!==""&&root.attributions.length>0
-licenses:root.licenses
-initiallyExpanded:root.licenses.length===1&&root.attributions.length===0
-homepage:mainHomepage
-sources:mainSources
+}LicenseListPart{visible:root.mainAttribution.licenses.length>0||root.mainAttribution.__effectiveEntries.length>0||root.mainAttribution.description!==""
+title:root.mainAttribution.name
+headerVisible:root.mainAttribution.name!==""&&root.attributions.length>0
+licenses:root.mainAttribution.licenses
+extraTexts:root.mainAttribution.__effectiveEntries
+description:root.mainAttribution.description
+initiallyExpanded:root.mainAttribution.licenses.length===1&&root.attributions.length===0
+homepage:root.mainAttribution.homepage
+sources:root.mainAttribution.sources
 }Repeater{model:attributions
 delegate:LicenseListPart{title:modelData.name
 headerVisible:title!==""&&pageDescription!==title
 licenses:modelData.licenses
 extraTexts:modelData.__effectiveEntries
+description:modelData.description
 initiallyExpanded:root.licenses.length===0&&root.attributions.length===1&&root.attributions[0].licenses.length===1
 homepage:modelData.homepage
 sources:modelData.sources

@@ -23,7 +23,7 @@
  */
 
 import QtQuick 2.0
-import Sailfish.Silica 1.0
+//import Sailfish.Silica 1.0
 import Opal.About 1.0
 
 AboutPageBase {
@@ -52,13 +52,7 @@ AboutPageBase {
             licenses: License { spdxId: "GPL-2.0-or-later" }
             sources: "https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
         },
-        Attribution {
-            name: "Opal.About"
-            entries: "2018-2022 Mirian Margiani"
-            licenses: License { spdxId: "GPL-3.0-or-later"}
-            sources: "https://github.com/Pretty-SFOS/opal-about"
-            homepage: "https://github.com/Pretty-SFOS/opal"
-        }
+        OpalAboutAttribution { }
     ]
 
     contributionSections: [
