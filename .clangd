@@ -1,5 +1,9 @@
 # https://clangd.llvm.org/config
 # kate: syntax YAML
+#
+# This file is part of harbour-captains-log.
+# SPDX-FileCopyrightText: 2022  Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 CompileFlags:
     Add:
