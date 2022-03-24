@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="fi_FI" sourcelanguage="en">
 <context>
     <name>AboutPage</name>
     <message>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitys</translation>
     </message>
     <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksinkertainen päiväkirjasovellus ajatustesi kirjoittamiseksi muistiin.</translation>
     </message>
     <message>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohjelmointi</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Kääntäjät</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruotsi</translation>
     </message>
     <message>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiina</translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Saksa</translation>
     </message>
     <message>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Suomi</translation>
     </message>
 </context>
 <context>
     <name>ChangePinPage</name>
     <message>
         <source>Saved your protection code.</source>
-        <translation type="unfinished"></translation>
+        <translation>Suojakoodi tallennettu.</translation>
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Anna vanha suojakoodisi</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Anna uusi suojakoodi</translation>
     </message>
 </context>
 <context>
@@ -56,514 +56,516 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valitse</translation>
     </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>mieliala: %1</translation>
     </message>
     <message>
         <source>Edit: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa: %1</translation>
     </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie tietosi</translation>
     </message>
     <message>
         <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
+        <translation>Anna tiedostonimi...</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostonimi</translation>
     </message>
     <message>
         <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna tiedot muodossa</translation>
     </message>
     <message>
         <source>Select file type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse tiedostotyyppe:</translation>
     </message>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>Pelkkä teksti</translation>
     </message>
     <message>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilkuin erotetut arvot (CSV)</translation>
     </message>
     <message>
         <source>Plain Markdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown-teksti</translation>
     </message>
     <message>
         <source>Markdown for Pandoc</source>
-        <translation type="unfinished"></translation>
+        <translation>Pandoc Markdown</translation>
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>ei koskaan</translation>
     </message>
     <message>
         <source>Created: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Luotu: {}</translation>
     </message>
     <message>
         <source>Changed: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Muutettu: {}</translation>
     </message>
     <message>
         <source>changed: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>muutettu: {}</translation>
     </message>
     <message>
         <source>Title: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Otsikko: {}</translation>
     </message>
     <message>
         <source>Entry:
 {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoitus: {}</translation>
     </message>
     <message>
         <source>Hashtags: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Tagit: {}</translation>
     </message>
     <message>
         <source>Bookmark: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjanmerkit: {}</translation>
     </message>
     <message>
         <source>Mood: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Mieliala: {}</translation>
     </message>
     <message>
         <source>Diary from {} until {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Päiväkirja välillä {} - {}</translation>
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedot viety tiedostoon %1</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>kyllä</translation>
     </message>
     <message>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>ei</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Haku</translation>
     </message>
     <message>
         <source>Add new entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää uusi kirjoitus</translation>
     </message>
     <message>
         <source>Settings and Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset ja vienti</translation>
     </message>
     <message>
         <source>No entries yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei kirjoituksia</translation>
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää kirjoitus pyyhkäisemällä oikealle</translation>
     </message>
 </context>
 <context>
     <name>Opal.About</name>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versio %1</translation>
     </message>
     <message>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Versio %1 (%2)</translation>
     </message>
     <message>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitys</translation>
     </message>
     <message>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>näytä osallistujat</translation>
     </message>
     <message>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>Kotisivu</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännökset</translation>
     </message>
     <message>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähdekoodi</translation>
     </message>
     <message>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Lahjoitukset</translation>
     </message>
     <message>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisenssi</translation>
     </message>
     <message numerus="yes">
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>näytä lisenssi</numerusform>
+            <numerusform>näytä lisenssit</numerusform>
         </translation>
     </message>
     <message>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>näytä tiedot</translation>
     </message>
     <message>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Osallistujat</translation>
     </message>
     <message>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiitokset</translation>
     </message>
     <message>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiitos!</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedot</translation>
     </message>
     <message>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Ulkoinen linkki</translation>
     </message>
     <message>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa selaimessa</translation>
     </message>
     <message>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioitu leikepöydälle: %1</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi leiikepöydälle</translation>
     </message>
     <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisätietoja: &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataa lisenssitekstit</translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lisenssi</numerusform>
+            <numerusform>Lisenssit</numerusform>
         </translation>
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Huom: Tarkimman tiedon löydät suoraan lähdekoodista.</translation>
     </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jos haluat tukea työtäni, voit ostaa minulle kupin kahvia.</translation>
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Voit tukea tätä projektia joko osallistumalla koodin kehittämiseen, tai tekemällä lahjoituksen johonkin seuraavista palveluista.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Koodipäivityksesi ja käännöksesi ovat mitä tervetulleimpia.</translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
         <source>Please enter your security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Anna suojakoodisi</translation>
     </message>
     <message>
         <source>please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>yritä uudelleen</translation>
     </message>
 </context>
 <context>
     <name>ReadPage</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa</translation>
     </message>
     <message>
         <source>mood:</source>
-        <translation type="unfinished"></translation>
+        <translation>mieliala:</translation>
     </message>
     <message>
         <source>changed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>muokattu: %1</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Haku</translation>
     </message>
     <message>
         <source>Filter your results</source>
-        <translation type="unfinished"></translation>
+        <translation>Suodata tulokset</translation>
     </message>
     <message>
         <source>Search by:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mistä etsitään:</translation>
     </message>
     <message>
         <source>Creation date</source>
-        <translation type="unfinished"></translation>
+        <translation>Luontipäivä</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjanmerkit</translation>
     </message>
     <message>
         <source>Hashtag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnisteet</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Mieliala</translation>
     </message>
     <message>
         <source>Filter results by mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Suodata tulokset mielialan mukaan</translation>
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita hakuteksti tähän...</translation>
     </message>
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
-        <translation type="unfinished"></translation>
+        <translation>Suodatin:</translation>
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Otsikko ja kirjoitus</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei kirjoituksia</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksikään kirjoitus ei vastaa hakuehtoja.</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Alkaen</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Päättyen</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <source>activate code protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä suojakoodia</translation>
     </message>
     <message>
         <source>Set Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta koodi</translation>
     </message>
     <message>
         <source>Change Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaihda koodi</translation>
     </message>
     <message>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoturva</translation>
     </message>
     <message>
         <source>Export features</source>
-        <translation type="unfinished"></translation>
+        <translation>Vientitoiminnot</translation>
     </message>
     <message>
         <source>Export data</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie tiedot</translation>
     </message>
 </context>
 <context>
     <name>WritePage</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna</translation>
     </message>
     <message>
         <source>New Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Uusi kirjoitus</translation>
     </message>
     <message>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Otsikko</translation>
     </message>
     <message>
         <source>Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoitus</translation>
     </message>
     <message>
         <source>#Hashtags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnisteet</translation>
     </message>
     <message>
         <source>Your mood:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mielialasi:</translation>
     </message>
     <message>
         <source>Edit Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa kirjoitusta</translation>
     </message>
     <message>
         <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Miltä sinusta tuntui?</translation>
     </message>
     <message>
         <source>How do you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Miltä sinusta tuntuu?</translation>
     </message>
     <message>
         <source>Add a title</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää otsikko</translation>
     </message>
     <message>
         <source>What do you want to say?</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitä haluat kertoa?</translation>
     </message>
     <message>
         <source>Entry...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoitus...</translation>
     </message>
     <message>
         <source>Hashtags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnisteet</translation>
     </message>
     <message>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Luotu:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimeksi muokattu:</translation>
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>ei koskaan</translation>
     </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
     <message>
         <source>hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>fantastic</source>
-        <translation type="unfinished"></translation>
+        <translation>mahtava</translation>
     </message>
     <message>
         <source>good</source>
-        <translation type="unfinished"></translation>
+        <translation>hyvä</translation>
     </message>
     <message>
         <source>okay</source>
-        <translation type="unfinished"></translation>
+        <translation>okei</translation>
     </message>
     <message>
         <source>bad</source>
-        <translation type="unfinished"></translation>
+        <translation>huono</translation>
     </message>
     <message>
         <source>horrible</source>
-        <translation type="unfinished"></translation>
+        <translation>kamala</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;kello&apos; hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>d MMM yyyy</translation>
     </message>
     <message>
         <source>not okay</source>
-        <translation type="unfinished"></translation>
+        <translation>ei hyvä</translation>
     </message>
     <message>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2)</translation>
     </message>
     <message>
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Lokikirja</translation>
     </message>
 </context>
 </TS>
