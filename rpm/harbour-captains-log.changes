@@ -6,6 +6,17 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Thu Mar 24 2022 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.1.0-1
+- translations: added Chinese, updated Swedish
+- added support for My Backup
+- added a Sailjail profile (only permission is "Documents" for exporting)
+- fixed some highlight colors
+- fixed data being saved outside of the new sandbox
+- fixed settings being saved in the wrong location (automatically migrated)
+- changed export output directory from "/home/<user>" to "/home/<user>/Documents"
+- updated About page (now using Opal.About)
+- reduced overall package size
+
 * Thu Nov 12 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.0.1-1
 - fixed a serious bug where entries could not be opened or edited
 
