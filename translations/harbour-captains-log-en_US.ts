@@ -31,6 +31,10 @@
         <source>German</source>
         <translation>German</translation>
     </message>
+    <message>
+        <source>Finnish</source>
+        <translation>Finnish</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
