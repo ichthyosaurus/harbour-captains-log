@@ -74,7 +74,7 @@ AboutPageBase {
             groups: [
                 ContributionGroup { title: qsTr("Swedish"); entries: ["Åke Engelbrektson"]},
                 ContributionGroup { title: qsTr("Chinese"); entries: ["dashinfantry"]},
-                ContributionGroup { title: qsTr("German"); entries: ["Gabriel Berkigt", "Mirian Margiani"]}
+                ContributionGroup { title: qsTr("German"); entries: ["Gabriel Berkigt", "Mirian Margiani"]},
                 ContributionGroup { title: qsTr("Finnish"); entries: ["Matti Viljanen"]}
 
                 // ContributionGroup { title: qsTr("English"); entries: ["Gabriel Berkigt", "Mirian Margiani"]}
