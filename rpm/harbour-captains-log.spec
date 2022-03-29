@@ -6,8 +6,8 @@
 Name:       harbour-captains-log
 
 # >> macros
-%define __provides_exclude_from ^%{_datadir}/.*$
 # << macros
+%define __provides_exclude_from ^%{_datadir}/.*$
 
 Summary:    Simple Diary application
 Version:    2.1.0
