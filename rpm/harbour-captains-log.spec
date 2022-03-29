@@ -14,7 +14,7 @@ Version:    2.1.0
 Release:    1
 Group:      Qt/Qt
 License:    GPL-3.0-or-later
-URL:        https://github.com/AlphaX2/Captains-Log-Sailfish
+URL:        https://github.com/ichthyosaurus/harbour-captains-log
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-captains-log.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
