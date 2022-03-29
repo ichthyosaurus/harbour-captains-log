@@ -33,7 +33,7 @@
     </message>
     <message>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Finska</translation>
     </message>
 </context>
 <context>
