@@ -218,7 +218,7 @@
     </message>
     <message>
         <source>show contributors</source>
-        <translation>visa bidragsgivare</translation>
+        <translation>visa medverkande</translation>
     </message>
     <message>
         <source>Homepage</source>
@@ -249,11 +249,11 @@
     </message>
     <message>
         <source>show details</source>
-        <translation>visa detaljer</translation>
+        <translation>visa detaljerat</translation>
     </message>
     <message>
         <source>Contributors</source>
-        <translation>Deltagare</translation>
+        <translation>Medverkande</translation>
     </message>
     <message>
         <source>Acknowledgements</source>
@@ -265,7 +265,7 @@
     </message>
     <message>
         <source>Details</source>
-        <translation>Detaljerad information</translation>
+        <translation>Detaljerat</translation>
     </message>
     <message>
         <source>External Link</source>
@@ -273,7 +273,7 @@
     </message>
     <message>
         <source>Open in browser</source>
-        <translation>Öppna i webbläsaren</translation>
+        <translation>Öppna i webbläsare</translation>
     </message>
     <message>
         <source>Copied to clipboard: %1</source>
@@ -300,7 +300,7 @@
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>OBS! Kontrollera källkoden för mer information.</translation>
+        <translation>Notis: Kontrollera källkoden för mest korrekt information.</translation>
     </message>
 </context>
 <context>
@@ -311,11 +311,11 @@
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Du kan stödja det här projektet genom kodbidrag eller genom att donera med någon av dessa tjänster.</translation>
+        <translation>Du kan stödja projektet genom kodbidrag eller donation med hjälp av dessa tjänster.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Ditt bidrag till översättningar eller kod är mycket välkomna.</translation>
+        <translation>Kodbidrag eller översättningar är väldigt välkommet.</translation>
     </message>
 </context>
 <context>
