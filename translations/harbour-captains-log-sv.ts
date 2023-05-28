@@ -195,7 +195,11 @@
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation>Svep åt vänster för att lägga till poster</translation>
+        <translation type="vanished">Svep åt vänster för att lägga till poster</translation>
+    </message>
+    <message>
+        <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

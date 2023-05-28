@@ -85,7 +85,7 @@ Page {
             id: placeholder
             enabled: appWindow.initialLoadingDone && (!busy.running && entriesModel.count === 0)
             text: qsTr("No entries yet")
-            hintText: qsTr("Swipe right to add entries")
+            hintText: qsTr("Swipe left to add entries")
         }
     }
 

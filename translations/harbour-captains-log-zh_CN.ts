@@ -195,7 +195,11 @@
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation>右滑以添加事项</translation>
+        <translation type="vanished">右滑以添加事项</translation>
+    </message>
+    <message>
+        <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

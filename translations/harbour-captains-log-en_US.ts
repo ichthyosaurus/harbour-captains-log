@@ -195,7 +195,11 @@
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation>Swipe right to add entries</translation>
+        <translation type="vanished">Swipe right to add entries</translation>
+    </message>
+    <message>
+        <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

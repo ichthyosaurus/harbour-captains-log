@@ -195,7 +195,11 @@
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation>Wischen Sie nach rechts, um Einträge hinzuzufügen</translation>
+        <translation type="vanished">Wischen Sie nach rechts, um Einträge hinzuzufügen</translation>
+    </message>
+    <message>
+        <source>Swipe left to add entries</source>
+        <translation>Wischen Sie nach links, um Einträge hinzuzufügen</translation>
     </message>
 </context>
 <context>

@@ -194,7 +194,11 @@
     </message>
     <message>
         <source>Swipe right to add entries</source>
-        <translation>Lisää kirjoitus pyyhkäisemällä oikealle</translation>
+        <translation type="vanished">Lisää kirjoitus pyyhkäisemällä oikealle</translation>
+    </message>
+    <message>
+        <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
