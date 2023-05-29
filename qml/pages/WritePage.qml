@@ -2,7 +2,7 @@
  * This file is part of Captain's Log.
  *
  * SPDX-FileCopyrightText: 2020 Gabriel Berkigt
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -53,7 +53,7 @@ Dialog {
     property string modifyTz: ""
     property int rowid: -1
     property int index: -1
-    property var model: ""
+    property var model: null
 
     acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
@@ -70,6 +70,43 @@ Dialog {
         } else {
             addEntry(createDate, mood, title_text, preview, entry, hashs);
         }
+    }
+
+    onDone: {
+        if (result != DialogResult.Rejected && result != DialogResult.None) {
+            return
+        }
+
+        if (title == "" && entry == "" && hashtags == "") {
+            return
+        }
+
+        console.log("ABORTED1")
+        appWindow._currentlyEditedEntry.createDate = createDate
+        appWindow._currentlyEditedEntry.modifyDate = modifyDate
+        appWindow._currentlyEditedEntry.title      = title
+        appWindow._currentlyEditedEntry.entry      = entry
+        appWindow._currentlyEditedEntry.hashtags   = hashtags
+        appWindow._currentlyEditedEntry.mood       = mood
+        appWindow._currentlyEditedEntry.createTz   = createTz
+        appWindow._currentlyEditedEntry.modifyTz   = modifyTz
+        appWindow._currentlyEditedEntry.rowid      = rowid
+        appWindow._currentlyEditedEntry.index      = index
+        appWindow._currentlyEditedEntry.model      = model
+
+        try {
+            var page = pageStack.previousPage(page)
+        } catch(error) {
+            page = appWindow
+        }
+
+        if (editing) {
+            remorseCancelWriting(page || appWindow, qsTr("Discarded all changes"))
+        } else {
+            console.log("ABORTED2")
+            remorseCancelWriting(page || appWindow, qsTr("Discarded the entry"))
+        }
+        console.log("ABORTED3")
     }
 
     SilicaFlickable {

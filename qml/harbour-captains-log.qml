@@ -2,7 +2,7 @@
  * This file is part of Captain's Log.
  *
  * SPDX-FileCopyrightText: 2020 Gabriel Berkigt
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -35,6 +35,7 @@ ApplicationWindow
     initialPage: null
 
     property ListModel entriesModel: ListModel { }
+    readonly property var _currentlyEditedEntry: ({})
 
     // constants
     // -- important: always use formatDate(...) to format date strings
@@ -85,6 +86,26 @@ ApplicationWindow
         model.setProperty(index, 'bookmark', setTrue)
         entryBookmarkToggled(rowid, setTrue)
         if (model !== entriesModel) _scheduleReload = true;
+    }
+
+    function _reopenEditDialog() {
+        pageStack.push(Qt.resolvedUrl("pages/WritePage.qml"), _currentlyEditedEntry)
+    }
+
+    function remorseCancelWriting(parentPage, cancelMessage) {
+        // This function requires valid data in _currentlyEditedEntry.
+        // Populate the cache object before calling this function.
+
+        var remorse = Remorse.popupAction(
+                    parentPage, cancelMessage,
+                    function(){}, 5000)
+
+        var callback = function () {
+            remorse.canceled.disconnect(callback)
+            _reopenEditDialog()
+        }
+
+        remorse.canceled.connect(callback)
     }
 
     function updateEntry(model, index, mood, title, preview, entry, hashs, rowid) {
