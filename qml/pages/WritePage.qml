@@ -40,10 +40,10 @@ Dialog {
     }
 
     property string currentDate: new Date().toLocaleString(Qt.locale(), fullDateTimeFormat);
-    property string dbCurrentDate: new Date().toLocaleString(Qt.locale(), dbDateFormat);
+    property string dbCurrentDate: Qt.formatDateTime(new Date(), dbDateFormat)
     property bool editing: rowid > -1
 
-    property string createDate: ""
+    property string createDate: dbCurrentDate
     property string modifyDate: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
@@ -121,29 +121,15 @@ Dialog {
                 acceptText: qsTr("Save")
             }
 
-            Column {
-                id: datesColumn
-                visible: editing
-                opacity: Theme.opacityHigh
-                anchors { left: parent.left; leftMargin: Theme.horizontalPageMargin }
-
-                Row {
-                    spacing: Theme.paddingSmall
-                    Label { color: Theme.highlightColor; text: qsTr("Created:") }
-                    Label { color: Theme.primaryColor; text: formatDate(createDate, fullDateTimeFormat, createTz) }
-                }
-                Row {
-                    spacing: Theme.paddingSmall
-                    Label { color: Theme.secondaryHighlightColor; text: qsTr("Last changed:") }
-                    Label { color: Theme.secondaryColor; text: modifyDate === "" ? qsTr("never") : formatDate(modifyDate, fullDateTimeFormat, modifyTz) }
-                }
-            }
-
-            Label {
-                anchors { left: parent.left; leftMargin: Theme.horizontalPageMargin }
-                visible: !datesColumn.visible
-                color: Theme.highlightColor
-                text: currentDate
+            DateTimePickerCombo {
+                label: "Created"
+                date: createDate
+                timeZone: createTz
+                description: modifyDate !== "" ?
+                                 qsTr("Last edited: %1").arg(formatDate(
+                                     modifyDate, fullDateTimeFormat, modifyTz, qsTr("never"))) :
+                                 ""
+                onDateChanged: createDate = date
             }
 
             ComboBox {

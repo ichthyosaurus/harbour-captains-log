@@ -72,8 +72,13 @@ ApplicationWindow
         return new Date(parseInt(date[0]), parseInt(date[1])-1, parseInt(date[2]), parseInt(time[0]), parseInt(time[1]), parseInt(time[2]));
     }
 
-    function formatDate(dbDateString, format, zone) {
+    function formatDate(dbDateString, format, zone, alternativeIfEmpty) {
+        if (dbDateString === "" && alternativeIfEmpty !== "" && !!alternativeIfEmpty) {
+            return alternativeIfEmpty
+        }
+
         var date = parseDate(dbDateString).toLocaleString(Qt.locale(), format)
+
         if (zone !== undefined && zone !== "" && zone !== timezone) {
             return qsTr("%1 (%2)", "1: date, 2: time zone info").arg(date).arg(zone)
         }
