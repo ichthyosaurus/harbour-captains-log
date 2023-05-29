@@ -124,7 +124,7 @@ Page {
                 Label {
                     id: moodLabel
                     anchors { verticalCenter: favStar.verticalCenter; left: parent.left; leftMargin: Theme.horizontalPageMargin }
-                    color: Theme.highlightColor; text: qsTr("mood:")
+                    color: Theme.highlightColor; text: qsTr("Mood")
                 }
 
                 Label {

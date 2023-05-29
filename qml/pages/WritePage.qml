@@ -137,7 +137,7 @@ Dialog {
                 value: moodTexts[mood]
                 width: parent.width
                 description: editing ? qsTr("How did you feel?") : qsTr("How do you feel?")
-                label: qsTr("Your mood:")
+                label: qsTr("Your mood")
 
                 menu: MoodMenu {
                     id: moodMenu
