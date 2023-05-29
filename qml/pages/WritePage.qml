@@ -80,7 +80,6 @@ Dialog {
             return
         }
 
-        console.log("ABORTED1")
         appWindow._currentlyEditedEntry.createDate = createDate
         appWindow._currentlyEditedEntry.modifyDate = modifyDate
         appWindow._currentlyEditedEntry.title      = title
@@ -102,10 +101,8 @@ Dialog {
         if (editing) {
             remorseCancelWriting(page || appWindow, qsTr("Discarded all changes"))
         } else {
-            console.log("ABORTED2")
             remorseCancelWriting(page || appWindow, qsTr("Discarded the entry"))
         }
-        console.log("ABORTED3")
     }
 
     SilicaFlickable {
