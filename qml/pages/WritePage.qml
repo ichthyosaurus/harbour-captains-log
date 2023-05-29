@@ -55,7 +55,6 @@ Dialog {
     property int index: -1
     property var model: null
 
-    acceptDestination: Qt.resolvedUrl("FirstPage.qml")
     onAccepted: {
         var createDate = dbCurrentDate
         var mood = page.mood
