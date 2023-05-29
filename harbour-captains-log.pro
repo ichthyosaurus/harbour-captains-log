@@ -70,3 +70,6 @@ QML_IMPORT_PATH += qml/modules
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
 include(libs/opal-cached-defines.pri)
+
+# Build submodules
+include(libs/SortFilterProxyModel/SortFilterProxyModel.pri)
