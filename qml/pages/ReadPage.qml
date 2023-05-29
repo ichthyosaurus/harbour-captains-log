@@ -49,6 +49,8 @@ Page {
         }
         onEntryUpdated: {
             if (rowid !== page.rowid) return
+            page.createDate = createDate
+            page.createTz = createTz
             page.modifyDate = changeDate
             page.mood = mood
             page.title = title

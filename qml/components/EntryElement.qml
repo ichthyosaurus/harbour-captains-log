@@ -61,7 +61,7 @@ ListItem {
             selectedIndex: mood
             onSelectedIndexChanged: {
                 if (selectedIndex == mood) return; // only update if it changed
-                updateEntry(realModel, index, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
+                updateEntry(realModel, index, create_date, create_tz, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
             }
         }
     }

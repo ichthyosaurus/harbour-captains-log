@@ -56,7 +56,6 @@ Dialog {
     property var model: null
 
     onAccepted: {
-        var createDate = dbCurrentDate
         var mood = page.mood
         var title_text = titleField.text.trim()
         // regular expression to kick out all newline chars in preview
@@ -65,9 +64,10 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, mood, title_text, preview, entry, hashs, rowid);
+            console.log("CRT", createDate, createTz)
+            updateEntry(model, index, createDate, createTz, mood, title_text, preview, entry, hashs, rowid);
         } else {
-            addEntry(createDate, mood, title_text, preview, entry, hashs);
+            addEntry(dbCurrentDate, mood, title_text, preview, entry, hashs);
         }
     }
 

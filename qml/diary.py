@@ -243,10 +243,12 @@ def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
     return entry
 
 
-def update_entry(modify_date, mood, title, preview, entry, hashs, timezone, rowid):
+def update_entry(create_date, create_tz, modify_date, mood, title, preview, entry, hashs, timezone, rowid):
     """ Updates an entry in the database. """
     DIARY.cursor.execute("""UPDATE diary
-                            SET modify_date = ?,
+                            SET create_date = ?,
+                                create_tz = ?,
+                                modify_date = ?,
                                 mood = ?,
                                 title = ?,
                                 preview = ?,
@@ -255,7 +257,7 @@ def update_entry(modify_date, mood, title, preview, entry, hashs, timezone, rowi
                                 modify_tz = ?
                             WHERE
                                 rowid = ?;""",
-                         (modify_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone, rowid))
+                         (create_date, create_tz, modify_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone, rowid))
     DIARY.conn.commit()
 
 

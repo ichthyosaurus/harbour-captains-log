@@ -113,16 +113,17 @@ ApplicationWindow
         remorse.canceled.connect(callback)
     }
 
-    function updateEntry(model, index, mood, title, preview, entry, hashs, rowid) {
+    function updateEntry(model, index, createDate, createTz, mood, title, preview, entry, hashs, rowid) {
         var changeDate = new Date().toLocaleString(Qt.locale(), dbDateFormat)
         var modifyTz = timezone
 
         model.set(index, { "modify_date": changeDate, "modify_tz": modifyTz, "mood": mood, "title": title,
-                             "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid })
+                             "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid,
+                             "create_date": createDate, "create_tz": createTz })
 
-        py.call("diary.update_entry", [changeDate, mood, title, preview, entry, hashs, modifyTz, rowid], function() {
+        py.call("diary.update_entry", [createDate, createTz, changeDate, mood, title, preview, entry, hashs, modifyTz, rowid], function() {
             console.log("Updated entry in database")
-            entryUpdated(changeDate, mood, title, preview, entry, hashs, modifyTz, rowid)
+            entryUpdated(createDate, createTz, changeDate, mood, title, preview, entry, hashs, modifyTz, rowid)
             if (model !== entriesModel) _scheduleReload = true;
         })
     }
@@ -162,7 +163,7 @@ ApplicationWindow
 
     signal loadingStarted()
     signal loadingFinished()
-    signal entryUpdated(var changeDate, var mood, var title, var preview, var entry, var hashs, var modifyTz, var rowid)
+    signal entryUpdated(var createDate, var createTz, var changeDate, var mood, var title, var preview, var entry, var hashs, var modifyTz, var rowid)
     signal entryBookmarkToggled(var rowid, var isBookmark)
     // -----------------------
 
