@@ -7,10 +7,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 # Captain's Log for Sailfish OS
 
-<!-- [![Translations](https://hosted.weblate.org/widgets/harbour-captains-log/-/translations/svg-badge.svg)](https://hosted.weblate.org/projects/harbour-captains-log/translations/) -->
+[![Translations](https://hosted.weblate.org/widgets/harbour-captains-log/-/translations/svg-badge.svg)](https://hosted.weblate.org/projects/harbour-captains-log/translations/)
 [![Source code license](https://img.shields.io/badge/source_code-GPL--3.0--or--later-yellowdarkgreen)](https://github.com/ichthyosaurus/harbour-captains-log/tree/main/LICENSES)
 [![REUSE status](https://api.reuse.software/badge/github.com/ichthyosaurus/harbour-captains-log)](https://api.reuse.software/info/github.com/ichthyosaurus/harbour-captains-log)
-[![Development status](https://img.shields.io/badge/development-active-blue)](https://github.com/ichthyosaurus/harbour-captains-log)
+[![Development status](https://img.shields.io/badge/development-stable-blue)](https://github.com/ichthyosaurus/harbour-captains-log)
 <!-- [![Liberapay donations](https://img.shields.io/liberapay/receives/ichthyosaurus)](https://liberapay.com/ichthyosaurus) -->
 
 Captain's Log is a simple diary application for keeping track of your thoughts.
@@ -55,9 +55,11 @@ in the Jolla store.
 
 It would be wonderful if the app could be translated in as many languages as possible!
 
-If you just found a minor problem, you can
-<!--[leave a comment in the forum](https://forum.sailfishos.org/t/captains-log-support-and-feedback-thread/4566)
-or--> [open an issue](https://github.com/ichthyosaurus/harbour-captains-log/issues/new).
+Translations are managed using [Weblate](https://hosted.weblate.org/projects/harbour-captains-log).
+Please prefer this over pull request (which are still welcome, of course).
+If you just found a minor problem, you can also
+[leave a comment in the forum](https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753)
+or [open an issue](https://github.com/ichthyosaurus/harbour-captains-log/issues/new).
 
 Please include the following details:
 
@@ -93,7 +95,7 @@ Please do not forget to add yourself to the list of contributors in
 
 ## License
 
-> Copyright (C) 2020-2022  Mirian Margiani
+> Copyright (C) 2020-2023  Mirian Margiani
 > Copyright (C) 2020  AlphaX2
 
 Captain's Log is Free Software released under the terms of the

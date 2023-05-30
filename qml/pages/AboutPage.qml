@@ -40,7 +40,7 @@ A.AboutPageBase {
     mainAttributions: ["2020-2023 Mirian Margiani", "2020 Gabriel Berkigt"]
     sourcesUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
     homepageUrl: "https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753"
-    translationsUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
+    translationsUrl: "https://hosted.weblate.org/projects/harbour-captains-log/translations"
 
     licenses: A.License { spdxId: "GPL-3.0-or-later" }
 
