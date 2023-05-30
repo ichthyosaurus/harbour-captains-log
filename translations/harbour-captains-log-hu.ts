@@ -120,9 +120,5 @@
 </context>
 <context>
     <name>harbour-captains-log</name>
-    <message>
-        <source>hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>
