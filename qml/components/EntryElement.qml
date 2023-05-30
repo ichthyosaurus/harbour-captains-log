@@ -29,7 +29,7 @@ ListItem {
     openMenuOnPressAndHold: false
 
     property bool editable: true
-    property ListModel realModel: model
+    property var realModel: model
 
     property string _previewData: entry //preview
     property bool _hasPreview: _previewData !== ""

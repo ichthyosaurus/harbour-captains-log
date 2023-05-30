@@ -24,6 +24,7 @@ import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 import Nemo.Notifications 1.0
 import io.thp.pyotherside 1.5
+import SortFilterProxyModel 0.2
 
 import "pages"
 
@@ -34,8 +35,10 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     initialPage: null
 
-    property ListModel entriesModel: ListModel { }
+    readonly property alias entriesModel: _sortedModel
+    readonly property alias rawModel: _sourceModel
     readonly property alias pinPageComponent: _pinPage
+    property bool loading: true  // only true during startup
     readonly property var _currentlyEditedEntry: ({})
 
     // constants
@@ -58,6 +61,15 @@ ApplicationWindow
         qsTr("horrible")
     ]
     // ---------
+
+    ListModel {
+        id: _sourceModel
+    }
+
+    SortFilterProxyModel {
+        id: _sortedModel
+        sourceModel: _sourceModel
+    }
 
     // global helper functions
     function parseDate(dbDateString) {
@@ -87,11 +99,27 @@ ApplicationWindow
         return date
     }
 
+    function _mappedIndex(model, index) {
+        if (model.hasOwnProperty('mapToSource')) {
+            if (model.sourceModel !== rawModel) {
+                console.error('cannot handle nested SortFilterProxyModel models, ' +
+                              'or models that are not based on rawModel')
+                return -1
+            }
+
+            return model.mapToSource(index)
+        } else if (model === rawModel) {
+            return index
+        } else {
+            console.error('cannot handle', model, '- must use rawModel')
+            return -1
+        }
+    }
+
     function setBookmark(model, index, rowid, setTrue) {
         py.call("diary.update_bookmark", [rowid, setTrue])
-        model.setProperty(index, 'bookmark', setTrue)
+        rawModel.setProperty(_mappedIndex(model, index), 'bookmark', setTrue)
         entryBookmarkToggled(rowid, setTrue)
-        if (model !== entriesModel) _scheduleReload = true;
     }
 
     function _reopenEditDialog() {
@@ -118,71 +146,36 @@ ApplicationWindow
         var changeDate = new Date().toLocaleString(Qt.locale(), dbDateFormat)
         var modifyTz = timezone
 
-        model.set(index, { "modify_date": changeDate, "modify_tz": modifyTz, "mood": mood, "title": title,
-                             "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid,
-                             "create_date": createDate, "create_tz": createTz })
+        rawModel.set(_mappedIndex(model, index), {
+            "modify_date": changeDate, "modify_tz": modifyTz, "mood": mood, "title": title,
+            "preview": preview, "entry": entry, "hashtags": hashs, "rowid": rowid,
+            "create_date": createDate, "create_tz": createTz
+        })
 
         py.call("diary.update_entry", [createDate, createTz, changeDate, mood, title, preview, entry, hashs, modifyTz, rowid], function() {
             console.log("Updated entry in database")
             entryUpdated(createDate, createTz, changeDate, mood, title, preview, entry, hashs, modifyTz, rowid)
-            if (model !== entriesModel) _scheduleReload = true;
         })
     }
 
     function addEntry(createDate, mood, title, preview, entry, hashs) {
         py.call("diary.add_entry", [createDate, mood, title, preview, entry, hashs, timezone], function(entry) {
             console.log("Added entry to database")
-            entriesModel.insert(0, entry);
+            rawModel.insert(0, entry);
         })
     }
 
     function deleteEntry(model, index, rowid) {
         py.call("diary.delete_entry", [rowid])
-        model.remove(index)
-        if (model !== entriesModel) _scheduleReload = true;
+        rawModel.remove(_mappedIndex(model, index))
     }
 
-    function loadModel() {
-        _modelReady = false;
-        _scheduleReload = false;
-        loadingStarted()
-        console.log("loading entries...")
-
-        py.call("diary.read_all_entries", [], function(result) {
-                entriesModel.clear()
-                for(var i=0; i<result.length; i++) {
-                    var item = result[i];
-                    entriesModel.append(item)
-                }
-
-                loadingFinished()
-                _modelReady = true;
-                initialLoadingDone = true;
-            }
-        )
-    }
-
-    signal loadingStarted()
-    signal loadingFinished()
     signal entryUpdated(var createDate, var createTz, var changeDate, var mood, var title, var preview, var entry, var hashs, var modifyTz, var rowid)
     signal entryBookmarkToggled(var rowid, var isBookmark)
     // -----------------------
 
-    property bool initialLoadingDone: false
-    property bool _modelReady: false
-    property bool _scheduleReload: false // schedules the model to be reloaded when FirstPage ist activated
-
     property int _lastNotificationId: 0
     property bool unlocked: config.useCodeProtection ? false : true
-
-    onUnlockedChanged: {
-        if (!unlocked) {
-            entriesModel.clear()
-            _modelReady = false
-        } else if (py.ready && !_modelReady) {
-            loadModel()
-        }
-    }
 
     property ConfigurationGroup config: ConfigurationGroup {
         path: "/apps/harbour-captains-log"
@@ -233,28 +226,46 @@ ApplicationWindow
 
     Python {
         id: py
-        property bool ready: false
+
+        onReceived: {
+            console.log(data)
+        }
+
+        onError: {
+            loading = false
+            console.error("an error occurred in the Python backend, traceback:")
+            console.error(traceback)
+        }
 
         Component.onCompleted: {
-            // Add the directory of this .qml file to the search path
             addImportPath(Qt.resolvedUrl('.'))
-            importModule("diary", function() {
-                console.log("diary.py loaded")
 
-                py.call("diary.initialize",
-                        [StandardPaths.data, DB_DATA_FILE, DB_VERSION_FILE],
-                        function(success) {
-                            if (success) {
-                                // Load the model for the first time.
-                                // If the app is locked and unlocked, the model will be reloaded
-                                // in onUnlockedChanged.
-                                loadModel()
-                                ready = true
-                            } else {
-                                // TODO improve error reporting
-                                console.log('[FATAL] failed to initialize backend')
-                            }
-                        })
+            setHandler('entries', function(result) {
+                if (result.length > 0) loading = false
+
+                for (var i = 0; i < result.length; i++) {
+                    _sourceModel.append(result[i]);
+                }
+
+                console.log("adding", result.length, "item(s) to the list")
+            })
+
+            importModule('diary', function() {
+                console.log("python backend loaded")
+
+                py.call("diary.initialize", [StandardPaths.data,
+                        DB_DATA_FILE, DB_VERSION_FILE], function(success) {
+                    if (!success) {
+                        console.error('failed to initialize backend')
+                        showMessage(qsTr("Error: the database could not be loaded."))
+                        return
+                    }
+
+                    console.log("loading entries...")
+                    py.call('diary.get_entries', [], function(result) {
+                        loading = false
+                    })
+                })
             })
         }
     }

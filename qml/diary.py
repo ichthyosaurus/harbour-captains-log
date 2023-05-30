@@ -2,7 +2,7 @@
 #
 # This file is part of harbour-captains-log.
 # SPDX-FileCopyrightText: 2020 Gabriel Berkigt
-# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
@@ -39,7 +39,6 @@ class Diary:
 
         self.db_path = self._data_path + '/' + db_data_file
         self.schema = self._data_path + '/' + db_version_file
-        self.filtered_entry_list = []
         self.schema_version = "none"
 
         if not os.path.isfile(self.db_path) and os.path.isfile(self.schema):
@@ -213,11 +212,39 @@ def initialize(data_path, db_data_file, db_version_file):
     return False
 
 
-def read_all_entries():
-    """ Read all entries to show them on the main page """
+def _clean_entry_row(row):
+    # default values are only used if database is corrupted
+    return {"create_date": row["create_date"] if row["create_date"] else "",
+            "day": (row["create_date"] if row["create_date"] else "").split(' ')[0],
+            "modify_date": row["modify_date"] if row["modify_date"] else "",
+            "mood": row["mood"] if row["mood"] is not None else 2,  # default to 2=okay
+            "title": (row["title"] if row["title"] else "").strip(),
+            "preview": (row["preview"] if row["preview"] else "").strip(),
+            "entry": (row["entry"] if row["entry"] else "").strip(),
+            "bookmark": True if row["bookmark"] == 1 else False,
+            "hashtags": (row["hashtags"] if row["hashtags"] else "").strip(),
+            "create_tz": row["create_tz"] if row["create_tz"] else "",
+            "modify_tz": row["modify_tz"] if row["modify_tz"] else "",
+            "rowid": row["rowid"]  # rowid cannot be empty
+            }
+
+
+def get_entries():
+    """ Load all entries and ship them to QML """
+
     DIARY.cursor.execute(""" SELECT *, rowid FROM diary ORDER BY rowid DESC; """)
     rows = DIARY.cursor.fetchall()
-    return create_entries_model(rows)
+
+    batch = []
+
+    for i, row in enumerate(rows, 1):
+        batch.append(_clean_entry_row(row))
+
+        if i % 20 == 0:
+            pyotherside.send('entries', batch)
+            batch = []
+
+    pyotherside.send('entries', batch)
 
 
 def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
@@ -323,43 +350,23 @@ def search_mood(mood):
 
 
 #
-# BEGIN QML Model Creation Functions
+# BEGIN Export Functions
 #
 
-def create_entries_model(rows):
-    """ Create the QML ListModel to be shown on main page """
+def _read_all_entries():
+    """ Read all entries to export them """
+    DIARY.cursor.execute(""" SELECT *, rowid FROM diary ORDER BY rowid DESC; """)
+    rows = DIARY.cursor.fetchall()
 
-    DIARY.filtered_entry_list.clear()
+    cleaned_rows = []
 
     for row in rows:
         # default values are only used if database is corrupted
-        entry = {"create_date": row["create_date"] if row["create_date"] else "",
-                 "day": (row["create_date"] if row["create_date"] else "").split(' ')[0],
-                 "modify_date": row["modify_date"] if row["modify_date"] else "",
-                 "mood": row["mood"] if row["mood"] is not None else 2,  # default to 2=okay
-                 "title": (row["title"] if row["title"] else "").strip(),
-                 "preview": (row["preview"] if row["preview"] else "").strip(),
-                 "entry": (row["entry"] if row["entry"] else "").strip(),
-                 "bookmark": True if row["bookmark"] == 1 else False,
-                 "hashtags": (row["hashtags"] if row["hashtags"] else "").strip(),
-                 "create_tz": row["create_tz"] if row["create_tz"] else "",
-                 "modify_tz": row["modify_tz"] if row["modify_tz"] else "",
-                 "rowid": row["rowid"]  # rowid cannot be empty
-                 }
-        DIARY.filtered_entry_list.append(entry)
-    return DIARY.filtered_entry_list
+        entry = _clean_entry_row(row)
+        cleaned_rows.append(entry)
 
+    return cleaned_rows
 
-def get_filtered_entry_list():
-    """ return the latest status of the entries list """
-    return DIARY.filtered_entry_list
-
-# END
-
-
-#
-# BEGIN Export Functions
-#
 
 def export(filename, type, translations):
     """ Export all entries to 'filename' as 'type'.
@@ -369,7 +376,7 @@ def export(filename, type, translations):
     Cf. ExportPage.qml for the main definition.
     """
 
-    entries = read_all_entries()  # get latest state of the database
+    entries = _read_all_entries()  # get latest state of the database
 
     if not entries:
         return  # nothing to export

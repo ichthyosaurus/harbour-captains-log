@@ -27,18 +27,6 @@ import "../components"
 Page {
     id: firstPage
 
-    Connections {
-        target: appWindow
-        onLoadingStarted: {
-            busy.running = true
-            diaryList.visible = false
-        }
-        onLoadingFinished: {
-            busy.running = false
-            diaryList.visible = true
-        }
-    }
-
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
@@ -53,7 +41,6 @@ Page {
             // preload WritePage on PageStack
             pageStack.pushAttached(Qt.resolvedUrl("WritePage.qml"),
                                    {'acceptDestination': Qt.resolvedUrl("FirstPage.qml")})
-            if (_scheduleReload) loadModel()
         }
     }
 
@@ -83,17 +70,22 @@ Page {
         }
 
         ViewPlaceholder {
-            id: placeholder
-            enabled: appWindow.initialLoadingDone && (!busy.running && entriesModel.count === 0)
+            id: busyPlaceholder
+            enabled: appWindow.loading
+            verticalOffset: -diaryList.originY - height
+
+            BusyIndicator {
+                anchors.centerIn: parent
+                running: parent.enabled
+                size: BusyIndicatorSize.Large
+            }
+        }
+
+        ViewPlaceholder {
+            id: emptyPlaceholder
+            enabled: !appWindow.loading && entriesModel.count === 0
             text: qsTr("No entries yet")
             hintText: qsTr("Swipe left to add entries")
         }
-    }
-
-    BusyIndicator {
-        id: busy
-        anchors.centerIn: parent
-        size: BusyIndicatorSize.Large
-        running: false
     }
 }
