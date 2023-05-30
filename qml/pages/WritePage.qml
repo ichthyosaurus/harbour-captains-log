@@ -135,7 +135,17 @@ Dialog {
                 // it is too complicated to ensure entries are properly
                 // sorted, due to timezones and the way entries are
                 // stored in the database.
-                enabled: !editing
+                // enabled: !editing
+
+                // TODO enable with "!editing" once addenda are properly
+                //      implemented:
+                // - dates must not be in the future
+                // - save with 'now' as modification date and 'selected date'
+                //   as creation date
+                // - mark as addendum in a new database column
+                // - show the entry as the last entry of its day, regardless
+                //   of the time, and highlight it as an addendum
+                enabled: false
             }
 
             ComboBox {
