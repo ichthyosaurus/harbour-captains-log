@@ -130,6 +130,12 @@ Dialog {
                                      modifyDate, fullDateTimeFormat, modifyTz, qsTr("never"))) :
                                  ""
                 onDateChanged: createDate = date
+
+                // Changing the entry date is not allowed later because
+                // it is too complicated to ensure entries are properly
+                // sorted, due to timezones and the way entries are
+                // stored in the database.
+                enabled: !editing
             }
 
             ComboBox {
