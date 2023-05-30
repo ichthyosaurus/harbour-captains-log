@@ -74,7 +74,8 @@ Page {
                     pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
                                        "hashtags": hashtags, "rowid": rowid,
-                                       "createDate": createDate, "index": index, "model": model,
+                                       "createDate": createDate, "modifyDate": modifyDate,
+                                       "index": index, "model": model,
                                        "modifyTz": modifyTz, "createTz": createTz,
                                        "acceptDestination": "" // return to the calling page
                                    })
