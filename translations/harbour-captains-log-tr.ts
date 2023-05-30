@@ -37,10 +37,6 @@
 </context>
 <context>
     <name>DatePickerCombo</name>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
@@ -55,23 +51,11 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Plain text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mood: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -84,10 +68,6 @@
     <message>
         <source>About</source>
         <translation type="unfinished">Hakkında</translation>
-    </message>
-    <message>
-        <source>No entries yet</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -213,10 +193,6 @@
 </context>
 <context>
     <name>ReadPage</name>
-    <message>
-        <source>changed: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchQueryPage</name>
@@ -225,16 +201,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search tags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -244,22 +211,11 @@
 </context>
 <context>
     <name>SearchResultsPage</name>
-    <message numerus="yes">
-        <source>%n result(s)</source>
-        <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>activate code protection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export features</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -270,15 +226,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Entry...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Discarded the entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -289,15 +237,7 @@
 <context>
     <name>harbour-captains-log</name>
     <message>
-        <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>bad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>not okay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

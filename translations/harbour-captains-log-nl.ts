@@ -37,10 +37,6 @@
 </context>
 <context>
     <name>DatePickerCombo</name>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
@@ -55,23 +51,11 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Plain text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mood: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -81,10 +65,6 @@
 </context>
 <context>
     <name>FirstPage</name>
-    <message>
-        <source>Settings and Export</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Opal.About</name>
@@ -120,10 +100,6 @@
         <translation>Bijdragers</translation>
     </message>
     <message>
-        <source>External Link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -137,10 +113,6 @@
 </context>
 <context>
     <name>Opal.About.Common</name>
-    <message>
-        <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>PinPage</name>
@@ -155,24 +127,12 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Back</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>regular expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entry date</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -190,10 +150,6 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>activate code protection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export features</source>
         <translation type="unfinished"></translation>
     </message>
@@ -201,23 +157,11 @@
 <context>
     <name>WritePage</name>
     <message>
-        <source>Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>How did you feel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Entry...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,10 +169,6 @@
     <name>harbour-captains-log</name>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

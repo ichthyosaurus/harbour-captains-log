@@ -436,21 +436,12 @@
         <translation type="unfinished">Sök</translation>
     </message>
     <message>
-        <source>Search mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bookmarks</source>
         <translation type="unfinished">Bokmärke</translation>
     </message>
     <message>
         <source>Mood</source>
         <translation type="unfinished">Humör</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -568,10 +559,6 @@
     <message>
         <source>never</source>
         <translation>aldrig</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

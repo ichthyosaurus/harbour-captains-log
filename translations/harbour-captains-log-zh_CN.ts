@@ -290,10 +290,6 @@
 </context>
 <context>
     <name>Opal.About.Common</name>
-    <message>
-        <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>PinPage</name>
@@ -398,21 +394,12 @@
         <translation type="unfinished">搜索</translation>
     </message>
     <message>
-        <source>Search mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bookmarks</source>
         <translation type="unfinished">书签</translation>
     </message>
     <message>
         <source>Mood</source>
         <translation type="unfinished">心情</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -522,10 +509,6 @@
     <message>
         <source>never</source>
         <translation>绝不</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
