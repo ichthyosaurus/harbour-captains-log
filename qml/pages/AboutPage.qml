@@ -1,6 +1,6 @@
 /*
  * This file is part of Captain's Log.
- * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -23,61 +23,92 @@
  */
 
 import QtQuick 2.0
-//import Sailfish.Silica 1.0
-import Opal.About 1.0
+import Sailfish.Silica 1.0 as S
+import Opal.About 1.0 as A
 
-AboutPageBase {
-    id: page
+A.AboutPageBase {
+    id: root
+    allowedOrientations: S.Orientation.All
+
     appName: appWindow.appName
     appIcon: Qt.resolvedUrl("../images/harbour-captains-log.png")
     appVersion: APP_VERSION
     appRelease: APP_RELEASE
     description: qsTr("A simple diary application for keeping track of your thoughts.")
-    mainAttributions: ["2020-2022 Mirian Margiani", "2020 Gabriel Berkigt"]
-    sourcesUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
-    homepageUrl: "https://openrepos.net/content/ichthyosaurus/captains-log-updated"
+    allowDownloadingLicenses: false
 
-    licenses: License { spdxId: "GPL-3.0-or-later" }
+    mainAttributions: ["2020-2023 Mirian Margiani", "2020 Gabriel Berkigt"]
+    sourcesUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
+    homepageUrl: "https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753"
+    translationsUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
+
+    licenses: A.License { spdxId: "GPL-3.0-or-later" }
+
     attributions: [
-        Attribution {
+        A.Attribution {
+            name: "SortFilterProxyModel"
+            entries: ["2016 Pierre-Yves Siret"]
+            licenses: A.License { spdxId: "MIT" }
+            sources: "https://github.com/oKcerG/SortFilterProxyModel"
+        },
+        A.Attribution {
             name: "PyOtherSide"
             entries: ["2011, 2013-2020 Thomas Perl"]
-            licenses: License { spdxId: "ISC" }
+            licenses: A.License { spdxId: "ISC" }
             sources: "https://github.com/thp/pyotherside"
             homepage: "https://thp.io/2011/pyotherside/"
         },
-        Attribution {
+        A.Attribution {
             name: "OSMScout Migration"
             entries: ["2021 Lukáš Karas"]
-            licenses: License { spdxId: "GPL-2.0-or-later" }
-            sources: "https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
+            licenses: A.License { spdxId: "GPL-2.0-or-later" }
+            sources: "https://github.com/Karry/osmscout-sailfish/blob/" +
+                     "35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
         },
-        OpalAboutAttribution { }
+        A.OpalAboutAttribution {}
+    ]
+
+    donations.text: donations.defaultTextCoffee
+    donations.services: [
+        A.DonationService {
+            name: "LiberaPay"
+            url: "https://liberapay.com/ichthyosaurus/"
+        }
     ]
 
     contributionSections: [
-        ContributionSection {
+        A.ContributionSection {
             title: qsTr("Development")
             groups: [
-                ContributionGroup {
+                A.ContributionGroup {
                     title: qsTr("Programming")
                     entries: ["Mirian Margiani", "Gabriel Berkigt"]
                 }/*,
-                ContributionGroup {
+                A.ContributionGroup {
                     title: qsTr("Icon Design")
                     entries: ["Mirian Margiani", "Gabriel Berkigt"]
                 }*/
             ]
         },
-        ContributionSection {
+        A.ContributionSection {
             title: qsTr("Translations")
             groups: [
-                ContributionGroup { title: qsTr("Swedish"); entries: ["Åke Engelbrektson"]},
-                ContributionGroup { title: qsTr("Chinese"); entries: ["dashinfantry"]},
-                ContributionGroup { title: qsTr("German"); entries: ["Gabriel Berkigt", "Mirian Margiani"]},
-                ContributionGroup { title: qsTr("Finnish"); entries: ["Matti Viljanen"]}
-
-                // ContributionGroup { title: qsTr("English"); entries: ["Gabriel Berkigt", "Mirian Margiani"]}
+                A.ContributionGroup {
+                    title: qsTr("Swedish")
+                    entries: ["Åke Engelbrektson"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Chinese")
+                    entries: ["dashinfantry"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("German")
+                    entries: ["Gabriel Berkigt", "Mirian Margiani"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Finnish")
+                    entries: ["Matti Viljanen"]
+                }
             ]
         }
     ]
