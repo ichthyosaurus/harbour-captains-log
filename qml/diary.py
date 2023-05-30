@@ -306,50 +306,6 @@ def delete_entry(id):
 
 
 #
-# BEGIN Search Functions
-#
-
-def search_entries(keyword):
-    """ Searches for the keyword in the database """
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary WHERE title LIKE ? OR entry LIKE ? OR hashtags LIKE ? ORDER BY rowid DESC; """,
-                         (f"%{keyword}%", f"%{keyword}%", f"%{keyword}%"))
-    rows = DIARY.cursor.fetchall()
-    create_entries_model(rows)
-
-
-def search_date(from_date_string, till_date_string):
-    """ Search for a date string """
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary WHERE date(create_date) >= date(?) AND date(create_date) <= date(?) ORDER BY rowid DESC; """,
-                         (from_date_string, till_date_string))
-    rows = DIARY.cursor.fetchall()
-    create_entries_model(rows)
-
-
-def search_hashtags(hashtag):
-    """ Search for a specific hashtag """
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary WHERE hashtags LIKE ? ORDER BY rowid DESC; """,
-                         (f"%{hashtag}%", ))
-    rows = DIARY.cursor.fetchall()
-    create_entries_model(rows)
-
-
-def search_bookmarks():
-    """ Returns list of all bookmarks """
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary WHERE bookmark = 1 ORDER BY rowid DESC; """)
-    rows = DIARY.cursor.fetchall()
-    create_entries_model(rows)
-
-
-def search_mood(mood):
-    """ Return list of all entries with specific mood """
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary WHERE mood = ? ORDER BY rowid DESC; """, (mood, ))
-    rows = DIARY.cursor.fetchall()
-    create_entries_model(rows)
-
-# END
-
-
-#
 # BEGIN Export Functions
 #
 
