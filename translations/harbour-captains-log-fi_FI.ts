@@ -62,10 +62,6 @@
 <context>
     <name>DatePickerCombo</name>
     <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
         <translation type="unfinished">Valitse</translation>
@@ -214,10 +210,6 @@
     <message>
         <source>Swipe right to add entries</source>
         <translation type="vanished">Lisää kirjoitus pyyhkäisemällä oikealle</translation>
-    </message>
-    <message>
-        <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -439,15 +431,7 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Any may match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -455,15 +439,7 @@
         <translation type="unfinished">Haku</translation>
     </message>
     <message>
-        <source>Title and entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -471,15 +447,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>regular expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -487,18 +455,8 @@
         <translation type="unfinished">Kirjanmerkit</translation>
     </message>
     <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -506,24 +464,12 @@
         <translation type="unfinished">Mieliala</translation>
     </message>
     <message>
-        <source>From</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entry date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Till</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -544,10 +490,6 @@
     <message>
         <source>No entries found</source>
         <translation type="unfinished">Ei kirjoituksia</translation>
-    </message>
-    <message>
-        <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -648,23 +590,11 @@
         <translation>ei koskaan</translation>
     </message>
     <message>
-        <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Discarded the entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Discard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Last edited: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -731,10 +661,6 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Lokikirja</translation>
-    </message>
-    <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
