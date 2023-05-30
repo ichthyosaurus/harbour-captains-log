@@ -34,10 +34,6 @@
 </context>
 <context>
     <name>ExportPage</name>
-    <message>
-        <source>Diary from {} until {}</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -137,9 +133,5 @@
 </context>
 <context>
     <name>harbour-captains-log</name>
-    <message>
-        <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

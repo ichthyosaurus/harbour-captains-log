@@ -30,10 +30,6 @@
 </context>
 <context>
     <name>ExportPage</name>
-    <message>
-        <source>no</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -90,9 +86,5 @@
 </context>
 <context>
     <name>harbour-captains-log</name>
-    <message>
-        <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

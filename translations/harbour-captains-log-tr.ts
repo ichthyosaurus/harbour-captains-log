@@ -46,10 +46,6 @@
 </context>
 <context>
     <name>ExportPage</name>
-    <message>
-        <source>no</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -190,10 +186,6 @@
 </context>
 <context>
     <name>SettingsPage</name>
-    <message>
-        <source>activate code protection</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>WritePage</name>
