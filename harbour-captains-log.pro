@@ -17,7 +17,7 @@
 # The name of your application
 TARGET = harbour-captains-log
 
-CONFIG += sailfishapp
+CONFIG += sailfishapp c++11
 
 SOURCES += src/harbour-captains-log.cpp
 
