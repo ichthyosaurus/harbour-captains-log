@@ -62,10 +62,6 @@
 <context>
     <name>DatePickerCombo</name>
     <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
         <translation type="unfinished">选择</translation>
@@ -216,10 +212,6 @@
         <source>Swipe right to add entries</source>
         <translation type="vanished">右滑以添加事项</translation>
     </message>
-    <message>
-        <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Opal.About</name>
@@ -256,10 +248,6 @@
         <translation>源代码</translation>
     </message>
     <message>
-        <source>Donations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>License</source>
         <translation>许可证</translation>
     </message>
@@ -278,10 +266,6 @@
         <translation>贡献者</translation>
     </message>
     <message>
-        <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Thank you!</source>
         <translation>谢谢！</translation>
     </message>
@@ -290,24 +274,12 @@
         <translation>日志</translation>
     </message>
     <message>
-        <source>External Link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Open in browser</source>
         <translation>用浏览器打开</translation>
     </message>
     <message>
-        <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Copy to clipboard</source>
         <translation>复制到剪切板</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download license texts</source>
@@ -319,19 +291,11 @@
             <numerusform>许可协议</numerusform>
         </translation>
     </message>
-    <message>
-        <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You can support this project by contributing, or by donating using any of these services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -438,15 +402,7 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Any may match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -454,15 +410,7 @@
         <translation type="unfinished">搜索</translation>
     </message>
     <message>
-        <source>Title and entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -470,15 +418,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>regular expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -486,18 +426,8 @@
         <translation type="unfinished">书签</translation>
     </message>
     <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -505,24 +435,12 @@
         <translation type="unfinished">心情</translation>
     </message>
     <message>
-        <source>From</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entry date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Till</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -532,20 +450,9 @@
         <source>Search</source>
         <translation type="unfinished">搜索</translation>
     </message>
-    <message numerus="yes">
-        <source>%n result(s)</source>
-        <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
         <source>No entries found</source>
         <translation type="unfinished">暂无事项</translation>
-    </message>
-    <message>
-        <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -646,23 +553,11 @@
         <translation>绝不</translation>
     </message>
     <message>
-        <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Discarded the entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Discard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Last edited: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -717,10 +612,6 @@
         <translation>yyyy MMM d</translation>
     </message>
     <message>
-        <source>not okay</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
         <translation>%1 (%2)</translation>
@@ -729,10 +620,6 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
-    </message>
-    <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
