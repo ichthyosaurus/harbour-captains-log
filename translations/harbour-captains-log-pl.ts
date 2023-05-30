@@ -43,19 +43,11 @@
 </context>
 <context>
     <name>EntryElement</name>
-    <message>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -157,19 +149,11 @@
 </context>
 <context>
     <name>ReadPage</name>
-    <message>
-        <source>Mood</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchQueryPage</name>
     <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -187,10 +171,6 @@
 </context>
 <context>
     <name>SettingsPage</name>
-    <message>
-        <source>Export features</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>WritePage</name>
@@ -198,19 +178,11 @@
         <source>How did you feel?</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>not okay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

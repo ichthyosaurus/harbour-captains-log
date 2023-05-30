@@ -43,19 +43,11 @@
 </context>
 <context>
     <name>EntryElement</name>
-    <message>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -197,15 +189,7 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Back</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entry date</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -222,15 +206,7 @@
 <context>
     <name>WritePage</name>
     <message>
-        <source>Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Entry...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
