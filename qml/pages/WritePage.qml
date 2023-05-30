@@ -122,7 +122,7 @@ Dialog {
             }
 
             DateTimePickerCombo {
-                label: "Created"
+                label: qsTr("Date")
                 date: createDate
                 timeZone: createTz
                 description: modifyDate !== "" ?
