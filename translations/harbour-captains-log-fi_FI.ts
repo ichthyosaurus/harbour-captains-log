@@ -431,23 +431,11 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>All must match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search</source>
         <translation type="unfinished">Haku</translation>
     </message>
     <message>
-        <source>Search contents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>wildcard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -455,17 +443,8 @@
         <translation type="unfinished">Kirjanmerkit</translation>
     </message>
     <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood</source>
         <translation type="unfinished">Mieliala</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>anytime</source>
@@ -590,15 +569,7 @@
         <translation>ei koskaan</translation>
     </message>
     <message>
-        <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
