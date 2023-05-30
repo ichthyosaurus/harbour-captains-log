@@ -35,6 +35,7 @@ ApplicationWindow
     initialPage: null
 
     property ListModel entriesModel: ListModel { }
+    readonly property alias pinPageComponent: _pinPage
     readonly property var _currentlyEditedEntry: ({})
 
     // constants
@@ -205,10 +206,10 @@ ApplicationWindow
     }
 
     Component {
-        id: pinPage
+        id: _pinPage
         PinPage {
             expectedCode: config.protectionCode
-            onAccepted: pageStack.push(Qt.resolvedUrl("pages/FirstPage.qml"))
+            onAccepted: pageStack.replaceAbove(null, Qt.resolvedUrl("pages/FirstPage.qml"))
         }
     }
 
@@ -262,6 +263,6 @@ ApplicationWindow
         if (config.configMigrated < 1) {
             config.migrate()
         }
-        pageStack.replaceAbove(null, config.useCodeProtection ? pinPage : firstPage)
+        pageStack.replaceAbove(null, config.useCodeProtection ? pinPageComponent : firstPage)
     }
 }

@@ -2,7 +2,7 @@
  * This file is part of Captain's Log.
  *
  * SPDX-FileCopyrightText: 2020 Gabriel Berkigt
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -35,16 +35,15 @@ CoverBackground {
     }
 
     function open(pageUrl) {
-        if(appWindow.unlocked === true) {
-            pageStack.clear()
-            pageStack.replace(Qt.resolvedUrl("../pages/FirstPage.qml"))
-            pageStack.push(Qt.resolvedUrl(pageUrl))
-            appWindow.activate()
+        if (appWindow.unlocked === true) {
+            pageStack.replaceAbove(null, [
+                Qt.resolvedUrl("../pages/FirstPage.qml"), Qt.resolvedUrl(pageUrl)
+            ])
+        } else {
+            pageStack.replaceAbove(null, appWindow.pinPageComponent)
         }
-        else {
-            appWindow.activate()
-            pageStack.replace(Qt.resolvedUrl("../pages/PinPage.qml"))
-        }
+
+        appWindow.activate()
     }
 
     CoverActionList {
