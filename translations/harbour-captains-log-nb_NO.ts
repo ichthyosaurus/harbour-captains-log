@@ -47,10 +47,6 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>no</source>
         <translation type="unfinished"></translation>
     </message>
@@ -138,10 +134,6 @@
 </context>
 <context>
     <name>SearchQueryPage</name>
-    <message>
-        <source>Search tags</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
@@ -159,10 +151,6 @@
 </context>
 <context>
     <name>WritePage</name>
-    <message>
-        <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>harbour-captains-log</name>

@@ -31,10 +31,6 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>no</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44,10 +40,6 @@
 </context>
 <context>
     <name>Opal.About</name>
-    <message>
-        <source>License</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>show license(s)</source>
         <translation type="unfinished">
@@ -78,10 +70,6 @@
 </context>
 <context>
     <name>SearchQueryPage</name>
-    <message>
-        <source>Search tags</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
@@ -99,10 +87,6 @@
 </context>
 <context>
     <name>WritePage</name>
-    <message>
-        <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
