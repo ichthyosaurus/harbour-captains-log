@@ -46,10 +46,6 @@
 </context>
 <context>
     <name>ExportPage</name>
-    <message>
-        <source>no</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -112,11 +108,6 @@
 </context>
 <context>
     <name>SearchQueryPage</name>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
