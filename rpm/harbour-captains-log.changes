@@ -1,10 +1,22 @@
 # This file is part of Captain's Log.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2021-2023 Mirian Margiani
 #
 # FORMAT:
 # * date Author's Name <author's email> version-release
 # - Summary of changes
+
+* Tue May 30 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.2.0-1
+- added remorse timer when discarding a new / edited entry
+- added new, improved search page
+-   > search using multiple criteria at once
+-   > search for mood ranges and use wildcards for complex queries
+-   > improved performance
+- added Weblate for translations (cf. About page)
+- fixed swipe direction hint in German translation
+- fixed cover actions while the app is locked
+- fixed editing an entry from the search results page
+- plus many small quality-of-life changes
 
 * Thu Mar 24 2022 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.1.0-1
 - translations: added Chinese, updated Swedish
