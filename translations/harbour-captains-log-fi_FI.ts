@@ -435,21 +435,12 @@
         <translation type="unfinished">Haku</translation>
     </message>
     <message>
-        <source>Search mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bookmarks</source>
         <translation type="unfinished">Kirjanmerkit</translation>
     </message>
     <message>
         <source>Mood</source>
         <translation type="unfinished">Mieliala</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -567,10 +558,6 @@
     <message>
         <source>never</source>
         <translation>ei koskaan</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

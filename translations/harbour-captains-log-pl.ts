@@ -37,10 +37,6 @@
 </context>
 <context>
     <name>DatePickerCombo</name>
-    <message>
-        <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
@@ -55,23 +51,11 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Plain text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mood: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -84,10 +68,6 @@
     <message>
         <source>About</source>
         <translation type="unfinished">O tej aplikacji</translation>
-    </message>
-    <message>
-        <source>No entries yet</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -153,10 +133,6 @@
         <translation>Dziękuję!</translation>
     </message>
     <message>
-        <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Copy to clipboard</source>
         <translation>Kopiuj do schowka</translation>
     </message>
@@ -178,10 +154,6 @@
 </context>
 <context>
     <name>PinPage</name>
-    <message>
-        <source>Please enter your security code</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ReadPage</name>
@@ -193,24 +165,11 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -229,10 +188,6 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>activate code protection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export features</source>
         <translation type="unfinished"></translation>
     </message>
@@ -240,23 +195,11 @@
 <context>
     <name>WritePage</name>
     <message>
-        <source>Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>How did you feel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Entry...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -264,10 +207,6 @@
     <name>harbour-captains-log</name>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
