@@ -47,10 +47,6 @@
 <context>
     <name>ExportPage</name>
     <message>
-        <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>no</source>
         <translation type="unfinished"></translation>
     </message>
@@ -117,10 +113,6 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation type="unfinished"></translation>
@@ -134,10 +126,6 @@
 </context>
 <context>
     <name>WritePage</name>
-    <message>
-        <source>Entry</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
