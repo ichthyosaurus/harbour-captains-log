@@ -56,7 +56,26 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation>Valitse</translation>
+        <translation type="vanished">Valitse</translation>
+    </message>
+</context>
+<context>
+    <name>DatePickerCombo</name>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation type="unfinished">Valitse</translation>
+    </message>
+</context>
+<context>
+    <name>DateTimePickerCombo</name>
+    <message>
+        <source>never</source>
+        <translation type="unfinished">ei koskaan</translation>
     </message>
 </context>
 <context>
@@ -340,77 +359,195 @@
     </message>
     <message>
         <source>mood:</source>
-        <translation>mieliala:</translation>
+        <translation type="vanished">mieliala:</translation>
     </message>
     <message>
         <source>changed: %1</source>
         <translation>muokattu: %1</translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">Mieliala</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
         <source>Search</source>
-        <translation>Haku</translation>
+        <translation type="vanished">Haku</translation>
     </message>
     <message>
         <source>Filter your results</source>
-        <translation>Suodata tulokset</translation>
+        <translation type="vanished">Suodata tulokset</translation>
     </message>
     <message>
         <source>Search by:</source>
-        <translation>Mistä etsitään:</translation>
+        <translation type="vanished">Mistä etsitään:</translation>
     </message>
     <message>
         <source>Creation date</source>
-        <translation>Luontipäivä</translation>
+        <translation type="vanished">Luontipäivä</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation>Kirjanmerkit</translation>
+        <translation type="vanished">Kirjanmerkit</translation>
     </message>
     <message>
         <source>Hashtag</source>
-        <translation>Tunnisteet</translation>
+        <translation type="vanished">Tunnisteet</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation>Mieliala</translation>
+        <translation type="vanished">Mieliala</translation>
     </message>
     <message>
         <source>Filter results by mood</source>
-        <translation>Suodata tulokset mielialan mukaan</translation>
+        <translation type="vanished">Suodata tulokset mielialan mukaan</translation>
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation>Kirjoita hakuteksti tähän...</translation>
+        <translation type="vanished">Kirjoita hakuteksti tähän...</translation>
     </message>
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
-        <translation>Suodatin:</translation>
+        <translation type="vanished">Suodatin:</translation>
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation>Otsikko ja kirjoitus</translation>
+        <translation type="vanished">Otsikko ja kirjoitus</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation>Ei kirjoituksia</translation>
+        <translation type="vanished">Ei kirjoituksia</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation>Yksikään kirjoitus ei vastaa hakuehtoja.</translation>
+        <translation type="vanished">Yksikään kirjoitus ei vastaa hakuehtoja.</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>Alkaen</translation>
+        <translation type="vanished">Alkaen</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>Päättyen</translation>
+        <translation type="vanished">Päättyen</translation>
+    </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
+    <message>
+        <source>Any may match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All must match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Haku</translation>
+    </message>
+    <message>
+        <source>Title and entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>wildcard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>regular expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmarks</source>
+        <translation type="unfinished">Kirjanmerkit</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>marked</source>
+        <comment>search option, as in: “find only bookmarked entries”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmarked</source>
+        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">Mieliala</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Till</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchResultsPage</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Haku</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n result(s)</source>
+        <comment>search results</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished">Ei kirjoituksia</translation>
+    </message>
+    <message>
+        <source>Swipe back to change search criteria</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -468,7 +605,7 @@
     </message>
     <message>
         <source>Your mood:</source>
-        <translation>Mielialasi:</translation>
+        <translation type="vanished">Mielialasi:</translation>
     </message>
     <message>
         <source>Edit Entry</source>
@@ -500,15 +637,39 @@
     </message>
     <message>
         <source>Created:</source>
-        <translation>Luotu:</translation>
+        <translation type="vanished">Luotu:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation>Viimeksi muokattu:</translation>
+        <translation type="vanished">Viimeksi muokattu:</translation>
     </message>
     <message>
         <source>never</source>
         <translation>ei koskaan</translation>
+    </message>
+    <message>
+        <source>Discarded all changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discarded the entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last edited: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mood</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -570,6 +731,10 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Lokikirja</translation>
+    </message>
+    <message>
+        <source>Error: the database could not be loaded.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

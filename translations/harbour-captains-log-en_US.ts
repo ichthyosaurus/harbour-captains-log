@@ -56,7 +56,26 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation>Select</translation>
+        <translation type="vanished">Select</translation>
+    </message>
+</context>
+<context>
+    <name>DatePickerCombo</name>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation type="unfinished">Select</translation>
+    </message>
+</context>
+<context>
+    <name>DateTimePickerCombo</name>
+    <message>
+        <source>never</source>
+        <translation type="unfinished">never</translation>
     </message>
 </context>
 <context>
@@ -341,77 +360,195 @@
     </message>
     <message>
         <source>mood:</source>
-        <translation>mood:</translation>
+        <translation type="vanished">mood:</translation>
     </message>
     <message>
         <source>changed: %1</source>
         <translation>changed: %1</translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">Mood</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
         <source>Search</source>
-        <translation>Search</translation>
+        <translation type="vanished">Search</translation>
     </message>
     <message>
         <source>Filter your results</source>
-        <translation>Filter your results</translation>
+        <translation type="vanished">Filter your results</translation>
     </message>
     <message>
         <source>Search by:</source>
-        <translation>Search by:</translation>
+        <translation type="vanished">Search by:</translation>
     </message>
     <message>
         <source>Creation date</source>
-        <translation>Creation date</translation>
+        <translation type="vanished">Creation date</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation type="vanished">Bookmarks</translation>
     </message>
     <message>
         <source>Hashtag</source>
-        <translation>Hashtag</translation>
+        <translation type="vanished">Hashtag</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation>Mood</translation>
+        <translation type="vanished">Mood</translation>
     </message>
     <message>
         <source>Filter results by mood</source>
-        <translation>Filter results by mood</translation>
+        <translation type="vanished">Filter results by mood</translation>
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation>Search your entries...</translation>
+        <translation type="vanished">Search your entries...</translation>
     </message>
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
-        <translation>Filter:</translation>
+        <translation type="vanished">Filter:</translation>
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation>Title and Entry</translation>
+        <translation type="vanished">Title and Entry</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation>No entries found</translation>
+        <translation type="vanished">No entries found</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation>No entries matched these criteria.</translation>
+        <translation type="vanished">No entries matched these criteria.</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>from</translation>
+        <translation type="vanished">from</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>till</translation>
+        <translation type="vanished">till</translation>
+    </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
+    <message>
+        <source>Any may match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All must match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Search</translation>
+    </message>
+    <message>
+        <source>Title and entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>wildcard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>regular expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmarks</source>
+        <translation type="unfinished">Bookmarks</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>marked</source>
+        <comment>search option, as in: “find only bookmarked entries”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmarked</source>
+        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">Mood</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Till</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchResultsPage</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Search</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n result(s)</source>
+        <comment>search results</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished">No entries found</translation>
+    </message>
+    <message>
+        <source>Swipe back to change search criteria</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -469,7 +606,7 @@
     </message>
     <message>
         <source>Your mood:</source>
-        <translation>Your mood:</translation>
+        <translation type="vanished">Your mood:</translation>
     </message>
     <message>
         <source>Edit Entry</source>
@@ -501,15 +638,39 @@
     </message>
     <message>
         <source>Created:</source>
-        <translation>Created:</translation>
+        <translation type="vanished">Created:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation>Last changed:</translation>
+        <translation type="vanished">Last changed:</translation>
     </message>
     <message>
         <source>never</source>
         <translation>never</translation>
+    </message>
+    <message>
+        <source>Discarded all changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discarded the entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last edited: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mood</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -571,6 +732,10 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
+    </message>
+    <message>
+        <source>Error: the database could not be loaded.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

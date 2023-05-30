@@ -56,7 +56,26 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation>选择</translation>
+        <translation type="vanished">选择</translation>
+    </message>
+</context>
+<context>
+    <name>DatePickerCombo</name>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation type="unfinished">选择</translation>
+    </message>
+</context>
+<context>
+    <name>DateTimePickerCombo</name>
+    <message>
+        <source>never</source>
+        <translation type="unfinished">绝不</translation>
     </message>
 </context>
 <context>
@@ -339,77 +358,194 @@
     </message>
     <message>
         <source>mood:</source>
-        <translation>心情:</translation>
+        <translation type="vanished">心情:</translation>
     </message>
     <message>
         <source>changed: %1</source>
         <translation>修改: %1</translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">心情</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
         <source>Search</source>
-        <translation>搜索</translation>
+        <translation type="vanished">搜索</translation>
     </message>
     <message>
         <source>Filter your results</source>
-        <translation>筛选结果</translation>
+        <translation type="vanished">筛选结果</translation>
     </message>
     <message>
         <source>Search by:</source>
-        <translation>搜索方式:</translation>
+        <translation type="vanished">搜索方式:</translation>
     </message>
     <message>
         <source>Creation date</source>
-        <translation>创建日期</translation>
+        <translation type="vanished">创建日期</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation>书签</translation>
+        <translation type="vanished">书签</translation>
     </message>
     <message>
         <source>Hashtag</source>
-        <translation>井字标签</translation>
+        <translation type="vanished">井字标签</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation>心情</translation>
+        <translation type="vanished">心情</translation>
     </message>
     <message>
         <source>Filter results by mood</source>
-        <translation>按照心情筛选结果</translation>
+        <translation type="vanished">按照心情筛选结果</translation>
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation>搜索你的事项…</translation>
+        <translation type="vanished">搜索你的事项…</translation>
     </message>
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
-        <translation>筛选:</translation>
+        <translation type="vanished">筛选:</translation>
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation>标题及事项</translation>
+        <translation type="vanished">标题及事项</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation>暂无事项</translation>
+        <translation type="vanished">暂无事项</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation>暂无符合标准的匹配事项。</translation>
+        <translation type="vanished">暂无符合标准的匹配事项。</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>起自</translation>
+        <translation type="vanished">起自</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>至</translation>
+        <translation type="vanished">至</translation>
+    </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
+    <message>
+        <source>Any may match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All must match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">搜索</translation>
+    </message>
+    <message>
+        <source>Title and entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>wildcard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>regular expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmarks</source>
+        <translation type="unfinished">书签</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>marked</source>
+        <comment>search option, as in: “find only bookmarked entries”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmarked</source>
+        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">心情</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Till</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchResultsPage</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">搜索</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n result(s)</source>
+        <comment>search results</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished">暂无事项</translation>
+    </message>
+    <message>
+        <source>Swipe back to change search criteria</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -467,7 +603,7 @@
     </message>
     <message>
         <source>Your mood:</source>
-        <translation>你的心情:</translation>
+        <translation type="vanished">你的心情:</translation>
     </message>
     <message>
         <source>Edit Entry</source>
@@ -499,15 +635,39 @@
     </message>
     <message>
         <source>Created:</source>
-        <translation>创建:</translation>
+        <translation type="vanished">创建:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation>最近修改:</translation>
+        <translation type="vanished">最近修改:</translation>
     </message>
     <message>
         <source>never</source>
         <translation>绝不</translation>
+    </message>
+    <message>
+        <source>Discarded all changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discarded the entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last edited: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mood</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -569,6 +729,10 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
+    </message>
+    <message>
+        <source>Error: the database could not be loaded.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

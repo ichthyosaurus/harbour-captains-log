@@ -56,7 +56,26 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation>Välj</translation>
+        <translation type="vanished">Välj</translation>
+    </message>
+</context>
+<context>
+    <name>DatePickerCombo</name>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select</source>
+        <comment>fallback text on button to select a date</comment>
+        <translation type="unfinished">Välj</translation>
+    </message>
+</context>
+<context>
+    <name>DateTimePickerCombo</name>
+    <message>
+        <source>never</source>
+        <translation type="unfinished">aldrig</translation>
     </message>
 </context>
 <context>
@@ -341,77 +360,195 @@
     </message>
     <message>
         <source>mood:</source>
-        <translation>humör:</translation>
+        <translation type="vanished">humör:</translation>
     </message>
     <message>
         <source>changed: %1</source>
         <translation>ändrad: %1</translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">Humör</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
         <source>Mood</source>
-        <translation>Humör</translation>
+        <translation type="vanished">Humör</translation>
     </message>
     <message>
         <source>Creation date</source>
-        <translation>Skapad</translation>
+        <translation type="vanished">Skapad</translation>
     </message>
     <message>
         <source>Filter your results</source>
-        <translation>Filtrera dina resultat</translation>
+        <translation type="vanished">Filtrera dina resultat</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation>Sök</translation>
+        <translation type="vanished">Sök</translation>
     </message>
     <message>
         <source>Search by:</source>
-        <translation>Sök efter:</translation>
+        <translation type="vanished">Sök efter:</translation>
     </message>
     <message>
         <source>Filter results by mood</source>
-        <translation>Filtrera resultat efter humör</translation>
+        <translation type="vanished">Filtrera resultat efter humör</translation>
     </message>
     <message>
         <source>Search your entries...</source>
-        <translation>Sök i dina poster...</translation>
+        <translation type="vanished">Sök i dina poster...</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation>Bokmärke</translation>
+        <translation type="vanished">Bokmärke</translation>
     </message>
     <message>
         <source>Hashtag</source>
-        <translation>Hashtagg</translation>
+        <translation type="vanished">Hashtagg</translation>
     </message>
     <message>
         <source>Filter:</source>
         <comment>the mood filter to apply</comment>
-        <translation>Filter:</translation>
+        <translation type="vanished">Filter:</translation>
     </message>
     <message>
         <source>Title and Entry</source>
-        <translation>Titel och text</translation>
+        <translation type="vanished">Titel och text</translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation>Inga poster hittades</translation>
+        <translation type="vanished">Inga poster hittades</translation>
     </message>
     <message>
         <source>No entries matched these criteria.</source>
-        <translation>Inga poster matchade dessa kriterier.</translation>
+        <translation type="vanished">Inga poster matchade dessa kriterier.</translation>
     </message>
     <message>
         <source>from</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>från</translation>
+        <translation type="vanished">från</translation>
     </message>
     <message>
         <source>till</source>
         <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation>till</translation>
+        <translation type="vanished">till</translation>
+    </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
+    <message>
+        <source>Any may match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All must match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Sök</translation>
+    </message>
+    <message>
+        <source>Title and entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>wildcard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>regular expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmarks</source>
+        <translation type="unfinished">Bokmärke</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>marked</source>
+        <comment>search option, as in: “find only bookmarked entries”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmarked</source>
+        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="unfinished">Humör</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Till</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchResultsPage</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Sök</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n result(s)</source>
+        <comment>search results</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished">Inga poster hittades</translation>
+    </message>
+    <message>
+        <source>Swipe back to change search criteria</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -461,7 +598,7 @@
     </message>
     <message>
         <source>Your mood:</source>
-        <translation>Ditt humör:</translation>
+        <translation type="vanished">Ditt humör:</translation>
     </message>
     <message>
         <source>#Hashtags</source>
@@ -501,15 +638,39 @@
     </message>
     <message>
         <source>Created:</source>
-        <translation>Skapad:</translation>
+        <translation type="vanished">Skapad:</translation>
     </message>
     <message>
         <source>Last changed:</source>
-        <translation>Ändrad:</translation>
+        <translation type="vanished">Ändrad:</translation>
     </message>
     <message>
         <source>never</source>
         <translation>aldrig</translation>
+    </message>
+    <message>
+        <source>Discarded all changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discarded the entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last edited: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your mood</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -571,6 +732,10 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
+    </message>
+    <message>
+        <source>Error: the database could not be loaded.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
