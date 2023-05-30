@@ -53,7 +53,7 @@ CoverBackground {
         }
         CoverAction {
             iconSource: "image://theme/icon-cover-search"
-            onTriggered: open("../pages/SearchPage.qml")
+            onTriggered: open("../pages/SearchQueryPage.qml")
         }
     }
 }

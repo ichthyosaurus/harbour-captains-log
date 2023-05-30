@@ -1,7 +1,7 @@
 /*
  * This file is part of Captain's Log.
  *
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -23,11 +23,12 @@ import Sailfish.Silica 1.0
 
 SilicaListView {
     id: diaryList
-    VerticalScrollDecorator { flickable: diaryList }
     contentHeight: Theme.itemSizeHuge
     spacing: Theme.paddingMedium
 
     property bool editable: true
+
+    VerticalScrollDecorator { flickable: diaryList }
 
     delegate: EntryElement {
         realModel: diaryList.model
