@@ -118,6 +118,7 @@ Dialog {
             DialogHeader {
                 title: editing ? qsTr("Edit Entry") : qsTr("New Entry")
                 acceptText: qsTr("Save")
+                cancelText: qsTr("Discard")
             }
 
             DateTimePickerCombo {
