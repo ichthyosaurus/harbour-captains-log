@@ -63,19 +63,19 @@
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">wählen</translation>
+        <translation>wählen</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished">nie</translation>
+        <translation>nie</translation>
     </message>
 </context>
 <context>
@@ -368,7 +368,7 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Stimmung</translation>
+        <translation>Stimmung</translation>
     </message>
 </context>
 <context>
@@ -441,114 +441,114 @@
     <name>SearchQueryPage</name>
     <message>
         <source>Any may match</source>
-        <translation type="unfinished"></translation>
+        <translation>eines muss zutreffen</translation>
     </message>
     <message>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
+        <translation>alle müssen zutreffen</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Zurück</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Suche</translation>
+        <translation>Suchen</translation>
     </message>
     <message>
         <source>Title and entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Überschrift und Eintrag</translation>
     </message>
     <message>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Inhalt durchsuchen</translation>
     </message>
     <message>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Schlagworte durchsuchen</translation>
     </message>
     <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Suchmodus</translation>
     </message>
     <message>
         <source>plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>einfacher Text</translation>
     </message>
     <message>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
+        <translation>Platzhalter</translation>
     </message>
     <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>regulärer Ausdruck</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished">Lesezeichen</translation>
+        <translation>Lesezeichen</translation>
     </message>
     <message>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>alle Einträge</translation>
     </message>
     <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>markierte</translation>
     </message>
     <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
+        <translation>unmarkierte</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Stimmung</translation>
+        <translation>Stimmung</translation>
     </message>
     <message>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Von</translation>
     </message>
     <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>Bis</translation>
     </message>
     <message>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintragsdatum</translation>
     </message>
     <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>irgendwann</translation>
     </message>
     <message>
         <source>Till</source>
-        <translation type="unfinished"></translation>
+        <translation>Bis</translation>
     </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Suche</translation>
+        <translation>Suche</translation>
     </message>
     <message numerus="yes">
         <source>%n result(s)</source>
         <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Ergebnis</numerusform>
+            <numerusform>%n Ergebnisse</numerusform>
         </translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished">Keine Einträge gefunden</translation>
+        <translation>Keine Einträge gefunden</translation>
     </message>
     <message>
         <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
+        <translation>Zurückwischen, um Suchkriterien zu ändern</translation>
     </message>
 </context>
 <context>
@@ -650,27 +650,27 @@
     </message>
     <message>
         <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Änderungen verworfen</translation>
     </message>
     <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag verworfen</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwerfen</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Zuletzt geändert: %1</translation>
     </message>
     <message>
         <source>Your mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Ihre Stimmung</translation>
     </message>
 </context>
 <context>
@@ -735,7 +735,7 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Die Datenbank konnte nicht geladen werden.</translation>
     </message>
 </context>
 </TS>
