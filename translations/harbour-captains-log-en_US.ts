@@ -52,14 +52,6 @@
     </message>
 </context>
 <context>
-    <name>DateButton</name>
-    <message>
-        <source>Select</source>
-        <comment>fallback text on button to select a date</comment>
-        <translation type="vanished">Select</translation>
-    </message>
-</context>
-<context>
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
@@ -213,10 +205,6 @@
         <translation>No entries yet</translation>
     </message>
     <message>
-        <source>Swipe right to add entries</source>
-        <translation type="vanished">Swipe right to add entries</translation>
-    </message>
-    <message>
         <source>Swipe left to add entries</source>
         <translation type="unfinished"></translation>
     </message>
@@ -359,82 +347,12 @@
         <translation>Edit</translation>
     </message>
     <message>
-        <source>mood:</source>
-        <translation type="vanished">mood:</translation>
-    </message>
-    <message>
         <source>changed: %1</source>
         <translation>changed: %1</translation>
     </message>
     <message>
         <source>Mood</source>
         <translation type="unfinished">Mood</translation>
-    </message>
-</context>
-<context>
-    <name>SearchPage</name>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">Search</translation>
-    </message>
-    <message>
-        <source>Filter your results</source>
-        <translation type="vanished">Filter your results</translation>
-    </message>
-    <message>
-        <source>Search by:</source>
-        <translation type="vanished">Search by:</translation>
-    </message>
-    <message>
-        <source>Creation date</source>
-        <translation type="vanished">Creation date</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">Bookmarks</translation>
-    </message>
-    <message>
-        <source>Hashtag</source>
-        <translation type="vanished">Hashtag</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">Mood</translation>
-    </message>
-    <message>
-        <source>Filter results by mood</source>
-        <translation type="vanished">Filter results by mood</translation>
-    </message>
-    <message>
-        <source>Search your entries...</source>
-        <translation type="vanished">Search your entries...</translation>
-    </message>
-    <message>
-        <source>Filter:</source>
-        <comment>the mood filter to apply</comment>
-        <translation type="vanished">Filter:</translation>
-    </message>
-    <message>
-        <source>Title and Entry</source>
-        <translation type="vanished">Title and Entry</translation>
-    </message>
-    <message>
-        <source>No entries found</source>
-        <translation type="vanished">No entries found</translation>
-    </message>
-    <message>
-        <source>No entries matched these criteria.</source>
-        <translation type="vanished">No entries matched these criteria.</translation>
-    </message>
-    <message>
-        <source>from</source>
-        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="vanished">from</translation>
-    </message>
-    <message>
-        <source>till</source>
-        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="vanished">till</translation>
     </message>
 </context>
 <context>
@@ -605,10 +523,6 @@
         <translation>#Hashtags</translation>
     </message>
     <message>
-        <source>Your mood:</source>
-        <translation type="vanished">Your mood:</translation>
-    </message>
-    <message>
         <source>Edit Entry</source>
         <translation>Edit Entry</translation>
     </message>
@@ -635,14 +549,6 @@
     <message>
         <source>Hashtags</source>
         <translation>Hashtags</translation>
-    </message>
-    <message>
-        <source>Created:</source>
-        <translation type="vanished">Created:</translation>
-    </message>
-    <message>
-        <source>Last changed:</source>
-        <translation type="vanished">Last changed:</translation>
     </message>
     <message>
         <source>never</source>

@@ -52,14 +52,6 @@
     </message>
 </context>
 <context>
-    <name>DateButton</name>
-    <message>
-        <source>Select</source>
-        <comment>fallback text on button to select a date</comment>
-        <translation type="vanished">wählen</translation>
-    </message>
-</context>
-<context>
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
@@ -213,10 +205,6 @@
         <translation>Noch keine Einträge</translation>
     </message>
     <message>
-        <source>Swipe right to add entries</source>
-        <translation type="vanished">Wischen Sie nach rechts, um Einträge hinzuzufügen</translation>
-    </message>
-    <message>
         <source>Swipe left to add entries</source>
         <translation>Wischen Sie nach links, um Einträge hinzuzufügen</translation>
     </message>
@@ -359,82 +347,12 @@
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <source>mood:</source>
-        <translation type="vanished">Stimmung:</translation>
-    </message>
-    <message>
         <source>changed: %1</source>
         <translation>geändert: %1</translation>
     </message>
     <message>
         <source>Mood</source>
         <translation>Stimmung</translation>
-    </message>
-</context>
-<context>
-    <name>SearchPage</name>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">Suche</translation>
-    </message>
-    <message>
-        <source>Filter your results</source>
-        <translation type="vanished">Ergebnisse filtern</translation>
-    </message>
-    <message>
-        <source>Search by:</source>
-        <translation type="vanished">Suche in:</translation>
-    </message>
-    <message>
-        <source>Creation date</source>
-        <translation type="vanished">Erstellungsdatum</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">Lesezeichen</translation>
-    </message>
-    <message>
-        <source>Hashtag</source>
-        <translation type="vanished">Hashtag</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">Stimmung</translation>
-    </message>
-    <message>
-        <source>Filter results by mood</source>
-        <translation type="vanished">Ergebnisse nach Stimmung filtern</translation>
-    </message>
-    <message>
-        <source>Search your entries...</source>
-        <translation type="vanished">Einträge durchsuchen ...</translation>
-    </message>
-    <message>
-        <source>Filter:</source>
-        <comment>the mood filter to apply</comment>
-        <translation type="vanished">Filter:</translation>
-    </message>
-    <message>
-        <source>Title and Entry</source>
-        <translation type="vanished">Überschrift und Eintrag</translation>
-    </message>
-    <message>
-        <source>No entries found</source>
-        <translation type="vanished">Keine Einträge gefunden</translation>
-    </message>
-    <message>
-        <source>No entries matched these criteria.</source>
-        <translation type="vanished">Zu den gewählten Kriterien wurden keine Einträge gefunden.</translation>
-    </message>
-    <message>
-        <source>from</source>
-        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="vanished">von</translation>
-    </message>
-    <message>
-        <source>till</source>
-        <comment>search entries between &apos;from&apos; and &apos;till&apos;</comment>
-        <translation type="vanished">bis</translation>
     </message>
 </context>
 <context>
@@ -605,10 +523,6 @@
         <translation>#Hashtags</translation>
     </message>
     <message>
-        <source>Your mood:</source>
-        <translation type="vanished">Ihre Stimmung:</translation>
-    </message>
-    <message>
         <source>Edit Entry</source>
         <translation>Eintrag bearbeiten</translation>
     </message>
@@ -635,14 +549,6 @@
     <message>
         <source>Hashtags</source>
         <translation>Hashtags</translation>
-    </message>
-    <message>
-        <source>Created:</source>
-        <translation type="vanished">Erstellt:</translation>
-    </message>
-    <message>
-        <source>Last changed:</source>
-        <translation type="vanished">Zuletzt geändert:</translation>
     </message>
     <message>
         <source>never</source>
