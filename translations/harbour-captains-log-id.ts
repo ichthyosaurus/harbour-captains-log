@@ -164,9 +164,5 @@
 </context>
 <context>
     <name>harbour-captains-log</name>
-    <message>
-        <source>bad</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>
