@@ -64,7 +64,6 @@ Dialog {
         var hashs = hashtagField.text.trim()
 
         if (editing) {
-            console.log("CRT", createDate, createTz)
             updateEntry(model, index, createDate, createTz, mood, title_text, preview, entry, hashs, rowid);
         } else {
             addEntry(dbCurrentDate, mood, title_text, preview, entry, hashs);
