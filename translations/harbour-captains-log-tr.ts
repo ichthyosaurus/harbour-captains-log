@@ -34,10 +34,6 @@
 </context>
 <context>
     <name>ChangePinPage</name>
-    <message>
-        <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DatePickerCombo</name>
@@ -48,19 +44,11 @@
 </context>
 <context>
     <name>DateTimePickerCombo</name>
-    <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edit: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -71,15 +59,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Plain Markdown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -87,23 +67,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changed: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hashtags: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data exported to: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -116,10 +84,6 @@
     <message>
         <source>About</source>
         <translation type="unfinished">Hakkında</translation>
-    </message>
-    <message>
-        <source>Add new entry</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No entries yet</source>
@@ -246,10 +210,6 @@
 </context>
 <context>
     <name>PinPage</name>
-    <message>
-        <source>please try again</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ReadPage</name>
@@ -261,15 +221,7 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>Any may match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title and entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -277,16 +229,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -295,15 +238,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>From</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Till</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -316,19 +251,11 @@
             <numerusform></numerusform>
         </translation>
     </message>
-    <message>
-        <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>activate code protection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change Code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -339,15 +266,7 @@
 <context>
     <name>WritePage</name>
     <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>#Hashtags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -355,23 +274,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add a title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Entry...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -382,15 +289,7 @@
 <context>
     <name>harbour-captains-log</name>
     <message>
-        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>good</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -398,16 +297,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>not okay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Captain&apos;s Log</source>
-        <comment>the app&apos;s name</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>

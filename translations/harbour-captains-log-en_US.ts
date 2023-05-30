@@ -432,23 +432,11 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>All must match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search</source>
         <translation type="unfinished">Search</translation>
     </message>
     <message>
-        <source>Search contents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>wildcard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -456,17 +444,8 @@
         <translation type="unfinished">Bookmarks</translation>
     </message>
     <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood</source>
         <translation type="unfinished">Mood</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>anytime</source>
@@ -591,15 +570,7 @@
         <translation>never</translation>
     </message>
     <message>
-        <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your mood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

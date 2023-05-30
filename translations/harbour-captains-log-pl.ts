@@ -34,10 +34,6 @@
 </context>
 <context>
     <name>ChangePinPage</name>
-    <message>
-        <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DatePickerCombo</name>
@@ -48,19 +44,11 @@
 </context>
 <context>
     <name>DateTimePickerCombo</name>
-    <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edit: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -71,15 +59,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Plain Markdown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -87,23 +67,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changed: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hashtags: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data exported to: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -116,10 +84,6 @@
     <message>
         <source>About</source>
         <translation type="unfinished">O tej aplikacji</translation>
-    </message>
-    <message>
-        <source>Add new entry</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No entries yet</source>
@@ -189,20 +153,12 @@
         <translation>Dziękuję!</translation>
     </message>
     <message>
-        <source>External Link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Copied to clipboard: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
         <translation>Kopiuj do schowka</translation>
-    </message>
-    <message>
-        <source>Download license texts</source>
-        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
@@ -219,10 +175,6 @@
 </context>
 <context>
     <name>Opal.About.Common</name>
-    <message>
-        <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>PinPage</name>
@@ -234,10 +186,6 @@
 <context>
     <name>ReadPage</name>
     <message>
-        <source>Edit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood</source>
         <translation type="unfinished"></translation>
     </message>
@@ -245,15 +193,7 @@
 <context>
     <name>SearchQueryPage</name>
     <message>
-        <source>All must match</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -261,24 +201,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>wildcard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>To</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -289,10 +216,6 @@
 </context>
 <context>
     <name>SearchResultsPage</name>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>%n result(s)</source>
         <comment>search results</comment>
@@ -302,19 +225,11 @@
             <numerusform></numerusform>
         </translation>
     </message>
-    <message>
-        <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>activate code protection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Change Code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -325,15 +240,7 @@
 <context>
     <name>WritePage</name>
     <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>#Hashtags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -341,23 +248,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add a title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Entry...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -368,15 +263,7 @@
 <context>
     <name>harbour-captains-log</name>
     <message>
-        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>good</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -384,16 +271,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>not okay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Captain&apos;s Log</source>
-        <comment>the app&apos;s name</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
