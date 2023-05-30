@@ -43,19 +43,11 @@
 </context>
 <context>
     <name>EntryElement</name>
-    <message>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -99,10 +91,6 @@
         <source>Contributors</source>
         <translation>Bijdragers</translation>
     </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>License(s)</source>
         <translation type="unfinished">
@@ -119,20 +107,11 @@
 </context>
 <context>
     <name>ReadPage</name>
-    <message>
-        <source>changed: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchQueryPage</name>
     <message>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -149,10 +128,6 @@
 </context>
 <context>
     <name>SettingsPage</name>
-    <message>
-        <source>Export features</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>WritePage</name>
@@ -160,19 +135,11 @@
         <source>How did you feel?</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
     <message>
         <source>ddd d MMM yyyy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>not okay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

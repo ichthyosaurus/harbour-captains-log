@@ -43,19 +43,11 @@
 </context>
 <context>
     <name>EntryElement</name>
-    <message>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -118,10 +110,6 @@
 </context>
 <context>
     <name>PinPage</name>
-    <message>
-        <source>Please enter your security code</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ReadPage</name>
@@ -130,10 +118,6 @@
     <name>SearchQueryPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -147,10 +131,6 @@
 </context>
 <context>
     <name>SettingsPage</name>
-    <message>
-        <source>Set Code</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>WritePage</name>
@@ -158,19 +138,11 @@
         <source>Entry</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>harbour-captains-log</name>
     <message>
         <source>hh&apos;:&apos;mm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>horrible</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
