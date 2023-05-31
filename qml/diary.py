@@ -140,10 +140,11 @@ class Diary:
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "5":
-            to_version = "5+1"
+            to_version = "5+2"
 
             # 1. rename columns:
             # - hashtags    -> tags
+            # - audio_path  -> attachments_id
             #
             # 3. reorder columns
 
@@ -154,14 +155,14 @@ class Diary:
                                        modify_date TEXT NOT NULL, modify_tz TEXT,
                                        title TEXT, preview TEXT, entry TEXT,
                                        tags TEXT, mood INTEGER, bookmark BOOLEAN,
-                                       audio_path TEXT
+                                       attachments_id TEXT
                                    );""")
             self.cursor.execute("""INSERT INTO diary_temp(
                                        create_date, create_tz,
                                        modify_date, modify_tz,
                                        title, preview, entry,
                                        tags, mood, bookmark,
-                                       audio_path
+                                       attachments_id
                                    )
                                    SELECT create_date, create_tz,
                                           modify_date, modify_tz,
@@ -171,7 +172,7 @@ class Diary:
                                    FROM diary;""")
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "5+1":
+        elif from_version == "5+2":
             # we arrived at the latest version; save it and return
             if self.schema_version != from_version:
                 self.conn.commit()
