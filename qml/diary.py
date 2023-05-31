@@ -314,7 +314,9 @@ def add_entry(create_date, mood, title, preview, entry, tags, timezone):
     DIARY.cursor.execute("""
         INSERT INTO diary(
             create_order, entry_order, entry_order_addenda,
+
             create_date, create_tz,
+            entry_date, entry_tz,
             modify_date, modify_tz,
             title, preview, entry,
             tags, mood, bookmark
@@ -322,11 +324,14 @@ def add_entry(create_date, mood, title, preview, entry, tags, timezone):
             (SELECT IFNULL(MAX(create_order), 0) + 1 FROM diary),
             (SELECT IFNULL(MAX(entry_order), 0) + 1 FROM diary),
             0,
+
+            ?, ?,
             ?, ?,
             "", "",
             ?, ?, ?,
             ?, ?, ?
         );""", (create_date, timezone,
+                create_date, timezone,
                 title.strip(), preview.strip(), entry.strip(),
                 tags.strip(), mood, 0))
     DIARY.conn.commit()
