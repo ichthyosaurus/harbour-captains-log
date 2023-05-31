@@ -261,21 +261,32 @@ def initialize(data_path, db_data_file, db_version_file):
     return False
 
 
+_FIELD_DEFAULTS = {
+    'rowid': (-1, lambda x: x if x is not None else -1),
+    'create_order': (0, lambda x: x or 0),
+    'entry_order': (0, lambda x: x or 0),
+    'entry_order_addenda': (0, lambda x: x or 0),
+    'create_date': ('', lambda x: x or ''),
+    'create_tz': ('', lambda x: x or ''),
+    'entry_date': ('', lambda x: x or ''),
+    'entry_tz': ('', lambda x: x or ''),
+    'modify_date': ('', lambda x: x or ''),
+    'modify_tz': ('', lambda x: x or ''),
+    'title': ('', lambda x: x.strip() if x else ''),
+    'preview': ('', lambda x: x.strip() if x else ''),
+    'entry': ('', lambda x: x.strip() if x else ''),
+    'tags': ('', lambda x: x.strip() if x else ''),
+    'mood': (2, lambda x: x if x is not None else 2),
+    'bookmark': (False, lambda x: True if x == 1 else False),
+    'attachments_id': (0, lambda x: x or ''),
+}
+
+
 def _clean_entry_row(row):
-    # default values are only used if database is corrupted
-    return {"create_date": row["create_date"] if row["create_date"] else "",
-            "day": (row["create_date"] if row["create_date"] else "").split(' ')[0],
-            "modify_date": row["modify_date"] if row["modify_date"] else "",
-            "mood": row["mood"] if row["mood"] is not None else 2,  # default to 2=okay
-            "title": (row["title"] if row["title"] else "").strip(),
-            "preview": (row["preview"] if row["preview"] else "").strip(),
-            "entry": (row["entry"] if row["entry"] else "").strip(),
-            "bookmark": True if row["bookmark"] == 1 else False,
-            "tags": (row["tags"] if row["tags"] else "").strip(),
-            "create_tz": row["create_tz"] if row["create_tz"] else "",
-            "modify_tz": row["modify_tz"] if row["modify_tz"] else "",
-            "rowid": row["rowid"]  # rowid cannot be empty
-            }
+    row_keys = row.keys()
+
+    return {k: _FIELD_DEFAULTS[k][1](row[k]) if k in row_keys else _FIELD_DEFAULTS[k][0]
+            for k, v in _FIELD_DEFAULTS.items()}
 
 
 def get_entries():
