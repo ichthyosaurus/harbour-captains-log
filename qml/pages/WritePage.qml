@@ -64,9 +64,11 @@ Dialog {
         var tags = tagsField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, entryDate, entryTz, mood, title_text, preview, entry, tags, rowid);
+            updateEntry(model, index, entryDate, entryTz,
+                        mood, title_text, preview, entry, tags, rowid);
         } else {
-            addEntry(dbCurrentDate, mood, title_text, preview, entry, tags);
+            addEntry(dbCurrentDate, dbCurrentDate, appWindow.timezone,
+                     mood, title_text, preview, entry, tags);
         }
     }
 

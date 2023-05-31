@@ -169,8 +169,9 @@ ApplicationWindow
         })
     }
 
-    function addEntry(entryDate, mood, title, preview, entry, tags) {
-        py.call("diary.add_entry", [entryDate, mood, title, preview, entry, tags, timezone], function(entry) {
+    function addEntry(createDate, entryDate, entryTz, mood, title, preview, entry, tags) {
+        py.call("diary.add_entry", [createDate, timezone, entryDate, entryTz,
+                                    mood, title, preview, entry, tags], function(entry) {
             console.log("Added entry to database")
             rawModel.insert(0, entry);
         })

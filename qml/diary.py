@@ -312,8 +312,9 @@ def get_entries():
     pyotherside.send('entries', batch)
 
 
-def add_entry(create_date, mood, title, preview, entry, tags, timezone):
-    """ Add new entry to the database. By default last modification is set to NULL and bookmark option to FALSE. """
+def add_entry(create_date, create_tz, entry_date, entry_tz,
+              mood, title, preview, entry, tags):
+    """ Add a new entry to the database. """
     DIARY.cursor.execute("""
         INSERT INTO diary(
             create_order, entry_order, entry_order_addenda,
@@ -333,8 +334,8 @@ def add_entry(create_date, mood, title, preview, entry, tags, timezone):
             "", "",
             ?, ?, ?,
             ?, ?, ?
-        );""", (create_date, timezone,
-                create_date, timezone,
+        );""", (create_date, create_tz,
+                entry_date, entry_tz,
                 title.strip(), preview.strip(), entry.strip(),
                 tags.strip(), mood, 0))
     DIARY.conn.commit()
