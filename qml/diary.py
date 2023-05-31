@@ -315,26 +315,49 @@ def get_entries():
 def add_entry(create_date, create_tz, entry_date, entry_tz,
               mood, title, preview, entry, tags):
     """ Add a new entry to the database. """
+
+    DIARY.cursor.execute("""SELECT IFNULL(MAX(create_order), 0) + 1 FROM diary;""")
+    row = DIARY.cursor.fetchone()
+    create_order = row[0]
+
+    if create_date != entry_date and create_date.split(' ')[0] != entry_date.split(' ')[0]:
+        # assumptions:
+        # - both dates are valid and properly formatted (yyyy-mm-dd hh:mm:ss)
+        # - create_date is today
+        # - entry_date is in the past
+        # -> add an addendum to the day of entry_date
+        DIARY.cursor.execute("""
+            SELECT entry_order, entry_order_addenda + 1 FROM diary
+            WHERE entry_date LIKE ?
+            ORDER BY entry_order DESC, entry_order_addenda DESC
+            LIMIT 1;
+        """, (f"{entry_date.split(' ')[0]} %", ))
+        row = DIARY.cursor.fetchone()
+
+        entry_order = row[0]
+        entry_order_addenda = row[1]
+    else:
+        # -> add a regular new entry
+        entry_order = create_order
+        entry_order_addenda = 0
+
     DIARY.cursor.execute("""
         INSERT INTO diary(
             create_order, entry_order, entry_order_addenda,
-
             create_date, create_tz,
             entry_date, entry_tz,
             modify_date, modify_tz,
             title, preview, entry,
             tags, mood, bookmark
         ) VALUES (
-            (SELECT IFNULL(MAX(create_order), 0) + 1 FROM diary),
-            (SELECT IFNULL(MAX(entry_order), 0) + 1 FROM diary),
-            0,
-
+            ?, ?, ?,
             ?, ?,
             ?, ?,
             "", "",
             ?, ?, ?,
             ?, ?, ?
-        );""", (create_date, create_tz,
+        );""", (create_order, entry_order, entry_order_addenda,
+                create_date, create_tz,
                 entry_date, entry_tz,
                 title.strip(), preview.strip(), entry.strip(),
                 tags.strip(), mood, 0))

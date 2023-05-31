@@ -44,13 +44,13 @@ Dialog {
     property bool editing: rowid > -1
 
     property string entryDate: dbCurrentDate
+    property string entryTz: appWindow.timezone
     property string modifyDate: ""
+    property string modifyTz: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
     property alias tags: tagsField.text
     property alias mood: moodMenu.selectedIndex
-    property string entryTz: ""
-    property string modifyTz: ""
     property int rowid: -1
     property int index: -1
     property var model: null
@@ -67,7 +67,7 @@ Dialog {
             updateEntry(model, index, entryDate, entryTz,
                         mood, title_text, preview, entry, tags, rowid);
         } else {
-            addEntry(dbCurrentDate, dbCurrentDate, appWindow.timezone,
+            addEntry(dbCurrentDate, entryDate, entryTz,
                      mood, title_text, preview, entry, tags);
         }
     }
@@ -82,13 +82,13 @@ Dialog {
         }
 
         appWindow._currentlyEditedEntry.entryDate  = entryDate
+        appWindow._currentlyEditedEntry.entryTz    = entryTz
         appWindow._currentlyEditedEntry.modifyDate = modifyDate
+        appWindow._currentlyEditedEntry.modifyTz   = modifyTz
         appWindow._currentlyEditedEntry.title      = title
         appWindow._currentlyEditedEntry.entry      = entry
         appWindow._currentlyEditedEntry.tags       = tags
         appWindow._currentlyEditedEntry.mood       = mood
-        appWindow._currentlyEditedEntry.entryTz    = entryTz
-        appWindow._currentlyEditedEntry.modifyTz   = modifyTz
         appWindow._currentlyEditedEntry.rowid      = rowid
         appWindow._currentlyEditedEntry.index      = index
         appWindow._currentlyEditedEntry.model      = model
