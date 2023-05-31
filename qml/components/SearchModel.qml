@@ -17,7 +17,7 @@ SortFilterProxyModel {
 
     proxyRoles: ExpressionRole {
         name: "calculatedDate"
-        expression: appWindow.parseDate(model.create_date)
+        expression: appWindow.parseDate(model.entry_date)
     }
 
     filters: [

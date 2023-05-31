@@ -340,18 +340,18 @@ def add_entry(create_date, mood, title, preview, entry, tags, timezone):
     DIARY.conn.commit()
 
     DIARY.cursor.execute("""
-        SELECT *, rowid FROM diary WHERE rowid = ?""",
-        (DIARY.cursor.lastrowid, ))
+        SELECT *, rowid FROM diary WHERE rowid = ?""", (
+        DIARY.cursor.lastrowid, ))
     rows = DIARY.cursor.fetchall()
 
     return _clean_entry_row(rows[0])
 
 
-def update_entry(create_date, create_tz, modify_date, mood, title, preview, entry, tags, timezone, rowid):
+def update_entry(entry_date, entry_tz, modify_date, mood, title, preview, entry, tags, timezone, rowid):
     """ Updates an entry in the database. """
     DIARY.cursor.execute("""UPDATE diary
-                            SET create_date = ?,
-                                create_tz = ?,
+                            SET entry_date = ?,
+                                entry_tz = ?,
                                 modify_date = ?,
                                 mood = ?,
                                 title = ?,
@@ -361,7 +361,7 @@ def update_entry(create_date, create_tz, modify_date, mood, title, preview, entr
                                 modify_tz = ?
                             WHERE
                                 rowid = ?;""",
-                         (create_date, create_tz, modify_date, mood, title.strip(), preview.strip(), entry.strip(), tags.strip(), timezone, rowid))
+                         (entry_date, entry_tz, modify_date, mood, title.strip(), preview.strip(), entry.strip(), tags.strip(), timezone, rowid))
     DIARY.conn.commit()
 
 
@@ -430,7 +430,7 @@ def export(filename, type, translations):
         with open(filename, "w+", encoding='utf-8') as f:
             for e in entries:
                 lines = [
-                    tr('Created: {}').format(DIARY._format_date(e["create_date"], e["create_tz"])),
+                    tr('Created: {}').format(DIARY._format_date(e["entry_date"], e["entry_tz"])),
                     tr('Changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"]))), '',
                     tr('Title: {}').format(e['title']), '',
                     tr('Entry:\n{}').format(e['entry']), '',
@@ -453,8 +453,8 @@ def export(filename, type, translations):
         # Export as plain Markdown file
         with open(filename, "w+", encoding='utf-8') as f:
             with open(filename, "w+", encoding='utf-8') as f:
-                from_date = DIARY._format_date(entries[-1]["create_date"], entries[-1]["create_tz"])
-                till_date = DIARY._format_date(entries[0]["create_date"], entries[0]["create_tz"])
+                from_date = DIARY._format_date(entries[-1]["entry_date"], entries[-1]["entry_tz"])
+                till_date = DIARY._format_date(entries[0]["entry_date"], entries[0]["entry_tz"])
                 f.write('# ' + tr('Diary from {} until {}').format(from_date, till_date) + '\n\n')
 
                 for e in entries:
@@ -464,7 +464,7 @@ def export(filename, type, translations):
                     tags = "\\# *" + e["tags"] + "*" if e["tags"] else ""
 
                     lines = [
-                        '## ' + DIARY._format_date(e["create_date"], e["create_tz"]) + bookmark, '',
+                        '## ' + DIARY._format_date(e["entry_date"], e["entry_tz"]) + bookmark, '',
                         title + e['entry'], '',
                         tr('Mood: {}').format(mood),
                         tr('Changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"]))),
@@ -474,8 +474,8 @@ def export(filename, type, translations):
     elif type == "tex.md":
         # Export as Markdown file to be converted using Pandoc
         with open(filename, "w+", encoding='utf-8') as f:
-            from_date = DIARY._format_date(entries[-1]["create_date"], entries[-1]["create_tz"])
-            till_date = DIARY._format_date(entries[0]["create_date"], entries[0]["create_tz"])
+            from_date = DIARY._format_date(entries[-1]["entry_date"], entries[-1]["entry_tz"])
+            till_date = DIARY._format_date(entries[0]["entry_date"], entries[0]["entry_tz"])
             head = [
                 '---'
                 'title: "{}"'.format(tr("Diary from {} until {}").format(from_date, till_date)),
@@ -493,7 +493,7 @@ def export(filename, type, translations):
                 tags = "\\# \\emph{" + e["tags"] + "}" if e["tags"] else ""
 
                 lines = [
-                    '# ' + DIARY._format_date(e["create_date"], e["create_tz"]) + bookmark, '',
+                    '# ' + DIARY._format_date(e["entry_date"], e["entry_tz"]) + bookmark, '',
                     title + e['entry'], '',
                     '\\begin{small}',
                     '{}\\hfill {}'.format(tr('Mood: {}').format(mood), tr('changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"])))),

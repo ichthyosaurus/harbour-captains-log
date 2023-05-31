@@ -25,14 +25,14 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
-    property string createDate
+    property string entryDate
     property string modifyDate
     property int mood
     property string title
     property string entry
     property bool bookmark
     property string tags
-    property string createTz
+    property string entryTz
     property string modifyTz
     property int rowid
     property int index
@@ -49,8 +49,8 @@ Page {
         }
         onEntryUpdated: {
             if (rowid !== page.rowid) return
-            page.createDate = createDate
-            page.createTz = createTz
+            page.entryDate = entryDate
+            page.entryTz = entryTz
             page.modifyDate = changeDate
             page.mood = mood
             page.title = title
@@ -74,9 +74,9 @@ Page {
                     pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
                                        "tags": tags, "rowid": rowid,
-                                       "createDate": createDate, "modifyDate": modifyDate,
+                                       "entryDate": entryDate, "modifyDate": modifyDate,
                                        "index": index, "model": model,
-                                       "modifyTz": modifyTz, "createTz": createTz,
+                                       "modifyTz": modifyTz, "entryTz": entryTz,
                                        "acceptDestination": "" // return to the calling page
                                    })
                 }
@@ -90,8 +90,8 @@ Page {
 
             PageHeader {
                 id: header
-                title: formatDate(createDate, "dddd")
-                description: formatDate(createDate, dateTimeFormat, createTz)
+                title: formatDate(entryDate, "dddd")
+                description: formatDate(entryDate, dateTimeFormat, entryTz)
                 _titleItem.truncationMode: TruncationMode.Fade
                 _titleItem.horizontalAlignment: Text.AlignRight
             }

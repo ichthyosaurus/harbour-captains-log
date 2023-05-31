@@ -61,7 +61,7 @@ ListItem {
             selectedIndex: mood
             onSelectedIndexChanged: {
                 if (selectedIndex === model.mood) return
-                updateEntry(realModel, index, create_date, create_tz, selectedIndex /* = new mood */, title, preview, entry, tags, rowid)
+                updateEntry(realModel, index, entry_date, entry_tz, selectedIndex /* = new mood */, title, preview, entry, tags, rowid)
             }
         }
     }
@@ -76,9 +76,9 @@ ListItem {
                     pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
                                        "tags": tags, "rowid": rowid,
-                                       "createDate": create_date, "modifyDate": modify_date,
+                                       "entryDate": entry_date, "modifyDate": modify_date,
                                        "index": index, "model": realModel,
-                                       "modifyTz": modify_tz, "createTz": create_tz
+                                       "modifyTz": modify_tz, "entryTz": entry_tz
                                    })
                 }
             }
@@ -103,12 +103,12 @@ ListItem {
 
     onClicked: {
         pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
-                           "createDate": create_date, "modifyDate": modify_date,
+                           "entryDate": entry_date, "modifyDate": modify_date,
                            "mood": mood, "title": title,
                            "entry": entry, "bookmark": bookmark,
                            "tags": tags, "rowid": rowid, "index": index,
                            "model": realModel, "editable": editable,
-                           "modifyTz": modify_tz, "createTz": create_tz
+                           "modifyTz": modify_tz, "entryTz": entry_tz
                        })
     }
 
@@ -122,16 +122,16 @@ ListItem {
         }
 
         Label {
-            id: createDateLabel
+            id: entryDateLabel
             anchors { top: parent.top }
             palette.primaryColor: Theme.highlightColor
             font.pixelSize: Theme.fontSizeMedium
-            text: formatDate(create_date, atTimeFormat, create_tz)
+            text: formatDate(entry_date, atTimeFormat, entry_tz)
         }
 
         Label {
             id: titleText
-            anchors { top: createDateLabel.bottom; topMargin: Theme.paddingSmall }
+            anchors { top: entryDateLabel.bottom; topMargin: Theme.paddingSmall }
             palette.primaryColor: Theme.highlightColor
             text: title
             height: _hasTitle ? contentHeight : 0

@@ -43,13 +43,13 @@ Dialog {
     property string dbCurrentDate: Qt.formatDateTime(new Date(), dbDateFormat)
     property bool editing: rowid > -1
 
-    property string createDate: dbCurrentDate
+    property string entryDate: dbCurrentDate
     property string modifyDate: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
     property alias tags: tagsField.text
     property alias mood: moodMenu.selectedIndex
-    property string createTz: ""
+    property string entryTz: ""
     property string modifyTz: ""
     property int rowid: -1
     property int index: -1
@@ -64,7 +64,7 @@ Dialog {
         var tags = tagsField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, createDate, createTz, mood, title_text, preview, entry, tags, rowid);
+            updateEntry(model, index, entryDate, entryTz, mood, title_text, preview, entry, tags, rowid);
         } else {
             addEntry(dbCurrentDate, mood, title_text, preview, entry, tags);
         }
@@ -79,13 +79,13 @@ Dialog {
             return
         }
 
-        appWindow._currentlyEditedEntry.createDate = createDate
+        appWindow._currentlyEditedEntry.entryDate  = entryDate
         appWindow._currentlyEditedEntry.modifyDate = modifyDate
         appWindow._currentlyEditedEntry.title      = title
         appWindow._currentlyEditedEntry.entry      = entry
         appWindow._currentlyEditedEntry.tags       = tags
         appWindow._currentlyEditedEntry.mood       = mood
-        appWindow._currentlyEditedEntry.createTz   = createTz
+        appWindow._currentlyEditedEntry.entryTz    = entryTz
         appWindow._currentlyEditedEntry.modifyTz   = modifyTz
         appWindow._currentlyEditedEntry.rowid      = rowid
         appWindow._currentlyEditedEntry.index      = index
@@ -123,13 +123,13 @@ Dialog {
 
             DateTimePickerCombo {
                 label: qsTr("Date")
-                date: createDate
-                timeZone: createTz
+                date: entryDate
+                timeZone: entryTz
                 description: modifyDate !== "" ?
                                  qsTr("Last edited: %1").arg(formatDate(
                                      modifyDate, fullDateTimeFormat, modifyTz, qsTr("never"))) :
                                  ""
-                onDateChanged: createDate = date
+                onDateChanged: entryDate = date
 
                 // Changing the entry date is not allowed later because
                 // it is too complicated to ensure entries are properly
