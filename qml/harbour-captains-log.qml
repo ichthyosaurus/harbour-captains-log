@@ -69,6 +69,17 @@ ApplicationWindow
     SortFilterProxyModel {
         id: _sortedModel
         sourceModel: _sourceModel
+
+        sorters: [
+            RoleSorter {
+                roleName: "entry_order"
+                sortOrder: Qt.DescendingOrder
+            },
+            RoleSorter {
+                roleName: "entry_order_addenda"
+                sortOrder: Qt.DescendingOrder
+            }
+        ]
     }
 
     // global helper functions

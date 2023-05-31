@@ -276,7 +276,9 @@ def _clean_entry_row(row):
 def get_entries():
     """ Load all entries and ship them to QML """
 
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary ORDER BY rowid DESC; """)
+    DIARY.cursor.execute("""
+        SELECT *, rowid FROM diary
+        ORDER BY entry_order DESC, entry_order_addenda DESC;""")
     rows = DIARY.cursor.fetchall()
 
     batch = []
@@ -369,7 +371,9 @@ def delete_entry(id):
 
 def _read_all_entries():
     """ Read all entries to export them """
-    DIARY.cursor.execute(""" SELECT *, rowid FROM diary ORDER BY rowid DESC; """)
+    DIARY.cursor.execute("""
+        SELECT *, rowid FROM diary
+        ORDER BY entry_order DESC, entry_order_addenda DESC;""")
     rows = DIARY.cursor.fetchall()
 
     cleaned_rows = []
