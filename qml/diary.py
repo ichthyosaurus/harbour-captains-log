@@ -140,17 +140,25 @@ class Diary:
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "5":
-            to_version = "5+2"
+            to_version = "5+3"
 
             # 1. rename columns:
             # - hashtags    -> tags
             # - audio_path  -> attachments_id
+            #
+            # 2. add columns:
+            # - create_order
+            # - entry_order
+            # - entry_order_addenda
             #
             # 3. reorder columns
 
             self.cursor.execute("""VACUUM;""")
             self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
             self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
+                                       create_order INTEGER NOT NULL,
+                                       entry_order INTEGER NOT NULL,
+                                       entry_order_addenda INTEGER NOT NULL,
                                        create_date TEXT NOT NULL, create_tz TEXT,
                                        modify_date TEXT NOT NULL, modify_tz TEXT,
                                        title TEXT, preview TEXT, entry TEXT,
@@ -158,21 +166,24 @@ class Diary:
                                        attachments_id TEXT
                                    );""")
             self.cursor.execute("""INSERT INTO diary_temp(
+                                       create_order, entry_order, entry_order_addenda,
                                        create_date, create_tz,
                                        modify_date, modify_tz,
                                        title, preview, entry,
                                        tags, mood, bookmark,
                                        attachments_id
                                    )
-                                   SELECT create_date, create_tz,
+                                   SELECT rowid, rowid, rowid,
+                                          create_date, create_tz,
                                           modify_date, modify_tz,
                                           title, preview, entry,
                                           hashtags, mood, bookmark,
                                           audio_path
                                    FROM diary;""")
+            self.cursor.execute("""UPDATE diary_temp SET entry_order_addenda=0;""")
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "5+2":
+        elif from_version == "5+3":
             # we arrived at the latest version; save it and return
             if self.schema_version != from_version:
                 self.conn.commit()
@@ -282,10 +293,24 @@ def get_entries():
 
 def add_entry(create_date, mood, title, preview, entry, tags, timezone):
     """ Add new entry to the database. By default last modification is set to NULL and bookmark option to FALSE. """
-    DIARY.cursor.execute("""INSERT INTO diary
-                            (create_date, modify_date, mood, title, preview, entry, bookmark, tags, create_tz)
-                            VALUES (?, "", ?, ?, ?, ?, 0, ?, ?);""",
-                         (create_date, mood, title.strip(), preview.strip(), entry.strip(), tags.strip(), timezone))
+    DIARY.cursor.execute("""
+        INSERT INTO diary(
+            create_order, entry_order, entry_order_addenda,
+            create_date, create_tz,
+            modify_date, modify_tz,
+            title, preview, entry,
+            tags, mood, bookmark
+        ) VALUES (
+            (SELECT IFNULL(MAX(create_order), 0) + 1 FROM diary),
+            (SELECT IFNULL(MAX(entry_order), 0) + 1 FROM diary),
+            0,
+            ?, ?,
+            "", "",
+            ?, ?, ?,
+            ?, ?, ?
+        );""", (create_date, timezone,
+                title.strip(), preview.strip(), entry.strip(),
+                tags.strip(), mood, 0))
     DIARY.conn.commit()
 
     entry = {"create_date": create_date,
