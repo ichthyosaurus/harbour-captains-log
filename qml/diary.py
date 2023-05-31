@@ -140,7 +140,7 @@ class Diary:
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "5":
-            to_version = "5+3"
+            to_version = "5+4"
 
             # 1. rename columns:
             # - hashtags    -> tags
@@ -150,6 +150,8 @@ class Diary:
             # - create_order
             # - entry_order
             # - entry_order_addenda
+            # - entry_date
+            # - entry_tz
             #
             # 3. reorder columns
 
@@ -160,6 +162,7 @@ class Diary:
                                        entry_order INTEGER NOT NULL,
                                        entry_order_addenda INTEGER NOT NULL,
                                        create_date TEXT NOT NULL, create_tz TEXT,
+                                       entry_date TEXT NOT NULL, entry_tz TEXT,
                                        modify_date TEXT NOT NULL, modify_tz TEXT,
                                        title TEXT, preview TEXT, entry TEXT,
                                        tags TEXT, mood INTEGER, bookmark BOOLEAN,
@@ -168,12 +171,14 @@ class Diary:
             self.cursor.execute("""INSERT INTO diary_temp(
                                        create_order, entry_order, entry_order_addenda,
                                        create_date, create_tz,
+                                       entry_date, entry_tz,
                                        modify_date, modify_tz,
                                        title, preview, entry,
                                        tags, mood, bookmark,
                                        attachments_id
                                    )
                                    SELECT rowid, rowid, rowid,
+                                          create_date, create_tz,
                                           create_date, create_tz,
                                           modify_date, modify_tz,
                                           title, preview, entry,
@@ -183,7 +188,7 @@ class Diary:
             self.cursor.execute("""UPDATE diary_temp SET entry_order_addenda=0;""")
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "5+3":
+        elif from_version == "5+4":
             # we arrived at the latest version; save it and return
             if self.schema_version != from_version:
                 self.conn.commit()
