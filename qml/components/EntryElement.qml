@@ -2,7 +2,7 @@
  * This file is part of Captain's Log.
  *
  * SPDX-FileCopyrightText: 2020 Gabriel Berkigt
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -35,20 +35,20 @@ ListItem {
     property bool _hasPreview: _previewData !== ""
     property bool _hasTitle: title !== ""
     property bool _isMoodOnly: !_hasTitle && !_hasPreview
-    property bool _hasTags: hashtagsAndModify.text !== ""
+    property bool _hasTags: tagsAndModify.text !== ""
 
-    function getHashtagText() {
+    function getTagText() {
         if (modify_date.length > 0) {
             var date = formatDate(modify_date, dateTimeFormat, modify_tz)
             var ret = qsTr("Edit: %1").arg(date)
 
-            if (hashtags.length > 0) {
-                return "%1 – # %2".arg(ret).arg(hashtags)
+            if (tags.length > 0) {
+                return "%1 – # %2".arg(ret).arg(tags)
             } else {
                 return ret
             }
         } else {
-            if (hashtags.length > 0) return "# %1".arg(hashtags)
+            if (tags.length > 0) return "# %1".arg(tags)
             else return ""
         }
     }
@@ -60,8 +60,8 @@ ListItem {
         MoodMenu {
             selectedIndex: mood
             onSelectedIndexChanged: {
-                if (selectedIndex == mood) return; // only update if it changed
-                updateEntry(realModel, index, create_date, create_tz, selectedIndex /* = new mood */, title, preview, entry, hashtags, rowid)
+                if (selectedIndex === model.mood) return
+                updateEntry(realModel, index, create_date, create_tz, selectedIndex /* = new mood */, title, preview, entry, tags, rowid)
             }
         }
     }
@@ -75,7 +75,7 @@ ListItem {
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("../pages/WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
-                                       "hashtags": hashtags, "rowid": rowid,
+                                       "tags": tags, "rowid": rowid,
                                        "createDate": create_date, "modifyDate": modify_date,
                                        "index": index, "model": realModel,
                                        "modifyTz": modify_tz, "createTz": create_tz
@@ -106,7 +106,7 @@ ListItem {
                            "createDate": create_date, "modifyDate": modify_date,
                            "mood": mood, "title": title,
                            "entry": entry, "bookmark": bookmark,
-                           "hashtags": hashtags, "rowid": rowid, "index": index,
+                           "tags": tags, "rowid": rowid, "index": index,
                            "model": realModel, "editable": editable,
                            "modifyTz": modify_tz, "createTz": create_tz
                        })
@@ -146,7 +146,7 @@ ListItem {
             anchors {
                 top: titleText.bottom
                 topMargin: _hasTitle ? Theme.paddingSmall : 0
-                bottom: hashtagsAndModify.top
+                bottom: tagsAndModify.top
             }
             palette {
                 primaryColor: _hasPreview ? Theme.primaryColor : Theme.secondaryColor
@@ -160,7 +160,7 @@ ListItem {
         }
 
         Label {
-            id: hashtagsAndModify
+            id: tagsAndModify
             anchors { bottom: parent.bottom; bottomMargin: Theme.paddingSmall }
             palette {
                 primaryColor: Theme.secondaryColor
@@ -168,7 +168,7 @@ ListItem {
             }
             width: parent.width
             font.pixelSize: Theme.fontSizeExtraSmall
-            text: root.getHashtagText()
+            text: root.getTagText()
             height: text !== "" ? contentHeight : 0
             maximumLineCount: 1
             truncationMode: TruncationMode.Fade

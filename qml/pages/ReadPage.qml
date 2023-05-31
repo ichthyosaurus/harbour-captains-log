@@ -31,7 +31,7 @@ Page {
     property string title
     property string entry
     property bool bookmark
-    property string hashtags
+    property string tags
     property string createTz
     property string modifyTz
     property int rowid
@@ -55,7 +55,7 @@ Page {
             page.mood = mood
             page.title = title
             page.entry = entry
-            page.hashtags = hashs
+            page.tags = tags
             page.modifyTz = modifyTz
         }
     }
@@ -73,7 +73,7 @@ Page {
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
                                        "title": title, "mood": mood, "entry": entry,
-                                       "hashtags": hashtags, "rowid": rowid,
+                                       "tags": tags, "rowid": rowid,
                                        "createDate": createDate, "modifyDate": modifyDate,
                                        "index": index, "model": model,
                                        "modifyTz": modifyTz, "createTz": createTz,
@@ -162,11 +162,11 @@ Page {
             }
 
             TextArea {
-                id: hashtagArea
+                id: tagsArea
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 readOnly: true
-                text: hashtags.length > 0 ? "# "+hashtags : ""
+                text: tags.length > 0 ? "# " + tags : ""
             }
 
             Item { visible: moodImage.visible; width: parent.width; height: Theme.paddingLarge }

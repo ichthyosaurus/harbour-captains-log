@@ -47,7 +47,7 @@ Dialog {
     property string modifyDate: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
-    property alias hashtags: hashtagField.text
+    property alias tags: tagsField.text
     property alias mood: moodMenu.selectedIndex
     property string createTz: ""
     property string modifyTz: ""
@@ -61,12 +61,12 @@ Dialog {
         // regular expression to kick out all newline chars in preview
         var preview = entryArea.text.substring(0, 150).replace(/\r?\n|\r/g, " ").trim()
         var entry = entryArea.text.trim()
-        var hashs = hashtagField.text.trim()
+        var tags = tagsField.text.trim()
 
         if (editing) {
-            updateEntry(model, index, createDate, createTz, mood, title_text, preview, entry, hashs, rowid);
+            updateEntry(model, index, createDate, createTz, mood, title_text, preview, entry, tags, rowid);
         } else {
-            addEntry(dbCurrentDate, mood, title_text, preview, entry, hashs);
+            addEntry(dbCurrentDate, mood, title_text, preview, entry, tags);
         }
     }
 
@@ -75,7 +75,7 @@ Dialog {
             return
         }
 
-        if (title == "" && entry == "" && hashtags == "") {
+        if (title == "" && entry == "" && tags == "") {
             return
         }
 
@@ -83,7 +83,7 @@ Dialog {
         appWindow._currentlyEditedEntry.modifyDate = modifyDate
         appWindow._currentlyEditedEntry.title      = title
         appWindow._currentlyEditedEntry.entry      = entry
-        appWindow._currentlyEditedEntry.hashtags   = hashtags
+        appWindow._currentlyEditedEntry.tags       = tags
         appWindow._currentlyEditedEntry.mood       = mood
         appWindow._currentlyEditedEntry.createTz   = createTz
         appWindow._currentlyEditedEntry.modifyTz   = modifyTz
@@ -182,14 +182,14 @@ Dialog {
             }
 
             TextField {
-                id: hashtagField
+                id: tagsField
                 width: parent.width
-                placeholderText: qsTr("Hashtags")
+                placeholderText: qsTr("Tags")
                 font.pixelSize: Theme.fontSizeExtraSmall
-                label: qsTr("#Hashtags")
+                label: qsTr("Tags")
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: {
-                    hashtagField.focus = false
+                    tagsField.focus = false
                 }
             }
         }

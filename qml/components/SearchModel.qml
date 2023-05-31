@@ -58,11 +58,11 @@ SortFilterProxyModel {
             }
 
             RegExpFilter {
-                enabled: !!queries.hashtags
+                enabled: !!queries.tags
                 caseSensitivity: Qt.CaseInsensitive
                 syntax: queries.textMatchMode
-                pattern: queries.hashtags
-                roleName: "hashtags"
+                pattern: queries.tags
+                roleName: "tags"
             }
 
             RangeFilter {

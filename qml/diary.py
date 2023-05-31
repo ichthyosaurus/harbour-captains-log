@@ -140,6 +140,38 @@ class Diary:
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "5":
+            to_version = "5+1"
+
+            # 1. rename columns:
+            # - hashtags    -> tags
+            #
+            # 3. reorder columns
+
+            self.cursor.execute("""VACUUM;""")
+            self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
+            self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
+                                       create_date TEXT NOT NULL, create_tz TEXT,
+                                       modify_date TEXT NOT NULL, modify_tz TEXT,
+                                       title TEXT, preview TEXT, entry TEXT,
+                                       tags TEXT, mood INTEGER, bookmark BOOLEAN,
+                                       audio_path TEXT
+                                   );""")
+            self.cursor.execute("""INSERT INTO diary_temp(
+                                       create_date, create_tz,
+                                       modify_date, modify_tz,
+                                       title, preview, entry,
+                                       tags, mood, bookmark,
+                                       audio_path
+                                   )
+                                   SELECT create_date, create_tz,
+                                          modify_date, modify_tz,
+                                          title, preview, entry,
+                                          hashtags, mood, bookmark,
+                                          audio_path
+                                   FROM diary;""")
+            self.cursor.execute("""DROP TABLE diary;""")
+            self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
+        elif from_version == "5+1":
             # we arrived at the latest version; save it and return
             if self.schema_version != from_version:
                 self.conn.commit()
@@ -222,7 +254,7 @@ def _clean_entry_row(row):
             "preview": (row["preview"] if row["preview"] else "").strip(),
             "entry": (row["entry"] if row["entry"] else "").strip(),
             "bookmark": True if row["bookmark"] == 1 else False,
-            "hashtags": (row["hashtags"] if row["hashtags"] else "").strip(),
+            "tags": (row["tags"] if row["tags"] else "").strip(),
             "create_tz": row["create_tz"] if row["create_tz"] else "",
             "modify_tz": row["modify_tz"] if row["modify_tz"] else "",
             "rowid": row["rowid"]  # rowid cannot be empty
@@ -247,12 +279,12 @@ def get_entries():
     pyotherside.send('entries', batch)
 
 
-def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
+def add_entry(create_date, mood, title, preview, entry, tags, timezone):
     """ Add new entry to the database. By default last modification is set to NULL and bookmark option to FALSE. """
     DIARY.cursor.execute("""INSERT INTO diary
-                            (create_date, modify_date, mood, title, preview, entry, bookmark, hashtags, create_tz)
+                            (create_date, modify_date, mood, title, preview, entry, bookmark, tags, create_tz)
                             VALUES (?, "", ?, ?, ?, ?, 0, ?, ?);""",
-                         (create_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone))
+                         (create_date, mood, title.strip(), preview.strip(), entry.strip(), tags.strip(), timezone))
     DIARY.conn.commit()
 
     entry = {"create_date": create_date,
@@ -263,14 +295,14 @@ def add_entry(create_date, mood, title, preview, entry, hashs, timezone):
              "preview": preview.strip(),
              "entry": entry.strip(),
              "bookmark": False,
-             "hashtags": hashs.strip(),
+             "tags": tags.strip(),
              "create_tz": timezone,
              "modify_tz": "",
              "rowid": DIARY.cursor.lastrowid}
     return entry
 
 
-def update_entry(create_date, create_tz, modify_date, mood, title, preview, entry, hashs, timezone, rowid):
+def update_entry(create_date, create_tz, modify_date, mood, title, preview, entry, tags, timezone, rowid):
     """ Updates an entry in the database. """
     DIARY.cursor.execute("""UPDATE diary
                             SET create_date = ?,
@@ -280,11 +312,11 @@ def update_entry(create_date, create_tz, modify_date, mood, title, preview, entr
                                 title = ?,
                                 preview = ?,
                                 entry = ?,
-                                hashtags = ?,
+                                tags = ?,
                                 modify_tz = ?
                             WHERE
                                 rowid = ?;""",
-                         (create_date, create_tz, modify_date, mood, title.strip(), preview.strip(), entry.strip(), hashs.strip(), timezone, rowid))
+                         (create_date, create_tz, modify_date, mood, title.strip(), preview.strip(), entry.strip(), tags.strip(), timezone, rowid))
     DIARY.conn.commit()
 
 
@@ -355,7 +387,7 @@ def export(filename, type, translations):
                     tr('Changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"]))), '',
                     tr('Title: {}').format(e['title']), '',
                     tr('Entry:\n{}').format(e['entry']), '',
-                    tr('Hashtags: {}').format(e['hashtags']),
+                    tr('Tags: {}').format(e['tags']),
                     tr('Bookmark: {}').format(tr("yes") if e["bookmark"] else tr("no")),
                     tr('Mood: {}').format(trMood(e["mood"])),
                     "-".rjust(80, "-"), '',
@@ -364,7 +396,7 @@ def export(filename, type, translations):
     elif type == "csv":
         # Export as CSV file
         with open(filename, "w+", newline='', encoding='utf-8') as f:
-            fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "hashtags", "bookmark"]
+            fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "tags", "bookmark"]
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
             csv_writer.writeheader()
 
@@ -383,14 +415,14 @@ def export(filename, type, translations):
                     bookmark = " *" if e["bookmark"] else ""
                     title = "** {} **\n".format(e["title"]) if e["title"] else ""
                     mood = trMood(e["mood"])
-                    hashtags = "\\# *" + e["hashtags"] + "*" if e["hashtags"] else ""
+                    tags = "\\# *" + e["tags"] + "*" if e["tags"] else ""
 
                     lines = [
                         '## ' + DIARY._format_date(e["create_date"], e["create_tz"]) + bookmark, '',
                         title + e['entry'], '',
                         tr('Mood: {}').format(mood),
                         tr('Changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"]))),
-                        '', hashtags, '',
+                        '', tags, '',
                     ]
                     f.write('\n'.join(lines))
     elif type == "tex.md":
@@ -412,14 +444,14 @@ def export(filename, type, translations):
                 bookmark = " $\\ast$" if e["bookmark"] else ""
                 title = "** {} **\n".format(e["title"]) if e["title"] else ""
                 mood = trMood(e["mood"])
-                hashtags = "\\# \\emph{" + e["hashtags"] + "}" if e["hashtags"] else ""
+                tags = "\\# \\emph{" + e["tags"] + "}" if e["tags"] else ""
 
                 lines = [
                     '# ' + DIARY._format_date(e["create_date"], e["create_tz"]) + bookmark, '',
                     title + e['entry'], '',
                     '\\begin{small}',
                     '{}\\hfill {}'.format(tr('Mood: {}').format(mood), tr('changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"])))),
-                    hashtags,
+                    tags,
                     '\\end{small}\n', '',
                 ]
                 f.write('\n'.join(lines))

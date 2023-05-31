@@ -22,7 +22,7 @@ Dialog {
         dateMax: !dateMax.selectedDate || isNaN(dateMax.selectedDate.valueOf()) ?
                      new Date('9999-01-01') : dateMax.selectedDate
         bookmark: bookmarks.currentItem.mode
-        hashtags: tagsField.text
+        tags: tagsField.text
         moodMin: Math.min(moodMin.moodIndex, moodMax.moodIndex)
         moodMax: Math.max(moodMin.moodIndex, moodMax.moodIndex)
     }

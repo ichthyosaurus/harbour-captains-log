@@ -77,7 +77,7 @@ Dialog {
             'changed: {}': qsTr('changed: {}'),
             'Title: {}': qsTr('Title: {}'),
             'Entry:\n{}': qsTr('Entry:\n{}'),
-            'Hashtags: {}': qsTr('Hashtags: {}'),
+            'Tags: {}': qsTr('Tags: {}'),
             'Bookmark: {}': qsTr('Bookmark: {}'),
             'Mood: {}': qsTr('Mood: {}'),
             'Diary from {} until {}': qsTr('Diary from {} until {}'),
