@@ -315,19 +315,12 @@ def add_entry(create_date, mood, title, preview, entry, tags, timezone):
                 tags.strip(), mood, 0))
     DIARY.conn.commit()
 
-    entry = {"create_date": create_date,
-             "day": create_date.split(' ')[0],
-             "modify_date": "",
-             "mood": mood,
-             "title": title.strip(),
-             "preview": preview.strip(),
-             "entry": entry.strip(),
-             "bookmark": False,
-             "tags": tags.strip(),
-             "create_tz": timezone,
-             "modify_tz": "",
-             "rowid": DIARY.cursor.lastrowid}
-    return entry
+    DIARY.cursor.execute("""
+        SELECT *, rowid FROM diary WHERE rowid = ?""",
+        (DIARY.cursor.lastrowid, ))
+    rows = DIARY.cursor.fetchall()
+
+    return _clean_entry_row(rows[0])
 
 
 def update_entry(create_date, create_tz, modify_date, mood, title, preview, entry, tags, timezone, rowid):
