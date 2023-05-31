@@ -285,8 +285,11 @@ _FIELD_DEFAULTS = {
 def _clean_entry_row(row):
     row_keys = row.keys()
 
-    return {k: _FIELD_DEFAULTS[k][1](row[k]) if k in row_keys else _FIELD_DEFAULTS[k][0]
-            for k, v in _FIELD_DEFAULTS.items()}
+    entry = {k: _FIELD_DEFAULTS[k][1](row[k]) if k in row_keys else _FIELD_DEFAULTS[k][0]
+             for k, v in _FIELD_DEFAULTS.items()}
+    entry['day'] = row['entry_date'].split(' ')[0] if 'entry_date' in row_keys else ''
+
+    return entry
 
 
 def get_entries():
@@ -440,12 +443,11 @@ def export(filename, type, translations):
     elif type == "csv":
         # Export as CSV file
         with open(filename, "w+", newline='', encoding='utf-8') as f:
-            fieldnames = ["rowid", "create_date", "create_tz", "modify_date", "modify_tz", "mood", "preview", "title", "entry", "tags", "bookmark"]
+            fieldnames = _FIELD_DEFAULTS.keys()
             csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
             csv_writer.writeheader()
 
             for e in entries:
-                del e["day"]  # generated field
                 csv_writer.writerow(e)
     elif type == "md":
         # Export as plain Markdown file
