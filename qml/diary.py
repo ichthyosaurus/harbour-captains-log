@@ -140,7 +140,7 @@ class Diary:
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "5":
-            to_version = "5+4"
+            to_version = "6"
 
             # 1. rename columns:
             # - hashtags    -> tags
@@ -188,7 +188,7 @@ class Diary:
             self.cursor.execute("""UPDATE diary_temp SET entry_order_addenda=0;""")
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "5+4":
+        elif from_version == "6":
             # we arrived at the latest version; save it and return
             if self.schema_version != from_version:
                 self.conn.commit()
