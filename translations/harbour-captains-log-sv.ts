@@ -85,8 +85,9 @@
         <translation>humör: %1</translation>
     </message>
     <message>
-        <source>Edit: %1</source>
-        <translation>Redigera: %1</translation>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -154,10 +155,6 @@
 {}</translation>
     </message>
     <message>
-        <source>Hashtags: {}</source>
-        <translation>Hashtaggar: {}</translation>
-    </message>
-    <message>
         <source>Bookmark: {}</source>
         <translation>Bokmärken: {}</translation>
     </message>
@@ -180,6 +177,10 @@
     <message>
         <source>no</source>
         <translation>nej</translation>
+    </message>
+    <message>
+        <source>Tags: {}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -206,6 +207,13 @@
     </message>
     <message>
         <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LimitedDatePickerDialog</name>
+    <message>
+        <source>It is not possible to add entries for the future.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -515,10 +523,6 @@
         <translation>Titel</translation>
     </message>
     <message>
-        <source>#Hashtags</source>
-        <translation>#Hashtaggar</translation>
-    </message>
-    <message>
         <source>New Entry</source>
         <translation>Ny post</translation>
     </message>
@@ -547,10 +551,6 @@
         <translation>Text...</translation>
     </message>
     <message>
-        <source>Hashtags</source>
-        <translation>Hashtaggar</translation>
-    </message>
-    <message>
         <source>never</source>
         <translation>aldrig</translation>
     </message>
@@ -576,6 +576,10 @@
     </message>
     <message>
         <source>Your mood</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

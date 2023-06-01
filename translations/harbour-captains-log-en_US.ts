@@ -85,8 +85,9 @@
         <translation>mood: %1</translation>
     </message>
     <message>
-        <source>Edit: %1</source>
-        <translation>Edit: %1</translation>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -154,10 +155,6 @@
 {}</translation>
     </message>
     <message>
-        <source>Hashtags: {}</source>
-        <translation>Hashtags: {}</translation>
-    </message>
-    <message>
         <source>Bookmark: {}</source>
         <translation>Bookmark: {}</translation>
     </message>
@@ -180,6 +177,10 @@
     <message>
         <source>no</source>
         <translation>no</translation>
+    </message>
+    <message>
+        <source>Tags: {}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -206,6 +207,13 @@
     </message>
     <message>
         <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LimitedDatePickerDialog</name>
+    <message>
+        <source>It is not possible to add entries for the future.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -519,10 +527,6 @@
         <translation>Entry</translation>
     </message>
     <message>
-        <source>#Hashtags</source>
-        <translation>#Hashtags</translation>
-    </message>
-    <message>
         <source>Edit Entry</source>
         <translation>Edit Entry</translation>
     </message>
@@ -545,10 +549,6 @@
     <message>
         <source>Entry...</source>
         <translation>Entry...</translation>
-    </message>
-    <message>
-        <source>Hashtags</source>
-        <translation>Hashtags</translation>
     </message>
     <message>
         <source>never</source>
@@ -576,6 +576,10 @@
     </message>
     <message>
         <source>Your mood</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

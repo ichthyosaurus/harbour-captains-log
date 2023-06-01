@@ -85,8 +85,9 @@
         <translation>Stimmung: %1</translation>
     </message>
     <message>
-        <source>Edit: %1</source>
-        <translation>Bearbeitet: %1</translation>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation>Nachtrag vom %1</translation>
     </message>
 </context>
 <context>
@@ -154,10 +155,6 @@
 {}</translation>
     </message>
     <message>
-        <source>Hashtags: {}</source>
-        <translation>Hashtags: {}</translation>
-    </message>
-    <message>
         <source>Bookmark: {}</source>
         <translation>Lesezeichen: {}</translation>
     </message>
@@ -180,6 +177,10 @@
     <message>
         <source>no</source>
         <translation>nein</translation>
+    </message>
+    <message>
+        <source>Tags: {}</source>
+        <translation>Schlagwörter: {}</translation>
     </message>
 </context>
 <context>
@@ -207,6 +208,13 @@
     <message>
         <source>Swipe left to add entries</source>
         <translation>Wischen Sie nach links, um Einträge hinzuzufügen</translation>
+    </message>
+</context>
+<context>
+    <name>LimitedDatePickerDialog</name>
+    <message>
+        <source>It is not possible to add entries for the future.</source>
+        <translation>Es kann kein Datum in der Zukunft ausgewählt werden.</translation>
     </message>
 </context>
 <context>
@@ -519,10 +527,6 @@
         <translation>Eintrag</translation>
     </message>
     <message>
-        <source>#Hashtags</source>
-        <translation>#Hashtags</translation>
-    </message>
-    <message>
         <source>Edit Entry</source>
         <translation>Eintrag bearbeiten</translation>
     </message>
@@ -545,10 +549,6 @@
     <message>
         <source>Entry...</source>
         <translation>Eintrag ...</translation>
-    </message>
-    <message>
-        <source>Hashtags</source>
-        <translation>Hashtags</translation>
     </message>
     <message>
         <source>never</source>
@@ -577,6 +577,10 @@
     <message>
         <source>Your mood</source>
         <translation>Ihre Stimmung</translation>
+    </message>
+    <message>
+        <source>Tags</source>
+        <translation>Schlagwörter</translation>
     </message>
 </context>
 <context>

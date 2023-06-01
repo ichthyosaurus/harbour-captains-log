@@ -85,7 +85,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit: %1</source>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -153,10 +154,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hashtags: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bookmark: {}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -178,6 +175,10 @@
     </message>
     <message>
         <source>no</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags: {}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -205,6 +206,13 @@
     </message>
     <message>
         <source>Swipe left to add entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LimitedDatePickerDialog</name>
+    <message>
+        <source>It is not possible to add entries for the future.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -518,10 +526,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>#Hashtags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Edit Entry</source>
         <translation type="unfinished"></translation>
     </message>
@@ -543,10 +547,6 @@
     </message>
     <message>
         <source>Entry...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hashtags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -575,6 +575,10 @@
     </message>
     <message>
         <source>Your mood</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
