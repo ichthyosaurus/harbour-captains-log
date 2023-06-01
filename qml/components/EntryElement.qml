@@ -118,7 +118,7 @@ ListItem {
                     color: Theme.highlightColor
                     font.italic: true
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: model.entry_order_addenda === 0
+                    text: model.entry_addenda_seq === 0
                           ? "" : qsTr("Addendum from %1", "as in “Addendum written on May 5th " +
                                       "to a diary entry on May 10th”").arg(
                               formatDate(model.create_date, dateFormat, model.create_tz))

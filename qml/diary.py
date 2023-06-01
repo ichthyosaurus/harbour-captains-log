@@ -149,43 +149,47 @@ class Diary:
             # 2. add columns:
             # - create_order
             # - entry_order
-            # - entry_order_addenda
+            # - entry_addenda_day
+            # - entry_addenda_seq
             # - entry_date
             # - entry_tz
             #
             # 3. reorder columns
+            # 4. add default values
 
             self.cursor.execute("""VACUUM;""")
             self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
             self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
-                                       create_order INTEGER NOT NULL,
-                                       entry_order INTEGER NOT NULL,
-                                       entry_order_addenda INTEGER NOT NULL,
-                                       create_date TEXT NOT NULL, create_tz TEXT,
-                                       entry_date TEXT NOT NULL, entry_tz TEXT,
-                                       modify_date TEXT NOT NULL, modify_tz TEXT,
-                                       title TEXT, preview TEXT, entry TEXT,
-                                       tags TEXT, mood INTEGER, bookmark BOOLEAN,
-                                       attachments_id TEXT
-                                   );""")
+                create_order INTEGER NOT NULL,
+                entry_order INTEGER NOT NULL,
+                entry_addenda_day INTEGER NOT NULL,
+                entry_addenda_seq INTEGER NOT NULL,
+                create_date TEXT NOT NULL, create_tz TEXT DEFAULT '',
+                entry_date TEXT NOT NULL, entry_tz TEXT DEFAULT '',
+                modify_date TEXT NOT NULL, modify_tz TEXT DEFAULT '',
+                title TEXT DEFAULT '', preview TEXT DEFAULT '', entry TEXT DEFAULT '',
+                tags TEXT DEFAULT '', mood INTEGER, bookmark BOOLEAN,
+                attachments_id TEXT DEFAULT ''
+            );""")
             self.cursor.execute("""INSERT INTO diary_temp(
-                                       create_order, entry_order, entry_order_addenda,
-                                       create_date, create_tz,
-                                       entry_date, entry_tz,
-                                       modify_date, modify_tz,
-                                       title, preview, entry,
-                                       tags, mood, bookmark,
-                                       attachments_id
-                                   )
-                                   SELECT rowid, rowid, rowid,
-                                          create_date, create_tz,
-                                          create_date, create_tz,
-                                          modify_date, modify_tz,
-                                          title, preview, entry,
-                                          hashtags, mood, bookmark,
-                                          audio_path
-                                   FROM diary;""")
-            self.cursor.execute("""UPDATE diary_temp SET entry_order_addenda=0;""")
+                    create_order, entry_order,
+                    entry_addenda_day, entry_addenda_seq,
+                    create_date, create_tz,
+                    entry_date, entry_tz,
+                    modify_date, modify_tz,
+                    title, preview, entry,
+                    tags, mood, bookmark,
+                    attachments_id
+                ) SELECT rowid, rowid,
+                    0, 0,
+                    create_date, create_tz,
+                    create_date, create_tz,
+                    modify_date, IFNULL(modify_tz, ''),
+                    title, IFNULL(preview, ''), entry,
+                    hashtags, mood, bookmark,
+                    IFNULL(audio_path, '')
+                FROM diary;
+            """)
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "6":
@@ -265,7 +269,8 @@ _FIELD_DEFAULTS = {
     'rowid': (-1, lambda x: x if x is not None else -1),
     'create_order': (0, lambda x: x or 0),
     'entry_order': (0, lambda x: x or 0),
-    'entry_order_addenda': (0, lambda x: x or 0),
+    'entry_addenda_day': (0, lambda x: x or 0),
+    'entry_addenda_seq': (0, lambda x: x or 0),
     'create_date': ('', lambda x: x or ''),
     'create_tz': ('', lambda x: x or ''),
     'entry_date': ('', lambda x: x or ''),
@@ -297,7 +302,9 @@ def get_entries():
 
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary
-        ORDER BY entry_order DESC, entry_order_addenda DESC;""")
+        ORDER BY entry_order DESC,
+                 entry_addenda_day DESC,
+                 entry_addenda_seq DESC;""")
     rows = DIARY.cursor.fetchall()
 
     batch = []
@@ -312,6 +319,11 @@ def get_entries():
     pyotherside.send('entries', batch)
 
 
+def _is_db_empty():
+    DIARY.cursor.execute("""SELECT create_order FROM diary LIMIT 1;""")
+    return DIARY.cursor.fetchone() is None
+
+
 def add_entry(create_date, create_tz, entry_date, entry_tz,
               mood, title, preview, entry, tags):
     """ Add a new entry to the database. """
@@ -320,43 +332,77 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
     row = DIARY.cursor.fetchone()
     create_order = row[0]
 
-    if create_date != entry_date and create_date.split(' ')[0] != entry_date.split(' ')[0]:
+    if not _is_db_empty() \
+            and create_date != entry_date \
+            and create_date.split(' ')[0] != entry_date.split(' ')[0]:
         # assumptions:
         # - both dates are valid and properly formatted (yyyy-mm-dd hh:mm:ss)
         # - create_date is today
         # - entry_date is in the past
         # -> add an addendum to the day of entry_date
+
         DIARY.cursor.execute("""
-            SELECT entry_order, entry_order_addenda + 1 FROM diary
-            WHERE entry_date <= ?
-            ORDER BY entry_date DESC, entry_order DESC, entry_order_addenda DESC
+            SELECT entry_order,
+                   entry_addenda_day + (ABS(strftime("%s", date(entry_date))
+                                           - strftime("%s", date(?)))
+                                        / 86400) as new_day,
+                   entry_addenda_seq + 1 as new_seq
+            FROM diary
+            WHERE entry_date <= strftime("%Y-%m-%d 23:59:59", date(?))
+            ORDER BY entry_date DESC,
+                     entry_order DESC,
+                     entry_addenda_day DESC,
+                     entry_addenda_seq DESC
             LIMIT 1;
-        """, (f"{entry_date.split(' ')[0]} 23:59:59", ))
+        """, (entry_date, entry_date))
         row = DIARY.cursor.fetchone()
 
+        if row is None:
+            # the new entry is earlier than the first entry in the database
+            DIARY.cursor.execute("""
+                SELECT entry_order,
+                       entry_addenda_day - (ABS(strftime("%s", date(entry_date))
+                                               - strftime("%s", date(?)))
+                                            / 86400) as new_day,
+                       entry_addenda_seq + 1 as new_seq
+                FROM diary
+                WHERE entry_date >= strftime("%Y-%m-%d 23:59:59", date(?))
+                ORDER BY entry_date ASC,
+                         entry_order ASC,
+                         entry_addenda_day ASC,
+                         entry_addenda_seq DESC
+                LIMIT 1;
+            """, (entry_date, entry_date))
+            row = DIARY.cursor.fetchone()
+
         entry_order = row[0]
-        entry_order_addenda = row[1]
+        entry_addenda_day = row[1]
+        entry_addenda_seq = row[2]
     else:
         # -> add a regular new entry
         entry_order = create_order
-        entry_order_addenda = 0
+        entry_addenda_day = 0
+        entry_addenda_seq = 0
 
     DIARY.cursor.execute("""
         INSERT INTO diary(
-            create_order, entry_order, entry_order_addenda,
+            create_order, entry_order,
+            entry_addenda_day, entry_addenda_seq,
             create_date, create_tz,
             entry_date, entry_tz,
             modify_date, modify_tz,
             title, preview, entry,
             tags, mood, bookmark
         ) VALUES (
-            ?, ?, ?,
+            ?, ?,
+            ?, ?,
             ?, ?,
             ?, ?,
             "", "",
             ?, ?, ?,
             ?, ?, ?
-        );""", (create_order, entry_order, entry_order_addenda,
+        );""", (create_order, entry_order,
+                entry_addenda_day, entry_addenda_seq,
                 create_date, create_tz,
                 entry_date, entry_tz,
                 title.strip(), preview.strip(), entry.strip(),
@@ -414,7 +460,9 @@ def _read_all_entries():
     """ Read all entries to export them """
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary
-        ORDER BY entry_order DESC, entry_order_addenda DESC;""")
+        ORDER BY entry_order DESC,
+                 entry_addenda_day DESC,
+                 entry_addenda_seq DESC;""")
     rows = DIARY.cursor.fetchall()
 
     cleaned_rows = []

@@ -82,7 +82,11 @@ ApplicationWindow
                 sortOrder: Qt.DescendingOrder
             },
             RoleSorter {
-                roleName: "entry_order_addenda"
+                roleName: "entry_addenda_day"
+                sortOrder: Qt.DescendingOrder
+            },
+            RoleSorter {
+                roleName: "entry_addenda_seq"
                 sortOrder: Qt.DescendingOrder
             }
         ]
