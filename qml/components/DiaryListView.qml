@@ -22,17 +22,42 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 SilicaListView {
-    id: diaryList
-    contentHeight: Theme.itemSizeHuge
-    spacing: Theme.paddingMedium
+    id: root
 
     property bool editable: true
+    property Item _scrollbar: null
 
-    VerticalScrollDecorator { flickable: diaryList }
+    contentHeight: Theme.itemSizeHuge
+    spacing: Theme.paddingMedium
+    quickScroll: !_scrollbar
+
+    VerticalScrollDecorator {
+        flickable: root
+        visible: !_scrollbar
+    }
+
+    Component.onCompleted: {
+        try {
+            _scrollbar = Qt.createQmlObject("
+                import QtQuick 2.0
+                import %1 1.0 as Private
+                Private.Scrollbar {
+                    text: appWindow.formatDate(root.currentSection, appWindow.dateNoYearFormat)
+                    description: appWindow.formatDate(root.currentSection, 'yyyy')
+                    headerHeight: root.headerItem ? root.headerItem.height : 0
+                }".arg("Sailfish.Silica.private"), root, 'Scrollbar')
+        } catch (e) {
+            if (!_scrollbar) {
+                console.warn(e)
+                console.warn('[BUG] failed to load customized scrollbar')
+                console.warn('[BUG] this probably means the private API has changed')
+            }
+        }
+    }
 
     delegate: EntryElement {
-        realModel: diaryList.model
-        editable: diaryList.editable
+        realModel: root.model
+        editable: root.editable
     }
 
     section {
