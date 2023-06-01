@@ -328,10 +328,10 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
         # -> add an addendum to the day of entry_date
         DIARY.cursor.execute("""
             SELECT entry_order, entry_order_addenda + 1 FROM diary
-            WHERE entry_date LIKE ?
-            ORDER BY entry_order DESC, entry_order_addenda DESC
+            WHERE entry_date <= ?
+            ORDER BY entry_date DESC, entry_order DESC, entry_order_addenda DESC
             LIMIT 1;
-        """, (f"{entry_date.split(' ')[0]} %", ))
+        """, (f"{entry_date.split(' ')[0]} 23:59:59", ))
         row = DIARY.cursor.fetchone()
 
         entry_order = row[0]
