@@ -45,20 +45,26 @@ ApplicationWindow
     // -- important: always use formatDate(...) to format date strings
     readonly property string appName: qsTr("Captain's Log", "the app's name")
     readonly property string timezone: new Date().toLocaleString(Qt.locale("C"), "t")
-    readonly property string timeFormat: qsTr("hh':'mm")
-    readonly property string atTimeFormat: qsTr("'at' hh':'mm")
-    readonly property string dateTimeFormat: qsTr("d MMM yyyy, hh':'mm")
-    readonly property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm")
-    readonly property string fullDateFormat: qsTr("ddd d MMM yyyy")
-    readonly property string dateFormat: qsTr("d MMM yyyy")
+    readonly property string atTimeFormat: qsTr("'at' hh':'mm",
+        "time format, as in “at 10:00 (o'clock)”")
+    readonly property string dateTimeFormat: qsTr("d MMM yyyy, hh':'mm",
+        "date and time format, as in “Dec. 1st 2023, 10:00 o'clock”")
+    readonly property string fullDateTimeFormat: qsTr("ddd d MMM yyyy, hh':'mm",
+        "full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o'clock”")
+    readonly property string fullDateFormat: qsTr("ddd d MMM yyyy",
+        "full date format, as in “Fri., Dec. 1st 2023”")
+    readonly property string dateFormat: qsTr("d MMM yyyy",
+        "date format, as in “Dec. 1st 2023”")
+    readonly property string dateNoYearFormat: qsTr("d MMM",
+        "date format without year, as in “Dec. 1st”")
     readonly property string dbDateFormat: "yyyy-MM-dd hh:mm:ss"
     property var moodTexts: [
-        qsTr("fantastic"),
-        qsTr("good"),
-        qsTr("okay"),
-        qsTr("not okay"),
-        qsTr("bad"),
-        qsTr("horrible")
+        qsTr("fantastic", "as in “my mood is...”"),
+        qsTr("good", "as in “my mood is...”"),
+        qsTr("okay", "as in “my mood is...”"),
+        qsTr("not okay", "as in “my mood is...”"),
+        qsTr("bad", "as in “my mood is...”"),
+        qsTr("horrible", "as in “my mood is...”")
     ]
     // ---------
 

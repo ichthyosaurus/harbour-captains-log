@@ -586,54 +586,6 @@
 <context>
     <name>harbour-captains-log</name>
     <message>
-        <source>hh&apos;:&apos;mm</source>
-        <translation>hh&apos;:&apos;mm</translation>
-    </message>
-    <message>
-        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
-    </message>
-    <message>
-        <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
-        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
-    </message>
-    <message>
-        <source>ddd d MMM yyyy</source>
-        <translation>ddd d MMM yyyy</translation>
-    </message>
-    <message>
-        <source>fantastic</source>
-        <translation>fantastic</translation>
-    </message>
-    <message>
-        <source>good</source>
-        <translation>good</translation>
-    </message>
-    <message>
-        <source>okay</source>
-        <translation>okay</translation>
-    </message>
-    <message>
-        <source>bad</source>
-        <translation>bad</translation>
-    </message>
-    <message>
-        <source>horrible</source>
-        <translation>horrible</translation>
-    </message>
-    <message>
-        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
-        <translation>&apos;at&apos; hh&apos;:&apos;mm</translation>
-    </message>
-    <message>
-        <source>d MMM yyyy</source>
-        <translation>d MMM yyyy</translation>
-    </message>
-    <message>
-        <source>not okay</source>
-        <translation>not okay</translation>
-    </message>
-    <message>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
         <translation>%1 (%2)</translation>
@@ -645,6 +597,66 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&apos;at&apos; hh&apos;:&apos;mm</source>
+        <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
+        <translation type="unfinished">&apos;at&apos; hh&apos;:&apos;mm</translation>
+    </message>
+    <message>
+        <source>fantastic</source>
+        <comment>as in “my mood is...”</comment>
+        <translation type="unfinished">fantastic</translation>
+    </message>
+    <message>
+        <source>good</source>
+        <comment>as in “my mood is...”</comment>
+        <translation type="unfinished">good</translation>
+    </message>
+    <message>
+        <source>okay</source>
+        <comment>as in “my mood is...”</comment>
+        <translation type="unfinished">okay</translation>
+    </message>
+    <message>
+        <source>not okay</source>
+        <comment>as in “my mood is...”</comment>
+        <translation type="unfinished">not okay</translation>
+    </message>
+    <message>
+        <source>bad</source>
+        <comment>as in “my mood is...”</comment>
+        <translation type="unfinished">bad</translation>
+    </message>
+    <message>
+        <source>horrible</source>
+        <comment>as in “my mood is...”</comment>
+        <translation type="unfinished">horrible</translation>
+    </message>
+    <message>
+        <source>d MMM yyyy, hh&apos;:&apos;mm</source>
+        <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
+        <translation type="unfinished">d MMM yyyy, hh&apos;:&apos;mm</translation>
+    </message>
+    <message>
+        <source>d MMM yyyy</source>
+        <comment>date format, as in “Dec. 1st 2023”</comment>
+        <translation type="unfinished">d MMM yyyy</translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
+        <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
+        <translation type="unfinished">ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
+    </message>
+    <message>
+        <source>ddd d MMM yyyy</source>
+        <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
+        <translation type="unfinished">ddd d MMM yyyy</translation>
+    </message>
+    <message>
+        <source>d MMM</source>
+        <comment>date format without year, as in “Dec. 1st”</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
