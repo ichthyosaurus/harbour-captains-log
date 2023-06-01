@@ -22,6 +22,7 @@ CONFIG += sailfishapp c++11
 SOURCES += src/harbour-captains-log.cpp
 
 DISTFILES += qml/harbour-captains-log.qml \
+    qml/components/LimitedDatePickerDialog.qml \
     qml/cover/CoverPage.qml \
     qml/images/*.png \
     qml/pages/*.qml \

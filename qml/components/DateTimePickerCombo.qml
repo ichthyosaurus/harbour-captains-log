@@ -20,8 +20,9 @@ ComboBox {
         var dateParsed = parseDate(date)
         var newDate = ''
 
-        var datePicker = pageStack.push("Sailfish.Silica.DatePickerDialog", {
+        var datePicker = pageStack.push(Qt.resolvedUrl("LimitedDatePickerDialog.qml"), {
             date: dateParsed,
+            maximumDate: dateParsed,
             acceptDestination: "Sailfish.Silica.TimePickerDialog",
             acceptDestinationAction: PageStackAction.Replace,
             acceptDestinationProperties: {
