@@ -9,7 +9,7 @@ import Sailfish.Silica 1.0
 
 // Requires appWindow.formatDate, appWindow.dateFormat, appWindow.dbDateFormat
 
-ComboBox {
+ValueButton {
     id: root
     label: qsTr("Date")
 

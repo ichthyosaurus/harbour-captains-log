@@ -7,8 +7,9 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 
-// requires formatDate, parseDate, and fullDateTimeFormat from appWindow
-ComboBox {
+// Requires formatDate, parseDate, and fullDateTimeFormat from appWindow
+
+ValueButton {
     id: root
 
     property string date
