@@ -38,7 +38,6 @@ Page {
     property int index
     property var model
 
-    property bool editable: true
     allowedOrientations: Orientation.All
 
     Connections {
@@ -67,7 +66,6 @@ Page {
         VerticalScrollDecorator { flickable: flick }
 
         PullDownMenu {
-            enabled: editable
             MenuItem {
                 text: qsTr("Edit")
                 onClicked: {
@@ -113,7 +111,6 @@ Page {
                 width: parent.width
                 height: Theme.itemSizeSmall
                 onClicked: setBookmark(model, index, rowid, !bookmark)
-                enabled: editable
 
                 HighlightImage {
                     id: favStar

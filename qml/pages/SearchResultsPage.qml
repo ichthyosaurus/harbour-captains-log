@@ -22,7 +22,6 @@ Page {
     DiaryListView {
         anchors.fill: parent
         model: filteredModel
-        editable: true
 
         header: PageHeader {
             title: qsTr("Search")

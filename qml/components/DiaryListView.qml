@@ -24,7 +24,6 @@ import Sailfish.Silica 1.0
 SilicaListView {
     id: root
 
-    property bool editable: true
     property Item _scrollbar: null
 
     contentHeight: Theme.itemSizeHuge
@@ -57,7 +56,6 @@ SilicaListView {
 
     delegate: EntryElement {
         realModel: root.model
-        editable: root.editable
     }
 
     section {

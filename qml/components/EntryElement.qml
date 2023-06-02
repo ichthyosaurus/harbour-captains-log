@@ -10,7 +10,6 @@ import Sailfish.Silica 1.0
 ListItem {
     id: root
 
-    property bool editable
     property var realModel
 
     ListView.onRemove: animateRemoval()
@@ -19,7 +18,6 @@ ListItem {
     menu: editMenuComponent
 
     onPressAndHold: {
-        if (!editable) return
         menu = editMenuComponent
         openMenu()
     }
@@ -39,8 +37,6 @@ ListItem {
         id: editMenuComponent
 
         ContextMenu {
-            enabled: editable
-
             MenuItem {
                 text: qsTr("Edit")
                 onClicked: {
@@ -178,7 +174,6 @@ ListItem {
             id: icons
             height: Math.max(iconsColumn.height, textColumn.height)
 
-            enabled: editable
             onClicked: setBookmark(realModel, model.index, model.rowid, !model.bookmark)
 
             onPressAndHold: {
