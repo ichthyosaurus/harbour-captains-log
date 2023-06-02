@@ -214,11 +214,11 @@
     <name>InfoComboPage</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Details</translation>
+        <translation>Details</translation>
     </message>
     <message>
         <source>Option</source>
-        <translation type="unfinished"></translation>
+        <translation>Option</translation>
     </message>
 </context>
 <context>
@@ -372,11 +372,11 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Nachtrag vom %1</translation>
+        <translation>Nachtrag vom %1</translation>
     </message>
     <message>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>zuletzt am %1 geändert</translation>
     </message>
 </context>
 <context>
@@ -471,55 +471,55 @@
     </message>
     <message>
         <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <translation>Such-Syntax</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinweis</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die vereinfachte Suche ist nur im „Einfacher Text”-Suchmodus verfügbar.</translation>
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sucht nach der eingegebenen Zeichenkette. Hinweis: Der Suchbegriff wird vereinfacht wenn der Suchmodus auf „vereinfacht“ gestellt ist.</translation>
     </message>
     <message>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Option erlaubt die Suche nach komplizierten Mustern. Verwenden Sie „?“ für ein beliebiges Zeichen und „*“ um kein oder mehrere Zeichen zu finden. Zeichengruppen können in eckigen Klammern definiert werden. Mit einem umgekehrten Schrägstrich kann nach einem „?“ oder „*“ gesucht werden, z. B. „\\*“.</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mit komplexen regulären Ausdrücken suchen. Mit der vertikalen Linie „|“ können mehrere Suchbegriffe kombiniert werden. Im Internet gibt es ausführliche Anleitungen zu regulären Ausdrücken.</translation>
     </message>
     <message>
         <source>simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>vereinfacht</translation>
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
+        <translation>Diakritische Zeichen ignorieren und z. B. „ö“, „ó“ und „õ“ finden wenn ein einfaches „o“ eingegeben wird. Satzzeichen werden ignoriert. Verwenden Sie diesen Modus, wenn Sie nicht mehr genau wissen, wie Sie etwas früher geschrieben haben.</translation>
     </message>
     <message>
         <source>strict</source>
-        <translation type="unfinished"></translation>
+        <translation>strikt</translation>
     </message>
     <message>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exakt nach dem eingegebenen Begriff suchen. Verwenden Sie diesen Modus, wenn Sie genau wissen, was Sie suchen oder wenn Sie nach Satzzeichen wie „-“, „!“ oder „#“ suchen möchten.</translation>
     </message>
     <message>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Einträge finden, egal ob sie mit einem Lesezeichen markiert wurden oder nicht.</translation>
     </message>
     <message>
         <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur Einträge mit einem Lesezeichen finden.</translation>
     </message>
     <message>
         <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur Einträge finden, die nicht mit einem Lesezeichen markiert sind.</translation>
     </message>
 </context>
 <context>
@@ -580,9 +580,9 @@
     <name>TagSuggestionsView</name>
     <message numerus="yes">
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... und %n weitere</numerusform>
+            <numerusform>... und %n weitere</numerusform>
         </translation>
     </message>
 </context>
@@ -622,7 +622,7 @@
     </message>
     <message>
         <source>What do you want to say?</source>
-        <translation>Was haben Sie zu sagen?</translation>
+        <translation>Was möchten Sie sagen?</translation>
     </message>
     <message>
         <source>never</source>
@@ -735,7 +735,7 @@
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein unerwarteter Fehler ist aufgetreten. Bitte starten Sie die App neu und überprüfen Sie die Logs.</translation>
     </message>
 </context>
 </TS>
