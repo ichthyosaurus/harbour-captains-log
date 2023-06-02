@@ -22,10 +22,13 @@ CONFIG += sailfishapp c++11
 
 SOURCES += \
     src/harbour-captains-log.cpp \
-    # src/transliterator.cpp
+    src/qmltypes.cpp \
+    src/tagsfilter.cpp \
+    # src/transliterator.cpp \
 
 HEADERS += \
-    # src/transliterator.h
+    src/tagsfilter.h \
+    # src/transliterator.h \
 
 DISTFILES += \
     qml/harbour-captains-log.qml \
@@ -39,7 +42,7 @@ DISTFILES += \
     rpm/harbour-captains-log.spec \
     rpm/harbour-captains-log.yaml \
     translations/*.ts \
-    harbour-captains-log.desktop
+    harbour-captains-log.desktop \
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
