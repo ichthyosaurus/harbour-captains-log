@@ -226,8 +226,7 @@ Dialog {
 
             TagSuggestionsView {
                 width: parent.width
-                searchTerm: tagsField.text !== '' ?
-                    tagsField.text : (tagsField.focus ? ' ' : '')
+                searchTerm: tagsField.text !== '' ? tagsField.text : ' '
 
                 onTagSelected: {
                     if (_tagsList.indexOf(tag.text) < 0) {
