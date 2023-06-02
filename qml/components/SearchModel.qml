@@ -67,17 +67,19 @@ SortFilterProxyModel {
             AnyOf {
                 enabled: !!queries.tags
 
-                RegExpFilter {
+                TagsFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchSyntax
-                    pattern: queries.tags
+                    matchAll: queries.matchAllMode
+                    separator: ","
+                    tags: queries.tags
                     roleName: "tags"
                 }
-                RegExpFilter {
+                TagsFilter {
                     enabled: queries.textMatchMode == queries.matchSimplified
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchSyntax
-                    pattern: appWindow.normalizeText(queries.tags)
+                    matchAll: queries.matchAllMode
+                    separator: ","
+                    tags: queries.tagsNormalized
                     roleName: "tags_normalized"
                 }
             }
@@ -136,17 +138,19 @@ SortFilterProxyModel {
             AnyOf {
                 enabled: !!queries.tags
 
-                RegExpFilter {
+                TagsFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchSyntax
-                    pattern: queries.tags
+                    matchAll: queries.matchAllMode
+                    separator: ","
+                    tags: queries.tags
                     roleName: "tags"
                 }
-                RegExpFilter {
+                TagsFilter {
                     enabled: queries.textMatchMode == queries.matchSimplified
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchSyntax
-                    pattern: appWindow.normalizeText(queries.tags)
+                    matchAll: queries.matchAllMode
+                    separator: ","
+                    tags: queries.tagsNormalized
                     roleName: "tags_normalized"
                 }
             }

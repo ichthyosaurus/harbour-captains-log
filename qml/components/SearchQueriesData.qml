@@ -19,7 +19,8 @@ QtObject {
     property date dateMin: dateMinUnset
     property date dateMax: dateMaxUnset
     property int bookmark: Qt.PartiallyChecked
-    property string tags
+    property var tags: ([])
+    property var tagsNormalized: ([])
     property int moodMin: 0
     property int moodMax: appWindow.moodTexts.length - 1
 
@@ -42,6 +43,7 @@ QtObject {
     onDateMaxChanged: _logChange("dateMax")
     onBookmarkChanged: _logChange("bookmark")
     onTagsChanged: _logChange("tags")
+    onTagsNormalizedChanged: _logChange("tagsNormalized")
     onMoodMinChanged: _logChange("moodMin")
     onMoodMaxChanged: _logChange("moodMax")
 }

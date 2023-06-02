@@ -24,7 +24,8 @@ Dialog {
         dateMax: !dateMax.selectedDate || isNaN(dateMax.selectedDate.valueOf()) ?
                      queries.dateMaxUnset : dateMax.selectedDate
         bookmark: bookmarks.currentItem.mode
-        tags: tagsField.text
+        tags: ([])
+        tagsNormalized: ([])
         moodMin: Math.min(moodMin.moodIndex, moodMax.moodIndex)
         moodMax: Math.max(moodMin.moodIndex, moodMax.moodIndex)
     }
@@ -47,6 +48,7 @@ Dialog {
             activeQueries.dateMax = queries.dateMax
             activeQueries.bookmark = queries.bookmark
             activeQueries.tags = queries.tags
+            activeQueries.tagsNormalized = queries.tagsNormalized
             activeQueries.moodMin = queries.moodMin
             activeQueries.moodMax = queries.moodMax
         }
@@ -55,7 +57,7 @@ Dialog {
     SilicaFlickable {
         id: flick
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: column.height + Theme.horizontalPageMargin
 
         VerticalScrollDecorator { flickable: flick }
 
@@ -113,6 +115,24 @@ Dialog {
                 EnterKey.onClicked: focus = false
             }
 
+            SelectedTagsView {
+                width: parent.width - 2*x
+                x: Theme.horizontalPageMargin
+                tagsList: queries.tags
+
+                onRemoveRequested: {
+                    tagsField.text = tag
+                    var index = queries.tags.indexOf(tag)
+
+                    if (index >= 0) {
+                        queries.tags.splice(index, 1)
+                        queries.tagsNormalized.splice(index, 1)
+                        queries.tags = queries.tags
+                        queries.tagsNormalized = queries.tagsNormalized
+                    }
+                }
+            }
+
             SearchField {
                 id: tagsField
                 width: parent.width
@@ -120,6 +140,19 @@ Dialog {
                 canHide: false
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: focus = false
+            }
+
+            TagSuggestionsView {
+                width: parent.width
+                searchTerm: tagsField.text !== '' ?
+                    tagsField.text : (tagsField.focus ? ' ' : '')
+
+                onTagSelected: {
+                    if (queries.tags.indexOf(tag.text) < 0) {
+                        queries.tags = queries.tags.concat([tag.text])
+                        queries.tagsNormalized = queries.tagsNormalized.concat([tag.normalized])
+                    }
+                }
             }
 
             InfoCombo {
