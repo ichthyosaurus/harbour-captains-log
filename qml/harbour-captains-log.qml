@@ -318,6 +318,7 @@ ApplicationWindow
                 tagsModel.clear()
 
                 for (var i in result) {
+                    console.log("GOT TAG", JSON.stringify(result[i]))
                     tagsModel.append(result[i])
                 }
             })
