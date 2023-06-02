@@ -17,6 +17,7 @@ Dialog {
     property SearchQueriesData queries: SearchQueriesData {
         matchAllMode: true
         text: textField.text
+        textMatchSyntax: textSyntax.currentItem.mode
         textMatchMode: textMode.currentItem.mode
         dateMin: !dateMin.selectedDate || isNaN(dateMin.selectedDate.valueOf()) ?
                      queries.dateMinUnset : dateMin.selectedDate
@@ -40,6 +41,7 @@ Dialog {
             // after every key press is slow in large databases.
             activeQueries.matchAllMode = queries.matchAllMode
             activeQueries.text = queries.text
+            activeQueries.textMatchSyntax = queries.textMatchSyntax
             activeQueries.textMatchMode = queries.textMatchMode
             activeQueries.dateMin = queries.dateMin
             activeQueries.dateMax = queries.dateMax
@@ -118,10 +120,10 @@ Dialog {
             }
 
             ComboBox {
-                id: textMode
+                id: textSyntax
                 width: parent.width
                 currentIndex: 0
-                label: qsTr("Search mode")
+                label: qsTr("Search syntax")
 
                 menu: ContextMenu {
                     MenuItem {
@@ -135,6 +137,37 @@ Dialog {
                     MenuItem {
                         text: qsTr("regular expression")
                         property int mode: RegExpFilter.RegExp
+
+            InfoCombo {
+                id: textMode
+                width: parent.width
+                currentIndex: 0
+                enabled: textSyntax.currentItem.mode === RegExpFilter.FixedString
+                label: qsTr("Search mode")
+
+                Binding on currentIndex {
+                    when: !textMode.enabled
+                    value: 1
+                }
+
+                menu: ContextMenu {
+                    MenuItem {
+                        text: qsTr("simplified")
+                        property int mode: queries.matchSimplified
+                        property string info: qsTr(
+                            "Ignore diacritics on characters, matching e.g. “ö”, “ó”, and " +
+                            "“õ” when searching for “o”. Ignore any punctuation marks. " +
+                            "Use this mode when you are unsure how you spelled something " +
+                            "in the past.")
+                    }
+                    MenuItem {
+                        text: qsTr("strict")
+                        property int mode: queries.matchStrict
+                        property string info: qsTr(
+                            "Match the query string exactly. Use this mode when you know exactly " +
+                            "what you are searching for, or when you want to search for a string " +
+                            "containing punctuation marks like “-”, “!”, or “#”."
+                        )
                     }
                 }
             }

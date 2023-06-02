@@ -14,6 +14,7 @@ QtObject {
 
     property bool matchAllMode: true
     property string text
+    property int textMatchSyntax
     property int textMatchMode
     property date dateMin: dateMinUnset
     property date dateMax: dateMaxUnset
@@ -22,6 +23,8 @@ QtObject {
     property int moodMin: 0
     property int moodMax: appWindow.moodTexts.length - 1
 
+    readonly property int matchSimplified: 0
+    readonly property int matchStrict: 1
     readonly property date dateMinUnset: new Date('0000-01-01')
     readonly property date dateMaxUnset: new Date('9999-01-01')
     readonly property bool enableLogging: false
@@ -33,6 +36,7 @@ QtObject {
 
     onMatchAllModeChanged: _logChange("matchAllMode")
     onTextChanged: _logChange("text")
+    onTextMatchSyntaxChanged: _logChange("textMatchSyntax")
     onTextMatchModeChanged: _logChange("textMatchMode")
     onDateMinChanged: _logChange("dateMin")
     onDateMaxChanged: _logChange("dateMax")

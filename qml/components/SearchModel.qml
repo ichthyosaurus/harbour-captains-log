@@ -31,19 +31,20 @@ SortFilterProxyModel {
 
                 RegExpFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: queries.text
                     roleName: "title"
                 }
                 RegExpFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: queries.text
                     roleName: "entry"
                 }
                 RegExpFilter {
+                    enabled: queries.textMatchMode == queries.matchSimplified
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: appWindow.normalizeText(queries.text)
                     roleName: "entry_normalized"
                 }
@@ -68,13 +69,14 @@ SortFilterProxyModel {
 
                 RegExpFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: queries.tags
                     roleName: "tags"
                 }
                 RegExpFilter {
+                    enabled: queries.textMatchMode == queries.matchSimplified
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: appWindow.normalizeText(queries.tags)
                     roleName: "tags_normalized"
                 }
@@ -98,19 +100,20 @@ SortFilterProxyModel {
 
                 RegExpFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: queries.text
                     roleName: "title"
                 }
                 RegExpFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: queries.text
                     roleName: "entry"
                 }
                 RegExpFilter {
+                    enabled: queries.textMatchMode == queries.matchSimplified
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: appWindow.normalizeText(queries.text)
                     roleName: "entry_normalized"
                 }
@@ -135,13 +138,14 @@ SortFilterProxyModel {
 
                 RegExpFilter {
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: queries.tags
                     roleName: "tags"
                 }
                 RegExpFilter {
+                    enabled: queries.textMatchMode == queries.matchSimplified
                     caseSensitivity: Qt.CaseInsensitive
-                    syntax: queries.textMatchMode
+                    syntax: queries.textMatchSyntax
                     pattern: appWindow.normalizeText(queries.tags)
                     roleName: "tags_normalized"
                 }
