@@ -168,6 +168,9 @@ class Diary:
                                       self._format_preview, deterministic=True)
             self.conn.create_function("REWRITE_NORMALIZED", -1,
                                       self._normalize_text, deterministic=True)
+            self.conn.create_function("REWRITE_NORMALIZED_TAGS", 1,
+                                      lambda x: self._normalize_text(x, keep=[',']),
+                                      deterministic=True)
             self.cursor.execute("""VACUUM;""")
             self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
             self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
@@ -202,7 +205,7 @@ class Diary:
                     modify_date, IFNULL(modify_tz, ''),
                     title, entry,
                     REWRITE_NORMALIZED(title, entry), REWRITE_PREVIEW(entry),
-                    hashtags, REWRITE_NORMALIZED(hashtags),
+                    hashtags, REWRITE_NORMALIZED_TAGS(hashtags),
                     mood, bookmark,
                     IFNULL(audio_path, '')
                 FROM diary;
@@ -267,13 +270,14 @@ class Diary:
         return re.sub(r'[ \t]+', ' ', re.sub(r'[\n]+', '\n', (entry or '').strip()))[:300]
 
     @staticmethod
-    def _normalize_text(*args):
+    def _normalize_text(*args, keep=[]):
         punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
         joined = ' '.join((re.sub(r'\s+', ' ', str(x).strip()) for x in args)).strip()
 
         return ''.join(x for x in unicodedata.normalize('NFKD', joined)
                        if not unicodedata.combining(x)
-                       and unicodedata.category(x) not in punctutation_cats).lower()
+                       and (unicodedata.category(x) not in punctutation_cats
+                            or x in keep)).lower()
 
 # END
 
@@ -447,7 +451,7 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
                 title.strip(), DIARY._format_preview(entry), entry.strip(),
                 tags.strip(), mood, 0,
                 DIARY._normalize_text(title, entry),
-                DIARY._normalize_text(tags)))
+                DIARY._normalize_text(tags, keep=[','])))
     DIARY.conn.commit()
 
     DIARY.cursor.execute("""
@@ -482,7 +486,7 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
         entry.strip(),
         DIARY._normalize_text(title, entry),
         tags.strip(),
-        DIARY._normalize_text(tags),
+        DIARY._normalize_text(tags, keep=[',']),
         timezone, rowid
     ))
     DIARY.conn.commit()
