@@ -228,10 +228,6 @@ ApplicationWindow
         rawModel.remove(_mappedIndex(model, index))
     }
 
-    function getTags() {
-        py.call("diary.get_tags", [])
-    }
-
     signal entryUpdated(var rowid, var newEntry)
     // -----------------------
 
@@ -318,7 +314,6 @@ ApplicationWindow
                 tagsModel.clear()
 
                 for (var i in result) {
-                    console.log("GOT TAG", JSON.stringify(result[i]))
                     tagsModel.append(result[i])
                 }
             })

@@ -300,7 +300,7 @@ def initialize(data_path, db_data_file, db_version_file):
 
 
 def normalize_text(string):
-    return DIARY._normalize_text(string)
+    return Diary._normalize_text(string)
 
 
 _FIELD_DEFAULTS = {
@@ -350,7 +350,7 @@ def get_tags():
     clean_tags = []
 
     for row in rows:
-        tags = [{'text': x.strip(), 'normalized': DIARY._normalize_text(x)}
+        tags = [{'text': x.strip(), 'normalized': Diary._normalize_text(x)}
                 for x in row[0].split(',') if x.strip()]
 
         if tags:
@@ -380,6 +380,8 @@ def get_entries():
             batch = []
 
     pyotherside.send('entries', batch)
+
+    get_tags()
 
 
 def _is_db_empty():
@@ -472,14 +474,17 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
                 entry_date, entry_tz,
                 title.strip(), DIARY._format_preview(entry), entry.strip(),
                 tags.strip(), mood, 0,
-                DIARY._normalize_text(title, entry),
-                DIARY._normalize_text(tags, keep=[','])))
+                Diary._normalize_text(title, entry),
+                Diary._normalize_text(tags, keep=[','])))
     DIARY.conn.commit()
 
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary WHERE rowid = ?""", (
         DIARY.cursor.lastrowid, ))
     row = DIARY.cursor.fetchone()
+
+    get_tags()
+
     return _clean_entry_row(row)
 
 
@@ -506,9 +511,9 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
         title.strip(),
         DIARY._format_preview(entry),
         entry.strip(),
-        DIARY._normalize_text(title, entry),
+        Diary._normalize_text(title, entry),
         tags.strip(),
-        DIARY._normalize_text(tags, keep=[',']),
+        Diary._normalize_text(tags, keep=[',']),
         timezone, rowid
     ))
     DIARY.conn.commit()
@@ -516,6 +521,9 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary WHERE rowid = ?""", (rowid, ))
     row = DIARY.cursor.fetchone()
+
+    get_tags()
+
     return _clean_entry_row(row)
 
 
@@ -532,6 +540,8 @@ def delete_entry(id):
     DIARY.cursor.execute("""DELETE FROM diary
                             WHERE rowid = ?; """, (id, ))
     DIARY.conn.commit()
+
+    get_tags()
 
 # END
 

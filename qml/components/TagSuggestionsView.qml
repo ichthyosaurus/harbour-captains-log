@@ -24,7 +24,6 @@ SilicaListView {
     SortFilterProxyModel {
         id: tagSuggestionsModel
         sourceModel: searchTerm !== "" ? appWindow.tagsModel : null
-        Component.onCompleted: appWindow.getTags()
 
         sorters: StringSorter {
             roleName: "text"
