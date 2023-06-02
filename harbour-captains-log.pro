@@ -18,10 +18,17 @@
 TARGET = harbour-captains-log
 
 CONFIG += sailfishapp c++11
+# LIBS += -licui18n -licuuc  <<< not allowed in Harbour
 
-SOURCES += src/harbour-captains-log.cpp
+SOURCES += \
+    src/harbour-captains-log.cpp \
+    # src/transliterator.cpp
 
-DISTFILES += qml/harbour-captains-log.qml \
+HEADERS += \
+    # src/transliterator.h
+
+DISTFILES += \
+    qml/harbour-captains-log.qml \
     qml/components/LimitedDatePickerDialog.qml \
     qml/cover/CoverPage.qml \
     qml/images/*.png \
@@ -40,10 +47,8 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 # following CONFIG line
 CONFIG += sailfishapp_i18n
 
-# German translation is enabled as an example. If you aren't
-# planning to localize your app, remember to comment out the
-# following TRANSLATIONS line. And also do not forget to
-# modify the localized app name in the the .desktop file.
+# Do not forget to modify the localized app name
+# in the the .desktop file.
 TRANSLATIONS = \
     translations/harbour-captains-log-cs.ts    \
     translations/harbour-captains-log-de.ts    \

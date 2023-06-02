@@ -37,12 +37,13 @@ PkgConfigBR:
 
 # Build dependencies without a pkgconfig setup can be listed here
 # PkgBR:
-#   - package-needed-to-build
+#   - libicu-devel >= 68
 
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
   - pyotherside-qml-plugin-python3-qt5 >= 1.5.0
+#  - libicu >= 68
 
 # All installed files
 Files:
