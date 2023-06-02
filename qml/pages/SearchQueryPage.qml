@@ -53,8 +53,11 @@ Dialog {
     }
 
     SilicaFlickable {
+        id: flick
         anchors.fill: parent
         contentHeight: column.height
+
+        VerticalScrollDecorator { flickable: flick }
 
         PullDownMenu {
             flickable: listView
