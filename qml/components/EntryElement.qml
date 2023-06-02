@@ -75,7 +75,7 @@ ListItem {
             onSelectedIndexChanged: {
                 if (selectedIndex === model.mood) return
                 updateEntry(realModel, model.index, model.entry_date, model.entry_tz,
-                            selectedIndex, model.title, model.preview, model.entry,
+                            selectedIndex, model.title, model.entry,
                             model.tags, model.rowid)
             }
         }
@@ -141,7 +141,7 @@ ListItem {
                 width: parent.width
                 maximumLineCount: 3
                 wrapMode: Text.Wrap
-                text: model.entry
+                text: model.preview
                 visible: !!text
                 font.pixelSize: Theme.fontSizeSmall
                 truncationMode: TruncationMode.Elide
@@ -151,7 +151,7 @@ ListItem {
                 width: parent.width
                 truncationMode: TruncationMode.Fade
                 font.pixelSize: Theme.fontSizeSmall
-                visible: !model.entry
+                visible: !model.preview
                 text: qsTr("mood: %1").arg(moodTexts[model.mood])
                 palette {
                     primaryColor: Theme.secondaryColor

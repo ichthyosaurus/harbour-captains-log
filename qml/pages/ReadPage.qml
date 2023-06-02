@@ -49,14 +49,14 @@ Page {
         }
         onEntryUpdated: {
             if (rowid !== page.rowid) return
-            page.entryDate = entryDate
-            page.entryTz = entryTz
-            page.modifyDate = changeDate
-            page.mood = mood
-            page.title = title
-            page.entry = entry
-            page.tags = tags
-            page.modifyTz = modifyTz
+            page.entryDate = newEntry["entry_date"]
+            page.entryTz = newEntry["entry_tz"]
+            page.modifyDate = newEntry["modify_date"]
+            page.modifyTz = newEntry["modify_tz"]
+            page.mood = newEntry["mood"]
+            page.title = newEntry["title"]
+            page.entry = newEntry["entry"]
+            page.tags = newEntry["tags"]
         }
     }
 

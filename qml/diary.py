@@ -120,7 +120,9 @@ class Diary:
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "3":
             to_version = "4"
-            self.conn.create_function("REWRITE_DATE", 1, self._reformat_date_pre_db4)
+            self.conn.create_function("REWRITE_DATE", 1,
+                                      self._reformat_date_pre_db4,
+                                      deterministic=True)
 
             # rewrite all dates to use a standard format
             self.cursor.execute("""UPDATE diary SET create_date=REWRITE_DATE(create_date);""")
@@ -162,6 +164,8 @@ class Diary:
             # 4. reorder columns
             # 5. add default values
 
+            self.conn.create_function("REWRITE_PREVIEW", 1,
+                                      self._format_preview, deterministic=True)
             self.conn.create_function("REWRITE_NORMALIZED", -1,
                                       self._normalize_text, deterministic=True)
             self.cursor.execute("""VACUUM;""")
@@ -197,7 +201,7 @@ class Diary:
                     create_date, create_tz,
                     modify_date, IFNULL(modify_tz, ''),
                     title, entry,
-                    REWRITE_NORMALIZED(title, entry), IFNULL(preview, ''),
+                    REWRITE_NORMALIZED(title, entry), REWRITE_PREVIEW(entry),
                     hashtags, REWRITE_NORMALIZED(hashtags),
                     mood, bookmark,
                     IFNULL(audio_path, '')
@@ -257,6 +261,10 @@ class Diary:
             date_string = "never{tz}".format(tz=zone)
 
         return date_string
+
+    @staticmethod
+    def _format_preview(entry):
+        return re.sub(r'[ \t]+', ' ', re.sub(r'[\n]+', '\n', (entry or '').strip()))[:300]
 
     @staticmethod
     def _normalize_text(*args):
@@ -353,7 +361,7 @@ def _is_db_empty():
 
 
 def add_entry(create_date, create_tz, entry_date, entry_tz,
-              mood, title, preview, entry, tags):
+              mood, title, entry, tags):
     """ Add a new entry to the database. """
 
     DIARY.cursor.execute("""SELECT IFNULL(MAX(create_order), 0) + 1 FROM diary;""")
@@ -435,7 +443,7 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
                 entry_addenda_day, entry_addenda_seq,
                 create_date, create_tz,
                 entry_date, entry_tz,
-                title.strip(), preview.strip(), entry.strip(),
+                title.strip(), DIARY._format_preview(entry), entry.strip(),
                 tags.strip(), mood, 0,
                 DIARY._normalize_text(title, entry),
                 DIARY._normalize_text(tags)))
@@ -444,13 +452,12 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary WHERE rowid = ?""", (
         DIARY.cursor.lastrowid, ))
-    rows = DIARY.cursor.fetchall()
-
-    return _clean_entry_row(rows[0])
+    row = DIARY.cursor.fetchone()
+    return _clean_entry_row(row)
 
 
 def update_entry(entry_date, entry_tz, modify_date, mood,
-                 title, preview, entry, tags, timezone, rowid):
+                 title, entry, tags, timezone, rowid):
     """ Updates an entry in the database. """
     DIARY.cursor.execute("""
         UPDATE diary
@@ -470,7 +477,7 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
         entry_date, entry_tz,
         modify_date, mood,
         title.strip(),
-        preview.strip(),
+        DIARY._format_preview(entry),
         entry.strip(),
         DIARY._normalize_text(title, entry),
         tags.strip(),
@@ -478,6 +485,11 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
         timezone, rowid
     ))
     DIARY.conn.commit()
+
+    DIARY.cursor.execute("""
+        SELECT *, rowid FROM diary WHERE rowid = ?""", (rowid, ))
+    row = DIARY.cursor.fetchone()
+    return _clean_entry_row(row)
 
 
 def update_bookmark(id, mark):

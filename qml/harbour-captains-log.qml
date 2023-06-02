@@ -163,25 +163,43 @@ ApplicationWindow
         remorse.canceled.connect(callback)
     }
 
-    function updateEntry(model, index, entryDate, entryTz, mood, title, preview, entry, tags, rowid) {
+    function updateEntry(model, index, entryDate, entryTz, mood,
+                         title, entry, tags, rowid) {
         var changeDate = new Date().toLocaleString(Qt.locale(), dbDateFormat)
         var modifyTz = timezone
+        var mapped = _mappedIndex(model, index)
 
-        rawModel.set(_mappedIndex(model, index), {
+        // Some fields are generated in the Python backend, so we
+        // first set them to the new entry text and update it later.
+        rawModel.set(mapped, {
             "modify_date": changeDate, "modify_tz": modifyTz, "mood": mood, "title": title,
-            "preview": preview, "entry": entry, "tags": tags, "rowid": rowid,
-            "entry_date": entryDate, "entry_tz": entryTz
+            "preview": entry, "entry": entry, "tags": tags, "rowid": rowid,
+            "entry_date": entryDate, "entry_tz": entryTz,
+            "entry_normalized": entry, "tags_normalized": tags
         })
 
-        py.call("diary.update_entry", [entryDate, entryTz, changeDate, mood, title, preview, entry, tags, modifyTz, rowid], function() {
+        py.call("diary.update_entry", [entryDate, entryTz, changeDate, mood,
+                                       title, entry, tags, modifyTz, rowid], function(entry) {
             console.log("Updated entry in database")
-            entryUpdated(entryDate, entryTz, changeDate, mood, title, preview, entry, tags, modifyTz, rowid)
+            entryUpdated(rowid, entry)
+
+            if (rawModel.get(mapped)["rowid"] === rowid) {
+                // Only update values if the mapped index is still correct.
+                // It might be possible that an index changes while the Python
+                // backend is still working (async).
+                rawModel.set(mapped, {
+                    "preview": entry["preview"],
+                    "entry_normalized": entry["entry_normalized"],
+                    "tags_normalized": entry["tags_normalized"]
+                })
+            }
         })
     }
 
-    function addEntry(createDate, entryDate, entryTz, mood, title, preview, entry, tags) {
+    function addEntry(createDate, entryDate, entryTz, mood,
+                      title, entry, tags) {
         py.call("diary.add_entry", [createDate, timezone, entryDate, entryTz,
-                                    mood, title, preview, entry, tags], function(entry) {
+                                    mood, title, entry, tags], function(entry) {
             console.log("Added entry to database")
             rawModel.insert(0, entry);
         })
@@ -192,7 +210,7 @@ ApplicationWindow
         rawModel.remove(_mappedIndex(model, index))
     }
 
-    signal entryUpdated(var entryDate, var entryTz, var changeDate, var mood, var title, var preview, var entry, var tags, var modifyTz, var rowid)
+    signal entryUpdated(var rowid, var newEntry)
     signal entryBookmarkToggled(var rowid, var isBookmark)
     // -----------------------
 

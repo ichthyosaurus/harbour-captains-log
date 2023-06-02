@@ -58,17 +58,15 @@ Dialog {
     onAccepted: {
         var mood = page.mood
         var title_text = titleField.text.trim()
-        // regular expression to kick out all newline chars in preview
-        var preview = entryArea.text.substring(0, 150).replace(/\r?\n|\r/g, " ").trim()
         var entry = entryArea.text.trim()
         var tags = tagsField.text.trim()
 
         if (editing) {
             updateEntry(model, index, entryDate, entryTz,
-                        mood, title_text, preview, entry, tags, rowid);
+                        mood, title_text, entry, tags, rowid);
         } else {
             addEntry(dbCurrentDate, entryDate, entryTz,
-                     mood, title_text, preview, entry, tags);
+                     mood, title_text, entry, tags);
         }
     }
 
