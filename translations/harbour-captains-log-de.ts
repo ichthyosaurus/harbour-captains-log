@@ -304,7 +304,7 @@
     </message>
     <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Bitte beachten Sie &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+        <translation>Bitte beachten Sie &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
