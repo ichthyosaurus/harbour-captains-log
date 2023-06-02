@@ -59,7 +59,7 @@ ComboBox {
         id: button
         enabled: root.enabled
         anchors.right: parent.right
-        Binding on highlighted { when: textMode.highlighted; value: true }
+        Binding on highlighted { when: root.highlighted; value: true }
         icon.source: "image://theme/icon-m-about"
 
         onClicked: {
@@ -67,7 +67,7 @@ ComboBox {
             var bottom = []
             var items = []
 
-            for (var i in textMode.children) {
+            for (var i in root.children) {
                 var sec = root.children[i]
 
                 if (sec.hasOwnProperty('__is_info_combo_section')) {
