@@ -215,6 +215,24 @@ Dialog {
                     }
                 }
 
+                onTextChanged: {
+                    if (text.indexOf(',') < 0) return
+
+                    var clean = []
+                    var split = text.split(',')
+                    var last = split[split.length-1]
+                    split = split.slice(0, split.length-1)
+
+                    for (var i in split) {
+                        if (split[i].trim() !== "") {
+                            clean.push(split[i].trim())
+                        }
+                    }
+
+                    _tagsList = _tagsList.concat(clean)
+                    text = last
+                }
+
                 rightItem: IconButton {
                     width: icon.width + 2*Theme.paddingMedium
                     height: icon.height
