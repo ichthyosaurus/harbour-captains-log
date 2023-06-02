@@ -6,17 +6,26 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Tue May 30 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.2.0-1
+* Tue May 30 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 3.0.0-1
+- translations: moved to Weblate, updated German
 - added remorse timer when discarding a new / edited entry
+- added support for addenda, i.e. entries added at a later date
+- added improved scroll bar for scrolling to specific dates
+- added proper support for tags (including auto-completion)
 - added new, improved search page
 -   > search using multiple criteria at once
 -   > search for mood ranges and use wildcards for complex queries
+-   > search for tags
+-   > search for similar matches, e.g. match “ö” when searching for plain “o”
 -   > improved performance
 - added Weblate for translations (cf. About page)
+- added notifications in case of errors in the Python backend (should never happen)
 - fixed swipe direction hint in German translation
 - fixed cover actions while the app is locked
 - fixed editing an entry from the search results page
-- plus many small quality-of-life changes
+- fixed exporting to CSV
+- plus many small quality-of-life changes and many internal changes
+- note: this release changes the database in a non-backwards-compatible way, so that downgrading will not be possible
 
 * Thu Mar 24 2022 Mirian Margiani <mixosaurus+ichthyo@pm.me> 2.1.0-1
 - translations: added Chinese, updated Swedish
