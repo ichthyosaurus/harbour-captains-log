@@ -15,14 +15,16 @@ QtObject {
     property bool matchAllMode: true
     property string text
     property int textMatchMode
-    property date dateMin: new Date('0000-01-01')
-    property date dateMax: new Date('9999-01-01')
+    property date dateMin: dateMinUnset
+    property date dateMax: dateMaxUnset
     property int bookmark: Qt.PartiallyChecked
     property string tags
     property int moodMin: 0
     property int moodMax: appWindow.moodTexts.length - 1
 
-    property bool enableLogging: false
+    readonly property date dateMinUnset: new Date('0000-01-01')
+    readonly property date dateMaxUnset: new Date('9999-01-01')
+    readonly property bool enableLogging: false
 
     function _logChange(name) {
         if (!enableLogging) return

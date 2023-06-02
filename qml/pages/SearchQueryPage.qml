@@ -19,9 +19,9 @@ Dialog {
         text: textField.text
         textMatchMode: textMode.currentItem.mode
         dateMin: !dateMin.selectedDate || isNaN(dateMin.selectedDate.valueOf()) ?
-                     new Date('0000-01-01') : dateMin.selectedDate
+                     queries.dateMinUnset : dateMin.selectedDate
         dateMax: !dateMax.selectedDate || isNaN(dateMax.selectedDate.valueOf()) ?
-                     new Date('9999-01-01') : dateMax.selectedDate
+                     queries.dateMaxUnset : dateMax.selectedDate
         bookmark: bookmarks.currentItem.mode
         tags: tagsField.text
         moodMin: Math.min(moodMin.moodIndex, moodMax.moodIndex)
