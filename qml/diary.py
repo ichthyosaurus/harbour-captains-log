@@ -10,6 +10,7 @@ import os
 import csv
 import sqlite3
 import re
+import unicodedata
 from pathlib import Path
 from datetime import datetime
 
@@ -153,10 +154,16 @@ class Diary:
             # - entry_addenda_seq
             # - entry_date
             # - entry_tz
+            # - entry_normalized
             #
-            # 3. reorder columns
-            # 4. add default values
+            # 3. rewrite columns:
+            # - preview
+            #
+            # 4. reorder columns
+            # 5. add default values
 
+            self.conn.create_function("REWRITE_NORMALIZED", -1,
+                                      self._normalize_text, deterministic=True)
             self.cursor.execute("""VACUUM;""")
             self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
             self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
@@ -167,8 +174,10 @@ class Diary:
                 create_date TEXT NOT NULL, create_tz TEXT DEFAULT '',
                 entry_date TEXT NOT NULL, entry_tz TEXT DEFAULT '',
                 modify_date TEXT NOT NULL, modify_tz TEXT DEFAULT '',
-                title TEXT DEFAULT '', preview TEXT DEFAULT '', entry TEXT DEFAULT '',
-                tags TEXT DEFAULT '', mood INTEGER, bookmark BOOLEAN,
+                title TEXT DEFAULT '', entry TEXT DEFAULT '',
+                entry_normalized TEXT DEFAULT '', preview TEXT DEFAULT '',
+                tags TEXT DEFAULT '', tags_normalized TEXT DEFAULT '',
+                mood INTEGER, bookmark BOOLEAN,
                 attachments_id TEXT DEFAULT ''
             );""")
             self.cursor.execute("""INSERT INTO diary_temp(
@@ -177,16 +186,20 @@ class Diary:
                     create_date, create_tz,
                     entry_date, entry_tz,
                     modify_date, modify_tz,
-                    title, preview, entry,
-                    tags, mood, bookmark,
+                    title, entry,
+                    entry_normalized, preview,
+                    tags, tags_normalized,
+                    mood, bookmark,
                     attachments_id
                 ) SELECT rowid, rowid,
                     0, 0,
                     create_date, create_tz,
                     create_date, create_tz,
                     modify_date, IFNULL(modify_tz, ''),
-                    title, IFNULL(preview, ''), entry,
-                    hashtags, mood, bookmark,
+                    title, entry,
+                    REWRITE_NORMALIZED(title, entry), IFNULL(preview, ''),
+                    hashtags, REWRITE_NORMALIZED(hashtags),
+                    mood, bookmark,
                     IFNULL(audio_path, '')
                 FROM diary;
             """)
@@ -245,6 +258,15 @@ class Diary:
 
         return date_string
 
+    @staticmethod
+    def _normalize_text(*args):
+        punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
+        joined = ' '.join((re.sub(r'\s+', ' ', str(x).strip()) for x in args)).strip()
+
+        return ''.join(x for x in unicodedata.normalize('NFKD', joined)
+                       if not unicodedata.combining(x)
+                       and unicodedata.category(x) not in punctutation_cats).lower()
+
 # END
 
 
@@ -265,6 +287,10 @@ def initialize(data_path, db_data_file, db_version_file):
     return False
 
 
+def normalize_text(string):
+    return DIARY._normalize_text(string)
+
+
 _FIELD_DEFAULTS = {
     'rowid': (-1, lambda x: x if x is not None else -1),
     'create_order': (0, lambda x: x or 0),
@@ -278,9 +304,11 @@ _FIELD_DEFAULTS = {
     'modify_date': ('', lambda x: x or ''),
     'modify_tz': ('', lambda x: x or ''),
     'title': ('', lambda x: x.strip() if x else ''),
-    'preview': ('', lambda x: x.strip() if x else ''),
     'entry': ('', lambda x: x.strip() if x else ''),
+    'entry_normalized': ('', lambda x: x.strip() if x else ''),
+    'preview': ('', lambda x: x.strip() if x else ''),
     'tags': ('', lambda x: x.strip() if x else ''),
+    'tags_normalized': ('', lambda x: x.strip() if x else ''),
     'mood': (2, lambda x: x if x is not None else 2),
     'bookmark': (False, lambda x: True if x == 1 else False),
     'attachments_id': (0, lambda x: x or ''),
@@ -392,7 +420,8 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
             entry_date, entry_tz,
             modify_date, modify_tz,
             title, preview, entry,
-            tags, mood, bookmark
+            tags, mood, bookmark,
+            entry_normalized, tags_normalized
         ) VALUES (
             ?, ?,
             ?, ?,
@@ -400,13 +429,16 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
             ?, ?,
             "", "",
             ?, ?, ?,
-            ?, ?, ?
+            ?, ?, ?,
+            ?, ?
         );""", (create_order, entry_order,
                 entry_addenda_day, entry_addenda_seq,
                 create_date, create_tz,
                 entry_date, entry_tz,
                 title.strip(), preview.strip(), entry.strip(),
-                tags.strip(), mood, 0))
+                tags.strip(), mood, 0,
+                DIARY._normalize_text(title, entry),
+                DIARY._normalize_text(tags)))
     DIARY.conn.commit()
 
     DIARY.cursor.execute("""
@@ -417,21 +449,34 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
     return _clean_entry_row(rows[0])
 
 
-def update_entry(entry_date, entry_tz, modify_date, mood, title, preview, entry, tags, timezone, rowid):
+def update_entry(entry_date, entry_tz, modify_date, mood,
+                 title, preview, entry, tags, timezone, rowid):
     """ Updates an entry in the database. """
-    DIARY.cursor.execute("""UPDATE diary
-                            SET entry_date = ?,
-                                entry_tz = ?,
-                                modify_date = ?,
-                                mood = ?,
-                                title = ?,
-                                preview = ?,
-                                entry = ?,
-                                tags = ?,
-                                modify_tz = ?
-                            WHERE
-                                rowid = ?;""",
-                         (entry_date, entry_tz, modify_date, mood, title.strip(), preview.strip(), entry.strip(), tags.strip(), timezone, rowid))
+    DIARY.cursor.execute("""
+        UPDATE diary
+        SET entry_date = ?,
+            entry_tz = ?,
+            modify_date = ?,
+            mood = ?,
+            title = ?,
+            preview = ?,
+            entry = ?,
+            entry_normalized = ?,
+            tags = ?,
+            tags_normalized = ?,
+            modify_tz = ?
+        WHERE
+            rowid = ?;""", (
+        entry_date, entry_tz,
+        modify_date, mood,
+        title.strip(),
+        preview.strip(),
+        entry.strip(),
+        DIARY._normalize_text(title, entry),
+        tags.strip(),
+        DIARY._normalize_text(tags),
+        timezone, rowid
+    ))
     DIARY.conn.commit()
 
 
