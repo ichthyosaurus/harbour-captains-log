@@ -10,12 +10,15 @@ import SortFilterProxyModel 0.2
 
 Flow {
     id: root
-    layoutDirection: Flow.LeftToRight
-    spacing: Theme.paddingSmall
 
     property var tagsList: ([])
 
     signal removeRequested(var tag)
+
+    layoutDirection: Flow.LeftToRight
+    spacing: Theme.paddingSmall
+    leftPadding: Theme.horizontalPageMargin
+    rightPadding: Theme.horizontalPageMargin
 
     Repeater {
         model: tagsList

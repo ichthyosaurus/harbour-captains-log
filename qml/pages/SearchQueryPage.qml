@@ -116,8 +116,7 @@ Dialog {
             }
 
             SelectedTagsView {
-                width: parent.width - 2*x
-                x: Theme.horizontalPageMargin
+                width: parent.width
                 tagsList: queries.tags
 
                 onRemoveRequested: {
