@@ -8,6 +8,7 @@
 #define TAGSFILTER_H
 
 #include "../libs/SortFilterProxyModel/filters/rolefilter.h"
+#include <QVariant>
 
 namespace qqsfpm {
 
