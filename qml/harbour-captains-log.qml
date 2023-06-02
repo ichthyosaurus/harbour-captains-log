@@ -120,6 +120,10 @@ ApplicationWindow
         return date
     }
 
+    function normalizeText(string) {
+        return py.call_sync('diary.normalize_text', [string])
+    }
+
     function _mappedIndex(model, index) {
         if (model.hasOwnProperty('mapToSource')) {
             if (model.sourceModel !== rawModel) {

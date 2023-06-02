@@ -7,7 +7,7 @@
 import QtQuick 2.6
 import SortFilterProxyModel 0.2
 
-// Requires appWindow.rawModel and appWindow.parseDate in the context.
+// Requires appWindow.rawModel, appWindow.normalizeText, and appWindow.parseDate
 
 SortFilterProxyModel {
     id: root
@@ -21,6 +21,8 @@ SortFilterProxyModel {
     }
 
     filters: [
+        // NOTE: the filters in AnyOf{} and AllOf{} must be identical!
+
         AnyOf {
             enabled: !queries.matchAllMode
         },
@@ -43,6 +45,12 @@ SortFilterProxyModel {
                     pattern: queries.text
                     roleName: "entry"
                 }
+                RegExpFilter {
+                    caseSensitivity: Qt.CaseInsensitive
+                    syntax: queries.textMatchMode
+                    pattern: appWindow.normalizeText(queries.text)
+                    roleName: "entry_normalized"
+                }
             }
 
             RangeFilter {
@@ -57,12 +65,21 @@ SortFilterProxyModel {
                 value: queries.bookmark === Qt.Checked ? 1 : 0
             }
 
-            RegExpFilter {
+            AnyOf {
                 enabled: !!queries.tags
-                caseSensitivity: Qt.CaseInsensitive
-                syntax: queries.textMatchMode
-                pattern: queries.tags
-                roleName: "tags"
+
+                RegExpFilter {
+                    caseSensitivity: Qt.CaseInsensitive
+                    syntax: queries.textMatchMode
+                    pattern: queries.tags
+                    roleName: "tags"
+                }
+                RegExpFilter {
+                    caseSensitivity: Qt.CaseInsensitive
+                    syntax: queries.textMatchMode
+                    pattern: appWindow.normalizeText(queries.tags)
+                    roleName: "tags_normalized"
+                }
             }
 
             RangeFilter {
