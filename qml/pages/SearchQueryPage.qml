@@ -122,24 +122,48 @@ Dialog {
                 EnterKey.onClicked: focus = false
             }
 
-            ComboBox {
+            InfoCombo {
                 id: textSyntax
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Search syntax")
 
+                InfoComboSection {
+                    title: qsTr("Note")
+                    text: qsTr("Simplified matching is only possible in “plain text” " +
+                               "mode.")
+                }
+
                 menu: ContextMenu {
                     MenuItem {
                         text: qsTr("plain text")
                         property int mode: RegExpFilter.FixedString
+                        property string info: qsTr(
+                            "Search for the string as you entered it. Note: some " +
+                            "simplifications will be applied to the search term " +
+                            "if the “Search mode” is set to “simplified”.")
                     }
                     MenuItem {
                         text: qsTr("wildcard")
-                        property int mode: RegExpFilter.Wildcard
+                        property int mode: RegExpFilter.WildcardUnix
+                        property string info: qsTr(
+                            "This option allows to search for extended patterns. " +
+                            "Use “?” to match any single character, and “*” to " +
+                            "match zero or more characters. Groups of characters " +
+                            "can be defined in square brackets. Use a backslash " +
+                            "to search for literal “?” or “*”, e.g. “\\?”.")
                     }
                     MenuItem {
                         text: qsTr("regular expression")
                         property int mode: RegExpFilter.RegExp
+                        property string info: qsTr(
+                            "Search using complex regular expressions. Use the " +
+                            "vertical bar “|” to search for multiple terms. " +
+                            "Search the Internet if you want to learn more about " +
+                            "regular expressions.")
+                    }
+                }
+            }
 
             InfoCombo {
                 id: textMode
@@ -175,7 +199,7 @@ Dialog {
                 }
             }
 
-            ComboBox {
+            InfoCombo {
                 id: bookmarks
                 width: parent.width
                 currentIndex: 0
@@ -187,16 +211,22 @@ Dialog {
                                    "“find all entries, whether they are " +
                                    "bookmarked or not”")
                         property int mode: Qt.PartiallyChecked
+                        property string info: qsTr(
+                            "Find entries regardless of whether they are bookmarked " +
+                            "or not.")
                     }
                     MenuItem {
                         text: qsTr("marked", "search option, as in: " +
                                    "“find only bookmarked entries”")
                         property int mode: Qt.Checked
+                        property string info: qsTr("Find only bookmarked entries.")
                     }
                     MenuItem {
                         text: qsTr("unmarked", "search option, as in: " +
                                    "“find only entries that are not bookmarked”")
                         property int mode: Qt.Unchecked
+                        property string info: qsTr(
+                            "Find only entries that are not bookmarked.")
                     }
                 }
             }
