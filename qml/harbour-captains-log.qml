@@ -279,6 +279,9 @@ ApplicationWindow
             loading = false
             console.error("an error occurred in the Python backend, traceback:")
             console.error(traceback)
+
+            showMessage(qsTr("An unexpected error occurred. Please restart the app and " +
+                             "check the logs."))
         }
 
         Component.onCompleted: {
