@@ -37,6 +37,7 @@ ApplicationWindow
 
     readonly property alias entriesModel: _sortedModel
     readonly property alias rawModel: _sourceModel
+    readonly property ListModel tagsModel: ListModel {}
     readonly property alias pinPageComponent: _pinPage
     property bool loading: true  // only true during startup
     readonly property var _currentlyEditedEntry: ({})
@@ -214,6 +215,10 @@ ApplicationWindow
         rawModel.remove(_mappedIndex(model, index))
     }
 
+    function getTags() {
+        py.call("diary.get_tags", [])
+    }
+
     signal entryUpdated(var rowid, var newEntry)
     // -----------------------
 
@@ -294,6 +299,15 @@ ApplicationWindow
                 }
 
                 console.log("adding", result.length, "item(s) to the list")
+            })
+
+            setHandler('tags', function(result){
+                tagsModel.clear()
+
+                for (var i in result) {
+                    console.log("GOT TAG", JSON.stringify(result[i]))
+                    tagsModel.append(result[i])
+                }
             })
 
             importModule('diary', function() {

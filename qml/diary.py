@@ -338,6 +338,28 @@ def _clean_entry_row(row):
     return entry
 
 
+def get_tags():
+    """ Load all tags and ship them to QML """
+
+    DIARY.cursor.execute("""
+        SELECT TRIM(tags, " ") FROM diary
+        WHERE tags IS NOT NULL AND TRIM(tags, " ") != "";
+    """)
+    rows = DIARY.cursor.fetchall()
+
+    clean_tags = []
+
+    for row in rows:
+        tags = [{'text': x.strip(), 'normalized': DIARY._normalize_text(x)}
+                for x in row[0].split(',') if x.strip()]
+
+        if tags:
+            clean_tags += tags
+
+    unique_tags = list({x['text']: x for x in clean_tags}.values())
+    pyotherside.send('tags', unique_tags)
+
+
 def get_entries():
     """ Load all entries and ship them to QML """
 
