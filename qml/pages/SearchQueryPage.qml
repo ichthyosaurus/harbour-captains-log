@@ -13,6 +13,7 @@ Dialog {
     id: root
     allowedOrientations: Orientation.All
 
+    property SearchQueriesData activeQueries: SearchQueriesData {}
     property SearchQueriesData queries: SearchQueriesData {
         matchAllMode: true
         text: textField.text
@@ -29,7 +30,25 @@ Dialog {
 
     acceptDestination: Qt.resolvedUrl("SearchResultsPage.qml")
     acceptDestinationAction: PageStackAction.Push
-    acceptDestinationProperties: ({queries: queries})
+    acceptDestinationProperties: ({queries: activeQueries})
+
+    onAcceptPendingChanged: {
+        if (acceptPending) {
+            // Copy the full query to a separate object so
+            // that changing any field on the query page does
+            // not automatically restart the search. Searching
+            // after every key press is slow in large databases.
+            activeQueries.matchAllMode = queries.matchAllMode
+            activeQueries.text = queries.text
+            activeQueries.textMatchMode = queries.textMatchMode
+            activeQueries.dateMin = queries.dateMin
+            activeQueries.dateMax = queries.dateMax
+            activeQueries.bookmark = queries.bookmark
+            activeQueries.tags = queries.tags
+            activeQueries.moodMin = queries.moodMin
+            activeQueries.moodMax = queries.moodMax
+        }
+    }
 
     SilicaFlickable {
         anchors.fill: parent
