@@ -6,7 +6,7 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Tue May 30 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 3.0.0-1
+* Sat Jun 03 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 3.0.0-1
 - translations: moved to Weblate, updated German
 - added remorse timer when discarding a new / edited entry
 - added support for addenda, i.e. entries added at a later date
