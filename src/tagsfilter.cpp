@@ -1,5 +1,10 @@
+/*
+ * This file is part of Captain's Log.
+ * SPDX-FileCopyrightText: 2023 Mirian Margiani
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 #include "tagsfilter.h"
-#include <QDebug>
 
 namespace qqsfpm {
 
