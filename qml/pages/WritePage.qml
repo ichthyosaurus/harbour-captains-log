@@ -49,17 +49,31 @@ Dialog {
     property string modifyTz: ""
     property alias title: titleField.text
     property alias entry: entryArea.text
-    property alias tags: tagsField.text
+    property string tags: ""
     property alias mood: moodMenu.selectedIndex
     property int rowid: -1
     property int index: -1
     property var model: null
 
+    property var _tagsList: ([])
+    onTagsChanged: {
+        var split = tags.split(',')
+        var clean = []
+
+        for (var i in split) {
+            if (split[i].trim() !== "") {
+                clean.push(split[i].trim())
+            }
+        }
+
+        _tagsList = clean
+    }
+
     onAccepted: {
         var mood = page.mood
         var title_text = titleField.text.trim()
         var entry = entryArea.text.trim()
-        var tags = tagsField.text.trim()
+        var tags = _tagsList.join(", ")
 
         if (editing) {
             updateEntry(model, index, entryDate, entryTz,
@@ -75,7 +89,7 @@ Dialog {
             return
         }
 
-        if (title == "" && entry == "" && tags == "") {
+        if (title == "" && entry == "" && _tagsList.length === 0) {
             return
         }
 
@@ -85,7 +99,7 @@ Dialog {
         appWindow._currentlyEditedEntry.modifyTz   = modifyTz
         appWindow._currentlyEditedEntry.title      = title
         appWindow._currentlyEditedEntry.entry      = entry
-        appWindow._currentlyEditedEntry.tags       = tags
+        appWindow._currentlyEditedEntry.tags       = _tagsList.join(", ")
         appWindow._currentlyEditedEntry.mood       = mood
         appWindow._currentlyEditedEntry.rowid      = rowid
         appWindow._currentlyEditedEntry.index      = index
@@ -166,20 +180,59 @@ Dialog {
             TextArea {
                 id: entryArea
                 width: parent.width
-                placeholderText: editing ? qsTr("What do you want to say?") : qsTr("Entry...")
+                placeholderText: qsTr("What do you want to say?")
                 label: qsTr("Entry")
                 wrapMode: TextEdit.WordWrap
+            }
+
+            SelectedTagsView {
+                width: parent.width
+                tagsList: _tagsList
+
+                onRemoveRequested: {
+                    tagsField.text = tag
+                    var index = _tagsList.indexOf(tag)
+
+                    if (index >= 0) {
+                        _tagsList.splice(index, 1)
+                        _tagsList = _tagsList
+                    }
+                }
             }
 
             TextField {
                 id: tagsField
                 width: parent.width
                 placeholderText: qsTr("Tags")
-                font.pixelSize: Theme.fontSizeExtraSmall
                 label: qsTr("Tags")
-                EnterKey.iconSource: "image://theme/icon-m-enter-next"
+                EnterKey.iconSource: "../images/icon-m-enter-add.png"
                 EnterKey.onClicked: {
                     tagsField.focus = false
+
+                    if (text.trim()) {
+                        _tagsList = _tagsList.concat([text.trim()])
+                        text = ''
+                    }
+                }
+
+                rightItem: IconButton {
+                    width: icon.width + 2*Theme.paddingMedium
+                    height: icon.height
+                    enabled: tagsField.text != ''
+                    onClicked: tagsField.text = ''
+                    icon.source: "image://theme/icon-splus-clear"
+                }
+            }
+
+            TagSuggestionsView {
+                width: parent.width
+                searchTerm: tagsField.text !== '' ?
+                    tagsField.text : (tagsField.focus ? ' ' : '')
+
+                onTagSelected: {
+                    if (_tagsList.indexOf(tag.text) < 0) {
+                        _tagsList = _tagsList.concat([tag.text])
+                    }
                 }
             }
         }
