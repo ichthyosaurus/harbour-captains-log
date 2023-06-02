@@ -329,6 +329,7 @@ def _clean_entry_row(row):
     entry = {k: _FIELD_DEFAULTS[k][1](row[k]) if k in row_keys else _FIELD_DEFAULTS[k][0]
              for k, v in _FIELD_DEFAULTS.items()}
     entry['day'] = row['entry_date'].split(' ')[0] if 'entry_date' in row_keys else ''
+    entry['is_addendum'] = row['entry_addenda_seq'] > 0
 
     return entry
 

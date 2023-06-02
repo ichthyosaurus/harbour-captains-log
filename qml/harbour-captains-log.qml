@@ -144,7 +144,7 @@ ApplicationWindow
     function setBookmark(model, index, rowid, setTrue) {
         py.call("diary.update_bookmark", [rowid, setTrue])
         rawModel.setProperty(_mappedIndex(model, index), 'bookmark', setTrue)
-        entryBookmarkToggled(rowid, setTrue)
+        entryUpdated(rowid, rawModel.get(_mappedIndex(model, index)))
     }
 
     function _reopenEditDialog() {
@@ -215,7 +215,6 @@ ApplicationWindow
     }
 
     signal entryUpdated(var rowid, var newEntry)
-    signal entryBookmarkToggled(var rowid, var isBookmark)
     // -----------------------
 
     property int _lastNotificationId: 0

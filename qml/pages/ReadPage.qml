@@ -1,184 +1,194 @@
 /*
  * This file is part of Captain's Log.
- *
- * SPDX-FileCopyrightText: 2020 Gabriel Berkigt
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
- *
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * Captain's Log is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * Captain's Log is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
+import "../components"
 
 Page {
-    id: page
-
-    property string entryDate
-    property string modifyDate
-    property int mood
-    property string title
-    property string entry
-    property bool bookmark
-    property string tags
-    property string entryTz
-    property string modifyTz
-    property int rowid
-    property int index
-    property var model
-
+    id: root
     allowedOrientations: Orientation.All
+
+    property var entry  // list element
+    property var model  // actual list model
 
     Connections {
         target: appWindow
-        onEntryBookmarkToggled: {
-            if (rowid !== page.rowid) return
-            bookmark = isBookmark
-        }
         onEntryUpdated: {
             if (rowid !== page.rowid) return
-            page.entryDate = newEntry["entry_date"]
-            page.entryTz = newEntry["entry_tz"]
-            page.modifyDate = newEntry["modify_date"]
-            page.modifyTz = newEntry["modify_tz"]
-            page.mood = newEntry["mood"]
-            page.title = newEntry["title"]
-            page.entry = newEntry["entry"]
-            page.tags = newEntry["tags"]
+            root.entry = newEntry
         }
     }
 
     SilicaFlickable {
         id: flick
         anchors.fill: parent
-        contentHeight: content.height + Theme.horizontalPageMargin
+        contentHeight: column.height + Theme.horizontalPageMargin
+
         VerticalScrollDecorator { flickable: flick }
 
         PullDownMenu {
             MenuItem {
                 text: qsTr("Edit")
+
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("WritePage.qml"), {
-                                       "title": title, "mood": mood, "entry": entry,
-                                       "tags": tags, "rowid": rowid,
-                                       "entryDate": entryDate, "modifyDate": modifyDate,
-                                       "index": index, "model": model,
-                                       "modifyTz": modifyTz, "entryTz": entryTz,
-                                       "acceptDestination": "" // return to the calling page
-                                   })
+                        "entryDate": entry.entry_date,
+                        "entryTz": entry.entry_tz,
+                        "modifyDate": entry.modify_date,
+                        "modifyTz": entry.modify_tz,
+                        "title": entry.title,
+                        "entry": entry['entry'],
+                        "tags": entry['tags'],
+                        "mood": entry['mood'],
+                        "rowid": entry['rowid'],
+                        "index": entry['index'],
+                        "model": model,
+                        "acceptDestination": "" // return to the calling page
+                    })
                 }
             }
         }
 
         Column {
-            id: content
+            id: column
             width: parent.width
             spacing: Theme.paddingMedium
 
             PageHeader {
-                id: header
-                title: formatDate(entryDate, "dddd")
-                description: formatDate(entryDate, dateTimeFormat, entryTz)
-                _titleItem.truncationMode: TruncationMode.Fade
-                _titleItem.horizontalAlignment: Text.AlignRight
+                title: appWindow.formatDate(entry.entry_date, "dddd")
+                description: appWindow.formatDate(
+                    entry.entry_date, appWindow.dateTimeFormat, entry.entry_tz)
             }
 
-            Label {
-                id: modDateLabel
-                visible: modifyDate !== ""
-                anchors {
-                    left: parent.left; leftMargin: Theme.horizontalPageMargin
-                    right: parent.right; rightMargin: Theme.horizontalPageMargin
-                }
-                horizontalAlignment: Text.AlignRight
-                font.pixelSize: Theme.fontSizeExtraSmall
-                color: Theme.secondaryHighlightColor
-                text: modifyDate !== "" ? qsTr("changed: %1").arg(formatDate(modifyDate, dateTimeFormat, modifyTz)) : ""
-            }
-
-            BackgroundItem {
+            ComboBox {
+                id: moodCombo
                 width: parent.width
-                height: Theme.itemSizeSmall
-                onClicked: setBookmark(model, index, rowid, !bookmark)
+                rightMargin: Theme.horizontalPageMargin + Theme.iconSizeMedium
+                label: qsTr("Mood")
+                value: appWindow.moodTexts[entry.mood]
 
-                HighlightImage {
-                    id: favStar
-                    anchors { verticalCenter: parent.verticalCenter; right: parent.right }
-                    highlighted: parent.down
-                    source: bookmark ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                menu: null
+                onClicked: bookmarkButton.clicked(null)
+                onPressAndHold: {
+                    menu = moodMenu
+                    _controller.openMenu()
                 }
 
-                Label {
-                    id: moodLabel
-                    anchors { verticalCenter: favStar.verticalCenter; left: parent.left; leftMargin: Theme.horizontalPageMargin }
-                    color: Theme.highlightColor; text: qsTr("Mood")
-                }
+                MoodMenu {
+                    id: moodMenu
+                    selectedIndex: entry.mood
+                    onClosed: moodCombo.menu = null
+                    onSelectedIndexChanged: {
+                        if (selectedIndex === entry.mood) return
 
-                Label {
-                    anchors {
-                        verticalCenter: favStar.verticalCenter
-                        left: moodLabel.right; leftMargin: Theme.paddingSmall
-                        right: favStar.left; rightMargin: Theme.paddingMedium
+                        appWindow.updateEntry(
+                            model, entry.index, entry.entry_date, entry.entry_tz,
+                            selectedIndex, entry.title, entry.entry,
+                            entry.tags, entry.rowid)
                     }
-                    text: moodTexts[mood]
+                }
+
+                IconButton {
+                    id: bookmarkButton
+                    enabled: root.enabled
+                    anchors.right: parent.right
+                    Binding on highlighted { when: moodCombo.highlighted; value: true }
+                    icon.source: "image://theme/icon-m-favorite" + (entry.bookmark ? "-selected" : "")
+                    onClicked: {
+                        appWindow.setBookmark(
+                            model, entry.index, entry.rowid, !entry.bookmark)
+                    }
+                }
+            }
+
+            Item { width: 1; height: Theme.paddingMedium }
+
+            Column {
+                width: parent.width - 2*x
+                x: Theme.horizontalPageMargin
+                spacing: parent.spacing
+
+                Label {
+                    visible: entry.is_addendum
+                    width: parent.width
+                    text: qsTr("Addendum from %1", "as in “Addendum written on May 5th " +
+                               "to a diary entry on May 10th”").
+                          arg(appWindow.formatDate(
+                              entry.create_date, appWindow.dateFormat,
+                              entry.create_tz))
+                    color: palette.highlightColor
+                    font.italic: true
+                    font.pixelSize: Theme.fontSizeSmall
                     truncationMode: TruncationMode.Fade
                 }
-            }
 
-            Label {
-                anchors {
-                    right: parent.right; rightMargin: Theme.horizontalPageMargin
-                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                Label {
+                    visible: !!entry.title
+                    width: parent.width
+                    wrapMode: Text.Wrap
+                    text: entry.title
+                    color: palette.highlightColor
+                    font.pixelSize: Theme.fontSizeLarge
                 }
-                visible: title !== ""
-                text: title
-                wrapMode: Text.WordWrap
-                color: Theme.highlightColor
-                font.pixelSize: Theme.fontSizeLarge
-            }
 
-            TextArea {
-                id: entryArea
-                visible: !moodImage.visible
-                width: parent.width
-                wrapMode: TextEdit.WordWrap
-                // horizontalAlignment: Text.AlignJustify
-                readOnly: true
-                text: entry
-            }
+                Label {
+                    visible: !!entry.entry
+                    width: parent.width
+                    wrapMode: Text.Wrap
+                    text: entry.entry
+                }
 
-            TextArea {
-                id: tagsArea
-                width: parent.width
-                font.pixelSize: Theme.fontSizeExtraSmall
-                readOnly: true
-                text: tags.length > 0 ? "# " + tags : ""
-            }
+                HighlightImage {
+                    visible: !entry.entry
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: Math.min(root.width, root.height) / 4
+                    height: width + Theme.paddingLarge
+                    verticalAlignment: Image.AlignBottom
+                    fillMode: Image.PreserveAspectFit
+                    color: Theme.primaryColor
+                    opacity: Theme.opacityLow
+                    source: "../images/mood-%1.png".arg(String(entry.mood))
+                }
 
-            Item { visible: moodImage.visible; width: parent.width; height: Theme.paddingLarge }
+                Item { width: 1; height: Theme.paddingMedium }
 
-            HighlightImage {
-                id: moodImage
-                visible: entry === ""
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: Math.min(page.width, page.height)/4; height: width
-                fillMode: Image.PreserveAspectFit
-                color: Theme.primaryColor
-                opacity: Theme.opacityLow
-                source: "../images/mood-%1.png".arg(String(mood))
+                Row {
+                    visible: !!entry.tags
+                    width: parent.width
+
+                    Label {
+                        id: tagsHint
+                        text: "// "
+                        font.pixelSize: Theme.fontSizeSmall
+                        color: Theme.secondaryColor
+                    }
+
+                    Label {
+                        width: parent.width - tagsHint.width
+                        wrapMode: Text.Wrap
+                        text: entry.tags
+                        font.pixelSize: Theme.fontSizeSmall
+                        color: Theme.secondaryColor
+                    }
+                }
+
+                Label {
+                    visible: !!entry.modify_date
+                    width: parent.width
+                    wrapMode: Text.Wrap
+                    text: "// " + modified  // TODO RTL support
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: Theme.secondaryColor
+
+                    property string modified: !!entry.modify_date ?
+                        qsTr("last edited on %1").arg(appWindow.formatDate(
+                            entry.modify_date, appWindow.dateTimeFormat, entry.modify_tz)) : ''
+                }
             }
         }
     }
 }
-

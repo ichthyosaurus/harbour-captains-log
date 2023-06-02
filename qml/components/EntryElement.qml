@@ -24,12 +24,7 @@ ListItem {
 
     onClicked: {
         pageStack.push(Qt.resolvedUrl("../pages/ReadPage.qml"), {
-            "model": realModel, "editable": editable,
-            "entryDate": model.entry_date, "modifyDate": model.modify_date,
-            "mood": model.mood, "title": model.title,
-            "entry": model.entry, "bookmark": model.bookmark,
-            "tags": model.tags, "rowid": model.rowid, "index": model.index,
-            "modifyTz": model.modify_tz, "entryTz": model.entry_tz
+            "model": realModel, "entry": model
         })
     }
 
@@ -114,10 +109,11 @@ ListItem {
                     color: Theme.highlightColor
                     font.italic: true
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: model.entry_addenda_seq === 0
-                          ? "" : qsTr("Addendum from %1", "as in “Addendum written on May 5th " +
-                                      "to a diary entry on May 10th”").arg(
-                              formatDate(model.create_date, dateFormat, model.create_tz))
+                    text: model.is_addendum ?
+                              qsTr("Addendum from %1", "as in “Addendum written on May 5th " +
+                                   "to a diary entry on May 10th”").arg(
+                                  formatDate(model.create_date, dateFormat, model.create_tz)) :
+                              ""
                     truncationMode: TruncationMode.Fade
                 }
             }
