@@ -55,19 +55,19 @@
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">Select</translation>
+        <translation>Select</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished">never</translation>
+        <translation>never</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Addendum from %1</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,7 @@
     </message>
     <message>
         <source>Tags: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Tags: {}</translation>
     </message>
 </context>
 <context>
@@ -207,25 +207,25 @@
     </message>
     <message>
         <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Swipe left to add entries</translation>
     </message>
 </context>
 <context>
     <name>InfoComboPage</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Details</translation>
+        <translation>Details</translation>
     </message>
     <message>
         <source>Option</source>
-        <translation type="unfinished"></translation>
+        <translation>Option</translation>
     </message>
 </context>
 <context>
     <name>LimitedDatePickerDialog</name>
     <message>
         <source>It is not possible to add entries for the future.</source>
-        <translation type="unfinished"></translation>
+        <translation>It is not possible to add entries for the future.</translation>
     </message>
 </context>
 <context>
@@ -367,182 +367,182 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Mood</translation>
+        <translation>Mood</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Addendum from %1</translation>
     </message>
     <message>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>last edited on %1</translation>
     </message>
 </context>
 <context>
     <name>SearchQueryPage</name>
     <message>
         <source>Any may match</source>
-        <translation type="unfinished"></translation>
+        <translation>Any may match</translation>
     </message>
     <message>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
+        <translation>All must match</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Back</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Search</translation>
+        <translation>Search</translation>
     </message>
     <message>
         <source>Title and entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Title and entry</translation>
     </message>
     <message>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Search contents</translation>
     </message>
     <message>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Search tags</translation>
     </message>
     <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Search mode</translation>
     </message>
     <message>
         <source>plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>plain text</translation>
     </message>
     <message>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
+        <translation>wildcard</translation>
     </message>
     <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>regular expression</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished">Bookmarks</translation>
+        <translation>Bookmarks</translation>
     </message>
     <message>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>all entries</translation>
     </message>
     <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>marked</translation>
     </message>
     <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
+        <translation>unmarked</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Mood</translation>
+        <translation>Mood</translation>
     </message>
     <message>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>From</translation>
     </message>
     <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>To</translation>
     </message>
     <message>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
+        <translation>Entry date</translation>
     </message>
     <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>anytime</translation>
     </message>
     <message>
         <source>Till</source>
-        <translation type="unfinished"></translation>
+        <translation>Until</translation>
     </message>
     <message>
         <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <translation>Search syntax</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Simplified matching is only possible in “plain text” mode.</translation>
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</translation>
     </message>
     <message>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation type="unfinished"></translation>
+        <translation>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</translation>
     </message>
     <message>
         <source>simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>simplified</translation>
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</translation>
     </message>
     <message>
         <source>strict</source>
-        <translation type="unfinished"></translation>
+        <translation>strict</translation>
     </message>
     <message>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</translation>
     </message>
     <message>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Find entries regardless of whether they are bookmarked or not.</translation>
     </message>
     <message>
         <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Find only bookmarked entries.</translation>
     </message>
     <message>
         <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Find only entries that are not bookmarked.</translation>
     </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Search</translation>
+        <translation>Search</translation>
     </message>
     <message numerus="yes">
         <source>%n result(s)</source>
         <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n result</numerusform>
+            <numerusform>%n results</numerusform>
         </translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished">No entries found</translation>
+        <translation>No entries found</translation>
     </message>
     <message>
         <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
+        <translation>Swipe back to change search criteria</translation>
     </message>
 </context>
 <context>
@@ -580,9 +580,9 @@
     <name>TagSuggestionsView</name>
     <message numerus="yes">
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... and one more</numerusform>
+            <numerusform>... and %n more</numerusform>
         </translation>
     </message>
 </context>
@@ -630,31 +630,31 @@
     </message>
     <message>
         <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Discarded all changes</translation>
     </message>
     <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Discarded the entry</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Discard</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Last edited: %1</translation>
     </message>
     <message>
         <source>Your mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Your mood</translation>
     </message>
     <message>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tags</translation>
     </message>
 </context>
 <context>
@@ -671,71 +671,71 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Error: the database could not be loaded.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished">&apos;at&apos; hh&apos;:&apos;mm</translation>
+        <translation>&apos;at&apos; hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">fantastic</translation>
+        <translation>fantastic</translation>
     </message>
     <message>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">good</translation>
+        <translation>good</translation>
     </message>
     <message>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">okay</translation>
+        <translation>okay</translation>
     </message>
     <message>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">not okay</translation>
+        <translation>not okay</translation>
     </message>
     <message>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">bad</translation>
+        <translation>bad</translation>
     </message>
     <message>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">horrible</translation>
+        <translation>horrible</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>MMM. d yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
-        <translation type="unfinished">d MMM yyyy</translation>
+        <translation>MMM. d yyyy</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>ddd., MMM. d yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished">ddd d MMM yyyy</translation>
+        <translation>ddd., MMM. d yyyy</translation>
     </message>
     <message>
         <source>d MMM</source>
         <comment>date format without year, as in “Dec. 1st”</comment>
-        <translation type="unfinished"></translation>
+        <translation>MMM. d</translation>
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation>An unexpected error occurred. Please restart the app and check the logs.</translation>
     </message>
 </context>
 </TS>
