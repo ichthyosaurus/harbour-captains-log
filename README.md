@@ -96,6 +96,7 @@ Please do not forget to add yourself to the list of contributors in
 ## License
 
 > Copyright (C) 2020-2023  Mirian Margiani
+>
 > Copyright (C) 2020  AlphaX2
 
 Captain's Log is Free Software released under the terms of the
