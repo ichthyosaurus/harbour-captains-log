@@ -55,19 +55,19 @@
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">Välj</translation>
+        <translation>Välj</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished">aldrig</translation>
+        <translation>aldrig</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tillägg från %1</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,7 @@
     </message>
     <message>
         <source>Tags: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Taggar: {}</translation>
     </message>
 </context>
 <context>
@@ -207,25 +207,25 @@
     </message>
     <message>
         <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Svep åt vänster för att lägga till poster</translation>
     </message>
 </context>
 <context>
     <name>InfoComboPage</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Detaljerat</translation>
+        <translation>Detaljerat</translation>
     </message>
     <message>
         <source>Option</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternativ</translation>
     </message>
 </context>
 <context>
     <name>LimitedDatePickerDialog</name>
     <message>
         <source>It is not possible to add entries for the future.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det är inte möjligt att lägga till poster för framtiden.</translation>
     </message>
 </context>
 <context>
@@ -315,7 +315,7 @@
     </message>
     <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Se &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
@@ -367,182 +367,182 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Humör</translation>
+        <translation>Humör</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tillägg från %1</translation>
     </message>
     <message>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>senast ändrad %1</translation>
     </message>
 </context>
 <context>
     <name>SearchQueryPage</name>
     <message>
         <source>Any may match</source>
-        <translation type="unfinished"></translation>
+        <translation>Vilken som helst kan matcha</translation>
     </message>
     <message>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
+        <translation>Alla måste matcha</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Tillbaka</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Sök</translation>
+        <translation>Sök</translation>
     </message>
     <message>
         <source>Title and entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel och post</translation>
     </message>
     <message>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök innehåll</translation>
     </message>
     <message>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök taggar</translation>
     </message>
     <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Sökläge</translation>
     </message>
     <message>
         <source>plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>oformaterad text</translation>
     </message>
     <message>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
+        <translation>jokertecken</translation>
     </message>
     <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>regular expression</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished">Bokmärke</translation>
+        <translation>Bokmärken</translation>
     </message>
     <message>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>alla poster</translation>
     </message>
     <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>bokmärkta</translation>
     </message>
     <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
+        <translation>ej bokmärkta</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Humör</translation>
+        <translation>Humör</translation>
     </message>
     <message>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Från</translation>
     </message>
     <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>Till</translation>
     </message>
     <message>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
+        <translation>Postdatum</translation>
     </message>
     <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>när som helst</translation>
     </message>
     <message>
         <source>Till</source>
-        <translation type="unfinished"></translation>
+        <translation>Till</translation>
     </message>
     <message>
         <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök syntax</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteckning</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Förenklad matchning är endast möjlig i läget &quot;oformaterad text&quot;.</translation>
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök efter strängen som du angav den. Vissa förenklingar kommer att tillämpas på söktermen om &quot;Sökläge&quot; är inställt på &quot;förenklat&quot;.</translation>
     </message>
     <message>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Med det här alternativet kan du söka efter utökade mönster. Använd &quot;?&quot; för att matcha ett enskilt tecken och &quot;*&quot; för att matcha noll eller fler tecken. Teckengrupper kan definieras inom hakparenteser. Använd ett omvänt snedstreck för att söka efter litterala &quot;?&quot; eller &quot;*&quot;, t.ex. &quot;?&quot;.</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök med komplex regular expression. Använd det lodstreck &quot;|&quot; för att söka efter flertal termer. Sök på internet om du vill veta mer om regular expression.</translation>
     </message>
     <message>
         <source>simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>förenklat</translation>
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorera diakritiska tecken, som matchar t.ex. &quot;ö&quot;, &quot;ó&quot; och &quot;õ&quot; när du söker efter &quot;o&quot;. Ignorera eventuella skiljetecken. Använd det här läget när du är osäker på hur du stavade något tidigare.</translation>
     </message>
     <message>
         <source>strict</source>
-        <translation type="unfinished"></translation>
+        <translation>strikt</translation>
     </message>
     <message>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Matcha frågesträngen exakt. Använd det här läget när du vet exakt vad du söker efter eller när du vill söka efter en sträng som innehåller skiljetecken som &quot;-&quot;, &quot;!&quot;, eller &quot;#&quot;.</translation>
     </message>
     <message>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hitta poster oavsett om de är bokmärkta eller inte.</translation>
     </message>
     <message>
         <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hitta endast bokmärkta poster.</translation>
     </message>
     <message>
         <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hitta endast poster som inte är bokmärkta.</translation>
     </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Sök</translation>
+        <translation>Sök</translation>
     </message>
     <message numerus="yes">
         <source>%n result(s)</source>
         <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n träff</numerusform>
+            <numerusform>%n träffar</numerusform>
         </translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished">Inga poster hittades</translation>
+        <translation>Inga poster hittades</translation>
     </message>
     <message>
         <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
+        <translation>Svep tillbaka för att ändra sökkriterier</translation>
     </message>
 </context>
 <context>
@@ -580,9 +580,9 @@
     <name>TagSuggestionsView</name>
     <message numerus="yes">
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... och %n till</numerusform>
+            <numerusform>... och %n till</numerusform>
         </translation>
     </message>
 </context>
@@ -630,31 +630,31 @@
     </message>
     <message>
         <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Förkastade alla ändringar</translation>
     </message>
     <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Förkastade posten</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Förkasta</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Senast ändrad: %1</translation>
     </message>
     <message>
         <source>Your mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Ditt humör</translation>
     </message>
     <message>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Taggar</translation>
     </message>
 </context>
 <context>
@@ -671,71 +671,71 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel: Databasen kunde inte läsas in.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished">hh&apos;:&apos;mm</translation>
+        <translation>hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">fantastiskt</translation>
+        <translation>fantastiskt</translation>
     </message>
     <message>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">bra</translation>
+        <translation>bra</translation>
     </message>
     <message>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">okay</translation>
+        <translation>okay</translation>
     </message>
     <message>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">inte okay</translation>
+        <translation>inte okay</translation>
     </message>
     <message>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">dåligt</translation>
+        <translation>dåligt</translation>
     </message>
     <message>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">fruktansvärt</translation>
+        <translation>fruktansvärt</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
-        <translation type="unfinished">d MMM yyyy</translation>
+        <translation>d MMM yyyy</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished">ddd d MMM yyyy</translation>
+        <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>d MMM</source>
         <comment>date format without year, as in “Dec. 1st”</comment>
-        <translation type="unfinished"></translation>
+        <translation>d MMM</translation>
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ett oväntat fel uppstod. Starta om appen och kolla loggarna.</translation>
     </message>
 </context>
 </TS>
