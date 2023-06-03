@@ -315,7 +315,7 @@
     </message>
     <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+        <translation>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
