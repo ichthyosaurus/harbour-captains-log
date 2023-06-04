@@ -9,7 +9,7 @@
     </message>
     <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Et enkelt dagboksprogram for å holde styr på tankene dine.</translation>
     </message>
     <message>
         <source>Programming</source>
@@ -40,146 +40,147 @@
     <name>ChangePinPage</name>
     <message>
         <source>Saved your protection code.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beskyttelseskode lagret.</translation>
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriv inn din gamle sikkerhetskode</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriv inn en ny sikkerhetskode</translation>
     </message>
 </context>
 <context>
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Dato</translation>
     </message>
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished"></translation>
+        <translation>Velg</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>aldri</translation>
     </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediger</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Slett</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>humør: %1</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tillegg fra %1</translation>
     </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter din data</translation>
     </message>
     <message>
         <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definer filnavnet …</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Filnavn</translation>
     </message>
     <message>
         <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksportfilformat</translation>
     </message>
     <message>
         <source>Select file type:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Velg filtypen:</translation>
     </message>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>Klartekst</translation>
     </message>
     <message>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommainndelte verdier (CSV)</translation>
     </message>
     <message>
         <source>Plain Markdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ren Markdown</translation>
     </message>
     <message>
         <source>Markdown for Pandoc</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown for Pandoc</translation>
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>aldri</translation>
     </message>
     <message>
         <source>Created: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Opprettet: {}</translation>
     </message>
     <message>
         <source>Changed: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Endret: {}</translation>
     </message>
     <message>
         <source>changed: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>endret: {}</translation>
     </message>
     <message>
         <source>Title: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Navn: {}</translation>
     </message>
     <message>
         <source>Entry:
 {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppføring:
+{}</translation>
     </message>
     <message>
         <source>Bookmark: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Bokmerke: {}</translation>
     </message>
     <message>
         <source>Mood: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Humør: {}</translation>
     </message>
     <message>
         <source>Diary from {} until {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Dagbok fra {} til {}</translation>
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Data eksportert til: %1</translation>
     </message>
     <message>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>ja</translation>
     </message>
     <message>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>nei</translation>
     </message>
     <message>
         <source>Tags: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketter: {}</translation>
     </message>
 </context>
 <context>
@@ -190,41 +191,41 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk</translation>
     </message>
     <message>
         <source>Add new entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til ny oppføring</translation>
     </message>
     <message>
         <source>Settings and Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Innstillinger og eksport</translation>
     </message>
     <message>
         <source>No entries yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen oppføringer enda</translation>
     </message>
     <message>
         <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Dra til venstre for å legge til oppføringer</translation>
     </message>
 </context>
 <context>
     <name>InfoComboPage</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Detaljer</translation>
+        <translation>Detaljer</translation>
     </message>
     <message>
         <source>Option</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternativ</translation>
     </message>
 </context>
 <context>
     <name>LimitedDatePickerDialog</name>
     <message>
         <source>It is not possible to add entries for the future.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det er ikke mulig å legge til oppføringer for fremtiden.</translation>
     </message>
 </context>
 <context>
@@ -251,7 +252,7 @@
     </message>
     <message>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjemmeside</translation>
     </message>
     <message>
         <source>Translations</source>
@@ -286,11 +287,11 @@
     </message>
     <message>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kunngjøringer</translation>
     </message>
     <message>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Takk.</translation>
     </message>
     <message>
         <source>Details</source>
@@ -298,290 +299,290 @@
     </message>
     <message>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekstern lenke</translation>
     </message>
     <message>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpne i nettleser</translation>
     </message>
     <message>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiert til utklippstavlen: %1</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopier til utklippstavlen</translation>
     </message>
     <message>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Henvend dem til &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Last ned lisenstekstene</translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lisens</numerusform>
+            <numerusform>Lisenser</numerusform>
         </translation>
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Merk: Kildekoden er den mest nøyaktige kilden til info.</translation>
     </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spander en kopp kaffe hvis du vil støtte arbeidet mitt.</translation>
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan støtte dette prosjektet ved å bidra, eller ved å donere ved bruk av disse tjenestene.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bistå gjerne oversettelsen eller bidra til kildekoden.</translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
         <source>Please enter your security code</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriv inn din sikkerhetskode</translation>
     </message>
     <message>
         <source>please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>prøv igjen</translation>
     </message>
 </context>
 <context>
     <name>ReadPage</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediger</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Humør</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tillegg fra %1</translation>
     </message>
     <message>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>sist endret %1</translation>
     </message>
 </context>
 <context>
     <name>SearchQueryPage</name>
     <message>
         <source>Any may match</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle kan samsvare</translation>
     </message>
     <message>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle må samsvare</translation>
     </message>
     <message>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilbake</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk</translation>
     </message>
     <message>
         <source>Title and entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Navn og oppføring</translation>
     </message>
     <message>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk i innhold</translation>
     </message>
     <message>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk i etiketter</translation>
     </message>
     <message>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Søkemodus</translation>
     </message>
     <message>
         <source>plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>klartekst</translation>
     </message>
     <message>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
+        <translation>jokertegn</translation>
     </message>
     <message>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>regulært uttrykk</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bokmerker</translation>
     </message>
     <message>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>alle oppføringer</translation>
     </message>
     <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bokmerket</translation>
     </message>
     <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
+        <translation>ikke bokmerket</translation>
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Humør</translation>
     </message>
     <message>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Fra</translation>
     </message>
     <message>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>Til</translation>
     </message>
     <message>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppføringsdato</translation>
     </message>
     <message>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>når som helst</translation>
     </message>
     <message>
         <source>Till</source>
-        <translation type="unfinished"></translation>
+        <translation>til</translation>
     </message>
     <message>
         <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Søkesyntaks</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Notat</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Forenklet jamføring er kun mulig i «klartekst»-modus.</translation>
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
     </message>
     <message>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «\?».</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
     </message>
     <message>
         <source>simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>forenklet</translation>
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
     </message>
     <message>
         <source>strict</source>
-        <translation type="unfinished"></translation>
+        <translation>streng</translation>
     </message>
     <message>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nøyaktig jamføring av søkestrengen. Brukes når du vet akkurat hva du søker etter, eller når du vil søke etter en streng som inneholder punktsetting som «-», «!», eller «#».</translation>
     </message>
     <message>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Finn oppføringer uansett om de er bokmerket eller ei.</translation>
     </message>
     <message>
         <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kun finn bokmerkede oppføringer.</translation>
     </message>
     <message>
         <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kun finn oppføringer som ikke er bokmerket.</translation>
     </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk</translation>
     </message>
     <message numerus="yes">
         <source>%n result(s)</source>
         <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n resultat</numerusform>
+            <numerusform>%n resultater</numerusform>
         </translation>
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished"></translation>
+        <translation>Fant ingen oppføringer</translation>
     </message>
     <message>
         <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
+        <translation>Dra tilbake for å endre søkekriterium</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Innstillinger</translation>
     </message>
     <message>
         <source>activate code protection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">aktiver kodebeskyttelse</translation>
     </message>
     <message>
         <source>Set Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Angi kode</translation>
     </message>
     <message>
         <source>Change Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Endre kode</translation>
     </message>
     <message>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Sikkerhet</translation>
     </message>
     <message>
         <source>Export features</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportfunksjoner</translation>
     </message>
     <message>
         <source>Export data</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter data</translation>
     </message>
 </context>
 <context>
     <name>TagSuggestionsView</name>
     <message numerus="yes">
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>… og %n til</numerusform>
+            <numerusform>… og %n til</numerusform>
         </translation>
     </message>
 </context>
@@ -589,71 +590,71 @@
     <name>WritePage</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagre</translation>
     </message>
     <message>
         <source>New Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny oppføring</translation>
     </message>
     <message>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Navn</translation>
     </message>
     <message>
         <source>Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppføring</translation>
     </message>
     <message>
         <source>Edit Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediger oppføring</translation>
     </message>
     <message>
         <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Hvordan følte du deg?</translation>
     </message>
     <message>
         <source>How do you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Hvordan føler du deg?</translation>
     </message>
     <message>
         <source>Add a title</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til et navn</translation>
     </message>
     <message>
         <source>What do you want to say?</source>
-        <translation type="unfinished"></translation>
+        <translation>Hva vil du si?</translation>
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>aldri</translation>
     </message>
     <message>
         <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Forkast alle endringer</translation>
     </message>
     <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oppføring forkastet</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Forkast</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Dato</translation>
     </message>
     <message>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sist endret: %1</translation>
     </message>
     <message>
         <source>Your mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Ditt humør</translation>
     </message>
     <message>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketter</translation>
     </message>
 </context>
 <context>
@@ -661,80 +662,80 @@
     <message>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2)</translation>
     </message>
     <message>
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kapteinens logg</translation>
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Feil: Kunne ikke laste inn databasen.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>fantastisk</translation>
     </message>
     <message>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>god</translation>
     </message>
     <message>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>ikke OK</translation>
     </message>
     <message>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>dårlig</translation>
     </message>
     <message>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>forferdelig</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
-        <translation type="unfinished"></translation>
+        <translation>d MMM yyyy</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>d MMM</source>
         <comment>date format without year, as in “Dec. 1st”</comment>
-        <translation type="unfinished"></translation>
+        <translation>d MMM</translation>
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uventet feil. Start programmet på ny og sjekk loggføringen.</translation>
     </message>
 </context>
 </TS>
