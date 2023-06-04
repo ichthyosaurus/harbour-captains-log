@@ -28,6 +28,10 @@ Page {
             flickable: listView
 
             MenuItem {
+                text: qsTr("Add new entry")
+                onClicked: pageStack.push(Qt.resolvedUrl("WritePage.qml"))
+            }
+            MenuItem {
                 text: listView.showFullEntries ?
                           qsTr("Show previews") :
                           qsTr("Show full entries")
