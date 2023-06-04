@@ -91,6 +91,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementFull</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation type="unfinished">Tillägg från %1</translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation type="unfinished">humör: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -222,6 +234,13 @@
     </message>
 </context>
 <context>
+    <name>LicenseListPart</name>
+    <message>
+        <source>License text</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LimitedDatePickerDialog</name>
     <message>
         <source>It is not possible to add entries for the future.</source>
@@ -237,6 +256,10 @@
     <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
+    </message>
+    <message>
+        <source>Changelog</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Version %1 (%2)</source>
@@ -314,10 +337,6 @@
         <translation>Kopiera till urklipp</translation>
     </message>
     <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
         <source>Download license texts</source>
         <translation>Ladda ner licenstexter</translation>
     </message>
@@ -331,6 +350,10 @@
     <message>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Notis: Kontrollera källkoden för mest korrekt information.</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
+        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -543,6 +566,18 @@
     <message>
         <source>Swipe back to change search criteria</source>
         <translation>Svep tillbaka för att ändra sökkriterier</translation>
+    </message>
+    <message>
+        <source>Add new entry</source>
+        <translation type="unfinished">Lägg till ny post</translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

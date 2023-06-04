@@ -91,6 +91,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementFull</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation>Addendum from %1</translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation>mood: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -222,6 +234,13 @@
     </message>
 </context>
 <context>
+    <name>LicenseListPart</name>
+    <message>
+        <source>License text</source>
+        <translation>License text</translation>
+    </message>
+</context>
+<context>
     <name>LimitedDatePickerDialog</name>
     <message>
         <source>It is not possible to add entries for the future.</source>
@@ -253,6 +272,10 @@
     <message>
         <source>Homepage</source>
         <translation>Homepage</translation>
+    </message>
+    <message>
+        <source>Changelog</source>
+        <translation>Changelog</translation>
     </message>
     <message>
         <source>Translations</source>
@@ -314,10 +337,6 @@
         <translation>Copy to clipboard</translation>
     </message>
     <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
         <source>Download license texts</source>
         <translation>Download license texts</translation>
     </message>
@@ -331,6 +350,10 @@
     <message>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Note: please check the source code for most accurate information.</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
+        <translation>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -543,6 +566,18 @@
     <message>
         <source>Swipe back to change search criteria</source>
         <translation>Swipe back to change search criteria</translation>
+    </message>
+    <message>
+        <source>Add new entry</source>
+        <translation>Add new entry</translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation>Show previews</translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation>Show full entries</translation>
     </message>
 </context>
 <context>
