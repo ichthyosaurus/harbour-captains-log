@@ -1,6 +1,6 @@
 //@ This file is part of opal-about.
 //@ https://github.com/Pretty-SFOS/opal-about
-//@ SPDX-FileCopyrightText: 2021-2022 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2021-2023 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.0
@@ -28,7 +28,8 @@ Column {
 
     // Copy of AboutPageBase::openOrCopyUrl to ensure it is available.
     function openOrCopyUrl(externalUrl, title) {
-        pageStack.push("ExternalUrlPage.qml", {'externalUrl': externalUrl, 'title': title})
+        pageStack.push(Qt.resolvedUrl("ExternalUrlPage.qml"),
+            {'externalUrl': externalUrl, 'title': !!title ? title : ''})
     }
 
     SectionHeader {
@@ -59,6 +60,8 @@ Column {
         text: extraTexts.join('; ')
         font.pixelSize: Theme.fontSizeSmall
         color: Theme.highlightColor
+        linkColor: Theme.primaryColor
+        onLinkActivated: openOrCopyUrl(link)
         bottomPadding: Theme.paddingSmall
     }
 
@@ -68,13 +71,13 @@ Column {
         Button {
             visible: homepage !== ''
             text: qsTranslate("Opal.About", "Homepage")
-            onClicked: pageStack.push("ExternalUrlPage.qml", {'externalUrl': homepage})
+            onClicked: openOrCopyUrl(homepage, text)
         }
 
         Button {
             visible: sources !== ''
             text: qsTranslate("Opal.About", "Source Code")
-            onClicked: pageStack.push("ExternalUrlPage.qml", {'externalUrl': sources})
+            onClicked: openOrCopyUrl(sources, text)
         }
     }
 
@@ -165,7 +168,7 @@ Column {
                                 textFormat: Text.StyledText
                                 palette.primaryColor: Theme.highlightColor
                                 linkColor: Theme.primaryColor
-                                onLinkActivated: pageStack.push("ExternalUrlPage.qml", {'externalUrl': link})
+                                onLinkActivated: openOrCopyUrl(link)
                             }
 
                             Label {
@@ -177,8 +180,8 @@ Column {
                                 textFormat: error ? Text.StyledText : Text.PlainText
                                 palette.primaryColor: Theme.highlightColor
                                 linkColor: Theme.primaryColor
-                                onLinkActivated: pageStack.push("ExternalUrlPage.qml", {'externalUrl': link})
-                                text: error ? qsTranslate("Opal.About", "Please refer to <a href='%1'>%1</a>").arg(
+                                onLinkActivated: openOrCopyUrl(link, error ? qsTr("License text") : "")
+                                text: error ? qsTranslate("Opal.About", 'Please refer to <a href="%1">%1</a>').arg(
                                                   "https://spdx.org/licenses/%1.html".arg(modelData.spdxId))
                                             : modelData.fullText
                             }

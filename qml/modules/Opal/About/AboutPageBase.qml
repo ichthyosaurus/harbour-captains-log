@@ -1,6 +1,6 @@
 //@ This file is part of opal-about.
 //@ https://github.com/Pretty-SFOS/opal-about
-//@ SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
@@ -19,6 +19,8 @@ property var __effectiveMainAttribs:Func.makeStringListConcat(authors,mainAttrib
 property string sourcesUrl:""
 property string translationsUrl:""
 property string homepageUrl:""
+property list<Changelog>changelogItems
+property url changelogList
 property list<License>licenses
 property bool allowDownloadingLicenses:false
 property list<Attribution>attributions
@@ -37,7 +39,7 @@ licenses:page.licenses
 homepage:homepageUrl
 sources:sourcesUrl
 }
-function openOrCopyUrl(externalUrl,title){pageStack.push("private/ExternalUrlPage.qml",{"externalUrl":externalUrl,"title":title})
+function openOrCopyUrl(externalUrl,title){pageStack.push(Qt.resolvedUrl("private/ExternalUrlPage.qml"),{"externalUrl":externalUrl,"title":!!title?title:""})
 }allowedOrientations:Orientation.All
 SilicaFlickable{id:_flickable
 contentHeight:column.height
@@ -104,13 +106,16 @@ text:__effectiveMainAttribs.join(", ")
 showMoreLabel:qsTranslate("Opal.About","show contributors")
 onClicked:{pageStack.animatorPush("private/ContributorsPage.qml",{"appName":appName,"sections":contributionSections,"attributions":attributions,"mainAttributions":__effectiveMainAttribs,"allowDownloadingLicenses":allowDownloadingLicenses})
 }buttons:[InfoButton{text:qsTranslate("Opal.About","Homepage")
-onClicked:openOrCopyUrl(homepageUrl)
+onClicked:openOrCopyUrl(homepageUrl,text)
 enabled:homepageUrl!==""
+},InfoButton{text:qsTranslate("Opal.About","Changelog")
+onClicked:pageStack.animatorPush(Qt.resolvedUrl("private/ChangelogPage.qml"),{appName:appName,changelogItems:changelogItems,changelogList:changelogList})
+enabled:changelogItems.length>0||changelogList!=""
 },InfoButton{text:qsTranslate("Opal.About","Translations")
-onClicked:openOrCopyUrl(translationsUrl)
+onClicked:openOrCopyUrl(translationsUrl,text)
 enabled:translationsUrl!==""
 },InfoButton{text:qsTranslate("Opal.About","Source Code")
-onClicked:openOrCopyUrl(sourcesUrl)
+onClicked:openOrCopyUrl(sourcesUrl,text)
 enabled:sourcesUrl!==""
 }]}Column{width:parent.width
 spacing:parent.spacing
