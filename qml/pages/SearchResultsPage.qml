@@ -20,8 +20,22 @@ Page {
     }
 
     DiaryListView {
+        id: listView
         anchors.fill: parent
         model: filteredModel
+
+        PullDownMenu {
+            flickable: listView
+
+            MenuItem {
+                text: listView.showFullEntries ?
+                          qsTr("Show previews") :
+                          qsTr("Show full entries")
+                onDelayedClick: {
+                    listView.showFullEntries = !listView.showFullEntries
+                }
+            }
+        }
 
         header: PageHeader {
             title: qsTr("Search")

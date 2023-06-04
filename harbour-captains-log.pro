@@ -33,6 +33,7 @@ HEADERS += \
 DISTFILES += \
     qml/harbour-captains-log.qml \
     qml/components/LimitedDatePickerDialog.qml \
+    qml/components/EntryElementFull.qml \
     qml/cover/CoverPage.qml \
     qml/images/*.png \
     qml/pages/*.qml \
