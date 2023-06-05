@@ -471,7 +471,7 @@
     </message>
     <message>
         <source>Search syntax</source>
-        <translation type="unfinished">Sök syntax</translation>
+        <translation>Söksyntax</translation>
     </message>
     <message>
         <source>Note</source>
