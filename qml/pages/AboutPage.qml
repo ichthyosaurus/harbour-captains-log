@@ -96,7 +96,7 @@ A.AboutPageBase {
             groups: [
                 A.ContributionGroup {
                     title: qsTr("Swedish")
-                    entries: ["Åke Engelbrektson"]
+                    entries: ["Åke Engelbrektson, Allan Nordhøy"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Chinese")
@@ -109,6 +109,10 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Finnish")
                     entries: ["Matti Viljanen"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Norwegian")
+                    entries: ["Bokmål: Allan Nordhøy"]
                 }
             ]
         }
