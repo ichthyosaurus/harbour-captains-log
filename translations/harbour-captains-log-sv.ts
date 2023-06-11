@@ -498,7 +498,7 @@
     </message>
     <message>
         <source>Search syntax</source>
-        <translation>Sök syntax</translation>
+        <translation>Söksyntax</translation>
     </message>
     <message>
         <source>Note</source>
