@@ -20,8 +20,26 @@ Page {
     }
 
     DiaryListView {
+        id: listView
         anchors.fill: parent
         model: filteredModel
+
+        PullDownMenu {
+            flickable: listView
+
+            MenuItem {
+                text: qsTr("Add new entry")
+                onClicked: pageStack.push(Qt.resolvedUrl("WritePage.qml"))
+            }
+            MenuItem {
+                text: listView.showFullEntries ?
+                          qsTr("Show previews") :
+                          qsTr("Show full entries")
+                onDelayedClick: {
+                    listView.showFullEntries = !listView.showFullEntries
+                }
+            }
+        }
 
         header: PageHeader {
             title: qsTr("Search")

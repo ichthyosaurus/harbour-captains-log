@@ -24,6 +24,7 @@ import Sailfish.Silica 1.0
 SilicaListView {
     id: root
 
+    property bool showFullEntries: false
     property Item _scrollbar: null
 
     contentHeight: Theme.itemSizeHuge
@@ -54,9 +55,21 @@ SilicaListView {
         }
     }
 
-    delegate: EntryElement {
-        realModel: root.model
+    Component {
+        id: previewDelegate
+        EntryElement {
+            realModel: root.model
+        }
     }
+
+    Component {
+        id: fullDelegate
+        EntryElementFull {
+            realModel: root.model
+        }
+    }
+
+    delegate: showFullEntries ? fullDelegate : previewDelegate
 
     section {
         property: "day"

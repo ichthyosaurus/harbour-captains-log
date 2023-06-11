@@ -91,6 +91,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementFull</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation>Nachtrag vom %1</translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation>Stimmung: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -211,14 +223,10 @@
     </message>
 </context>
 <context>
-    <name>InfoComboPage</name>
+    <name>LicenseListPart</name>
     <message>
-        <source>Details</source>
-        <translation>Details</translation>
-    </message>
-    <message>
-        <source>Option</source>
-        <translation>Option</translation>
+        <source>License text</source>
+        <translation>Lizenztext</translation>
     </message>
 </context>
 <context>
@@ -239,10 +247,6 @@
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>Version %1 (%2)</source>
-        <translation>Version %1 (%2)</translation>
-    </message>
-    <message>
         <source>Development</source>
         <translation>Entwicklung</translation>
     </message>
@@ -253,6 +257,10 @@
     <message>
         <source>Homepage</source>
         <translation>Webseite</translation>
+    </message>
+    <message>
+        <source>Changelog</source>
+        <translation>Änderungsverlauf</translation>
     </message>
     <message>
         <source>Translations</source>
@@ -314,10 +322,6 @@
         <translation>In die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Bitte beachten Sie &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
         <source>Download license texts</source>
         <translation>Lizenztexte herunterladen</translation>
     </message>
@@ -331,6 +335,18 @@
     <message>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Hinweis: Bitte prüfen Sie den Quellcode für alle Einzelheiten.</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
+        <translation>Bitte beachten Sie &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>News</source>
+        <translation>Neuigkeiten</translation>
+    </message>
+    <message>
+        <source>Changes since version %1</source>
+        <translation>Änderungen seit Version %1</translation>
     </message>
 </context>
 <context>
@@ -346,6 +362,17 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Ihre Mitarbeit bei Übersetzungen oder der Programmierung wäre eine große Hilfe.</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.InfoCombo</name>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation>Option</translation>
     </message>
 </context>
 <context>
@@ -543,6 +570,18 @@
     <message>
         <source>Swipe back to change search criteria</source>
         <translation>Zurückwischen, um Suchkriterien zu ändern</translation>
+    </message>
+    <message>
+        <source>Add new entry</source>
+        <translation>Neuen Eintrag erstellen</translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation>Vorschau zeigen</translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation>Vollständig zeigen</translation>
     </message>
 </context>
 <context>

@@ -91,6 +91,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementFull</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -211,14 +223,10 @@
     </message>
 </context>
 <context>
-    <name>InfoComboPage</name>
+    <name>LicenseListPart</name>
     <message>
-        <source>Details</source>
-        <translation>Detaljer</translation>
-    </message>
-    <message>
-        <source>Option</source>
-        <translation>Alternativ</translation>
+        <source>License text</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -237,10 +245,6 @@
     <message>
         <source>Version %1</source>
         <translation>Versjon %1</translation>
-    </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation>Versjon %1 (%2)</translation>
     </message>
     <message>
         <source>Development</source>
@@ -314,10 +318,6 @@
         <translation>Kopier til utklippstavlen</translation>
     </message>
     <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Henvend dem til &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
         <source>Download license texts</source>
         <translation>Last ned lisenstekstene</translation>
     </message>
@@ -331,6 +331,22 @@
     <message>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Merk: Kildekoden er den mest nøyaktige kilden til info.</translation>
+    </message>
+    <message>
+        <source>Changelog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
+        <translation>Henvend dem til &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>News</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changes since version %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -346,6 +362,17 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Bistå gjerne oversettelsen eller bidra til kildekoden.</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.InfoCombo</name>
+    <message>
+        <source>Details</source>
+        <translation>Detaljer</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation>Alternativ</translation>
     </message>
 </context>
 <context>
@@ -486,10 +513,6 @@
         <translation type="unfinished">Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation type="unfinished">Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «\?».</translation>
-    </message>
-    <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation type="unfinished">Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
     </message>
@@ -521,6 +544,10 @@
         <source>Find only entries that are not bookmarked.</source>
         <translation>Kun finn oppføringer som ikke er bokmerket.</translation>
     </message>
+    <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
+        <translation>Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «\?».</translation>
+    </message>
 </context>
 <context>
     <name>SearchResultsPage</name>
@@ -543,6 +570,18 @@
     <message>
         <source>Swipe back to change search criteria</source>
         <translation>Dra tilbake for å endre søkekriterium</translation>
+    </message>
+    <message>
+        <source>Add new entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

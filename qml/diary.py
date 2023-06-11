@@ -171,7 +171,6 @@ class Diary:
             self.conn.create_function("REWRITE_NORMALIZED_TAGS", 1,
                                       lambda x: self._normalize_text(x, keep=[',']),
                                       deterministic=True)
-            self.cursor.execute("""VACUUM;""")
             self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
             self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
                 create_order INTEGER NOT NULL,

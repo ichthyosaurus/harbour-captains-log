@@ -91,6 +91,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementFull</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation type="unfinished">Tillägg från %1</translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation type="unfinished">humör: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -211,14 +223,10 @@
     </message>
 </context>
 <context>
-    <name>InfoComboPage</name>
+    <name>LicenseListPart</name>
     <message>
-        <source>Details</source>
-        <translation>Detaljerat</translation>
-    </message>
-    <message>
-        <source>Option</source>
-        <translation>Alternativ</translation>
+        <source>License text</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -239,8 +247,8 @@
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>Version %1 (%2)</source>
-        <translation>Version %1 (%2)</translation>
+        <source>Changelog</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Development</source>
@@ -314,10 +322,6 @@
         <translation>Kopiera till urklipp</translation>
     </message>
     <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
         <source>Download license texts</source>
         <translation>Ladda ner licenstexter</translation>
     </message>
@@ -331,6 +335,18 @@
     <message>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Notis: Kontrollera källkoden för mest korrekt information.</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
+        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>News</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changes since version %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -346,6 +362,17 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Kodbidrag eller översättningar är väldigt välkommet.</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.InfoCombo</name>
+    <message>
+        <source>Details</source>
+        <translation type="unfinished">Detaljerat</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation type="unfinished">Alternativ</translation>
     </message>
 </context>
 <context>
@@ -543,6 +570,18 @@
     <message>
         <source>Swipe back to change search criteria</source>
         <translation>Svep tillbaka för att ändra sökkriterier</translation>
+    </message>
+    <message>
+        <source>Add new entry</source>
+        <translation type="unfinished">Lägg till ny post</translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
