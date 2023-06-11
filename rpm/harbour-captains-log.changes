@@ -6,6 +6,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Jun 12 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 3.1.0-1
+- new translation: Norwegian Bokmål
+- urgent: fixed initialising a new database
+- updated translations: Swedish, German, English
+- added option to view search results in full instead of only previews
+- added option to add new entries from search results page
+
 * Sat Jun 03 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 3.0.0-1
 - translations: moved to Weblate, updated German
 - added remorse timer when discarding a new / edited entry
