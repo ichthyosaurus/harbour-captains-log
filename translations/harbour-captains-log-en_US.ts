@@ -223,17 +223,6 @@
     </message>
 </context>
 <context>
-    <name>InfoComboPage</name>
-    <message>
-        <source>Details</source>
-        <translation>Details</translation>
-    </message>
-    <message>
-        <source>Option</source>
-        <translation>Option</translation>
-    </message>
-</context>
-<context>
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
@@ -256,10 +245,6 @@
     <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
-    </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation>Version %1 (%2)</translation>
     </message>
     <message>
         <source>Development</source>
@@ -355,6 +340,14 @@
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
+    <message>
+        <source>News</source>
+        <translation>News</translation>
+    </message>
+    <message>
+        <source>Changes since version %1</source>
+        <translation>Changes since version %1</translation>
+    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -369,6 +362,17 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Your contributions to translations or code would be most welcome.</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.InfoCombo</name>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation>Option</translation>
     </message>
 </context>
 <context>

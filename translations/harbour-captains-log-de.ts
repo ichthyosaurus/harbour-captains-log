@@ -223,17 +223,6 @@
     </message>
 </context>
 <context>
-    <name>InfoComboPage</name>
-    <message>
-        <source>Details</source>
-        <translation>Details</translation>
-    </message>
-    <message>
-        <source>Option</source>
-        <translation>Option</translation>
-    </message>
-</context>
-<context>
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
@@ -258,10 +247,6 @@
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>Version %1 (%2)</source>
-        <translation>Version %1 (%2)</translation>
-    </message>
-    <message>
         <source>Development</source>
         <translation>Entwicklung</translation>
     </message>
@@ -275,7 +260,7 @@
     </message>
     <message>
         <source>Changelog</source>
-        <translation>Änderungen</translation>
+        <translation>Änderungsverlauf</translation>
     </message>
     <message>
         <source>Translations</source>
@@ -355,6 +340,14 @@
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>Bitte beachten Sie &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
+    <message>
+        <source>News</source>
+        <translation>Neuigkeiten</translation>
+    </message>
+    <message>
+        <source>Changes since version %1</source>
+        <translation>Änderungen seit Version %1</translation>
+    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -369,6 +362,17 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Ihre Mitarbeit bei Übersetzungen oder der Programmierung wäre eine große Hilfe.</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.InfoCombo</name>
+    <message>
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation>Option</translation>
     </message>
 </context>
 <context>
