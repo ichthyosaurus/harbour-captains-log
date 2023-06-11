@@ -7,6 +7,7 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import SortFilterProxyModel 0.2
+import Opal.InfoCombo 1.0 as I
 import "../components"
 
 Dialog {
@@ -154,41 +155,42 @@ Dialog {
                 }
             }
 
-            InfoCombo {
+            I.InfoCombo {
                 id: textSyntax
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Search syntax")
 
-                InfoComboSection {
+                I.InfoComboSection {
                     title: qsTr("Note")
                     text: qsTr("Simplified matching is only possible in “plain text” " +
                                "mode.")
+                    placeAtTop: true
                 }
 
                 menu: ContextMenu {
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("plain text")
                         property int mode: RegExpFilter.FixedString
-                        property string info: qsTr(
+                        info: qsTr(
                             "Search for the string as you entered it. Note: some " +
                             "simplifications will be applied to the search term " +
                             "if the “Search mode” is set to “simplified”.")
                     }
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("wildcard")
                         property int mode: RegExpFilter.WildcardUnix
-                        property string info: qsTr(
+                        info: qsTr(
                             "This option allows to search for extended patterns. " +
                             "Use “?” to match any single character, and “*” to " +
                             "match zero or more characters. Groups of characters " +
                             "can be defined in square brackets. Use a backslash " +
                             "to search for literal “?” or “*”, e.g. “\\?”.")
                     }
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("regular expression")
                         property int mode: RegExpFilter.RegExp
-                        property string info: qsTr(
+                        info: qsTr(
                             "Search using complex regular expressions. Use the " +
                             "vertical bar “|” to search for multiple terms. " +
                             "Search the Internet if you want to learn more about " +
@@ -197,7 +199,7 @@ Dialog {
                 }
             }
 
-            InfoCombo {
+            I.InfoCombo {
                 id: textMode
                 width: parent.width
                 currentIndex: 0
@@ -210,19 +212,19 @@ Dialog {
                 }
 
                 menu: ContextMenu {
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("simplified")
                         property int mode: queries.matchSimplified
-                        property string info: qsTr(
+                        info: qsTr(
                             "Ignore diacritics on characters, matching e.g. “ö”, “ó”, and " +
                             "“õ” when searching for “o”. Ignore any punctuation marks. " +
                             "Use this mode when you are unsure how you spelled something " +
                             "in the past.")
                     }
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("strict")
                         property int mode: queries.matchStrict
-                        property string info: qsTr(
+                        info: qsTr(
                             "Match the query string exactly. Use this mode when you know exactly " +
                             "what you are searching for, or when you want to search for a string " +
                             "containing punctuation marks like “-”, “!”, or “#”."
@@ -231,33 +233,33 @@ Dialog {
                 }
             }
 
-            InfoCombo {
+            I.InfoCombo {
                 id: bookmarks
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Bookmarks")
 
                 menu: ContextMenu {
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("all entries", "search option, as in: " +
                                    "“find all entries, whether they are " +
                                    "bookmarked or not”")
                         property int mode: Qt.PartiallyChecked
-                        property string info: qsTr(
+                        info: qsTr(
                             "Find entries regardless of whether they are bookmarked " +
                             "or not.")
                     }
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("marked", "search option, as in: " +
                                    "“find only bookmarked entries”")
                         property int mode: Qt.Checked
-                        property string info: qsTr("Find only bookmarked entries.")
+                        info: qsTr("Find only bookmarked entries.")
                     }
-                    MenuItem {
+                    I.InfoMenuItem {
                         text: qsTr("unmarked", "search option, as in: " +
                                    "“find only entries that are not bookmarked”")
                         property int mode: Qt.Unchecked
-                        property string info: qsTr(
+                        info: qsTr(
                             "Find only entries that are not bookmarked.")
                     }
                 }

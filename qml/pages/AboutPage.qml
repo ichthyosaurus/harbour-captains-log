@@ -65,6 +65,7 @@ A.AboutPageBase {
             sources: "https://github.com/Karry/osmscout-sailfish/blob/" +
                      "35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
         },
+        A.OpalInfoComboAttribution {},
         A.OpalAboutAttribution {}
     ]
 
