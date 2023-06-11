@@ -19,7 +19,7 @@ property var __effectiveMainAttribs:Func.makeStringListConcat(authors,mainAttrib
 property string sourcesUrl:""
 property string translationsUrl:""
 property string homepageUrl:""
-property list<Changelog>changelogItems
+property list<ChangelogItem>changelogItems
 property url changelogList
 property list<License>licenses
 property bool allowDownloadingLicenses:false
@@ -81,11 +81,8 @@ font.pixelSize:Theme.fontSizeLarge
 horizontalAlignment:Text.AlignHCenter
 }Label{width:parent.width
 visible:String(appVersion!=="")
-text:{var versionString=appVersion
-if(appRelease!=""&&appRelease!="1")versionString+="-"+appRelease
-if(appReleaseType==""){return qsTranslate("Opal.About","Version %1").arg(versionString)
-}else{return qsTranslate("Opal.About","Version %1 (%2)").arg(versionString).arg(appReleaseType)
-}}wrapMode:Text.Wrap
+text:qsTranslate("Opal.About","Version %1").arg(Func.formatAppVersion(appVersion,appRelease,appReleaseType))
+wrapMode:Text.Wrap
 color:Theme.secondaryHighlightColor
 font.pixelSize:Theme.fontSizeMedium
 horizontalAlignment:Text.AlignHCenter
