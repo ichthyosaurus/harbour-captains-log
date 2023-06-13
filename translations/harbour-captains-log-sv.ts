@@ -95,11 +95,11 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Tillägg från %1</translation>
+        <translation>Tillägg från %1</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished">humör: %1</translation>
+        <translation>humör: %1</translation>
     </message>
 </context>
 <context>
@@ -226,7 +226,7 @@
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenstext</translation>
     </message>
 </context>
 <context>
@@ -248,7 +248,7 @@
     </message>
     <message>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändringslogg</translation>
     </message>
     <message>
         <source>Development</source>
@@ -342,11 +342,11 @@
     </message>
     <message>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyheter</translation>
     </message>
     <message>
         <source>Changes since version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändrat sedan version %1</translation>
     </message>
 </context>
 <context>
@@ -368,11 +368,11 @@
     <name>Opal.InfoCombo</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Detaljerat</translation>
+        <translation>Detaljerat</translation>
     </message>
     <message>
         <source>Option</source>
-        <translation type="unfinished">Alternativ</translation>
+        <translation>Alternativ</translation>
     </message>
 </context>
 <context>
@@ -573,15 +573,15 @@
     </message>
     <message>
         <source>Add new entry</source>
-        <translation type="unfinished">Lägg till ny post</translation>
+        <translation>Lägg till ny post</translation>
     </message>
     <message>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa förhandsgranskningar</translation>
     </message>
     <message>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa fullständiga poster</translation>
     </message>
 </context>
 <context>
