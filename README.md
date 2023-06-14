@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2021-2023 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
-![Captain's Log banner](icon-src/banner.png)
+![Captain's Log banner](dist/banner-small.png)
 
 # Captain's Log for Sailfish OS
 
