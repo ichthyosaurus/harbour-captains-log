@@ -47,9 +47,8 @@ Captain's Log requires the following permissions:
 
 ## Help and support
 
-You are welcome to leave a comment on
-[OpenRepos](https://openrepos.net/content/ichthyosaurus/captains-log-updated) or
-in the Jolla store.
+You are welcome to [leave a comment in the forum](https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753)
+if you have any questions or ideas.
 
 ## Translations
 
