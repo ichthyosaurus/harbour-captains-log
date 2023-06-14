@@ -35,16 +35,24 @@
         <source>Finnish</source>
         <translation>Finsk</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
     <message>
         <source>Saved your protection code.</source>
-        <translation type="unfinished">Beskyttelseskode lagret.</translation>
+        <translation>Beskyttelseskode lagret.</translation>
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation type="unfinished">Skriv inn din gamle sikkerhetskode</translation>
+        <translation>Skriv inn din gamle sikkerhetskode</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
@@ -87,7 +95,7 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Tillegg fra %1</translation>
+        <translation>Tillegg fra %1</translation>
     </message>
 </context>
 <context>
@@ -95,11 +103,11 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tillegg fra %1</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>humør: %1</translation>
     </message>
 </context>
 <context>
@@ -110,7 +118,7 @@
     </message>
     <message>
         <source>Define the file name...</source>
-        <translation type="unfinished">Definer filnavnet …</translation>
+        <translation>Definer filnavnet …</translation>
     </message>
     <message>
         <source>Filename</source>
@@ -118,11 +126,11 @@
     </message>
     <message>
         <source>Export file type selection</source>
-        <translation type="unfinished">Eksportfilformat</translation>
+        <translation>Eksportfilformat</translation>
     </message>
     <message>
         <source>Select file type:</source>
-        <translation type="unfinished">Velg filtypen:</translation>
+        <translation>Velg filtypen:</translation>
     </message>
     <message>
         <source>Plain text</source>
@@ -199,7 +207,7 @@
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation type="unfinished">Om</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <source>Search</source>
@@ -233,7 +241,7 @@
     <name>LimitedDatePickerDialog</name>
     <message>
         <source>It is not possible to add entries for the future.</source>
-        <translation type="unfinished">Det er ikke mulig å legge til oppføringer for fremtiden.</translation>
+        <translation>Det er ikke mulig å legge til oppføringer for fremtiden.</translation>
     </message>
 </context>
 <context>
@@ -291,7 +299,7 @@
     </message>
     <message>
         <source>Acknowledgements</source>
-        <translation type="unfinished">Kunngjøringer</translation>
+        <translation>Kunngjøringer</translation>
     </message>
     <message>
         <source>Thank you!</source>
@@ -379,7 +387,7 @@
     <name>PinPage</name>
     <message>
         <source>Please enter your security code</source>
-        <translation type="unfinished">Skriv inn din sikkerhetskode</translation>
+        <translation>Skriv inn din sikkerhetskode</translation>
     </message>
     <message>
         <source>please try again</source>
@@ -464,7 +472,7 @@
     <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished">bokmerket</translation>
+        <translation>bokmerket</translation>
     </message>
     <message>
         <source>unmarked</source>
@@ -498,7 +506,7 @@
     </message>
     <message>
         <source>Search syntax</source>
-        <translation type="unfinished">Søkesyntaks</translation>
+        <translation>Søkesyntaks</translation>
     </message>
     <message>
         <source>Note</source>
@@ -510,11 +518,11 @@
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished">Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
+        <translation>Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished">Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
+        <translation>Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
     </message>
     <message>
         <source>simplified</source>
@@ -522,7 +530,7 @@
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished">Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
+        <translation>Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
     </message>
     <message>
         <source>strict</source>
@@ -545,7 +553,7 @@
         <translation>Kun finn oppføringer som ikke er bokmerket.</translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
         <translation>Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «\?».</translation>
     </message>
 </context>
@@ -573,7 +581,7 @@
     </message>
     <message>
         <source>Add new entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til ny oppføring</translation>
     </message>
     <message>
         <source>Show previews</source>
@@ -592,7 +600,7 @@
     </message>
     <message>
         <source>activate code protection</source>
-        <translation type="unfinished">aktiver kodebeskyttelse</translation>
+        <translation>aktiver kodebeskyttelse</translation>
     </message>
     <message>
         <source>Set Code</source>
@@ -673,7 +681,7 @@
     </message>
     <message>
         <source>Discarded the entry</source>
-        <translation type="unfinished">Oppføring forkastet</translation>
+        <translation>Oppføring forkastet</translation>
     </message>
     <message>
         <source>Discard</source>
@@ -710,12 +718,12 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished">Feil: Kunne ikke laste inn databasen.</translation>
+        <translation>Feil: Kunne ikke laste inn databasen.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished">hh&apos;:&apos;mm</translation>
+        <translation>hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>fantastic</source>
@@ -750,7 +758,7 @@
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
@@ -760,12 +768,12 @@
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished">ddd d MMM yyyy</translation>
+        <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>d MMM</source>
@@ -774,7 +782,7 @@
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished">Uventet feil. Start programmet på ny og sjekk loggføringen.</translation>
+        <translation>Uventet feil. Start programmet på ny og sjekk loggføringen.</translation>
     </message>
 </context>
 </TS>

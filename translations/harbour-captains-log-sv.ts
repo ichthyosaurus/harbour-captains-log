@@ -35,6 +35,14 @@
         <source>Finnish</source>
         <translation>Finska</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Ikondesign</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation>Norska</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
@@ -226,7 +234,7 @@
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
-        <translation>Licenstext</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -248,7 +256,7 @@
     </message>
     <message>
         <source>Changelog</source>
-        <translation>Ändringslogg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Development</source>
@@ -342,11 +350,11 @@
     </message>
     <message>
         <source>News</source>
-        <translation>Nyheter</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Changes since version %1</source>
-        <translation>Ändrat sedan version %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -513,10 +521,6 @@
         <translation>Sök efter strängen som du angav den. Vissa förenklingar kommer att tillämpas på söktermen om &quot;Sökläge&quot; är inställt på &quot;förenklat&quot;.</translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation>Med det här alternativet kan du söka efter utökade mönster. Använd &quot;?&quot; för att matcha ett enskilt tecken och &quot;*&quot; för att matcha noll eller fler tecken. Teckengrupper kan definieras inom hakparenteser. Använd ett omvänt snedstreck för att söka efter litterala &quot;?&quot; eller &quot;*&quot;, t.ex. &quot;?&quot;.</translation>
-    </message>
-    <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>Sök med komplex regular expression. Använd det lodstreck &quot;|&quot; för att söka efter flertal termer. Sök på internet om du vill veta mer om regular expression.</translation>
     </message>
@@ -547,6 +551,10 @@
     <message>
         <source>Find only entries that are not bookmarked.</source>
         <translation>Hitta endast poster som inte är bokmärkta.</translation>
+    </message>
+    <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
+        <translation>Med det här alternativet kan du söka efter utökade mönster. Använd &quot;?&quot; för att matcha ett enskilt tecken och &quot;*&quot; för att matcha noll eller fler tecken. Teckengrupper kan definieras inom hakparenteser. Använd ett omvänt snedstreck för att söka efter litterala &quot;?&quot; eller &quot;*&quot;, t.ex. &quot;\?&quot;.</translation>
     </message>
 </context>
 <context>

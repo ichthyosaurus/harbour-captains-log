@@ -35,6 +35,14 @@
         <source>Finnish</source>
         <translation>Suomi</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Kuvakesuunnittelu</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation>Norja</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
@@ -60,14 +68,14 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">Valitse</translation>
+        <translation>Valitse</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished">ei koskaan</translation>
+        <translation>ei koskaan</translation>
     </message>
 </context>
 <context>
@@ -99,7 +107,7 @@
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished">mieliala: %1</translation>
+        <translation>mieliala: %1</translation>
     </message>
 </context>
 <context>
@@ -367,7 +375,7 @@
     <name>Opal.InfoCombo</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Tiedot</translation>
+        <translation>Tiedot</translation>
     </message>
     <message>
         <source>Option</source>
@@ -393,7 +401,7 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Mieliala</translation>
+        <translation>Mieliala</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
@@ -421,7 +429,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Haku</translation>
+        <translation>Haku</translation>
     </message>
     <message>
         <source>Title and entry</source>
@@ -453,7 +461,7 @@
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished">Kirjanmerkit</translation>
+        <translation>Kirjanmerkit</translation>
     </message>
     <message>
         <source>all entries</source>
@@ -472,7 +480,7 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">Mieliala</translation>
+        <translation>Mieliala</translation>
     </message>
     <message>
         <source>From</source>
@@ -544,7 +552,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -552,7 +560,7 @@
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Haku</translation>
+        <translation>Haku</translation>
     </message>
     <message numerus="yes">
         <source>%n result(s)</source>
@@ -564,7 +572,7 @@
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished">Ei kirjoituksia</translation>
+        <translation>Ei kirjoituksia</translation>
     </message>
     <message>
         <source>Swipe back to change search criteria</source>
@@ -572,7 +580,7 @@
     </message>
     <message>
         <source>Add new entry</source>
-        <translation type="unfinished">Lisää uusi kirjoitus</translation>
+        <translation>Lisää uusi kirjoitus</translation>
     </message>
     <message>
         <source>Show previews</source>
@@ -714,57 +722,57 @@
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished">&apos;kello&apos; hh&apos;:&apos;mm</translation>
+        <translation>&apos;kello&apos; hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">mahtava</translation>
+        <translation>mahtava</translation>
     </message>
     <message>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">hyvä</translation>
+        <translation>hyvä</translation>
     </message>
     <message>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">okei</translation>
+        <translation>okei</translation>
     </message>
     <message>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">ei hyvä</translation>
+        <translation>ei hyvä</translation>
     </message>
     <message>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">huono</translation>
+        <translation>huono</translation>
     </message>
     <message>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">kamala</translation>
+        <translation>kamala</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
-        <translation type="unfinished">d MMM yyyy</translation>
+        <translation>d MMM yyyy</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
+        <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished">ddd d MMM yyyy</translation>
+        <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
         <source>d MMM</source>

@@ -35,6 +35,14 @@
         <source>Finnish</source>
         <translation>Finnish</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Icon Design</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation>Norwegian</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
@@ -513,10 +521,6 @@
         <translation>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</translation>
-    </message>
-    <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</translation>
     </message>
@@ -547,6 +551,10 @@
     <message>
         <source>Find only entries that are not bookmarked.</source>
         <translation>Find only entries that are not bookmarked.</translation>
+    </message>
+    <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
+        <translation>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</translation>
     </message>
 </context>
 <context>

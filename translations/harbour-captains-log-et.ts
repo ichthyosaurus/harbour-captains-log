@@ -35,6 +35,14 @@
         <source>Finnish</source>
         <translation>soome</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Ikooni kujundus</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation>norra</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
@@ -198,7 +206,7 @@
     <name>FirstPage</name>
     <message>
         <source>About</source>
-        <translation type="unfinished">Rakenduse teave</translation>
+        <translation>Rakenduse teave</translation>
     </message>
     <message>
         <source>Search</source>
@@ -367,7 +375,7 @@
     <name>Opal.InfoCombo</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Lisateave</translation>
+        <translation>Lisateave</translation>
     </message>
     <message>
         <source>Option</source>
@@ -544,7 +552,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

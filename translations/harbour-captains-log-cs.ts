@@ -35,6 +35,14 @@
         <source>Finnish</source>
         <translation>Finština</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Design ikon</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation>Norština</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
@@ -546,7 +554,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

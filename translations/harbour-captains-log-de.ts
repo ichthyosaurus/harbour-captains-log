@@ -35,6 +35,14 @@
         <source>Finnish</source>
         <translation>Finnisch</translation>
     </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Icon-Design</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation>Norwegisch</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
@@ -513,10 +521,6 @@
         <translation>Sucht nach der eingegebenen Zeichenkette. Hinweis: Der Suchbegriff wird vereinfacht wenn der Suchmodus auf „vereinfacht“ gestellt ist.</translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “\?”.</source>
-        <translation>Diese Option erlaubt die Suche nach komplizierten Mustern. Verwenden Sie „?“ für ein beliebiges Zeichen und „*“ um kein oder mehrere Zeichen zu finden. Zeichengruppen können in eckigen Klammern definiert werden. Mit einem umgekehrten Schrägstrich kann nach einem „?“ oder „*“ gesucht werden, z. B. „\\*“.</translation>
-    </message>
-    <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>Mit komplexen regulären Ausdrücken suchen. Mit der vertikalen Linie „|“ können mehrere Suchbegriffe kombiniert werden. Im Internet gibt es ausführliche Anleitungen zu regulären Ausdrücken.</translation>
     </message>
@@ -547,6 +551,10 @@
     <message>
         <source>Find only entries that are not bookmarked.</source>
         <translation>Nur Einträge finden, die nicht mit einem Lesezeichen markiert sind.</translation>
+    </message>
+    <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
+        <translation>Diese Option erlaubt die Suche nach komplizierten Mustern. Verwenden Sie „?“ für ein beliebiges Zeichen und „*“ um kein oder mehrere Zeichen zu finden. Zeichengruppen können in eckigen Klammern definiert werden. Mit einem umgekehrten Schrägstrich kann nach einem „?“ oder „*“ gesucht werden, z. B. „\?“.</translation>
     </message>
 </context>
 <context>
