@@ -72,8 +72,8 @@ A.AboutPageBase {
     donations.text: donations.defaultTextCoffee
     donations.services: [
         A.DonationService {
-            name: "LiberaPay"
-            url: "https://liberapay.com/ichthyosaurus/"
+            name: "Liberapay"
+            url: "https://liberapay.com/ichthyosaurus"
         }
     ]
 
@@ -84,11 +84,11 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Programming")
                     entries: ["Mirian Margiani", "Gabriel Berkigt"]
-                }/*,
+                },
                 A.ContributionGroup {
                     title: qsTr("Icon Design")
-                    entries: ["Mirian Margiani", "Gabriel Berkigt"]
-                }*/
+                    entries: ["Mirian Margiani", "JSEHV", "Gabriel Berkigt"]
+                }
             ]
         },
         A.ContributionSection {
