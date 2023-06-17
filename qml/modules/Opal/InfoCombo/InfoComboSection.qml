@@ -6,5 +6,7 @@ import QtQuick 2.0
 QtObject{property string title
 property string text
 property bool placeAtTop:true
+property var linkHandler:function(link){Qt.openUrlExternally(link)
+}
 readonly property int __is_info_combo_section:0
 }

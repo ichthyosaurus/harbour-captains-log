@@ -69,6 +69,7 @@ textFormat:item.textFormat
 text:modelData
 linkColor:Theme.primaryColor
 onLinkActivated:openOrCopyUrl(link)
+bottomPadding:Theme.paddingMedium
 }}}ChangelogItemsLoader{id:itemsLoader
 changelogItems:root.changelogItems
 changelogList:root.changelogList
