@@ -25,6 +25,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0 as S
 import Opal.About 1.0 as A
+import Opal.InfoCombo 1.0 as I
 
 A.AboutPageBase {
     id: root
@@ -72,7 +73,7 @@ A.AboutPageBase {
             sources: "https://github.com/Karry/osmscout-sailfish/blob/" +
                      "35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
         },
-        A.OpalInfoComboAttribution {},
+        I.OpalInfoComboAttribution {},
         A.OpalAboutAttribution {}
     ]
 
