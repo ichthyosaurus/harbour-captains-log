@@ -70,6 +70,10 @@ Dialog {
     }
 
     onAccepted: {
+        if (tagsField.text.trim() !== "") {
+            _tagsList = _tagsList.concat([tagsField.text.trim()])
+        }
+
         var mood = root.mood
         var title_text = titleField.text.trim()
         var entry = entryArea.text.trim()
