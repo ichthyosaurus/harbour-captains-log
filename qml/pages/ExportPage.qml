@@ -32,18 +32,22 @@ Dialog {
         TextField {
             id: filenameField
             width: parent.width
-            placeholderText: qsTr("Define the file name...")
+            placeholderText: qsTr("Define the file name")
             label: qsTr("Filename")
+            description: qsTr("The file will be saved in your documents " +
+                              "folder. The name must not contain subfolders.")
             text: defaultFileName
             inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
+            validator: RegExpValidator {
+                regExp: /[^\/]/gi
+            }
         }
 
         I.InfoCombo {
             id: fileTypeCombo
 
             width: parent.width
-            description: qsTr("Export file type selection")
-            label: qsTr("Select file type:")
+            label: qsTr("Export file format")
 
             I.InfoComboSection {
                 title: qsTr("Note")
@@ -59,27 +63,42 @@ Dialog {
                 I.InfoMenuItem {
                     text: qsTr("Plain text")
                     property string kind: "txt"
-                    info: "- print, but lines are not folded"
+                    info: qsTr("Export entries in a very simple style " +
+                               "as a plain text file that can be printed " +
+                               "directly. Note that long lines will not be " +
+                               "folded.")
                 }
                 I.InfoMenuItem {
                     text: qsTr("Plain Markdown")
                     property string kind: "md"
-                    info: "- print"
+                    info: qsTr("Export entries in a simple " +
+                               '<a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> ' +
+                               "format. This can later be converted into other " +
+                               "formats for printing or for the web.")
                 }
                 I.InfoMenuItem {
                     text: qsTr("Markdown for Pandoc")
                     property string kind: "tex.md"
-                    info: "- convert to pdf"
+                    info: qsTr("Export entries using an extended format that " +
+                               "can be converted to PDF using " +
+                               '<a href="https://pandoc.org/">Pandoc</a>. ' +
+                               "This format is not suitable to be printed without " +
+                               "further conversion.")
                 }
                 I.InfoMenuItem {
                     text: qsTr("Comma-separated values (CSV)")
                     property string kind: "csv"
-                    info: "- raw database extract in a single file, - cannot be imported"
+                    info: qsTr("Export the full database in a machine-readable " +
+                               "plain text format.") + " " +
+                          qsTr("Note that it is not yet possible to import this " +
+                               "file type back into the app.")
                 }
                 I.InfoMenuItem {
                     text: qsTr("Database backup")
                     property string kind: "raw"
-                    info: "- actual database in a zip file as a backup, - can be put back in place"
+                    info: qsTr("Create a backup of the actual database files " +
+                               "as an archive. This database can later be put " +
+                               "back into place.")
                 }
             }
 
