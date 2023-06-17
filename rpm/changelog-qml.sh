@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # This file is part of Captain's Log.
 # SPDX-FileCopyrightText: 2021-2023 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -10,7 +9,11 @@
 app="harbour-captains-log"
 changelog="rpm/$app.changes"
 changelog_copyright="Mirian Margiani"
+
+# REUSE-IgnoreStart
 changelog_license="GPL-3.0-or-later"
+# REUSE-IgnoreEnd
+
 opal_about_import='import "modules/Opal/About"'
 opal_about_prefix=""
 output_file="qml/Changelog.qml"
@@ -29,6 +32,7 @@ if [[ ! -f "$changelog" ]]; then
     exit 2
 fi
 
+# REUSE-IgnoreStart
 cat <<EOF > "$output_file"
 /*
  * This file is part of $app.
@@ -41,6 +45,7 @@ import "modules/Opal/About"
 
 ChangelogList {
 EOF
+# REUSE-IgnoreEnd
 
 i1="    "
 i2="        "
