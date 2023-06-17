@@ -127,6 +127,7 @@ Dialog {
         Column {
             id: content
             width: parent.width
+            height: childrenRect.height
             spacing: Theme.paddingMedium
 
             DialogHeader {
@@ -175,6 +176,18 @@ Dialog {
                 EnterKey.onClicked: {
                     entryArea.focus = true
                 }
+
+                onFocusChanged: {
+                    if (focus) {
+                        VerticalAutoScroll.fixup()
+                    }
+                }
+
+                // We use tagsField here even though it is supposed to
+                // ensure entryArea is visible because we only want to
+                // make sure at least a single line is comfortably visible
+                // and clickable.
+                VerticalAutoScroll.bottomMargin: tagsField.height + content.spacing
             }
 
             TextArea {
@@ -183,19 +196,28 @@ Dialog {
                 placeholderText: qsTr("What do you want to say?")
                 label: qsTr("Entry")
                 wrapMode: TextEdit.WordWrap
+
+                onFocusChanged: {
+                    if (focus) {
+                        VerticalAutoScroll.fixup()
+                    }
+                }
+
+                VerticalAutoScroll.bottomMargin: tagsField.height + content.spacing
             }
 
-            SelectedTagsView {
+            TagSuggestionsView {
+                id: suggestionsView
                 width: parent.width
-                tagsList: _tagsList
+                searchTerm: tagsField.text
 
-                onRemoveRequested: {
-                    tagsField.text = tag
-                    var index = _tagsList.indexOf(tag)
+                onTagSelected: {
+                    if (_tagsList.indexOf(tag.text) < 0) {
+                        _tagsList = _tagsList.concat([tag.text])
+                    }
 
-                    if (index >= 0) {
-                        _tagsList.splice(index, 1)
-                        _tagsList = _tagsList
+                    if (tag.text === tagsField.text) {
+                        tagsField.text = ''
                     }
                 }
             }
@@ -215,7 +237,18 @@ Dialog {
                     }
                 }
 
+                VerticalAutoScroll.bottomMargin: Math.min(
+                    3 * tagsField.height,
+                    tagsView.height + 2*content.spacing)
+
+                onFocusChanged: {
+                    if (focus) {
+                        VerticalAutoScroll.fixup()
+                    }
+                }
+
                 onTextChanged: {
+                    VerticalAutoScroll.fixup()
                     if (text.indexOf(',') < 0) return
 
                     var clean = []
@@ -242,15 +275,27 @@ Dialog {
                 }
             }
 
-            TagSuggestionsView {
+            SelectedTagsView {
+                id: tagsView
                 width: parent.width
-                searchTerm: tagsField.text !== '' ? tagsField.text : ' '
+                tagsList: _tagsList
 
-                onTagSelected: {
-                    if (_tagsList.indexOf(tag.text) < 0) {
-                        _tagsList = _tagsList.concat([tag.text])
+                onRemoveRequested: {
+                    var index = _tagsList.indexOf(tag)
+
+                    if (index >= 0) {
+                        _tagsList.splice(index, 1)
+                        _tagsList = _tagsList
                     }
                 }
+            }
+
+            Item {
+                width: parent.width
+                height: Math.min(0, (suggestionsView.limitResults + 1) * Theme.itemSizeSmall -
+                            suggestionsView.height -
+                            tagsView.height -
+                            2 * content.spacing)
             }
         }
     }
