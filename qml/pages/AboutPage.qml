@@ -46,6 +46,13 @@ A.AboutPageBase {
 
     attributions: [
         A.Attribution {
+            name: "pyratemp"
+            entries: ["2007-2013 Roland Koebler"]
+            licenses: A.License { spdxId: "MIT" }
+            homepage: "https://www.simple-is-better.org/template/pyratemp.html"
+            sources: "https://www.simple-is-better.org/template/pyratemp-0.3.2.tgz"
+        },
+        A.Attribution {
             name: "SortFilterProxyModel"
             entries: ["2016 Pierre-Yves Siret"]
             licenses: A.License { spdxId: "MIT" }
