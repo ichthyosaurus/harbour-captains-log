@@ -14,15 +14,23 @@ import unicodedata
 from pathlib import Path
 from datetime import datetime
 
-import pyotherside
+try:
+    import pyotherside
+    HAVE_SIDE = True
+except ImportError:
+    HAVE_SIDE = False
+
+    class pyotherside:
+        def send(*args, **kwargs):
+            print(f"pyotherside.send: {args} {kwargs}")
 
 
 #
 # BEGIN Database
 #
 
-DIARY = None
-INITIALIZED = False  # TODO actually check this value everywhere
+DIARY: 'Diary' = None
+INITIALIZED: bool = False  # TODO actually check this value everywhere
 
 
 class Diary:
