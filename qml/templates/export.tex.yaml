@@ -1,0 +1,23 @@
+#!
+#! SPDX-FileCopyrightText: 2023 Mirian Margiani
+#! SPDX-License-Identifier: GPL-3.0-or-later
+#!
+<!--(set_escape)-->#!
+    none
+<!--(end)-->#!
+#
+# @!tr('''This file has been exported from Captain's Log on {0}.''', today)!@
+#
+
+top-level-division: section
+from: markdown+smart
+to: pdf
+standalone: true
+listings: true
+pdf-engine: lualatex
+
+variables:
+  documentclass: scrartcl
+  papersize: A4
+  fontsize: 11pt
+  geometry: margin=2cm

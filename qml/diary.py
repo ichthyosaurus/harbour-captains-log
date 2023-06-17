@@ -7,7 +7,6 @@
 #
 
 import os
-import csv
 import sqlite3
 import re
 import unicodedata
@@ -611,7 +610,87 @@ def _read_all_entries():
     return cleaned_rows
 
 
-def export(filename, type, translations):
+def _export_template(template: str, env: dict):
+    import pyratemp
+
+    template_file = Path(__file__).resolve().parent / 'templates' / template
+    renderer = pyratemp.Template(filename=str(template_file), data=env)
+
+    return renderer()
+
+
+def _export_txt(filename: str, env: dict):
+    return {f'{filename}.txt': _export_template('export.txt', env)}
+
+
+def _export_md(filename: str, env: dict):
+    return {f'{filename}.md': _export_template('export.md', env)}
+
+
+def _export_tex_md(filename: str, env: dict):
+    return {
+        f'{filename}.tex.md': _export_template('export.tex.md', env),
+        f'{filename}.yaml': _export_template('export.tex.yaml', env),
+    }
+
+
+def _export_csv(filename: str, env: dict):
+    import io
+    import csv
+
+    output = io.StringIO()
+
+    fieldnames = list(_FIELD_DEFAULTS.keys()) + list(_GENERATED_FIELDS.keys())
+    csv_writer = csv.DictWriter(output, fieldnames=fieldnames)
+    csv_writer.writeheader()
+
+    for e in env['entries']:
+        csv_writer.writerow(e)
+
+    return {f'{filename}.csv': output.getvalue().strip()}
+
+
+def _export_raw(filename: str, env: dict):
+    import zipfile
+    tr = env['tr']
+
+    with zipfile.ZipFile(f'{filename}.zip', 'w',
+                         compression=zipfile.ZIP_STORED,
+                         allowZip64=True) as myzip:
+        myzip.write(DIARY.db_path, arcname=Path(DIARY.db_path).name)
+        myzip.write(DIARY.schema, arcname=Path(DIARY.schema).name)
+        myzip.writestr(tr('''README.txt'''), data=_export_template('export.zip.txt', env))
+
+    # writing is handled here; the function returns no files because
+    # the common writer writes text files
+    return {}
+
+
+def _get_translators(translations_or_translator):
+    # The tr() function returns the translation for 'string', or 'string' itself
+    # if no translation is available.
+    #
+    # NOTE: 1. the string MUST be enclosed in triple single quotes, e.g. '''foobar'''
+    #       2. after changing any translatable text, you MUST run update_export_translations.sh
+    #          to make the text actually translatable
+    if isinstance(translations_or_translator, dict):
+        def tr(string: str, *args, **kwargs):
+            return translations_or_translator.get(string, string).format(*args, **kwargs)
+
+        def mood(index: int):
+            moodTexts = translations_or_translator.get('moodTexts', [])
+            return moodTexts[index] if len(moodTexts) > index else str(index)
+    else:
+        def tr(string: str, *args, **kwargs):
+            return translations_or_translator.translate(string).format(*args, **kwargs)
+
+        def mood(index: int):
+            return translations_or_translator.translateMood(index)
+
+    return (tr, mood)
+
+
+def export(filename: str, kind: str, translations_or_translator):
     """ Export all entries to 'filename' as 'type'.
 
     'translations' is a JS object containing translations for exported strings.
@@ -619,98 +698,77 @@ def export(filename, type, translations):
     Cf. ExportPage.qml for the main definition.
     """
 
-    entries = _read_all_entries()  # get latest state of the database
+    entries = _read_all_entries()
+    filename = filename.replace("'", "_").strip()
 
-    if not entries:
+    if not entries or not filename:
         return  # nothing to export
 
-    def tr(string):
-        # return the translation for 'string' or 'string' if none is available
-        return translations.get(string, string)
+    tr, mood = _get_translators(translations_or_translator)
 
-    def trMood(index):
-        # cf. tr()
-        moodTexts = translations.get('moodTexts', [])
-        return moodTexts[index] if len(moodTexts) > index else str(index)
+    def date(date_string: str, timezone: str = ''):
+        dt = datetime.strptime(date_string, '%Y-%m-%d %H:%M:%S')
 
-    if type == "txt":
-        # Export as plain text file
-        with open(filename, "w+", encoding='utf-8') as f:
-            for e in entries:
-                lines = [
-                    tr('Created: {}').format(DIARY._format_date(e["entry_date"], e["entry_tz"])),
-                    tr('Changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"]))), '',
-                    tr('Title: {}').format(e['title']), '',
-                    tr('Entry:\n{}').format(e['entry']), '',
-                    tr('Tags: {}').format(e['tags']),
-                    tr('Bookmark: {}').format(tr("yes") if e["bookmark"] else tr("no")),
-                    tr('Mood: {}').format(trMood(e["mood"])),
-                    "-".rjust(80, "-"), '',
-                ]
-                f.write('\n'.join(lines))
-    elif type == "csv":
-        # Export as CSV file
-        with open(filename, "w+", newline='', encoding='utf-8') as f:
-            fieldnames = _FIELD_DEFAULTS.keys()
-            csv_writer = csv.DictWriter(f, fieldnames=fieldnames)
-            csv_writer.writeheader()
+        if timezone:
+            return dt.strftime(tr('''%A, %B %-d %Y (%-H:%M, {tz})''', tz=timezone))
+        return dt.strftime(tr('''%A, %B %-d %Y (%-H:%M)'''))
 
-            for e in entries:
-                csv_writer.writerow(e)
-    elif type == "md":
-        # Export as plain Markdown file
-        with open(filename, "w+", encoding='utf-8') as f:
-            with open(filename, "w+", encoding='utf-8') as f:
-                from_date = DIARY._format_date(entries[-1]["entry_date"], entries[-1]["entry_tz"])
-                till_date = DIARY._format_date(entries[0]["entry_date"], entries[0]["entry_tz"])
-                f.write('# ' + tr('Diary from {} until {}').format(from_date, till_date) + '\n\n')
+    def paragraphs(string: str):
+        lines = string.split('\n')
+        lines = [x.strip() for x in lines]
+        lines = [x if not x or x[0] == '-' else x + '\n' for x in lines]
+        return '\n'.join(lines).strip()
 
-                for e in entries:
-                    bookmark = " *" if e["bookmark"] else ""
-                    title = "** {} **\n".format(e["title"]) if e["title"] else ""
-                    mood = trMood(e["mood"])
-                    tags = "\\# *" + e["tags"] + "*" if e["tags"] else ""
+    def underlined(string: str, line: str = '-'):
+        return '\n'.join([string, line.rjust(len(string), line)])
 
-                    lines = [
-                        '## ' + DIARY._format_date(e["entry_date"], e["entry_tz"]) + bookmark, '',
-                        title + e['entry'], '',
-                        tr('Mood: {}').format(mood),
-                        tr('Changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"]))),
-                        '', tags, '',
-                    ]
-                    f.write('\n'.join(lines))
-    elif type == "tex.md":
-        # Export as Markdown file to be converted using Pandoc
-        with open(filename, "w+", encoding='utf-8') as f:
-            from_date = DIARY._format_date(entries[-1]["entry_date"], entries[-1]["entry_tz"])
-            till_date = DIARY._format_date(entries[0]["entry_date"], entries[0]["entry_tz"])
-            head = [
-                '---'
-                'title: "{}"'.format(tr("Diary from {} until {}").format(from_date, till_date)),
-                'author: ""',
-                f'date: {datetime.now().strftime("%Y-%m-%d")}',
-                '---',
-                '',
-            ]
-            f.write('\n'.join(head) + '\n')
+    env = {
+        'tr': tr,
+        'mood': mood,
+        'date': date,
+        'paragraphs': paragraphs,
+        'underlined': underlined,
 
-            for e in entries:
-                bookmark = " $\\ast$" if e["bookmark"] else ""
-                title = "** {} **\n".format(e["title"]) if e["title"] else ""
-                mood = trMood(e["mood"])
-                tags = "\\# \\emph{" + e["tags"] + "}" if e["tags"] else ""
+        'entries': entries,
+        'from_date': date(entries[-1]['entry_date'], entries[-1]['entry_tz']),
+        'to_date': date(entries[0]['entry_date'], entries[0]['entry_tz']),
+        'today': date(datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
+        'output_name': Path(filename).stem,
+    }
 
-                lines = [
-                    '# ' + DIARY._format_date(e["entry_date"], e["entry_tz"]) + bookmark, '',
-                    title + e['entry'], '',
-                    '\\begin{small}',
-                    '{}\\hfill {}'.format(tr('Mood: {}').format(mood), tr('changed: {}').format(tr(DIARY._format_date(e["modify_date"], e["modify_tz"])))),
-                    tags,
-                    '\\end{small}\n', '',
-                ]
-                f.write('\n'.join(lines))
+    DIARY.conn.commit()
+
+    if kind == 'txt':
+        exported = _export_txt(filename, env)
+    elif kind == 'md':
+        exported = _export_md(filename, env)
+    elif kind == 'tex.md':
+        exported = _export_tex_md(filename, env)
+    elif kind == 'csv':
+        exported = _export_csv(filename, env)
+    elif kind == 'raw':
+        exported = _export_raw(filename, env)
+    else:
+        pyotherside.send('error.unknown-export-type', kind)
+        exported = {}
+
+    for k, v in exported.items():
+        with open(k, "w+", encoding='utf-8') as fd:
+            fd.write(v)
+
+
 if __name__ == '__main__':
     pass
 
     # initialize('temp', 'logbook.db', 'schema_version')
 
+    # print('txt')
+    # export_new('output', 'txt', {})
+    # print('md')
+    # export('output', 'md', {})
+    # print('tex.md')
+    # export_new('output', 'tex.md', {})
+    # print('csv')
+    # export_new('output', 'csv', {})
+    # print('zip')
+    # export_new('output', 'raw', {})
