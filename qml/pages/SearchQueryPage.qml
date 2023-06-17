@@ -185,7 +185,7 @@ Dialog {
                             "Use “?” to match any single character, and “*” to " +
                             "match zero or more characters. Groups of characters " +
                             "can be defined in square brackets. Use a backslash " +
-                            "to search for literal “?” or “*”, e.g. “\\?”.")
+                            "to search for literal “?” or “*”, e.g. “%1”.").arg("\\?")
                     }
                     I.InfoMenuItem {
                         text: qsTr("regular expression")
