@@ -20,6 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../components"
 
 Dialog {
     id: exportDialog
@@ -61,31 +62,13 @@ Dialog {
             }
         }
     }
+
+    ExportTranslations {
+        id: translations
+    }
+
     onAccepted: {
-        var filenameFormat = "%1/%2.%3"
-        var filename = filenameFormat.arg(homePath).arg(defaultFileName).arg(extension)
-
-        if(filenameField.text.length > 0) {
-            filename = filenameFormat.arg(homePath).arg(filenameField.text).arg(extension)
-        }
-
-        var translations = {
-            'moodTexts': moodTexts,
-            'never': qsTr('never'),
-            'Created: {}': qsTr('Created: {}'),
-            'Changed: {}': qsTr('Changed: {}'),
-            'changed: {}': qsTr('changed: {}'),
-            'Title: {}': qsTr('Title: {}'),
-            'Entry:\n{}': qsTr('Entry:\n{}'),
-            'Tags: {}': qsTr('Tags: {}'),
-            'Bookmark: {}': qsTr('Bookmark: {}'),
-            'Mood: {}': qsTr('Mood: {}'),
-            'Diary from {} until {}': qsTr('Diary from {} until {}'),
-            'yes': qsTr('yes'),
-            'no': qsTr('no'),
-            // '': qsTr(''),
-            // ': {}': qsTr(': {}'),
-        }
+        var filename = (filenameField.text.length > 0 ? filenameField.text : defaultFileName)
 
         showMessage(qsTr("Data exported to: %1").arg(filename)) // defined in harbour-captains-log.qml
         py.call("diary.export", [filename, extension, translations])
