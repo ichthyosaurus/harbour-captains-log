@@ -68,14 +68,14 @@
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">选择</translation>
+        <translation>选择</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished">绝不</translation>
+        <translation>绝不</translation>
     </message>
 </context>
 <context>
@@ -107,7 +107,7 @@
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished">心情: %1</translation>
+        <translation>心情: %1</translation>
     </message>
 </context>
 <context>
@@ -117,20 +117,8 @@
         <translation>导出你的数据</translation>
     </message>
     <message>
-        <source>Define the file name...</source>
-        <translation>定义文件名称</translation>
-    </message>
-    <message>
         <source>Filename</source>
         <translation>文件名称</translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation>选择导出文件类型</translation>
-    </message>
-    <message>
-        <source>Select file type:</source>
-        <translation>选择文件类型:</translation>
     </message>
     <message>
         <source>Plain text</source>
@@ -149,57 +137,113 @@
         <translation>Markdown for Pandoc</translation>
     </message>
     <message>
-        <source>never</source>
-        <translation>绝不</translation>
-    </message>
-    <message>
-        <source>Created: {}</source>
-        <translation>创建: {}</translation>
-    </message>
-    <message>
-        <source>Changed: {}</source>
-        <translation>修改: {}</translation>
-    </message>
-    <message>
-        <source>changed: {}</source>
-        <translation>修改: {}</translation>
-    </message>
-    <message>
-        <source>Title: {}</source>
-        <translation>标题: {}</translation>
-    </message>
-    <message>
-        <source>Entry:
-{}</source>
-        <translation>事项:
-{}</translation>
-    </message>
-    <message>
-        <source>Bookmark: {}</source>
-        <translation>书签: {}</translation>
-    </message>
-    <message>
-        <source>Mood: {}</source>
-        <translation>心情: {}</translation>
-    </message>
-    <message>
-        <source>Diary from {} until {}</source>
-        <translation>日记起自 {} 至 {}</translation>
-    </message>
-    <message>
         <source>Data exported to: %1</source>
         <translation>数据导入到: %1</translation>
     </message>
     <message>
-        <source>yes</source>
-        <translation>确认</translation>
+        <source>Note</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>no</source>
-        <translation>取消</translation>
+        <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tags: {}</source>
+        <source>Database backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Define the file name</source>
+        <translation>定义文件名称</translation>
+    </message>
+    <message>
+        <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export file format</source>
+        <translation>选择导出文件类型</translation>
+    </message>
+    <message>
+        <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export the full database in a machine-readable plain text format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Note that it is not yet possible to import this file type back into the app.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create a backup of the actual database files as an archive. This database can later be put back into place.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportTranslations</name>
+    <message>
+        <source>%A, %B %-d %Y (%-H:%M)</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%A, %B %-d %Y (%-H:%M, {tz})</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Addendum from {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diary from {0} to {1}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation>日记起自 {0} 至 {1}</translation>
+    </message>
+    <message>
+        <source>last changed on {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation>修改 {0}</translation>
+    </message>
+    <message>
+        <source>Mood: {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation>心情: {0}</translation>
+    </message>
+    <message>
+        <source>Note: this requires “pandoc” and “lualatex”.</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>README.txt</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags: {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This file has been exported from Captain&apos;s Log on {0}.</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can convert this file to PDF using the following command:</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -374,7 +418,7 @@
     <name>Opal.InfoCombo</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">日志</translation>
+        <translation>日志</translation>
     </message>
     <message>
         <source>Option</source>
@@ -400,7 +444,7 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">心情</translation>
+        <translation>心情</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
@@ -409,7 +453,7 @@
     </message>
     <message>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>修改 %1</translation>
     </message>
 </context>
 <context>
@@ -428,7 +472,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">搜索</translation>
+        <translation>搜索</translation>
     </message>
     <message>
         <source>Title and entry</source>
@@ -460,7 +504,7 @@
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="unfinished">书签</translation>
+        <translation>书签</translation>
     </message>
     <message>
         <source>all entries</source>
@@ -479,7 +523,7 @@
     </message>
     <message>
         <source>Mood</source>
-        <translation type="unfinished">心情</translation>
+        <translation>心情</translation>
     </message>
     <message>
         <source>From</source>
@@ -551,7 +595,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -559,7 +603,7 @@
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">搜索</translation>
+        <translation>搜索</translation>
     </message>
     <message numerus="yes">
         <source>%n result(s)</source>
@@ -570,7 +614,7 @@
     </message>
     <message>
         <source>No entries found</source>
-        <translation type="unfinished">暂无事项</translation>
+        <translation>暂无事项</translation>
     </message>
     <message>
         <source>Swipe back to change search criteria</source>
@@ -578,7 +622,7 @@
     </message>
     <message>
         <source>Add new entry</source>
-        <translation type="unfinished">添加新事项</translation>
+        <translation>添加新事项</translation>
     </message>
     <message>
         <source>Show previews</source>
@@ -719,22 +763,22 @@
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished">&apos;at&apos; hh&apos;:&apos;mm</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">非常好</translation>
+        <translation>非常好</translation>
     </message>
     <message>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">好</translation>
+        <translation>好</translation>
     </message>
     <message>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">还行</translation>
+        <translation>还行</translation>
     </message>
     <message>
         <source>not okay</source>
@@ -744,37 +788,37 @@
     <message>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">不好</translation>
+        <translation>不好</translation>
     </message>
     <message>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished">糟糕</translation>
+        <translation>糟糕</translation>
     </message>
     <message>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">yyyy MMM d, hh&apos;:&apos;mm</translation>
+        <translation>yyyy MMM d, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
-        <translation type="unfinished">yyyy MMM d</translation>
+        <translation>yyyy MMM d</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished">yyyy MMM ddd d, hh&apos;:&apos;mm</translation>
+        <translation>yyyy MMM ddd d, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished">yyyy MMM ddd d</translation>
+        <translation>yyyy MMM ddd d</translation>
     </message>
     <message>
         <source>d MMM</source>
         <comment>date format without year, as in “Dec. 1st”</comment>
-        <translation type="unfinished"></translation>
+        <translation>MMM d</translation>
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>

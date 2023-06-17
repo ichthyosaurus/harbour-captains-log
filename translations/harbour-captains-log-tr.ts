@@ -117,19 +117,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Define the file name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export file type selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select file type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -149,56 +137,113 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>never</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Created: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Changed: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>changed: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Title: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entry:
-{}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bookmark: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mood: {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diary from {} until {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Data exported to: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>yes</source>
+        <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>no</source>
+        <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tags: {}</source>
+        <source>Database backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Define the file name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export file format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export the full database in a machine-readable plain text format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Note that it is not yet possible to import this file type back into the app.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create a backup of the actual database files as an archive. This database can later be put back into place.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportTranslations</name>
+    <message>
+        <source>%A, %B %-d %Y (%-H:%M)</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%A, %B %-d %Y (%-H:%M, {tz})</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Addendum from {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diary from {0} to {1}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>last changed on {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mood: {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Note: this requires “pandoc” and “lualatex”.</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>README.txt</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tags: {0}</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This file has been exported from Captain&apos;s Log on {0}.</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can convert this file to PDF using the following command:</source>
+        <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -373,7 +418,7 @@
     <name>Opal.InfoCombo</name>
     <message>
         <source>Details</source>
-        <translation type="unfinished">Ayrıntılar</translation>
+        <translation>Ayrıntılar</translation>
     </message>
     <message>
         <source>Option</source>
@@ -550,7 +595,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “?”.</source>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
