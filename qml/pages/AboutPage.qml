@@ -42,6 +42,7 @@ A.AboutPageBase {
     sourcesUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
     homepageUrl: "https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753"
     translationsUrl: "https://hosted.weblate.org/projects/harbour-captains-log/translations"
+    changelogList: Qt.resolvedUrl("../Changelog.qml")
 
     licenses: A.License { spdxId: "GPL-3.0-or-later" }
 

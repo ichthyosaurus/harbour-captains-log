@@ -60,7 +60,7 @@
 -   > added field for possible future feature: audio notes
 -   > changed internal date format from "dd.MM.yyyy | hh:mm" to (standard) "yyyy-MM-dd hh:mm:ss"
 -   > save seconds
--   > renamed 'favorites' to 'bookmarks' (an important entry is not necessarily my favorite)
+-   > renamed "favorites" to "bookmarks" (an important entry is not necessarily my "favorite")
 - added a new cover page
 - simplified reloading, improving performance (changes no longer require a full reload)
 - added new mood "not okay": "okay" is slightly positive, "not okay" is slightly negative; there is no "neutral" mood (database updates itself)
