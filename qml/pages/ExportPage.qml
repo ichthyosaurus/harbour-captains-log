@@ -1,31 +1,20 @@
 /*
  * This file is part of Captain's Log.
- *
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
- *
+ * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * Captain's Log is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * Captain's Log is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Opal.InfoCombo 1.0 as I
 import "../components"
 
 Dialog {
-    id: exportDialog
+    id: root
+    allowedOrientations: Orientation.All
+
     property string homePath: StandardPaths.documents  // Sailjail permission required
-    property string extension: "txt"
+    property string kind: "txt"
 
     property string defaultFileName: "logbook_export_" + String(new Date().getTime())
 
@@ -36,6 +25,7 @@ Dialog {
         DialogHeader {
             title: qsTr("Export your data")
         }
+
         TextField {
             id: filenameField
             width: parent.width
@@ -44,21 +34,54 @@ Dialog {
             text: defaultFileName
             inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
         }
-        ComboBox {
+
+        I.InfoCombo {
             id: fileTypeCombo
 
             width: parent.width
             description: qsTr("Export file type selection")
             label: qsTr("Select file type:")
 
-            menu: ContextMenu {
-                MenuItem { text: qsTr("Plain text"); property string extension: "txt" }
-                MenuItem { text: qsTr("Comma-separated values (CSV)"); property string extension: "csv" }
-                MenuItem { text: qsTr("Plain Markdown"); property string extension: "md" }
-                MenuItem { text: qsTr("Markdown for Pandoc"); property string extension: "tex.md" }
+            I.InfoComboSection {
+                title: qsTr("Note")
+                text: qsTr("Data exports are meant for archival/printing and not as a backup. " +
+                           "If you want to manually backup the database, select the " +
+                           '“Database backup” option, or use ' +
+                           '<a href="https://openrepos.net/content/slava/my-backup">MyBackup</a> ' +
+                           "to create a system backup.")
+                placeAtTop: true
             }
+
+            menu: ContextMenu {
+                I.InfoMenuItem {
+                    text: qsTr("Plain text")
+                    property string kind: "txt"
+                    info: "- print, but lines are not folded"
+                }
+                I.InfoMenuItem {
+                    text: qsTr("Plain Markdown")
+                    property string kind: "md"
+                    info: "- print"
+                }
+                I.InfoMenuItem {
+                    text: qsTr("Markdown for Pandoc")
+                    property string kind: "tex.md"
+                    info: "- convert to pdf"
+                }
+                I.InfoMenuItem {
+                    text: qsTr("Comma-separated values (CSV)")
+                    property string kind: "csv"
+                    info: "- raw database extract in a single file, - cannot be imported"
+                }
+                I.InfoMenuItem {
+                    text: qsTr("Database backup")
+                    property string kind: "raw"
+                    info: "- actual database in a zip file as a backup, - can be put back in place"
+                }
+            }
+
             onCurrentIndexChanged: {
-                extension = fileTypeCombo.currentItem.extension
+                kind = fileTypeCombo.currentItem.kind
             }
         }
     }
@@ -71,6 +94,6 @@ Dialog {
         var filename = (filenameField.text.length > 0 ? filenameField.text : defaultFileName)
 
         showMessage(qsTr("Data exported to: %1").arg(filename)) // defined in harbour-captains-log.qml
-        py.call("diary.export", [filename, extension, translations])
+        py.call("diary.export", [homePath + '/' + filename, kind, translations.translations])
     }
 }
