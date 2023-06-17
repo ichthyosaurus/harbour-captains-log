@@ -13,6 +13,7 @@ import re
 import unicodedata
 from pathlib import Path
 from datetime import datetime
+from datetime import timedelta
 
 try:
     import pyotherside
@@ -220,6 +221,19 @@ class Diary:
             self.cursor.execute("""DROP TABLE diary;""")
             self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
         elif from_version == "6":
+            to_version = "7"
+
+            self.conn.create_function("REWRITE_SECONDS", 1,
+                                      self._reformat_date_seconds,
+                                      deterministic=True)
+
+            # fix timestamps with an invalid seconds field
+            self.cursor.execute("""UPDATE diary SET
+                create_date=REWRITE_SECONDS(create_date),
+                modify_date=REWRITE_SECONDS(modify_date),
+                entry_date=REWRITE_SECONDS(entry_date)
+            ;""")
+        elif from_version == "7":
             # we arrived at the latest version; save it and return
             if self.schema_version != from_version:
                 self.conn.commit()
@@ -262,6 +276,21 @@ class Diary:
 
         print("{} -> {}".format(old_date_string, new_string))
         return new_string
+
+    @staticmethod
+    def _reformat_date_seconds(date_string):
+        if date_string[16:] == ':60':
+            date_format = '%Y-%m-%d %H:%M:%S'
+            old_date = datetime.strptime(f'{date_string[:16]}:59', date_format)
+            new_date = old_date + timedelta(seconds=1)
+
+            if old_date.day != new_date.day:
+                # It is probably safer to change the seconds than to change the day.
+                return old_date.strftime(date_format)
+
+            return new_date.strftime(date_format)
+
+        return date_string
 
     @staticmethod
     def _format_date(date_string, tz_string):
