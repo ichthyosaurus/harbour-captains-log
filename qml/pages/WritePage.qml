@@ -24,8 +24,8 @@ import Sailfish.Silica 1.0
 import "../components"
 
 Dialog {
-    id: page
-    allowedOrientations: Orientation.All // effective value restricted by ApplicationWindow.allowedOrientations
+    id: root
+    allowedOrientations: Orientation.All
 
     onStatusChanged: {
         // make sure the date is always correct, even if the page has been
@@ -70,7 +70,7 @@ Dialog {
     }
 
     onAccepted: {
-        var mood = page.mood
+        var mood = root.mood
         var title_text = titleField.text.trim()
         var entry = entryArea.text.trim()
         var tags = _tagsList.join(", ")
