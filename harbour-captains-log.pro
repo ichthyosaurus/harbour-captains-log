@@ -26,6 +26,10 @@ SOURCES += \
     src/tagsfilter.cpp \
     # src/transliterator.cpp \
 
+# lupdate_only {
+# SOURCES += src/export_translations.h
+# }
+
 HEADERS += \
     src/tagsfilter.h \
     # src/transliterator.h \
