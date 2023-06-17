@@ -362,14 +362,20 @@ _FIELD_DEFAULTS = {
     'attachments_id': (0, lambda x: x or ''),
 }
 
+_GENERATED_FIELDS = {
+    'day': lambda row, keys: row['entry_date'].split(' ')[0] if 'entry_date' in keys else '',
+    'is_addendum': lambda row, keys: row['entry_addenda_seq'] > 0,
+}
+
 
 def _clean_entry_row(row):
     row_keys = row.keys()
 
     entry = {k: _FIELD_DEFAULTS[k][1](row[k]) if k in row_keys else _FIELD_DEFAULTS[k][0]
              for k, v in _FIELD_DEFAULTS.items()}
-    entry['day'] = row['entry_date'].split(' ')[0] if 'entry_date' in row_keys else ''
-    entry['is_addendum'] = row['entry_addenda_seq'] > 0
+
+    for key, gen in _GENERATED_FIELDS.items():
+        entry[key] = gen(row, row_keys)
 
     return entry
 
