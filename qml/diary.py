@@ -666,36 +666,30 @@ def _export_raw(filename: str, env: dict):
     return {}
 
 
-def _get_translators(translations_or_translator):
+def _get_translators(translations):
     # The tr() function returns the translation for 'string', or 'string' itself
     # if no translation is available.
     #
     # NOTE: 1. the string MUST be enclosed in triple single quotes, e.g. '''foobar'''
     #       2. after changing any translatable text, you MUST run update_export_translations.sh
     #          to make the text actually translatable
-    if isinstance(translations_or_translator, dict):
-        def tr(string: str, *args, **kwargs):
-            return translations_or_translator.get(string, string).format(*args, **kwargs)
+    def tr(string: str, *args, **kwargs):
+        return translations.get(string, string).format(*args, **kwargs)
 
-        def mood(index: int):
-            moodTexts = translations_or_translator.get('moodTexts', [])
-            return moodTexts[index] if len(moodTexts) > index else str(index)
-    else:
-        def tr(string: str, *args, **kwargs):
-            return translations_or_translator.translate(string).format(*args, **kwargs)
-
-        def mood(index: int):
-            return translations_or_translator.translateMood(index)
+    def mood(index: int):
+        moodTexts = translations.get('moodTexts', [])
+        return moodTexts[index] if len(moodTexts) > index else str(index)
 
     return (tr, mood)
 
 
-def export(filename: str, kind: str, translations_or_translator):
+def export(filename: str, kind: str, translations):
     """ Export all entries to 'filename' as 'type'.
 
     'translations' is a JS object containing translations for exported strings.
     The field 'moodTexts' must contain a list of translated string for all moods.
-    Cf. ExportPage.qml for the main definition.
+    See the generated file "components/ExportTranslations.qml" for the
+    main definition.
     """
 
     entries = _read_all_entries()
@@ -704,7 +698,7 @@ def export(filename: str, kind: str, translations_or_translator):
     if not entries or not filename:
         return  # nothing to export
 
-    tr, mood = _get_translators(translations_or_translator)
+    tr, mood = _get_translators(translations)
 
     def date(date_string: str, timezone: str = ''):
         dt = datetime.strptime(date_string, '%Y-%m-%d %H:%M:%S')
