@@ -709,3 +709,8 @@ def export(filename, type, translations):
                     '\\end{small}\n', '',
                 ]
                 f.write('\n'.join(lines))
+if __name__ == '__main__':
+    pass
+
+    # initialize('temp', 'logbook.db', 'schema_version')
+
