@@ -699,7 +699,7 @@ def export(filename: str, kind: str, translations_or_translator):
     """
 
     entries = _read_all_entries()
-    filename = filename.replace("'", "_").strip()
+    filename = filename.replace("'", "_").replace(":", "-").strip()
 
     if not entries or not filename:
         return  # nothing to export

@@ -16,7 +16,10 @@ Dialog {
     property string homePath: StandardPaths.documents  // Sailjail permission required
     property string kind: "txt"
 
-    property string defaultFileName: "logbook_export_" + String(new Date().getTime())
+    property string defaultFileName: "%1 - %2".
+        arg(appWindow.appName).
+        arg((new Date()).toLocaleString(
+            Qt.locale(), appWindow.dbDateFormat))
 
     Column {
         width: parent.width
@@ -93,7 +96,9 @@ Dialog {
     onAccepted: {
         var filename = (filenameField.text.length > 0 ? filenameField.text : defaultFileName)
 
-        showMessage(qsTr("Data exported to: %1").arg(filename)) // defined in harbour-captains-log.qml
+        // defined in harbour-captains-log.qml
+        showMessage(qsTr("Data exported to: %1").arg(homePath))
+
         py.call("diary.export", [homePath + '/' + filename, kind, translations.translations])
     }
 }
