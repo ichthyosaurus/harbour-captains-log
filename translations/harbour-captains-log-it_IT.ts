@@ -5,19 +5,19 @@
     <name>AboutPage</name>
     <message>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Sviluppo</translation>
     </message>
     <message>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un semplice diario per tenere traccia dei tuoi pensieri.</translation>
     </message>
     <message>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmazione</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduzioni</translation>
     </message>
     <message>
         <source>Swedish</source>
@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Cinese</translation>
     </message>
     <message>
         <source>German</source>
@@ -37,65 +37,65 @@
     </message>
     <message>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation>Stile Icone</translation>
     </message>
     <message>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norvegese</translation>
     </message>
 </context>
 <context>
     <name>ChangePinPage</name>
     <message>
         <source>Saved your protection code.</source>
-        <translation type="unfinished"></translation>
+        <translation>Codice di protezione salvato.</translation>
     </message>
     <message>
         <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il tuo vecchio codice di sicurezza</translation>
     </message>
     <message>
         <source>Enter a new security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il tuo nuovo codice di sicurezza</translation>
     </message>
 </context>
 <context>
     <name>DatePickerCombo</name>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Data</translation>
     </message>
     <message>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona</translation>
     </message>
 </context>
 <context>
     <name>DateTimePickerCombo</name>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>mai</translation>
     </message>
 </context>
 <context>
     <name>EntryElement</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>umore: %1</translation>
     </message>
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aggiunta del %1</translation>
     </message>
 </context>
 <context>
@@ -103,86 +103,86 @@
     <message>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Addendum da %1</translation>
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>umore: %1</translation>
     </message>
 </context>
 <context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta i tuoi dati</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome del file</translation>
     </message>
     <message>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo normale</translation>
     </message>
     <message>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Valori separati da virgola (CSV)</translation>
     </message>
     <message>
         <source>Plain Markdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown semplice</translation>
     </message>
     <message>
         <source>Markdown for Pandoc</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown per Pandoc</translation>
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dati esportati in: %1</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota</translation>
     </message>
     <message>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le esportazioni di dati sono destinate all&apos;archiviazione/stampa e non al backup. Se si desidera eseguire manualmente il backup del database, selezionare l&apos;opzione &quot;Backup del database&quot; o utilizzare &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; per creare un backup del sistema.</translation>
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup del database</translation>
     </message>
     <message>
         <source>Define the file name</source>
-        <translation type="unfinished"></translation>
+        <translation>Definire il nome del file</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file verrà salvato nella cartella dei documenti. Il nome non deve contenere sottocartelle.</translation>
     </message>
     <message>
         <source>Export file format</source>
-        <translation type="unfinished"></translation>
+        <translation>Formato file in esportazione</translation>
     </message>
     <message>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta le voci in uno stile semplice come file di testo che può essere direttamente stampato. Si noti che le righe lunghe non verranno piegate.</translation>
     </message>
     <message>
         <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta le voci in un semplice formato &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt;. Questo può essere successivamente convertito in altri formati per la stampa o il web.</translation>
     </message>
     <message>
         <source>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta le voci utilizzando un formato esteso che può convertito in PDF usando href=&quot;https://pandoc.org/&quot;&amp;gt;Pandoc. Il formato non è adatto alla stampa senza un&apos;ulteriore conversione.</translation>
     </message>
     <message>
         <source>Export the full database in a machine-readable plain text format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta l&apos;intero database in un formato di testo leggibile dalla macchina.</translation>
     </message>
     <message>
         <source>Note that it is not yet possible to import this file type back into the app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tieni presente che non è ancora possibile reimportare questo tipo di file nell&apos;app.</translation>
     </message>
     <message>
         <source>Create a backup of the actual database files as an archive. This database can later be put back into place.</source>
