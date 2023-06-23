@@ -30,9 +30,14 @@ SelectableSortFilterProxyModel::SelectableSortFilterProxyModel(QObject* parent) 
     m_selectedKeys.reserve(count());
     connect(this, &SelectableSortFilterProxyModel::countChanged,
             this, [&](){ m_selectedKeys.reserve(count()); });
+    connect(this, &SelectableSortFilterProxyModel::countChanged,
+            this, &SelectableSortFilterProxyModel::updateFilteredSelectedCount);
+    connect(this, &SelectableSortFilterProxyModel::selectedCountChanged,
+            this, &SelectableSortFilterProxyModel::updateFilteredSelectedCount);
 }
 
-bool SelectableSortFilterProxyModel::isSourceIndexSelected(const QModelIndex& sourceIndex) const
+bool SelectableSortFilterProxyModel::isSourceIndexSelected(
+        const QModelIndex& sourceIndex) const
 {
     if (!sourceIndex.isValid()) return false;
     int keyRole = getKeyRole();
@@ -171,6 +176,24 @@ void SelectableSortFilterProxyModel::clearAll()
     emit selectedKeysChanged();
     emit dataChanged(index(0, 0), index(rowCount(), columnCount()),
                      {roleForName(m_isSelectedRole->name())});
+}
+
+void SelectableSortFilterProxyModel::updateFilteredSelectedCount()
+{
+    int keyRole = getKeyRole();
+    if (keyRole < 0) return;
+
+    m_filteredSelectedCount = 0;
+
+    for (int i = count() - 1; i >= 0; --i) {
+        const auto& key = data(index(i, 0), keyRole);
+
+        if (m_selectedMap.value(key, false) == true) {
+            m_filteredSelectedCount += 1;
+        }
+    }
+
+    emit filteredSelectedCountChanged();
 }
 
 }

@@ -7,12 +7,11 @@
 #ifndef SELECTABLE_SFPM_H
 #define SELECTABLE_SFPM_H
 
+#include <QMap>
+#include <QVariantList>
 #include "../libs/SortFilterProxyModel/qqmlsortfilterproxymodel.h"
 #include "../libs/SortFilterProxyModel/proxyroles/singlerole.h"
 #include "property_macros.h"
-
-#include <QMap>
-#include <QVariantList>
 
 namespace qqsfpm {
 
@@ -37,6 +36,7 @@ class SelectableSortFilterProxyModel : public QQmlSortFilterProxyModel {
     RW_PROPERTY(QString, selectionKey, SelectionKey, )
     RO_PROPERTY(QVariantList, selectedKeys, )
     RO_PROPERTY(int, selectedCount, 0)
+    RO_PROPERTY(int, filteredSelectedCount, )
 
 public:
     SelectableSortFilterProxyModel(QObject* parent = 0);
@@ -61,6 +61,8 @@ public slots:
     void selectAll();
     void clearCurrent();
     void clearAll();
+
+    void updateFilteredSelectedCount();
 
 private:
     QMap<QVariant, bool> m_selectedMap;
