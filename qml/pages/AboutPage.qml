@@ -26,6 +26,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0 as S
 import Opal.About 1.0 as A
 import Opal.InfoCombo 1.0 as I
+import Opal.ComboData 1.0 as C
 
 A.AboutPageBase {
     id: root
@@ -68,6 +69,7 @@ A.AboutPageBase {
             homepage: "https://thp.io/2011/pyotherside/"
         },
         I.OpalInfoComboAttribution {},
+        C.OpalComboDataAttribution {},
         A.OpalAboutAttribution {}
     ]
 
