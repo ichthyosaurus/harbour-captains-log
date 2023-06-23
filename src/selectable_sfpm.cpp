@@ -26,6 +26,10 @@ SelectableSortFilterProxyModel::SelectableSortFilterProxyModel(QObject* parent) 
     QQmlSortFilterProxyModel(parent)
 {
     appendProxyRole(m_isSelectedRole.data());
+
+    m_selectedKeys.reserve(count());
+    connect(this, &SelectableSortFilterProxyModel::countChanged,
+            this, [&](){ m_selectedKeys.reserve(count()); });
 }
 
 bool SelectableSortFilterProxyModel::isSourceIndexSelected(const QModelIndex& sourceIndex) const
