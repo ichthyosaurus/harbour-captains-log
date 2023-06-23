@@ -1,10 +1,10 @@
-#!
-#! SPDX-FileCopyrightText: 2023 Mirian Margiani
-#! SPDX-License-Identifier: GPL-3.0-or-later
-#!
-<!--(set_escape)-->#!
+#>
+#> SPDX-FileCopyrightText: 2023 Mirian Margiani
+#> SPDX-License-Identifier: GPL-3.0-or-later
+#>
+<!--(set_escape)-->#>
     none
-<!--(end)-->#!
+<!--(end)-->#>
 
 @!underlined(tr('''Diary from {0} to {1}''', from_date, to_date), "=")!@
 

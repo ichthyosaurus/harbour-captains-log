@@ -41,6 +41,8 @@ DISTFILES += \
     qml/images/*.png \
     qml/pages/*.qml \
     qml/components/*.qml \
+    qml/templates/* \
+    qml/py/*.py \
     rpm/harbour-captains-log.changes.in \
     rpm/harbour-captains-log.changes.run.in \
     rpm/harbour-captains-log.spec \

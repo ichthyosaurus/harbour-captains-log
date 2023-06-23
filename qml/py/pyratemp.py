@@ -440,8 +440,8 @@ class Parser(object):
     See documentation for a description of the parse-tree.
     """
     # template-syntax
-    _comment_start = "#!"
-    _comment_end   = "!#"
+    _comment_start = "#>"
+    _comment_end   = "<#"
     _sub_start     = "$!"
     _sub_end       = "!$"
     _subesc_start  = "@!"

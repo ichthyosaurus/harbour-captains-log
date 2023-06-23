@@ -1,10 +1,10 @@
-#!
-#! SPDX-FileCopyrightText: 2023 Mirian Margiani
-#! SPDX-License-Identifier: GPL-3.0-or-later
-#!
-<!--(set_escape)-->#!
+#>
+#> SPDX-FileCopyrightText: 2023 Mirian Margiani
+#> SPDX-License-Identifier: GPL-3.0-or-later
+#>
+<!--(set_escape)-->#>
     latex
-<!--(end)-->#!
+<!--(end)-->#>
 ---
 title: "@!tr('''Diary from {0} to {1}''', from_date, to_date)!@"
 author: ""
@@ -37,32 +37,32 @@ header-includes:
 
 -->
 
-<!--(macro changed)-->#! args: item
-    <!--(if i['modify_date'])-->#!
-\hfill{}@!tr('''last changed on {0}''', date(i['modify_date'], i['modify_tz']))!@#!
-    <!--(end)-->#!
-<!--(end)-->#!
+<!--(macro changed)-->#> args: item
+    <!--(if i['modify_date'])-->#>
+\hfill{}@!tr('''last changed on {0}''', date(i['modify_date'], i['modify_tz']))!@#>
+    <!--(end)-->#>
+<!--(end)-->#>
 
-<!--(macro tags)-->#! args: item
+<!--(macro tags)-->#> args: item
     <!--(if i['tags'])-->
 
 
 // @!tr('''Tags: {0}''', i['tags'])!@
-    <!--(end)-->#!
-<!--(end)-->#!
+    <!--(end)-->#>
+<!--(end)-->#>
 
 <!--(for i in entries)-->
 
-# <!--(if i['bookmark'])-->$\ast$ <!--(end)-->@!date(i['entry_date'], i['entry_tz'])!@<!--(if i['title'])-->: @!i['title']!@<!--(end)-->#!
+# <!--(if i['bookmark'])-->$\ast$ <!--(end)-->@!date(i['entry_date'], i['entry_tz'])!@<!--(if i['title'])-->: @!i['title']!@<!--(end)-->#>
 
-    <!--(if i['is_addendum'])-->#!
+    <!--(if i['is_addendum'])-->#>
 
 *@!tr('''Addendum from {0}''', date(i['create_date'], i['create_tz']))!@*
-    <!--(end)-->#!
+    <!--(end)-->#>
 
-    <!--(if i['entry'])-->#!
+    <!--(if i['entry'])-->#>
 @!paragraphs(i['entry'])!@
-    <!--(end)-->#!
+    <!--(end)-->#>
 
 \begin{small}
 // @!tr('''Mood: {0}''', mood(i['mood']))!@@!changed(i=i)!@@!tags(i=i)!@

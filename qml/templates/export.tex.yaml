@@ -1,10 +1,10 @@
-#!
-#! SPDX-FileCopyrightText: 2023 Mirian Margiani
-#! SPDX-License-Identifier: GPL-3.0-or-later
-#!
-<!--(set_escape)-->#!
+#>
+#> SPDX-FileCopyrightText: 2023 Mirian Margiani
+#> SPDX-License-Identifier: GPL-3.0-or-later
+#>
+<!--(set_escape)-->#>
     none
-<!--(end)-->#!
+<!--(end)-->#>
 #
 # @!tr('''This file has been exported from Captain's Log on {0}.''', today)!@
 #
