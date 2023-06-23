@@ -52,6 +52,9 @@ Page {
             TextSwitch {
                 id: protectionSwitch
                 text: qsTr("activate code protection")
+                description: qsTr("Please note that this code only prevents " +
+                                  "access to the app. The database is not " +
+                                  "encrypted, and the code is not stored securely.")
                 checked: config.useCodeProtection
             }
 
