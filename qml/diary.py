@@ -547,8 +547,8 @@ class Diary:
 
 def initialize(standard_paths):
     if is_initialized(False):
-        pyotherside.send('error', 'database-already-initialized')
-        return
+        pyotherside.send('warning', 'database-already-initialized')
+        return True
 
     global DIARY
     global INITIALIZED
