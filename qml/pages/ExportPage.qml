@@ -109,9 +109,10 @@ Dialog {
                 I.InfoMenuItem {
                     text: qsTr("Database backup")
                     property string kind: "raw"
-                    info: qsTr("Create a backup of the actual database files " +
-                               "as an archive. This database can later be put " +
-                               "back into place.")
+                    info: qsTr("Export a compressed copy of the actual database " +
+                               "file. This database can later be put back into place. " +
+                               "Use “Settings → Database backup” to create an internal " +
+                               "backup.")
                 }
             }
 
