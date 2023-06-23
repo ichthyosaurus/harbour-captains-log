@@ -34,7 +34,6 @@ Dialog {
 
         PullDownMenu {
             flickable: listView
-            enabled: !loadingIndicator.running
 
             MenuItem {
                 text: qsTr("Clear selection")
