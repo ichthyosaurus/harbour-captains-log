@@ -1082,7 +1082,7 @@
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Säkerhetskopiering av databas</translation>
     </message>
 </context>
 <context>
@@ -1248,7 +1248,7 @@
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Säkerhetskopiering av databas</translation>
     </message>
     <message>
         <source>Backup finished</source>

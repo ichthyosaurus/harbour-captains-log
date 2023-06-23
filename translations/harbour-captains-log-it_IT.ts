@@ -119,7 +119,7 @@
     </message>
     <message>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">umore: %1</translation>
     </message>
 </context>
 <context>
@@ -150,7 +150,7 @@
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation>Dati esportati in: %1</translation>
+        <translation type="vanished">Dati esportati in: %1</translation>
     </message>
     <message>
         <source>Note</source>
@@ -342,7 +342,7 @@
     </message>
     <message>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sviluppo</translation>
     </message>
     <message>
         <source>show contributors</source>
@@ -354,7 +354,7 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Traduzioni</translation>
     </message>
     <message>
         <source>Source Code</source>
@@ -484,7 +484,7 @@
     <name>ReadPage</name>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modifica</translation>
     </message>
     <message>
         <source>Mood</source>
@@ -536,7 +536,7 @@
     </message>
     <message>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nota</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
@@ -790,7 +790,7 @@
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Backup del database</translation>
     </message>
 </context>
 <context>
@@ -843,7 +843,7 @@
     </message>
     <message>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mai</translation>
     </message>
     <message>
         <source>Discarded all changes</source>
@@ -859,7 +859,7 @@
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Data</translation>
     </message>
     <message>
         <source>Last edited: %1</source>
@@ -952,7 +952,7 @@
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Backup del database</translation>
     </message>
     <message>
         <source>Backup finished</source>
