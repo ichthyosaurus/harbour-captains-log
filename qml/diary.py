@@ -42,7 +42,7 @@ class Diary:
             print(f"preparing local data path in {self._data_path}")
             Path(self._data_path).mkdir(parents=True, exist_ok=True)
         except FileExistsError:
-            pyotherside.send('fatal.local-data.inaccessible')
+            pyotherside.send('error', 'local-data-inaccessible')
             self.ready = False
             return
 
@@ -743,7 +743,7 @@ def export(filename: str, kind: str, translations):
     elif kind == 'raw':
         exported = _export_raw(filename, env)
     else:
-        pyotherside.send('error.unknown-export-type', kind)
+        pyotherside.send('error', 'unknown-export-type', {'kind': kind})
         exported = {}
 
     for k, v in exported.items():

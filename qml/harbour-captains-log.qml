@@ -316,6 +316,24 @@ ApplicationWindow
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('.'))
 
+            setHandler('error', function(ident, data){
+                loading = false
+                console.error("an error occurred in the Python backend: %1".arg(ident))
+
+                var message = qsTr("An unexpected error occurred. Please " +
+                                   "restart the app and check the logs.")
+
+                if (ident === 'local-data-inaccessible') {
+                    message = qsTr("The local data folder at “%1” " +
+                                   "is not writable.").arg(StandardPaths.data)
+                } else if (ident === 'unknown-export-type') {
+                    message = qsTr("Cannot export unknown file type “%1”. " +
+                                   "Please report this bug.").arg(data.kind)
+                }
+
+                showMessage(qsTr("Error"), message)
+            })
+
             setHandler('entries', function(result) {
                 if (result.length > 0) loading = false
 
