@@ -448,16 +448,20 @@ class Diary:
             with temp_db:
                 updating.backup(temp_db)
 
+            # save updated db as current db
             temp_db.close()
             updating.close()
             final_db = self.data_path / self.DB_DATA_FILE_V8_FORMAT.format(version=current_version)
             self.move_aside(final_db)
-            shutil.move(tempfile_path, final_db)
+            shutil.move(str(tempfile_path), str(final_db))
 
-            backup = Path(self.data_path / self.DB_BACKUP_DIR)
-            backup.mkdir(parents=True, exist_ok=True)
-            self.move_aside(backup / Path(source_db).name)
-            shutil.move(source_db, str(backup / Path(source_db).name))
+            # move source db to backups folder
+            today = datetime.now().strftime("%Y-%m-%d")
+            backup_path = Path(self.data_path / self.DB_BACKUP_DIR / Path(source_db).name)
+            backup_path = backup_path.with_stem(f'{today} - {backup_path.stem}')
+            backup_path.parent.mkdir(parents=True, exist_ok=True)
+            self.move_aside(backup_path)
+            shutil.move(str(source_db), str(backup_path))
         else:
             print(f"database schema is up-to-date (version: {current_version})")
             final_db = source_db
