@@ -23,7 +23,7 @@ Captain's Log. Previous versions were developed by the original author
 
 - lockscreen to restrict access
 - bookmark entries
-- add hashtags
+- add tags
 - browse your entries by different filters
 - export your data to different file formats
 
@@ -35,9 +35,7 @@ a bad guy with physical (or SSH) access to your device.
 
 - attach images to your entries
 - include voice notes
-- save and browse revisions after editing an entry
 - improved translations
-- improved export, if possible directly to PDF
 
 ### Permissions
 
