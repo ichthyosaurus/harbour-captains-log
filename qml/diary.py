@@ -805,9 +805,11 @@ def export(filename: str, kind: str, translations):
         pyotherside.send('error', 'unknown-export-type', {'kind': kind})
         exported = {}
 
-    for k, v in exported.items():
-        with open(k, "w+", encoding='utf-8') as fd:
-            fd.write(v)
+    for path, content in exported.items():
+        Diary.move_aside(path)
+
+        with open(path, "w+", encoding='utf-8') as fd:
+            fd.write(content)
 
 
 if __name__ == '__main__':
