@@ -918,7 +918,6 @@ def _export_raw(filename: str, env: dict):
                          compression=zipfile.ZIP_STORED,
                          allowZip64=True) as myzip:
         myzip.write(DIARY.db_path, arcname=Path(DIARY.db_path).name)
-        myzip.write(DIARY.schema, arcname=Path(DIARY.schema).name)
         myzip.writestr(tr('''README.txt'''), data=_export_template('export.zip.txt', env))
 
     # writing is handled here; the function returns no files because
