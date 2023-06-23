@@ -10,7 +10,7 @@ Name:       harbour-captains-log
 %define __provides_exclude_from ^%{_datadir}/.*$
 
 Summary:    Simple Diary application
-Version:    3.1.0
+Version:    4.0.0
 Release:    1
 Group:      Qt/Qt
 License:    GPL-3.0-or-later
