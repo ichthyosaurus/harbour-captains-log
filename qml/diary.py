@@ -596,6 +596,12 @@ def backup_database():
     if not is_initialized():
         return
 
+    def progress(status, remaining, total):
+        pyotherside.send('backup-progress', {
+            'status': 'working', 'done': total - remaining,
+            'remaining': remaining, 'total': total
+        })
+
     try:
         today = datetime.now().strftime("%Y-%m-%d")
         backup_path = Path(DIARY.data_path / DIARY.DB_BACKUP_DIR / Path(DIARY.db_path).name)
@@ -607,7 +613,7 @@ def backup_database():
         temp_db = sqlite3.connect(tempfile_path)
 
         with temp_db:
-            DIARY.conn.backup(temp_db)
+            DIARY.conn.backup(temp_db, pages=25, progress=progress)
 
         temp_db.close()
         Diary.move_aside(backup_path)
@@ -620,9 +626,9 @@ def backup_database():
             ''.join(traceback.format_exception(None, e, e.__traceback__)).strip()
         ])
 
-        pyotherside.send('warning', 'database-backup-failed',
-                         {'database': DIARY.db_path, 'backup': backup_path,
-                          'exception': trace})
+        pyotherside.send('backup-progress', {
+            'status': 'failed', 'database': DIARY.db_path,
+            'backup': backup_path, 'exception': trace})
 
 
 def normalize_text(string):
