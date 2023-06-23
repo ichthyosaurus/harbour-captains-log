@@ -563,12 +563,24 @@ class Diary:
 #
 
 def initialize(standard_paths):
-    if is_initialized(False):
-        pyotherside.send('warning', 'database-already-initialized')
-        return True
-
     global DIARY
     global INITIALIZED
+
+    if is_initialized(False):
+        # re-initialize the database to support running
+        # the app with QmlLive
+
+        # A database can only be accessed from one thread
+        # but QmlLive reloads in multiple threads, so the
+        # database has to be re-opened in the current main
+        # thread everytime QmlLive reloads the app.
+
+        # It is not possible to properly close() the connection
+        # so there is the potential for data loss. This should
+        # not be a problem during development, while the
+        # database must never be re-initialized under normal
+        # circumstances (i.e. when not running with QmlLive).
+        pyotherside.send('warning', 'database-already-initialized')
 
     DIARY = Diary(standard_paths)
 
