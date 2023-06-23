@@ -120,7 +120,7 @@ void SelectableSortFilterProxyModel::selectAll()
     int keyRole = getKeyRole();
     if (keyRole < 0) return;
 
-    for (int i = count(); i >= 0; --i) {
+    for (int i = count() - 1; i >= 0; --i) {
         QModelIndex idx = index(i, 0);
 
         const auto& key = data(idx, keyRole);
@@ -143,11 +143,11 @@ void SelectableSortFilterProxyModel::clearCurrent()
     int keyRole = getKeyRole();
     if (keyRole < 0) return;
 
-    for (int i = count(); i >= 0; --i) {
+    for (int i = count() - 1; i >= 0; --i) {
         QModelIndex idx = index(i, 0);
 
         const auto& key = data(idx, keyRole);
-        if (m_selectedMap.value(key, false) == false) return;
+        if (m_selectedMap.value(key, false) == false) continue;
 
         m_selectedCount -= 1;
         m_selectedKeys.removeAll(key);
