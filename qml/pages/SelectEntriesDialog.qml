@@ -17,8 +17,14 @@ Dialog {
     property string _filterQuery
     readonly property int _selectedCount: filteredModel.selectedCount
 
+    signal enableSearch
+
     allowedOrientations: Orientation.All
     canAccept: _selectedCount > 0
+
+    onAccepted: {
+        selected = filteredModel.selectedKeys
+    }
 
     SearchModel {
         id: filteredModel
@@ -50,6 +56,10 @@ Dialog {
                 }
             }
             MenuItem {
+                text: qsTr("Filter")
+                onClicked: enableSearch()
+            }
+            MenuItem {
                 text: listView.showFullEntries ?
                           qsTr("Show previews") :
                           qsTr("Show full entries")
@@ -68,7 +78,18 @@ Dialog {
             }
 
             SearchField {
+                id: searchField
+                active: false
+                canHide: false
                 onTextChanged: root._filterQuery = text
+
+                Connections {
+                    target: root
+                    onEnableSearch: {
+                        searchField.active = true
+                        searchField.forceActiveFocus()
+                    }
+                }
             }
         }
 
