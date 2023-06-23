@@ -69,10 +69,18 @@ Page {
                 text: qsTr("Export features")
             }
 
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Export data")
-                onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+            ButtonLayout {
+                preferredWidth: Theme.buttonWidthLarge
+
+                Button {
+                    text: qsTr("Export data")
+                    onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+                }
+
+                Button {
+                    text: qsTr("Database backup")
+                    onClicked: py.call("diary.backup_database")
+                }
             }
         }
     }
