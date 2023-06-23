@@ -162,6 +162,7 @@ Dialog {
 
         Button {
             anchors.horizontalCenter: parent.horizontalCenter
+            width: Theme.buttonWidthLarge
             visible: entriesCombo.currentItem.entries === 'custom'
             text: _selectedEntries.length === 0 ?
                       qsTr("Select entries") :
