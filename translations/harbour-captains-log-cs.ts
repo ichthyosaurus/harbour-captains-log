@@ -445,10 +445,6 @@
         <source>Changes since version %1</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Verze %1 (%2)</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -463,66 +459,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programování</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Překlady</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Design ikon</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Švédština</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Němčina</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francouzština</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Čínština</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Angličtina</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italština</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finština</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norština</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Řečtina</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Španělština</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ruština</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holandština</translation>
     </message>
 </context>
 <context>

@@ -153,10 +153,6 @@
         <translation>Markdown per Pandoc</translation>
     </message>
     <message>
-        <source>Data exported to: %1</source>
-        <translation type="vanished">Dati esportati in: %1</translation>
-    </message>
-    <message>
         <source>Note</source>
         <translation>Nota</translation>
     </message>

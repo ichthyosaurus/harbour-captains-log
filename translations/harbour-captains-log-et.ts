@@ -442,14 +442,6 @@
         <source>Changes since version %1</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Versioon %1 (%2)</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Palun vaata ka &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -464,94 +456,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Sinu panus tõlgete või rakenduse koodi näol oleks väga teretulnud.</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Koodi kirjutamine</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Tõlked</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikooni kujundus</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">rootsi</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">poola</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">saksa</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">prantsuse</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">hiina</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">inglise</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">itaalia</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">soome</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">norra</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">eesti</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">tšehhi</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">kreeka</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">hispaania</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">ungari</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">indoneesia</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">vene</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">hollandi</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">slovaki</translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation type="vanished">türgi</translation>
     </message>
 </context>
 <context>

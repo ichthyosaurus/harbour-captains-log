@@ -153,10 +153,6 @@
         <translation>Markdown for Pandoc</translation>
     </message>
     <message>
-        <source>Data exported to: %1</source>
-        <translation type="vanished">Data exported to: %1</translation>
-    </message>
-    <message>
         <source>Note</source>
         <translation>Note</translation>
     </message>
@@ -446,14 +442,6 @@
         <source>Changes since version %1</source>
         <translation>Changes since version %1</translation>
     </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Version %1 (%2)</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -468,143 +456,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Your contributions to translations or code would be most welcome.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Author</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="vanished">
-            <numerusform>Author</numerusform>
-            <numerusform>Authors</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="vanished">Maintainer</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="vanished">
-            <numerusform>Maintainer</numerusform>
-            <numerusform>Maintainers</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programming</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Translations</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Icon Design</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="vanished">Third-party libraries</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">Data</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="vanished">Data License</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="vanished">
-            <numerusform>Data License</numerusform>
-            <numerusform>Data Licenses</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="vanished">Terms of Use</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Swedish</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polish</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">German</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">French</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chinese</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">English</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italian</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finnish</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norwegian</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="vanished">Latvian</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estonian</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Czech</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Greek</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spanish</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Hungarian</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">Indonesian</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Russian</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Dutch</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovak</translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation type="vanished">Turkish</translation>
     </message>
 </context>
 <context>
@@ -824,149 +675,6 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
-    <message>
-        <source>Any may match</source>
-        <translation type="vanished">Any may match</translation>
-    </message>
-    <message>
-        <source>All must match</source>
-        <translation type="vanished">All must match</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation type="vanished">Back</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">Search</translation>
-    </message>
-    <message>
-        <source>Title and entry</source>
-        <translation type="vanished">Title and entry</translation>
-    </message>
-    <message>
-        <source>Search contents</source>
-        <translation type="vanished">Search contents</translation>
-    </message>
-    <message>
-        <source>Search tags</source>
-        <translation type="vanished">Search tags</translation>
-    </message>
-    <message>
-        <source>Search mode</source>
-        <translation type="vanished">Search mode</translation>
-    </message>
-    <message>
-        <source>plain text</source>
-        <translation type="vanished">plain text</translation>
-    </message>
-    <message>
-        <source>wildcard</source>
-        <translation type="vanished">wildcard</translation>
-    </message>
-    <message>
-        <source>regular expression</source>
-        <translation type="vanished">regular expression</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">Bookmarks</translation>
-    </message>
-    <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="vanished">all entries</translation>
-    </message>
-    <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="vanished">marked</translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="vanished">unmarked</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">Mood</translation>
-    </message>
-    <message>
-        <source>From</source>
-        <translation type="vanished">From</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation type="vanished">To</translation>
-    </message>
-    <message>
-        <source>Entry date</source>
-        <translation type="vanished">Entry date</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="vanished">anytime</translation>
-    </message>
-    <message>
-        <source>Till</source>
-        <translation type="vanished">Until</translation>
-    </message>
-    <message>
-        <source>Search syntax</source>
-        <translation type="vanished">Search syntax</translation>
-    </message>
-    <message>
-        <source>Note</source>
-        <translation type="vanished">Note</translation>
-    </message>
-    <message>
-        <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="vanished">Simplified matching is only possible in “plain text” mode.</translation>
-    </message>
-    <message>
-        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="vanished">Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</translation>
-    </message>
-    <message>
-        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="vanished">Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</translation>
-    </message>
-    <message>
-        <source>simplified</source>
-        <translation type="vanished">simplified</translation>
-    </message>
-    <message>
-        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="vanished">Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</translation>
-    </message>
-    <message>
-        <source>strict</source>
-        <translation type="vanished">strict</translation>
-    </message>
-    <message>
-        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="vanished">Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</translation>
-    </message>
-    <message>
-        <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="vanished">Find entries regardless of whether they are bookmarked or not.</translation>
-    </message>
-    <message>
-        <source>Find only bookmarked entries.</source>
-        <translation type="vanished">Find only bookmarked entries.</translation>
-    </message>
-    <message>
-        <source>Find only entries that are not bookmarked.</source>
-        <translation type="vanished">Find only entries that are not bookmarked.</translation>
-    </message>
-    <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="vanished">This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</translation>
-    </message>
-</context>
-<context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
@@ -1177,10 +885,6 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
-    </message>
-    <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="vanished">Error: the database could not be loaded.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>

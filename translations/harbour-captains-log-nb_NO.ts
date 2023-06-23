@@ -153,10 +153,6 @@
         <translation>Markdown for Pandoc</translation>
     </message>
     <message>
-        <source>Data exported to: %1</source>
-        <translation type="vanished">Data eksportert til: %1</translation>
-    </message>
-    <message>
         <source>Note</source>
         <translation>Notat</translation>
     </message>
@@ -167,10 +163,6 @@
     <message>
         <source>Database backup</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Define the file name</source>
-        <translation type="vanished">Definer filnavnet</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
@@ -683,149 +675,6 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
-    <message>
-        <source>Any may match</source>
-        <translation type="vanished">Alle kan samsvare</translation>
-    </message>
-    <message>
-        <source>All must match</source>
-        <translation type="vanished">Alle må samsvare</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation type="vanished">Tilbake</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">Søk</translation>
-    </message>
-    <message>
-        <source>Title and entry</source>
-        <translation type="vanished">Navn og oppføring</translation>
-    </message>
-    <message>
-        <source>Search contents</source>
-        <translation type="vanished">Søk i innhold</translation>
-    </message>
-    <message>
-        <source>Search tags</source>
-        <translation type="vanished">Søk i etiketter</translation>
-    </message>
-    <message>
-        <source>Search mode</source>
-        <translation type="vanished">Søkemodus</translation>
-    </message>
-    <message>
-        <source>plain text</source>
-        <translation type="vanished">klartekst</translation>
-    </message>
-    <message>
-        <source>wildcard</source>
-        <translation type="vanished">jokertegn</translation>
-    </message>
-    <message>
-        <source>regular expression</source>
-        <translation type="vanished">regulært uttrykk</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">Bokmerker</translation>
-    </message>
-    <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="vanished">alle oppføringer</translation>
-    </message>
-    <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="vanished">bokmerket</translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="vanished">ikke bokmerket</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">Humør</translation>
-    </message>
-    <message>
-        <source>From</source>
-        <translation type="vanished">Fra</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation type="vanished">Til</translation>
-    </message>
-    <message>
-        <source>Entry date</source>
-        <translation type="vanished">Oppføringsdato</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="vanished">når som helst</translation>
-    </message>
-    <message>
-        <source>Till</source>
-        <translation type="vanished">til</translation>
-    </message>
-    <message>
-        <source>Search syntax</source>
-        <translation type="vanished">Søkesyntaks</translation>
-    </message>
-    <message>
-        <source>Note</source>
-        <translation type="vanished">Notat</translation>
-    </message>
-    <message>
-        <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="vanished">Forenklet jamføring er kun mulig i «klartekst»-modus.</translation>
-    </message>
-    <message>
-        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="vanished">Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
-    </message>
-    <message>
-        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="vanished">Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
-    </message>
-    <message>
-        <source>simplified</source>
-        <translation type="vanished">forenklet</translation>
-    </message>
-    <message>
-        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="vanished">Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
-    </message>
-    <message>
-        <source>strict</source>
-        <translation type="vanished">streng</translation>
-    </message>
-    <message>
-        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="vanished">Nøyaktig jamføring av søkestrengen. Brukes når du vet akkurat hva du søker etter, eller når du vil søke etter en streng som inneholder punktsetting som «-», «!», eller «#».</translation>
-    </message>
-    <message>
-        <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="vanished">Finn oppføringer uansett om de er bokmerket eller ei.</translation>
-    </message>
-    <message>
-        <source>Find only bookmarked entries.</source>
-        <translation type="vanished">Kun finn bokmerkede oppføringer.</translation>
-    </message>
-    <message>
-        <source>Find only entries that are not bookmarked.</source>
-        <translation type="vanished">Kun finn oppføringer som ikke er bokmerket.</translation>
-    </message>
-    <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="vanished">Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «%1».</translation>
-    </message>
-</context>
-<context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
@@ -1036,10 +885,6 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Kapteinens logg</translation>
-    </message>
-    <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="vanished">Feil: Kunne ikke laste inn databasen.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>

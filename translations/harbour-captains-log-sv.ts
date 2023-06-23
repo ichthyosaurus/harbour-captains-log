@@ -153,10 +153,6 @@
         <translation>Markdown för Pandoc</translation>
     </message>
     <message>
-        <source>Data exported to: %1</source>
-        <translation type="vanished">Data exporterad till: %1</translation>
-    </message>
-    <message>
         <source>Note</source>
         <translation>Anteckning</translation>
     </message>
@@ -167,10 +163,6 @@
     <message>
         <source>Database backup</source>
         <translation>Säkerhetskopiering av databas</translation>
-    </message>
-    <message>
-        <source>Define the file name</source>
-        <translation type="vanished">Ange filnamnet</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
@@ -450,14 +442,6 @@
         <source>Changes since version %1</source>
         <translation>Ändrat sedan version %1</translation>
     </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Se &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Version %1 (%2)</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -472,143 +456,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Kodbidrag eller översättningar är väldigt välkommet.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Utvecklare</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="vanished">
-            <numerusform>Utvecklare</numerusform>
-            <numerusform>Utvecklare</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="vanished">Ansvarig</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="vanished">
-            <numerusform>Ansvarig</numerusform>
-            <numerusform>Ansvariga</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmering</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Översättningar</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikondesign</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="vanished">Tredjeparts bibliotek</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">Data</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="vanished">Datalicens</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="vanished">
-            <numerusform>Datalicens</numerusform>
-            <numerusform>Datalicenser</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="vanished">Villkor för användning</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Svenska</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polska</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Tyska</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Franska</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Kinesiska</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Engelska</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italienska</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finska</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norska</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="vanished">Lettiska</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estniska</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Tjeckiska</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Grekiska</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spanska</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Ungerska</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">Indonesiska</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ryska</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Nederländska</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovakiska</translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation type="vanished">Turkiska</translation>
     </message>
 </context>
 <context>
@@ -828,149 +675,6 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
-    <message>
-        <source>Any may match</source>
-        <translation type="vanished">Vilken som helst kan matcha</translation>
-    </message>
-    <message>
-        <source>All must match</source>
-        <translation type="vanished">Alla måste matcha</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation type="vanished">Tillbaka</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">Sök</translation>
-    </message>
-    <message>
-        <source>Title and entry</source>
-        <translation type="vanished">Titel och post</translation>
-    </message>
-    <message>
-        <source>Search contents</source>
-        <translation type="vanished">Sök innehåll</translation>
-    </message>
-    <message>
-        <source>Search tags</source>
-        <translation type="vanished">Sök taggar</translation>
-    </message>
-    <message>
-        <source>Search mode</source>
-        <translation type="vanished">Sökläge</translation>
-    </message>
-    <message>
-        <source>plain text</source>
-        <translation type="vanished">oformaterad text</translation>
-    </message>
-    <message>
-        <source>wildcard</source>
-        <translation type="vanished">jokertecken</translation>
-    </message>
-    <message>
-        <source>regular expression</source>
-        <translation type="vanished">regular expression</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">Bokmärken</translation>
-    </message>
-    <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="vanished">alla poster</translation>
-    </message>
-    <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="vanished">bokmärkta</translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="vanished">ej bokmärkta</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">Humör</translation>
-    </message>
-    <message>
-        <source>From</source>
-        <translation type="vanished">Från</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation type="vanished">Till</translation>
-    </message>
-    <message>
-        <source>Entry date</source>
-        <translation type="vanished">Postdatum</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="vanished">när som helst</translation>
-    </message>
-    <message>
-        <source>Till</source>
-        <translation type="vanished">Till</translation>
-    </message>
-    <message>
-        <source>Search syntax</source>
-        <translation type="vanished">Söksyntax</translation>
-    </message>
-    <message>
-        <source>Note</source>
-        <translation type="vanished">Anteckning</translation>
-    </message>
-    <message>
-        <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="vanished">Förenklad matchning är endast möjlig i läget &quot;oformaterad text&quot;.</translation>
-    </message>
-    <message>
-        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="vanished">Sök efter strängen som du angav den. Vissa förenklingar kommer att tillämpas på söktermen om &quot;Sökläge&quot; är inställt på &quot;förenklat&quot;.</translation>
-    </message>
-    <message>
-        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="vanished">Sök med komplex regular expression. Använd det lodstreck &quot;|&quot; för att söka efter flertal termer. Sök på internet om du vill veta mer om regular expression.</translation>
-    </message>
-    <message>
-        <source>simplified</source>
-        <translation type="vanished">förenklat</translation>
-    </message>
-    <message>
-        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="vanished">Ignorera diakritiska tecken, som matchar t.ex. &quot;ö&quot;, &quot;ó&quot; och &quot;õ&quot; när du söker efter &quot;o&quot;. Ignorera eventuella skiljetecken. Använd det här läget när du är osäker på hur du stavade något tidigare.</translation>
-    </message>
-    <message>
-        <source>strict</source>
-        <translation type="vanished">strikt</translation>
-    </message>
-    <message>
-        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="vanished">Matcha frågesträngen exakt. Använd det här läget när du vet exakt vad du söker efter eller när du vill söka efter en sträng som innehåller skiljetecken som &quot;-&quot;, &quot;!&quot;, eller &quot;#&quot;.</translation>
-    </message>
-    <message>
-        <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="vanished">Hitta poster oavsett om de är bokmärkta eller inte.</translation>
-    </message>
-    <message>
-        <source>Find only bookmarked entries.</source>
-        <translation type="vanished">Hitta endast bokmärkta poster.</translation>
-    </message>
-    <message>
-        <source>Find only entries that are not bookmarked.</source>
-        <translation type="vanished">Hitta endast poster som inte är bokmärkta.</translation>
-    </message>
-    <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="vanished">Med det här alternativet kan du söka efter utökade mönster. Använd &quot;?&quot; för att matcha ett enskilt tecken och &quot;*&quot; för att matcha noll eller fler tecken. Teckengrupper kan definieras inom hakparenteser. Använd ett omvänt snedstreck för att söka efter litterala &quot;?&quot; eller &quot;*&quot;, t.ex. &quot;%1&quot;.</translation>
-    </message>
-</context>
-<context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
@@ -1181,10 +885,6 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
-    </message>
-    <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="vanished">Fel: Databasen kunde inte läsas in.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>

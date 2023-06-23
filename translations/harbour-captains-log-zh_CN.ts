@@ -153,10 +153,6 @@
         <translation>Markdown for Pandoc</translation>
     </message>
     <message>
-        <source>Data exported to: %1</source>
-        <translation type="vanished">数据导入到: %1</translation>
-    </message>
-    <message>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -167,10 +163,6 @@
     <message>
         <source>Database backup</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Define the file name</source>
-        <translation type="vanished">定义文件名称</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
@@ -677,21 +669,6 @@
     <message>
         <source>Till</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SearchQueryPage</name>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">搜索</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">书签</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">心情</translation>
     </message>
 </context>
 <context>

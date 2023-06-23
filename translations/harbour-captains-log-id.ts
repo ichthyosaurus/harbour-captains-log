@@ -439,14 +439,6 @@
         <source>Changes since version %1</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Versi %1 (%2)</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Silakan merujuk &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -461,94 +453,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Kontribusi Anda terhadap terjemahan atau kode akan sangat disambut baik.</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="obsolete">Pemrograman</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Terjemahan</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Desain Ikon</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Bahasa Swedia</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Bahasa Polandia</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Bahasa Jerman</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Bahasa Prancis</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Bahasa Cina</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Bahasa Inggris</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Bahasa Italia</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Bahasa Finlandia</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Bahasa Norwegia</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="vanished">Bahasa Latvia</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Bahasa Estonia</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Bahasa Ceko</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Bahasa Yunani</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Bahasa Spanyol</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Bahasa Hungaria</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">Bahasa Indonesia</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Bahasa Rusia</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Bahasa Belanda</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Bahasa Slovakia</translation>
     </message>
 </context>
 <context>

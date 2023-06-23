@@ -445,14 +445,6 @@
         <source>Changes since version %1</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Verzia %1 (%2)</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Prečítajte si prosím &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -467,94 +459,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Vaša pomoc s prekladom alebo programovaním by bola veľmi vítaná.</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programovanie</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Preklady</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Návrh ikon</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Švédčina</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Poľština</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Nemčina</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francúzština</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Čínština</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Angličtina</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Taliančina</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Fínčina</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Nórčina</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estónčina</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Čeština</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Gréčtina</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Španielčina</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Maďarčina</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">Indonézština</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ruština</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holandčina</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovenčina</translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation type="vanished">Turečtina</translation>
     </message>
 </context>
 <context>

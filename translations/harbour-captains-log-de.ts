@@ -153,10 +153,6 @@
         <translation>Markdown für Pandoc</translation>
     </message>
     <message>
-        <source>Data exported to: %1</source>
-        <translation type="vanished">Daten exportiert nach: %1</translation>
-    </message>
-    <message>
         <source>Database backup</source>
         <translation>Datenbank-Backup</translation>
     </message>
@@ -167,10 +163,6 @@
     <message>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
         <translation>Datenexporte sind zum Ausdrucken bzw. zum Archivieren gedacht und nicht als ein Backup. Um ein manuelles Backup der Datenbank zu erstellen, wählen Sie die „Datenbank-Backup“-Option oder verwenden Sie &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; um ein Backup des Systems anzulegen.</translation>
-    </message>
-    <message>
-        <source>Define the file name</source>
-        <translation type="vanished">Dateiname</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
@@ -450,14 +442,6 @@
         <source>Changes since version %1</source>
         <translation>Änderungen seit Version %1</translation>
     </message>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Version %1 (%2)</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Bitte beachten Sie &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -472,143 +456,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Ihre Mitarbeit bei Übersetzungen oder der Programmierung wäre eine große Hilfe.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Autor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="vanished">
-            <numerusform>Autor·in</numerusform>
-            <numerusform>Autor·innen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="vanished">Maintainer·in</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="vanished">
-            <numerusform>Maintainer·in</numerusform>
-            <numerusform>Maintainer·innen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmierung</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Übersetzungen</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Symbol-Design</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="vanished">Externe Bibliotheken</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">Daten</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="vanished">Daten-Lizenz</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="vanished">
-            <numerusform>Daten-Lizenz</numerusform>
-            <numerusform>Daten-Lizenzen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="vanished">Nutzungsbedingungen</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Schwedisch</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polnisch</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Deutsch</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Französisch</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chinesisch</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Englisch</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italienisch</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finnisch</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norwegisch</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="vanished">Lettisch</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estnisch</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Tschechisch</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Griechisch</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spanisch</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Ungarisch</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">Indonesisch</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Russisch</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Niederländisch</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slowakisch</translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation type="vanished">Türkisch</translation>
     </message>
 </context>
 <context>
@@ -828,149 +675,6 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
-    <message>
-        <source>Any may match</source>
-        <translation type="vanished">eines muss zutreffen</translation>
-    </message>
-    <message>
-        <source>All must match</source>
-        <translation type="vanished">alle müssen zutreffen</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation type="vanished">Zurück</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="vanished">Suchen</translation>
-    </message>
-    <message>
-        <source>Title and entry</source>
-        <translation type="vanished">Überschrift und Eintrag</translation>
-    </message>
-    <message>
-        <source>Search contents</source>
-        <translation type="vanished">Inhalt durchsuchen</translation>
-    </message>
-    <message>
-        <source>Search tags</source>
-        <translation type="vanished">Schlagworte durchsuchen</translation>
-    </message>
-    <message>
-        <source>Search mode</source>
-        <translation type="vanished">Suchmodus</translation>
-    </message>
-    <message>
-        <source>plain text</source>
-        <translation type="vanished">einfacher Text</translation>
-    </message>
-    <message>
-        <source>wildcard</source>
-        <translation type="vanished">Platzhalter</translation>
-    </message>
-    <message>
-        <source>regular expression</source>
-        <translation type="vanished">regulärer Ausdruck</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="vanished">Lesezeichen</translation>
-    </message>
-    <message>
-        <source>all entries</source>
-        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="vanished">alle Einträge</translation>
-    </message>
-    <message>
-        <source>marked</source>
-        <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="vanished">markierte</translation>
-    </message>
-    <message>
-        <source>unmarked</source>
-        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="vanished">unmarkierte</translation>
-    </message>
-    <message>
-        <source>Mood</source>
-        <translation type="vanished">Stimmung</translation>
-    </message>
-    <message>
-        <source>From</source>
-        <translation type="vanished">Von</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation type="vanished">Bis</translation>
-    </message>
-    <message>
-        <source>Entry date</source>
-        <translation type="vanished">Eintragsdatum</translation>
-    </message>
-    <message>
-        <source>anytime</source>
-        <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="vanished">irgendwann</translation>
-    </message>
-    <message>
-        <source>Till</source>
-        <translation type="vanished">Bis</translation>
-    </message>
-    <message>
-        <source>Search syntax</source>
-        <translation type="vanished">Such-Syntax</translation>
-    </message>
-    <message>
-        <source>Note</source>
-        <translation type="vanished">Hinweis</translation>
-    </message>
-    <message>
-        <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="vanished">Die vereinfachte Suche ist nur im „Einfacher Text”-Suchmodus verfügbar.</translation>
-    </message>
-    <message>
-        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="vanished">Sucht nach der eingegebenen Zeichenkette. Hinweis: Der Suchbegriff wird vereinfacht wenn der Suchmodus auf „vereinfacht“ gestellt ist.</translation>
-    </message>
-    <message>
-        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="vanished">Mit komplexen regulären Ausdrücken suchen. Mit der vertikalen Linie „|“ können mehrere Suchbegriffe kombiniert werden. Im Internet gibt es ausführliche Anleitungen zu regulären Ausdrücken.</translation>
-    </message>
-    <message>
-        <source>simplified</source>
-        <translation type="vanished">vereinfacht</translation>
-    </message>
-    <message>
-        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="vanished">Diakritische Zeichen ignorieren und z. B. „ö“, „ó“ und „õ“ finden wenn ein einfaches „o“ eingegeben wird. Satzzeichen werden ignoriert. Verwenden Sie diesen Modus, wenn Sie nicht mehr genau wissen, wie Sie etwas früher geschrieben haben.</translation>
-    </message>
-    <message>
-        <source>strict</source>
-        <translation type="vanished">strikt</translation>
-    </message>
-    <message>
-        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="vanished">Exakt nach dem eingegebenen Begriff suchen. Verwenden Sie diesen Modus, wenn Sie genau wissen, was Sie suchen oder wenn Sie nach Satzzeichen wie „-“, „!“ oder „#“ suchen möchten.</translation>
-    </message>
-    <message>
-        <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="vanished">Einträge finden, egal ob sie mit einem Lesezeichen markiert wurden oder nicht.</translation>
-    </message>
-    <message>
-        <source>Find only bookmarked entries.</source>
-        <translation type="vanished">Nur Einträge mit einem Lesezeichen finden.</translation>
-    </message>
-    <message>
-        <source>Find only entries that are not bookmarked.</source>
-        <translation type="vanished">Nur Einträge finden, die nicht mit einem Lesezeichen markiert sind.</translation>
-    </message>
-    <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="vanished">Diese Option erlaubt die Suche nach komplizierten Mustern. Verwenden Sie „?“ für ein beliebiges Zeichen und „*“ um kein oder mehrere Zeichen zu finden. Zeichengruppen können in eckigen Klammern definiert werden. Mit einem umgekehrten Schrägstrich kann nach einem „?“ oder „*“ gesucht werden, z. B. „%1“.</translation>
-    </message>
-</context>
-<context>
     <name>SearchResultsPage</name>
     <message>
         <source>Search</source>
@@ -1181,10 +885,6 @@
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Captain&apos;s Log</translation>
-    </message>
-    <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="vanished">Fehler: Die Datenbank konnte nicht geladen werden.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
