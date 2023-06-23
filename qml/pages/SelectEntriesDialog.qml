@@ -14,10 +14,8 @@ Dialog {
     id: root
 
     property var selected: ([])
-    property string _filterQuery
     readonly property int _selectedCount: filteredModel.selectedCount
-
-    signal enableSearch
+    property var _searchQueryDialog: null
 
     allowedOrientations: Orientation.All
     canAccept: _selectedCount > 0
@@ -57,7 +55,18 @@ Dialog {
             }
             MenuItem {
                 text: qsTr("Filter")
-                onClicked: enableSearch()
+                onClicked: {
+                    if (_searchQueryDialog === null) {
+                        _searchQueryDialog = pageStack.push(
+                            Qt.resolvedUrl("SearchQueryDialog.qml"), {
+                            activeQueries: filteredModel.queries
+                        })
+                    } else {
+                        pageStack.push(_searchQueryDialog, {
+                            activeQueries: filteredModel.queries
+                        })
+                    }
+                }
             }
             MenuItem {
                 text: listView.showFullEntries ?
@@ -69,27 +78,21 @@ Dialog {
             }
         }
 
-        header: Column {
-            height: childrenRect.height
-            width: root.width
+        header: DialogHeader {
+            id: header
+            acceptText: qsTr("Select %n", "", _selectedCount)
 
-            DialogHeader {
-                acceptText: qsTr("Select %n", "", _selectedCount)
-            }
-
-            SearchField {
-                id: searchField
-                active: false
-                canHide: false
-                onTextChanged: root._filterQuery = text
-
-                Connections {
-                    target: root
-                    onEnableSearch: {
-                        searchField.active = true
-                        searchField.forceActiveFocus()
-                    }
-                }
+            Label {
+                parent: header.extraContent
+                anchors.centerIn: parent
+                // TODO improve text, only show when filters are active,
+                //      support editing filters
+                text: qsTr("%n entries filtered", "", filteredModel.count)
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.highlightColor
+                horizontalAlignment: Text.AlignVCenter
+                width: Theme.itemSizeHuge
+                wrapMode: Text.Wrap
             }
         }
 
