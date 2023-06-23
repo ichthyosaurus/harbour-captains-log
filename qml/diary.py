@@ -596,10 +596,12 @@ def backup_database():
     if not is_initialized():
         return
 
+    backup_path = ''
+
     def progress(status, remaining, total):
         pyotherside.send('backup-progress', {
-            'status': 'working', 'done': total - remaining,
-            'remaining': remaining, 'total': total
+            'status': 'working', 'progress': (total - remaining) / total,
+            'backup': str(backup_path)
         })
 
     try:
@@ -627,8 +629,9 @@ def backup_database():
         ])
 
         pyotherside.send('backup-progress', {
-            'status': 'failed', 'database': DIARY.db_path,
-            'backup': backup_path, 'exception': trace})
+            'status': 'failed', 'progress': 0.0,
+            'database': DIARY.db_path, 'backup': backup_path,
+            'exception': trace})
 
 
 def normalize_text(string):

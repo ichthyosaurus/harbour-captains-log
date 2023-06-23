@@ -295,6 +295,34 @@ ApplicationWindow
         expireTimeout: 4000
     }
 
+    Notification {
+        id: backupNotification
+
+        function start() {
+            summary = qsTr("Database backup")
+            body = ''
+            progress = Notification.ProgressIndeterminate
+            publish()
+        }
+
+        function update(backupProgress, backupFile) {
+            notification.timestamp = new Date()
+
+            if (backupProgress >= 1.0) {
+                summary = qsTr("Backup finished")
+                body = qsTr("A database backup has been created in “%1”.").
+                    arg(backupFile)
+                progress = undefined
+                publish()
+            } else {
+                summary = qsTr("Database backup")
+                body = ''
+                progress = backupProgress
+                publish()
+            }
+        }
+    }
+
     function showMessage(msg, details) {
         if (!!details) {
             notification.expireTimeout = 0
@@ -338,8 +366,7 @@ ApplicationWindow
                 loading = false
                 console.error("an error occurred in the Python backend: %1".arg(ident))
 
-                var message = qsTr("An unexpected error occurred. Please " +
-                                   "restart the app and check the logs.")
+                var message = ''
 
                 if (ident === 'local-data-inaccessible') {
                     message = qsTr("The local data folder at “%1” " +
@@ -347,9 +374,27 @@ ApplicationWindow
                 } else if (ident === 'unknown-export-type') {
                     message = qsTr("Cannot export unknown file type “%1”. " +
                                    "Please report this bug.").arg(data.kind)
+                } else {
+                    message = qsTr("An unexpected error occurred. Please " +
+                                   "restart the app and check the logs.")
                 }
 
                 showMessage(qsTr("Error"), message)
+            })
+
+            setHandler('backup-progress', function(result) {
+                if (result.status === 'working') {
+                    backupNotification.update(result.progress, result.backup)
+                } else if (result.status === 'failed') {
+                    backupNotification.close()
+                    showMessage(qsTr("Backup failed"), qsTr(
+                        "An unexpected error occurred. Please " +
+                        "restart the app and check the logs."
+                    ))
+                    console.error('backup failed with an exception:', result.exception)
+                } else {
+                    console.error('bug: unknown backup progress status', result.status)
+                }
             })
 
             setHandler('entries', function(result) {
