@@ -43,6 +43,10 @@
         <source>Norwegian</source>
         <translation>norra</translation>
     </message>
+    <message>
+        <source>Italian</source>
+        <translation type="unfinished">itaalia</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>

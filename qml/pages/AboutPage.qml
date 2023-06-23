@@ -117,6 +117,10 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Norwegian")
                     entries: ["Bokmål: Allan Nordhøy"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Italian")
+                    entries: ["DamnAkhamai"]
                 }
             ]
         }

@@ -43,6 +43,10 @@
         <source>Norwegian</source>
         <translation>Noors</translation>
     </message>
+    <message>
+        <source>Italian</source>
+        <translation type="unfinished">Italiaans</translation>
+    </message>
 </context>
 <context>
     <name>ChangePinPage</name>
