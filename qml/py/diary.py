@@ -79,8 +79,14 @@ class Diary:
         try:
             print(f"using local data at {self.data_path}")
             Path(self.data_path).mkdir(parents=True, exist_ok=True)
-        except FileExistsError:
-            pyotherside.send('error', 'local-data-inaccessible')
+        except Exception as ex:
+            trace = '\n'.join([
+                ''.join(traceback.format_exception_only(None, ex)).strip(),
+                ''.join(traceback.format_exception(None, ex, ex.__traceback__)).strip()
+            ])
+
+            pyotherside.send('error', 'local-data-inaccessible',
+                             {'path': self.data_path, 'exception': trace})
             self.ready = False
             return
 

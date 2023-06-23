@@ -283,9 +283,6 @@ ApplicationWindow
     Component  {
         id: firstPage
         FirstPage {}
-//        SettingsPage {}
-//        ExportPage {}
-//        SelectEntriesDialog {}
     }
 
     A.ChangelogNews {
@@ -346,6 +343,9 @@ ApplicationWindow
 
     Python {
         id: py
+        property string unexpectedErrorMessage: qsTr(
+            "An unexpected error occurred. Please restart the app and " +
+            "check the logs.")
 
         onReceived: {
             console.log(data)
@@ -356,9 +356,7 @@ ApplicationWindow
             console.error("an error occurred in the Python backend, traceback:")
             console.error(traceback)
 
-            showMessage(qsTr("Error"),
-                        qsTr("An unexpected error occurred. Please restart the app and " +
-                             "check the logs."))
+            showMessage(qsTr("Error"), unexpectedErrorMessage)
         }
 
         Component.onCompleted: {
@@ -372,15 +370,38 @@ ApplicationWindow
 
                 var message = ''
 
-                if (ident === 'local-data-inaccessible') {
+                if (ident === 'path-unavailable') {
+                    message = unexpectedErrorMessage
+                } else if (ident === 'local-data-inaccessible') {
                     message = qsTr("The local data folder at “%1” " +
-                                   "is not writable.").arg(StandardPaths.data)
+                                   "is not writable.").arg(data.path)
+                } else if (ident === 'database-unavailable') {
+                    message = qsTr("Failed to load the database due to an " +
+                                   "unknown error.")
+                } else if (ident === 'database-update-failed') {
+                    message = qsTr("Failed to update the database at “%1” " +
+                                   "to the latest version. Details: %2").
+                        arg(data.database).arg(data.exception)
+                } else if (ident === 'sailjail-migration-failed') {
+                    message = qsTr("Failed to move files for Sailjail " +
+                                   "support from “%1” to “%2”.").
+                        arg(data.source).arg(data.dest)
+                } else if (ident === 'schema-file-missing') {
+                    message = qsTr("Failed to update the database to its " +
+                                   "latest version because the version file " +
+                                   "is missing at “%1”.").arg(data.path)
+                } else if (ident === 'unknown-database-version') {
+                    message = qsTr("The database version “%1” is incompatible " +
+                                   "with this version of the app. The latest " +
+                                   "supported database version is “%2”.").
+                        arg(data.got).arg(data.latest)
+                } else if (ident === 'database-not-ready') {
+                    message = unexpectedErrorMessage
                 } else if (ident === 'unknown-export-type') {
                     message = qsTr("Cannot export unknown file type “%1”. " +
                                    "Please report this bug.").arg(data.kind)
                 } else {
-                    message = qsTr("An unexpected error occurred. Please " +
-                                   "restart the app and check the logs.")
+                    message = unexpectedErrorMessage
                 }
 
                 showMessage(qsTr("Error"), message)
@@ -391,10 +412,7 @@ ApplicationWindow
                     backupNotification.update(result.progress, result.backup)
                 } else if (result.status === 'failed') {
                     backupNotification.close()
-                    showMessage(qsTr("Backup failed"), qsTr(
-                        "An unexpected error occurred. Please " +
-                        "restart the app and check the logs."
-                    ))
+                    showMessage(qsTr("Backup failed"), unexpectedErrorMessage)
                     console.error('backup failed with an exception:', result.exception)
                 } else {
                     console.error('bug: unknown backup progress status', result.status)
