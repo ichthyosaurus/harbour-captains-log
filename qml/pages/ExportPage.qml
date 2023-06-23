@@ -23,9 +23,8 @@ Dialog {
             Qt.locale(), appWindow.dbDateFormat))
 
     function _selectEntries() {
-        var dialog = pageStack.push(Qt.resolvedUrl("SelectEntriesDialog.qml"), {
-            selected: _selectedEntries // TODO implement pre-selecting
-        })
+        var dialog = pageStack.push(Qt.resolvedUrl("SelectEntriesDialog.qml"))
+        dialog.preselectEntries(_selectedEntries)
 
         dialog.accepted.connect(function(){
             _selectedEntries = dialog.selected

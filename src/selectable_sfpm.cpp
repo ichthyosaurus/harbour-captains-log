@@ -178,6 +178,46 @@ void SelectableSortFilterProxyModel::clearAll()
                      {roleForName(m_isSelectedRole->name())});
 }
 
+void SelectableSortFilterProxyModel::selectKeys(const QVariantList& keys)
+{
+    int keyRole = getKeyRole();
+    if (keyRole < 0) return;
+
+    QMap<QVariant, QModelIndex> indexByKey;
+
+    QList<int> updated;
+    updated.reserve(keys.length());
+
+    for (int i = keys.length() - 1; i >= 0; --i) {
+        const auto& key = keys[i];
+        if (m_selectedMap.value(key, false) == true) continue;
+
+        updated.append(i);
+        m_selectedCount += 1;
+        m_selectedKeys.append(key);
+        m_selectedMap[key] = true;
+    }
+
+    if (updated.length() > 0) {
+        for (int i = count() - 1; i >= 0; --i) {
+            QModelIndex idx = index(i, 0);
+            const auto& key = data(idx, keyRole);
+            indexByKey[key] = idx;
+        }
+
+        for (const auto& i : updated) {
+            const auto& key = keys[i];
+            const auto& idx = indexByKey[key];
+
+            emit itemSelected(key);
+            emit dataChanged(idx, idx, {roleForName(m_isSelectedRole->name())});
+        }
+    }
+
+    emit selectedCountChanged();
+    emit selectedKeysChanged();
+}
+
 void SelectableSortFilterProxyModel::updateFilteredSelectedCount()
 {
     int keyRole = getKeyRole();

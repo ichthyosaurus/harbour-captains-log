@@ -50,17 +50,18 @@ signals:
 
 public slots:
     void selectItem(const QModelIndex& index);
-    Q_INVOKABLE void selectItem(int row);
+    void selectItem(int row);
 
     void deselectItem(const QModelIndex& index);
-    Q_INVOKABLE void deselectItem(int row);
+    void deselectItem(int row);
 
     void toggleSelection(const QModelIndex& index);
-    Q_INVOKABLE void toggleSelection(int row);
+    void toggleSelection(int row);
 
     void selectAll();
     void clearCurrent();
     void clearAll();
+    void selectKeys(const QVariantList& keys);
 
     void updateFilteredSelectedCount();
 

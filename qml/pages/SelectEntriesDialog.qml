@@ -14,6 +14,11 @@ Dialog {
     id: root
 
     property var selected: ([])
+
+    function preselectEntries(keys) {
+        filteredModel.selectKeys(keys)
+    }
+
     readonly property int _selectedCount: filteredModel.selectedCount
     readonly property int _filteredSelectedCount: filteredModel.filteredSelectedCount
     property var _searchQueryDialog: null
