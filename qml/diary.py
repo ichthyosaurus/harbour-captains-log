@@ -69,7 +69,7 @@ class Diary:
             path = getattr(standard_paths, i, None)
 
             if path:
-                setattr(self, f'_{i}_path', Path(path))
+                setattr(self, f'{i}_path', Path(path))
             else:
                 pyotherside.send('error', 'path-unavailable',
                                  {'kind': i, 'obj': standard_paths})
