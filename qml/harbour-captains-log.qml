@@ -254,6 +254,7 @@ ApplicationWindow
         property int configMigrated: 0
         property bool useCodeProtection: false
         property string protectionCode: "-1"
+        property string lastBackupDate: ""
 
         function migrate() {
             if (configMigrated === 0) {
@@ -428,6 +429,15 @@ ApplicationWindow
                     console.log("loading entries...")
                     py.call('diary.get_entries', [], function(result) {
                         loading = false
+
+                        if (config.lastBackupDate === "" ||
+                                new Date() - parseDate(config.lastBackupDate) >
+                                (1000 * 60 * 60 * 24 * 7)) {
+                            console.log("creating database backup...")
+                            backupNotification.start()
+                            py.call('diary.backup_database')
+                            config.lastBackupDate = new Date().toISOString().split('T')[0]
+                        }
                     })
                 })
             })
