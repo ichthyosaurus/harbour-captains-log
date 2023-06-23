@@ -23,7 +23,7 @@ Dialog {
 
     function _selectEntries() {
         var dialog = pageStack.push(Qt.resolvedUrl("SelectEntriesDialog.qml"), {
-            selected: _selectedEntries
+            selected: _selectedEntries // TODO implement pre-selecting
         })
 
         dialog.accepted.connect(function(){
@@ -167,6 +167,7 @@ Dialog {
             qsTr("Export"),
             qsTr("Data is being exported to %1").arg(homePath))
 
+        // TODO implement exporting only selected entries
         py.call("diary.export", [homePath + '/' + filename, kind, translations.translations])
     }
 }
