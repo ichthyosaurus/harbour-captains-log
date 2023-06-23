@@ -60,6 +60,9 @@ class Diary:
         self.ready = False
         self._standard_paths = standard_paths
 
+        self.home_path: str = ''
+        self.data_path: str = ''
+
         for i in ['home', 'data']:
             path = getattr(standard_paths, i, None)
 
@@ -72,8 +75,8 @@ class Diary:
                 return
 
         try:
-            print(f"using local data at {self._data_path}")
-            Path(self._data_path).mkdir(parents=True, exist_ok=True)
+            print(f"using local data at {self.data_path}")
+            Path(self.data_path).mkdir(parents=True, exist_ok=True)
         except FileExistsError:
             pyotherside.send('error', 'local-data-inaccessible')
             self.ready = False
@@ -111,13 +114,13 @@ class Diary:
 
     def _get_active_db_path(self) -> [str, None]:
         back = Path('.').resolve()
-        os.chdir(self._data_path)
+        os.chdir(self.data_path)
         candidates = sorted(glob.glob(self.DB_DATA_FILE_V8_GLOB), reverse=True)
         os.chdir(str(back))
 
         if candidates:
-            return str(Path(self._data_path / candidates[0]).absolute())
-        elif Path(self._data_path / self.DB_DATA_FILE_PRE_V8).is_file():
+            return str(Path(self.data_path / candidates[0]).absolute())
+        elif Path(self.data_path / self.DB_DATA_FILE_PRE_V8).is_file():
             if ok := self._migrate_files_single_file():
                 return self._get_active_db_path()
             elif ok is False:
@@ -133,8 +136,8 @@ class Diary:
 
     def _migrate_files_sailjail(self) -> [bool, None]:
         # return True on success, False on failure, and None if there was nothing to migrate
-        old_dir: Path = self._home_path / '.local/share/harbour-captains-log'
-        new_dir: Path = self._data_path
+        old_dir: Path = self.home_path / '.local/share/harbour-captains-log'
+        new_dir: Path = self.data_path
 
         old_db = old_dir / self.DB_DATA_FILE_PRE_SAILJAIL
         new_db = new_dir / self.DB_DATA_FILE_PRE_V8
@@ -164,8 +167,8 @@ class Diary:
         # return True on success, False on failure, and None if there was nothing to migrate
 
         # don't resolve symlinks here
-        old_version_file: Path = Path(self._data_path / self.DB_VERSION_FILE_PRE_V8).absolute()
-        old_db_file: Path = Path(self._data_path / self.DB_DATA_FILE_PRE_V8).absolute()
+        old_version_file: Path = Path(self.data_path / self.DB_VERSION_FILE_PRE_V8).absolute()
+        old_db_file: Path = Path(self.data_path / self.DB_DATA_FILE_PRE_V8).absolute()
 
         if not old_db_file.exists() and old_version_file.exists():
             self.move_aside(old_version_file)
@@ -182,7 +185,7 @@ class Diary:
                 return False
             else:
                 new_db_file: Path = Path(
-                    self._data_path / self.DB_DATA_FILE_V8_FORMAT.format(
+                    self.data_path / self.DB_DATA_FILE_V8_FORMAT.format(
                         version=int(old_schema_version)))
 
                 if new_db_file.exists():
@@ -404,7 +407,7 @@ class Diary:
         }
 
         if not source_db:
-            print(f"creating new database in {self._data_path}")
+            print(f"creating new database in {self.data_path}")
             from_version = -1
         else:
             print(f"updating database {source_db}")
@@ -433,7 +436,7 @@ class Diary:
             with updating:
                 updating.execute('VACUUM')
 
-            fd, tempfile_path = tempfile.mkstemp(prefix=f'update_{current_version:03d}_', suffix='.db', dir=self._data_path)
+            fd, tempfile_path = tempfile.mkstemp(prefix=f'update_{current_version:03d}_', suffix='.db', dir=self.data_path)
             os.close(fd)
             temp_db = sqlite3.connect(tempfile_path)
 
@@ -442,7 +445,7 @@ class Diary:
 
             temp_db.close()
             updating.close()
-            final_db = self._data_path / self.DB_DATA_FILE_V8_FORMAT.format(version=current_version)
+            final_db = self.data_path / self.DB_DATA_FILE_V8_FORMAT.format(version=current_version)
             self.move_aside(final_db)
             shutil.move(tempfile_path, final_db)
         else:
