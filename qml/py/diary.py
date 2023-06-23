@@ -919,8 +919,9 @@ def delete_entry(id):
 # BEGIN Export Functions
 #
 
-def _read_all_entries():
+def _read_all_entries() -> Dict[int, sqlite3.Row]:
     """ Read all entries to export them.
+        Returns a dict of {rowid: Row}.
         Expects the database to be ready and initialized.
     """
 
@@ -931,12 +932,12 @@ def _read_all_entries():
                  entry_addenda_seq DESC;""")
     rows = DIARY.cursor.fetchall()
 
-    cleaned_rows = []
+    cleaned_rows = {}
 
     for row in rows:
         # default values are only used if database is corrupted
         entry = _clean_entry_row(row)
-        cleaned_rows.append(entry)
+        cleaned_rows[entry['rowid']] = entry
 
     return cleaned_rows
 
@@ -1013,7 +1014,7 @@ def _get_translators(translations):
     return (tr, mood)
 
 
-def export(filename: str, kind: str, translations):
+def export(filename: str, kind: str, translations, entries: list = []):
     """ Export all entries to 'filename' as 'type'.
 
     'translations' is a JS object containing translations for exported strings.
@@ -1025,7 +1026,13 @@ def export(filename: str, kind: str, translations):
     if not is_initialized():
         return
 
-    entries = _read_all_entries()
+    all_entries = _read_all_entries()
+
+    if entries:
+        entries = [all_entries[x] for x in entries]
+    else:
+        entries = list(all_entries.values())
+
     filename = filename.replace("'", "_").replace(":", "-").strip()
 
     if not entries or not filename:

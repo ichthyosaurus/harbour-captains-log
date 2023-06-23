@@ -181,7 +181,8 @@ Dialog {
             qsTr("Export"),
             qsTr("Data is being exported to %1").arg(homePath))
 
-        // TODO implement exporting only selected entries
-        py.call("diary.export", [homePath + '/' + filename, kind, translations.translations])
+        py.call("diary.export", [homePath + '/' + filename,
+                                 kind, translations.translations,
+                                 _selectedEntries])
     }
 }
