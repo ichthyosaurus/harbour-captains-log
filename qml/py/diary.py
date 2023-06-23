@@ -732,7 +732,7 @@ def get_entries():
     for i, row in enumerate(rows, 1):
         batch.append(_clean_entry_row(row))
 
-        if i % 20 == 0:
+        if i % 50 == 0:
             pyotherside.send('entries', batch)
             batch = []
 
