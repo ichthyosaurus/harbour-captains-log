@@ -6,6 +6,38 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Fri Jun 23 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.0.0-1
+- updated translations: Swedish, Italian, German
+- refreshed the app icon (based on a contribution by JSEHV)
+- refreshed the cover background
+- completely refactored exporting
+-   > the layout in all formats has been improved
+-   > a new database backup option has been added to export a zip archive
+-   > translations have been improved
+-   > new formats can be added easily
+-   > added descriptions for all export formats
+-   > no files will be overwritten when exporting (could happen before)
+- completely refactored database handling and migrations
+-   > the database is now stored in a single file
+-   > backups will be automatically created every week
+-   > manual backups can be created from the settings page
+-   > failed database updates should never lead to data loss and old databases (before any database update) are kept as backups
+- added support for exporting only selected entries
+-   > select entries from the export page
+-   > export search results directly
+- improved user experience when writing entries
+-   > automatically scroll the next field into view
+-   > make tag suggestions more visible
+-   > improve adding new tags
+- improved error feedback and notifications
+- improved database stability and error detection
+- fixed timestamps with invalid seconds fields
+- fixed a string that was causing issues with translations and had to be re-translated all the time (sorry for the hassle, translators)
+- added support for running the Python backend as a stand-alone script
+- added an in-app changelog
+- plus many small quality-of-life changes and many internal changes
+- note: this release changes the database in a non-backwards-compatible way, so that downgrading will not be possible
+
 * Mon Jun 12 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 3.1.0-1
 - new translation: Norwegian Bokmål
 - urgent: fixed initialising a new database

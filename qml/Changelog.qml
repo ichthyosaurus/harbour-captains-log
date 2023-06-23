@@ -9,6 +9,42 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: '4.0.0-1'
+        date: "2023-06-23"
+        paragraphs: [
+            '- updated translations: Swedish, Italian, German<br>' +
+            '- refreshed the app icon (based on a contribution by JSEHV)<br>' +
+            '- refreshed the cover background<br>' +
+            '- completely refactored exporting<br>' +
+            '-   > the layout in all formats has been improved<br>' +
+            '-   > a new database backup option has been added to export a zip archive<br>' +
+            '-   > translations have been improved<br>' +
+            '-   > new formats can be added easily<br>' +
+            '-   > added descriptions for all export formats<br>' +
+            '-   > no files will be overwritten when exporting (could happen before)<br>' +
+            '- completely refactored database handling and migrations<br>' +
+            '-   > the database is now stored in a single file<br>' +
+            '-   > backups will be automatically created every week<br>' +
+            '-   > manual backups can be created from the settings page<br>' +
+            '-   > failed database updates should never lead to data loss and old databases (before any database update) are kept as backups<br>' +
+            '- added support for exporting only selected entries<br>' +
+            '-   > select entries from the export page<br>' +
+            '-   > export search results directly<br>' +
+            '- improved user experience when writing entries<br>' +
+            '-   > automatically scroll the next field into view<br>' +
+            '-   > make tag suggestions more visible<br>' +
+            '-   > improve adding new tags<br>' +
+            '- improved error feedback and notifications<br>' +
+            '- improved database stability and error detection<br>' +
+            '- fixed timestamps with invalid seconds fields<br>' +
+            '- fixed a string that was causing issues with translations and had to be re-translated all the time (sorry for the hassle, translators)<br>' +
+            '- added support for running the Python backend as a stand-alone script<br>' +
+            '- added an in-app changelog<br>' +
+            '- plus many small quality-of-life changes and many internal changes<br>' +
+            '- note: this release changes the database in a non-backwards-compatible way, so that downgrading will not be possible<br>' +
+        '' ]
+    }
+    ChangelogItem {
         version: '3.1.0-1'
         date: "2023-06-12"
         paragraphs: [
