@@ -190,7 +190,7 @@ class Diary:
 
                 print(f"migrating {old_db_file} with {old_version_file} to {new_db_file}")
                 shutil.move(str(old_db_file), str(new_db_file))
-                self.move_aside(old_version_file)
+                old_version_file.unlink()
                 return True
 
         return None
