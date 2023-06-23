@@ -9,9 +9,10 @@ import SortFilterProxyModel 0.2
 
 // Requires appWindow.rawModel, appWindow.normalizeText, and appWindow.parseDate
 
-SortFilterProxyModel {
+SelectableSortFilterProxyModel {
     id: root
     sourceModel: appWindow.rawModel
+    selectionKey: "rowid"
 
     property SearchQueriesData queries: SearchQueriesData {}
 
@@ -62,6 +63,12 @@ SortFilterProxyModel {
                 enabled: queries.bookmark !== Qt.PartiallyChecked
                 roleName: "bookmark"
                 value: queries.bookmark === Qt.Checked ? 1 : 0
+            }
+
+            ValueFilter {
+                enabled: queries.selected !== Qt.PartiallyChecked
+                roleName: "isSelected"
+                value: queries.selected === Qt.Checked ? true : false
             }
 
             AnyOf {
@@ -133,6 +140,12 @@ SortFilterProxyModel {
                 enabled: queries.bookmark !== Qt.PartiallyChecked
                 roleName: "bookmark"
                 value: queries.bookmark === Qt.Checked ? 1 : 0
+            }
+
+            ValueFilter {
+                enabled: queries.selected !== Qt.PartiallyChecked
+                roleName: "isSelected"
+                value: queries.selected === Qt.Checked ? true : false
             }
 
             AnyOf {

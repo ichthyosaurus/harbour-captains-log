@@ -111,6 +111,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementSelectable</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation>Addendum from %1</translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation>mood: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -138,7 +150,7 @@
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation>Data exported to: %1</translation>
+        <translation type="vanished">Data exported to: %1</translation>
     </message>
     <message>
         <source>Note</source>
@@ -153,40 +165,70 @@
         <translation>Database backup</translation>
     </message>
     <message>
-        <source>Define the file name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>The file will be saved in your documents folder. The name must not contain subfolders.</translation>
     </message>
     <message>
         <source>Export file format</source>
-        <translation type="unfinished"></translation>
+        <translation>Export file format</translation>
     </message>
     <message>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</translation>
     </message>
     <message>
         <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
-        <translation type="unfinished"></translation>
+        <translation>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</translation>
     </message>
     <message>
         <source>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</source>
-        <translation type="unfinished"></translation>
+        <translation>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</translation>
     </message>
     <message>
         <source>Export the full database in a machine-readable plain text format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Export the full database in a machine-readable plain text format.</translation>
     </message>
     <message>
         <source>Note that it is not yet possible to import this file type back into the app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Note that it is not yet possible to import this file type back into the app.</translation>
     </message>
     <message>
-        <source>Create a backup of the actual database files as an archive. This database can later be put back into place.</source>
-        <translation type="unfinished"></translation>
+        <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
+        <translation>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</translation>
+    </message>
+    <message>
+        <source>Entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation>Entries</translation>
+    </message>
+    <message>
+        <source>All entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation>All entries</translation>
+    </message>
+    <message>
+        <source>Selected entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation>Selected entries</translation>
+    </message>
+    <message>
+        <source>Select entries</source>
+        <translation>Select entries</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n entries selected</source>
+        <translation>
+            <numerusform>%n entry selected</numerusform>
+            <numerusform>%n entries selected</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Export</source>
+        <translation>Export</translation>
+    </message>
+    <message>
+        <source>Data is being exported to %1</source>
+        <translation>Data is being exported to %1</translation>
     </message>
 </context>
 <context>
@@ -400,6 +442,14 @@
         <source>Changes since version %1</source>
         <translation>Changes since version %1</translation>
     </message>
+    <message>
+        <source>Version %1 (%2)</source>
+        <translation type="vanished">Version %1 (%2)</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation type="vanished">Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -414,6 +464,143 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Your contributions to translations or code would be most welcome.</translation>
+    </message>
+    <message>
+        <source>Author</source>
+        <translation type="vanished">Author</translation>
+    </message>
+    <message numerus="yes">
+        <source>Author(s)</source>
+        <translation type="vanished">
+            <numerusform>Author</numerusform>
+            <numerusform>Authors</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Maintainer</source>
+        <translation type="vanished">Maintainer</translation>
+    </message>
+    <message numerus="yes">
+        <source>Maintainer(s)</source>
+        <translation type="vanished">
+            <numerusform>Maintainer</numerusform>
+            <numerusform>Maintainers</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation type="vanished">Programming</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="vanished">Translations</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="vanished">Icon Design</translation>
+    </message>
+    <message>
+        <source>Third-party libraries</source>
+        <translation type="vanished">Third-party libraries</translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="vanished">Data</translation>
+    </message>
+    <message>
+        <source>Data License</source>
+        <translation type="vanished">Data License</translation>
+    </message>
+    <message numerus="yes">
+        <source>Data License(s)</source>
+        <translation type="vanished">
+            <numerusform>Data License</numerusform>
+            <numerusform>Data Licenses</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Terms of Use</source>
+        <translation type="vanished">Terms of Use</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">Swedish</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">Polish</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">German</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">French</translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation type="vanished">Chinese</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">English</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">Italian</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">Finnish</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">Norwegian</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">Latvian</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">Estonian</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="vanished">Czech</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="vanished">Greek</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="vanished">Spanish</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="vanished">Hungarian</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="vanished">Indonesian</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="vanished">Russian</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="vanished">Dutch</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="vanished">Slovak</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="vanished">Turkish</translation>
     </message>
 </context>
 <context>
@@ -459,7 +646,7 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
+    <name>SearchQueryDialog</name>
     <message>
         <source>Any may match</source>
         <translation>Any may match</translation>
@@ -489,20 +676,60 @@
         <translation>Search tags</translation>
     </message>
     <message>
-        <source>Search mode</source>
-        <translation>Search mode</translation>
+        <source>Search syntax</source>
+        <translation>Search syntax</translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation>Note</translation>
+    </message>
+    <message>
+        <source>Simplified matching is only possible in “plain text” mode.</source>
+        <translation>Simplified matching is only possible in “plain text” mode.</translation>
     </message>
     <message>
         <source>plain text</source>
         <translation>plain text</translation>
     </message>
     <message>
+        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
+        <translation>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</translation>
+    </message>
+    <message>
         <source>wildcard</source>
         <translation>wildcard</translation>
     </message>
     <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
+        <translation>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</translation>
+    </message>
+    <message>
         <source>regular expression</source>
         <translation>regular expression</translation>
+    </message>
+    <message>
+        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
+        <translation>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation>Search mode</translation>
+    </message>
+    <message>
+        <source>simplified</source>
+        <translation>simplified</translation>
+    </message>
+    <message>
+        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
+        <translation>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</translation>
+    </message>
+    <message>
+        <source>strict</source>
+        <translation>strict</translation>
+    </message>
+    <message>
+        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
+        <translation>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</translation>
     </message>
     <message>
         <source>Bookmarks</source>
@@ -514,14 +741,57 @@
         <translation>all entries</translation>
     </message>
     <message>
+        <source>Find entries regardless of whether they are bookmarked or not.</source>
+        <translation>Find entries regardless of whether they are bookmarked or not.</translation>
+    </message>
+    <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
         <translation>marked</translation>
     </message>
     <message>
+        <source>Find only bookmarked entries.</source>
+        <translation>Find only bookmarked entries.</translation>
+    </message>
+    <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation>unmarked</translation>
+    </message>
+    <message>
+        <source>Find only entries that are not bookmarked.</source>
+        <translation>Find only entries that are not bookmarked.</translation>
+    </message>
+    <message>
+        <source>Selection</source>
+        <translation>Selection</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
+        <translation>all entries</translation>
+    </message>
+    <message>
+        <source>Find entries regardless of whether they are selected or not.</source>
+        <translation>Find entries regardless of whether they are selected or not.</translation>
+    </message>
+    <message>
+        <source>selected</source>
+        <comment>search option, as in: “find only selected entries”</comment>
+        <translation>selected</translation>
+    </message>
+    <message>
+        <source>Find only currently selected entries.</source>
+        <translation>Find only currently selected entries.</translation>
+    </message>
+    <message>
+        <source>unselected</source>
+        <comment>search option, as in: “find only entries that are not selected</comment>
+        <translation>unselected</translation>
+    </message>
+    <message>
+        <source>Find only entries that are currently not selected.</source>
+        <translation>Find only entries that are currently not selected.</translation>
     </message>
     <message>
         <source>Mood</source>
@@ -548,57 +818,148 @@
         <source>Till</source>
         <translation>Until</translation>
     </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
+    <message>
+        <source>Any may match</source>
+        <translation type="vanished">Any may match</translation>
+    </message>
+    <message>
+        <source>All must match</source>
+        <translation type="vanished">All must match</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">Back</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="vanished">Search</translation>
+    </message>
+    <message>
+        <source>Title and entry</source>
+        <translation type="vanished">Title and entry</translation>
+    </message>
+    <message>
+        <source>Search contents</source>
+        <translation type="vanished">Search contents</translation>
+    </message>
+    <message>
+        <source>Search tags</source>
+        <translation type="vanished">Search tags</translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="vanished">Search mode</translation>
+    </message>
+    <message>
+        <source>plain text</source>
+        <translation type="vanished">plain text</translation>
+    </message>
+    <message>
+        <source>wildcard</source>
+        <translation type="vanished">wildcard</translation>
+    </message>
+    <message>
+        <source>regular expression</source>
+        <translation type="vanished">regular expression</translation>
+    </message>
+    <message>
+        <source>Bookmarks</source>
+        <translation type="vanished">Bookmarks</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="vanished">all entries</translation>
+    </message>
+    <message>
+        <source>marked</source>
+        <comment>search option, as in: “find only bookmarked entries”</comment>
+        <translation type="vanished">marked</translation>
+    </message>
+    <message>
+        <source>unmarked</source>
+        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
+        <translation type="vanished">unmarked</translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="vanished">Mood</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="vanished">From</translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="vanished">To</translation>
+    </message>
+    <message>
+        <source>Entry date</source>
+        <translation type="vanished">Entry date</translation>
+    </message>
+    <message>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="vanished">anytime</translation>
+    </message>
+    <message>
+        <source>Till</source>
+        <translation type="vanished">Until</translation>
+    </message>
     <message>
         <source>Search syntax</source>
-        <translation>Search syntax</translation>
+        <translation type="vanished">Search syntax</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation>Note</translation>
+        <translation type="vanished">Note</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation>Simplified matching is only possible in “plain text” mode.</translation>
+        <translation type="vanished">Simplified matching is only possible in “plain text” mode.</translation>
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</translation>
+        <translation type="vanished">Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</translation>
+        <translation type="vanished">Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</translation>
     </message>
     <message>
         <source>simplified</source>
-        <translation>simplified</translation>
+        <translation type="vanished">simplified</translation>
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</translation>
+        <translation type="vanished">Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</translation>
     </message>
     <message>
         <source>strict</source>
-        <translation>strict</translation>
+        <translation type="vanished">strict</translation>
     </message>
     <message>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</translation>
+        <translation type="vanished">Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</translation>
     </message>
     <message>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation>Find entries regardless of whether they are bookmarked or not.</translation>
+        <translation type="vanished">Find entries regardless of whether they are bookmarked or not.</translation>
     </message>
     <message>
         <source>Find only bookmarked entries.</source>
-        <translation>Find only bookmarked entries.</translation>
+        <translation type="vanished">Find only bookmarked entries.</translation>
     </message>
     <message>
         <source>Find only entries that are not bookmarked.</source>
-        <translation>Find only entries that are not bookmarked.</translation>
+        <translation type="vanished">Find only entries that are not bookmarked.</translation>
     </message>
     <message>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</translation>
+        <translation type="vanished">This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</translation>
     </message>
 </context>
 <context>
@@ -635,6 +996,51 @@
         <source>Show full entries</source>
         <translation>Show full entries</translation>
     </message>
+    <message>
+        <source>Export</source>
+        <translation>Export</translation>
+    </message>
+</context>
+<context>
+    <name>SelectEntriesDialog</name>
+    <message>
+        <source>Clear selection</source>
+        <translation>Clear selection</translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation>Show previews</translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation>Show full entries</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Select all</translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
+    <message numerus="yes">
+        <source>Select %n</source>
+        <translation>
+            <numerusform>Select %n</numerusform>
+            <numerusform>Select %n</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n entries shown</source>
+        <translation>
+            <numerusform>%n entry shown</numerusform>
+            <numerusform>%n entries shown</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation>No entries found</translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
@@ -643,8 +1049,8 @@
         <translation>Settings</translation>
     </message>
     <message>
-        <source>activate code protection</source>
-        <translation>activate code protection</translation>
+        <source>Activate code protection</source>
+        <translation>Activate code protection</translation>
     </message>
     <message>
         <source>Set Code</source>
@@ -665,6 +1071,14 @@
     <message>
         <source>Export data</source>
         <translation>Export data</translation>
+    </message>
+    <message>
+        <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
+        <translation>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</translation>
+    </message>
+    <message>
+        <source>Database backup</source>
+        <translation>Database backup</translation>
     </message>
 </context>
 <context>
@@ -762,7 +1176,7 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation>Error: the database could not be loaded.</translation>
+        <translation type="vanished">Error: the database could not be loaded.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
@@ -827,6 +1241,58 @@
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>An unexpected error occurred. Please restart the app and check the logs.</translation>
+    </message>
+    <message>
+        <source>Database backup</source>
+        <translation>Database backup</translation>
+    </message>
+    <message>
+        <source>Backup finished</source>
+        <translation>Backup finished</translation>
+    </message>
+    <message>
+        <source>A database backup has been created in “%1”.</source>
+        <translation>A database backup has been created in “%1”.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <source>The local data folder at “%1” is not writable.</source>
+        <translation>The local data folder at “%1” is not writable.</translation>
+    </message>
+    <message>
+        <source>Failed to load the database due to an unknown error.</source>
+        <translation>Failed to load the database due to an unknown error.</translation>
+    </message>
+    <message>
+        <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
+        <translation>Failed to update the database at “%1” to the latest version. Details: %2</translation>
+    </message>
+    <message>
+        <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
+        <translation>Failed to move files for Sailjail support from “%1” to “%2”.</translation>
+    </message>
+    <message>
+        <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
+        <translation>Failed to update the database to its latest version because the version file is missing at “%1”.</translation>
+    </message>
+    <message>
+        <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
+        <translation>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</translation>
+    </message>
+    <message>
+        <source>Cannot export unknown file type “%1”. Please report this bug.</source>
+        <translation>Cannot export unknown file type “%1”. Please report this bug.</translation>
+    </message>
+    <message>
+        <source>Backup failed</source>
+        <translation>Backup failed</translation>
+    </message>
+    <message>
+        <source>The database could not be loaded.</source>
+        <translation>The database could not be loaded.</translation>
     </message>
 </context>
 </TS>

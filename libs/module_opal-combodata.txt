@@ -5,17 +5,17 @@
 
 # Attribution using Opal.About:
 #    Attribution {
-#        name: "Opal.InfoCombo"
+#        name: "Opal.ComboData"
 #        entries: "2023 Mirian Margiani"
 #        licenses: License { spdxId: "GPL-3.0-or-later"}
-#        sources: "https://github.com/Pretty-SFOS/opal-infocombo"
+#        sources: "https://github.com/Pretty-SFOS/opal-combodata"
 #        homepage: "https://github.com/Pretty-SFOS/opal"
 #    }
 
-module: Opal.InfoCombo (opal-infocombo)
-version: 1.1.0 (git:416786f)
-description: This module provides a combo box that can show details for each selectable option.
+module: Opal.ComboData (opal-combodata)
+version: 1.0.0 (git:6236832)
+description: This module provides an extension for combo boxes to access the current value instead of the label.
 maintainers: ichthyosaurus
 attribution: 2023 Mirian Margiani
 license: GPL-3.0-or-later
-sources: https://github.com/Pretty-SFOS/opal-infocombo
+sources: https://github.com/Pretty-SFOS/opal-combodata

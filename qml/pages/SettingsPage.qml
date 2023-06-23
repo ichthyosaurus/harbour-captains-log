@@ -14,7 +14,7 @@ Page {
     allowedOrientations: Orientation.All
 
     onStatusChanged: {
-        if(status == PageStatus.Deactivating) {
+        if(status === PageStatus.Deactivating) {
             if (protectionSwitch.checked && config.protectionCode !== "-1") {
                 // if protection is switched on AND a protection code is set - save!
                 config.useCodeProtection = true
@@ -51,11 +51,22 @@ Page {
 
             TextSwitch {
                 id: protectionSwitch
-                text: qsTr("activate code protection")
+                text: qsTr("Activate code protection")
+                description: qsTr("Please note that this code only prevents " +
+                                  "access to the app. The database is not " +
+                                  "encrypted, and the code is not stored securely.")
                 checked: config.useCodeProtection
+
+                onCheckedChanged: {
+                    if (checked && config.protectionCode === "-1") {
+                        passcodeButton.clicked(null)
+                    }
+                }
             }
 
             Button {
+                id: passcodeButton
+                width: Theme.buttonWidthLarge
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: config.protectionCode === "-1" ? qsTr("Set Code") : qsTr("Change Code")
                 visible: protectionSwitch.checked
@@ -69,10 +80,18 @@ Page {
                 text: qsTr("Export features")
             }
 
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Export data")
-                onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+            ButtonLayout {
+                preferredWidth: Theme.buttonWidthLarge
+
+                Button {
+                    text: qsTr("Export data")
+                    onClicked: pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+                }
+
+                Button {
+                    text: qsTr("Database backup")
+                    onClicked: py.call("diary.backup_database")
+                }
             }
         }
     }

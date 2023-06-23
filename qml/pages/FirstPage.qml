@@ -60,7 +60,7 @@ Page {
             }
             MenuItem {
                 text: qsTr("Search")
-                onClicked: pageStack.push(Qt.resolvedUrl("SearchQueryPage.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
             }
         }
 

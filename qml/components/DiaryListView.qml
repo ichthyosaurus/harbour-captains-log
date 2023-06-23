@@ -25,6 +25,8 @@ SilicaListView {
     id: root
 
     property bool showFullEntries: false
+    property bool selectable: false
+
     property Item _scrollbar: null
 
     contentHeight: Theme.itemSizeHuge
@@ -69,7 +71,19 @@ SilicaListView {
         }
     }
 
-    delegate: showFullEntries ? fullDelegate : previewDelegate
+    Component {
+        id: selectableDelegate
+        EntryElementSelectable {
+            realModel: root.model
+            showFull: showFullEntries
+        }
+    }
+
+    delegate: {
+        if (selectable) selectableDelegate
+        else if (showFullEntries) fullDelegate
+        else previewDelegate
+    }
 
     section {
         property: "day"

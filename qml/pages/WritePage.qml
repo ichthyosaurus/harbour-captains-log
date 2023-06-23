@@ -220,9 +220,7 @@ Dialog {
                         _tagsList = _tagsList.concat([tag.text])
                     }
 
-                    if (tag.text === tagsField.text) {
-                        tagsField.text = ''
-                    }
+                    tagsField.text = ''
                 }
             }
 

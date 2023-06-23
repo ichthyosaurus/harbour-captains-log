@@ -7,19 +7,44 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Opal.InfoCombo 1.0 as I
+import Opal.ComboData 1.0 as C
 import "../components"
 
 Dialog {
     id: root
-    allowedOrientations: Orientation.All
 
     property string homePath: StandardPaths.documents  // Sailjail permission required
-    property string kind: "txt"
+    property string kind: !!fileTypeCombo.currentItem ?
+        fileTypeCombo.currentItem.kind : ''
+    property var _selectedEntries: ([])
+
+    function preselectEntries(entries) {
+        _selectedEntries = entries
+        entriesCombo.currentIndex = entriesCombo.indexOfData('custom')
+    }
 
     property string defaultFileName: "%1 - %2".
         arg(appWindow.appName).
         arg((new Date()).toLocaleString(
             Qt.locale(), appWindow.dbDateFormat))
+
+    function _selectEntries() {
+        var dialog = pageStack.push(Qt.resolvedUrl("SelectEntriesDialog.qml"))
+        dialog.preselectEntries(_selectedEntries)
+
+        dialog.accepted.connect(function(){
+            _selectedEntries = dialog.selected
+        })
+    }
+
+    allowedOrientations: Orientation.All
+    canAccept: !filenameField.errorHighlight
+
+    onKindChanged: {
+        if (!kind || kind === "") return
+        if (kind === config.lastExportKind) return
+        config.lastExportKind = kind
+    }
 
     Column {
         width: parent.width
@@ -32,22 +57,31 @@ Dialog {
         TextField {
             id: filenameField
             width: parent.width
-            placeholderText: qsTr("Define the file name")
             label: qsTr("Filename")
             description: qsTr("The file will be saved in your documents " +
                               "folder. The name must not contain subfolders.")
             text: defaultFileName
             inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-            validator: RegExpValidator {
-                regExp: /[^\/]/gi
-            }
+            acceptableInput: text.indexOf('/') < 0 &&
+                             text.trim().length > 0
         }
+
+        Item { width: parent.width; height: 1 }  // spacer
 
         I.InfoCombo {
             id: fileTypeCombo
 
             width: parent.width
             label: qsTr("Export file format")
+
+            property var options: ["txt", "md", "tex.md", "csv", "raw"]
+
+            Component.onCompleted: {
+                if (!!config.lastExportKind) {
+                    var index = options.indexOf(config.lastExportKind)
+                    if (index >= 0) currentIndex = index
+                }
+            }
 
             I.InfoComboSection {
                 title: qsTr("Note")
@@ -72,7 +106,8 @@ Dialog {
                     text: qsTr("Plain Markdown")
                     property string kind: "md"
                     info: qsTr("Export entries in a simple " +
-                               '<a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> ' +
+                               '<a href="https://daringfireball.net/' +
+                               'projects/markdown/syntax">Markdown</a> ' +
                                "format. This can later be converted into other " +
                                "formats for printing or for the web.")
                 }
@@ -96,15 +131,51 @@ Dialog {
                 I.InfoMenuItem {
                     text: qsTr("Database backup")
                     property string kind: "raw"
-                    info: qsTr("Create a backup of the actual database files " +
-                               "as an archive. This database can later be put " +
-                               "back into place.")
+                    info: qsTr("Export a compressed copy of the actual database " +
+                               "file. This database can later be put back into place. " +
+                               "Use “Settings → Database backup” to create an internal " +
+                               "backup.")
                 }
             }
+        }
 
-            onCurrentIndexChanged: {
-                kind = fileTypeCombo.currentItem.kind
+        ComboBox {
+            id: entriesCombo
+            width: parent.width
+            label: qsTr("Entries", "as in “which entries to export”")
+            currentIndex: 0
+
+            property var indexOfData
+            C.ComboData { dataRole: "entries" }
+
+            menu: ContextMenu {
+                MenuItem {
+                    text: qsTr("All entries", "as in “which entries to export”")
+                    property string entries: 'all'
+                }
+                MenuItem {
+                    text: qsTr("Selected entries", "as in “which entries to export”")
+                    property string entries: 'custom'
+
+                    onDelayedClick: {
+                        if (_selectedEntries.length === 0) {
+                            _selectEntries()
+                        }
+                    }
+                }
             }
+        }
+
+        Item { width: parent.width; height: 1 }  // spacer
+
+        Button {
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: Theme.buttonWidthLarge
+            visible: entriesCombo.currentItem.entries === 'custom'
+            text: _selectedEntries.length === 0 ?
+                      qsTr("Select entries") :
+                      qsTr("%n entries selected", "", _selectedEntries.length)
+            onClicked: _selectEntries()
         }
     }
 
@@ -115,9 +186,12 @@ Dialog {
     onAccepted: {
         var filename = (filenameField.text.length > 0 ? filenameField.text : defaultFileName)
 
-        // defined in harbour-captains-log.qml
-        showMessage(qsTr("Data exported to: %1").arg(homePath))
+        appWindow.showMessage(
+            qsTr("Export"),
+            qsTr("Data is being exported to %1").arg(homePath))
 
-        py.call("diary.export", [homePath + '/' + filename, kind, translations.translations])
+        py.call("diary.export", [homePath + '/' + filename,
+                                 kind, translations.translations,
+                                 _selectedEntries])
     }
 }

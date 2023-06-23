@@ -96,16 +96,29 @@ ApplicationWindow
 
     // global helper functions
     function parseDate(dbDateString) {
-        // This function creates a Date object from a date string that strictly follows dbDateFormat.
-        // We use this function to make sure JS does not calculate some time zone magic when converting.
-        // The resulting Date object is interpreted as "local time" and contains exactly the same
-        // numbers as were given in dbDateString.
-        if (typeof dbDateString === 'undefined' || dbDateString === "") return "";
-        var dateTime = dbDateString.split(' ');
-        var date = dateTime[0].split('-');
+        // This function creates a Date object from a date string
+        // that strictly follows dbDateFormat.
+        // We use this function to make sure JS does not calculate
+        // some time zone magic when converting. The resulting Date
+        // object is interpreted as "local time" and contains exactly
+        // the same numbers as were given in dbDateString.
+
+        if (typeof dbDateString === 'undefined' || dbDateString === "") {
+            return ""
+        }
+
+        var dateTime = dbDateString.split(' ')
+        var date = dateTime[0].split('-')
         var time = ["0", "0", "0"] // set to zero if the string had no time part
-        if (dateTime.length >= 2) time = dateTime[1].split(':');
-        return new Date(parseInt(date[0]), parseInt(date[1])-1, parseInt(date[2]), parseInt(time[0]), parseInt(time[1]), parseInt(time[2]));
+
+        if (dateTime.length >= 2) {
+            time = dateTime[1].split(':')
+        }
+
+        return new Date(
+            parseInt(date[0]), parseInt(date[1])-1, parseInt(date[2]),
+            parseInt(time[0]), parseInt(time[1]), parseInt(time[2])
+        )
     }
 
     function formatDate(dbDateString, format, zone, alternativeIfEmpty) {
@@ -127,16 +140,18 @@ ApplicationWindow
     }
 
     function stringToColor(str) {
-        var hash = 0;
+        var hash = 0
         for (var i = 0; i < str.length; i++) {
-            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+            hash = str.charCodeAt(i) + ((hash << 5) - hash)
         }
-        var colour = '#';
-        for (var i = 0; i < 3; i++) {
-            var value = ((200 * hash) >> (i * 8)) & 0xFF;
-            colour += ('00' + value.toString(16)).substr(-2);
+
+        var color = '#'
+        for (var j = 0; j < 3; j++) {
+            var value = ((200 * hash) >> (j * 8)) & 0xFF
+            color += ('00' + value.toString(16)).substr(-2)
         }
-        return colour;
+
+        return color
     }
 
     function _mappedIndex(model, index) {
@@ -232,7 +247,6 @@ ApplicationWindow
     signal entryUpdated(var rowid, var newEntry)
     // -----------------------
 
-    property int _lastNotificationId: 0
     property bool unlocked: config.useCodeProtection ? false : true
 
     property ConfigurationGroup config: ConfigurationGroup {
@@ -240,6 +254,8 @@ ApplicationWindow
         property int configMigrated: 0
         property bool useCodeProtection: false
         property string protectionCode: "-1"
+        property string lastBackupDate: ""
+        property string lastExportKind: "txt"
 
         function migrate() {
             if (configMigrated === 0) {
@@ -278,16 +294,58 @@ ApplicationWindow
         expireTimeout: 4000
     }
 
-    function showMessage(msg)
-    {
-        notification.replacesId = _lastNotificationId
-        notification.previewBody = msg
+    Notification {
+        id: backupNotification
+
+        function start() {
+            summary = qsTr("Database backup")
+            body = ''
+            progress = Notification.ProgressIndeterminate
+            publish()
+        }
+
+        function update(backupProgress, backupFile) {
+            notification.timestamp = new Date()
+
+            if (backupProgress >= 1.0) {
+                summary = qsTr("Backup finished")
+                body = qsTr("A database backup has been created in “%1”.").
+                    arg(backupFile)
+                progress = undefined
+                publish()
+            } else {
+                summary = qsTr("Database backup")
+                body = ''
+                progress = backupProgress
+                publish()
+            }
+        }
+    }
+
+    function showMessage(msg, details) {
+        if (!!details) {
+            notification.expireTimeout = 0
+            notification.summary = msg
+            notification.body = details
+            notification.previewSummary = msg
+            notification.previewBody = details
+        } else {
+            notification.expireTimeout = 4000
+            notification.summary = ''
+            notification.body = ''
+            notification.previewSummary = ''
+            notification.previewBody = msg
+        }
+
+        notification.replacesId = -1
         notification.publish()
-        _lastNotificationId = notification.replacesId
     }
 
     Python {
         id: py
+        property string unexpectedErrorMessage: qsTr(
+            "An unexpected error occurred. Please restart the app and " +
+            "check the logs.")
 
         onReceived: {
             console.log(data)
@@ -298,12 +356,68 @@ ApplicationWindow
             console.error("an error occurred in the Python backend, traceback:")
             console.error(traceback)
 
-            showMessage(qsTr("An unexpected error occurred. Please restart the app and " +
-                             "check the logs."))
+            showMessage(qsTr("Error"), unexpectedErrorMessage)
         }
 
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('.'))
+            addImportPath(Qt.resolvedUrl('py'))
+
+            setHandler('error', function(ident, data){
+                loading = false
+                console.error("an error occurred in the Python backend: %1".arg(ident))
+                console.error("error details:")
+                console.error(JSON.stringify(data))
+
+                var message = ''
+
+                if (ident === 'path-unavailable') {
+                    message = unexpectedErrorMessage
+                } else if (ident === 'local-data-inaccessible') {
+                    message = qsTr("The local data folder at “%1” " +
+                                   "is not writable.").arg(data.path)
+                } else if (ident === 'database-unavailable') {
+                    message = qsTr("Failed to load the database due to an " +
+                                   "unknown error.")
+                } else if (ident === 'database-update-failed') {
+                    message = qsTr("Failed to update the database at “%1” " +
+                                   "to the latest version. Details: %2").
+                        arg(data.database).arg(data.exception)
+                } else if (ident === 'sailjail-migration-failed') {
+                    message = qsTr("Failed to move files for Sailjail " +
+                                   "support from “%1” to “%2”.").
+                        arg(data.source).arg(data.dest)
+                } else if (ident === 'schema-file-missing') {
+                    message = qsTr("Failed to update the database to its " +
+                                   "latest version because the version file " +
+                                   "is missing at “%1”.").arg(data.path)
+                } else if (ident === 'unknown-database-version') {
+                    message = qsTr("The database version “%1” is incompatible " +
+                                   "with this version of the app. The latest " +
+                                   "supported database version is “%2”.").
+                        arg(data.got).arg(data.latest)
+                } else if (ident === 'database-not-ready') {
+                    message = unexpectedErrorMessage
+                } else if (ident === 'unknown-export-type') {
+                    message = qsTr("Cannot export unknown file type “%1”. " +
+                                   "Please report this bug.").arg(data.kind)
+                } else {
+                    message = unexpectedErrorMessage
+                }
+
+                showMessage(qsTr("Error"), message)
+            })
+
+            setHandler('backup-progress', function(result) {
+                if (result.status === 'working') {
+                    backupNotification.update(result.progress, result.backup)
+                } else if (result.status === 'failed') {
+                    backupNotification.close()
+                    showMessage(qsTr("Backup failed"), unexpectedErrorMessage)
+                    console.error('backup failed with an exception:', result.exception)
+                } else {
+                    console.error('bug: unknown backup progress status', result.status)
+                }
+            })
 
             setHandler('entries', function(result) {
                 if (result.length > 0) loading = false
@@ -326,17 +440,25 @@ ApplicationWindow
             importModule('diary', function() {
                 console.log("python backend loaded")
 
-                py.call("diary.initialize", [StandardPaths.data,
-                        DB_DATA_FILE, DB_VERSION_FILE], function(success) {
+                py.call("diary.initialize", [StandardPaths], function(success) {
                     if (!success) {
                         console.error('failed to initialize backend')
-                        showMessage(qsTr("Error: the database could not be loaded."))
+                        showMessage(qsTr("Error"), qsTr("The database could not be loaded."))
                         return
                     }
 
                     console.log("loading entries...")
                     py.call('diary.get_entries', [], function(result) {
                         loading = false
+
+                        if (config.lastBackupDate === "" ||
+                                new Date() - parseDate(config.lastBackupDate) >
+                                (1000 * 60 * 60 * 24 * 7)) {
+                            console.log("creating database backup...")
+                            backupNotification.start()
+                            py.call('diary.backup_database')
+                            config.lastBackupDate = new Date().toISOString().split('T')[0]
+                        }
                     })
                 })
             })
@@ -347,6 +469,7 @@ ApplicationWindow
         if (config.configMigrated < 1) {
             config.migrate()
         }
+
         pageStack.replaceAbove(null, config.useCodeProtection ? pinPageComponent : firstPage)
     }
 }

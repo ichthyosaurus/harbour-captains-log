@@ -28,6 +28,14 @@ Page {
             flickable: listView
 
             MenuItem {
+                text: qsTr("Export")
+                onClicked: {
+                    filteredModel.selectAll()
+                    var page = pageStack.push(Qt.resolvedUrl("ExportPage.qml"))
+                    page.preselectEntries(filteredModel.selectedKeys)
+                }
+            }
+            MenuItem {
                 text: qsTr("Add new entry")
                 onClicked: pageStack.push(Qt.resolvedUrl("WritePage.qml"))
             }

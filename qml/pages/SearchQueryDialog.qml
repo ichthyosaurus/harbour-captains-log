@@ -8,50 +8,73 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import SortFilterProxyModel 0.2
 import Opal.InfoCombo 1.0 as I
+import Opal.ComboData 1.0 as C
 import "../components"
 
 Dialog {
     id: root
     allowedOrientations: Orientation.All
 
-    property SearchQueriesData activeQueries: SearchQueriesData {}
-    property SearchQueriesData queries: SearchQueriesData {
+    property bool enableFilterSelected: false
+    readonly property var activeQueries: _activeQueriesProxy
+
+    property var _activeQueriesProxy: SearchQueriesData {}
+    readonly property SearchQueriesData _queries: SearchQueriesData {
         matchAllMode: true
         text: textField.text
         textMatchSyntax: textSyntax.currentItem.mode
         textMatchMode: textMode.currentItem.mode
         dateMin: !dateMin.selectedDate || isNaN(dateMin.selectedDate.valueOf()) ?
-                     queries.dateMinUnset : dateMin.selectedDate
+                     _queries.dateMinUnset : dateMin.selectedDate
         dateMax: !dateMax.selectedDate || isNaN(dateMax.selectedDate.valueOf()) ?
-                     queries.dateMaxUnset : dateMax.selectedDate
+                     _queries.dateMaxUnset : dateMax.selectedDate
         bookmark: bookmarks.currentItem.mode
+        selected: enableFilterSelected ? onlySelected.currentItem.mode : Qt.PartiallyChecked
         tags: ([])
         tagsNormalized: ([])
         moodMin: Math.min(moodMin.moodIndex, moodMax.moodIndex)
         moodMax: Math.max(moodMin.moodIndex, moodMax.moodIndex)
     }
 
-    acceptDestination: Qt.resolvedUrl("SearchResultsPage.qml")
-    acceptDestinationAction: PageStackAction.Push
-    acceptDestinationProperties: ({queries: activeQueries})
+    function resetQueries(newQueries) {
+        _queries.matchAllMode = newQueries.matchAllMode
+        textField.text = newQueries.text
+        textSyntax.currentIndex = textSyntax.indexOfData(newQueries.textMatchSyntax)
+        textMode.currentIndex = textMode.indexOfData(newQueries.textMatchMode)
+        dateMin.selectedDate = (newQueries.dateMin.valueOf() ===
+            _queries.dateMinUnset.valueOf()) ? new Date(NaN) : newQueries.dateMin
+        dateMax.selectedDate = (newQueries.dateMax.valueOf() ===
+            _queries.dateMaxUnset.valueOf()) ? new Date(NaN) : newQueries.dateMax
+        bookmarks.currentIndex = bookmarks.indexOfData(newQueries.bookmark)
+        onlySelected.currentIndex = onlySelected.indexOfData(newQueries.selected)
+        _queries.tags = newQueries.tags
+        _queries.tagsNormalized = newQueries.tagsNormalized
+        moodMin.menu.selectedIndex = newQueries.moodMin
+        moodMax.menu.selectedIndex = newQueries.moodMax
+    }
+
+    function copyQueries(source, dest) {
+        // Copy the full query to a separate object so
+        // that changing any field on the query page does
+        // not automatically restart the search. Searching
+        // after every key press is slow in large databases.
+        dest.matchAllMode = source.matchAllMode
+        dest.text = source.text
+        dest.textMatchSyntax = source.textMatchSyntax
+        dest.textMatchMode = source.textMatchMode
+        dest.dateMin = source.dateMin
+        dest.dateMax = source.dateMax
+        dest.bookmark = source.bookmark
+        dest.selected = source.selected
+        dest.tags = source.tags
+        dest.tagsNormalized = source.tagsNormalized
+        dest.moodMin = source.moodMin
+        dest.moodMax = source.moodMax
+    }
 
     onAcceptPendingChanged: {
         if (acceptPending) {
-            // Copy the full query to a separate object so
-            // that changing any field on the query page does
-            // not automatically restart the search. Searching
-            // after every key press is slow in large databases.
-            activeQueries.matchAllMode = queries.matchAllMode
-            activeQueries.text = queries.text
-            activeQueries.textMatchSyntax = queries.textMatchSyntax
-            activeQueries.textMatchMode = queries.textMatchMode
-            activeQueries.dateMin = queries.dateMin
-            activeQueries.dateMax = queries.dateMax
-            activeQueries.bookmark = queries.bookmark
-            activeQueries.tags = queries.tags
-            activeQueries.tagsNormalized = queries.tagsNormalized
-            activeQueries.moodMin = queries.moodMin
-            activeQueries.moodMax = queries.moodMax
+            copyQueries(_queries, activeQueries)
         }
     }
 
@@ -67,7 +90,7 @@ Dialog {
 
             MenuItem {
                 TextSwitch {
-                    checked: !queries.matchAllMode
+                    checked: !_queries.matchAllMode
                     text: " "
                     highlighted: parent.highlighted
                     height: Theme.itemSizeSmall
@@ -76,12 +99,12 @@ Dialog {
                 }
 
                 text: qsTr("Any may match")
-                onClicked: queries.matchAllMode = false
+                onClicked: _queries.matchAllMode = false
             }
 
             MenuItem {
                 TextSwitch {
-                    checked: queries.matchAllMode
+                    checked: _queries.matchAllMode
                     text: " "
                     highlighted: parent.highlighted
                     height: parent.height
@@ -90,7 +113,7 @@ Dialog {
                 }
 
                 text: qsTr("All must match")
-                onClicked: queries.matchAllMode = true
+                onClicked: _queries.matchAllMode = true
             }
         }
 
@@ -118,17 +141,17 @@ Dialog {
 
             SelectedTagsView {
                 width: parent.width
-                tagsList: queries.tags
+                tagsList: _queries.tags
 
                 onRemoveRequested: {
                     tagsField.text = tag
-                    var index = queries.tags.indexOf(tag)
+                    var index = _queries.tags.indexOf(tag)
 
                     if (index >= 0) {
-                        queries.tags.splice(index, 1)
-                        queries.tagsNormalized.splice(index, 1)
-                        queries.tags = queries.tags
-                        queries.tagsNormalized = queries.tagsNormalized
+                        _queries.tags.splice(index, 1)
+                        _queries.tagsNormalized.splice(index, 1)
+                        _queries.tags = _queries.tags
+                        _queries.tagsNormalized = _queries.tagsNormalized
                     }
                 }
             }
@@ -148,9 +171,9 @@ Dialog {
                     tagsField.text : (tagsField.focus ? ' ' : '')
 
                 onTagSelected: {
-                    if (queries.tags.indexOf(tag.text) < 0) {
-                        queries.tags = queries.tags.concat([tag.text])
-                        queries.tagsNormalized = queries.tagsNormalized.concat([tag.normalized])
+                    if (_queries.tags.indexOf(tag.text) < 0) {
+                        _queries.tags = _queries.tags.concat([tag.text])
+                        _queries.tagsNormalized = _queries.tagsNormalized.concat([tag.normalized])
                     }
                 }
             }
@@ -160,6 +183,10 @@ Dialog {
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Search syntax")
+
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
 
                 I.InfoComboSection {
                     title: qsTr("Note")
@@ -211,10 +238,14 @@ Dialog {
                     value: 1
                 }
 
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
+
                 menu: ContextMenu {
                     I.InfoMenuItem {
                         text: qsTr("simplified")
-                        property int mode: queries.matchSimplified
+                        property int mode: _queries.matchSimplified
                         info: qsTr(
                             "Ignore diacritics on characters, matching e.g. “ö”, “ó”, and " +
                             "“õ” when searching for “o”. Ignore any punctuation marks. " +
@@ -223,7 +254,7 @@ Dialog {
                     }
                     I.InfoMenuItem {
                         text: qsTr("strict")
-                        property int mode: queries.matchStrict
+                        property int mode: _queries.matchStrict
                         info: qsTr(
                             "Match the query string exactly. Use this mode when you know exactly " +
                             "what you are searching for, or when you want to search for a string " +
@@ -238,6 +269,10 @@ Dialog {
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Bookmarks")
+
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
 
                 menu: ContextMenu {
                     I.InfoMenuItem {
@@ -259,8 +294,43 @@ Dialog {
                         text: qsTr("unmarked", "search option, as in: " +
                                    "“find only entries that are not bookmarked”")
                         property int mode: Qt.Unchecked
+                        info: qsTr("Find only entries that are not bookmarked.")
+                    }
+                }
+            }
+
+            I.InfoCombo {
+                id: onlySelected
+                width: parent.width
+                visible: enableFilterSelected
+                currentIndex: 0
+                label: qsTr("Selection")
+
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
+
+                menu: ContextMenu {
+                    I.InfoMenuItem {
+                        text: qsTr("all entries", "search option, as in: " +
+                                   "“find all entries, whether they are " +
+                                   "currently selected or not”")
+                        property int mode: Qt.PartiallyChecked
                         info: qsTr(
-                            "Find only entries that are not bookmarked.")
+                            "Find entries regardless of whether they are selected " +
+                            "or not.")
+                    }
+                    I.InfoMenuItem {
+                        text: qsTr("selected", "search option, as in: " +
+                                   "“find only selected entries”")
+                        property int mode: Qt.Checked
+                        info: qsTr("Find only currently selected entries.")
+                    }
+                    I.InfoMenuItem {
+                        text: qsTr("unselected", "search option, as in: " +
+                                   "“find only entries that are not selected")
+                        property int mode: Qt.Unchecked
+                        info: qsTr("Find only entries that are currently not selected.")
                     }
                 }
             }
