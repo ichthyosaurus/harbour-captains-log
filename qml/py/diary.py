@@ -932,7 +932,7 @@ def _read_all_entries():
 def _export_template(template: str, env: dict):
     import pyratemp
 
-    template_file = Path(__file__).resolve().parent / 'templates' / template
+    template_file = Path(__file__).resolve().parent.parent / 'templates' / template
     renderer = pyratemp.Template(filename=str(template_file), data=env)
 
     return renderer()

@@ -361,7 +361,7 @@ ApplicationWindow
         }
 
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('.'))
+            addImportPath(Qt.resolvedUrl('py'))
 
             setHandler('error', function(ident, data){
                 loading = false
