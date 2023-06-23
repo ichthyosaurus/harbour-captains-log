@@ -111,6 +111,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementSelectable</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation>Tillegg fra %1</translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation>humør: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -138,7 +150,7 @@
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation>Data eksportert til: %1</translation>
+        <translation type="vanished">Data eksportert til: %1</translation>
     </message>
     <message>
         <source>Note</source>
@@ -154,7 +166,7 @@
     </message>
     <message>
         <source>Define the file name</source>
-        <translation>Definer filnavnet</translation>
+        <translation type="vanished">Definer filnavnet</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
@@ -185,7 +197,41 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Create a backup of the actual database files as an archive. This database can later be put back into place.</source>
+        <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n entries selected</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data is being exported to %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -459,7 +505,7 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
+    <name>SearchQueryDialog</name>
     <message>
         <source>Any may match</source>
         <translation>Alle kan samsvare</translation>
@@ -489,20 +535,60 @@
         <translation>Søk i etiketter</translation>
     </message>
     <message>
-        <source>Search mode</source>
-        <translation>Søkemodus</translation>
+        <source>Search syntax</source>
+        <translation>Søkesyntaks</translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation>Notat</translation>
+    </message>
+    <message>
+        <source>Simplified matching is only possible in “plain text” mode.</source>
+        <translation>Forenklet jamføring er kun mulig i «klartekst»-modus.</translation>
     </message>
     <message>
         <source>plain text</source>
         <translation>klartekst</translation>
     </message>
     <message>
+        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
+        <translation>Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
+    </message>
+    <message>
         <source>wildcard</source>
         <translation>jokertegn</translation>
     </message>
     <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
+        <translation>Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «%1».</translation>
+    </message>
+    <message>
         <source>regular expression</source>
         <translation>regulært uttrykk</translation>
+    </message>
+    <message>
+        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
+        <translation>Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation>Søkemodus</translation>
+    </message>
+    <message>
+        <source>simplified</source>
+        <translation>forenklet</translation>
+    </message>
+    <message>
+        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
+        <translation>Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
+    </message>
+    <message>
+        <source>strict</source>
+        <translation>streng</translation>
+    </message>
+    <message>
+        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
+        <translation>Nøyaktig jamføring av søkestrengen. Brukes når du vet akkurat hva du søker etter, eller når du vil søke etter en streng som inneholder punktsetting som «-», «!», eller «#».</translation>
     </message>
     <message>
         <source>Bookmarks</source>
@@ -514,14 +600,57 @@
         <translation>alle oppføringer</translation>
     </message>
     <message>
+        <source>Find entries regardless of whether they are bookmarked or not.</source>
+        <translation>Finn oppføringer uansett om de er bokmerket eller ei.</translation>
+    </message>
+    <message>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
         <translation>bokmerket</translation>
     </message>
     <message>
+        <source>Find only bookmarked entries.</source>
+        <translation>Kun finn bokmerkede oppføringer.</translation>
+    </message>
+    <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation>ikke bokmerket</translation>
+    </message>
+    <message>
+        <source>Find only entries that are not bookmarked.</source>
+        <translation>Kun finn oppføringer som ikke er bokmerket.</translation>
+    </message>
+    <message>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
+        <translation>alle oppføringer</translation>
+    </message>
+    <message>
+        <source>Find entries regardless of whether they are selected or not.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>selected</source>
+        <comment>search option, as in: “find only selected entries”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find only currently selected entries.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unselected</source>
+        <comment>search option, as in: “find only entries that are not selected</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find only entries that are currently not selected.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Mood</source>
@@ -548,57 +677,148 @@
         <source>Till</source>
         <translation>til</translation>
     </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
+    <message>
+        <source>Any may match</source>
+        <translation type="vanished">Alle kan samsvare</translation>
+    </message>
+    <message>
+        <source>All must match</source>
+        <translation type="vanished">Alle må samsvare</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">Tilbake</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="vanished">Søk</translation>
+    </message>
+    <message>
+        <source>Title and entry</source>
+        <translation type="vanished">Navn og oppføring</translation>
+    </message>
+    <message>
+        <source>Search contents</source>
+        <translation type="vanished">Søk i innhold</translation>
+    </message>
+    <message>
+        <source>Search tags</source>
+        <translation type="vanished">Søk i etiketter</translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="vanished">Søkemodus</translation>
+    </message>
+    <message>
+        <source>plain text</source>
+        <translation type="vanished">klartekst</translation>
+    </message>
+    <message>
+        <source>wildcard</source>
+        <translation type="vanished">jokertegn</translation>
+    </message>
+    <message>
+        <source>regular expression</source>
+        <translation type="vanished">regulært uttrykk</translation>
+    </message>
+    <message>
+        <source>Bookmarks</source>
+        <translation type="vanished">Bokmerker</translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="vanished">alle oppføringer</translation>
+    </message>
+    <message>
+        <source>marked</source>
+        <comment>search option, as in: “find only bookmarked entries”</comment>
+        <translation type="vanished">bokmerket</translation>
+    </message>
+    <message>
+        <source>unmarked</source>
+        <comment>search option, as in: “find only entries that are not bookmarked”</comment>
+        <translation type="vanished">ikke bokmerket</translation>
+    </message>
+    <message>
+        <source>Mood</source>
+        <translation type="vanished">Humør</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="vanished">Fra</translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="vanished">Til</translation>
+    </message>
+    <message>
+        <source>Entry date</source>
+        <translation type="vanished">Oppføringsdato</translation>
+    </message>
+    <message>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="vanished">når som helst</translation>
+    </message>
+    <message>
+        <source>Till</source>
+        <translation type="vanished">til</translation>
+    </message>
     <message>
         <source>Search syntax</source>
-        <translation>Søkesyntaks</translation>
+        <translation type="vanished">Søkesyntaks</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation>Notat</translation>
+        <translation type="vanished">Notat</translation>
     </message>
     <message>
         <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation>Forenklet jamføring er kun mulig i «klartekst»-modus.</translation>
+        <translation type="vanished">Forenklet jamføring er kun mulig i «klartekst»-modus.</translation>
     </message>
     <message>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation>Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
+        <translation type="vanished">Søk etter strengen slik du skrev den inn. Merk: Noen forenklinger kan brukes for søkeordet hvis «Søkemodus» er satt til «Forenklet».</translation>
     </message>
     <message>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation>Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
+        <translation type="vanished">Søk ved bruk av komplekse regulære uttrykk. Bruk «|» for å søke etter flere begreper. Søk på Internett hvis du vil lære mer om regulære uttrykk.</translation>
     </message>
     <message>
         <source>simplified</source>
-        <translation>forenklet</translation>
+        <translation type="vanished">forenklet</translation>
     </message>
     <message>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation>Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
+        <translation type="vanished">Se bort fra diakritiske tegn som f.eks. «ö», «ó» og «õ» når du søker etter «o». Ignorer tegnsetting. Brukes når du ikke er sikker på hvordan du stavet det du søker etter.</translation>
     </message>
     <message>
         <source>strict</source>
-        <translation>streng</translation>
+        <translation type="vanished">streng</translation>
     </message>
     <message>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation>Nøyaktig jamføring av søkestrengen. Brukes når du vet akkurat hva du søker etter, eller når du vil søke etter en streng som inneholder punktsetting som «-», «!», eller «#».</translation>
+        <translation type="vanished">Nøyaktig jamføring av søkestrengen. Brukes når du vet akkurat hva du søker etter, eller når du vil søke etter en streng som inneholder punktsetting som «-», «!», eller «#».</translation>
     </message>
     <message>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation>Finn oppføringer uansett om de er bokmerket eller ei.</translation>
+        <translation type="vanished">Finn oppføringer uansett om de er bokmerket eller ei.</translation>
     </message>
     <message>
         <source>Find only bookmarked entries.</source>
-        <translation>Kun finn bokmerkede oppføringer.</translation>
+        <translation type="vanished">Kun finn bokmerkede oppføringer.</translation>
     </message>
     <message>
         <source>Find only entries that are not bookmarked.</source>
-        <translation>Kun finn oppføringer som ikke er bokmerket.</translation>
+        <translation type="vanished">Kun finn oppføringer som ikke er bokmerket.</translation>
     </message>
     <message>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation>Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «%1».</translation>
+        <translation type="vanished">Lar deg søke etter utvidede mønster. Bruk «?» for å jamføre alle enkle tegn, og «*» for å jamføre ingen eller flere tegn. Grupper av tegn kan defineres i klammetegn. Bruk omvendt skråstrek for å søke etter «?», «*», eller «%1».</translation>
     </message>
 </context>
 <context>
@@ -635,6 +855,51 @@
         <source>Show full entries</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SelectEntriesDialog</name>
+    <message>
+        <source>Clear selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Select %n</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n entries shown</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation>Fant ingen oppføringer</translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
@@ -643,7 +908,7 @@
         <translation>Innstillinger</translation>
     </message>
     <message>
-        <source>activate code protection</source>
+        <source>Activate code protection</source>
         <translation>aktiver kodebeskyttelse</translation>
     </message>
     <message>
@@ -665,6 +930,14 @@
     <message>
         <source>Export data</source>
         <translation>Eksporter data</translation>
+    </message>
+    <message>
+        <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database backup</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -762,7 +1035,7 @@
     </message>
     <message>
         <source>Error: the database could not be loaded.</source>
-        <translation>Feil: Kunne ikke laste inn databasen.</translation>
+        <translation type="vanished">Feil: Kunne ikke laste inn databasen.</translation>
     </message>
     <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
@@ -827,6 +1100,58 @@
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Uventet feil. Start programmet på ny og sjekk loggføringen.</translation>
+    </message>
+    <message>
+        <source>Database backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Backup finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A database backup has been created in “%1”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The local data folder at “%1” is not writable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to load the database due to an unknown error.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot export unknown file type “%1”. Please report this bug.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Backup failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The database could not be loaded.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

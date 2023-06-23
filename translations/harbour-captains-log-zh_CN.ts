@@ -111,6 +111,18 @@
     </message>
 </context>
 <context>
+    <name>EntryElementSelectable</name>
+    <message>
+        <source>Addendum from %1</source>
+        <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mood: %1</source>
+        <translation type="unfinished">心情: %1</translation>
+    </message>
+</context>
+<context>
     <name>ExportPage</name>
     <message>
         <source>Export your data</source>
@@ -138,7 +150,7 @@
     </message>
     <message>
         <source>Data exported to: %1</source>
-        <translation>数据导入到: %1</translation>
+        <translation type="vanished">数据导入到: %1</translation>
     </message>
     <message>
         <source>Note</source>
@@ -154,7 +166,7 @@
     </message>
     <message>
         <source>Define the file name</source>
-        <translation>定义文件名称</translation>
+        <translation type="vanished">定义文件名称</translation>
     </message>
     <message>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
@@ -185,7 +197,40 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Create a backup of the actual database files as an archive. This database can later be put back into place.</source>
+        <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected entries</source>
+        <comment>as in “which entries to export”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n entries selected</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data is being exported to %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -457,7 +502,7 @@
     </message>
 </context>
 <context>
-    <name>SearchQueryPage</name>
+    <name>SearchQueryDialog</name>
     <message>
         <source>Any may match</source>
         <translation type="unfinished"></translation>
@@ -472,7 +517,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation>搜索</translation>
+        <translation type="unfinished">搜索</translation>
     </message>
     <message>
         <source>Title and entry</source>
@@ -487,7 +532,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search mode</source>
+        <source>Search syntax</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Simplified matching is only possible in “plain text” mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -495,7 +548,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>wildcard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -503,12 +564,40 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>simplified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>strict</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Bookmarks</source>
-        <translation>书签</translation>
+        <translation type="unfinished">书签</translation>
     </message>
     <message>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find entries regardless of whether they are bookmarked or not.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -517,13 +606,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Find only bookmarked entries.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Find only entries that are not bookmarked.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>all entries</source>
+        <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find entries regardless of whether they are selected or not.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>selected</source>
+        <comment>search option, as in: “find only selected entries”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find only currently selected entries.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unselected</source>
+        <comment>search option, as in: “find only entries that are not selected</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find only entries that are currently not selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Mood</source>
-        <translation>心情</translation>
+        <translation type="unfinished">心情</translation>
     </message>
     <message>
         <source>From</source>
@@ -546,57 +674,20 @@
         <source>Till</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>SearchQueryPage</name>
     <message>
-        <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <source>Search</source>
+        <translation type="vanished">搜索</translation>
     </message>
     <message>
-        <source>Note</source>
-        <translation type="unfinished"></translation>
+        <source>Bookmarks</source>
+        <translation type="vanished">书签</translation>
     </message>
     <message>
-        <source>Simplified matching is only possible in “plain text” mode.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>simplified</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>strict</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="unfinished"></translation>
+        <source>Mood</source>
+        <translation type="vanished">心情</translation>
     </message>
 </context>
 <context>
@@ -632,6 +723,49 @@
         <source>Show full entries</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SelectEntriesDialog</name>
+    <message>
+        <source>Clear selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show previews</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show full entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Select %n</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n entries shown</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No entries found</source>
+        <translation type="unfinished">暂无事项</translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
@@ -640,7 +774,7 @@
         <translation>设置</translation>
     </message>
     <message>
-        <source>activate code protection</source>
+        <source>Activate code protection</source>
         <translation>启用保护码</translation>
     </message>
     <message>
@@ -662,6 +796,14 @@
     <message>
         <source>Export data</source>
         <translation>导出数据</translation>
+    </message>
+    <message>
+        <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database backup</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -757,10 +899,6 @@
         <translation>Captain&apos;s Log</translation>
     </message>
     <message>
-        <source>Error: the database could not be loaded.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
         <translation type="unfinished"></translation>
@@ -822,6 +960,58 @@
     </message>
     <message>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Backup finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A database backup has been created in “%1”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The local data folder at “%1” is not writable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to load the database due to an unknown error.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot export unknown file type “%1”. Please report this bug.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Backup failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The database could not be loaded.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
