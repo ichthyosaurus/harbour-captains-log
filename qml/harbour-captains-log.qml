@@ -266,6 +266,9 @@ ApplicationWindow
     Component  {
         id: firstPage
         FirstPage {}
+//        SettingsPage {}
+//        ExportPage {}
+//        SelectEntriesDialog {}
     }
 
     A.ChangelogNews {
@@ -355,8 +358,7 @@ ApplicationWindow
             importModule('diary', function() {
                 console.log("python backend loaded")
 
-                py.call("diary.initialize", [StandardPaths.data,
-                        DB_DATA_FILE, DB_VERSION_FILE], function(success) {
+                py.call("diary.initialize", [StandardPaths], function(success) {
                     if (!success) {
                         console.error('failed to initialize backend')
                         showMessage(qsTr("Error"), qsTr("The database could not be loaded."))

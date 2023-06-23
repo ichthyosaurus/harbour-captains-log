@@ -10,6 +10,13 @@ import os
 import sqlite3
 import re
 import unicodedata
+import shutil
+import glob
+import traceback
+import tempfile
+from typing import Dict
+from typing import Callable
+from dataclasses import dataclass
 from pathlib import Path
 from datetime import datetime
 from datetime import timedelta
@@ -24,6 +31,11 @@ except ImportError:
         def send(*args, **kwargs):
             print(f"pyotherside.send: {args} {kwargs}")
 
+    @dataclass
+    class StandardPaths:
+        home: Path = Path('./db/home').resolve()
+        data: Path = Path('./db/data').resolve()
+
 
 #
 # BEGIN Database
@@ -34,219 +46,411 @@ INITIALIZED: bool = False  # TODO actually check this value everywhere
 
 
 class Diary:
-    def __init__(self, data_path, db_data_file, db_version_file):
+    DB_DATA_FILE_PRE_SAILJAIL: str = 'logbuch.db'
+    DB_VERSION_FILE_PRE_SAILJAIL: str = 'schema_version'
+
+    DB_DATA_FILE_PRE_V8: str = 'logbook.db'
+    DB_VERSION_FILE_PRE_V8: str = 'schema_version'
+
+    DB_DATA_FILE_V8_GLOB: str = r'diary-v[0-9][0-9][0-9].db'
+    DB_DATA_FILE_V8_FORMAT: str = r'diary-v{version:03d}.db'
+    DB_DATA_FILE_V8_RE: re.Pattern = re.compile(r'(?P<path>.*)/(?P<dbfile>diary-v(?P<version>[0-9]{3}).db)$')
+
+    def __init__(self, standard_paths):
         self.ready = False
-        self._data_path = data_path
+        self._standard_paths = standard_paths
+
+        for i in ['home', 'data']:
+            path = getattr(standard_paths, i, None)
+
+            if path:
+                setattr(self, f'_{i}_path', Path(path))
+            else:
+                pyotherside.send('error', 'path-unavailable',
+                                 {'kind': i, 'obj': standard_paths})
+                self.ready = False
+                return
 
         try:
-            print(f"preparing local data path in {self._data_path}")
+            print(f"using local data at {self._data_path}")
             Path(self._data_path).mkdir(parents=True, exist_ok=True)
         except FileExistsError:
             pyotherside.send('error', 'local-data-inaccessible')
             self.ready = False
             return
 
-        self.db_path = self._data_path + '/' + db_data_file
-        self.schema = self._data_path + '/' + db_version_file
-        self.schema_version = "none"
+        latest_db = self._get_active_db_path()
 
-        if not os.path.isfile(self.db_path) and os.path.isfile(self.schema):
-            turn = 0
-            while True:
-                try:
-                    os.rename(self.schema, self.schema + '.bak' + (f'~{turn}' if turn > 0 else ''))
-                    break
-                except FileExistsError:
-                    turn += 1
+        if latest_db is None:
+            pyotherside.send('error', 'database-unavailable')
+            self.ready = False
+            return
 
+        try:
+            latest_db = self._update_schema(latest_db)
+        except Exception as ex:
+            trace = '\n'.join([
+                ''.join(traceback.format_exception_only(None, ex)).strip(),
+                ''.join(traceback.format_exception(None, ex, ex.__traceback__)).strip()
+            ])
+
+            pyotherside.send('error', 'database-update-failed',
+                             {'database': latest_db, 'exception': trace})
+
+        if not latest_db:
+            # notification has been sent in _update_schema
+            self.ready = False
+            return
+
+        print(f"using database at {latest_db}")
+        self.db_path = latest_db
         self.conn = sqlite3.connect(self.db_path)
         self.conn.row_factory = sqlite3.Row
         self.cursor = self.conn.cursor()
-
-        if os.path.isfile(self.schema):
-            with open(self.schema) as f:
-                self.schema_version = f.readline().strip()
-        else:
-            self.schema_version = "none"
-
-        # make sure database is up-to-date
-        self.upgrade_schema(self.schema_version)
         self.ready = True
 
-    def upgrade_schema(self, from_version):
-        to_version = ""
+    def _get_active_db_path(self) -> [str, None]:
+        back = Path('.').resolve()
+        os.chdir(self._data_path)
+        candidates = sorted(glob.glob(self.DB_DATA_FILE_V8_GLOB), reverse=True)
+        os.chdir(str(back))
 
-        if from_version == "none":
-            to_version = "0"
-            self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary
-                                   (creation_date TEXT NOT NULL,
-                                   modify_date TEXT NOT NULL,
-                                   mood INT,
-                                   title TEXT,
-                                   preview TEXT,
-                                   entry TEXT,
-                                   favorite BOOL,
-                                   hashtags TEXT
-                                   );""")
-        elif from_version == "0":
-            to_version = "1"
+        if candidates:
+            return str(Path(self._data_path / candidates[0]).absolute())
+        elif Path(self._data_path / self.DB_DATA_FILE_PRE_V8).is_file():
+            if ok := self._migrate_files_single_file():
+                return self._get_active_db_path()
+            elif ok is False:
+                return None
+            else:
+                return ''
+        elif ok := self._migrate_files_sailjail():
+            return self._get_active_db_path()
+        elif ok is False:
+            return None
 
-            # add new mood 'not okay' with index 3, moving 3 to 4, and 4 to 5
-            self.cursor.execute("""UPDATE diary SET mood=5 WHERE mood=4""")
-            self.cursor.execute("""UPDATE diary SET mood=4 WHERE mood=3""")
-        elif from_version == "1":
-            to_version = "2"
+        return ''
 
-            # add columns to store time zone info
-            self.cursor.execute("""ALTER TABLE diary ADD COLUMN creation_tz TEXT DEFAULT '';""")
-            self.cursor.execute("""ALTER TABLE diary ADD COLUMN modify_tz TEXT DEFAULT '';""")
+    def _migrate_files_sailjail(self) -> [bool, None]:
+        # return True on success, False on failure, and None if there was nothing to migrate
+        old_dir: Path = self._home_path / '.local/share/harbour-captains-log'
+        new_dir: Path = self._data_path
 
-            # add column to store an audio file path (not yet used)
-            self.cursor.execute("""ALTER TABLE diary ADD COLUMN audio_path TEXT DEFAULT '';""")
-        elif from_version == "2":
-            to_version = "3"
+        old_db = old_dir / self.DB_DATA_FILE_PRE_SAILJAIL
+        new_db = new_dir / self.DB_DATA_FILE_PRE_V8
 
-            # rename and reorder columns: creation_date -> create_date and creation_tz -> create_tz
-            self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp
-                                   (create_date TEXT NOT NULL,
-                                   create_tz TEXT,
-                                   modify_date TEXT NOT NULL,
-                                   modify_tz TEXT,
-                                   mood INT,
-                                   title TEXT,
-                                   preview TEXT,
-                                   entry TEXT,
-                                   favorite BOOL,
-                                   hashtags TEXT,
-                                   audio_path TEXT
-                                   );""")
-            self.cursor.execute("""INSERT INTO diary_temp(create_date, create_tz, modify_date, modify_tz,
-                                                          mood, title, preview, entry, favorite, hashtags, audio_path)
-                                   SELECT creation_date, creation_tz, modify_date, modify_tz, mood, title, preview, entry, favorite, hashtags, audio_path
-                                   FROM diary;""")
-            self.cursor.execute("""DROP TABLE diary;""")
-            self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "3":
-            to_version = "4"
-            self.conn.create_function("REWRITE_DATE", 1,
-                                      self._reformat_date_pre_db4,
-                                      deterministic=True)
+        old_version = old_dir / self.DB_VERSION_FILE_PRE_SAILJAIL
+        new_version = new_dir / self.DB_VERSION_FILE_PRE_V8
 
-            # rewrite all dates to use a standard format
-            self.cursor.execute("""UPDATE diary SET create_date=REWRITE_DATE(create_date);""")
-            self.cursor.execute("""UPDATE diary SET modify_date=REWRITE_DATE(modify_date);""")
-        elif from_version == "4":
-            to_version = "5"
+        if (old_db.exists() and not new_db.exists()) and \
+                (old_version.exists() and not new_version.exists()):
+            try:
+                print(f"migrating {old_db} to {new_db}...")
+                shutil.copy(str(old_db.absolute()), str(new_db.absolute()))
+                print(f"migrating {old_version} to {new_version}...")
+                shutil.copy(str(old_version.absolute()), str(new_version.absolute()))
 
-            # rename column 'favorite' to 'bookmark'
-            self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp
-                                   (create_date TEXT NOT NULL, create_tz TEXT, modify_date TEXT NOT NULL, modify_tz TEXT,
-                                   mood INT, title TEXT, preview TEXT, entry TEXT,
-                                   bookmark BOOL,
-                                   hashtags TEXT, audio_path TEXT);""")
-            self.cursor.execute("""INSERT INTO diary_temp(create_date, create_tz, modify_date, modify_tz,
-                                                          mood, title, preview, entry, bookmark, hashtags, audio_path)
-                                   SELECT create_date, create_tz, modify_date, modify_tz, mood, title, preview, entry, favorite, hashtags, audio_path
-                                   FROM diary;""")
-            self.cursor.execute("""DROP TABLE diary;""")
-            self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "5":
-            to_version = "6"
+                self.move_aside(old_db)
+                self.move_aside(old_version)
+                return True
+            except Exception:
+                pyotherside.send('error', 'sailjail-migration-failed',
+                                 {'source': str(old_dir), 'dest': str(new_dir)})
+                return False
 
-            # 1. rename columns:
-            # - hashtags    -> tags
-            # - audio_path  -> attachments_id
-            #
-            # 2. add columns:
-            # - create_order
-            # - entry_order
-            # - entry_addenda_day
-            # - entry_addenda_seq
-            # - entry_date
-            # - entry_tz
-            # - entry_normalized
-            #
-            # 3. rewrite columns:
-            # - preview
-            #
-            # 4. reorder columns
-            # 5. add default values
+        return None
 
-            self.conn.create_function("REWRITE_PREVIEW", 1,
-                                      self._format_preview, deterministic=True)
-            self.conn.create_function("REWRITE_NORMALIZED", -1,
-                                      self._normalize_text, deterministic=True)
-            self.conn.create_function("REWRITE_NORMALIZED_TAGS", 1,
-                                      lambda x: self._normalize_text(x, keep=[',']),
-                                      deterministic=True)
-            self.cursor.execute("""DROP TABLE IF EXISTS diary_temp;""")
-            self.cursor.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
-                create_order INTEGER NOT NULL,
-                entry_order INTEGER NOT NULL,
-                entry_addenda_day INTEGER NOT NULL,
-                entry_addenda_seq INTEGER NOT NULL,
-                create_date TEXT NOT NULL, create_tz TEXT DEFAULT '',
-                entry_date TEXT NOT NULL, entry_tz TEXT DEFAULT '',
-                modify_date TEXT NOT NULL, modify_tz TEXT DEFAULT '',
-                title TEXT DEFAULT '', entry TEXT DEFAULT '',
-                entry_normalized TEXT DEFAULT '', preview TEXT DEFAULT '',
-                tags TEXT DEFAULT '', tags_normalized TEXT DEFAULT '',
-                mood INTEGER, bookmark BOOLEAN,
-                attachments_id TEXT DEFAULT ''
-            );""")
-            self.cursor.execute("""INSERT INTO diary_temp(
-                    create_order, entry_order,
-                    entry_addenda_day, entry_addenda_seq,
-                    create_date, create_tz,
-                    entry_date, entry_tz,
-                    modify_date, modify_tz,
-                    title, entry,
-                    entry_normalized, preview,
-                    tags, tags_normalized,
-                    mood, bookmark,
-                    attachments_id
-                ) SELECT rowid, rowid,
-                    0, 0,
-                    create_date, create_tz,
-                    create_date, create_tz,
-                    modify_date, IFNULL(modify_tz, ''),
-                    title, entry,
-                    REWRITE_NORMALIZED(title, entry), REWRITE_PREVIEW(entry),
-                    hashtags, REWRITE_NORMALIZED_TAGS(hashtags),
-                    mood, bookmark,
-                    IFNULL(audio_path, '')
-                FROM diary;
-            """)
-            self.cursor.execute("""DROP TABLE diary;""")
-            self.cursor.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
-        elif from_version == "6":
-            to_version = "7"
+    def _migrate_files_single_file(self) -> [bool, None]:
+        # return True on success, False on failure, and None if there was nothing to migrate
 
-            self.conn.create_function("REWRITE_SECONDS", 1,
-                                      self._reformat_date_seconds,
-                                      deterministic=True)
+        # don't resolve symlinks here
+        old_version_file: Path = Path(self._data_path / self.DB_VERSION_FILE_PRE_V8).absolute()
+        old_db_file: Path = Path(self._data_path / self.DB_DATA_FILE_PRE_V8).absolute()
 
-            # fix timestamps with an invalid seconds field
-            self.cursor.execute("""UPDATE diary SET
-                create_date=REWRITE_SECONDS(create_date),
-                modify_date=REWRITE_SECONDS(modify_date),
-                entry_date=REWRITE_SECONDS(entry_date)
-            ;""")
-        elif from_version == "7":
-            # we arrived at the latest version; save it and return
-            if self.schema_version != from_version:
-                self.conn.commit()
-                self.conn.execute("""VACUUM;""")
-                with open(self.schema, "w") as f:
-                    f.write(from_version)
-            print("database schema is up-to-date (version: {})".format(from_version))
-            return
+        if not old_db_file.exists() and old_version_file.exists():
+            self.move_aside(old_version_file)
+
+        if old_version_file.is_file():
+            with open(str(old_version_file), 'r') as f:
+                old_schema_version = f.readline().strip()
         else:
-            print("error: cannot use database with invalid schema version '{}'".format(from_version))
-            return
+            old_schema_version = "none"
 
-        print("upgrading schema from {} to {}...".format(from_version, to_version))
-        self.upgrade_schema(to_version)
+        if old_db_file.is_file():
+            if old_schema_version == "none":
+                pyotherside.send('error', 'schema-file-missing', {'path': str(old_version_file)})
+                return False
+            else:
+                new_db_file: Path = Path(
+                    self._data_path / self.DB_DATA_FILE_V8_FORMAT.format(
+                        version=int(old_schema_version)))
+
+                if new_db_file.exists():
+                    self.move_aside(new_db_file)
+
+                print(f"migrating {old_db_file} with {old_version_file} to {new_db_file}")
+                shutil.move(str(old_db_file), str(new_db_file))
+                self.move_aside(old_version_file)
+                return True
+
+        return None
+
+    def _get_update_db(self, from_version: int, source_db: str):
+        updating = sqlite3.connect(':memory:')
+        updating.row_factory = sqlite3.Row
+
+        if from_version < 0:
+            return updating
+        elif not source_db or not Path(source_db).is_file():
+            raise RuntimeError(f'bug: source_db parameter must be an existing file, got {source_db}')
+        else:
+            source = sqlite3.connect(source_db)
+
+            with updating:
+                source.backup(updating)
+
+            source.close()
+
+        return updating
+
+    def _db_update_to_0(self, conn: sqlite3.Connection):
+        conn.execute("""CREATE TABLE IF NOT EXISTS diary(
+            creation_date TEXT NOT NULL,
+            modify_date TEXT NOT NULL,
+            mood INT,
+            title TEXT,
+            preview TEXT,
+            entry TEXT,
+            favorite BOOL,
+            hashtags TEXT
+        );""")
+
+    def _db_update_to_1(self, conn: sqlite3.Connection):
+        # add new mood 'not okay' with index 3, moving 3 to 4, and 4 to 5
+        conn.execute("""UPDATE diary SET mood=5 WHERE mood=4""")
+        conn.execute("""UPDATE diary SET mood=4 WHERE mood=3""")
+
+    def _db_update_to_2(self, conn: sqlite3.Connection):
+        # add columns to store time zone info
+        conn.execute("""ALTER TABLE diary ADD COLUMN creation_tz TEXT DEFAULT '';""")
+        conn.execute("""ALTER TABLE diary ADD COLUMN modify_tz TEXT DEFAULT '';""")
+
+        # add column to store an audio file path (not yet used)
+        conn.execute("""ALTER TABLE diary ADD COLUMN audio_path TEXT DEFAULT '';""")
+
+    def _db_update_to_3(self, conn: sqlite3.Connection):
+        # rename and reorder columns: creation_date -> create_date and creation_tz -> create_tz
+        conn.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
+            create_date TEXT NOT NULL,
+            create_tz TEXT,
+            modify_date TEXT NOT NULL,
+            modify_tz TEXT,
+            mood INT,
+            title TEXT,
+            preview TEXT,
+            entry TEXT,
+            favorite BOOL,
+            hashtags TEXT,
+            audio_path TEXT
+        );""")
+        conn.execute("""INSERT INTO diary_temp(
+                create_date, create_tz, modify_date, modify_tz,
+                mood, title, preview, entry, favorite, hashtags, audio_path)
+            SELECT creation_date, creation_tz, modify_date, modify_tz, mood,
+                title, preview, entry, favorite, hashtags, audio_path
+            FROM diary;""")
+        conn.execute("""DROP TABLE diary;""")
+        conn.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
+
+    def _db_update_to_4(self, conn: sqlite3.Connection):
+        conn.create_function(
+            "REWRITE_DATE", 1, self._reformat_date_pre_db4, deterministic=True)
+
+        # rewrite all dates to use a standard format
+        conn.execute("""UPDATE diary SET create_date=REWRITE_DATE(create_date);""")
+        conn.execute("""UPDATE diary SET modify_date=REWRITE_DATE(modify_date);""")
+
+    def _db_update_to_5(self, conn: sqlite3.Connection):
+        # rename column 'favorite' to 'bookmark'
+        conn.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
+            create_date TEXT NOT NULL, create_tz TEXT, modify_date TEXT NOT NULL, modify_tz TEXT,
+            mood INT, title TEXT, preview TEXT, entry TEXT,
+            bookmark BOOL,
+            hashtags TEXT, audio_path TEXT);""")
+        conn.execute("""INSERT INTO diary_temp(
+                create_date, create_tz, modify_date, modify_tz,
+                mood, title, preview, entry, bookmark, hashtags, audio_path)
+            SELECT create_date, create_tz, modify_date, modify_tz, mood, title,
+                preview, entry, favorite, hashtags, audio_path
+            FROM diary;""")
+        conn.execute("""DROP TABLE diary;""")
+        conn.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
+
+    def _db_update_to_6(self, conn: sqlite3.Connection):
+        # 1. rename columns:
+        # - hashtags    -> tags
+        # - audio_path  -> attachments_id
+        #
+        # 2. add columns:
+        # - create_order
+        # - entry_order
+        # - entry_addenda_day
+        # - entry_addenda_seq
+        # - entry_date
+        # - entry_tz
+        # - entry_normalized
+        #
+        # 3. rewrite columns:
+        # - preview
+        #
+        # 4. reorder columns
+        # 5. add default values
+
+        conn.create_function(
+            "REWRITE_PREVIEW", 1, self._format_preview, deterministic=True)
+        conn.create_function(
+            "REWRITE_NORMALIZED", -1, self.normalize_text, deterministic=True)
+        conn.create_function(
+            "REWRITE_NORMALIZED_TAGS", 1,
+            lambda x: self.normalize_text(x, keep=[',']),
+            deterministic=True)
+        conn.execute("""DROP TABLE IF EXISTS diary_temp;""")
+        conn.execute("""CREATE TABLE IF NOT EXISTS diary_temp(
+            create_order INTEGER NOT NULL,
+            entry_order INTEGER NOT NULL,
+            entry_addenda_day INTEGER NOT NULL,
+            entry_addenda_seq INTEGER NOT NULL,
+            create_date TEXT NOT NULL, create_tz TEXT DEFAULT '',
+            entry_date TEXT NOT NULL, entry_tz TEXT DEFAULT '',
+            modify_date TEXT NOT NULL, modify_tz TEXT DEFAULT '',
+            title TEXT DEFAULT '', entry TEXT DEFAULT '',
+            entry_normalized TEXT DEFAULT '', preview TEXT DEFAULT '',
+            tags TEXT DEFAULT '', tags_normalized TEXT DEFAULT '',
+            mood INTEGER, bookmark BOOLEAN,
+            attachments_id TEXT DEFAULT ''
+        );""")
+        conn.execute("""INSERT INTO diary_temp(
+                create_order, entry_order,
+                entry_addenda_day, entry_addenda_seq,
+                create_date, create_tz,
+                entry_date, entry_tz,
+                modify_date, modify_tz,
+                title, entry,
+                entry_normalized, preview,
+                tags, tags_normalized,
+                mood, bookmark,
+                attachments_id
+            ) SELECT rowid, rowid,
+                0, 0,
+                create_date, create_tz,
+                create_date, create_tz,
+                modify_date, IFNULL(modify_tz, ''),
+                title, entry,
+                REWRITE_NORMALIZED(title, entry), REWRITE_PREVIEW(entry),
+                hashtags, REWRITE_NORMALIZED_TAGS(hashtags),
+                mood, bookmark,
+                IFNULL(audio_path, '')
+            FROM diary;
+        """)
+        conn.execute("""DROP TABLE diary;""")
+        conn.execute("""ALTER TABLE diary_temp RENAME TO diary;""")
+
+    def _db_update_to_7(self, conn: sqlite3.Connection):
+        conn.create_function(
+            "REWRITE_SECONDS", 1, self._reformat_date_seconds, deterministic=True)
+
+        # fix timestamps with an invalid seconds field
+        conn.execute("""UPDATE diary SET
+            create_date=REWRITE_SECONDS(create_date),
+            modify_date=REWRITE_SECONDS(modify_date),
+            entry_date=REWRITE_SECONDS(entry_date)
+        ;""")
+
+    def _db_update_to_8(self, conn: sqlite3.Connection):
+        # 1. make sure no content field is NULL
+        # 2. make sure bookmarks are explicitly set to 0 or 1
+        # 3. update normalized texts because they could contain the string
+        #    "none" if a field was NULL before
+
+        for i in ["title", "entry", "tags"]:
+            conn.execute(f"UPDATE diary SET {i}='' WHERE {i} IS NULL;")
+
+        conn.execute("UPDATE diary SET bookmark=0 WHERE bookmark IS NULL;")
+
+        conn.create_function(
+            "REWRITE_NORMALIZED", -1, self.normalize_text, deterministic=True)
+        conn.create_function(
+            "REWRITE_NORMALIZED_TAGS", 1,
+            lambda x: self.normalize_text(x, keep=[',']),
+            deterministic=True)
+        conn.execute("""UPDATE diary SET entry_normalized=REWRITE_NORMALIZED(entry);""")
+        conn.execute("""UPDATE diary SET tags_normalized=REWRITE_NORMALIZED_TAGS(tags);""")
+
+    def _db_final(self, conn: sqlite3.Connection):
+        pass  # this is a no-op method to mark the end of the update chain
+
+    def _update_schema(self, source_db: str):
+        UPDATE_FUNCTIONS: Dict[int, Callable[[sqlite3.Connection], None]] = {
+            -1: self._db_update_to_0,
+            0: self._db_update_to_1,
+            1: self._db_update_to_2,
+            2: self._db_update_to_3,
+            3: self._db_update_to_4,
+            4: self._db_update_to_5,
+            5: self._db_update_to_6,
+            6: self._db_update_to_7,
+            7: self._db_update_to_8,
+            8: self._db_final,
+        }
+
+        if not source_db:
+            print(f"creating new database in {self._data_path}")
+            from_version = -1
+        else:
+            print(f"updating database {source_db}")
+            from_version = int(self.DB_DATA_FILE_V8_RE.match(source_db).group('version'))
+
+        updating = self._get_update_db(from_version, source_db)
+
+        if from_version not in UPDATE_FUNCTIONS:
+            pyotherside.send('error', 'unknown-database-version',
+                             {'got': from_version, 'latest': list(UPDATE_FUNCTIONS.keys())[-1]})
+            print(f"error: cannot use database with unknown schema version '{from_version}'")
+            return ''
+        else:
+            update_path = {k: v for k, v in UPDATE_FUNCTIONS.items() if k >= from_version}
+
+        for key, updater in update_path.items():
+            print(f"updating database from version {key}...")
+            current_version = key
+
+            with updating:
+                updater(updating)
+
+        if current_version != from_version:
+            print(f"database has been updated to version {current_version}")
+
+            with updating:
+                updating.execute('VACUUM')
+
+            fd, tempfile_path = tempfile.mkstemp(prefix=f'update_{current_version:03d}_', suffix='.db', dir=self._data_path)
+            os.close(fd)
+            temp_db = sqlite3.connect(tempfile_path)
+
+            with temp_db:
+                updating.backup(temp_db)
+
+            temp_db.close()
+            updating.close()
+            final_db = self._data_path / self.DB_DATA_FILE_V8_FORMAT.format(version=current_version)
+            self.move_aside(final_db)
+            shutil.move(tempfile_path, final_db)
+        else:
+            print(f"database schema is up-to-date (version: {current_version})")
+            final_db = source_db
+
+        updating.close()
+        return final_db
 
     @staticmethod
     def _reformat_date_pre_db4(old_date_string):
@@ -341,7 +545,7 @@ class Diary:
 # BEGIN Database Functions
 #
 
-def initialize(data_path, db_data_file, db_version_file):
+def initialize(standard_paths):
     if is_initialized(False):
         pyotherside.send('error', 'database-already-initialized')
         return
@@ -349,7 +553,7 @@ def initialize(data_path, db_data_file, db_version_file):
     global DIARY
     global INITIALIZED
 
-    DIARY = Diary(data_path, db_data_file, db_version_file)
+    DIARY = Diary(standard_paths)
 
     if DIARY.ready:
         INITIALIZED = True
@@ -815,7 +1019,7 @@ def export(filename: str, kind: str, translations):
 if __name__ == '__main__':
     pass
 
-    # initialize('temp', 'logbook.db', 'schema_version')
+    initialize(standard_paths=StandardPaths)
 
     # print('txt')
     # export_new('output', 'txt', {})
