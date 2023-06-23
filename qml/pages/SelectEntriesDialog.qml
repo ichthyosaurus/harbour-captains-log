@@ -89,10 +89,11 @@ Dialog {
                 anchors.centerIn: parent
                 // TODO improve text, only show when filters are active,
                 //      support editing filters
-                text: qsTr("%n entries filtered", "", filteredModel.count)
+                visible: filteredModel.count !== appWindow.rawModel.count
+                text: qsTr("%n entries shown", "", filteredModel.count)
                 font.pixelSize: Theme.fontSizeSmall
-                color: Theme.highlightColor
-                horizontalAlignment: Text.AlignVCenter
+                color: Theme.secondaryHighlightColor
+                horizontalAlignment: Text.AlignHCenter
                 width: Theme.itemSizeHuge
                 wrapMode: Text.Wrap
             }
