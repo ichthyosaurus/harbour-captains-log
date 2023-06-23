@@ -42,7 +42,7 @@ except ImportError:
 #
 
 DIARY: 'Diary' = None
-INITIALIZED: bool = False  # TODO actually check this value everywhere
+INITIALIZED: bool = False
 
 
 class Diary:
