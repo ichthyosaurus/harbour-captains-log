@@ -7,6 +7,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Opal.InfoCombo 1.0 as I
+import Opal.ComboData 1.0 as C
 import "../components"
 
 Dialog {
@@ -16,6 +17,11 @@ Dialog {
     property string kind: !!fileTypeCombo.currentItem ?
         fileTypeCombo.currentItem.kind : ''
     property var _selectedEntries: ([])
+
+    function preselectEntries(entries) {
+        _selectedEntries = entries
+        entriesCombo.currentIndex = entriesCombo.indexOfData('custom')
+    }
 
     property string defaultFileName: "%1 - %2".
         arg(appWindow.appName).
@@ -138,6 +144,9 @@ Dialog {
             width: parent.width
             label: qsTr("Entries", "as in “which entries to export”")
             currentIndex: 0
+
+            property var indexOfData
+            C.ComboData { dataRole: "entries" }
 
             menu: ContextMenu {
                 MenuItem {
