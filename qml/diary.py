@@ -318,6 +318,22 @@ class Diary:
                        and (unicodedata.category(x) not in punctutation_cats
                             or x in keep)).lower()
 
+    @staticmethod
+    def move_aside(path):
+        turn = 0
+
+        if not Path(path).exists():
+            return
+
+        while True:
+            bak = str(path) + '.bak' + (f'~{turn}~' if turn > 0 else '')
+
+            if Path(bak).exists():
+                turn += 1
+            else:
+                shutil.move(str(path), bak)
+                break
+
 # END
 
 
