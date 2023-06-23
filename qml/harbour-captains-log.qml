@@ -366,6 +366,8 @@ ApplicationWindow
             setHandler('error', function(ident, data){
                 loading = false
                 console.error("an error occurred in the Python backend: %1".arg(ident))
+                console.error("error details:")
+                console.error(JSON.stringify(data))
 
                 var message = ''
 
