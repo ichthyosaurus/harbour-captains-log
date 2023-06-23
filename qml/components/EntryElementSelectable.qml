@@ -13,9 +13,6 @@ ListItem {
 
     property SelectableSortFilterProxyModel realModel
     property bool showFull: false
-    property var selectionModel: ({})
-
-    property string _rowid: model.rowid
 
     ListView.onRemove: animateRemoval()
     contentHeight: textColumn.height
@@ -23,8 +20,9 @@ ListItem {
     enabled: true
     _backgroundColor: "transparent"
 
-//    onClicked: selectionModel.toggle(_rowid)
-    onClicked: realModel.toggleSelection(model.index)
+    onClicked: {
+        realModel.toggleSelection(model.index)
+    }
 
     Binding on highlighted {
         when: selectionSwitch.checked
@@ -34,9 +32,9 @@ ListItem {
     Switch {
         id: selectionSwitch
         anchors.left: parent.left
-        checked: model.isSelected // selectionModel.selected[_rowid] === true
+        checked: model.isSelected
         automaticCheck: false
-        onClicked: realModel.toggleSelection(model.index) // selectionModel.toggle(_rowid)
+        onClicked: realModel.toggleSelection(model.index)
 
         Binding on highlighted {
             when: root.down

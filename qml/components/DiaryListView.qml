@@ -26,58 +26,6 @@ SilicaListView {
 
     property bool showFullEntries: false
     property bool selectable: false
-    readonly property QtObject selectionModel: QtObject {
-        property var selected: ({})
-        property int count: 0
-
-        function select(rowid) {
-            if (selected[rowid] === true) return
-            else selected[rowid] = true
-
-            count += 1
-            selectedChanged()
-        }
-
-        function deselect(rowid) {
-            if (!selected.hasOwnProperty(rowid)) return
-
-            if (selected[rowid] === true) {
-                count -= 1
-            }
-
-            delete selected[rowid]
-            selectedChanged()
-        }
-
-        function toggle(rowid) {
-            if (selected[rowid] !== true) {
-                select(rowid)
-            } else {
-                deselect(rowid)
-            }
-        }
-
-        function getItems() {
-            var keys = []
-
-            for (var name in selected) {
-                keys.push(name)
-            }
-
-            console.log(keys)
-            return keys
-        }
-
-        function reset(dict, newCount) {
-            selected = dict
-            count = newCount
-        }
-
-        function clear() {
-            selected = {}
-            count = 0
-        }
-    }
 
     property Item _scrollbar: null
 
@@ -128,7 +76,6 @@ SilicaListView {
         EntryElementSelectable {
             realModel: root.model
             showFull: showFullEntries
-            selectionModel: root.selectionModel
         }
     }
 
