@@ -14,7 +14,7 @@ Dialog {
     id: root
     allowedOrientations: Orientation.All
 
-    property SearchQueriesData activeQueries: SearchQueriesData {}
+    property var activeQueries: SearchQueriesData {}
     property SearchQueriesData queries: SearchQueriesData {
         matchAllMode: true
         text: textField.text
@@ -30,10 +30,6 @@ Dialog {
         moodMin: Math.min(moodMin.moodIndex, moodMax.moodIndex)
         moodMax: Math.max(moodMin.moodIndex, moodMax.moodIndex)
     }
-
-    acceptDestination: Qt.resolvedUrl("SearchResultsPage.qml")
-    acceptDestinationAction: PageStackAction.Push
-    acceptDestinationProperties: ({queries: activeQueries})
 
     onAcceptPendingChanged: {
         if (acceptPending) {
