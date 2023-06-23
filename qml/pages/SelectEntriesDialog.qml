@@ -15,6 +15,7 @@ Dialog {
 
     property var selected: ([])
     readonly property int _selectedCount: filteredModel.selectedCount
+    readonly property int _filteredSelectedCount: filteredModel.filteredSelectedCount
     property var _searchQueryDialog: null
 
     allowedOrientations: Orientation.All
@@ -41,17 +42,21 @@ Dialog {
 
             MenuItem {
                 text: qsTr("Clear selection")
-                visible: _selectedCount > 0
+                visible: _filteredSelectedCount > 0
+                onDelayedClick: filteredModel.clearCurrent()
+            }
+            MenuItem {
+                text: listView.showFullEntries ?
+                          qsTr("Show previews") :
+                          qsTr("Show full entries")
                 onDelayedClick: {
-                    filteredModel.clearCurrent()
+                    listView.showFullEntries = !listView.showFullEntries
                 }
             }
             MenuItem {
                 text: qsTr("Select all")
-                visible: filteredModel.count > 0
-                onDelayedClick: {
-                    filteredModel.selectAll()
-                }
+                visible: _filteredSelectedCount < filteredModel.count
+                onDelayedClick: filteredModel.selectAll()
             }
             MenuItem {
                 text: qsTr("Filter")
@@ -68,14 +73,6 @@ Dialog {
                             enableFilterSelected: true,
                         })
                     }
-                }
-            }
-            MenuItem {
-                text: listView.showFullEntries ?
-                          qsTr("Show previews") :
-                          qsTr("Show full entries")
-                onDelayedClick: {
-                    listView.showFullEntries = !listView.showFullEntries
                 }
             }
         }
