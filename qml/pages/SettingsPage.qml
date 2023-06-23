@@ -66,6 +66,7 @@ Page {
 
             Button {
                 id: passcodeButton
+                width: Theme.buttonWidthLarge
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: config.protectionCode === "-1" ? qsTr("Set Code") : qsTr("Change Code")
                 visible: protectionSwitch.checked
