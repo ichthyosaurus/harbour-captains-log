@@ -61,18 +61,14 @@ Dialog {
             MenuItem {
                 text: qsTr("Filter")
                 onClicked: {
-                    if (_searchQueryDialog === null) {
-                        _searchQueryDialog = pageStack.push(
-                            Qt.resolvedUrl("SearchQueryDialog.qml"), {
-                            // TODO activeQueries: filteredModel.queries,
-                            enableFilterSelected: true,
-                        })
-                    } else {
-                        pageStack.push(_searchQueryDialog, {
-                            // TODO activeQueries: filteredModel.queries,
-                            enableFilterSelected: true,
-                        })
-                    }
+                    var dialog = pageStack.push(
+                        Qt.resolvedUrl("SearchQueryDialog.qml"),
+                        {enableFilterSelected: true})
+                    dialog.resetQueries(filteredModel.queries)
+                    dialog.accepted.connect(function(){
+                        dialog.copyQueries(dialog.activeQueries,
+                                           filteredModel.queries)
+                    })
                 }
             }
         }

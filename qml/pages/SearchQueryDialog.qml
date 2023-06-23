@@ -8,6 +8,7 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import SortFilterProxyModel 0.2
 import Opal.InfoCombo 1.0 as I
+import Opal.ComboData 1.0 as C
 import "../components"
 
 Dialog {
@@ -35,24 +36,45 @@ Dialog {
         moodMax: Math.max(moodMin.moodIndex, moodMax.moodIndex)
     }
 
+    function resetQueries(newQueries) {
+        _queries.matchAllMode = newQueries.matchAllMode
+        textField.text = newQueries.text
+        textSyntax.currentIndex = textSyntax.indexOfData(newQueries.textMatchSyntax)
+        textMode.currentIndex = textMode.indexOfData(newQueries.textMatchMode)
+        dateMin.selectedDate = (newQueries.dateMin.valueOf() ===
+            _queries.dateMinUnset.valueOf()) ? new Date(NaN) : newQueries.dateMin
+        dateMax.selectedDate = (newQueries.dateMax.valueOf() ===
+            _queries.dateMaxUnset.valueOf()) ? new Date(NaN) : newQueries.dateMax
+        bookmarks.currentIndex = bookmarks.indexOfData(newQueries.bookmark)
+        onlySelected.currentIndex = onlySelected.indexOfData(newQueries.selected)
+        _queries.tags = newQueries.tags
+        _queries.tagsNormalized = newQueries.tagsNormalized
+        moodMin.menu.selectedIndex = newQueries.moodMin
+        moodMax.menu.selectedIndex = newQueries.moodMax
+    }
+
+    function copyQueries(source, dest) {
+        // Copy the full query to a separate object so
+        // that changing any field on the query page does
+        // not automatically restart the search. Searching
+        // after every key press is slow in large databases.
+        dest.matchAllMode = source.matchAllMode
+        dest.text = source.text
+        dest.textMatchSyntax = source.textMatchSyntax
+        dest.textMatchMode = source.textMatchMode
+        dest.dateMin = source.dateMin
+        dest.dateMax = source.dateMax
+        dest.bookmark = source.bookmark
+        dest.selected = source.selected
+        dest.tags = source.tags
+        dest.tagsNormalized = source.tagsNormalized
+        dest.moodMin = source.moodMin
+        dest.moodMax = source.moodMax
+    }
+
     onAcceptPendingChanged: {
         if (acceptPending) {
-            // Copy the full query to a separate object so
-            // that changing any field on the query page does
-            // not automatically restart the search. Searching
-            // after every key press is slow in large databases.
-            activeQueries.matchAllMode = _queries.matchAllMode
-            activeQueries.text = _queries.text
-            activeQueries.textMatchSyntax = _queries.textMatchSyntax
-            activeQueries.textMatchMode = _queries.textMatchMode
-            activeQueries.dateMin = _queries.dateMin
-            activeQueries.dateMax = _queries.dateMax
-            activeQueries.bookmark = _queries.bookmark
-            activeQueries.selected = _queries.selected
-            activeQueries.tags = _queries.tags
-            activeQueries.tagsNormalized = _queries.tagsNormalized
-            activeQueries.moodMin = _queries.moodMin
-            activeQueries.moodMax = _queries.moodMax
+            copyQueries(_queries, activeQueries)
         }
     }
 
@@ -162,6 +184,10 @@ Dialog {
                 currentIndex: 0
                 label: qsTr("Search syntax")
 
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
+
                 I.InfoComboSection {
                     title: qsTr("Note")
                     text: qsTr("Simplified matching is only possible in “plain text” " +
@@ -212,6 +238,10 @@ Dialog {
                     value: 1
                 }
 
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
+
                 menu: ContextMenu {
                     I.InfoMenuItem {
                         text: qsTr("simplified")
@@ -239,6 +269,10 @@ Dialog {
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Bookmarks")
+
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
 
                 menu: ContextMenu {
                     I.InfoMenuItem {
@@ -268,8 +302,13 @@ Dialog {
             I.InfoCombo {
                 id: onlySelected
                 width: parent.width
+                visible: enableFilterSelected
                 currentIndex: 0
                 label: qsTr("Selection")
+
+                property int currentData
+                property var indexOfData
+                C.ComboData { dataRole: "mode" }
 
                 menu: ContextMenu {
                     I.InfoMenuItem {
