@@ -56,6 +56,8 @@ class Diary:
     DB_DATA_FILE_V8_FORMAT: str = r'diary-v{version:03d}.db'
     DB_DATA_FILE_V8_RE: re.Pattern = re.compile(r'(?P<path>.*)/(?P<dbfile>diary-v(?P<version>[0-9]{3}).db)$')
 
+    DB_BACKUP_DIR: str = 'backups'
+
     def __init__(self, standard_paths):
         self.ready = False
         self._standard_paths = standard_paths
@@ -448,6 +450,11 @@ class Diary:
             final_db = self.data_path / self.DB_DATA_FILE_V8_FORMAT.format(version=current_version)
             self.move_aside(final_db)
             shutil.move(tempfile_path, final_db)
+
+            backup = Path(self.data_path / self.DB_BACKUP_DIR)
+            backup.mkdir(parents=True, exist_ok=True)
+            self.move_aside(backup / Path(source_db).name)
+            shutil.move(source_db, str(backup / Path(source_db).name))
         else:
             print(f"database schema is up-to-date (version: {current_version})")
             final_db = source_db
