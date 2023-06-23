@@ -15,17 +15,18 @@ Dialog {
     allowedOrientations: Orientation.All
 
     property bool enableFilterSelected: false
+    readonly property var activeQueries: _activeQueriesProxy
 
-    property var activeQueries: SearchQueriesData {}
-    property SearchQueriesData queries: SearchQueriesData {
+    property var _activeQueriesProxy: SearchQueriesData {}
+    readonly property SearchQueriesData _queries: SearchQueriesData {
         matchAllMode: true
         text: textField.text
         textMatchSyntax: textSyntax.currentItem.mode
         textMatchMode: textMode.currentItem.mode
         dateMin: !dateMin.selectedDate || isNaN(dateMin.selectedDate.valueOf()) ?
-                     queries.dateMinUnset : dateMin.selectedDate
+                     _queries.dateMinUnset : dateMin.selectedDate
         dateMax: !dateMax.selectedDate || isNaN(dateMax.selectedDate.valueOf()) ?
-                     queries.dateMaxUnset : dateMax.selectedDate
+                     _queries.dateMaxUnset : dateMax.selectedDate
         bookmark: bookmarks.currentItem.mode
         selected: enableFilterSelected ? onlySelected.currentItem.mode : Qt.PartiallyChecked
         tags: ([])
@@ -40,18 +41,18 @@ Dialog {
             // that changing any field on the query page does
             // not automatically restart the search. Searching
             // after every key press is slow in large databases.
-            activeQueries.matchAllMode = queries.matchAllMode
-            activeQueries.text = queries.text
-            activeQueries.textMatchSyntax = queries.textMatchSyntax
-            activeQueries.textMatchMode = queries.textMatchMode
-            activeQueries.dateMin = queries.dateMin
-            activeQueries.dateMax = queries.dateMax
-            activeQueries.bookmark = queries.bookmark
-            activeQueries.selected = queries.selected
-            activeQueries.tags = queries.tags
-            activeQueries.tagsNormalized = queries.tagsNormalized
-            activeQueries.moodMin = queries.moodMin
-            activeQueries.moodMax = queries.moodMax
+            activeQueries.matchAllMode = _queries.matchAllMode
+            activeQueries.text = _queries.text
+            activeQueries.textMatchSyntax = _queries.textMatchSyntax
+            activeQueries.textMatchMode = _queries.textMatchMode
+            activeQueries.dateMin = _queries.dateMin
+            activeQueries.dateMax = _queries.dateMax
+            activeQueries.bookmark = _queries.bookmark
+            activeQueries.selected = _queries.selected
+            activeQueries.tags = _queries.tags
+            activeQueries.tagsNormalized = _queries.tagsNormalized
+            activeQueries.moodMin = _queries.moodMin
+            activeQueries.moodMax = _queries.moodMax
         }
     }
 
@@ -67,7 +68,7 @@ Dialog {
 
             MenuItem {
                 TextSwitch {
-                    checked: !queries.matchAllMode
+                    checked: !_queries.matchAllMode
                     text: " "
                     highlighted: parent.highlighted
                     height: Theme.itemSizeSmall
@@ -76,12 +77,12 @@ Dialog {
                 }
 
                 text: qsTr("Any may match")
-                onClicked: queries.matchAllMode = false
+                onClicked: _queries.matchAllMode = false
             }
 
             MenuItem {
                 TextSwitch {
-                    checked: queries.matchAllMode
+                    checked: _queries.matchAllMode
                     text: " "
                     highlighted: parent.highlighted
                     height: parent.height
@@ -90,7 +91,7 @@ Dialog {
                 }
 
                 text: qsTr("All must match")
-                onClicked: queries.matchAllMode = true
+                onClicked: _queries.matchAllMode = true
             }
         }
 
@@ -118,17 +119,17 @@ Dialog {
 
             SelectedTagsView {
                 width: parent.width
-                tagsList: queries.tags
+                tagsList: _queries.tags
 
                 onRemoveRequested: {
                     tagsField.text = tag
-                    var index = queries.tags.indexOf(tag)
+                    var index = _queries.tags.indexOf(tag)
 
                     if (index >= 0) {
-                        queries.tags.splice(index, 1)
-                        queries.tagsNormalized.splice(index, 1)
-                        queries.tags = queries.tags
-                        queries.tagsNormalized = queries.tagsNormalized
+                        _queries.tags.splice(index, 1)
+                        _queries.tagsNormalized.splice(index, 1)
+                        _queries.tags = _queries.tags
+                        _queries.tagsNormalized = _queries.tagsNormalized
                     }
                 }
             }
@@ -148,9 +149,9 @@ Dialog {
                     tagsField.text : (tagsField.focus ? ' ' : '')
 
                 onTagSelected: {
-                    if (queries.tags.indexOf(tag.text) < 0) {
-                        queries.tags = queries.tags.concat([tag.text])
-                        queries.tagsNormalized = queries.tagsNormalized.concat([tag.normalized])
+                    if (_queries.tags.indexOf(tag.text) < 0) {
+                        _queries.tags = _queries.tags.concat([tag.text])
+                        _queries.tagsNormalized = _queries.tagsNormalized.concat([tag.normalized])
                     }
                 }
             }
@@ -214,7 +215,7 @@ Dialog {
                 menu: ContextMenu {
                     I.InfoMenuItem {
                         text: qsTr("simplified")
-                        property int mode: queries.matchSimplified
+                        property int mode: _queries.matchSimplified
                         info: qsTr(
                             "Ignore diacritics on characters, matching e.g. “ö”, “ó”, and " +
                             "“õ” when searching for “o”. Ignore any punctuation marks. " +
@@ -223,7 +224,7 @@ Dialog {
                     }
                     I.InfoMenuItem {
                         text: qsTr("strict")
-                        property int mode: queries.matchStrict
+                        property int mode: _queries.matchStrict
                         info: qsTr(
                             "Match the query string exactly. Use this mode when you know exactly " +
                             "what you are searching for, or when you want to search for a string " +

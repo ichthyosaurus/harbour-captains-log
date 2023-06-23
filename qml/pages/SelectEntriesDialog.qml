@@ -64,12 +64,12 @@ Dialog {
                     if (_searchQueryDialog === null) {
                         _searchQueryDialog = pageStack.push(
                             Qt.resolvedUrl("SearchQueryDialog.qml"), {
-                            activeQueries: filteredModel.queries,
+                            // TODO activeQueries: filteredModel.queries,
                             enableFilterSelected: true,
                         })
                     } else {
                         pageStack.push(_searchQueryDialog, {
-                            activeQueries: filteredModel.queries,
+                            // TODO activeQueries: filteredModel.queries,
                             enableFilterSelected: true,
                         })
                     }
