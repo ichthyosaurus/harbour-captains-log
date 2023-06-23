@@ -11,7 +11,6 @@ import "../components"
 
 Dialog {
     id: root
-    allowedOrientations: Orientation.All
 
     property string homePath: StandardPaths.documents  // Sailjail permission required
     property string kind: "txt"
@@ -20,6 +19,9 @@ Dialog {
         arg(appWindow.appName).
         arg((new Date()).toLocaleString(
             Qt.locale(), appWindow.dbDateFormat))
+
+    allowedOrientations: Orientation.All
+    canAccept: !filenameField.errorHighlight
 
     Column {
         width: parent.width
@@ -32,16 +34,16 @@ Dialog {
         TextField {
             id: filenameField
             width: parent.width
-            placeholderText: qsTr("Define the file name")
             label: qsTr("Filename")
             description: qsTr("The file will be saved in your documents " +
                               "folder. The name must not contain subfolders.")
             text: defaultFileName
             inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-            validator: RegExpValidator {
-                regExp: /[^\/]/gi
-            }
+            acceptableInput: text.indexOf('/') < 0 &&
+                             text.trim().length > 0
         }
+
+        Item { width: parent.width; height: 1 }  // spacer
 
         I.InfoCombo {
             id: fileTypeCombo
