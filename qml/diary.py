@@ -429,7 +429,7 @@ class Diary:
             print(f"updating database from version {key}...")
             current_version = key
 
-            if updater is self._db_final:
+            if updater == self._db_final:
                 break  # reached the end of the update chain
 
             with updating:
