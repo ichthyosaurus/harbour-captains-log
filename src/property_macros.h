@@ -21,18 +21,18 @@ Name: RW_PROPERTY_CUSTOM
 Value:
     RW_PROPERTY_CUSTOM($type$, $name$, $name:c$, $initializer$)
     public slots:
-        void set$name:c$(const $type$& newValue) {
-            m_$name$ = newValue;
-            emit $name$Changed();
-        }
+    void set$name:c$(const $type$& newValue) {
+        m_$name$ = newValue;
+        emit $name$Changed();
+    }
 
 Name: RO_PROPERTY_CUSTOM
 Value:
     RO_PROPERTY_CUSTOM($type$, $name$, $initializer$)
     public:
-        $type$ $name$() const {
-            return m_$name$;
-        }
+    $type$ $name$() const {
+        return m_$name$;
+    }
 
 */
 

@@ -5,13 +5,15 @@
  */
 
 #include "tagsfilter.h"
+#include "selectable_sfpm.h"
+
 #include <QtQml>
 #include <QCoreApplication>
 
 void registerQmlTypes() {
+    qmlRegisterType<qqsfpm::TagsFilter>("SortFilterProxyModel", 0, 2, "TagsFilter");
     qmlRegisterType<qqsfpm::SelectableSortFilterProxyModel>(
         "SortFilterProxyModel", 0, 2, "SelectableSortFilterProxyModel");
-    qmlRegisterType<qqsfpm::TagsFilter>("SortFilterProxyModel", 0, 2, "TagsFilter");
 }
 
 Q_COREAPP_STARTUP_FUNCTION(registerQmlTypes)

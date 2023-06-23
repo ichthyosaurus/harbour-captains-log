@@ -24,10 +24,13 @@ SOURCES += \
     src/harbour-captains-log.cpp \
     src/qmltypes.cpp \
     src/tagsfilter.cpp \
+    src/selectable_sfpm.cpp \
     # src/transliterator.cpp \
 
 HEADERS += \
+    src/property_macros.h \
     src/tagsfilter.h \
+    src/selectable_sfpm.h \
     # src/transliterator.h \
 
 DISTFILES += \
