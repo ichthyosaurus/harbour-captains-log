@@ -322,6 +322,10 @@ class Diary:
 #
 
 def initialize(data_path, db_data_file, db_version_file):
+    if is_initialized(False):
+        pyotherside.send('error', 'database-already-initialized')
+        return
+
     global DIARY
     global INITIALIZED
 
@@ -332,6 +336,19 @@ def initialize(data_path, db_data_file, db_version_file):
         return True
 
     return False
+
+
+def is_initialized(notify: bool = True) -> bool:
+    global DIARY
+    global INITIALIZED
+
+    if not DIARY or not INITIALIZED:
+        if notify:
+            pyotherside.send('error', 'database-not-ready')
+
+        return False
+
+    return True
 
 
 def normalize_text(string):
@@ -381,6 +398,8 @@ def _clean_entry_row(row):
 
 def get_tags():
     """ Load all tags and ship them to QML """
+    if not is_initialized():
+        return
 
     DIARY.cursor.execute("""
         SELECT TRIM(tags, " ") FROM diary
@@ -403,6 +422,8 @@ def get_tags():
 
 def get_entries():
     """ Load all entries and ship them to QML """
+    if not is_initialized():
+        return
 
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary
@@ -426,6 +447,7 @@ def get_entries():
 
 
 def _is_db_empty():
+    # expects the db to be ready and initialized
     DIARY.cursor.execute("""SELECT create_order FROM diary LIMIT 1;""")
     return DIARY.cursor.fetchone() is None
 
@@ -433,6 +455,8 @@ def _is_db_empty():
 def add_entry(create_date, create_tz, entry_date, entry_tz,
               mood, title, entry, tags):
     """ Add a new entry to the database. """
+    if not is_initialized():
+        return
 
     DIARY.cursor.execute("""SELECT IFNULL(MAX(create_order), 0) + 1 FROM diary;""")
     row = DIARY.cursor.fetchone()
@@ -532,6 +556,9 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
 def update_entry(entry_date, entry_tz, modify_date, mood,
                  title, entry, tags, timezone, rowid):
     """ Updates an entry in the database. """
+    if not is_initialized():
+        return
+
     DIARY.cursor.execute("""
         UPDATE diary
         SET entry_date = ?,
@@ -570,6 +597,9 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
 
 def update_bookmark(id, mark):
     """ Just updates the status of the bookmark option """
+    if not is_initialized():
+        return
+
     DIARY.cursor.execute("""UPDATE diary
                             SET bookmark = ?
                             WHERE rowid = ?; """, (1 if mark else 0, id))
@@ -578,6 +608,9 @@ def update_bookmark(id, mark):
 
 def delete_entry(id):
     """ Deletes an entry from the diary table """
+    if not is_initialized():
+        return
+
     DIARY.cursor.execute("""DELETE FROM diary
                             WHERE rowid = ?; """, (id, ))
     DIARY.conn.commit()
@@ -592,7 +625,10 @@ def delete_entry(id):
 #
 
 def _read_all_entries():
-    """ Read all entries to export them """
+    """ Read all entries to export them.
+        Expects the database to be ready and initialized.
+    """
+
     DIARY.cursor.execute("""
         SELECT *, rowid FROM diary
         ORDER BY entry_order DESC,
@@ -691,6 +727,9 @@ def export(filename: str, kind: str, translations):
     See the generated file "components/ExportTranslations.qml" for the
     main definition.
     """
+
+    if not is_initialized():
+        return
 
     entries = _read_all_entries()
     filename = filename.replace("'", "_").replace(":", "-").strip()
