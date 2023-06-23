@@ -65,6 +65,12 @@ SelectableSortFilterProxyModel {
                 value: queries.bookmark === Qt.Checked ? 1 : 0
             }
 
+            ValueFilter {
+                enabled: queries.selected !== Qt.PartiallyChecked
+                roleName: "isSelected"
+                value: queries.selected === Qt.Checked ? true : false
+            }
+
             AnyOf {
                 enabled: !!queries.tags
 
@@ -134,6 +140,12 @@ SelectableSortFilterProxyModel {
                 enabled: queries.bookmark !== Qt.PartiallyChecked
                 roleName: "bookmark"
                 value: queries.bookmark === Qt.Checked ? 1 : 0
+            }
+
+            ValueFilter {
+                enabled: queries.selected !== Qt.PartiallyChecked
+                roleName: "isSelected"
+                value: queries.selected === Qt.Checked ? true : false
             }
 
             AnyOf {

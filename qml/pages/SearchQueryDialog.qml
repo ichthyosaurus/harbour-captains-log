@@ -14,6 +14,8 @@ Dialog {
     id: root
     allowedOrientations: Orientation.All
 
+    property bool enableFilterSelected: false
+
     property var activeQueries: SearchQueriesData {}
     property SearchQueriesData queries: SearchQueriesData {
         matchAllMode: true
@@ -25,6 +27,7 @@ Dialog {
         dateMax: !dateMax.selectedDate || isNaN(dateMax.selectedDate.valueOf()) ?
                      queries.dateMaxUnset : dateMax.selectedDate
         bookmark: bookmarks.currentItem.mode
+        selected: enableFilterSelected ? onlySelected.currentItem.mode : Qt.PartiallyChecked
         tags: ([])
         tagsNormalized: ([])
         moodMin: Math.min(moodMin.moodIndex, moodMax.moodIndex)
@@ -44,6 +47,7 @@ Dialog {
             activeQueries.dateMin = queries.dateMin
             activeQueries.dateMax = queries.dateMax
             activeQueries.bookmark = queries.bookmark
+            activeQueries.selected = queries.selected
             activeQueries.tags = queries.tags
             activeQueries.tagsNormalized = queries.tagsNormalized
             activeQueries.moodMin = queries.moodMin
@@ -255,8 +259,38 @@ Dialog {
                         text: qsTr("unmarked", "search option, as in: " +
                                    "“find only entries that are not bookmarked”")
                         property int mode: Qt.Unchecked
+                        info: qsTr("Find only entries that are not bookmarked.")
+                    }
+                }
+            }
+
+            I.InfoCombo {
+                id: onlySelected
+                width: parent.width
+                currentIndex: 0
+                label: qsTr("Selection")
+
+                menu: ContextMenu {
+                    I.InfoMenuItem {
+                        text: qsTr("all entries", "search option, as in: " +
+                                   "“find all entries, whether they are " +
+                                   "currently selected or not”")
+                        property int mode: Qt.PartiallyChecked
                         info: qsTr(
-                            "Find only entries that are not bookmarked.")
+                            "Find entries regardless of whether they are selected " +
+                            "or not.")
+                    }
+                    I.InfoMenuItem {
+                        text: qsTr("selected", "search option, as in: " +
+                                   "“find only selected entries”")
+                        property int mode: Qt.Checked
+                        info: qsTr("Find only currently selected entries.")
+                    }
+                    I.InfoMenuItem {
+                        text: qsTr("unselected", "search option, as in: " +
+                                   "“find only entries that are not selected")
+                        property int mode: Qt.Unchecked
+                        info: qsTr("Find only entries that are currently not selected.")
                     }
                 }
             }
