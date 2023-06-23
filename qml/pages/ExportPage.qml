@@ -115,8 +115,9 @@ Dialog {
     onAccepted: {
         var filename = (filenameField.text.length > 0 ? filenameField.text : defaultFileName)
 
-        // defined in harbour-captains-log.qml
-        showMessage(qsTr("Data exported to: %1").arg(homePath))
+        appWindow.showMessage(
+            qsTr("Export"),
+            qsTr("Data is being exported to %1").arg(homePath))
 
         py.call("diary.export", [homePath + '/' + filename, kind, translations.translations])
     }

@@ -232,7 +232,6 @@ ApplicationWindow
     signal entryUpdated(var rowid, var newEntry)
     // -----------------------
 
-    property int _lastNotificationId: 0
     property bool unlocked: config.useCodeProtection ? false : true
 
     property ConfigurationGroup config: ConfigurationGroup {
@@ -278,12 +277,23 @@ ApplicationWindow
         expireTimeout: 4000
     }
 
-    function showMessage(msg)
-    {
-        notification.replacesId = _lastNotificationId
-        notification.previewBody = msg
+    function showMessage(msg, details) {
+        if (!!details) {
+            notification.expireTimeout = 0
+            notification.summary = msg
+            notification.body = details
+            notification.previewSummary = msg
+            notification.previewBody = details
+        } else {
+            notification.expireTimeout = 4000
+            notification.summary = ''
+            notification.body = ''
+            notification.previewSummary = ''
+            notification.previewBody = msg
+        }
+
+        notification.replacesId = -1
         notification.publish()
-        _lastNotificationId = notification.replacesId
     }
 
     Python {
@@ -298,7 +308,8 @@ ApplicationWindow
             console.error("an error occurred in the Python backend, traceback:")
             console.error(traceback)
 
-            showMessage(qsTr("An unexpected error occurred. Please restart the app and " +
+            showMessage(qsTr("Error"),
+                        qsTr("An unexpected error occurred. Please restart the app and " +
                              "check the logs."))
         }
 
@@ -330,7 +341,7 @@ ApplicationWindow
                         DB_DATA_FILE, DB_VERSION_FILE], function(success) {
                     if (!success) {
                         console.error('failed to initialize backend')
-                        showMessage(qsTr("Error: the database could not be loaded."))
+                        showMessage(qsTr("Error"), qsTr("The database could not be loaded."))
                         return
                     }
 
@@ -347,6 +358,7 @@ ApplicationWindow
         if (config.configMigrated < 1) {
             config.migrate()
         }
+
         pageStack.replaceAbove(null, config.useCodeProtection ? pinPageComponent : firstPage)
     }
 }
