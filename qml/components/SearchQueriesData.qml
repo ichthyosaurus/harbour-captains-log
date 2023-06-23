@@ -13,9 +13,9 @@ QtObject {
     id: root
 
     property bool matchAllMode: true
-    property string text
-    property int textMatchSyntax
-    property int textMatchMode
+    property string text: ''
+    property int textMatchSyntax: RegExpFilter.FixedString
+    property int textMatchMode: matchSimplified
     property date dateMin: dateMinUnset
     property date dateMax: dateMaxUnset
     property int bookmark: Qt.PartiallyChecked
