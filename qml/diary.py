@@ -592,6 +592,39 @@ def is_initialized(notify: bool = True) -> bool:
     return True
 
 
+def backup_database():
+    if not is_initialized():
+        return
+
+    try:
+        today = datetime.now().strftime("%Y-%m-%d")
+        backup_path = Path(DIARY.data_path / DIARY.DB_BACKUP_DIR / Path(DIARY.db_path).name)
+        backup_path = backup_path.with_stem(f'{today} - {backup_path.stem}')
+        backup_path.parent.mkdir(parents=True, exist_ok=True)
+
+        fd, tempfile_path = tempfile.mkstemp(prefix=f'backup_{today}_', suffix='.db', dir=backup_path.parent)
+        os.close(fd)
+        temp_db = sqlite3.connect(tempfile_path)
+
+        with temp_db:
+            DIARY.conn.backup(temp_db)
+
+        temp_db.close()
+        Diary.move_aside(backup_path)
+        shutil.move(str(tempfile_path), str(backup_path))
+
+        print(f'backed up {DIARY.db_path} to {backup_path}')
+    except Exception as e:
+        trace = '\n'.join([
+            ''.join(traceback.format_exception_only(None, e)).strip(),
+            ''.join(traceback.format_exception(None, e, e.__traceback__)).strip()
+        ])
+
+        pyotherside.send('warning', 'database-backup-failed',
+                         {'database': DIARY.db_path, 'backup': backup_path,
+                          'exception': trace})
+
+
 def normalize_text(string):
     return Diary.normalize_text(string)
 
@@ -1036,6 +1069,7 @@ if __name__ == '__main__':
     pass
 
     initialize(standard_paths=StandardPaths)
+    # backup_database()
 
     # print('txt')
     # export_new('output', 'txt', {})
