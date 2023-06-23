@@ -306,6 +306,10 @@ class Diary:
 
     @staticmethod
     def _normalize_text(*args, keep=[]):
+        return Diary.normalize_text(*args, keep)
+
+    @staticmethod
+    def normalize_text(*args, keep=[]):
         punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
         joined = ' '.join((re.sub(r'\s+', ' ', str(x).strip()) for x in args)).strip()
 
@@ -352,7 +356,7 @@ def is_initialized(notify: bool = True) -> bool:
 
 
 def normalize_text(string):
-    return Diary._normalize_text(string)
+    return Diary.normalize_text(string)
 
 
 _FIELD_DEFAULTS = {
@@ -410,7 +414,7 @@ def get_tags():
     clean_tags = []
 
     for row in rows:
-        tags = [{'text': x.strip(), 'normalized': Diary._normalize_text(x)}
+        tags = [{'text': x.strip(), 'normalized': Diary.normalize_text(x)}
                 for x in row[0].split(',') if x.strip()]
 
         if tags:
@@ -539,8 +543,8 @@ def add_entry(create_date, create_tz, entry_date, entry_tz,
                 entry_date, entry_tz,
                 title.strip(), DIARY._format_preview(entry), entry.strip(),
                 tags.strip(), mood, 0,
-                Diary._normalize_text(title, entry),
-                Diary._normalize_text(tags, keep=[','])))
+                Diary.normalize_text(title, entry),
+                Diary.normalize_text(tags, keep=[','])))
     DIARY.conn.commit()
 
     DIARY.cursor.execute("""
@@ -579,9 +583,9 @@ def update_entry(entry_date, entry_tz, modify_date, mood,
         title.strip(),
         DIARY._format_preview(entry),
         entry.strip(),
-        Diary._normalize_text(title, entry),
+        Diary.normalize_text(title, entry),
         tags.strip(),
-        Diary._normalize_text(tags, keep=[',']),
+        Diary.normalize_text(tags, keep=[',']),
         timezone, rowid
     ))
     DIARY.conn.commit()
