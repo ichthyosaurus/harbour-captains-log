@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# -!-/-u-s-r-/-b-i-n-/-e-n-v- -p-y-t-h-o-n-
 # -*- coding: utf-8 -*-
 # SPDX-FileCopyrightText: Copyright (c) Roland Koebler, 2007-2013
 # SPDX-License-Identifier: MIT
