@@ -9,11 +9,18 @@ import SortFilterProxyModel 0.2
 
 // Requires appWindow.rawModel, appWindow.normalizeText, and appWindow.parseDate
 
-SortFilterProxyModel {
+//SelectableSortFilterProxyModel {
+SelectableSortFilterProxyModel {
     id: root
     sourceModel: appWindow.rawModel
 
     property SearchQueriesData queries: SearchQueriesData {}
+
+    function getNow(row) {
+        return root.get(row, "rowid")
+    }
+
+    selectionKey: "rowid"
 
     proxyRoles: ExpressionRole {
         name: "calculatedDate"
