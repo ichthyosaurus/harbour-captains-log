@@ -255,6 +255,7 @@ ApplicationWindow
         property bool useCodeProtection: false
         property string protectionCode: "-1"
         property string lastBackupDate: ""
+        property string lastExportKind: "txt"
 
         function migrate() {
             if (configMigrated === 0) {

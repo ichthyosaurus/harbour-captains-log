@@ -13,7 +13,8 @@ Dialog {
     id: root
 
     property string homePath: StandardPaths.documents  // Sailjail permission required
-    property string kind: "txt"
+    property string kind: !!fileTypeCombo.currentItem ?
+        fileTypeCombo.currentItem.kind : ''
     property var _selectedEntries: ([])
 
     property string defaultFileName: "%1 - %2".
@@ -33,6 +34,12 @@ Dialog {
 
     allowedOrientations: Orientation.All
     canAccept: !filenameField.errorHighlight
+
+    onKindChanged: {
+        if (!kind || kind === "") return
+        if (kind === config.lastExportKind) return
+        config.lastExportKind = kind
+    }
 
     Column {
         width: parent.width
@@ -62,6 +69,15 @@ Dialog {
             width: parent.width
             label: qsTr("Export file format")
 
+            property var options: ["txt", "md", "tex.md", "csv", "raw"]
+
+            Component.onCompleted: {
+                if (!!config.lastExportKind) {
+                    var index = options.indexOf(config.lastExportKind)
+                    if (index >= 0) currentIndex = index
+                }
+            }
+
             I.InfoComboSection {
                 title: qsTr("Note")
                 text: qsTr("Data exports are meant for archival/printing and not as a backup. " +
@@ -85,7 +101,8 @@ Dialog {
                     text: qsTr("Plain Markdown")
                     property string kind: "md"
                     info: qsTr("Export entries in a simple " +
-                               '<a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> ' +
+                               '<a href="https://daringfireball.net/' +
+                               'projects/markdown/syntax">Markdown</a> ' +
                                "format. This can later be converted into other " +
                                "formats for printing or for the web.")
                 }
@@ -114,10 +131,6 @@ Dialog {
                                "Use “Settings → Database backup” to create an internal " +
                                "backup.")
                 }
-            }
-
-            onCurrentIndexChanged: {
-                kind = fileTypeCombo.currentItem.kind
             }
         }
 
