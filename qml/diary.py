@@ -458,7 +458,7 @@ class Diary:
             # move source db to backups folder
             today = datetime.now().strftime("%Y-%m-%d")
             backup_path = Path(self.data_path / self.DB_BACKUP_DIR / Path(source_db).name)
-            backup_path = backup_path.with_stem(f'{today} - {backup_path.stem}')
+            backup_path = backup_path.with_name(f'{today} - {backup_path.name}')
             backup_path.parent.mkdir(parents=True, exist_ok=True)
             self.move_aside(backup_path)
             shutil.move(str(source_db), str(backup_path))
@@ -605,7 +605,7 @@ def backup_database():
     try:
         today = datetime.now().strftime("%Y-%m-%d")
         backup_path = Path(DIARY.data_path / DIARY.DB_BACKUP_DIR / Path(DIARY.db_path).name)
-        backup_path = backup_path.with_stem(f'{today} - {backup_path.stem}')
+        backup_path = backup_path.with_name(f'{today} - {backup_path.name}')
         backup_path.parent.mkdir(parents=True, exist_ok=True)
 
         fd, tempfile_path = tempfile.mkstemp(prefix=f'backup_{today}_', suffix='.db', dir=backup_path.parent)
