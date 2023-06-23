@@ -14,11 +14,22 @@ Dialog {
 
     property string homePath: StandardPaths.documents  // Sailjail permission required
     property string kind: "txt"
+    property var _selectedEntries: ([])
 
     property string defaultFileName: "%1 - %2".
         arg(appWindow.appName).
         arg((new Date()).toLocaleString(
             Qt.locale(), appWindow.dbDateFormat))
+
+    function _selectEntries() {
+        var dialog = pageStack.push(Qt.resolvedUrl("SelectEntriesDialog.qml"), {
+            selected: _selectedEntries
+        })
+
+        dialog.accepted.connect(function(){
+            _selectedEntries = dialog.selected
+        })
+    }
 
     allowedOrientations: Orientation.All
     canAccept: !filenameField.errorHighlight
@@ -107,6 +118,41 @@ Dialog {
             onCurrentIndexChanged: {
                 kind = fileTypeCombo.currentItem.kind
             }
+        }
+
+        ComboBox {
+            id: entriesCombo
+            width: parent.width
+            label: qsTr("Entries", "as in “which entries to export”")
+            currentIndex: 0
+
+            menu: ContextMenu {
+                MenuItem {
+                    text: qsTr("All entries", "as in “which entries to export”")
+                    property string entries: 'all'
+                }
+                MenuItem {
+                    text: qsTr("Selected entries", "as in “which entries to export”")
+                    property string entries: 'custom'
+
+                    onDelayedClick: {
+                        if (_selectedEntries.length === 0) {
+                            _selectEntries()
+                        }
+                    }
+                }
+            }
+        }
+
+        Item { width: parent.width; height: 1 }  // spacer
+
+        Button {
+            anchors.horizontalCenter: parent.horizontalCenter
+            visible: entriesCombo.currentItem.entries === 'custom'
+            text: _selectedEntries.length === 0 ?
+                      qsTr("Select entries") :
+                      qsTr("%n entries selected", "", _selectedEntries.length)
+            onClicked: _selectEntries()
         }
     }
 
