@@ -201,7 +201,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="61"/>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Datei wird in Ihrem Dokumente-Ordner gespeichert. Der Name darf keine Unterordner beinhalten.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="75"/>
