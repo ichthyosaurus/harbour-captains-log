@@ -31,32 +31,32 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="106"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Китайский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="110"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Немецкий</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="114"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Финский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Дизайн иконок</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="118"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Норвежский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Итальянский</translation>
     </message>
 </context>
 <context>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Удалить</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
@@ -360,7 +360,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поиск</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="69"/>
@@ -638,7 +638,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поиск</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
@@ -840,7 +840,7 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="53"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поиск</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
@@ -939,7 +939,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="45"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="54"/>
@@ -988,9 +988,9 @@
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>... %n и больше</numerusform>
+            <numerusform>... %n и больше</numerusform>
+            <numerusform>... %n и больше</numerusform>
         </translation>
     </message>
 </context>

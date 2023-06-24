@@ -445,7 +445,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">捐款</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
@@ -472,7 +472,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">鸣谢</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
@@ -488,7 +488,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部链接</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
@@ -498,7 +498,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">复制到剪贴板：%1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">下载许可证文本</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
@@ -520,7 +520,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">注意：请检查源代码以获得最准确的信息。</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
@@ -549,17 +549,17 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">如果你想支持我的工作，你可以请我喝杯咖啡。</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">你可以通过捐款来支持这个项目，或者通过使用任何这些服务进行捐赠。</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">我们非常欢迎你对翻译或代码的贡献。</translation>
     </message>
 </context>
 <context>
@@ -722,7 +722,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="271"/>
         <source>Bookmarks</source>
-        <translation type="unfinished">书签</translation>
+        <translation type="unfinished">收藏</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="279"/>
@@ -976,7 +976,7 @@
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>…再多显示 %n 个。</numerusform>
         </translation>
     </message>
 </context>
