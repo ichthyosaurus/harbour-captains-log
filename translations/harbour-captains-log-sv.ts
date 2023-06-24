@@ -194,41 +194,41 @@
     </message>
     <message>
         <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
-        <translation type="unfinished">Skapa en säkerhetskopia av de faktiska databasfilerna som ett arkiv. Denna databas kan senare sättas tillbaka på plats.</translation>
+        <translation>Exportera en komprimerad kopia av den aktuella databasfilen. Denna databas kan senare sättas tillbaka på plats. Använd &quot;Inställningar → Säkerhetskopiering av databas&quot; för att skapa en intern säkerhetskopia.</translation>
     </message>
     <message>
         <source>Entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Poster</translation>
     </message>
     <message>
         <source>All entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Alla poster</translation>
     </message>
     <message>
         <source>Selected entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Markerade poster</translation>
     </message>
     <message>
         <source>Select entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj poster</translation>
     </message>
     <message numerus="yes">
         <source>%n entries selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n post markerad</numerusform>
+            <numerusform>%n poster markerade</numerusform>
         </translation>
     </message>
     <message>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportera</translation>
     </message>
     <message>
         <source>Data is being exported to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Data exporteras till %1</translation>
     </message>
 </context>
 <context>
@@ -619,7 +619,7 @@
     </message>
     <message>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Urval</translation>
     </message>
     <message>
         <source>all entries</source>
@@ -628,25 +628,25 @@
     </message>
     <message>
         <source>Find entries regardless of whether they are selected or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hitta poster oavsett om de är markerade eller inte.</translation>
     </message>
     <message>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>markerad</translation>
     </message>
     <message>
         <source>Find only currently selected entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök endast poster som är markerade.</translation>
     </message>
     <message>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
-        <translation type="unfinished"></translation>
+        <translation>avmarkerad</translation>
     </message>
     <message>
         <source>Find only entries that are currently not selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök endast poster som är omarkerade.</translation>
     </message>
     <message>
         <source>Mood</source>
@@ -710,14 +710,14 @@
     </message>
     <message>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportera</translation>
     </message>
 </context>
 <context>
     <name>SelectEntriesDialog</name>
     <message>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Avmarkera alla</translation>
     </message>
     <message>
         <source>Show previews</source>
@@ -729,24 +729,24 @@
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Markera alla</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter</translation>
     </message>
     <message numerus="yes">
         <source>Select %n</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Markera %n</numerusform>
+            <numerusform>Markera %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n entries shown</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n post visas</numerusform>
+            <numerusform>%n poster visas</numerusform>
         </translation>
     </message>
     <message>
@@ -786,11 +786,11 @@
     </message>
     <message>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Notera att denna kod endast förhindrar åtkomst till appen. Databasen är inte krypterad och koden lagras inte på ett säkert sätt.</translation>
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished">Säkerhetskopiering av databas</translation>
+        <translation>Säkerhetskopiering av databas</translation>
     </message>
 </context>
 <context>
@@ -952,55 +952,55 @@
     </message>
     <message>
         <source>Database backup</source>
-        <translation type="unfinished">Säkerhetskopiering av databas</translation>
+        <translation>Säkerhetskopiering av databas</translation>
     </message>
     <message>
         <source>Backup finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Säkerhetskopieringen slutförd</translation>
     </message>
     <message>
         <source>A database backup has been created in “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>En säkerhetskopia av databasen har skapats i &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <source>The local data folder at “%1” is not writable.</source>
-        <translation type="unfinished"></translation>
+        <translation>Den lokala datamappen på &quot;%1&quot; är inte skrivbar.</translation>
     </message>
     <message>
         <source>Failed to load the database due to an unknown error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det gick inte att läsa in databasen på grund av ett okänt fel.</translation>
     </message>
     <message>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Det gick inte att uppdatera databasen på &quot;%1&quot; till den senaste versionen. Detaljerat: %2</translation>
     </message>
     <message>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det gick inte att flytta filer för Sailjail-stöd från &quot;%1&quot; till &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det gick inte att uppdatera databasen till den senaste versionen eftersom versionsfilen saknas på &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Databasversionen &quot;%1&quot; är inte kompatibel med denna version av appen. Den senaste databasversionen som stöds är &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan inte exportera okänd filtyp &quot;%1&quot;. Rapportera gärna detta fel.</translation>
     </message>
     <message>
         <source>Backup failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Säkerhetskopieringen misslyckades</translation>
     </message>
     <message>
         <source>The database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det gick inte att läsa in databasen.</translation>
     </message>
 </context>
 </TS>
