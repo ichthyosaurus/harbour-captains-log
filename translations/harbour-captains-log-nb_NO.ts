@@ -46,17 +46,17 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikondesign</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="118"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Norsk bokmål</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Italiensk</translation>
     </message>
 </context>
 <context>

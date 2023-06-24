@@ -46,17 +46,17 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation>图标设计</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="118"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>挪威语</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>意大利语</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="14"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>日期</translation>
     </message>
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
@@ -120,7 +120,7 @@
         <location filename="../qml/components/EntryElement.qml" line="113"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>增编来自 %1</translation>
     </message>
 </context>
 <context>
@@ -129,7 +129,7 @@
         <location filename="../qml/components/EntryElementFull.qml" line="54"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>增编来自 %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="85"/>
@@ -143,12 +143,12 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>增编来自 %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation type="unfinished">心情: %1</translation>
+        <translation>心情: %1</translation>
     </message>
 </context>
 <context>
@@ -186,22 +186,22 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="87"/>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>笔记</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="88"/>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>数据导出用于存档/打印，而不是作为备份。如果您想手动备份数据库，请选择“数据库备份”选项，或使用&lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt;创建系统备份。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="132"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>数据库备份</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="61"/>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>该文件将保存在您的文档文件夹中。名称不得包含子文件夹。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="75"/>
@@ -211,12 +211,12 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="100"/>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>以非常简单的样式将条目导出为可以直接打印的纯文本文件。请注意，长线不会被折叠。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="108"/>
         <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
-        <translation type="unfinished"></translation>
+        <translation>以简单的 &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; 格式导出条目。稍后可以将其转换为其他格式以用于打印或网络。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="117"/>
@@ -445,7 +445,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">捐款</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
@@ -472,7 +472,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">鸣谢</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
@@ -488,7 +488,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部链接</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
@@ -498,7 +498,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">复制到剪贴板：%1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">下载许可证文本</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
@@ -520,7 +520,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">注意：请检查源代码以获得最准确的信息。</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
@@ -549,17 +549,17 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">如果你想支持我的工作，你可以请我喝杯咖啡。</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">你可以通过捐款来支持这个项目，或者通过使用任何这些服务进行捐赠。</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">我们非常欢迎你对翻译或代码的贡献。</translation>
     </message>
 </context>
 <context>
@@ -722,7 +722,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="271"/>
         <source>Bookmarks</source>
-        <translation type="unfinished">书签</translation>
+        <translation type="unfinished">收藏</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="279"/>
@@ -976,7 +976,7 @@
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>…再多显示 %n 个。</numerusform>
         </translation>
     </message>
 </context>

@@ -360,7 +360,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szukaj</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="69"/>
@@ -465,8 +465,8 @@
         <source>show license(s)</source>
         <translation type="unfinished">
             <numerusform>pokaż licencję</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>pokaż licencje</numerusform>
+            <numerusform>pokaż licencje</numerusform>
         </translation>
     </message>
     <message>
@@ -525,7 +525,7 @@
         <source>License(s)</source>
         <translation type="unfinished">
             <numerusform>Licencja</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Licencje</numerusform>
             <numerusform>Licencje</numerusform>
         </translation>
     </message>
@@ -638,7 +638,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szukaj</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
@@ -840,7 +840,7 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="53"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szukaj</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
@@ -988,9 +988,9 @@
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>... tylko %n</numerusform>
+            <numerusform>... i %n więcej</numerusform>
+            <numerusform>... i %n więcej</numerusform>
         </translation>
     </message>
 </context>

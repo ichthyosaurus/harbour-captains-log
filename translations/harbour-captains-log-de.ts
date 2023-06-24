@@ -211,7 +211,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="100"/>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Einträge in einem sehr einfachen reinen Textformat exportieren, das direkt gedruckt werden kann. Beachten Sie, dass lange Zeilen nicht umgebrochen werden.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="108"/>
