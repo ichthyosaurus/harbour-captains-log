@@ -977,7 +977,7 @@
         <source>... and %n more</source>
         <translation type="unfinished">
             <numerusform>... ve %n daha</numerusform>
-            <numerusform>... ve %n daha</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>

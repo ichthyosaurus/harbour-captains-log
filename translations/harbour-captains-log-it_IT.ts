@@ -359,7 +359,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cerca</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="69"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cerca</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="53"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cerca</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
@@ -933,7 +933,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="45"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Impostazioni</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="54"/>

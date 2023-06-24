@@ -88,7 +88,7 @@
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seleccionar</translation>
     </message>
 </context>
 <context>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Borrar</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
@@ -359,7 +359,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Buscar</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="69"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Buscar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
@@ -725,7 +725,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="271"/>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcadores</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="279"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="53"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Buscar</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
@@ -933,7 +933,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="45"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ajustes</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="54"/>
@@ -982,7 +982,8 @@
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>... y %n más</numerusform>
+            <numerusform>... y %n mucho más</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -992,7 +993,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="139"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Guardar</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="138"/>
