@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Italian</source>
-        <translation type="unfinished">Olasz</translation>
+        <translation type="unfinished">olasz</translation>
     </message>
 </context>
 <context>
