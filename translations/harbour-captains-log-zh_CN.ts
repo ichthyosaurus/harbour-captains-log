@@ -604,7 +604,7 @@
         <location filename="../qml/pages/ReadPage.qml" line="118"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">增编来自 %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="188"/>
@@ -657,7 +657,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="192"/>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">笔记</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="193"/>
@@ -967,7 +967,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="92"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">数据库备份</translation>
     </message>
 </context>
 <context>
@@ -1050,7 +1050,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="144"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">日期</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
@@ -1164,7 +1164,7 @@
         <location filename="../qml/harbour-captains-log.qml" line="301"/>
         <location filename="../qml/harbour-captains-log.qml" line="317"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">数据库备份</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="311"/>
