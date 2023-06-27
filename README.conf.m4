@@ -32,6 +32,12 @@ define(${__weblate_project}, __slug)
 dnl/// [WEBLATE COMPONENT](required if using Weblate): ignored if Weblate is disabled
 define(${__weblate_component}, ${translations})
 
+dnl/// [SUBMODULES](optional): set to "true" to enable docs for cloning with submodules
+define(${__have_submodules}, ${true})
+
+dnl/// [PATCHES](optional): set to "true" to enable docs for applying patches
+define(${__have_patches}, ${true})
+
 dnl/// [PROJECT STATUS](optional): string for the "development" badge, either "active" or "stable"
 define(${__devel_status}, ${stable})
 
