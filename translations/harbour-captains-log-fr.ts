@@ -4,57 +4,57 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="86"/>
+        <location filename="../qml/pages/AboutPage.qml" line="88"/>
         <source>Development</source>
         <translation>Développement</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="39"/>
+        <location filename="../qml/pages/AboutPage.qml" line="40"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Programming</source>
         <translation>Programmation</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="99"/>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="102"/>
+        <location filename="../qml/pages/AboutPage.qml" line="104"/>
         <source>Swedish</source>
         <translation>suédois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="106"/>
+        <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>Chinese</source>
         <translation>chinois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>German</source>
         <translation>allemand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="114"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>Finnish</source>
         <translation>finnois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Icon Design</source>
         <translation>Design de l&apos;icône</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="120"/>
         <source>Norwegian</source>
         <translation>norvégien</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Italian</source>
         <translation>italien</translation>
     </message>
@@ -579,6 +579,29 @@
     </message>
 </context>
 <context>
+    <name>Opal.LinkHandler</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <source>External Link</source>
+        <translation type="unfinished">Lien externe</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
+        <source>Open in browser</source>
+        <translation type="unfinished">Ouvrir dans le navigateur</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
+        <source>Copied to clipboard: %1</source>
+        <translation type="unfinished">Copié dans le presse-papiers&amp;nbsp;: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished">Copier dans le presse-papiers</translation>
+    </message>
+</context>
+<context>
     <name>PinPage</name>
     <message>
         <location filename="../qml/pages/PinPage.qml" line="31"/>
@@ -984,7 +1007,6 @@
         <translation type="unfinished">
             <numerusform>... et %n de plus</numerusform>
             <numerusform>... et %n de plus</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
