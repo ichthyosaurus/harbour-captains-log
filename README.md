@@ -46,6 +46,7 @@ Captain's Log requires the following permissions:
 
 
 
+
 ## Help and support
 
 You are welcome to [leave a comment in the forum](https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753)

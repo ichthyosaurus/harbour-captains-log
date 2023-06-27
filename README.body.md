@@ -4,7 +4,7 @@ dnl/// SPDX-License-Identifier: GFDL-1.3-or-later
 ifdef(${__X_summary}, ${
 __name is a simple diary application for keeping track of your thoughts.
 })dnl
-
+ifdef(${__X_description}, ${
 ifdef(${__X_readme}, ${This repository contains the development of version 2.0.0 and upwards of
 Captain's Log. Previous versions were developed by the original author
 [AlphaX2](https://github.com/AlphaX2/Captains-Log-Sailfish).
@@ -33,3 +33,4 @@ ifdef(${__X_readme}, ${### Planned features
 Captain's Log requires the following permissions:
 
 - Documents: required to export the database to different file formats
+})
