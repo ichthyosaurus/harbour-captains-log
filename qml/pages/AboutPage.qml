@@ -27,6 +27,7 @@ import Sailfish.Silica 1.0 as S
 import Opal.About 1.0 as A
 import Opal.InfoCombo 1.0 as I
 import Opal.ComboData 1.0 as C
+import Opal.LinkHandler 1.0 as L
 
 A.AboutPageBase {
     id: root
@@ -70,6 +71,7 @@ A.AboutPageBase {
         },
         I.OpalInfoComboAttribution {},
         C.OpalComboDataAttribution {},
+        L.OpalLinkHandlerAttribution {},
         A.OpalAboutAttribution {}
     ]
 
