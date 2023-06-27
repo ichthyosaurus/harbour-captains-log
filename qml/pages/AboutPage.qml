@@ -31,22 +31,29 @@ import Opal.LinkHandler 1.0 as L
 
 A.AboutPageBase {
     id: root
-    allowedOrientations: S.Orientation.All
 
     appName: appWindow.appName
-    appIcon: Qt.resolvedUrl("../images/harbour-captains-log.png")
+    appIcon: Qt.resolvedUrl("../images/%1.png").arg(Qt.application.name)
     appVersion: APP_VERSION
     appRelease: APP_RELEASE
-    description: qsTr("A simple diary application for keeping track of your thoughts.")
+
     allowDownloadingLicenses: false
-
-    mainAttributions: ["2020-2023 Mirian Margiani", "2020 Gabriel Berkigt"]
-    sourcesUrl: "https://github.com/ichthyosaurus/harbour-captains-log"
+    sourcesUrl: "https://github.com/ichthyosaurus/%1".arg(Qt.application.name)
     homepageUrl: "https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753"
-    translationsUrl: "https://hosted.weblate.org/projects/harbour-captains-log/translations"
+    translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
     changelogList: Qt.resolvedUrl("../Changelog.qml")
-
     licenses: A.License { spdxId: "GPL-3.0-or-later" }
+
+    donations.text: donations.defaultTextCoffee
+    donations.services: [
+        A.DonationService {
+            name: "Liberapay"
+            url: "https://liberapay.com/ichthyosaurus"
+        }
+    ]
+
+    description: qsTr("A simple diary application for keeping track of your thoughts.")
+    mainAttributions: ["2020-2023 Mirian Margiani", "2020 Gabriel Berkigt"]
 
     attributions: [
         A.Attribution {
@@ -73,14 +80,6 @@ A.AboutPageBase {
         C.OpalComboDataAttribution {},
         L.OpalLinkHandlerAttribution {},
         A.OpalAboutAttribution {}
-    ]
-
-    donations.text: donations.defaultTextCoffee
-    donations.services: [
-        A.DonationService {
-            name: "Liberapay"
-            url: "https://liberapay.com/ichthyosaurus"
-        }
     ]
 
     contributionSections: [
