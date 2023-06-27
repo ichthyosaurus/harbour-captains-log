@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Italian</source>
-        <translation type="unfinished">italien</translation>
+        <translation>italien</translation>
     </message>
 </context>
 <context>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
         <source>Delete</source>
-        <translation type="unfinished">Effacer</translation>
+        <translation>Effacer</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
@@ -359,7 +359,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Search</source>
-        <translation type="unfinished">Recherche</translation>
+        <translation>Recherche</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="69"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
         <source>Search</source>
-        <translation type="unfinished">Recherche</translation>
+        <translation>Recherche</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="53"/>
         <source>Search</source>
-        <translation type="unfinished">Recherche</translation>
+        <translation>Recherche</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
@@ -933,7 +933,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="45"/>
         <source>Settings</source>
-        <translation type="unfinished">Paramètres</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="54"/>
