@@ -4,16 +4,12 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    Attribution {
-#        name: "Opal.LinkHandler"
-#        entries: "2020-2023 Mirian Margiani"
-#        licenses: License { spdxId: "GPL-3.0-or-later"}
-#        sources: "https://github.com/Pretty-SFOS/opal-linkhandler"
-#        homepage: "https://github.com/Pretty-SFOS/opal"
-#    }
+#    1. Import "../modules/Opal/Attributions" in your “About” page.
+#    2. Attribute this module by adding "OpalLinkHandlerAttribution {}"
+#       to the "attributions" list property of the “About” page.
 
 module: Opal.LinkHandler (opal-linkhandler)
-version: 1.0.0 (git:bc177fe)
+version: 2.0.0 (git:85fba01)
 description: This module provides a link handler to open or copy external links.
 maintainers: ichthyosaurus
 attribution: 2020-2023 Mirian Margiani

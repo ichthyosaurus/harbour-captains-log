@@ -29,7 +29,7 @@ wrapMode:Text.Wrap
 }}ButtonLayout{preferredWidth:Theme.buttonWidthLarge
 anchors{bottom:parent.bottom
 bottomMargin:(root.orientation&Orientation.LandscapeMask&&Screen.sizeCategory<=Screen.Medium)?Theme.itemSizeExtraSmall:Theme.itemSizeMedium
-}Button{text:qsTranslate("Opal.LinkHandler","Open in browser")
+}Button{text:/^http[s]?:\/\// .test(externalUrl)?qsTranslate("Opal.LinkHandler","Open in browser"):qsTranslate("Opal.LinkHandler","Open externally")
 onClicked:{Qt.openUrlExternally(externalUrl)
 pageStack.pop()
 }}Button{Notification{id:copyNotification

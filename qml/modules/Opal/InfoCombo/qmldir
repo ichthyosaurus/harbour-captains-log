@@ -5,5 +5,3 @@ module Opal.InfoCombo
 InfoCombo 1.0 InfoCombo.qml
 InfoComboSection 1.0 InfoComboSection.qml
 InfoMenuItem 1.0 InfoMenuItem.qml
-# generated files:
-OpalInfoComboAttribution 1.0 OpalInfoComboAttribution.qml

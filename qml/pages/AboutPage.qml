@@ -25,9 +25,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0 as S
 import Opal.About 1.0 as A
-import Opal.InfoCombo 1.0 as I
-import Opal.ComboData 1.0 as C
-import Opal.LinkHandler 1.0 as L
+import "../modules/Opal/Attributions"
 
 A.AboutPageBase {
     id: root
@@ -76,10 +74,10 @@ A.AboutPageBase {
             sources: "https://github.com/thp/pyotherside"
             homepage: "https://thp.io/2011/pyotherside/"
         },
-        I.OpalInfoComboAttribution {},
-        C.OpalComboDataAttribution {},
-        L.OpalLinkHandlerAttribution {},
-        A.OpalAboutAttribution {}
+        OpalInfoComboAttribution {},
+        OpalComboDataAttribution {},
+        OpalLinkHandlerAttribution {},
+        OpalAboutAttribution {}
     ]
 
     contributionSections: [

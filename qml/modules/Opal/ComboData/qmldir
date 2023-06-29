@@ -3,5 +3,3 @@ module Opal.ComboData
 # SPDX-FileCopyrightText: 2023 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 ComboData 1.0 ComboData.qml
-# generated files:
-OpalComboDataAttribution 1.0 OpalComboDataAttribution.qml
