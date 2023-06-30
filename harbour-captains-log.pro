@@ -61,18 +61,18 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS = \
     translations/harbour-captains-log-cs.ts    \
     translations/harbour-captains-log-de.ts    \
-    translations/harbour-captains-log-en_US.ts \
+    translations/harbour-captains-log-en.ts    \
     translations/harbour-captains-log-es.ts    \
     translations/harbour-captains-log-et.ts    \
-    translations/harbour-captains-log-fi_FI.ts \
+    translations/harbour-captains-log-fi.ts    \
     translations/harbour-captains-log-fr.ts    \
     translations/harbour-captains-log-hu.ts    \
     translations/harbour-captains-log-id.ts    \
-    translations/harbour-captains-log-it_IT.ts \
+    translations/harbour-captains-log-it.ts    \
     translations/harbour-captains-log-nb_NO.ts \
     translations/harbour-captains-log-nl.ts    \
     translations/harbour-captains-log-pl.ts    \
-    translations/harbour-captains-log-ru_RU.ts \
+    translations/harbour-captains-log-ru.ts    \
     translations/harbour-captains-log-sk.ts    \
     translations/harbour-captains-log-sv.ts    \
     translations/harbour-captains-log-tr.ts    \
