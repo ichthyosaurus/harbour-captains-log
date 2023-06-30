@@ -22,7 +22,7 @@ QtObject {
 EOF
 
 grep -Poe "\btr\('''.*?'''(, .*?)?\)" \
-        qml/diary.py \
+        qml/py/diary.py \
         qml/templates/* \
     | \
     grep -Poe "'''.*?'''" -o | \
