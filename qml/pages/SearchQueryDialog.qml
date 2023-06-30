@@ -9,6 +9,7 @@ import Sailfish.Silica 1.0
 import SortFilterProxyModel 0.2
 import Opal.InfoCombo 1.0 as I
 import Opal.ComboData 1.0 as C
+import Opal.LinkHandler 1.0 as L
 import "../components"
 
 Dialog {
@@ -183,6 +184,7 @@ Dialog {
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Search syntax")
+                linkHandler: L.LinkHandler.openOrCopyUrl
 
                 property int currentData
                 property var indexOfData
@@ -232,6 +234,7 @@ Dialog {
                 currentIndex: 0
                 enabled: textSyntax.currentItem.mode === RegExpFilter.FixedString
                 label: qsTr("Search mode")
+                linkHandler: L.LinkHandler.openOrCopyUrl
 
                 Binding on currentIndex {
                     when: !textMode.enabled
@@ -269,6 +272,7 @@ Dialog {
                 width: parent.width
                 currentIndex: 0
                 label: qsTr("Bookmarks")
+                linkHandler: L.LinkHandler.openOrCopyUrl
 
                 property int currentData
                 property var indexOfData
@@ -305,6 +309,7 @@ Dialog {
                 visible: enableFilterSelected
                 currentIndex: 0
                 label: qsTr("Selection")
+                linkHandler: L.LinkHandler.openOrCopyUrl
 
                 property int currentData
                 property var indexOfData

@@ -8,6 +8,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Opal.InfoCombo 1.0 as I
 import Opal.ComboData 1.0 as C
+import Opal.LinkHandler 1.0 as L
 import "../components"
 
 Dialog {
@@ -73,6 +74,7 @@ Dialog {
 
             width: parent.width
             label: qsTr("Export file format")
+            linkHandler: L.LinkHandler.openOrCopyUrl
 
             property var options: ["txt", "md", "tex.md", "csv", "raw"]
 
