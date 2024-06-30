@@ -277,7 +277,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="191"/>
         <source>Data is being exported to %1</source>
-        <translation>Daten werden nach %1 exportiert.</translation>
+        <translation>Daten werden nach %1 exportiert</translation>
     </message>
 </context>
 <context>
@@ -583,12 +583,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished">Externer Link</translation>
+        <translation>Externer Link</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation type="unfinished">Im Browser öffnen</translation>
+        <translation>Im Browser öffnen</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
@@ -598,12 +598,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished">In die Zwischenablage kopiert: %1</translation>
+        <translation>In die Zwischenablage kopiert: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished">In die Zwischenablage kopieren</translation>
+        <translation>In die Zwischenablage kopieren</translation>
     </message>
 </context>
 <context>
