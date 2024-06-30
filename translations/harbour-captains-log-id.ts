@@ -11,7 +11,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="53"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikasi buku harian sederhana untuk melacak pikiran Anda.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="88"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Italian</source>
-        <translation type="unfinished">Bahasa Italia</translation>
+        <translation>Italia</translation>
     </message>
 </context>
 <context>
@@ -64,17 +64,17 @@
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="35"/>
         <source>Saved your protection code.</source>
-        <translation type="unfinished"></translation>
+        <translation>Menyimpan kode perlindungan Anda.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="29"/>
         <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Masukkan kode keamanan lama Anda</translation>
     </message>
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="29"/>
         <source>Enter a new security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Masukkan kode keamanan baru</translation>
     </message>
 </context>
 <context>
@@ -82,13 +82,13 @@
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="14"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanggal</translation>
     </message>
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">Pilih</translation>
+        <translation>Pilih</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../qml/components/DateTimePickerCombo.qml" line="18"/>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>tidak pernah</translation>
     </message>
 </context>
 <context>
@@ -104,17 +104,17 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="36"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
         <source>Delete</source>
-        <translation type="unfinished">Hapus</translation>
+        <translation>Hapus</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>suasana hati: %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="113"/>
