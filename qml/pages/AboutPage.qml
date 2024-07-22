@@ -74,10 +74,11 @@ A.AboutPageBase {
             sources: "https://github.com/thp/pyotherside"
             homepage: "https://thp.io/2011/pyotherside/"
         },
+        OpalAboutAttribution {},
+        OpalSupportMeAttribution {},
         OpalInfoComboAttribution {},
         OpalComboDataAttribution {},
-        OpalLinkHandlerAttribution {},
-        OpalAboutAttribution {}
+        OpalLinkHandlerAttribution {}
     ]
 
     contributionSections: [
