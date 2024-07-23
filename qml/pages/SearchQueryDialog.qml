@@ -401,7 +401,7 @@ Dialog {
                 DatePickerCombo {
                     id: dateMax
                     width: parent.width / 2
-                    label: qsTr("Till")
+                    label: qsTr("Until")
                     emptyText: qsTr("anytime", "search option, as in: " +
                                     "“match all entries regardless of their date”")
                 }
