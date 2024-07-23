@@ -70,7 +70,7 @@
 <context>
     <name>ChangePinPage</name>
     <message>
-        <location filename="../qml/pages/ChangePinPage.qml" line="35"/>
+        <location filename="../qml/pages/ChangePinPage.qml" line="36"/>
         <source>Saved your protection code.</source>
         <translation>Der Sicherheitscode wurde gespeichert.</translation>
     </message>
@@ -153,7 +153,7 @@
         <translation>Nachtrag vom %1</translation>
     </message>
     <message>
-        <location filename="../qml/components/EntryElementFull.qml" line="85"/>
+        <location filename="../qml/components/EntryElementFull.qml" line="86"/>
         <source>mood: %1</source>
         <translation>Stimmung: %1</translation>
     </message>
@@ -698,18 +698,18 @@
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ReadPage.qml" line="71"/>
+        <location filename="../qml/pages/ReadPage.qml" line="109"/>
         <source>Mood</source>
         <translation>Stimmung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ReadPage.qml" line="118"/>
+        <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
         <translation>Nachtrag vom %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ReadPage.qml" line="188"/>
+        <location filename="../qml/pages/ReadPage.qml" line="227"/>
         <source>last edited on %1</source>
         <translation>zuletzt am %1 geändert</translation>
     </message>
@@ -904,35 +904,35 @@
         <translation>Stimmung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="368"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="396"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="370"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="398"/>
         <source>From</source>
         <translation>Von</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="378"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="380"/>
         <source>To</source>
         <translation>Bis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="387"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="389"/>
         <source>Entry date</source>
         <translation>Eintragsdatum</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="397"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="405"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="407"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>irgendwann</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="404"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="406"/>
         <source>Until</source>
         <translation>Bis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="413"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
         <source>Press and hold to reset the date.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1046,12 +1046,12 @@
         <translation>Sicherheitscode aktivieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
         <source>Set Code</source>
         <translation>Code festlegen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
         <source>Change Code</source>
         <translation>Code ändern</translation>
     </message>
@@ -1061,12 +1061,42 @@
         <translation>Sicherheit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="80"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="83"/>
+        <source>Appearance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="88"/>
+        <source>Enable mood tracking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="89"/>
+        <source>Disable this setting to disable all mood related features completely.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="98"/>
+        <source>Always ask for mood</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
+        <source>This enables asking for your mood immediately when creating a new entry.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="116"/>
         <source>Export features</source>
         <translation>Export-Möglichkeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="87"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="123"/>
         <source>Export data</source>
         <translation>Daten exportieren</translation>
     </message>
@@ -1076,7 +1106,7 @@
         <translation>Bitte beachten Sie, dass dieser Code nur den Zugriff auf die App verhindert. Die Datenbank ist nicht verschlüsselt und der Code ist nicht sicher gespeichert.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="92"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="128"/>
         <source>Database backup</source>
         <translation>Datenbank-Backup</translation>
     </message>
@@ -1123,88 +1153,88 @@
 <context>
     <name>WritePage</name>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="139"/>
+        <location filename="../qml/pages/WritePage.qml" line="143"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="138"/>
+        <location filename="../qml/pages/WritePage.qml" line="142"/>
         <source>New Entry</source>
         <translation>Neuer Eintrag</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="178"/>
+        <location filename="../qml/pages/WritePage.qml" line="183"/>
         <source>Title</source>
         <translation>Überschrift</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="201"/>
+        <location filename="../qml/pages/WritePage.qml" line="206"/>
         <source>Entry</source>
         <translation>Eintrag</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="138"/>
+        <location filename="../qml/pages/WritePage.qml" line="142"/>
         <source>Edit Entry</source>
         <translation>Eintrag bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="164"/>
+        <location filename="../qml/pages/WritePage.qml" line="168"/>
         <source>How did you feel?</source>
         <translation>Wie haben Sie sich gefühlt?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="164"/>
+        <location filename="../qml/pages/WritePage.qml" line="168"/>
         <source>How do you feel?</source>
         <translation>Wie fühlen Sie sich?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="177"/>
+        <location filename="../qml/pages/WritePage.qml" line="182"/>
         <source>Add a title</source>
         <translation>Eine Überschrift hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="200"/>
+        <location filename="../qml/pages/WritePage.qml" line="205"/>
         <source>What do you want to say?</source>
         <translation>Was möchten Sie sagen?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="149"/>
+        <location filename="../qml/pages/WritePage.qml" line="153"/>
         <source>never</source>
         <translation>nie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="119"/>
+        <location filename="../qml/pages/WritePage.qml" line="123"/>
         <source>Discarded all changes</source>
         <translation>Alle Änderungen verworfen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="121"/>
+        <location filename="../qml/pages/WritePage.qml" line="125"/>
         <source>Discarded the entry</source>
         <translation>Eintrag verworfen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="140"/>
+        <location filename="../qml/pages/WritePage.qml" line="144"/>
         <source>Discard</source>
         <translation>Verwerfen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="144"/>
+        <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="148"/>
+        <location filename="../qml/pages/WritePage.qml" line="152"/>
         <source>Last edited: %1</source>
         <translation>Zuletzt geändert: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="165"/>
+        <location filename="../qml/pages/WritePage.qml" line="169"/>
         <source>Your mood</source>
         <translation>Ihre Stimmung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/WritePage.qml" line="230"/>
-        <location filename="../qml/pages/WritePage.qml" line="231"/>
+        <location filename="../qml/pages/WritePage.qml" line="235"/>
+        <location filename="../qml/pages/WritePage.qml" line="236"/>
         <source>Tags</source>
         <translation>Schlagwörter</translation>
     </message>
@@ -1296,75 +1326,75 @@
         <translation>d. MMM</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="353"/>
+        <location filename="../qml/harbour-captains-log.qml" line="355"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Ein unerwarteter Fehler ist aufgetreten. Bitte starten Sie die App neu und überprüfen Sie die Logs.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="308"/>
-        <location filename="../qml/harbour-captains-log.qml" line="324"/>
+        <location filename="../qml/harbour-captains-log.qml" line="310"/>
+        <location filename="../qml/harbour-captains-log.qml" line="326"/>
         <source>Database backup</source>
         <translation>Datenbank-Backup</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="318"/>
+        <location filename="../qml/harbour-captains-log.qml" line="320"/>
         <source>Backup finished</source>
         <translation>Backup abgeschlossen</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="319"/>
+        <location filename="../qml/harbour-captains-log.qml" line="321"/>
         <source>A database backup has been created in “%1”.</source>
         <translation>Ein Datenbank-Backup wurde in „%1“ angelegt.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="366"/>
-        <location filename="../qml/harbour-captains-log.qml" line="414"/>
-        <location filename="../qml/harbour-captains-log.qml" line="453"/>
+        <location filename="../qml/harbour-captains-log.qml" line="368"/>
+        <location filename="../qml/harbour-captains-log.qml" line="416"/>
+        <location filename="../qml/harbour-captains-log.qml" line="455"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="383"/>
+        <location filename="../qml/harbour-captains-log.qml" line="385"/>
         <source>The local data folder at “%1” is not writable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="386"/>
+        <location filename="../qml/harbour-captains-log.qml" line="388"/>
         <source>Failed to load the database due to an unknown error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="389"/>
+        <location filename="../qml/harbour-captains-log.qml" line="391"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="393"/>
+        <location filename="../qml/harbour-captains-log.qml" line="395"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="397"/>
+        <location filename="../qml/harbour-captains-log.qml" line="399"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="401"/>
+        <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="408"/>
+        <location filename="../qml/harbour-captains-log.qml" line="410"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="422"/>
+        <location filename="../qml/harbour-captains-log.qml" line="424"/>
         <source>Backup failed</source>
         <translation>Backup fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="453"/>
+        <location filename="../qml/harbour-captains-log.qml" line="455"/>
         <source>The database could not be loaded.</source>
         <translation>Die Datenbank konnte nicht geladen werden.</translation>
     </message>
