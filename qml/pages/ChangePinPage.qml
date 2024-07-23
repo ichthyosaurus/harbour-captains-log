@@ -31,6 +31,7 @@ PinPage {
         if (expectedCode === "") {
             // set new pin
             config.protectionCode = enteredCode
+            config.useCodeProtection = true
             pageStack.pop(settingsPage) // pop back to settings page
             showMessage(qsTr("Saved your protection code."))
         } else {

@@ -60,6 +60,9 @@ Page {
                 onCheckedChanged: {
                     if (checked && config.protectionCode === "-1") {
                         passcodeButton.clicked(null)
+                    } else if (!checked) {
+                        config.useCodeProtection = false
+                        config.protectionCode = "-1"
                     }
                 }
             }
