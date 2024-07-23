@@ -96,6 +96,11 @@ Page {
                     onClicked: py.call("diary.backup_database")
                 }
             }
+
+            Item {
+                width: parent.width
+                height: Theme.horizontalPageMargin
+            }
         }
     }
 }
