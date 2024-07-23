@@ -191,9 +191,10 @@ Dialog {
                 C.ComboData { dataRole: "mode" }
 
                 I.InfoComboSection {
-                    title: qsTr("Note")
-                    text: qsTr("Simplified matching is only possible in “plain text” " +
-                               "mode.")
+                    text: qsTr("Use simplified plain text searching if you are unsure " +
+                               "how you spelled something in the past: select “plain text” " +
+                               "as search syntax here, and “simplified” as search mode in " +
+                               "the separate setting.")
                     placeAtTop: true
                 }
 
@@ -225,6 +226,13 @@ Dialog {
                             "Search the Internet if you want to learn more about " +
                             "regular expressions.")
                     }
+                }
+
+                I.InfoComboSection {
+                    placeAtTop: false
+                    title: qsTr("Note")
+                    text: "The search mode “simplified” is only " +
+                          "available when the “plain text” search syntax is selected."
                 }
             }
 
@@ -264,6 +272,13 @@ Dialog {
                             "containing punctuation marks like “-”, “!”, or “#”."
                         )
                     }
+                }
+
+                I.InfoComboSection {
+                    placeAtTop: false
+                    title: qsTr("Note")
+                    text: "The search mode “simplified” is only " +
+                          "available when the “plain text” search syntax is selected."
                 }
             }
 
@@ -388,6 +403,15 @@ Dialog {
                     emptyText: qsTr("anytime", "search option, as in: " +
                                     "“match all entries regardless of their date”")
                 }
+            }
+
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("Press and hold to reset the date.")
+                font.pixelSize: Theme.fontSizeSmall
+                wrapMode: Text.Wrap
+                color: Theme.secondaryHighlightColor
             }
         }
     }

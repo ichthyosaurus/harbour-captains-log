@@ -86,7 +86,6 @@ Dialog {
             }
 
             I.InfoComboSection {
-                title: qsTr("Note")
                 text: qsTr("Data exports are meant for archival/printing and not as a backup. " +
                            "If you want to manually backup the database, select the " +
                            '“Database backup” option, or use ' +
