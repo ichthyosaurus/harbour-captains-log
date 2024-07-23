@@ -11,7 +11,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="53"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Una sencilla aplicación de diario para llevar un registro de tus pensamientos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="88"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Italian</source>
-        <translation type="unfinished">Italiano</translation>
+        <translation>Italiano</translation>
     </message>
 </context>
 <context>
@@ -64,17 +64,17 @@
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="35"/>
         <source>Saved your protection code.</source>
-        <translation type="unfinished"></translation>
+        <translation>El código de seguridad ha sido guardado.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="29"/>
         <source>Enter your old security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingrese su antiguo código de seguridad</translation>
     </message>
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="29"/>
         <source>Enter a new security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca un nuevo código de seguridad</translation>
     </message>
 </context>
 <context>
@@ -82,13 +82,13 @@
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="14"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha</translation>
     </message>
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation type="unfinished">Seleccionar</translation>
+        <translation>Seleccionar</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../qml/components/DateTimePickerCombo.qml" line="18"/>
         <source>never</source>
-        <translation type="unfinished"></translation>
+        <translation>nunca</translation>
     </message>
 </context>
 <context>
@@ -104,23 +104,23 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="36"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
         <source>Delete</source>
-        <translation type="unfinished">Borrar</translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>estado de ánimo: %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="113"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Anexo de %1</translation>
     </message>
 </context>
 <context>
@@ -129,12 +129,12 @@
         <location filename="../qml/components/EntryElementFull.qml" line="54"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Anexo de %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="85"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>estado de ánimo: %1</translation>
     </message>
 </context>
 <context>
@@ -143,12 +143,12 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Anexo de %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>estado de ánimo: %1</translation>
     </message>
 </context>
 <context>
@@ -156,22 +156,22 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="54"/>
         <source>Export your data</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar sus datos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="60"/>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre del archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="98"/>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto sin formato</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="124"/>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores separados por comas (CSV)</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="106"/>
@@ -181,37 +181,37 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="115"/>
         <source>Markdown for Pandoc</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown para Pandoc</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="87"/>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="88"/>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Las exportaciones de los datos están pensadas para archivar/imprimir y no como copia de seguridad. Si desea realizar una copia de seguridad manual de la base de datos, seleccione la opción &quot;Copia de seguridad de la base de datos&quot; o utilice &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; para crear una copia de seguridad.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="132"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia de seguridad de la base de datos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="61"/>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo se guardará en su carpeta de documentos. El nombre no debe contener subcarpetas.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="75"/>
         <source>Export file format</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar el formato del archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="100"/>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportamos los registros a un archivo sin formato, que puedes, por ejemplo, imprimir. Tenga en cuenta que las líneas largas normalmente se muestran sin saltos de línea.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="108"/>
