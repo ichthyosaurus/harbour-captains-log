@@ -859,7 +859,7 @@
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="382"/>
-        <source>Till</source>
+        <source>Until</source>
         <translation>Доки</translation>
     </message>
 </context>
