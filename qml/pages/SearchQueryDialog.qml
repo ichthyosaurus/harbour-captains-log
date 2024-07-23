@@ -369,6 +369,7 @@ Dialog {
                     value: appWindow.moodTexts[menu.selectedIndex]
                     property int moodIndex: menu.selectedIndex
                     menu: MoodMenu { selectedIndex: appWindow.moodTexts.length-1 }
+                    onPressAndHold: _controller.openMenu()
                 }
 
                 ComboBox {
@@ -378,6 +379,7 @@ Dialog {
                     value: appWindow.moodTexts[menu.selectedIndex]
                     property int moodIndex: menu.selectedIndex
                     menu: MoodMenu { selectedIndex: 0 }
+                    onPressAndHold: _controller.openMenu()
                 }
             }
 
