@@ -79,6 +79,7 @@ ListItem {
         }
 
         Label {
+            visible: config.useMoodTracking
             width: parent.width
             truncationMode: TruncationMode.Fade
             font.pixelSize: Theme.fontSizeSmall

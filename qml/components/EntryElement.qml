@@ -173,8 +173,10 @@ ListItem {
             onClicked: setBookmark(realModel, model.index, model.rowid, !model.bookmark)
 
             onPressAndHold: {
-                root.menu = moodMenuComponent
-                root.openMenu()
+                if (config.useMoodTracking) {
+                    root.menu = moodMenuComponent
+                    root.openMenu()
+                }
             }
 
             Column {
@@ -194,6 +196,7 @@ ListItem {
                 }
 
                 HighlightImage {
+                    visible: config.useMoodTracking
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: 65
                     height: width

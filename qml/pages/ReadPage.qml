@@ -59,9 +59,47 @@ Page {
             spacing: Theme.paddingMedium
 
             PageHeader {
+                id: header
+                interactive: !config.useMoodTracking
                 title: appWindow.formatDate(entry.entry_date, "dddd")
                 description: appWindow.formatDate(
                     entry.entry_date, appWindow.dateTimeFormat, entry.entry_tz)
+
+                Connections {
+                    target: header._navigateForwardMouseArea
+                    onClicked: headerBookmarkButton.clicked(mouse)
+                }
+
+                IconButton {
+                    id: headerBookmarkButton
+                    visible: !config.useMoodTracking
+                    parent: header.extraContent
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        verticalCenterOffset: Theme.paddingMedium
+                        left: parent.left
+                        leftMargin: Theme.paddingMedium
+                        right: parent.right
+                    }
+
+                    icon.anchors {
+                        centerIn: undefined
+                        left: headerBookmarkButton.left
+                    }
+
+                    Binding on highlighted {
+                        when: header._navigateForwardMouseArea &&
+                              header._navigateForwardMouseArea.containsPress
+                        value: true
+                    }
+
+                    enabled: root.enabled
+                    icon.source: "image://theme/icon-m-favorite" + (entry.bookmark ? "-selected" : "")
+                    onClicked: {
+                        appWindow.setBookmark(
+                            model, entry.index, entry.rowid, !entry.bookmark)
+                    }
+                }
             }
 
             ComboBox {
@@ -70,6 +108,7 @@ Page {
                 rightMargin: Theme.horizontalPageMargin + Theme.iconSizeMedium
                 label: qsTr("Mood")
                 value: appWindow.moodTexts[entry.mood]
+                visible: config.useMoodTracking
 
                 menu: null
                 onClicked: bookmarkButton.clicked(null)

@@ -80,6 +80,39 @@ Page {
             }
 
             SectionHeader {
+                text: qsTr("Appearance")
+            }
+
+            TextSwitch {
+                id: moodSwitch
+                text: qsTr("Enable mood tracking")
+                description: qsTr("Disable this setting to disable all " +
+                                  "mood related features completely.") + " " +
+                             qsTr("Note that entries will save your mood as " +
+                                  "“okay” if this setting is disabled.")
+                checked: config.useMoodTracking
+                onCheckedChanged: config.useMoodTracking = checked
+            }
+
+            TextSwitch {
+                text: qsTr("Always ask for mood")
+                description: qsTr("This enables asking for your mood " +
+                                  "immediately when creating a new entry.")
+                onClicked: config.askForMood = checked
+                enabled: moodSwitch.checked
+
+                Binding on checked {
+                    when: !moodSwitch.checked
+                    value: false
+                }
+
+                Binding on checked {
+                    when: moodSwitch.checked
+                    value: config.askForMood
+                }
+            }
+
+            SectionHeader {
                 text: qsTr("Export features")
             }
 

@@ -257,6 +257,8 @@ ApplicationWindow
         property string protectionCode: "-1"
         property string lastBackupDate: ""
         property string lastExportKind: "txt"
+        property bool useMoodTracking: true
+        property bool askForMood: true
 
         function migrate() {
             if (configMigrated === 0) {

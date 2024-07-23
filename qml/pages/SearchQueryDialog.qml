@@ -357,10 +357,12 @@ Dialog {
 
             SectionHeader {
                 text: qsTr("Mood")
+                visible: config.useMoodTracking
             }
 
             Row {
                 width: parent.width
+                visible: config.useMoodTracking
 
                 ComboBox {
                     id: moodMin

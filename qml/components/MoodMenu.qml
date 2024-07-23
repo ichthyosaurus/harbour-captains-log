@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 
 ContextMenu {
     id: moodMenu
+
     property int selectedIndex: 2
 
     Flow {
@@ -55,4 +56,13 @@ ContextMenu {
             }
         }
     }
+
+    // not implemented: it is not possible to prevent the
+    // menu item from being highlighted when the menu opens
+//    MenuItem {
+//        text: qsTr("undefined", "as in “do not store any value to describe my current mood”")
+//        onClicked: {
+//            moodMenu.selectedIndex = -1
+//        }
+//    }
 }

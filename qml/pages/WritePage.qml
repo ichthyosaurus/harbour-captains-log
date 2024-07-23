@@ -35,7 +35,11 @@ Dialog {
         dbCurrentDate = new Date().toLocaleString(Qt.locale(), dbDateFormat);
 
         if (!editing) {
-            moodCombo.clicked(null) // open mood menu
+            if (config.useMoodTracking && config.askForMood) {
+                moodCombo.clicked(null) // open mood menu
+            } else {
+                entryArea.forceActiveFocus()
+            }
         }
     }
 
@@ -163,6 +167,7 @@ Dialog {
                 width: parent.width
                 description: editing ? qsTr("How did you feel?") : qsTr("How do you feel?")
                 label: qsTr("Your mood")
+                visible: config.useMoodTracking
 
                 menu: MoodMenu {
                     id: moodMenu
