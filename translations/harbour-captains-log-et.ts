@@ -64,7 +64,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Palun kaalu hetkeks, kas sul on viisil või teisel võimalik seda arendusprojekti toetada.</translation>
     </message>
 </context>
 <context>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>näita vähem</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>näita rohkem</translation>
     </message>
 </context>
 <context>
@@ -419,62 +419,62 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Toeta meid Liberapay vahendusel</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toetuseks sobib ka kohvitassi, pitsaviilu või teatripileti suurusjärgus summa.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tõlgi Weblate&apos;i abil</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aita seda rakendust tõlkida nii paljudesse keeltesse, kui võimalik.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Osale arenduses Githubis</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Osale rakenduse haldamisel ja pakendamisel, uue lähtekoodi kirjutamisel või oluliste veateadete koostamisel.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Miks see peaks oluline olema?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seda tarkvara on hoole ja armastusega arendanud üks arendaja oma vabast ajast ning tulemus on sulle saadaval tasuta.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ma arendan avatud lähtekoodiga tarkvara, sest selline tegevus on eetiline, aga samas ka suurepärane hobi. Kuid samas kulub selliseks arendustööks palju aega ja märgatavaid jõupingutusi. Kuna Sailfishi kasutamine ja igapäevaelu on seotud kuludega, siis ma vajan sinu abi, et oleks võimalik selliste mitteäriliste projektidega tegeleda.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Miks peaksid rahaliselt toetama?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla on tõstnud hindu ja proovib sundida (tasuta töötavaid) arendajaid maksma Sailfishi kasutamise eest tasu.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui see on sul võimalik, siis sinu rahaline toetus võimaldab mul jätkata rakenduste loomist ja arendamist Sailfishile. Igasugune summa on teretulnud, kas kohvitassi või pitsaviilu jagu, aga ka enamgi.</translation>
     </message>
 </context>
 <context>
@@ -759,7 +759,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="194"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui sa pole kindel, kuidas sa minevikus andmeid otsisid või kirjutasid, siis kasuta lihtsustatud otsingut vormindamata teksti alusel. Selleks vali süntaksiks „vormindamata tekst“ ja eraldi seadistusena otsinguviisiks „lihtne“.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="233"/>
@@ -934,7 +934,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuupäeva lähtestamiseks vajuta alla ja hoia all.</translation>
     </message>
 </context>
 <context>
@@ -1063,32 +1063,32 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="83"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Välimus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="88"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta meeleolu logimist</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="89"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui sa ei taha mitte ühtegi meeleoluga seotud asjaolu kasutada, siis lülita see eelistus välja.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui see eelistus pole kasutusel, siis palun arvesta, et meeleolu väärtuseks jääb alati „tavaline“.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="98"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Küsi alati meeleolu kohta</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selle eelistusega määrad, et kohe peale uue kirje lisamist küsime ka meeleolu kohta.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="116"/>
@@ -1116,27 +1116,27 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Hei!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tänud, et kasutad minu pisikest rakendust! Kas sa sooviksid aidata?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tänan sind toetuse eest!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuleta mulle hiljem meelde</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära enam küsi minult uuesti</translation>
     </message>
 </context>
 <context>
