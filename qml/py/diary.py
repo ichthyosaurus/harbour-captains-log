@@ -2,7 +2,7 @@
 #
 # This file is part of harbour-captains-log.
 # SPDX-FileCopyrightText: 2020 Gabriel Berkigt
-# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
@@ -15,6 +15,7 @@ import glob
 import traceback
 import tempfile
 from typing import Dict
+from typing import List
 from typing import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -1097,6 +1098,61 @@ def export(filename: str, kind: str, translations, entries: list = []):
 
         with open(path, "w+", encoding='utf-8') as fd:
             fd.write(content)
+
+
+#
+# BEGIN Statistics Functions
+#
+
+def calculate_statistics(start, end) -> List[float]:
+    if not is_initialized():
+        return
+
+    if not start:
+        start = "0"
+
+    if not end:
+        end = "x"
+
+    DIARY.cursor.execute("""
+        SELECT mood FROM diary
+        WHERE entry_date >= ?
+          AND entry_date <= ?;""", [start, end])
+    rows = DIARY.cursor.fetchall()
+
+    counts = [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+    ]
+
+    total = 0
+
+    for row in rows:
+        mood = row['mood']
+
+        if mood is None:
+            continue
+
+        if mood < 0 or mood >= len(counts):
+            pyotherside.send('error', 'unknown-mood-value', {'value': mood})
+            continue
+
+        counts[row['mood']] += 1
+        total += 1
+
+    if total > 0:
+        statistics = [x / total * 100 for x in counts]
+    else:
+        statistics = counts
+
+    return statistics
+
+
+# END
 
 
 if __name__ == '__main__':

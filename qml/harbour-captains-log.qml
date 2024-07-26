@@ -30,8 +30,7 @@ import Opal.SupportMe 1.0 as M
 
 import "pages"
 
-ApplicationWindow
-{
+ApplicationWindow {
     id: appWindow
     allowedOrientations: defaultAllowedOrientations
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
@@ -243,6 +242,13 @@ ApplicationWindow
     function deleteEntry(model, index, rowid) {
         py.call("diary.delete_entry", [rowid])
         rawModel.remove(_mappedIndex(model, index))
+    }
+
+    function calculateStatistics(from, until, callback) {
+        py.call("diary.calculate_statistics", [from, until], function(stats) {
+            console.log("Calculated statistics:", from, until, stats)
+            callback(stats)
+        })
     }
 
     signal entryUpdated(var rowid, var newEntry)
@@ -480,5 +486,6 @@ ApplicationWindow
         }
 
         pageStack.replaceAbove(null, config.useCodeProtection ? pinPageComponent : firstPage)
+        // pageStack.replaceAbove(null, [firstPage, Qt.resolvedUrl("pages/SettingsPage.qml")])
     }
 }

@@ -6,6 +6,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.0
 import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 import "../components"
@@ -13,6 +14,30 @@ import "../components"
 Page {
     id: root
     allowedOrientations: Orientation.All
+
+    property var moodStats: ([])
+
+    function updateStatistics() {
+        appWindow.calculateStatistics(dateMin.selectedDateString,
+                                      dateMax.selectedDateString,
+                                      function(stats){
+            console.log("got new statistics:", stats)
+
+            if (!!stats) {
+                console.log("updating statistics")
+                moodStats = stats
+                statsGrid.values = stats
+            } else {
+                console.log("clearing statistics")
+                moodStats = []
+                statsGrid.values = []
+            }
+        })
+    }
+
+    Component.onCompleted: {
+        updateStatistics()
+    }
 
     onStatusChanged: {
         if(status === PageStatus.Deactivating) {
@@ -49,7 +74,7 @@ Page {
             GroupedDrawer {
                 title: qsTr("Security")
                 spacing: Theme.paddingLarge
-                isOpen: true
+                isOpen: false
 
                 TextSwitch {
                     id: protectionSwitch
@@ -85,7 +110,7 @@ Page {
             GroupedDrawer {
                 title: qsTr("Appearance")
                 spacing: Theme.paddingLarge
-                isOpen: true
+                isOpen: false
 
                 TextSwitch {
                     id: moodSwitch
@@ -120,7 +145,7 @@ Page {
             GroupedDrawer {
                 title: qsTr("Export and backup")
                 spacing: Theme.paddingLarge
-                isOpen: true
+                isOpen: false
 
                 ButtonLayout {
                     preferredWidth: Theme.buttonWidthLarge
@@ -134,6 +159,50 @@ Page {
                         text: qsTr("Database backup")
                         onClicked: py.call("diary.backup_database")
                     }
+                }
+            }
+
+            GroupedDrawer {
+                id: insights
+                title: qsTr("Insights")
+                spacing: Theme.paddingMedium
+                isOpen: true
+                visible: config.useMoodTracking
+
+                MoodStatisticsGrid {
+                    id: statsGrid
+                    values: insights.moodStats
+                }
+
+                Row {
+                    width: parent.width
+
+                    DatePickerCombo {
+                        id: dateMin
+                        width: parent.width / 2
+                        label: qsTr("From")
+                        emptyText: qsTr("anytime", "search option, as in: " +
+                                        "“match all entries regardless of their date”")
+                        onSelectedDateStringChanged: updateStatistics()
+                    }
+
+                    DatePickerCombo {
+                        id: dateMax
+                        width: parent.width / 2
+                        label: qsTr("Until")
+                        emptyText: qsTr("anytime", "search option, as in: " +
+                                        "“match all entries regardless of their date”")
+                        onSelectedDateStringChanged: updateStatistics()
+                    }
+                }
+
+                Label {
+                    x: Theme.horizontalPageMargin
+                    width: parent.width - 2*x
+                    text: qsTr("Press and hold to reset the date.")
+                    font.pixelSize: Theme.fontSizeSmall
+                    wrapMode: Text.Wrap
+                    color: Theme.secondaryHighlightColor
                 }
             }
         }
