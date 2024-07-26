@@ -1,6 +1,6 @@
 /*
  * This file is part of Captain's Log.
- * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -51,7 +51,7 @@ A.AboutPageBase {
     ]
 
     description: qsTr("A simple diary application for keeping track of your thoughts.")
-    mainAttributions: ["2020-2023 Mirian Margiani", "2020 Gabriel Berkigt"]
+    mainAttributions: ["2020-%1 Mirian Margiani".arg((new Date()).getFullYear()), "2020 Gabriel Berkigt"]
 
     attributions: [
         A.Attribution {
