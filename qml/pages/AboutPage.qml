@@ -74,6 +74,12 @@ A.AboutPageBase {
             sources: "https://github.com/thp/pyotherside"
             homepage: "https://thp.io/2011/pyotherside/"
         },
+        A.Attribution {
+            name: "QChart.js"
+            entries: ["2014 Julien Wintz", "2019-2024 Mirian Margiani"]
+            licenses: A.License { spdxId: "MIT" }
+            sources: "https://web.archive.org/web/20180611014447/https://github.com/jwintz/qchart.js"
+        },
         OpalAboutAttribution {},
         OpalSupportMeAttribution {},
         OpalInfoComboAttribution {},

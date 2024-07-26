@@ -49,6 +49,9 @@ DISTFILES += \
     rpm/harbour-captains-log.yaml \
     translations/*.ts \
     harbour-captains-log.desktop \
+    \
+    qml/qchart/*.qml \
+    qml/qchart/*.js \
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
