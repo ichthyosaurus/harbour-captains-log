@@ -4,7 +4,7 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="86"/>
+        <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Development</source>
         <translation>Arendus</translation>
     </message>
@@ -14,47 +14,47 @@
         <translation>Lihtne päevikurakendus, kuhu saad oma mõtteid talletada.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Programming</source>
         <translation>Koodi kirjutamine</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="99"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Translations</source>
         <translation>Tõlked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="102"/>
+        <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>Swedish</source>
         <translation>rootsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="106"/>
+        <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Chinese</source>
         <translation>hiina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>German</source>
         <translation>saksa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="114"/>
+        <location filename="../qml/pages/AboutPage.qml" line="120"/>
         <source>Finnish</source>
         <translation>soome</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Icon Design</source>
         <translation>Ikooni kujundus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Norwegian</source>
         <translation>norra</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Italian</source>
         <translation>itaalia</translation>
     </message>
@@ -1036,77 +1036,104 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="45"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
         <source>Settings</source>
         <translation>Seadistused</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="54"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
         <source>Activate code protection</source>
         <translation>Kasuta turvakoodi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
         <source>Set Code</source>
         <translation>Sisesta kood</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
         <source>Change Code</source>
         <translation>Muuda koodi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
         <source>Security</source>
         <translation>Turvalisus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="83"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>Appearance</source>
         <translation>Välimus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="88"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
         <source>Enable mood tracking</source>
         <translation>Kasuta meeleolu logimist</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="89"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="118"/>
         <source>Disable this setting to disable all mood related features completely.</source>
         <translation>Kui sa ei taha mitte ühtegi meeleoluga seotud asjaolu kasutada, siis lülita see eelistus välja.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
         <translation>Kui see eelistus pole kasutusel, siis palun arvesta, et meeleolu väärtuseks jääb alati „tavaline“.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Always ask for mood</source>
         <translation>Küsi alati meeleolu kohta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="128"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
         <translation>Selle eelistusega määrad, et kohe peale uue kirje lisamist küsime ka meeleolu kohta.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="116"/>
-        <source>Export features</source>
-        <translation>Eksportimine</translation>
+        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <source>Insights</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="123"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="183"/>
+        <source>From</source>
+        <translation type="unfinished">Alates</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="184"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="193"/>
+        <source>anytime</source>
+        <comment>search option, as in: “match all entries regardless of their date”</comment>
+        <translation type="unfinished">millal iganes</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
+        <source>Until</source>
+        <translation type="unfinished">Kuni</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
+        <source>Press and hold to reset the date.</source>
+        <translation type="unfinished">Kuupäeva lähtestamiseks vajuta alla ja hoia all.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
         <source>Export data</source>
         <translation>Ekspordi andmed</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="55"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
         <translation>Palun arvesta, et turvakood vaid takistab ligipääsu sellele rakendusele. Andmebaas ei ole krüptitud ja turvakood ei ole salvestatud turvalisel viisil.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="128"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <source>Export and backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Database backup</source>
         <translation>Andmebaasi varundus</translation>
     </message>
@@ -1242,159 +1269,159 @@
 <context>
     <name>harbour-captains-log</name>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="133"/>
+        <location filename="../qml/harbour-captains-log.qml" line="132"/>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="49"/>
+        <location filename="../qml/harbour-captains-log.qml" line="48"/>
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
         <translation>Kapteni logiraamat</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="51"/>
+        <location filename="../qml/harbour-captains-log.qml" line="50"/>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
         <translation>&apos;kell&apos; hh&apos;:&apos;mm</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="65"/>
+        <location filename="../qml/harbour-captains-log.qml" line="64"/>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
         <translation>suurepärane</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="66"/>
+        <location filename="../qml/harbour-captains-log.qml" line="65"/>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
         <translation>hea</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="67"/>
+        <location filename="../qml/harbour-captains-log.qml" line="66"/>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
         <translation>tavaline</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="68"/>
+        <location filename="../qml/harbour-captains-log.qml" line="67"/>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
         <translation>kehv</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="69"/>
+        <location filename="../qml/harbour-captains-log.qml" line="68"/>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
         <translation>halb</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="70"/>
+        <location filename="../qml/harbour-captains-log.qml" line="69"/>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
         <translation>jube</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="53"/>
+        <location filename="../qml/harbour-captains-log.qml" line="52"/>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
         <translation>dd MM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="59"/>
+        <location filename="../qml/harbour-captains-log.qml" line="58"/>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
         <translation>dd MM yyyy</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="55"/>
+        <location filename="../qml/harbour-captains-log.qml" line="54"/>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
         <translation>ddd d MMM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="57"/>
+        <location filename="../qml/harbour-captains-log.qml" line="56"/>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
         <translation>ddd d MMM yyyy</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="61"/>
+        <location filename="../qml/harbour-captains-log.qml" line="60"/>
         <source>d MMM</source>
         <comment>date format without year, as in “Dec. 1st”</comment>
         <translation>d MMM</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="355"/>
+        <location filename="../qml/harbour-captains-log.qml" line="361"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Tekkis ootamatu viga. Palun taaskäivita rakendus ja vaata rakenduse logidesse.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="310"/>
-        <location filename="../qml/harbour-captains-log.qml" line="326"/>
+        <location filename="../qml/harbour-captains-log.qml" line="316"/>
+        <location filename="../qml/harbour-captains-log.qml" line="332"/>
         <source>Database backup</source>
         <translation>Andmebaasi varundus</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="320"/>
+        <location filename="../qml/harbour-captains-log.qml" line="326"/>
         <source>Backup finished</source>
         <translation>Varukoopia on valmis</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="321"/>
+        <location filename="../qml/harbour-captains-log.qml" line="327"/>
         <source>A database backup has been created in “%1”.</source>
         <translation>Andmebaasi varukoopia on siin: „%1“.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="368"/>
-        <location filename="../qml/harbour-captains-log.qml" line="416"/>
-        <location filename="../qml/harbour-captains-log.qml" line="455"/>
+        <location filename="../qml/harbour-captains-log.qml" line="374"/>
+        <location filename="../qml/harbour-captains-log.qml" line="422"/>
+        <location filename="../qml/harbour-captains-log.qml" line="461"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="385"/>
+        <location filename="../qml/harbour-captains-log.qml" line="391"/>
         <source>The local data folder at “%1” is not writable.</source>
         <translation>Kohalikku andmekausta „%1“ ei õnnestu kirjutada.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="388"/>
+        <location filename="../qml/harbour-captains-log.qml" line="394"/>
         <source>Failed to load the database due to an unknown error.</source>
         <translation>Andmebaasi laadimine ei õnnestunud tundmatu vea tõttu.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="391"/>
+        <location filename="../qml/harbour-captains-log.qml" line="397"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
         <translation>„%1“ asuva andmebaasi uuendamine viimasele versioonile ei õnnestunud. Üksikasjad: %2</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="395"/>
+        <location filename="../qml/harbour-captains-log.qml" line="401"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
         <translation>Sailjail&apos;i toe jaoks vajalik failide asukoha muutmine ei õnnestunud: „%1“ ↦ „%2“.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="399"/>
+        <location filename="../qml/harbour-captains-log.qml" line="405"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
         <translation>„%1“ asuva andmebaasi uuendamine viimasele versioonile ei õnnestunud, sest versiooninumber on puudu.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="403"/>
+        <location filename="../qml/harbour-captains-log.qml" line="409"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
         <translation>„%1“ andmebaasiversioon ei ühildu rakenduse selle versiooniga. Viimane toetatud andmebaasiversioon on „%2“.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="410"/>
+        <location filename="../qml/harbour-captains-log.qml" line="416"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
         <translation>Tundmatut failitüüpi „%1“ ei saa eksportida. Palun teata meile sellest veast.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="424"/>
+        <location filename="../qml/harbour-captains-log.qml" line="430"/>
         <source>Backup failed</source>
         <translation>Varukoopa tegemine ei õnnestunud</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="455"/>
+        <location filename="../qml/harbour-captains-log.qml" line="461"/>
         <source>The database could not be loaded.</source>
         <translation>Andebaasi laadimine ei õnnestunud.</translation>
     </message>
