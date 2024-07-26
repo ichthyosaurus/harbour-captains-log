@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2014 Julien Wintz
+// SPDX-FileCopyrightText: 2018-2024 Mirian Margiani
+// SPDX-License-Identifier: MIT
+
 /* QChart.qml ---
  *
  * Author: Julien Wintz
