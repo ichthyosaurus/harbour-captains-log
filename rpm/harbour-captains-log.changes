@@ -6,6 +6,16 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Fri Jul 26 2024 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.1.0-1
+- updated translations: Swedish, Ukrainian, German, Chinese, Turkish, Estonian, English, Russian, Spanish, Indonesian
+- added rudimentary statistics about tracked mood on the settings page (requires mood tracking to be enabled)
+- added periodic call for contributions and donations using Opal.SupportMe
+- added settings to disable mood tracking
+- added support for external links in texts
+- fixed disabling pin code protection
+- improved search settings descriptions
+- polished user interface here and there
+
 * Fri Jun 23 2023 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.0.0-1
 - updated translations: Swedish, Italian, German
 - refreshed the app icon (based on a contribution by JSEHV)

@@ -9,6 +9,20 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "4.1.0-1"
+        date: "2024-07-26"
+        paragraphs: [
+            "- updated translations: Swedish, Ukrainian, German, Chinese, Turkish, Estonian, English, Russian, Spanish, Indonesian<br>" +
+            "- added rudimentary statistics about tracked mood on the settings page (requires mood tracking to be enabled)<br>" +
+            "- added periodic call for contributions and donations using Opal.SupportMe<br>" +
+            "- added settings to disable mood tracking<br>" +
+            "- added support for external links in texts<br>" +
+            "- fixed disabling pin code protection<br>" +
+            "- improved search settings descriptions<br>" +
+            "- polished user interface here and there"
+        ]
+    }
+    ChangelogItem {
         version: '4.0.0-1'
         date: "2023-06-23"
         paragraphs: [
