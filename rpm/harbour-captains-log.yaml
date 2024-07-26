@@ -1,11 +1,11 @@
 # This file is part of Captain's Log.
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2020 Gabriel Berkigt
-# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
 
 Name: harbour-captains-log
 Summary: Simple Diary application
-Version: 4.0.0
+Version: 4.1.0
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
