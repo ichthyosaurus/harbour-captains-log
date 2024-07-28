@@ -1,5 +1,5 @@
 /*
- * This file is part of File Browser.
+ * This file is part of Captain's Log.
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: 2024 Mirian Margiani
  */
@@ -22,7 +22,7 @@ SupportDialog {
         title: qsTr("Translate on Weblate")
         description: qsTr("Help with translating this app in as many " +
                           "languages as possible.")
-        link: "https://hosted.weblate.org/projects/harbour-file-browser"
+        link: "https://hosted.weblate.org/projects/harbour-captains-log"
     }
 
     SupportAction {
@@ -30,7 +30,7 @@ SupportDialog {
         title: qsTr("Develop on Github")
         description: qsTr("Support with maintenance and packaging, " +
                           "write code, or provide valuable bug reports.")
-        link: "https://github.com/ichthyosaurus/harbour-file-browser"
+        link: "https://github.com/ichthyosaurus/harbour-captains-log"
     }
 
     DetailsDrawer {
