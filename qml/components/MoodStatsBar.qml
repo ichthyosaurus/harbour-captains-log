@@ -27,7 +27,7 @@ Item {
         width: parent.width / 100 * percentage
         height: parent.height
         radius: 100
-        color: Theme.rgba(Theme.highlightColor, Math.max(0.6, (percentage * 2) / 100))
+        color: Theme.rgba(Theme.highlightColor, Math.min(1.0, Math.max(0.6, (percentage * 2) / 100)))
 
         Behavior on width {
             SmoothedAnimation { duration: 80 }
