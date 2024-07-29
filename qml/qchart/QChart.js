@@ -1,6 +1,9 @@
-// SPDX-FileCopyrightText: 2014 Julien Wintz
-// SPDX-FileCopyrightText: 2018-2024 Mirian Margiani
-// SPDX-License-Identifier: MIT
+/*
+ * This file is part of QChart.js, adapted for harbour-meteoswiss, harbour-forecasts, and harbour-captains-log.
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: 2014  Julien Wintz
+ * SPDX-FileCopyrightText: 2018-2019, 2022-2024  Mirian Margiani
+ */
 
 // QChart.js ---
 //
@@ -22,8 +25,10 @@
 // - allow setting a minimum value in line graphs
 // - remove all chart types except line and bar
 // - use computed fixed width for y scale
+// - print label for bottom end of y scale
 // - align line chart dots and bar chart bars
 // - add config option to draw a vertical indicator line based on the current time
+// - add config option to draw a vertical indicator line at a custom position (0.0 - 1.0)
 // - use 'scaleOverlay' option to draw only the vertical scale
 // - add option to line graph to only fill difference between second and third dataset
 // - support setting colors when building the graph instead of inside the datasets
@@ -64,6 +69,7 @@ var Chart = function(canvas, context) {
             scaleGridLineColor: "rgba(0,0,0,.05)",
             scaleGridLineWidth: 1,
             currentHourLine: false,
+            currentHourPosition: null,
             bezierCurve: true,
             pointDot: true,
             pointDotRadius: 4,
@@ -113,6 +119,7 @@ var Chart = function(canvas, context) {
             scaleGridLineColor: "rgba(0,0,0,.05)",
             scaleGridLineWidth: 1,
             currentHourLine: false,
+            currentHourPosition: null,
             barShowStroke: true,
             barStrokeWidth: 2,
             barValueSpacing: 5,
@@ -303,14 +310,23 @@ var Chart = function(canvas, context) {
             }
 
             if (config.currentHourLine && !config.scaleOverlay) {
-                var now = new Date();
-                var hour = now.getHours();
-                hour += now.getMinutes()/60;
+                if (config.currentHourPosition === null) {
+                    var now = new Date();
+                    var hour = now.getHours();
+                    hour += now.getMinutes()/60;
 
-                ctx.beginPath();
-                ctx.moveTo(yAxisLeftPosX + hour*valueHop + valueHop/2,xAxisPosY);
-                ctx.lineTo(yAxisLeftPosX + hour*valueHop + valueHop/2,5);
-                ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(yAxisLeftPosX + hour*valueHop + valueHop/2, xAxisPosY);
+                    ctx.lineTo(yAxisLeftPosX + hour*valueHop + valueHop/2, 5);
+                    ctx.stroke();
+                } else {
+                    var offset = (width - yAxisLeftPosX - valueHop) * config.currentHourPosition
+
+                    ctx.beginPath();
+                    ctx.moveTo(yAxisLeftPosX + valueHop/2 + offset, xAxisPosY);
+                    ctx.lineTo(yAxisLeftPosX + valueHop/2 + offset, 5);
+                    ctx.stroke();
+                }
             }
 
             if (rotateLabels > 0) {
@@ -359,19 +375,19 @@ var Chart = function(canvas, context) {
             ctx.textAlign = "right";
             ctx.textBaseline = "middle";
 
-            for (var j=0; j<calculatedScale.steps; j++) {
+            for (var j=0; j<calculatedScale.steps + 1; j++) {
                 ctx.beginPath();
-                ctx.moveTo(yAxisLeftPosX-3,xAxisPosY - ((j+1) * scaleHop));
+                ctx.moveTo(yAxisLeftPosX-3,xAxisPosY - ((j) * scaleHop));
                 if (config.scaleShowGridLines) {
                     ctx.lineWidth = config.scaleGridLineWidth;
                     ctx.strokeStyle = config.scaleGridLineColor;
-                    ctx.lineTo(yAxisLeftPosX + xAxisLength + 5,xAxisPosY - ((j+1) * scaleHop));
+                    ctx.lineTo(yAxisLeftPosX + xAxisLength + 5,xAxisPosY - ((j) * scaleHop));
                 } else {
-                    ctx.lineTo(yAxisLeftPosX-0.5,xAxisPosY - ((j+1) * scaleHop));
+                    ctx.lineTo(yAxisLeftPosX-0.5,xAxisPosY - ((j) * scaleHop));
                 }
                 ctx.stroke();
                 if (config.scaleShowLabels) {
-                    ctx.fillText(calculatedScale.labels[j],yAxisLeftPosX-8,xAxisPosY - ((j+1) * scaleHop));
+                    ctx.fillText(calculatedScale.labels[j],yAxisLeftPosX-8,xAxisPosY - ((j) * scaleHop));
                 }
             }
 
@@ -579,7 +595,6 @@ var Chart = function(canvas, context) {
         }
 
         function drawScale() {
-
             ctx.lineWidth = config.scaleLineWidth;
             ctx.strokeStyle = config.scaleLineColor;
 
@@ -597,14 +612,23 @@ var Chart = function(canvas, context) {
             }
 
             if (config.currentHourLine && !config.scaleOverlay) {
-                var now = new Date();
-                var hour = now.getHours();
-                hour += now.getMinutes()/60;
+                if (config.currentHourPosition === null) {
+                    var now = new Date();
+                    var hour = now.getHours();
+                    hour += now.getMinutes()/60;
 
-                ctx.beginPath();
-                ctx.moveTo(yAxisLeftPosX + hour*valueHop + valueHop/2, xAxisPosY);
-                ctx.lineTo(yAxisLeftPosX + hour*valueHop + valueHop/2, 5);
-                ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(yAxisLeftPosX + hour*valueHop + valueHop/2, xAxisPosY);
+                    ctx.lineTo(yAxisLeftPosX + hour*valueHop + valueHop/2, 5);
+                    ctx.stroke();
+                } else {
+                    var offset = (width - yAxisLeftPosX - valueHop) * config.currentHourPosition
+
+                    ctx.beginPath();
+                    ctx.moveTo(yAxisLeftPosX + valueHop/2 + offset, xAxisPosY);
+                    ctx.lineTo(yAxisLeftPosX + valueHop/2 + offset, 5);
+                    ctx.stroke();
+                }
             }
 
             if (rotateLabels > 0) {
@@ -838,7 +862,7 @@ var Chart = function(canvas, context) {
 
     function populateLabels(labelTemplateString, labels, numberOfSteps, graphMin, stepValue) {
         if (labelTemplateString) {
-            for (var i = 1; i < numberOfSteps + 1; i++) {
+            for (var i = 0; i < numberOfSteps + 1; i++) {
                 labels.push(tmpl(labelTemplateString, {value: (graphMin + (stepValue * i)).toFixed(getDecimalPlaces(stepValue))}));
             }
         }

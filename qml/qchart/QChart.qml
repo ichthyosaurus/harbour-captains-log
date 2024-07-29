@@ -1,6 +1,9 @@
-// SPDX-FileCopyrightText: 2014 Julien Wintz
-// SPDX-FileCopyrightText: 2018-2024 Mirian Margiani
-// SPDX-License-Identifier: MIT
+/*
+ * This file is part of QChart.js, adapted for harbour-meteoswiss, harbour-forecasts, and harbour-captains-log.
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: 2014  Julien Wintz
+ * SPDX-FileCopyrightText: 2018-2019, 2022-2024  Mirian Margiani
+ */
 
 /* QChart.qml ---
  *
