@@ -106,6 +106,9 @@ class Diary:
                 ''.join(traceback.format_exception(None, ex, ex.__traceback__)).strip()
             ])
 
+            print("Database update failed! Trace:")
+            print(trace)
+
             pyotherside.send('error', 'database-update-failed',
                              {'database': latest_db, 'exception': trace})
 
@@ -418,9 +421,11 @@ class Diary:
         if not source_db:
             print(f"creating new database in {self.data_path}")
             from_version = -1
+            creating_new_database = True
         else:
             print(f"updating database {source_db}")
             from_version = int(self.DB_DATA_FILE_V8_RE.match(source_db).group('version'))
+            creating_new_database = False
 
         updating = self._get_update_db(from_version, source_db)
 
@@ -443,7 +448,10 @@ class Diary:
                 updater(updating)
 
         if current_version != from_version:
-            print(f"database has been updated to version {current_version}")
+            if creating_new_database:
+                print(f"new database with version {current_version} was created")
+            else:
+                print(f"database has been updated from version {from_version} to version {current_version}")
 
             with updating:
                 updating.execute('VACUUM')
@@ -462,13 +470,14 @@ class Diary:
             self.move_aside(final_db)
             shutil.move(str(tempfile_path), str(final_db))
 
-            # move source db to backups folder
-            today = datetime.now().strftime("%Y-%m-%d")
-            backup_path = Path(self.data_path / self.DB_BACKUP_DIR / Path(source_db).name)
-            backup_path = backup_path.with_name(f'{today} - {backup_path.name}')
-            backup_path.parent.mkdir(parents=True, exist_ok=True)
-            self.move_aside(backup_path)
-            shutil.move(str(source_db), str(backup_path))
+            if source_db:
+                # move source db to backups folder
+                today = datetime.now().strftime("%Y-%m-%d")
+                backup_path = Path(self.data_path / self.DB_BACKUP_DIR / Path(source_db).name)
+                backup_path = backup_path.with_name(f'{today} - {backup_path.name}')
+                backup_path.parent.mkdir(parents=True, exist_ok=True)
+                self.move_aside(backup_path)
+                shutil.move(str(source_db), str(backup_path))
         else:
             print(f"database schema is up-to-date (version: {current_version})")
             final_db = source_db
