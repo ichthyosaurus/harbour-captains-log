@@ -15,22 +15,43 @@ Page {
     id: root
     allowedOrientations: Orientation.All
 
-    property var moodStats: ([])
+    property QtObject statistics: QtObject {
+        property int entriesCount: 0
+        property var counts: ([])
+        property QtObject graph: QtObject {
+            property bool isValid: false
+            property var min: ([])
+            property var median: ([])
+            property var mean: ([])
+            property var max: ([])
+            property var labels: ([])
+        }
+    }
 
     function updateStatistics() {
         appWindow.calculateStatistics(dateMin.selectedDateString,
                                       dateMax.selectedDateString,
                                       function(stats){
-            console.log("got new statistics:", stats)
+            console.log("settings page received new statistics")
 
             if (!!stats) {
                 console.log("updating statistics")
-                moodStats = stats
-                statsGrid.values = stats
+                statistics.graph.isValid = false
+                statistics.entriesCount = stats.entriesCount
+                statistics.counts = stats.counts
+                statistics.graph.min = stats.graph.min
+                statistics.graph.median = stats.graph.median
+                statistics.graph.mean = stats.graph.mean
+                statistics.graph.max = stats.graph.max
+                statistics.graph.labels = stats.graph.labels
+
+                // must be set last, triggers chart update
+                statistics.graph.isValid = stats.graph.isValid
             } else {
                 console.log("clearing statistics")
-                moodStats = []
-                statsGrid.values = []
+                statistics.entriesCount = 0
+                statistics.counts = []
+                statistics.graph.isValid = false
             }
         })
     }
@@ -171,7 +192,73 @@ Page {
 
                 MoodStatisticsGrid {
                     id: statsGrid
-                    values: insights.moodStats
+                    values: statistics.counts
+                }
+
+                Item {
+                    id: moodGraph
+                    height: Theme.itemSizeExtraLarge
+                    width: parent.width - 3*x
+                    x: Theme.paddingMedium
+
+                    Component {
+                        id: moodChartComp
+
+                        MoodChart {
+                            id: chart
+                            width: moodGraph.width
+                            height: moodGraph.height
+                            dataGetter: function(){
+                                if (!statistics.graph.isValid) {
+                                    chartData = { 'labels': ['', '', '', '', '', '', ''], 'datasets': [
+                                        { data: [2, 2, 2, 2, 2, 2, 2, 2] }
+                                    ]}
+                                } else {
+                                    chartData = {
+                                        'labels': statistics.graph.labels,
+                                        'datasets': [
+                                            {'data': statistics.graph.median},
+                                            {'data': statistics.graph.min},
+                                            {'data': statistics.graph.max},
+                                            // {'data': statistics.graph.mean},
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    Loader {
+                        id: moodChartLoader
+                        anchors.fill: parent
+                        sourceComponent: moodChartComp
+                        asynchronous: true
+
+                        property var appState: Qt.application.state
+                        onAppStateChanged: {
+                            if (moodGraph.visible &&
+                                    Qt.application.state === Qt.ApplicationActive) {
+                                console.log("refreshing charts...")
+                                active = false
+                                active = true
+                            }
+                        }
+
+                        Connections {
+                            target: statistics.graph
+
+                            onIsValidChanged: {
+                                console.log("refreshing charts...")
+                                moodChartLoader.active = false
+                                moodChartLoader.active = true
+                            }
+                        }
+                    }
+                }
+
+                DetailItem {
+                    label: qsTr("Entries")
+                    value: statistics.entriesCount
                 }
 
                 Row {

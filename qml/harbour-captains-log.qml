@@ -246,7 +246,7 @@ ApplicationWindow {
 
     function calculateStatistics(from, until, callback) {
         py.call("diary.calculate_statistics", [from, until], function(stats) {
-            console.log("Calculated statistics:", from, until, stats)
+            console.log("Calculated statistics:", from, until, JSON.stringify(stats))
             callback(stats)
         })
     }

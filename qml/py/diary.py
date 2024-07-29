@@ -14,8 +14,13 @@ import shutil
 import glob
 import traceback
 import tempfile
+import statistics
+import math
+import json
+from typing import Union
 from typing import Dict
 from typing import List
+from typing import Tuple
 from typing import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -1113,7 +1118,204 @@ def export(filename: str, kind: str, translations, entries: list = []):
 # BEGIN Statistics Functions
 #
 
-def calculate_statistics(start, end) -> List[float]:
+def _stats_get_valid_values(rows: List[sqlite3.Row], invert: bool = False) -> List[int]:
+    MOODS = 6
+
+    # if mood < 0 or mood >= len(counts):
+    #         pyotherside.send('error', 'unknown-mood-value', {'value': mood})
+    #         continue
+
+    if invert:
+        return [5 - x['mood'] for x in rows
+                if x['mood'] is not None
+                and x['mood'] >= 0
+                and x['mood'] < MOODS]
+    else:
+        return [x['mood'] for x in rows
+                if x['mood'] is not None
+                and x['mood'] >= 0
+                and x['mood'] < MOODS]
+
+
+def _stats_mood_counts(start: str, end: str) -> List[int]:
+    # assumes database is ready and parameters are valid
+    MOODS = 6
+    counts = [0 for i in range(0, MOODS)]
+    total = 0
+
+    DIARY.cursor.execute("""
+        SELECT mood FROM diary
+        WHERE entry_date >= ?
+          AND entry_date <= ?;""", [start, end])
+    rows = DIARY.cursor.fetchall()
+    values = _stats_get_valid_values(rows)
+
+    for mood in values:
+        counts[mood] += 1
+        total += 1
+
+    if total > 0:
+        counts = [x / total * 100 for x in counts]
+    else:
+        counts = counts
+
+    return counts
+
+
+def _stats_entries_count(start: str, end: str) -> int:
+    # assumes database is ready and parameters are valid
+    DIARY.cursor.execute("""
+        SELECT mood FROM diary
+        WHERE entry_date >= ?
+          AND entry_date <= ?;""", [start, end])
+    rows = DIARY.cursor.fetchall()
+    values = _stats_get_valid_values(rows)
+
+    return len(values)
+
+
+def _stats_graph(start: str, end: str) -> Dict[str, List[Union[int, str]]]:
+    # assumes database is ready and parameters are valid
+    result = {
+        'isValid': False,
+        'min': [],
+        'median': [],
+        'mean': [],
+        'max': [],
+        'labels': [],
+    }
+
+    ONE_DAY = 1
+    ONE_WEEK = 7 * ONE_DAY
+    ONE_MONTH = 31 * ONE_DAY
+    ONE_YEAR = 366 * ONE_DAY
+
+    THREE_MONTHS = 3 * ONE_MONTH
+    SIX_MONTHS = 6 * ONE_MONTH
+    TWO_YEARS = 2 * ONE_YEAR
+    SIX_YEARS = 6 * ONE_YEAR
+
+    # aggregate partitions:
+    #   < 1 month:   per day    (<31)
+    #   < 6 months:  per week   (<24)
+    #   < 2 years: per month    (24)
+    #   < 6 years: per quarter  (24)
+    #   > 6 years: per year     (>6)
+
+    QUARTERS = {1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E'}
+
+    PARTITIONS = (
+        (ONE_MONTH, ONE_DAY, lambda x: x.strftime('%d')),
+        (SIX_MONTHS, ONE_WEEK, lambda x: x.strftime('%m-') + f'{math.floor(x.day/7)+1:d}'),
+        (TWO_YEARS, ONE_MONTH, lambda x: x.strftime('%m')),
+        (SIX_YEARS, THREE_MONTHS, lambda x: x.strftime('%y-') + QUARTERS[math.floor(x.month / 3) + 1]),
+        (None, ONE_YEAR, lambda x: x.strftime('%y'))
+    )
+
+    def as_db_time(date: datetime) -> str:
+        return date.strftime('%Y-%m-%d 00:00:00')
+
+    def aggregate(start: datetime, end: datetime, label: Callable[[datetime], str]) -> Tuple[int, int, int, str]:
+        DIARY.cursor.execute("""
+            SELECT mood FROM diary
+            WHERE entry_date >= ?
+            AND entry_date <= ?;""", [
+            as_db_time(start),
+            as_db_time(end)]
+        )
+        rows = DIARY.cursor.fetchall()
+        values = _stats_get_valid_values(rows, invert=True)
+
+        if values:
+            return (
+                min(values),
+                statistics.median(values),
+                statistics.mean(values),
+                max(values),
+                label(start),
+            )
+        else:
+            return (2, 2, 2, 2, label(start))
+
+    def validate_date(date: str) -> [re.Match, None]:
+        return re.match(r'^(\d{4})-(\d{2})-(\d{2}) ', date)
+
+    def make_asc(x, y):
+        if x < y:
+            return x, y
+        else:
+            return y, x
+
+    if start == "0":
+        DIARY.cursor.execute("""
+            SELECT entry_date FROM diary
+            ORDER BY entry_order ASC,
+                     entry_addenda_day ASC,
+                     entry_addenda_seq ASC
+            LIMIT 1;""")
+        row = DIARY.cursor.fetchone()
+        start = row['entry_date']
+
+    if end == "x":
+        DIARY.cursor.execute("""
+            SELECT entry_date FROM diary
+            ORDER BY entry_order DESC,
+                     entry_addenda_day DESC,
+                     entry_addenda_seq DESC
+            LIMIT 1;""")
+        row = DIARY.cursor.fetchone()
+        end = row['entry_date']
+
+    start_m = validate_date(start)
+    end_m = validate_date(end)
+
+    if not start_m or not end_m:
+        result['isValid'] = False
+        return result
+
+    start_d = datetime.strptime(start.split(' ')[0], '%Y-%m-%d')
+    end_d = datetime.strptime(end.split(' ')[0], '%Y-%m-%d')
+
+    start_d, end_d = make_asc(start_d, end_d)
+    date_range: timedelta = end_d - start_d
+
+    step = None
+    label = None
+    passed = timedelta(seconds=0)
+
+    for part, part_step, part_label in PARTITIONS:
+        if part is None or date_range <= timedelta(days=part):
+            step = timedelta(days=part_step)
+            label = part_label
+            break
+
+    print("S", start_d, end_d, date_range, step)
+
+    while (passed + step) < date_range:
+        print(start_d, end_d, start_d + passed, start_d + passed + step)
+
+        ag = aggregate(start_d + passed, start_d + passed + step, label)
+        result['min'].append(ag[0])
+        result['median'].append(ag[1])
+        result['mean'].append(ag[2])
+        result['max'].append(ag[3])
+        result['labels'].append(ag[4])
+        passed += step
+
+    if passed < date_range:
+        ag = aggregate(start_d + passed, end_d, label)
+        result['min'].append(ag[0])
+        result['median'].append(ag[1])
+        result['mean'].append(ag[2])
+        result['max'].append(ag[3])
+        result['labels'].append(ag[4])
+        passed = date_range
+
+    result['isValid'] = True
+    return result
+
+
+def calculate_statistics(start: str, end: str) -> List[float]:
     if not is_initialized():
         return
 
@@ -1123,42 +1325,16 @@ def calculate_statistics(start, end) -> List[float]:
     if not end:
         end = "x"
 
-    DIARY.cursor.execute("""
-        SELECT mood FROM diary
-        WHERE entry_date >= ?
-          AND entry_date <= ?;""", [start, end])
-    rows = DIARY.cursor.fetchall()
+    result = {
+        'entriesCount': _stats_entries_count(start, end),
+        'counts': _stats_mood_counts(start, end),
+        'graph': _stats_graph(start, end),
+    }
 
-    counts = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    ]
+    print("CALCULATED STATISTICS:")
+    print(json.dumps(result, indent=2))
 
-    total = 0
-
-    for row in rows:
-        mood = row['mood']
-
-        if mood is None:
-            continue
-
-        if mood < 0 or mood >= len(counts):
-            pyotherside.send('error', 'unknown-mood-value', {'value': mood})
-            continue
-
-        counts[row['mood']] += 1
-        total += 1
-
-    if total > 0:
-        statistics = [x / total * 100 for x in counts]
-    else:
-        statistics = counts
-
-    return statistics
+    return result
 
 
 # END
