@@ -1093,29 +1093,29 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõtisklused</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="183"/>
         <source>From</source>
-        <translation type="unfinished">Alates</translation>
+        <translation>Alates</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="184"/>
         <location filename="../qml/pages/SettingsPage.qml" line="193"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">millal iganes</translation>
+        <translation>millal iganes</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>Until</source>
-        <translation type="unfinished">Kuni</translation>
+        <translation>Kuni</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished">Kuupäeva lähtestamiseks vajuta alla ja hoia all.</translation>
+        <translation>Kuupäeva lähtestamiseks vajuta alla ja hoia all.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="154"/>
@@ -1130,7 +1130,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksport ja varundus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="159"/>
