@@ -64,7 +64,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Överväg om du kan bidra till det här projektet på ett eller annat sätt.</translation>
     </message>
 </context>
 <context>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa mindre</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa mer</translation>
     </message>
 </context>
 <context>
@@ -419,62 +419,62 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Donera på Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Betala för kaffe, en bit pizza eller en biljett till teatern.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Översätt på Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjälp till med att översätta denna app på så många språk som möjligt.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Utveckla på Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stöd underhåll och paketering, skriv kod eller lämna värdefulla felrapporter.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Varför ska du bry dig?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta projekt är byggt med kärlek och passion av en enda utvecklare på fritiden, och ges till dig helt gratis.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jag utvecklar fri programvara eftersom jag är övertygad om att det är det etiska rätta att göra - och det är en rolig hobby. Men att utveckla programvara tar mycket tid och ansträngning. Som Sailfish och levnadskostnader i allmänhet kostar pengar, behöver jag ditt stöd för att kunna spendera tid på icke-betalande projekt som detta.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Varför donera?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla höjde priserna och försöker tvinga utvecklare (som arbetar gratis) att betala hyra för Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Om du har råd med det är donation det enklaste sättet att se till att jag kan fortsätta arbeta med appar för Sailfish. Varje summa uppskattas, vare sig det är en kopp kaffe, en bit pizza eller mer.</translation>
     </message>
 </context>
 <context>
@@ -759,7 +759,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="194"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd förenklad vanlig textsökning om du är osäker på hur du stavade något tidigare: välj &quot;vanlig text&quot; som söksyntax här och &quot;förenklad&quot; som sökläge i den separata inställningen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="233"/>
@@ -934,7 +934,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Långtryck för att återställa datumet.</translation>
     </message>
 </context>
 <context>
@@ -1073,37 +1073,37 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Utseende</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="117"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera humörspårning</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="118"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inaktivera denna inställning för att inaktivera alla humörrelaterade funktioner helt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Observera att inlägg kommer att spara ditt humör som &quot;okej&quot; om denna inställning är inaktiverad.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Fråga alltid efter humör</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="128"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta gör det möjligt att be om ditt humör omedelbart när du skapar en ny post.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Export och säkerhetskopiering</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="159"/>
@@ -1113,29 +1113,29 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Insikter</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="183"/>
         <source>From</source>
-        <translation type="unfinished">Från</translation>
+        <translation>Från</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="184"/>
         <location filename="../qml/pages/SettingsPage.qml" line="193"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">när som helst</translation>
+        <translation>när som helst</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>Until</source>
-        <translation type="unfinished">Until</translation>
+        <translation>Till</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Långtryck för att återställa datumet.</translation>
     </message>
 </context>
 <context>
@@ -1143,27 +1143,27 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Hallå där!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tack för att du använder min lilla app! Kanske kan du bidra med något?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tack för ditt stöd!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Påminn mig senare</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Fråga mig inte igen</translation>
     </message>
 </context>
 <context>
