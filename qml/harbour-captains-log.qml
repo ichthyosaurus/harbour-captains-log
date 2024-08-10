@@ -136,6 +136,15 @@ ApplicationWindow {
     }
 
     function normalizeText(string) {
+        if ((typeof string == "undefined") || string.length < 1) {
+            return ""
+        }
+
+        if (!py || !py.ready) {
+            console.error("normalizeText(string) was called while the backend was not ready")
+            return string
+        }
+
         return py.call_sync('diary.normalize_text', [string])
     }
 
