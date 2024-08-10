@@ -439,7 +439,7 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation>Osale arenduses Githubis</translation>
+        <translation>Osale arenduses Githubi abil</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
@@ -662,7 +662,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation>Ava välise rakendusega</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>

@@ -677,7 +677,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished">Kopiuj do schowka</translation>
+        <translation>Kopiuj do schowka</translation>
     </message>
 </context>
 <context>

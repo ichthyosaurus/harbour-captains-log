@@ -64,7 +64,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Будь ласка, знайдіть хвилинку, щоб подумати, чи можете ви зробити свій внесок у цей проєкт у той чи інший спосіб.</translation>
+        <translation>Будь ласка, знайдіть хвилинку, якщо можете зробити свій внесок у цей проект у той чи інший спосіб.</translation>
     </message>
 </context>
 <context>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation>згорнути</translation>
+        <translation>сховати</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation>розгорнути</translation>
+        <translation>показати більше</translation>
     </message>
 </context>
 <context>
@@ -404,7 +404,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation>Текст ліцензії</translation>
+        <translation type="unfinished">Текст ліцензії</translation>
     </message>
 </context>
 <context>
@@ -420,47 +420,47 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation>Пожертвувати на Liberapay</translation>
+        <translation>Зробити донат на Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation>Пожертвуйте суму рівну чашці кави, шматку піци або квитку в театр.</translation>
+        <translation>Можете пожертвувати суму, що дорівнює чашці кави, шматку піци або квитку в театр.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation>Перекласти на Weblate</translation>
+        <translation>Переклад на Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation>Допоможіть перекласти цей застосунок якомога більшою кількістю мов.</translation>
+        <translation>Допоможіть перекласти цей додаток якомога більшою кількістю мов.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation>Допомогти з розробкою на Github</translation>
+        <translation>Розробка на Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation>Підтримка в обслуговуванні та пакуванні, написанні коду або наданні цінних звітів про помилки.</translation>
+        <translation>Допоможіть в обслуговуванні та пакуванні, написанні коду або наданні цінних звітів про помилки.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation>Чому це має вас хвилювати?</translation>
+        <translation>Чому вам має бути цікаво?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation>Цей проєкт створений з любов&apos;ю та пристрастю одним розробником у свій вільний час і надається вам безоплатно.</translation>
+        <translation>Цей проект створений з любов&apos;ю та пристрастю одним розробником у свій вільний час і надається вам безкоштовно.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation>Я розробляю вільне програмне забезпечення, тому що переконаний, що це етично, й це цікаве хобі. Однак, його розробка вимагає багато часу та зусиль. Оскільки Sailfish і життя в цілому коштує грошей, мені потрібна ваша підтримка, щоби мати змогу витрачати час на такі неоплачувані проєкти, як цей.</translation>
+        <translation>Я розробляю вільне програмне забезпечення, тому що переконаний, що це етично, і це цікаве хобі. Однак, розробка програмного забезпечення вимагає багато часу та зусиль. Оскільки Sailfish OS і життя в цілому коштує грошей, мені потрібна ваша підтримка, щоб мати змогу витрачати час на такі неоплачувані проекти, як цей.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
@@ -470,12 +470,12 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation>Jolla підняла ціни і намагається змусити розробників (які працюють безплатно) платити за оренду Sailfish.</translation>
+        <translation>Jolla підняла ціни і намагається змусити розробників (які працюють безкоштовно) платити за підписку на Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation>Якщо ви можете собі це дозволити, пожертвування – це найпростіший спосіб гарантувати, що я зможу продовжувати працювати над застосунками для Sailfish. Підійде будь-яка сума, будь то чашка кави, шматок піци чи щось більше.</translation>
+        <translation>Якщо ви можете собі це дозволити, пожертвування – це найпростіший спосіб гарантувати, що я зможу продовжувати працювати над додатками для Sailfish OS. Будь-яка сума буде цінна, будь то чашка кави, шматок піци чи щось більше.</translation>
     </message>
 </context>
 <context>
@@ -483,24 +483,24 @@
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="55"/>
         <source>About</source>
-        <translation>Про застосунок</translation>
+        <translation type="unfinished">Про застосунок</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
         <source>Version %1</source>
-        <translation>Версія %1</translation>
+        <translation type="unfinished">Версія %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
-        <translation>Розробка</translation>
+        <translation type="unfinished">Розробка</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>show contributors</source>
-        <translation>Показати учасників</translation>
+        <translation type="unfinished">Показати учасників</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
@@ -508,12 +508,12 @@
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation>Головна</translation>
+        <translation type="unfinished">Головна</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation>Переклади</translation>
+        <translation type="unfinished">Переклади</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -521,22 +521,22 @@
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation>Вихідний код</translation>
+        <translation type="unfinished">Вихідний код</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation>Пожертви</translation>
+        <translation type="unfinished">Пожертви</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
         <source>License</source>
-        <translation>Ліцензія</translation>
+        <translation type="unfinished">Ліцензія</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
         <source>show license(s)</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform>Показати ліцензію</numerusform>
             <numerusform>Показати ліцензії</numerusform>
             <numerusform>Показати ліцензій</numerusform>
@@ -545,28 +545,28 @@
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation>показати подробиці</translation>
+        <translation type="unfinished">показати подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
-        <translation>Учасники</translation>
+        <translation type="unfinished">Учасники</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation>Подяки</translation>
+        <translation type="unfinished">Подяки</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation>Дякую!</translation>
+        <translation type="unfinished">Дякую!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation>Подробиці</translation>
+        <translation type="unfinished">Подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
@@ -591,12 +591,12 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation>Завантажити тексти ліцензій</translation>
+        <translation type="unfinished">Завантажити тексти ліцензій</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform>Ліцензія</numerusform>
             <numerusform>Ліцензії</numerusform>
             <numerusform>Ліцензій</numerusform>
@@ -605,28 +605,28 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
+        <translation type="unfinished">Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation>Список змін</translation>
+        <translation type="unfinished">Список змін</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation type="unfinished">Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation>Новини</translation>
+        <translation type="unfinished">Новини</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation>Зміни з попередньої версії %1</translation>
+        <translation type="unfinished">Зміни з попередньої версії %1</translation>
     </message>
 </context>
 <context>
@@ -634,17 +634,17 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
+        <translation type="unfinished">Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Ви можете підтримати цей прожкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
+        <translation type="unfinished">Ви можете підтримати цей прожкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Ваш внесок у переклади або код буде дуже доречним.</translation>
+        <translation type="unfinished">Ваш внесок у переклади або код буде дуже доречним.</translation>
     </message>
 </context>
 <context>
@@ -665,7 +665,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation>Відкрити зовні</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -1154,17 +1154,17 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation>Привіт!</translation>
+        <translation>Вітаю!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation>Дякую за використання мого маленького застосунку! Можливо, ви можете зробити свій внесок у відповідь?</translation>
+        <translation>Дякую за використання мого додатку! Можливо, ви можете зробити свій внесок у відповідь?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation>Спасибі за вашу підтримку!</translation>
+        <translation>Дякую за вашу підтримку!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
@@ -1174,7 +1174,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation>Не запитувати знову</translation>
+        <translation>Не питати знову</translation>
     </message>
 </context>
 <context>

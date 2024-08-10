@@ -64,7 +64,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Por favor, tómate un momento para considerar si puedes contribuir a este proyecto de una forma u otra.</translation>
+        <translation>Por favor, tómese un momento para considerar si puede contribuir a este proyecto de una forma u otra.</translation>
     </message>
 </context>
 <context>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation>Mostrar menos</translation>
+        <translation>mostrar menos</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation>Mostrar más</translation>
+        <translation>mostrar más</translation>
     </message>
 </context>
 <context>
@@ -444,7 +444,7 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation>Participe en el mantenimiento y empaquetado de la aplicación, escribiendo nuevo código fuente o escribiendo informes de errores importantes.</translation>
+        <translation>Brinde soporte con mantenimiento y empaquetado, escriba código o proporcione valiosos informes de errores.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
@@ -454,12 +454,12 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation>Este proyecto lo desarrollo con cariño y pasión un único desarrollador en su tiempo libre y te lo proporciona de forma gratuita.</translation>
+        <translation>Este proyecto lo construye con amor y pasión un único desarrollador en su tiempo libre y se lo proporciona de forma gratuita.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation>Desarrollo software libre porque estoy convencido de que es lo ético y es un pasatiempo divertido. Sin embargo, desarrollar software requiere mucho tiempo y esfuerzo. Como Sailfish y la vida en general cuestan dinero, necesito tu apoyo para poder dedicar tiempo a proyectos no remunerados como este.</translation>
+        <translation>Desarrollo software libre por convicción ética y por la alegría de este hobby. Sin embargo, el desarrollo de software requiere mucho tiempo y esfuerzo. Dado que Sailfish y la vida en general cuestan mucho dinero, cuento con vuestro apoyo para poder dedicar tiempo a proyectos no remunerados como este.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
@@ -469,12 +469,12 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation>Jolla aumentó los precios y está tratando de obligar a los desarrolladores (que trabajan gratis) a pagar el alquiler de Sailfish.</translation>
+        <translation>Jolla subió los precios y está intentando obligar a los promotores (que trabajan gratis) a pagar el alquiler de Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation>Si puedes permitírtelo, donar es la forma más fácil de garantizar que pueda seguir trabajando en aplicaciones para Sailfish. Cualquier cantidad es bienvenida, ya sea una taza de café, una porción de pizza o más.</translation>
+        <translation>Si puedes permitírtelo, donar es la forma más fácil de asegurarme de que puedo seguir trabajando en aplicaciones para Sailfish. Se agradece cualquier cantidad, ya sea una taza de café, una porción de pizza o más.</translation>
     </message>
 </context>
 <context>
@@ -662,7 +662,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation>Abrir fuera de la aplicación</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -1153,7 +1153,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation>¡Gracias por usar mi pequeña aplicación!. ¿Quizás puedas contribuir de nuevo?</translation>
+        <translation>¡Gracias por usar mi pequeña aplicación! ¿Quizás puedas contribuir?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
@@ -1163,12 +1163,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation>Recuérdamelo más tarde</translation>
+        <translation>Recuérdame más tarde</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation>No me preguntes otra vez</translation>
+        <translation>No me lo vuelvas a preguntar</translation>
     </message>
 </context>
 <context>

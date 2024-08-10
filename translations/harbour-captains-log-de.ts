@@ -419,62 +419,62 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Spende auf Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spende den Betrag für eine Tasse Kaffee, ein Stück Pizza oder einen Theaterbesuch.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetze auf Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilf dabei, die App in so viele Sprachen wie möglich zu übersetzen.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Entwickle auf Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unterstütze die Verwaltung, das Packaging, beim Programmieren oder schreibe Fehlerberichte.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Warum betrifft dich das?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieses Projekt wird mit viel Liebe und Einsatz von einer Einzelperson in ihrer Freizeit entwickelt und dir gratis zur Verfügung gestellt.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ich entwickle Freie Software aus ethischer Überzeugung - und Freude an diesem Hobby. Trotzdem braucht Softwareentwicklung viel Zeit und Einsatz. Da Sailfish und das Leben allgemein viel Geld kosten, bin ich auf deine Unterstützung angewiesen, um Zeit für unbezahlte Projekte wie dieses aufwenden zu können.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Warum spenden?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla plant Preiserhöhungen und versucht Entwickler (die gratis arbeiten) auch noch zu zwingen, Sailfish zu mieten.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wenn du es dir leisten kannst, ist eine Spende der einfachste Weg, um dazu beizutragen, dass ich auch in Zukunft an Apps für Sailfish arbeiten kann. Jeder Betrag ist ein Beitrag - sei es eine Tasse Kaffee, ein Stück Pizza oder mehr.</translation>
     </message>
 </context>
 <context>
@@ -934,7 +934,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lange drücken, um das Datum zurückzusetzen.</translation>
     </message>
 </context>
 <context>
@@ -1063,12 +1063,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Erscheinungsbild</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Stimmungstracking aktivieren</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
@@ -1083,7 +1083,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Immer nach der Stimmung fragen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="149"/>
@@ -1093,34 +1093,34 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistiken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Einträge</translation>
+        <translation>Einträge</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished">Von</translation>
+        <translation>Von</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
         <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">irgendwann</translation>
+        <translation>irgendwann</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
-        <translation type="unfinished">Bis</translation>
+        <translation>Bis</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lange drücken, um das Datum zurückzusetzen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
@@ -1135,7 +1135,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Export und Sicherung</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
@@ -1148,27 +1148,27 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Hallöchen!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Danke, dass du meine kleine App verwendest! Vielleicht kannst du auch dazu beitragen?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Vielen Dank für deine Unterstützung!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Erinnere mich später</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht wieder fragen</translation>
     </message>
 </context>
 <context>
