@@ -1042,104 +1042,109 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="92"/>
         <source>Settings</source>
         <translation>Налаштування</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>Activate code protection</source>
         <translation>Активувати код захисту</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>Set Code</source>
         <translation>Встановити код</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>Change Code</source>
         <translation>Змінити код</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="96"/>
         <source>Security</source>
         <translation>Безпека</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>Export data</source>
         <translation>Експорт даних</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
         <translation>Зверніть увагу, що цей код лише запобігає доступу до застосунку. База даних не зашифрована, а код не зберігається надійно.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>Appearance</source>
         <translation>Зовнішній вигляд</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
         <translation>Ввімкнути відстеження настрою</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="118"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>Disable this setting to disable all mood related features completely.</source>
         <translation>Вимкніть цей параметр, щоби повністю вимкнути всі функції, пов&apos;язані з настроєм.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
         <translation>Зауважте, що записи зберігатимуть ваш настрій як «добрий», якщо цей параметр вимкнено.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>Always ask for mood</source>
         <translation>Завжди запитувати про настрій</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="128"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
         <translation>Це дозволяє запитувати про ваш настрій одразу при створенні нового запису.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
         <translation>Експорт та резервне копіювання</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
         <translation>Резервне копіювання бази даних</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
         <translation>Ідеї</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="183"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="260"/>
+        <source>Entries</source>
+        <translation type="unfinished">Записи</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
         <translation>Від</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="184"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="193"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="271"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>будь-коли</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
         <translation>Доки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
         <translation>Натисніть і утримуйте, щоб скинути дату.</translation>
     </message>
@@ -1360,75 +1365,75 @@
         <translation>d MMM</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="361"/>
+        <location filename="../qml/harbour-captains-log.qml" line="370"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Виникла непередбачувана помилка. Будь ласка, перезапустіть застосунок та перевірте журнали.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="316"/>
-        <location filename="../qml/harbour-captains-log.qml" line="332"/>
+        <location filename="../qml/harbour-captains-log.qml" line="325"/>
+        <location filename="../qml/harbour-captains-log.qml" line="341"/>
         <source>Database backup</source>
         <translation>Резервне копіювання бази даних</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="326"/>
+        <location filename="../qml/harbour-captains-log.qml" line="335"/>
         <source>Backup finished</source>
         <translation>Резервне копіювання завершено</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="327"/>
+        <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>A database backup has been created in “%1”.</source>
         <translation>Резервна копія бази даних була створена в &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="374"/>
-        <location filename="../qml/harbour-captains-log.qml" line="422"/>
-        <location filename="../qml/harbour-captains-log.qml" line="461"/>
+        <location filename="../qml/harbour-captains-log.qml" line="383"/>
+        <location filename="../qml/harbour-captains-log.qml" line="431"/>
+        <location filename="../qml/harbour-captains-log.qml" line="470"/>
         <source>Error</source>
         <translation>Помилка</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="391"/>
+        <location filename="../qml/harbour-captains-log.qml" line="400"/>
         <source>The local data folder at “%1” is not writable.</source>
         <translation>Локальна тека даних за адресою &quot;%1&quot; не призначена для запису.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="394"/>
+        <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>Failed to load the database due to an unknown error.</source>
         <translation>Не вдалося завантажити базу даних через невідому помилку.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="397"/>
+        <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
         <translation>Не вдалося оновити базу даних за адресою &quot;%1&quot; до останньої версії. Подробиці: %2</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="401"/>
+        <location filename="../qml/harbour-captains-log.qml" line="410"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
         <translation>Не вдалося перенести файли для підтримки Sailjail з &quot;%1&quot; до &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="405"/>
+        <location filename="../qml/harbour-captains-log.qml" line="414"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
         <translation>Не вдалося оновити базу даних до останньої версії, оскільки файл версії відсутній за адресою &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="409"/>
+        <location filename="../qml/harbour-captains-log.qml" line="418"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
         <translation>Версія бази даних &quot;%1&quot; несумісна з цією версією застосунку. Остання підтримувана версія бази даних - &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="416"/>
+        <location filename="../qml/harbour-captains-log.qml" line="425"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
         <translation>Не вдається експортувати невідомий тип файлу &quot;%1&quot;. Будь ласка, повідомте про цю помилку.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="430"/>
+        <location filename="../qml/harbour-captains-log.qml" line="439"/>
         <source>Backup failed</source>
         <translation>Помилка резервного копіювання</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="461"/>
+        <location filename="../qml/harbour-captains-log.qml" line="470"/>
         <source>The database could not be loaded.</source>
         <translation>Не вдалося завантажити базу даних.</translation>
     </message>

@@ -1036,104 +1036,109 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>Export data</source>
         <translation>Exportera data</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="96"/>
         <source>Security</source>
         <translation>Säkerhet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>Set Code</source>
         <translation>Ange kod</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="92"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>Change Code</source>
         <translation>Ändra kod</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>Activate code protection</source>
         <translation>Aktivera kodsäkerhet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
         <translation>Notera att denna kod endast förhindrar åtkomst till appen. Databasen är inte krypterad och koden lagras inte på ett säkert sätt.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>Appearance</source>
         <translation>Utseende</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
         <translation>Aktivera humörspårning</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="118"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>Disable this setting to disable all mood related features completely.</source>
         <translation>Inaktivera denna inställning för att inaktivera alla humörrelaterade funktioner helt.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
         <translation>Observera att inlägg kommer att spara ditt humör som &quot;okej&quot; om denna inställning är inaktiverad.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>Always ask for mood</source>
         <translation>Fråga alltid efter humör</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="128"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
         <translation>Detta gör det möjligt att be om ditt humör omedelbart när du skapar en ny post.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
         <translation>Export och säkerhetskopiering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
         <translation>Säkerhetskopiering av databas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
         <translation>Insikter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="183"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="260"/>
+        <source>Entries</source>
+        <translation type="unfinished">Poster</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
         <translation>Från</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="184"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="193"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="271"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>när som helst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
         <translation>Till</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
         <translation>Långtryck för att återställa datumet.</translation>
     </message>
@@ -1353,75 +1358,75 @@
         <translation>d MMM</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="361"/>
+        <location filename="../qml/harbour-captains-log.qml" line="370"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Ett oväntat fel uppstod. Starta om appen och kolla loggarna.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="316"/>
-        <location filename="../qml/harbour-captains-log.qml" line="332"/>
+        <location filename="../qml/harbour-captains-log.qml" line="325"/>
+        <location filename="../qml/harbour-captains-log.qml" line="341"/>
         <source>Database backup</source>
         <translation>Säkerhetskopiering av databas</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="326"/>
+        <location filename="../qml/harbour-captains-log.qml" line="335"/>
         <source>Backup finished</source>
         <translation>Säkerhetskopieringen slutförd</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="327"/>
+        <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>A database backup has been created in “%1”.</source>
         <translation>En säkerhetskopia av databasen har skapats i &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="374"/>
-        <location filename="../qml/harbour-captains-log.qml" line="422"/>
-        <location filename="../qml/harbour-captains-log.qml" line="461"/>
+        <location filename="../qml/harbour-captains-log.qml" line="383"/>
+        <location filename="../qml/harbour-captains-log.qml" line="431"/>
+        <location filename="../qml/harbour-captains-log.qml" line="470"/>
         <source>Error</source>
         <translation>Fel</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="391"/>
+        <location filename="../qml/harbour-captains-log.qml" line="400"/>
         <source>The local data folder at “%1” is not writable.</source>
         <translation>Den lokala datamappen på &quot;%1&quot; är inte skrivbar.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="394"/>
+        <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>Failed to load the database due to an unknown error.</source>
         <translation>Det gick inte att läsa in databasen på grund av ett okänt fel.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="397"/>
+        <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
         <translation>Det gick inte att uppdatera databasen på &quot;%1&quot; till den senaste versionen. Detaljerat: %2</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="401"/>
+        <location filename="../qml/harbour-captains-log.qml" line="410"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
         <translation>Det gick inte att flytta filer för Sailjail-stöd från &quot;%1&quot; till &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="405"/>
+        <location filename="../qml/harbour-captains-log.qml" line="414"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
         <translation>Det gick inte att uppdatera databasen till den senaste versionen eftersom versionsfilen saknas på &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="409"/>
+        <location filename="../qml/harbour-captains-log.qml" line="418"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
         <translation>Databasversionen &quot;%1&quot; är inte kompatibel med denna version av appen. Den senaste databasversionen som stöds är &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="416"/>
+        <location filename="../qml/harbour-captains-log.qml" line="425"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
         <translation>Kan inte exportera okänd filtyp &quot;%1&quot;. Rapportera gärna detta fel.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="430"/>
+        <location filename="../qml/harbour-captains-log.qml" line="439"/>
         <source>Backup failed</source>
         <translation>Säkerhetskopieringen misslyckades</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="461"/>
+        <location filename="../qml/harbour-captains-log.qml" line="470"/>
         <source>The database could not be loaded.</source>
         <translation>Det gick inte att läsa in databasen.</translation>
     </message>
