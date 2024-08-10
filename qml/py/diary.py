@@ -1334,6 +1334,14 @@ def calculate_statistics(start: str, end: str) -> List[float]:
     print("CALCULATED STATISTICS:")
     print(json.dumps(result, indent=2))
 
+    # TODO
+    # - reduce debug output
+    # - calculate daily aggregates before aggregating them
+    #   even further, so that one day with 10s of entries
+    #   doesn't skew the overall statistics
+    # - give users the choice over how much the data is
+    #   aggregated; this needs proper UI integration
+
     return result
 
 
