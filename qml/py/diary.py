@@ -1254,7 +1254,7 @@ def _stats_graph(start: str, end: str) -> Dict[str, List[Union[int, str]]]:
                      entry_addenda_seq ASC
             LIMIT 1;""")
         row = DIARY.cursor.fetchone()
-        start = row['entry_date']
+        start = row['entry_date'] if row else 'invalid'
 
     if end == "x":
         DIARY.cursor.execute("""
@@ -1264,7 +1264,7 @@ def _stats_graph(start: str, end: str) -> Dict[str, List[Union[int, str]]]:
                      entry_addenda_seq DESC
             LIMIT 1;""")
         row = DIARY.cursor.fetchone()
-        end = row['entry_date']
+        end = row['entry_date'] if row else 'invalid'
 
     start_m = validate_date(start)
     end_m = validate_date(end)
