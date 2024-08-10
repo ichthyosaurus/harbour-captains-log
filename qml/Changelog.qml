@@ -9,6 +9,17 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "4.1.1-1"
+        date: "2024-08-10"
+        paragraphs: [
+            "- Updated translations: Spanish, Estonian, Swedish, Ukrainian, Norwegian Bokmål, and 11 more<br>" +
+            "- Fixed two bugs that could cause database errors when the app is started for the first time<br>" +
+            "- Added a rudimentary graph showing mood changes over time<br>" +
+            "- Fixed mood statistics bar turning black if a value was above 50%<br>" +
+            "- Fixed links in the new support dialog"
+        ]
+    }
+    ChangelogItem {
         version: "4.1.0-1"
         date: "2024-07-26"
         paragraphs: [

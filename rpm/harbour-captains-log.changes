@@ -6,6 +6,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat Aug 10 2024 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.1.1-1
+- Updated translations: Spanish, Estonian, Swedish, Ukrainian, Norwegian Bokmål, and 11 more
+- Fixed two bugs that could cause database errors when the app is started for the first time
+- Added a rudimentary graph showing mood changes over time
+- Fixed mood statistics bar turning black if a value was >50%
+- Fixed links in the new support dialog
+
 * Fri Jul 26 2024 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.1.0-1
 - updated translations: Swedish, Ukrainian, German, Chinese, Turkish, Estonian, English, Russian, Spanish, Indonesian
 - added rudimentary statistics about tracked mood on the settings page (requires mood tracking to be enabled)
