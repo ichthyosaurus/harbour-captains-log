@@ -64,7 +64,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Будь ласка, знайдіть хвилинку, щоб подумати, чи можете ви зробити свій внесок у цей проєкт у той чи інший спосіб.</translation>
     </message>
 </context>
 <context>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>згорнути</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>розгорнути</translation>
     </message>
 </context>
 <context>
@@ -420,62 +420,62 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожертвувати на Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожертвуйте суму рівну чашці кави, шматку піци або квитку в театр.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Перекласти на Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Допоможіть перекласти цей застосунок якомога більшою кількістю мов.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Допомогти з розробкою на Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Підтримка в обслуговуванні та пакуванні, написанні коду або наданні цінних звітів про помилки.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Чому це має вас хвилювати?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Цей проєкт створений з любов&apos;ю та пристрастю одним розробником у свій вільний час і надається вам безоплатно.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Я розробляю вільне програмне забезпечення, тому що переконаний, що це етично, й це цікаве хобі. Однак, його розробка вимагає багато часу та зусиль. Оскільки Sailfish і життя в цілому коштує грошей, мені потрібна ваша підтримка, щоби мати змогу витрачати час на такі неоплачувані проєкти, як цей.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Навіщо донатити?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla підняла ціни і намагається змусити розробників (які працюють безплатно) платити за оренду Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо ви можете собі це дозволити, пожертвування – це найпростіший спосіб гарантувати, що я зможу продовжувати працювати над застосунками для Sailfish. Підійде будь-яка сума, будь то чашка кави, шматок піци чи щось більше.</translation>
     </message>
 </context>
 <context>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="194"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Скористайтеся спрощеним пошуком у звичайному тексті, якщо ви не впевнені, як ви писали щось у минулому: виберіть «звичайний текст» як синтаксис пошуку тут, а «спрощений» як режим пошуку в окремому налаштуванні.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="233"/>
@@ -937,7 +937,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Натисніть і утримуйте, щоб скинути дату.</translation>
     </message>
 </context>
 <context>
@@ -1079,37 +1079,37 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Зовнішній вигляд</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="117"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Ввімкнути відстеження настрою</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="118"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкніть цей параметр, щоби повністю вимкнути всі функції, пов&apos;язані з настроєм.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Зауважте, що записи зберігатимуть ваш настрій як «добрий», якщо цей параметр вимкнено.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Завжди запитувати про настрій</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="128"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Це дозволяє запитувати про ваш настрій одразу при створенні нового запису.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Експорт та резервне копіювання</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="159"/>
@@ -1119,29 +1119,29 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Ідеї</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="183"/>
         <source>From</source>
-        <translation type="unfinished">Від</translation>
+        <translation>Від</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="184"/>
         <location filename="../qml/pages/SettingsPage.qml" line="193"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">будь-коли</translation>
+        <translation>будь-коли</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>Until</source>
-        <translation type="unfinished">Доки</translation>
+        <translation>Доки</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Натисніть і утримуйте, щоб скинути дату.</translation>
     </message>
 </context>
 <context>
@@ -1149,27 +1149,27 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Привіт!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Дякую за використання мого маленького застосунку! Можливо, ви можете зробити свій внесок у відповідь?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Спасибі за вашу підтримку!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Нагадати пізніше</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Не запитувати знову</translation>
     </message>
 </context>
 <context>

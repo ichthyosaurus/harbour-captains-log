@@ -112,12 +112,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>vis mindre</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>vis mer</translation>
     </message>
 </context>
 <context>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Database-sikkerhetskopi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="62"/>
@@ -258,37 +258,37 @@
         <location filename="../qml/pages/ExportPage.qml" line="146"/>
         <source>Entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Oppføringer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="154"/>
         <source>All entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Alle oppføringer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="158"/>
         <source>Selected entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valgte oppføringer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="177"/>
         <source>Select entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Velg oppføringer</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ExportPage.qml" line="178"/>
         <source>%n entries selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n oppføring valgt</numerusform>
+            <numerusform>%n oppføringer valgt</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="191"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="192"/>
@@ -344,7 +344,7 @@
         <location filename="../qml/components/ExportTranslations.qml" line="18"/>
         <source>README.txt</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>LESMEG.txt</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="19"/>
@@ -403,7 +403,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisenstekst</translation>
     </message>
 </context>
 <context>
@@ -419,7 +419,7 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Doner på Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
@@ -429,12 +429,12 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Bistå oversettelsen på Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjelp til å oversette programmet til så mange språk som mulig.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
@@ -608,7 +608,7 @@
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Endringslogg</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
@@ -618,12 +618,12 @@
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyheter</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Endringer siden versjon %1</translation>
     </message>
 </context>
 <context>
@@ -863,7 +863,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Utvalg</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="335"/>
@@ -880,7 +880,7 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="344"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>valgt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="347"/>
@@ -891,7 +891,7 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="350"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
-        <translation type="unfinished"></translation>
+        <translation>uvalgt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="353"/>
@@ -971,17 +971,17 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="44"/>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis forhåndsvisinger</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="45"/>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis fullstendige oppføringer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="31"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter</translation>
     </message>
 </context>
 <context>
@@ -989,22 +989,22 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="49"/>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tøm utvalg</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="55"/>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis forhåndsvisninger</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="56"/>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis fullstendige oppføringer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="62"/>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Velg alt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="67"/>
@@ -1014,17 +1014,17 @@
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="83"/>
         <source>Select %n</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Velg %n</numerusform>
+            <numerusform>Velg %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="89"/>
         <source>%n entries shown</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n oppføring valgt</numerusform>
+            <numerusform>%n oppføringer valgt</numerusform>
         </translation>
     </message>
     <message>
@@ -1063,7 +1063,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Utseende</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="117"/>
@@ -1083,7 +1083,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Spør alltid om humør</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="128"/>
@@ -1135,7 +1135,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Database-sikkerhetskopi</translation>
     </message>
 </context>
 <context>
@@ -1143,7 +1143,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Hei der</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
@@ -1163,7 +1163,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikke spør igjen</translation>
     </message>
 </context>
 <context>
@@ -1361,7 +1361,7 @@
         <location filename="../qml/harbour-captains-log.qml" line="316"/>
         <location filename="../qml/harbour-captains-log.qml" line="332"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Database-sikkerhetskopi</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="326"/>
@@ -1378,7 +1378,7 @@
         <location filename="../qml/harbour-captains-log.qml" line="422"/>
         <location filename="../qml/harbour-captains-log.qml" line="461"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="391"/>
@@ -1423,7 +1423,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="461"/>
         <source>The database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke laste inn databasen.</translation>
     </message>
 </context>
 </TS>
