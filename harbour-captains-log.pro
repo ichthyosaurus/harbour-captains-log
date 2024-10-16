@@ -1,10 +1,8 @@
 # This file is part of Captain's Log.
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2020 Gabriel Berkigt
-# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
 
-# NOTICE:
-#
 # Application name defined in TARGET has a corresponding QML filename.
 # If name defined in TARGET is changed, the following needs to be done
 # to match new name:
@@ -59,26 +57,7 @@ CONFIG += sailfishapp_i18n
 
 # Do not forget to modify the localized app name
 # in the the .desktop file.
-TRANSLATIONS = \
-    translations/harbour-captains-log-cs.ts    \
-    translations/harbour-captains-log-de.ts    \
-    translations/harbour-captains-log-en.ts    \
-    translations/harbour-captains-log-es.ts    \
-    translations/harbour-captains-log-et.ts    \
-    translations/harbour-captains-log-fi.ts    \
-    translations/harbour-captains-log-fr.ts    \
-    translations/harbour-captains-log-hu.ts    \
-    translations/harbour-captains-log-id.ts    \
-    translations/harbour-captains-log-it.ts    \
-    translations/harbour-captains-log-nb_NO.ts \
-    translations/harbour-captains-log-nl.ts    \
-    translations/harbour-captains-log-pl.ts    \
-    translations/harbour-captains-log-ru.ts    \
-    translations/harbour-captains-log-sk.ts    \
-    translations/harbour-captains-log-sv.ts    \
-    translations/harbour-captains-log-tr.ts    \
-    translations/harbour-captains-log.ts       \
-    translations/harbour-captains-log-zh_CN.ts \
+TRANSLATIONS = translations/harbour-captains-log-*.ts \
 
 QML_IMPORT_PATH += qml/modules
 
