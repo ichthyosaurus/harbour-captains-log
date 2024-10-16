@@ -90,6 +90,85 @@ A.AboutPageBase {
             ]
         },
         //>>> GENERATED LIST OF TRANSLATION CREDITS
+        A.ContributionSection {
+            title: qsTr("Translations")
+            groups: [
+                A.ContributionGroup {
+                    title: qsTr("Ukrainian")
+                    entries: [
+                        "Dan"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Swedish")
+                    entries: [
+                        "Åke Engelbrektson",
+                        "Åke Engelbrektson, Allan Nordhøy"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Spanish")
+                    entries: [
+                        "gallegonovato"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Russian")
+                    entries: [
+                        "Nikolai Sinyov"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Norwegian Bokmål")
+                    entries: [
+                        "Allan Nordhøy"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Italian")
+                    entries: [
+                        "DamnAkhamai"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Indonesian")
+                    entries: [
+                        "Reza Almanda"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("German")
+                    entries: [
+                        "Gabriel Berkigt",
+                        "Mirian Margiani"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Finnish")
+                    entries: [
+                        "Matti Viljanen"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Estonian")
+                    entries: [
+                        "Priit Jõerüüt"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("English")
+                    entries: [
+                        "Mirian Margiani"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Chinese")
+                    entries: [
+                        "dashinfantry"
+                    ]
+                }
+            ]
+        }
         //<<< GENERATED LIST OF TRANSLATION CREDITS
     ]
 }
