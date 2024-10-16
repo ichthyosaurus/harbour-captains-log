@@ -404,7 +404,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation type="unfinished">Текст ліцензії</translation>
+        <translation>Текст ліцензії</translation>
     </message>
 </context>
 <context>
@@ -483,24 +483,24 @@
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="55"/>
         <source>About</source>
-        <translation type="unfinished">Про застосунок</translation>
+        <translation>Про застосунок</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
         <source>Version %1</source>
-        <translation type="unfinished">Версія %1</translation>
+        <translation>Версія %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
-        <translation type="unfinished">Розробка</translation>
+        <translation>Розробка</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>show contributors</source>
-        <translation type="unfinished">Показати учасників</translation>
+        <translation>Показати учасників</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
@@ -508,12 +508,12 @@
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation type="unfinished">Головна</translation>
+        <translation>Головна</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation type="unfinished">Переклади</translation>
+        <translation>Переклади</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -521,22 +521,22 @@
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation type="unfinished">Вихідний код</translation>
+        <translation>Вихідний код</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation type="unfinished">Пожертви</translation>
+        <translation>Пожертви</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
         <source>License</source>
-        <translation type="unfinished">Ліцензія</translation>
+        <translation>Ліцензія</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Показати ліцензію</numerusform>
             <numerusform>Показати ліцензії</numerusform>
             <numerusform>Показати ліцензій</numerusform>
@@ -545,28 +545,28 @@
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation type="unfinished">показати подробиці</translation>
+        <translation>показати подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
-        <translation type="unfinished">Учасники</translation>
+        <translation>Учасники</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished">Подяки</translation>
+        <translation>Подяки</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation type="unfinished">Дякую!</translation>
+        <translation>Дякую!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished">Подробиці</translation>
+        <translation>Подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
@@ -591,12 +591,12 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished">Завантажити тексти ліцензій</translation>
+        <translation>Завантажити тексти ліцензій</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Ліцензія</numerusform>
             <numerusform>Ліцензії</numerusform>
             <numerusform>Ліцензій</numerusform>
@@ -605,28 +605,28 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished">Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
+        <translation>Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation type="unfinished">Список змін</translation>
+        <translation>Список змін</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished">Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation type="unfinished">Новини</translation>
+        <translation>Новини</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished">Зміни з попередньої версії %1</translation>
+        <translation>Зміни з попередньої версії %1</translation>
     </message>
 </context>
 <context>
@@ -634,17 +634,17 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished">Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
+        <translation>Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished">Ви можете підтримати цей прожкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
+        <translation>Ви можете підтримати цей проєкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished">Ваш внесок у переклади або код буде дуже доречним.</translation>
+        <translation>Ваш внесок у переклади або код буде дуже доречним.</translation>
     </message>
 </context>
 <context>
@@ -665,7 +665,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити зовні</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -1124,7 +1124,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Записи</translation>
+        <translation>Записи</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
