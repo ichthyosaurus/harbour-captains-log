@@ -530,7 +530,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
-        <translation>показати учасників</translation>
+        <translation>Показати учасників</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
@@ -567,9 +567,9 @@
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="135"/>
         <source>show license(s)</source>
         <translation>
-            <numerusform>показати ліцензію</numerusform>
-            <numerusform>показати ліцензії</numerusform>
-            <numerusform>показати ліцензій</numerusform>
+            <numerusform>Показати ліцензію</numerusform>
+            <numerusform>Показати ліцензії</numerusform>
+            <numerusform>Показати ліцензій</numerusform>
         </translation>
     </message>
     <message>
@@ -1154,7 +1154,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Записи</translation>
+        <translation>Записи</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>

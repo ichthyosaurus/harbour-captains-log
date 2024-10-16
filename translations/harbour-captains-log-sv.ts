@@ -959,7 +959,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="406"/>
         <source>Until</source>
-        <translation>Until</translation>
+        <translation>Tills</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
@@ -1148,7 +1148,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Poster</translation>
+        <translation>Poster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
