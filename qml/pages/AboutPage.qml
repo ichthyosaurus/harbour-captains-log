@@ -18,7 +18,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0 as S
 import Opal.About 1.0 as A
-import "../modules/Opal/Attributions"
 
 A.AboutPageBase {
     id: root
@@ -45,6 +44,7 @@ A.AboutPageBase {
 
     description: qsTr("A simple diary application for keeping track of your thoughts.")
     mainAttributions: ["2020-%1 Mirian Margiani".arg((new Date()).getFullYear()), "2020 Gabriel Berkigt"]
+    autoAddOpalAttributions: true
 
     attributions: [
         A.Attribution {
@@ -72,12 +72,7 @@ A.AboutPageBase {
             entries: ["2014 Julien Wintz", "2019-2024 Mirian Margiani"]
             licenses: A.License { spdxId: "MIT" }
             sources: "https://web.archive.org/web/20180611014447/https://github.com/jwintz/qchart.js"
-        },
-        OpalAboutAttribution {},
-        OpalSupportMeAttribution {},
-        OpalInfoComboAttribution {},
-        OpalComboDataAttribution {},
-        OpalLinkHandlerAttribution {}
+        }
     ]
 
     contributionSections: [
