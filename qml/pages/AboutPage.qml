@@ -6,26 +6,18 @@
 
 /*
  * Translators:
- * Please add yourself to the list of contributors below. If your language is already
- * in the list, add your name to the 'entries' field. If you added a new translation,
- * create a new section at the top of the list.
+ * Please add yourself to the list of translators in TRANSLATORS.json.
+ * If your language is already in the list, add your name to the 'entries'
+ * field. If you added a new translation, create a new section in the 'extra' list.
  *
  * Other contributors:
- * Please add yourself to the relevant list of contributors.
+ * Please add yourself to the relevant list of contributors below.
  *
- * <...>
- *  ContributionGroup {
- *      title: qsTr("Your language")
- *      entries: ["Existing contributor", "YOUR NAME HERE"]
- *  },
- * <...>
- *
- */
+*/
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0 as S
 import Opal.About 1.0 as A
-import "../modules/Opal/Attributions"
 
 A.AboutPageBase {
     id: root
@@ -52,6 +44,7 @@ A.AboutPageBase {
 
     description: qsTr("A simple diary application for keeping track of your thoughts.")
     mainAttributions: ["2020-%1 Mirian Margiani".arg((new Date()).getFullYear()), "2020 Gabriel Berkigt"]
+    autoAddOpalAttributions: true
 
     attributions: [
         A.Attribution {
@@ -79,12 +72,7 @@ A.AboutPageBase {
             entries: ["2014 Julien Wintz", "2019-2024 Mirian Margiani"]
             licenses: A.License { spdxId: "MIT" }
             sources: "https://web.archive.org/web/20180611014447/https://github.com/jwintz/qchart.js"
-        },
-        OpalAboutAttribution {},
-        OpalSupportMeAttribution {},
-        OpalInfoComboAttribution {},
-        OpalComboDataAttribution {},
-        OpalLinkHandlerAttribution {}
+        }
     ]
 
     contributionSections: [
@@ -101,34 +89,86 @@ A.AboutPageBase {
                 }
             ]
         },
+        //>>> GENERATED LIST OF TRANSLATION CREDITS
         A.ContributionSection {
             title: qsTr("Translations")
             groups: [
                 A.ContributionGroup {
+                    title: qsTr("Ukrainian")
+                    entries: [
+                        "Dan"
+                    ]
+                },
+                A.ContributionGroup {
                     title: qsTr("Swedish")
-                    entries: ["Åke Engelbrektson, Allan Nordhøy"]
+                    entries: [
+                        "Åke Engelbrektson",
+                        "Åke Engelbrektson, Allan Nordhøy"
+                    ]
                 },
                 A.ContributionGroup {
-                    title: qsTr("Chinese")
-                    entries: ["dashinfantry"]
+                    title: qsTr("Spanish")
+                    entries: [
+                        "gallegonovato"
+                    ]
                 },
                 A.ContributionGroup {
-                    title: qsTr("German")
-                    entries: ["Gabriel Berkigt", "Mirian Margiani"]
+                    title: qsTr("Russian")
+                    entries: [
+                        "Nikolai Sinyov"
+                    ]
                 },
                 A.ContributionGroup {
-                    title: qsTr("Finnish")
-                    entries: ["Matti Viljanen"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Norwegian")
-                    entries: ["Bokmål: Allan Nordhøy"]
+                    title: qsTr("Norwegian Bokmål")
+                    entries: [
+                        "Allan Nordhøy"
+                    ]
                 },
                 A.ContributionGroup {
                     title: qsTr("Italian")
-                    entries: ["DamnAkhamai"]
+                    entries: [
+                        "DamnAkhamai"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Indonesian")
+                    entries: [
+                        "Reza Almanda"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("German")
+                    entries: [
+                        "Gabriel Berkigt",
+                        "Mirian Margiani"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Finnish")
+                    entries: [
+                        "Matti Viljanen"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Estonian")
+                    entries: [
+                        "Priit Jõerüüt"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("English")
+                    entries: [
+                        "Mirian Margiani"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Chinese")
+                    entries: [
+                        "dashinfantry"
+                    ]
                 }
             ]
         }
+        //<<< GENERATED LIST OF TRANSLATION CREDITS
     ]
 }
