@@ -662,7 +662,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava välise rakendusega</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -1098,7 +1098,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Kirjed</translation>
+        <translation>Kirjed</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
