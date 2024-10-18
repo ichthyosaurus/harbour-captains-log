@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <translation>Norskt bokmål</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="134"/>
