@@ -7,6 +7,7 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import SortFilterProxyModel 0.2
+import Opal.MenuSwitch 1.0
 import Opal.InfoCombo 1.0 as I
 import Opal.ComboData 1.0 as C
 import Opal.LinkHandler 1.0 as L
@@ -89,32 +90,18 @@ Dialog {
         PullDownMenu {
             flickable: listView
 
-            MenuItem {
-                TextSwitch {
-                    checked: !_queries.matchAllMode
-                    text: " "
-                    highlighted: parent.highlighted
-                    height: Theme.itemSizeSmall
-                    width: height
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-
-                text: qsTr("Any may match")
+            MenuSwitch {
+                automaticCheck: false
+                checked: !_queries.matchAllMode
                 onClicked: _queries.matchAllMode = false
+                text: qsTr("Any may match")
             }
 
-            MenuItem {
-                TextSwitch {
-                    checked: _queries.matchAllMode
-                    text: " "
-                    highlighted: parent.highlighted
-                    height: parent.height
-                    width: height
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-
-                text: qsTr("All must match")
+            MenuSwitch {
+                automaticCheck: false
+                checked: _queries.matchAllMode
                 onClicked: _queries.matchAllMode = true
+                text: qsTr("All must match")
             }
         }
 
