@@ -155,7 +155,7 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="36"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
@@ -165,13 +165,13 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>humeur&#xa0;: %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="113"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ajout du %1</translation>
     </message>
 </context>
 <context>
@@ -180,12 +180,12 @@
         <location filename="../qml/components/EntryElementFull.qml" line="54"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ajout du %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="86"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>humeur&#xa0;: %1</translation>
     </message>
 </context>
 <context>
@@ -194,12 +194,12 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ajout du %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>humeur&#xa0;: %1</translation>
     </message>
 </context>
 <context>
@@ -207,32 +207,32 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="55"/>
         <source>Export your data</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter vos données</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="61"/>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom du fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="99"/>
         <source>Plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte clair</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="125"/>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeurs séparées par des virgules (CSV)</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="107"/>
         <source>Plain Markdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown simple</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="116"/>
         <source>Markdown for Pandoc</source>
-        <translation type="unfinished"></translation>
+        <translation>Markdown pour Pandoc</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="89"/>
@@ -931,18 +931,18 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="359"/>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Humeur</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="370"/>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="398"/>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>De</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="380"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>À</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="389"/>
