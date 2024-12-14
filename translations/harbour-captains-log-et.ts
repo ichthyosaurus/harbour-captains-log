@@ -212,7 +212,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="61"/>
         <source>Filename</source>
-        <translation>Faili nimi</translation>
+        <translation>Failinimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="99"/>
@@ -1433,7 +1433,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="410"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
-        <translation>Sailjail&apos;i toe jaoks vajalik failide asukoha muutmine ei õnnestunud: „%1“ ↦ „%2“.</translation>
+        <translation>Sailjaili toe jaoks vajalik failide asukoha muutmine ei õnnestunud: „%1“ ↦ „%2“.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="414"/>
