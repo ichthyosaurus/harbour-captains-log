@@ -9,6 +9,16 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "4.2.0-1"
+        date: "2025-03-11"
+        paragraphs: [
+            "- Added translations: Portuguese (Brazil), Tamil<br>" +
+            "- Updated translations: Estonian, Finnish, French, Serbian, Spanish, Swedish, Ukrainian<br>" +
+            "- Fixed actually shipping all translations<br>" +
+            "- Switched to use Opal.SmartScrollbar and Opal.MenuSwitch instead of custom implementations"
+        ]
+    }
+    ChangelogItem {
         version: "4.1.1-1"
         date: "2024-08-10"
         paragraphs: [

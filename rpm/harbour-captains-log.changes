@@ -6,6 +6,12 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Mar 11 2025 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.2.0-1
+- Added translations: Portuguese (Brazil), Tamil
+- Updated translations: Estonian, Finnish, French, Serbian, Spanish, Swedish, Ukrainian
+- Fixed actually shipping all translations
+- Switched to use Opal.SmartScrollbar and Opal.MenuSwitch instead of custom implementations
+
 * Sat Aug 10 2024 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.1.1-1
 - Updated translations: Spanish, Estonian, Swedish, Ukrainian, Norwegian Bokmål, and 11 more
 - Fixed two bugs that could cause database errors when the app is started for the first time
