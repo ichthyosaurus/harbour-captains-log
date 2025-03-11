@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sr">
+<TS version="2.1" language="pt_BR">
 <context>
     <name>AboutPage</name>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="80"/>
         <source>Development</source>
-        <translation>razvijanje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="45"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation>Jednostavna dnevni aplikacija za praćenje vaših misli.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="83"/>
         <source>Programming</source>
-        <translation>programiranje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Translations</source>
-        <translation>prevodi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation>ukrajinski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Swedish</source>
-        <translation>švedski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="110"/>
         <source>Spanish</source>
-        <translation>španski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>Russian</source>
-        <translation>ruski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Norwegian Bokmål</source>
-        <translation>norveški bokmal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Indonesian</source>
-        <translation>indonežanski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Estonian</source>
-        <translation>estonski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>English</source>
-        <translation>engleski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="165"/>
         <source>Chinese</source>
-        <translation>kineski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>German</source>
-        <translation>nemački</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Finnish</source>
-        <translation>finski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>Icon Design</source>
-        <translation>dizajn ikona</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Italian</source>
-        <translation>italijanski</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Uzmite momenat da razmislite da li možete sarađivati sa ovim projektom na ovaj ili onaj način.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -102,17 +102,17 @@
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="36"/>
         <source>Saved your protection code.</source>
-        <translation>Sačuvajte vaš kod.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="29"/>
         <source>Enter your old security code</source>
-        <translation>Ukucajte vaš stari kod</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ChangePinPage.qml" line="29"/>
         <source>Enter a new security code</source>
-        <translation>ukucajte novi kod</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -120,13 +120,13 @@
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="14"/>
         <source>Date</source>
-        <translation>datum</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
         <source>Select</source>
         <comment>fallback text on button to select a date</comment>
-        <translation>izaberite</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/components/DateTimePickerCombo.qml" line="18"/>
         <source>never</source>
-        <translation>nikada</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -142,12 +142,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation>prikaži manje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation>prikaži više</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -155,23 +155,23 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="36"/>
         <source>Edit</source>
-        <translation>uredi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="49"/>
         <source>Delete</source>
-        <translation>izbriši</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
         <source>mood: %1</source>
-        <translation>osećaj:%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="113"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation>dodatak od %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -180,12 +180,12 @@
         <location filename="../qml/components/EntryElementFull.qml" line="54"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation>dodatak od %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="86"/>
         <source>mood: %1</source>
-        <translation>osećaj:%1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -194,12 +194,12 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation>dodatak od %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation>osećaj:%1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -207,57 +207,57 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="55"/>
         <source>Export your data</source>
-        <translation>izvezi vaše informacije</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="61"/>
         <source>Filename</source>
-        <translation>ime fajla</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="99"/>
         <source>Plain text</source>
-        <translation>čist tekst</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="125"/>
         <source>Comma-separated values (CSV)</source>
-        <translation>zarezom razdvojene vrednosti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="107"/>
         <source>Plain Markdown</source>
-        <translation>običan markdown</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="116"/>
         <source>Markdown for Pandoc</source>
-        <translation>markdown za pandoc</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="89"/>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation>Izvoz informacija znači za archive/kopiranje i ne kao bekap. Ako želiš da ručno bekapuješ bazu podataka, izaberi &quot;bekap baze podataka&quot; opciju ili koristi href=&quot;https://openrepos.net/content/slava/my-backup&quot;&amp;gt;Moj bekap da napraviš sistemski bekap.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Database backup</source>
-        <translation>bekap baze podataka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="62"/>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation>Fajl će biti sačuvan u vašem folderu dokumenata. Ime ne treba da sadrži subfoldere.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="76"/>
         <source>Export file format</source>
-        <translation>format fajla za izvoz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="101"/>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation>Izvezeni unosi u veoma jednostavnom stajlu ako običan tekst mogu biti kopirani direktno. Zapamtite da duge linije neće biti skraćene.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="109"/>
@@ -311,8 +311,6 @@
         <location filename="../qml/pages/ExportPage.qml" line="178"/>
         <source>%n entries selected</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -568,8 +566,6 @@
         <source>show license(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -627,8 +623,6 @@
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
         <source>License(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -983,8 +977,6 @@
         <comment>search results</comment>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1050,16 +1042,12 @@
         <source>Select %n</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="89"/>
         <source>%n entries shown</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -1213,8 +1201,6 @@
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
