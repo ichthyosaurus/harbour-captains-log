@@ -171,7 +171,7 @@
         <location filename="../qml/components/EntryElement.qml" line="113"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Lisäys päivältä %1</translation>
+        <translation>Lisäys päivältä %1</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,7 @@
         <location filename="../qml/components/EntryElementFull.qml" line="54"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Lisäys päivältä %1</translation>
+        <translation>Lisäys päivältä %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="86"/>
@@ -194,7 +194,7 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Lisäys päivältä %1</translation>
+        <translation>Lisäys päivältä %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
@@ -237,7 +237,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="89"/>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation type="unfinished">Tietojen vienti on tarkoitettu arkistointia ja tulostamista, ei varmuuskopiointia varten. Jos haluat varmuuskopioida tietokannan manuaalisesti, valitse &quot;Tietokannan varmuuskopiointi&quot; tai käytä &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt;-sovellusta luodaksesi varmuuskopion järjestelmästä.</translation>
+        <translation>Tietojen vienti on tarkoitettu arkistointia ja tulostamista, ei varmuuskopiointia varten. Jos haluat varmuuskopioida tietokannan manuaalisesti, valitse &quot;Tietokannan varmuuskopiointi&quot; tai käytä &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt;-sovellusta luodaksesi varmuuskopion järjestelmästä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="133"/>
@@ -344,7 +344,7 @@
         <location filename="../qml/components/ExportTranslations.qml" line="13"/>
         <source>Addendum from {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished">Lisäys päivältä {0}</translation>
+        <translation>Lisäys päivältä {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="14"/>
@@ -374,7 +374,7 @@
         <location filename="../qml/components/ExportTranslations.qml" line="18"/>
         <source>README.txt</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished">LUEMINUT.txt</translation>
+        <translation>LUEMINUT.txt</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="19"/>
@@ -736,7 +736,7 @@
         <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Lisäys päivältä %1</translation>
+        <translation>Lisäys päivältä %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="227"/>
@@ -749,12 +749,12 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="102"/>
         <source>Any may match</source>
-        <translation type="unfinished"></translation>
+        <translation>Mikä tahansa voi vastata</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="116"/>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaikkien on vastattava</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
@@ -769,12 +769,12 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="131"/>
         <source>Title and entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Otsikko ja merkintä</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="137"/>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Hae sisältöä</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="163"/>
@@ -815,7 +815,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="213"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="unfinished">Tämä valinta mahdollistaa hakulausekkeiden käytön.</translation>
+        <translation>Tämän vaihtoehdon avulla voit etsiä laajennettuja lausekkeita. Käytä &quot;?&quot; vastaamaan mitä tahansa yksittäistä merkkiä ja &quot;*&quot; vastaamaan nollaa tai useampaa merkkiä. Hakasulkeissa voidaan määrittää merkkiryhmät. Käytä kenoviivaa etsiäksesi kirjaimellista &quot;?&quot; tai &quot;*&quot;, esim. &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="221"/>
@@ -850,7 +850,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="269"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished">Käytä tätä hakutilaa, kun tiedät tarkalleen, mitä olet etsimässä tai etsit merkkijonoa, jossa on välimerkkejä, kuten &quot;-&quot;, &quot;!&quot; tai &quot;#&quot;.</translation>
+        <translation>Vastaa kyselymerkkijonoa tarkasti. Käytä tätä tilaa, kun tiedät tarkalleen mitä etsit tai kun haluat etsiä merkkijonoa, joka sisältää välimerkkejä, kuten &quot;-&quot;, &quot;!&quot; tai &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
@@ -872,7 +872,7 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="307"/>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>merkitty</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="310"/>
@@ -883,7 +883,7 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
+        <translation>merkitsemätön</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="316"/>
@@ -893,7 +893,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Valinta</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="335"/>
@@ -921,12 +921,12 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="350"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
-        <translation type="unfinished"></translation>
+        <translation>ei valittu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="353"/>
         <source>Find only entries that are currently not selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi vain merkinnät, joita ei tällä hetkellä ole valittu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="359"/>
@@ -937,17 +937,17 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="370"/>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="398"/>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Tästä</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="380"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>Tähän</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="389"/>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisääntulopäivämäärä</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
@@ -959,12 +959,12 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="406"/>
         <source>Until</source>
-        <translation type="unfinished"></translation>
+        <translation>Saakka</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Paina ja pidä painettuna nollataksesi päivämäärän.</translation>
     </message>
 </context>
 <context>
@@ -978,9 +978,9 @@
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
         <source>%n result(s)</source>
         <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tulos</numerusform>
+            <numerusform>%n tulosta</numerusform>
         </translation>
     </message>
     <message>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="60"/>
         <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
+        <translation>Pyyhkäise takaisin muuttaaksesi hakuehtoja</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="39"/>
@@ -1001,17 +1001,17 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="44"/>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä esikatselut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="45"/>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä täydelliset merkinnät</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="31"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie</translation>
     </message>
 </context>
 <context>
@@ -1019,17 +1019,17 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="49"/>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjennä valinta</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="55"/>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä esikatselut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="56"/>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä täydelliset merkinnät</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="62"/>
@@ -1039,22 +1039,22 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="67"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Suodatin</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="83"/>
         <source>Select %n</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Valitse %n</numerusform>
+            <numerusform>Valitse %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="89"/>
         <source>%n entries shown</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n merkintä näytetään</numerusform>
+            <numerusform>%n merkintää näytetään</numerusform>
         </translation>
     </message>
     <message>
@@ -1093,47 +1093,47 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Ulkoasu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Ota mielialan seuranta käyttöön</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista tämä asetus käytöstä poistaaksesi kaikki tunnelmaan liittyvät ominaisuudet kokonaan käytöstä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomaa, että merkinnät tallentavat mielialasi &quot;hyvä on&quot;:na, jos tämä asetus on poistettu käytöstä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Kysy aina mielialaa</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä mahdollistaa mielialan kysymisen heti uutta merkintää luotaessa.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Näkemykset</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Merkinnät</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Tästä</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
@@ -1145,12 +1145,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
-        <translation type="unfinished"></translation>
+        <translation>Saakka</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Paina ja pidä painettuna nollataksesi päivämäärän.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
@@ -1160,12 +1160,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomaa, että tämä koodi estää vain pääsyn sovellukseen. Tietokantaa ei ole salattu, eikä koodia ole tallennettu turvallisesti.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Vienti ja varmuuskopiointi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
@@ -1178,27 +1178,27 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Moi!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiitos kun käytit pientä sovellustani! Ehkä voit osallistua?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiitos tuestasi!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Muistuta minua myöhemmin</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Älä kysy minulta uudelleen</translation>
     </message>
 </context>
 <context>
@@ -1267,32 +1267,32 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="123"/>
         <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hylätty kaikki muutokset</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="125"/>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Hylätty merkinnän</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="144"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Hylkää</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivämäärä</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimeksi muokattu: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="169"/>
         <source>Your mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Mielialasi</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="235"/>
@@ -1337,13 +1337,13 @@
         <location filename="../qml/harbour-captains-log.qml" line="66"/>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation>okei</translation>
+        <translation>hyvä on</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="67"/>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation>ei hyvä</translation>
+        <translation>ei kunnossa</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="68"/>
@@ -1390,7 +1390,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="370"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tapahtui odottamaton virhe. Käynnistä sovellus uudelleen ja tarkista lokit.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="325"/>
@@ -1418,7 +1418,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="400"/>
         <source>The local data folder at “%1” is not writable.</source>
-        <translation type="unfinished">Ei oikeuksia kirjoittaa paikalliseen data-kansioon &quot;%1&quot;.</translation>
+        <translation>Paikallinen tietokansio &quot;%1&quot;:lla ei ole kirjoituskelpoinen.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="403"/>
@@ -1428,17 +1428,17 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
-        <translation type="unfinished">Tietokantaversion &quot;%1&quot; päivittäminen viimeisimpään versioon epäonnistui. Lisätietoja: %2</translation>
+        <translation>Tietokannan &quot;%1&quot; päivittäminen uusimpaan versioon epäonnistui. Yksityiskohdat: %2</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="410"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sailjail-tuen tiedostojen siirtäminen kohteesta %1 kohteeseen %2 epäonnistui.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="414"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokannan päivittäminen uusimpaan versioon epäonnistui, koska versiotiedosto puuttuu &quot;%1&quot;:lta.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="418"/>
@@ -1448,7 +1448,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="425"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntematonta tiedostotyyppiä ”%1” ei voi viedä. Ilmoita tästä viasta.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="439"/>
@@ -1458,7 +1458,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="470"/>
         <source>The database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokantaa ei voitu ladata.</translation>
     </message>
 </context>
 </TS>
