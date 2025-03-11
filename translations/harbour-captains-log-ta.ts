@@ -30,51 +30,61 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
+        <source>Tamil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>Swedish</source>
         <translation>ச்வீடிச்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
-        <source>Spanish</source>
-        <translation>ச்பானிச்</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="116"/>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Russian</source>
         <translation>ரச்ய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Norwegian Bokmål</source>
         <translation>நார்வேசியன் பொக்மால்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="134"/>
+        <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Indonesian</source>
         <translation>இந்தோனேசிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>French</source>
+        <translation>பிரஞ்சு</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="167"/>
         <source>Estonian</source>
         <translation>எச்டோனிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="159"/>
+        <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>English</source>
         <translation>ஆங்கிலம்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="165"/>
+        <location filename="../qml/pages/AboutPage.qml" line="179"/>
         <source>Chinese</source>
         <translation>சீன</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="140"/>
+        <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>German</source>
         <translation>செர்மன்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="147"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
+        <source>Serbian</source>
+        <translation>செர்பிய</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Finnish</source>
         <translation>பின்னிச்</translation>
     </message>
@@ -84,7 +94,7 @@
         <translation>படவுரு வடிவமைப்பு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="128"/>
+        <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Italian</source>
         <translation>இத்தாலிய</translation>
     </message>
@@ -677,31 +687,46 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
         <translation>வெளிப்புற இணைப்பு</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
+        <source>Copy text to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
+        <source>Share</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
         <translation>உலாவியில் திற</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
         <translation>வெளிப்புறமாக திறக்கவும்</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="17"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation>கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது: %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <source>Share link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
         <translation>கிளிப்போர்டுக்கு நகலெடுக்கவும்</translation>
@@ -747,222 +772,222 @@
 <context>
     <name>SearchQueryDialog</name>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="102"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="97"/>
         <source>Any may match</source>
         <translation>எந்த இருக்கலாம்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="116"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="104"/>
         <source>All must match</source>
         <translation>அனைவரும் பொருந்த வேண்டும்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="113"/>
         <source>Back</source>
         <translation>பின்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="127"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="114"/>
         <source>Search</source>
         <translation>தேடல்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="131"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="118"/>
         <source>Title and entry</source>
         <translation>தலைப்பு மற்றும் நுழைவு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="137"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
         <source>Search contents</source>
         <translation>உள்ளடக்கங்களைத் தேடுங்கள்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="163"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="150"/>
         <source>Search tags</source>
         <translation>குறிச்சொற்களைத் தேடுங்கள்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="186"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="173"/>
         <source>Search syntax</source>
         <translation>தொடரியல் தேடல்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="194"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="181"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
         <translation>கடந்த காலங்களில் நீங்கள் எதையாவது உச்சரித்தீர்கள் என்று உங்களுக்குத் தெரியாவிட்டால் எளிமைப்படுத்தப்பட்ட எளிய உரை தேடலைப் பயன்படுத்தவும்: இங்கே தேடல் தொடரியல் என “எளிய உரை” என்பதைத் தேர்ந்தெடுக்கவும், தனி அமைப்பில் தேடல் பயன்முறையாக “எளிமைப்படுத்தப்பட்ட”.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="233"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="279"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="220"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="266"/>
         <source>Note</source>
         <translation>குறிப்பு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="203"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="190"/>
         <source>plain text</source>
         <translation>சாதாரண எழுத்து</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="205"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="192"/>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
         <translation>நீங்கள் நுழைந்தவுடன் சரத்தை தேடுங்கள். குறிப்பு: “தேடல் பயன்முறை” “எளிமைப்படுத்தப்பட்ட” என அமைக்கப்பட்டால் சில எளிமைப்படுத்தல்கள் தேடல் காலத்திற்கு பயன்படுத்தப்படும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="211"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
         <source>wildcard</source>
         <translation>வைல்டு அட்டை</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="213"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="200"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation>இந்த விருப்பம் நீட்டிக்கப்பட்ட வடிவங்களைத் தேட அனுமதிக்கிறது. “?” எந்தவொரு ஒற்றை கதாபாத்திரத்தையும் பொருத்த, மற்றும் சுழிய அல்லது அதற்கு மேற்பட்ட எழுத்துக்களுடன் பொருந்தக்கூடிய “*”. எழுத்துக்களின் குழுக்களை சதுர அடைப்புக்குறிக்குள் வரையறுக்கலாம். &quot;?&quot; அல்லது “*”, எ.கா. “%1”.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="221"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="208"/>
         <source>regular expression</source>
         <translation>வழக்கமான வெளிப்பாடு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="223"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="210"/>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>சிக்கலான வழக்கமான வெளிப்பாடுகளைப் பயன்படுத்தி தேடுங்கள். செங்குத்து பட்டியைப் பயன்படுத்தவும் “|” பல சொற்களைத் தேட. வழக்கமான வெளிப்பாடுகளைப் பற்றி மேலும் அறிய விரும்பினால் இணையத்தைத் தேடுங்கள்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="244"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="231"/>
         <source>Search mode</source>
         <translation>தேடல் பயன்முறை</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="258"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="245"/>
         <source>simplified</source>
         <translation>எளிமைப்படுத்தப்பட்ட</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="260"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="247"/>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
         <translation>கதாபாத்திரங்களில் டயக்ரைட்டிக்சை புறக்கணிக்கவும், பொருந்தும் எ.கா. “O” ஐத் தேடும்போது “ö”, “á” மற்றும் “õ”. எந்த நிறுத்தற்குறிகளையும் புறக்கணிக்கவும். கடந்த காலத்தில் நீங்கள் எதையாவது உச்சரித்தீர்கள் என்று தெரியாதபோது இந்த பயன்முறையைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="267"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="254"/>
         <source>strict</source>
         <translation>கண்டிப்பான</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="269"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="256"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
         <translation>வினவல் சரத்தை சரியாக பொருத்துங்கள். நீங்கள் தேடுவதை சரியாக அறிந்திருக்கும்போது, அல்லது “-”, “!” அல்லது “#” போன்ற நிறுத்தற்குறி மதிப்பெண்களைக் கொண்ட ஒரு சரத்தைத் தேட விரும்பும் போது இந்த பயன்முறையைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="276"/>
         <source>Bookmarks</source>
         <translation>புக்மார்க்குகள்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="298"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="285"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
         <translation>அனைத்து உள்ளீடுகளும்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="302"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
         <translation>உள்ளீடுகளை புக்மார்க்கு செய்யப்பட்டதா இல்லையா என்பதைப் பொருட்படுத்தாமல் கண்டறியவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="307"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="294"/>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
         <translation>குறிக்கப்பட்டுள்ளது</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="310"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="297"/>
         <source>Find only bookmarked entries.</source>
         <translation>புக்மார்க்கு செய்யப்பட்ட உள்ளீடுகளை மட்டுமே கண்டறியவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation>குறிக்கப்படாதது</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="316"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
         <source>Find only entries that are not bookmarked.</source>
         <translation>புக்மார்க்கு செய்யப்படாத உள்ளீடுகளை மட்டுமே கண்டறியவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
         <source>Selection</source>
         <translation>தேர்வு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="335"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="322"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
         <translation>அனைத்து உள்ளீடுகளும்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="339"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
         <source>Find entries regardless of whether they are selected or not.</source>
         <translation>உள்ளீடுகளை அவை தேர்ந்தெடுக்கப்பட்டதா இல்லையா என்பதைப் பொருட்படுத்தாமல் கண்டறியவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="344"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="331"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
         <translation>தேர்ந்தெடுக்கப்பட்டது</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="347"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="334"/>
         <source>Find only currently selected entries.</source>
         <translation>தற்போது தேர்ந்தெடுக்கப்பட்ட உள்ளீடுகளை மட்டுமே கண்டறியவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="350"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
         <translation>தேர்வு செய்யப்படாதது</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="353"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
         <source>Find only entries that are currently not selected.</source>
         <translation>தற்போது தேர்ந்தெடுக்கப்படாத உள்ளீடுகளை மட்டுமே கண்டறியவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="359"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
         <source>Mood</source>
         <translation>மனநிலை</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="370"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="398"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="357"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="385"/>
         <source>From</source>
         <translation>இருந்து</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="380"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="367"/>
         <source>To</source>
         <translation>பெறுநர்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="389"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="376"/>
         <source>Entry date</source>
         <translation>நுழைவு தேதி</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="407"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="386"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="394"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>எப்போது வேண்டுமானாலும்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="406"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="393"/>
         <source>Until</source>
         <translation>வரை</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="402"/>
         <source>Press and hold to reset the date.</source>
         <translation>தேதியை மீட்டமைக்க அழுத்தி வைத்திருங்கள்.</translation>
     </message>

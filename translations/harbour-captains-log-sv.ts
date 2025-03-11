@@ -30,51 +30,61 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
+        <source>Tamil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>Swedish</source>
         <translation>Svenska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
-        <source>Spanish</source>
-        <translation>Spanska</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="116"/>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Russian</source>
         <translation>Ryska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Norwegian Bokmål</source>
         <translation>Norskt bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="134"/>
+        <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Indonesian</source>
         <translation>Indonesiska</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>French</source>
+        <translation>Franska</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="167"/>
         <source>Estonian</source>
         <translation>Estniska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="159"/>
+        <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>English</source>
         <translation>Engelska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="165"/>
+        <location filename="../qml/pages/AboutPage.qml" line="179"/>
         <source>Chinese</source>
         <translation>Kinesiska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="140"/>
+        <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>German</source>
         <translation>Tyska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="147"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
+        <source>Serbian</source>
+        <translation>Serbiska</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Finnish</source>
         <translation>Finska</translation>
     </message>
@@ -84,7 +94,7 @@
         <translation>Ikondesign</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="128"/>
+        <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Italian</source>
         <translation>Italienska</translation>
     </message>
@@ -677,31 +687,46 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
         <translation>Extern länk</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
+        <source>Copy text to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
+        <source>Share</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
         <translation>Öppna i webbläsare</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
         <translation>Öppna externt</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="17"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation>Kopierat till urklipp: %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <source>Share link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
         <translation>Kopiera till urklipp</translation>
@@ -747,222 +772,222 @@
 <context>
     <name>SearchQueryDialog</name>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="102"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="97"/>
         <source>Any may match</source>
         <translation>Vilken som helst kan matcha</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="116"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="104"/>
         <source>All must match</source>
         <translation>Alla måste matcha</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="113"/>
         <source>Back</source>
         <translation>Tillbaka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="127"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="114"/>
         <source>Search</source>
         <translation>Sök</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="131"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="118"/>
         <source>Title and entry</source>
         <translation>Titel och post</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="137"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
         <source>Search contents</source>
         <translation>Sök innehåll</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="163"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="150"/>
         <source>Search tags</source>
         <translation>Sök taggar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="186"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="173"/>
         <source>Search syntax</source>
         <translation>Söksyntax</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="194"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="181"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
         <translation>Använd förenklad vanlig textsökning om du är osäker på hur du stavade något tidigare: välj &quot;vanlig text&quot; som söksyntax här och &quot;förenklad&quot; som sökläge i den separata inställningen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="233"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="279"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="220"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="266"/>
         <source>Note</source>
         <translation>Anteckning</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="203"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="190"/>
         <source>plain text</source>
         <translation>oformaterad text</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="205"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="192"/>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
         <translation>Sök efter strängen som du angav den. Vissa förenklingar kommer att tillämpas på söktermen om &quot;Sökläge&quot; är inställt på &quot;förenklat&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="211"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
         <source>wildcard</source>
         <translation>jokertecken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="213"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="200"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation>Med det här alternativet kan du söka efter utökade mönster. Använd &quot;?&quot; för att matcha ett enskilt tecken och &quot;*&quot; för att matcha noll eller fler tecken. Teckengrupper kan definieras inom hakparenteser. Använd ett omvänt snedstreck för att söka efter litterala &quot;?&quot; eller &quot;*&quot;, t.ex. &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="221"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="208"/>
         <source>regular expression</source>
         <translation>regular expression</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="223"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="210"/>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>Sök med komplex regular expression. Använd det lodstreck &quot;|&quot; för att söka efter flertal termer. Sök på internet om du vill veta mer om regular expression.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="244"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="231"/>
         <source>Search mode</source>
         <translation>Sökläge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="258"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="245"/>
         <source>simplified</source>
         <translation>förenklat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="260"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="247"/>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
         <translation>Ignorera diakritiska tecken, som matchar t.ex. &quot;ö&quot;, &quot;ó&quot; och &quot;õ&quot; när du söker efter &quot;o&quot;. Ignorera eventuella skiljetecken. Använd det här läget när du är osäker på hur du stavade något tidigare.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="267"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="254"/>
         <source>strict</source>
         <translation>strikt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="269"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="256"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
         <translation>Matcha frågesträngen exakt. Använd det här läget när du vet exakt vad du söker efter eller när du vill söka efter en sträng som innehåller skiljetecken som &quot;-&quot;, &quot;!&quot;, eller &quot;#&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="276"/>
         <source>Bookmarks</source>
         <translation>Bokmärken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="298"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="285"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
         <translation>alla poster</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="302"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
         <translation>Hitta poster oavsett om de är bokmärkta eller inte.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="307"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="294"/>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
         <translation>bokmärkta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="310"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="297"/>
         <source>Find only bookmarked entries.</source>
         <translation>Hitta endast bokmärkta poster.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation>ej bokmärkta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="316"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
         <source>Find only entries that are not bookmarked.</source>
         <translation>Hitta endast poster som inte är bokmärkta.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="335"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="322"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
         <translation>alla poster</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="339"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
         <source>Find entries regardless of whether they are selected or not.</source>
         <translation>Hitta poster oavsett om de är markerade eller inte.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="344"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="331"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
         <translation>markerad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="347"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="334"/>
         <source>Find only currently selected entries.</source>
         <translation>Sök endast poster som är markerade.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="350"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
         <translation>avmarkerad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="353"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
         <source>Find only entries that are currently not selected.</source>
         <translation>Sök endast poster som är omarkerade.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="359"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
         <source>Mood</source>
         <translation>Humör</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="370"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="398"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="357"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="385"/>
         <source>From</source>
         <translation>Från</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="380"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="367"/>
         <source>To</source>
         <translation>Until</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="389"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="376"/>
         <source>Entry date</source>
         <translation>Postdatum</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="407"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="386"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="394"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>när som helst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="406"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="393"/>
         <source>Until</source>
         <translation>Tills</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="415"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="402"/>
         <source>Press and hold to reset the date.</source>
         <translation>Långtryck för att återställa datumet.</translation>
     </message>
