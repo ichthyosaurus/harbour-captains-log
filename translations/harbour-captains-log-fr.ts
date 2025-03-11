@@ -175,7 +175,7 @@
     <message>
         <location filename="../qml/components/EntryElement.qml" line="147"/>
         <source>mood: %1</source>
-        <translation>humeur&#xa0;: %1</translation>
+        <translation>humeur : %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElement.qml" line="113"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="86"/>
         <source>mood: %1</source>
-        <translation>humeur&#xa0;: %1</translation>
+        <translation>humeur : %1</translation>
     </message>
 </context>
 <context>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation>humeur&#xa0;: %1</translation>
+        <translation>humeur : %1</translation>
     </message>
 </context>
 <context>
