@@ -100,6 +100,12 @@ A.AboutPageBase {
                     ]
                 },
                 A.ContributionGroup {
+                    title: qsTr("Tamil")
+                    entries: [
+                        "தமிழ்நேரம்"
+                    ]
+                },
+                A.ContributionGroup {
                     title: qsTr("Swedish")
                     entries: [
                         "Åke Engelbrektson",
@@ -107,9 +113,9 @@ A.AboutPageBase {
                     ]
                 },
                 A.ContributionGroup {
-                    title: qsTr("Spanish")
+                    title: qsTr("Serbian")
                     entries: [
-                        "gallegonovato"
+                        "dex girl"
                     ]
                 },
                 A.ContributionGroup {
@@ -144,9 +150,17 @@ A.AboutPageBase {
                     ]
                 },
                 A.ContributionGroup {
+                    title: qsTr("French")
+                    entries: [
+                        "J. Lavoie"
+                    ]
+                },
+                A.ContributionGroup {
                     title: qsTr("Finnish")
                     entries: [
-                        "Matti Viljanen"
+                        "Elmeri Länsiharju",
+                        "Matti Viljanen",
+                        "Ricky Tigg"
                     ]
                 },
                 A.ContributionGroup {
