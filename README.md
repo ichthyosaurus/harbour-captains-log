@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2018-2024 Mirian Margiani
+SPDX-FileCopyrightText: 2018-2025 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
@@ -118,7 +118,7 @@ contributing to translations or code! See above how you can contribute 🎕.
 
 ## License
 
-> Copyright (C) 2020-2024  Mirian Margiani
+> Copyright (C) 2020-2025  Mirian Margiani
 >
 > Copyright (C) 2020  AlphaX2
 
