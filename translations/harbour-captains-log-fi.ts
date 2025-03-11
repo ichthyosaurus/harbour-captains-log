@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <translation>Norja (kirjanorja)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="134"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Harkitse, voisitko tukea tätä projektia jollain tavalla.</translation>
     </message>
 </context>
 <context>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="14"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivämäärä</translation>
     </message>
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
@@ -142,12 +142,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>näytä vähemmän</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>näytä enemmän</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
         <location filename="../qml/components/EntryElement.qml" line="113"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisäys päivältä %1</translation>
     </message>
 </context>
 <context>
@@ -180,7 +180,7 @@
         <location filename="../qml/components/EntryElementFull.qml" line="54"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisäys päivältä %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="86"/>
@@ -194,7 +194,7 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisäys päivältä %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="99"/>
         <source>Plain text</source>
-        <translation>Pelkkä teksti</translation>
+        <translation>Raakateksti</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="125"/>
@@ -237,93 +237,93 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="89"/>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tietojen vienti on tarkoitettu arkistointia ja tulostamista, ei varmuuskopiointia varten. Jos haluat varmuuskopioida tietokannan manuaalisesti, valitse &quot;Tietokannan varmuuskopiointi&quot; tai käytä &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt;-sovellusta luodaksesi varmuuskopion järjestelmästä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokannan varmuuskopiointi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="62"/>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto tallennetaan Asiakirjat-kansioon. Nimi ei saa sisältää alikansioita.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="76"/>
         <source>Export file format</source>
-        <translation type="unfinished"></translation>
+        <translation>Vientitiedoston muoto</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="101"/>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie kirjoitukset erittäin yksinkertaisena raakatekstinä, joka voidaan tulostaa sellaisenaan. Huomaa, että pitkiä rivejä ei katkaista.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="109"/>
         <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie kirjoitukset yksinkertaisessa &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt;-muodossa. Kirjoitukset voidaan myöhemmin muuttaa toiseen muotoon tulostamista tai web-käyttöä varten.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="118"/>
         <source>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie kirjoitukset laajennetussa muodossa, joka voidaan muuttaa PDF:ksi käyttämällä &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;-sovellusta. Tämä formaatti ei sovi tulostettavaksi sellaisenaan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="127"/>
         <source>Export the full database in a machine-readable plain text format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie koko tietokanta koneluettavana raakatekstinä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="129"/>
         <source>Note that it is not yet possible to import this file type back into the app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomaathan, että tässä muodossa olevaa tiedostoa ei voida palauttaa takaisin sovellukseen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="135"/>
         <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie pakattu kopio alkuperäisestä tietokannasta. Tämä tietokanta voidaan myöhemmin palauttaa. Valitse &quot;Asetukset → Tietokannan varmuuskopiointi&quot; luodaksesi sisäisen varmuuskopion.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="146"/>
         <source>Entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoitukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="154"/>
         <source>All entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kaikki kirjoitukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="158"/>
         <source>Selected entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valitut kirjoitukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="177"/>
         <source>Select entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kirjoituksia</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ExportPage.qml" line="178"/>
         <source>%n entries selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n kirjoitus valittu</numerusform>
+            <numerusform>%n kirjoitusta valittu</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="191"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Vienti</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="192"/>
         <source>Data is being exported to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja viedään kansioon %1</translation>
     </message>
 </context>
 <context>
@@ -332,19 +332,19 @@
         <location filename="../qml/components/ExportTranslations.qml" line="11"/>
         <source>%A, %B %-d %Y (%-H:%M)</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%A, %-d. %B %Y (%-H:%M)</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="12"/>
         <source>%A, %B %-d %Y (%-H:%M, {tz})</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%A, %-d. %B %Y (%-H:%M, {tz})</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="13"/>
         <source>Addendum from {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisäys päivältä {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="14"/>
@@ -356,7 +356,7 @@
         <location filename="../qml/components/ExportTranslations.qml" line="15"/>
         <source>last changed on {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>viimeksi muokattu {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="16"/>
@@ -368,31 +368,31 @@
         <location filename="../qml/components/ExportTranslations.qml" line="17"/>
         <source>Note: this requires “pandoc” and “lualatex”.</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Huom! Tämä vaatii pandoc- ja lualatex-sovelluksen.</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="18"/>
         <source>README.txt</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LUEMINUT.txt</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="19"/>
         <source>Tags: {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tunnisteet: {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="20"/>
         <source>This file has been exported from Captain&apos;s Log on {0}.</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tämä tiedosto on viety Captain&apos;s Logista {0}.</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="21"/>
         <source>You can convert this file to PDF using the following command:</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Voit muuntaa tämän tiedoston PDF-muotoon seuraavalla komennolla:</translation>
     </message>
 </context>
 <context>
@@ -425,7 +425,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="88"/>
         <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pyyhkäise vasemmalle lisätäksesi kirjoituksia</translation>
     </message>
 </context>
 <context>
@@ -433,7 +433,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisenssiteksti</translation>
     </message>
 </context>
 <context>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../qml/components/LimitedDatePickerDialog.qml" line="19"/>
         <source>It is not possible to add entries for the future.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoituksen päiväys ei voi olla tulevaisuudessa.</translation>
     </message>
 </context>
 <context>
@@ -449,62 +449,62 @@
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Lahjoita Liberapayssä</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksa kahvikupin, pizzasiivun tai elokuvalipun verran.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännä Weblatessa</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Auta kääntämään tämä sovellus mahdollisimman monelle kielelle.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitä GitHubissa</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Auta ylläpidossa ja paketoinnissa, kirjoita koodia tai jaa arvokkaita vikaraportteja.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Miksi välittäisit?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä on yhden kehittäjän vapaa-ajallaan rakkaudella ja intohimolla rakentama projekti ja se tarjotaan sinulle ilmaiseksi.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitän ilmaisia ohjelmistoja, koska uskon, että se on eettinen tapa toimia - se on myös hauska harrastus. Ohjelmistojen kehittäminen vaatii kuitenkin paljon aikaa ja vaivaa. Koska Sailfish sekä eläminen yleensäkin maksaa, tarvitsen tukeasi, jotta voin käyttää aikaani tämän kaltaisiin palkattomiin projekteihin.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Miksi lahjoittaa?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla korotti hintojaan ja yrittää saada kehittäjät (jotka työskentelevät palkatta) maksamaan vuokraa Sailfishistä.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jos sinulla on mahdollisuus lahjoittaa, se on helpoin tapa varmistaa, että voin jatkaa sovellusten kehittämistä Sailfishille. Mikä tahansa summa on tervetullut, oli se sitten kupillinen kahvia, pala pizzaa tai enemmän.</translation>
     </message>
 </context>
 <context>
@@ -543,7 +543,7 @@
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Muutosloki</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
@@ -620,7 +620,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation>Kopioi leiikepöydälle</translation>
+        <translation>Kopioi leikepöydälle</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
@@ -643,17 +643,17 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Katso lisätietoja &lt;a href=&quot;”%1”&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>Uutiset</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="62"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Muutoksia versiosta %1</translation>
     </message>
 </context>
 <context>
@@ -692,7 +692,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa ulkoisessa sovelluksessa</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -704,7 +704,7 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation>Kopioi leiikepöydälle</translation>
+        <translation>Kopioi leikepöydälle</translation>
     </message>
 </context>
 <context>
@@ -717,7 +717,7 @@
     <message>
         <location filename="../qml/pages/PinPage.qml" line="68"/>
         <source>please try again</source>
-        <translation>yritä uudelleen</translation>
+        <translation>Ole hyvä ja yritä uudelleen</translation>
     </message>
 </context>
 <context>
@@ -736,12 +736,12 @@
         <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisäys päivältä %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="227"/>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>viimeksi muokattu %1</translation>
     </message>
 </context>
 <context>
@@ -759,7 +759,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="126"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Takaisin</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="127"/>
@@ -779,78 +779,78 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="163"/>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi tunnisteista</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="186"/>
         <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakusyntaksi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="194"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä yksinkertaistettua raakatekstihakua, jos et ole varma, miten olet aikanaan kirjoittanut jonkin asian: valitse hakusyntaksiksi &quot;raakateksti&quot; ja seuraavassa kohdassa hakutilaksi &quot;yksinkertaistettu&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="233"/>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="279"/>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomio</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="203"/>
         <source>plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>raakateksti</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="205"/>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi merkkijonoja, kuten olet ne kirjoittanut. Huomaathan, että hakusanoja yksinkertaistetaan, jos hakutilaksi on valittu &quot;yksinkertaistettu&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="211"/>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
+        <translation>villi kortti</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="213"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tämä valinta mahdollistaa hakulausekkeiden käytön.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="221"/>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>säännöllinen lauseke</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="223"/>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hae käyttäen monimutkaisia säännöllisiä lausekkeita. Käytä pystyviivaa &quot;|&quot; hakeaksi usealla hakusanalla. Lisätietoja säännöllisistä lausekkeista löydät internetistä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="244"/>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakutila</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="258"/>
         <source>simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>yksinkertaistettu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="260"/>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sivuuttaa merkkien tarkkeet, jolloin esimerkiksi &quot;ö&quot;, &quot;ó&quot; ja &quot;õ&quot; löytyvät haettaessa kirjaimella &quot;o&quot;. Sivuuttaa myös välimerkit. Käytä tätä hakutilaa, kun et ole varma, miten olet aikanaan kirjoittanut jonkin asian.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="267"/>
         <source>strict</source>
-        <translation type="unfinished"></translation>
+        <translation>tiukka</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="269"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Käytä tätä hakutilaa, kun tiedät tarkalleen, mitä olet etsimässä tai etsit merkkijonoa, jossa on välimerkkejä, kuten &quot;-&quot;, &quot;!&quot; tai &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
@@ -861,12 +861,12 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="298"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>kaikki kirjoitukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="302"/>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi kirjoituksia riippumatta siitä, ovatko ne kirjanmerkittyjä vai eivät.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="307"/>
@@ -877,7 +877,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="310"/>
         <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi vain kirjanmerkittyjä kirjoituksia.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
@@ -888,7 +888,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="316"/>
         <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi vain kirjoituksia, joita ei ole kirjanmerkitty.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
@@ -899,23 +899,23 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="335"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>kaikki kirjoitukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="339"/>
         <source>Find entries regardless of whether they are selected or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi kirjoituksia riippumatta siitä, ovatko ne valittuja vai eivät.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="344"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>valitut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="347"/>
         <source>Find only currently selected entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi vain tällä hetkellä valittuja kirjoituksia.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="350"/>
@@ -954,7 +954,7 @@
         <location filename="../qml/pages/SearchQueryDialog.qml" line="407"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>milloin vain</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="406"/>
@@ -1034,7 +1034,7 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="62"/>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kaikki</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="67"/>
@@ -1140,7 +1140,7 @@
         <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>milloin vain</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
@@ -1170,7 +1170,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokannan varmuuskopiointi</translation>
     </message>
 </context>
 <context>
@@ -1206,9 +1206,9 @@
     <message numerus="yes">
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... ja %n muu</numerusform>
+            <numerusform>... ja %n muuta</numerusform>
         </translation>
     </message>
 </context>
@@ -1298,7 +1298,7 @@
         <location filename="../qml/pages/WritePage.qml" line="235"/>
         <location filename="../qml/pages/WritePage.qml" line="236"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnisteet</translation>
     </message>
 </context>
 <context>
@@ -1396,39 +1396,39 @@
         <location filename="../qml/harbour-captains-log.qml" line="325"/>
         <location filename="../qml/harbour-captains-log.qml" line="341"/>
         <source>Database backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokannan varmuuskopiointi</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="335"/>
         <source>Backup finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Varmuuskopiointi valmis</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>A database backup has been created in “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokanta varmuuskopioitiin sijaintiin &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="383"/>
         <location filename="../qml/harbour-captains-log.qml" line="431"/>
         <location filename="../qml/harbour-captains-log.qml" line="470"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="400"/>
         <source>The local data folder at “%1” is not writable.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ei oikeuksia kirjoittaa paikalliseen data-kansioon &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>Failed to load the database due to an unknown error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokannan lataaminen epäonnistui tuntemattoman virheen vuoksi.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tietokantaversion &quot;%1&quot; päivittäminen viimeisimpään versioon epäonnistui. Lisätietoja: %2</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="410"/>
@@ -1443,7 +1443,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="418"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietokantaversio &quot;%1&quot; ei ole yhteensopiva tämän sovellusversion kanssa. Viimeisin tuettu tietokantaversio on &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="425"/>
@@ -1453,7 +1453,7 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="439"/>
         <source>Backup failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Varmuuskopiointi epäonnistui</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="470"/>
