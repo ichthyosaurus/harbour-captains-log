@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamili</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
