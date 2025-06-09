@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>தமிழ்நேரம் (TamilNeram.github.io)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
@@ -321,7 +321,7 @@
         <location filename="../qml/pages/ExportPage.qml" line="178"/>
         <source>%n entries selected</source>
         <translation>
-            <numerusform>%n உள்ளீடுகள் தேர்ந்தெடுக்கப்பட்டன</numerusform>
+            <numerusform>%n உள்ளீடுகள் தேர்ந்தெடுக்கப்பட்டது</numerusform>
             <numerusform>%n உள்ளீடுகள் தேர்ந்தெடுக்கப்பட்டன</numerusform>
         </translation>
     </message>
@@ -695,12 +695,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
         <source>Copy text to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>உரையை இடைநிலைபலகைக்கு நகலெடு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
         <source>Share</source>
-        <translation type="unfinished"></translation>
+        <translation>பகிர்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
@@ -723,7 +723,7 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைப்பை பகிர்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
@@ -1070,15 +1070,15 @@
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="83"/>
         <source>Select %n</source>
         <translation>
-            <numerusform>%N ஐத் தேர்ந்தெடுக்கவும்</numerusform>
-            <numerusform>%N ஐத் தேர்ந்தெடுக்கவும்</numerusform>
+            <numerusform>%n தேர்ந்தெடு</numerusform>
+            <numerusform>%n தேர்ந்தெடுங்கள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="89"/>
         <source>%n entries shown</source>
         <translation>
-            <numerusform>%n உள்ளீடுகள் காட்டப்பட்டுள்ளன</numerusform>
+            <numerusform>%n உள்ளீடுகள் காட்டப்பட்டுள்ளது</numerusform>
             <numerusform>%n உள்ளீடுகள் காட்டப்பட்டுள்ளன</numerusform>
         </translation>
     </message>
