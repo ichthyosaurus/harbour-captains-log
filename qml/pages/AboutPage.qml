@@ -96,7 +96,8 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Ukrainian")
                     entries: [
-                        "Dan"
+                        "Dan",
+                        "Максим Горпиніч"
                     ]
                 },
                 A.ContributionGroup {
@@ -121,7 +122,8 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Russian")
                     entries: [
-                        "Nikolai Sinyov"
+                        "Nikolai Sinyov",
+                        "Yurt Page"
                     ]
                 },
                 A.ContributionGroup {
@@ -178,6 +180,7 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Chinese")
                     entries: [
+                        "Cheng R.Zhu",
                         "dashinfantry"
                     ]
                 }

@@ -1,6 +1,12 @@
 {
   "weblate": [
     {
+      "language": "Chinese",
+      "entries": [
+        "Cheng R.Zhu"
+      ]
+    },
+    {
       "language": "English",
       "entries": [
         "Mirian Margiani"
@@ -52,7 +58,8 @@
     {
       "language": "Russian",
       "entries": [
-        "Nikolai Sinyov"
+        "Nikolai Sinyov",
+        "Yurt Page"
       ]
     },
     {
@@ -82,7 +89,8 @@
     {
       "language": "Ukrainian",
       "entries": [
-        "Dan"
+        "Dan",
+        "Максим Горпиніч"
       ]
     }
   ],
