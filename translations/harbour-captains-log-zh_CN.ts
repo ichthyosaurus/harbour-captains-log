@@ -81,7 +81,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>塞尔维亚语</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
@@ -282,12 +282,12 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="127"/>
         <source>Export the full database in a machine-readable plain text format.</source>
-        <translation type="unfinished"></translation>
+        <translation>将完整的数据库以机器可读的纯文本格式导出。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="129"/>
         <source>Note that it is not yet possible to import this file type back into the app.</source>
-        <translation type="unfinished"></translation>
+        <translation>请注意，目前不支持再将此格式的文件导回应用。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="135"/>
@@ -1305,7 +1305,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>上次编辑：%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="169"/>

@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Тамильский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished">Норвежский букмол</translation>
+        <translation>Норвежский букмол</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="140"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="181"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Используйте упрощенный поиск текста, если вы не уверены, как вы написали что-то в прошлом: выберите «Простой текст» как поисковый синтаксис здесь, и «упрощённый» как режим поиска в отдельной настройке.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="220"/>
@@ -992,7 +992,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="402"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажмите и держитесь, чтобы сбросить дату.</translation>
     </message>
 </context>
 <context>
@@ -1124,64 +1124,64 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Внешний вид</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить отслеживание настроения</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключите эту настройку, чтобы полностью отключить все функции, связанные с настроением.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Обратите внимание, что записи спасут ваше настроение как «норм», если эта установка отключена.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Всегда спрашивать настроение</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Это включит спрашивание вашего настроения сразу при создании новой записи.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Идеи</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Записи</translation>
+        <translation>Записи</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished">От</translation>
+        <translation>От</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
         <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">в любое время</translation>
+        <translation>в любое время</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
-        <translation type="unfinished">Пока</translation>
+        <translation>Пока</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажмите и держите, чтобы сбросить дату.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
@@ -1196,7 +1196,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспорт и резервная копия</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>

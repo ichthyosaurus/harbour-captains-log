@@ -26,22 +26,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation>ukraina</translation>
+        <translation>ukraina keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>tamili keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>Swedish</source>
-        <translation>rootsi</translation>
+        <translation>rootsi keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Russian</source>
-        <translation>vene</translation>
+        <translation>vene keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="128"/>
@@ -51,32 +51,32 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Indonesian</source>
-        <translation>indoneesia</translation>
+        <translation>indoneesia keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>French</source>
-        <translation>prantsuse</translation>
+        <translation>prantsuse keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="167"/>
         <source>Estonian</source>
-        <translation>eesti</translation>
+        <translation>eesti keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>English</source>
-        <translation>inglise</translation>
+        <translation>inglise keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="179"/>
         <source>Chinese</source>
-        <translation>hiina</translation>
+        <translation>hiina keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>German</source>
-        <translation>saksa</translation>
+        <translation>saksa keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
@@ -86,7 +86,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Finnish</source>
-        <translation>soome</translation>
+        <translation>soome keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="87"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Italian</source>
-        <translation>itaalia</translation>
+        <translation>itaalia keel</translation>
     </message>
 </context>
 <context>
