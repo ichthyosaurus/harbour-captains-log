@@ -6,6 +6,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Jun 29 2025 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.2.1-1
+- Updated translations: Chinese, Estonian, Finnish, Russian, Swedish, Tamil, Ukrainian
+- Updated Opal modules
+
 * Tue Mar 11 2025 Mirian Margiani <mixosaurus+ichthyo@pm.me> 4.2.0-1
 - Added translations: Portuguese (Brazil), Tamil
 - Updated translations: Estonian, Finnish, French, Serbian, Spanish, Swedish, Ukrainian

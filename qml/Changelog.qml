@@ -9,6 +9,14 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "4.2.1-1"
+        date: "2025-06-29"
+        paragraphs: [
+            "- Updated translations: Chinese, Estonian, Finnish, Russian, Swedish, Tamil, Ukrainian<br>" +
+            "- Updated Opal modules"
+        ]
+    }
+    ChangelogItem {
         version: "4.2.0-1"
         date: "2025-03-11"
         paragraphs: [
