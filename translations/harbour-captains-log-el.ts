@@ -6,32 +6,32 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="80"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανάπτυξη</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="45"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Μια απλή εφαρμογή ημερολογίου για να παρακολουθείτε τις σκέψεις σας.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="83"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Προγραμματισμός</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεταφράσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>ουκρανικά</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="104"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Ταμίλ</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="110"/>
