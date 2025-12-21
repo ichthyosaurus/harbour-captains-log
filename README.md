@@ -82,7 +82,8 @@ You can follow these steps to manually add or update a translation:
 1. *If it did not exist before*, create a new catalog for your language by copying the
    base file [translations/harbour-captains-log.ts](translations/harbour-captains-log.ts).
    Then add the new translation to [harbour-captains-log.pro](harbour-captains-log.pro).
-2. Add yourself to the list of contributors in [qml/pages/AboutPage.qml](qml/pages/AboutPage.qml).
+2. Add yourself to the list of translators in [TRANSLATORS.json](TRANSLATORS.json),
+   in the section `extra`.
 3. (optional) Translate the app's name in [harbour-captains-log.desktop](harbour-captains-log.desktop)
    if there is a (short) native term for it in your language.
 
@@ -98,7 +99,7 @@ details on how to translate date formats to your *local* format.
 2. Apply necessary patches: `git apply libs/*.patch`
 2. Open `harbour-captains-log.pro` in Sailfish OS IDE (Qt Creator for Sailfish)
 3. To run on emulator, select the `i486` target and press the run button
-4. To build for the device, select the `armv7hl` target and click “deploy all”;
+4. To build for the device, select the `aarch64` or `armv7hl` target and click “deploy all”;
    the RPM packages will be in the `RPMS` folder
 
 If you contribute, please do not forget to add yourself to the list of
@@ -114,6 +115,19 @@ through [Liberapay](https://liberapay.com/ichthyosaurus).
 
 Of course it would be much appreciated as well if you support this project by
 contributing to translations or code! See above how you can contribute 🎕.
+
+
+## Anti-AI policy <a id='ai-policy'/>
+
+AI-generated contributions are forbidden.
+
+Please be transparent, respect the Free Software community, and adhere to the
+licenses. This is a welcoming place for human creativity and diversity, but
+AI-generated slop is going against these values.
+
+Apart from all the ethical, moral, legal, environmental, social, and technical
+reasons against AI, I also simply don't have any spare time to review
+AI-generated contributions.
 
 
 ## License
