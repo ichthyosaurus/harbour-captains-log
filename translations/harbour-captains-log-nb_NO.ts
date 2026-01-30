@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="104"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamilsk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="110"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="161"/>
@@ -247,17 +247,17 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="89"/>
         <source>Data exports are meant for archival/printing and not as a backup. If you want to manually backup the database, select the “Database backup” option, or use &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; to create a system backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dataeksporter er ment for arkivering/utskrift og ikke som sikkerhetskopi. Hvis du vil ta manuell sikkerhetskopi av databasen, velg alternativet «Database backup», eller bruk &lt;a href=&quot;https://openrepos.net/content/slava/my-backup&quot;&gt;MyBackup&lt;/a&gt; for å opprette en systembackup.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="133"/>
         <source>Database backup</source>
-        <translation>Database-sikkerhetskopi</translation>
+        <translation>Database backup</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="62"/>
         <source>The file will be saved in your documents folder. The name must not contain subfolders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen lagres i dokumentmappen din. Filnavnet må ikke inneholde undermapper.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="76"/>
@@ -267,32 +267,32 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="101"/>
         <source>Export entries in a very simple style as a plain text file that can be printed directly. Note that long lines will not be folded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter oppføringer som ren tekst for utskrift. Vær oppmerksom på at lange linjer ikke blir brutt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="109"/>
         <source>Export entries in a simple &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. This can later be converted into other formats for printing or for the web.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter oppføringer i et enkelt &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; format. Dette kan senere konverteres til andre formater for utskrift eller for web.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="118"/>
         <source>Export entries using an extended format that can be converted to PDF using &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. This format is not suitable to be printed without further conversion.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter oppføringer i et utvidet format som kan konverteres til PDF ved hjelp av &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;. Dette formatet egner seg ikke for utskrift uten videre konvertering.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="127"/>
         <source>Export the full database in a machine-readable plain text format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter hele databasen som maskinlesbar ren tekst.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="129"/>
         <source>Note that it is not yet possible to import this file type back into the app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Merk at det ennå ikke er mulig å importere denne filtypen tilbake i appen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="135"/>
         <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter en komprimert kopi av selve databasefilen. Denne databasen kan senere settes tilbake. Bruk «Innstillinger → Database backup» for å opprette en intern sikkerhetskopi.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="146"/>
@@ -333,7 +333,7 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="192"/>
         <source>Data is being exported to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Data blir eksportert til %1</translation>
     </message>
 </context>
 <context>
@@ -342,13 +342,13 @@
         <location filename="../qml/components/ExportTranslations.qml" line="11"/>
         <source>%A, %B %-d %Y (%-H:%M)</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%A, %B %-d %Y (%-H:%M)</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="12"/>
         <source>%A, %B %-d %Y (%-H:%M, {tz})</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%A, %B %-d %Y (%-H:%M, {tz})</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="13"/>
@@ -378,7 +378,7 @@
         <location filename="../qml/components/ExportTranslations.qml" line="17"/>
         <source>Note: this requires “pandoc” and “lualatex”.</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Merk: krever at «pandoc» og «lualatex» er installert.</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="18"/>
@@ -396,13 +396,13 @@
         <location filename="../qml/components/ExportTranslations.qml" line="20"/>
         <source>This file has been exported from Captain&apos;s Log on {0}.</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Denne filen er eksportert fra Captain’s Log den {0}.</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="21"/>
         <source>You can convert this file to PDF using the following command:</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Du kan konvertere denne filen til PDF ved å bruke følgende kommando:</translation>
     </message>
 </context>
 <context>
@@ -598,7 +598,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="11"/>
         <source>Thank you!</source>
-        <translation>Takk.</translation>
+        <translation>Takk!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
@@ -674,12 +674,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
         <source>Copy text to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopier tekst til utklippstavle</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
         <source>Share</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
@@ -699,7 +699,7 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Del lenke</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
@@ -789,7 +789,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="181"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bruk forenklet rentekst­søk hvis du er usikker på hvordan du stavet noe tidligere: velg «ren tekst» som søkesyntaks her, og «forenklet» som søkemodus i den separate innstillingen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="220"/>
@@ -904,7 +904,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
         <source>Find entries regardless of whether they are selected or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Finn oppføringer uavhengig av om de er valgt eller ikke.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="331"/>
@@ -915,7 +915,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="334"/>
         <source>Find only currently selected entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk bare i de valgte oppføringene.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
@@ -926,7 +926,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
         <source>Find only entries that are currently not selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk kun i ikke-valgte oppføringer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
@@ -964,7 +964,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="402"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trykk og hold for å nullstille datoen.</translation>
     </message>
 </context>
 <context>
@@ -1039,7 +1039,7 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="67"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="83"/>
@@ -1098,17 +1098,17 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Slå på humørsporing</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Skru av denne innstillingen for å slå av alle funksjoner knyttet til humør helt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Merk at oppføringer vil lagre humøret ditt som «ok» hvis denne innstillingen er deaktivert.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
@@ -1118,39 +1118,39 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dette gjør at du blir spurt om humøret ditt med en gang du oppretter en ny oppføring.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Innsikt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Oppføringer</translation>
+        <translation>Oppføringer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished">Fra</translation>
+        <translation>Fra</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
         <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">når som helst</translation>
+        <translation>når som helst</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
-        <translation type="unfinished">til</translation>
+        <translation>til</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trykk og hold for å nullstille datoen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
@@ -1160,17 +1160,17 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vær oppmerksom på at denne koden kun hindrer tilgang til appen. Databasen er ikke kryptert, og koden lagres ikke sikkert.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksport og backup</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
-        <translation>Database-sikkerhetskopi</translation>
+        <translation>Database backup</translation>
     </message>
 </context>
 <context>
@@ -1178,7 +1178,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation>Hei på deg</translation>
+        <translation>Hei på deg!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
@@ -1188,7 +1188,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation>Takk for din støtte.</translation>
+        <translation>Takk for din støtte!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
@@ -1337,13 +1337,13 @@
         <location filename="../qml/harbour-captains-log.qml" line="66"/>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation>OK</translation>
+        <translation>ok</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="67"/>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation>ikke OK</translation>
+        <translation>ikke ok</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="68"/>
@@ -1396,17 +1396,17 @@
         <location filename="../qml/harbour-captains-log.qml" line="325"/>
         <location filename="../qml/harbour-captains-log.qml" line="341"/>
         <source>Database backup</source>
-        <translation>Database-sikkerhetskopi</translation>
+        <translation>Database backup</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="335"/>
         <source>Backup finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup fullført</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>A database backup has been created in “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>En database backup er lagret i “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="383"/>
@@ -1418,42 +1418,42 @@
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="400"/>
         <source>The local data folder at “%1” is not writable.</source>
-        <translation type="unfinished"></translation>
+        <translation>Den lokale datamappen “%1” er ikke skrivbar.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>Failed to load the database due to an unknown error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke laste databasen på grunn av en ukjent feil.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke oppdatere databasen på “%1” til nyeste versjon. Detaljer: %2</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="410"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke flytte filer for Sailjail‑støtte fra “%1” til “%2” .</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="414"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke oppdatere databasen til nyeste versjon fordi versjonsfilen mangler på “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="418"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Databasens versjon “%1” er inkompatibel med denne versjonen av appen. Nyeste støttede databaseversjon er “%2”.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="425"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke eksportere ukjent filtype “%1”. Vennligst rapporter denne feilen.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="439"/>
         <source>Backup failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Sikkerhetskopiering feilet</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="470"/>
