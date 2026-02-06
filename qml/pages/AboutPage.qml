@@ -1,6 +1,6 @@
 /*
  * This file is part of Captain's Log.
- * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -27,7 +27,6 @@ A.AboutPageBase {
     appVersion: APP_VERSION
     appRelease: APP_RELEASE
 
-    allowDownloadingLicenses: false
     sourcesUrl: "https://github.com/ichthyosaurus/%1".arg(Qt.application.name)
     homepageUrl: "https://forum.sailfishos.org/t/apps-by-ichthyosaurus/15753"
     translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
@@ -44,7 +43,6 @@ A.AboutPageBase {
 
     description: qsTr("A simple diary application for keeping track of your thoughts.")
     mainAttributions: ["2020-%1 Mirian Margiani".arg((new Date()).getFullYear()), "2020 Gabriel Berkigt"]
-    autoAddOpalAttributions: true
 
     attributions: [
         A.Attribution {
