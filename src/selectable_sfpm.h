@@ -9,9 +9,9 @@
 
 #include <QMap>
 #include <QVariantList>
-#include "../libs/SortFilterProxyModel/qqmlsortfilterproxymodel.h"
-#include "../libs/SortFilterProxyModel/proxyroles/singlerole.h"
-#include "property_macros.h"
+#include <libs/opal/sfpm/qqmlsortfilterproxymodel.h>
+#include <libs/opal/sfpm/proxyroles/singlerole.h>
+#include <libs/opal/propertymacros/property_macros.h>
 
 namespace qqsfpm {
 

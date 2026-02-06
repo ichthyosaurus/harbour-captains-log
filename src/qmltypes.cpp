@@ -11,9 +11,10 @@
 #include <QCoreApplication>
 
 void registerQmlTypes() {
-    qmlRegisterType<qqsfpm::TagsFilter>("SortFilterProxyModel", 0, 2, "TagsFilter");
+    qmlRegisterType<qqsfpm::TagsFilter>(
+        "Opal.SortFilterProxyModel", 1, 0, "TagsFilter");
     qmlRegisterType<qqsfpm::SelectableSortFilterProxyModel>(
-        "SortFilterProxyModel", 0, 2, "SelectableSortFilterProxyModel");
+        "Opal.SortFilterProxyModel", 1, 0, "SelectableSortFilterProxyModel");
 }
 
 Q_COREAPP_STARTUP_FUNCTION(registerQmlTypes)

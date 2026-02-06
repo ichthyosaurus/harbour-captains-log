@@ -7,7 +7,7 @@
 #ifndef TAGSFILTER_H
 #define TAGSFILTER_H
 
-#include "../libs/SortFilterProxyModel/filters/rolefilter.h"
+#include <libs/opal/sfpm/filters/rolefilter.h>
 #include <QVariant>
 
 namespace qqsfpm {
