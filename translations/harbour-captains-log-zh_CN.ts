@@ -519,10 +519,6 @@
         <translation>为啥我要捐款？</translation>
     </message>
     <message>
-        <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="vanished">卓拉 (Jolla) 提高了其价格，而它也试图强迫为自由工作的程序员付费使用Sailfish。</translation>
-    </message>
-    <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation>如果您条件可以，捐款无疑是最简单的方法来确保我可以有能力继续为Sailfish上的应用程式工作。不论大小我都心怀感恩；无论一杯咖啡、一片披萨、等等，的价钱。</translation>
@@ -681,10 +677,6 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <source>External Link</source>
-        <translation type="vanished">外部链接</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation type="unfinished"></translation>
@@ -702,7 +694,7 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>External link</source>
-        <translation type="unfinished"></translation>
+        <translation>外部链接</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -728,10 +720,6 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation type="vanished">复制到剪切板</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>

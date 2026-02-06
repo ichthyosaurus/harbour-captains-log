@@ -521,10 +521,6 @@
         <translation>Dlaczego warto przekazać darowiznę?</translation>
     </message>
     <message>
-        <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="vanished">Jolla podniosła ceny i próbuje zmusić deweloperów (którzy pracują za darmo) do płacenia abonamentu za Sailfish.</translation>
-    </message>
-    <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation>Jeśli możesz sobie na to pozwolić, darowizna jest najprostszym sposobem na zapewnienie, że będę mógł kontynuować pracę nad aplikacjami dla Sailfish. Każda kwota jest mile widziana, czy to filiżanka kawy, kawałek pizzy, czy więcej.</translation>
@@ -687,10 +683,6 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <source>External Link</source>
-        <translation type="vanished">Link Zewnętrzny</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation type="unfinished"></translation>
@@ -708,7 +700,7 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>External link</source>
-        <translation type="unfinished"></translation>
+        <translation>Link Zewnętrzny</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -734,10 +726,6 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation type="vanished">Kopiuj do schowka</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>

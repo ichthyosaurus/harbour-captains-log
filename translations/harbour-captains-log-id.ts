@@ -26,22 +26,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Ukrainian</source>
-        <translation>Bahasa Ukrani</translation>
+        <translation>Ukrania</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Tamil</source>
-        <translation>Bahasa Tamil</translation>
+        <translation>Tamil</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>Swedish</source>
-        <translation>Bahasa Swedia</translation>
+        <translation>Swedia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Russian</source>
-        <translation>Bahasa Rusia</translation>
+        <translation>Rusia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="128"/>
@@ -51,42 +51,42 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Indonesian</source>
-        <translation>Bahasa Indonesia</translation>
+        <translation>Indonesia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>French</source>
-        <translation>Bahasa Prancis</translation>
+        <translation>Prancis</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="167"/>
         <source>Estonian</source>
-        <translation>Bahasa Estonia</translation>
+        <translation>Estonia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>English</source>
-        <translation>Bahasa Inggris</translation>
+        <translation>Inggris</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="179"/>
         <source>Chinese</source>
-        <translation>Bahasa Cina</translation>
+        <translation>Cina</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>German</source>
-        <translation>Bahasa Jerman</translation>
+        <translation>Jerman</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Serbian</source>
-        <translation>Bahasa Serbia</translation>
+        <translation>Serbia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Finnish</source>
-        <translation>Bahasa Finlandia</translation>
+        <translation>Finlandia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="85"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Italian</source>
-        <translation>Bahasa Italia</translation>
+        <translation>Italia</translation>
     </message>
 </context>
 <context>
@@ -409,12 +409,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geser ke kiri untuk melihat pratinjau.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat ini Anda terhubung melalui data seluler.</translation>
     </message>
 </context>
 <context>
@@ -517,10 +517,6 @@
         <location filename="../qml/MySupportDialog.qml" line="55"/>
         <source>Why donate?</source>
         <translation>Mengapa perlu donasi?</translation>
-    </message>
-    <message>
-        <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="vanished">Jolla menaikkan harga dan memaksa developer (tidak dibayar) untuk membayar sewa Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
@@ -630,7 +626,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat ini Anda terhubung melalui data seluler.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
@@ -647,7 +643,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Silakan mengacu &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>Silakan mengacu ke &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
@@ -681,13 +677,9 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <source>External Link</source>
-        <translation type="vanished">Tautan luar</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
-        <translation type="unfinished"></translation>
+        <translation>Bagikan</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -697,12 +689,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>Phone number</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomer HP</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>External link</source>
-        <translation type="unfinished"></translation>
+        <translation>Tautan luar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -712,12 +704,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin link</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin tulisan</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -727,21 +719,17 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation type="vanished">Salin ke papan klip</translation>
+        <translation>Bagikan link</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
         <source>No preview available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pratinjau tidak dapat ditampilkan</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
         <source>The page is taking too long to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>Waktu muat halaman terlalu lama.</translation>
     </message>
 </context>
 <context>

@@ -104,7 +104,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="13"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Gindeste putin daca poti contribui la acest proiect intr-un fel sau altul.</translation>
+        <translation>Vă rugăm să vă gândiți dacă puteți contribui la acest proiect într-un fel sau altul.</translation>
     </message>
 </context>
 <context>
@@ -521,10 +521,6 @@
         <translation>De ce sa donezi?</translation>
     </message>
     <message>
-        <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="vanished">Jolla a crescut prețurile și încearcă să forțeze dezvoltatorii (care lucrează gratuit) să plătească chirie pentru Sailfish.</translation>
-    </message>
-    <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation>Dacă vă puteți permite, donarea este cea mai simplă modalitate de a vă asigura că pot continua să lucrez la aplicații pentru Sailfish. Orice cantitate este apreciată, fie că este o ceașcă de cafea, o felie de pizza sau mai mult.</translation>
@@ -687,14 +683,6 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <source>External Link</source>
-        <translation type="vanished">Link extern</translation>
-    </message>
-    <message>
-        <source>Copy text to clipboard</source>
-        <translation type="vanished">Copiază textul în clipboard</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Distribuie</translation>
@@ -707,12 +695,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>Phone number</source>
-        <translation type="unfinished"></translation>
+        <translation>numar de telefon</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>External link</source>
-        <translation type="unfinished"></translation>
+        <translation>Link extern</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -738,10 +726,6 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
         <translation>Distribuie link</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation type="vanished">Copiaza in clipboard</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>

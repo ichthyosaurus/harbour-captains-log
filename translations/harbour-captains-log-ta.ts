@@ -520,10 +520,6 @@
         <translation>ஏன் நன்கொடை?</translation>
     </message>
     <message>
-        <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="vanished">சொல்லா விலைகளை உயர்த்தினார், மேலும் டெவலப்பர்களை (இலவசமாக வேலை செய்யும்) படகோட்டிக்கு வாடகை செலுத்த கட்டாயப்படுத்த முயற்சிக்கிறார்.</translation>
-    </message>
-    <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation>நீங்கள் அதை வாங்க முடிந்தால், சாய்ல்ஃபிசிற்கான பயன்பாடுகளில் நான் தொடர்ந்து பணியாற்ற முடியும் என்பதை உறுதிப்படுத்த நன்கொடை என்பது எளிதான வழியாகும். எந்தவொரு தொகையும் பாராட்டப்படுகிறது, அது ஒரு கப் காபி, ஒரு துண்டு பீச்சா அல்லது அதற்கு மேற்பட்டதாக இருக்கலாம்.</translation>
@@ -684,14 +680,6 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <source>External Link</source>
-        <translation type="vanished">வெளிப்புற இணைப்பு</translation>
-    </message>
-    <message>
-        <source>Copy text to clipboard</source>
-        <translation type="vanished">கிளிப்போர்டுக்கு உரையை நகலெடுக்கவும்</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>பங்கு</translation>
@@ -704,12 +692,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>Phone number</source>
-        <translation type="unfinished"></translation>
+        <translation>தொலைபேசி எண்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>External link</source>
-        <translation type="unfinished"></translation>
+        <translation>வெளிப்புற இணைப்பு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -735,10 +723,6 @@
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
         <translation>இணைப்பைப் பகிரவும்</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation type="vanished">கிளிப்போர்டுக்கு நகலெடுக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
