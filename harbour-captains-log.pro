@@ -59,12 +59,9 @@ CONFIG += sailfishapp_i18n
 # in the the .desktop file.
 TRANSLATIONS = translations/harbour-captains-log-*.ts \
 
-QML_IMPORT_PATH += qml/modules
-
 # Note: version number is configured in yaml
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
 include(libs/opal-cached-defines.pri)
 
-# Build submodules
-include(libs/SortFilterProxyModel/SortFilterProxyModel.pri)
+include(libs/opal.pri)
