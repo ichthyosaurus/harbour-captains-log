@@ -172,6 +172,9 @@ Page {
         KeypadButton {
             id: enterButton
 
+            width: keypad._buttonWidth
+            height: keypad._buttonHeight
+
             anchors {
                 right: keypad.right
                 bottom: keypad.bottom
@@ -193,6 +196,9 @@ Page {
 
         KeypadButton {
             id: deleteButton
+
+            width: keypad._buttonWidth
+            height: keypad._buttonHeight
 
             anchors {
                 left: keypad.left

@@ -7,12 +7,9 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 BackgroundItem {
-    id: enterButton
+    id: root
 
     property alias icon: icon
-
-    width: keypad._buttonWidth
-    height: keypad._buttonHeight
 
     Icon {
         id: icon
