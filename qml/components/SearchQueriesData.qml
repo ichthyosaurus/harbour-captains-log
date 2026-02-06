@@ -5,7 +5,7 @@
  */
 
 import QtQuick 2.0
-import SortFilterProxyModel 0.2
+import Opal.SortFilterProxyModel 1.0
 
 // Requires appWindow.moodTexts
 

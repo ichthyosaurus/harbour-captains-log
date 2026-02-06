@@ -24,7 +24,7 @@ import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 import Nemo.Notifications 1.0
 import io.thp.pyotherside 1.5
-import SortFilterProxyModel 0.2
+import Opal.SortFilterProxyModel 1.0
 import Opal.About 1.0 as A
 import Opal.SupportMe 1.0 as M
 

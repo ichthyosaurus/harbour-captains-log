@@ -6,7 +6,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-import SortFilterProxyModel 0.2
+import Opal.SortFilterProxyModel 1.0
 import io.thp.pyotherside 1.5
 import "../components"
 

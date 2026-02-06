@@ -6,7 +6,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-import SortFilterProxyModel 0.2
+import Opal.SortFilterProxyModel 1.0
 import Opal.MenuSwitch 1.0
 import Opal.InfoCombo 1.0 as I
 import Opal.ComboData 1.0 as C

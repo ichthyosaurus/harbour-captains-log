@@ -6,7 +6,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import SortFilterProxyModel 0.2
+import Opal.SortFilterProxyModel 1.0
 
 ListItem {
     id: root
