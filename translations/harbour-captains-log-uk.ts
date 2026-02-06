@@ -4,97 +4,97 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Development</source>
         <translation>Розробка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="45"/>
+        <location filename="../qml/pages/AboutPage.qml" line="44"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
         <translation>Простий щоденник для відстеження ваших думок.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="83"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Programming</source>
         <translation>Програмування</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="94"/>
+        <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Translations</source>
         <translation>Переклади</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Ukrainian</source>
         <translation>Українська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="104"/>
+        <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Tamil</source>
         <translation>Тамільська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>Swedish</source>
         <translation>Шведська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Russian</source>
         <translation>Російська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="130"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Norwegian Bokmål</source>
         <translation>Норвезька (Букмол)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="142"/>
+        <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Indonesian</source>
         <translation>Індонезійська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>French</source>
         <translation>Французька</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <location filename="../qml/pages/AboutPage.qml" line="167"/>
         <source>Estonian</source>
         <translation>Естонська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="175"/>
+        <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>English</source>
         <translation>Англійська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="181"/>
+        <location filename="../qml/pages/AboutPage.qml" line="179"/>
         <source>Chinese</source>
         <translation>Китайська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>German</source>
         <translation>Німецька</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Serbian</source>
         <translation>Сербська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Finnish</source>
         <translation>Фінська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="87"/>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Icon Design</source>
         <translation>Дизайн іконок</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="136"/>
+        <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Italian</source>
         <translation>Італійська</translation>
     </message>
@@ -407,6 +407,19 @@
     </message>
 </context>
 <context>
+    <name>ExternalUrlPage</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
+        <source>Swipe left to preview.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
+        <source>You are using a mobile data connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="54"/>
@@ -458,62 +471,61 @@
 <context>
     <name>MySupportDialog</name>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="14"/>
+        <location filename="../qml/MySupportDialog.qml" line="13"/>
         <source>Donate on %1</source>
         <translation>Зробити донат на %1</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="15"/>
+        <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
         <translation>Можете пожертвувати суму, що дорівнює чашці кави, шматку піци або квитку в театр.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="22"/>
+        <location filename="../qml/MySupportDialog.qml" line="21"/>
         <source>Translate on %1</source>
         <translation>Переклад на %1</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="23"/>
+        <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Help with translating this app in as many languages as possible.</source>
         <translation>Допоможіть перекласти цей додаток якомога більшою кількістю мов.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="30"/>
+        <location filename="../qml/MySupportDialog.qml" line="29"/>
         <source>Develop on %1</source>
         <translation>Розробка на %1</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="31"/>
+        <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
         <translation>Допоможіть в обслуговуванні та пакуванні, написанні коду або наданні цінних звітів про помилки.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="37"/>
+        <location filename="../qml/MySupportDialog.qml" line="36"/>
         <source>Why should you care?</source>
         <translation>Чому вам має бути цікаво?</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="40"/>
+        <location filename="../qml/MySupportDialog.qml" line="39"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
         <translation>Цей проект створений з любов&apos;ю та пристрастю одним розробником у свій вільний час і надається вам безкоштовно.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="46"/>
+        <location filename="../qml/MySupportDialog.qml" line="45"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
         <translation>Я розробляю вільне програмне забезпечення, тому що переконаний, що це етично, і це цікаве хобі. Однак, розробка програмного забезпечення вимагає багато часу та зусиль. Оскільки Sailfish OS і життя в цілому коштує грошей, мені потрібна ваша підтримка, щоб мати змогу витрачати час на такі неоплачувані проекти, як цей.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="56"/>
+        <location filename="../qml/MySupportDialog.qml" line="55"/>
         <source>Why donate?</source>
         <translation>Навіщо донатити?</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation>Jolla підняла ціни і намагається змусити розробників (які працюють безкоштовно) платити за підписку на Sailfish OS.</translation>
+        <translation type="vanished">Jolla підняла ціни і намагається змусити розробників (які працюють безкоштовно) платити за підписку на Sailfish OS.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="64"/>
+        <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation>Якщо ви можете собі це дозволити, пожертвування – це найпростіший спосіб гарантувати, що я зможу продовжувати працювати над додатками для Sailfish OS. Будь-яка сума буде цінна, будь то чашка кави, шматок піци чи щось більше.</translation>
     </message>
@@ -521,29 +533,29 @@
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="58"/>
         <source>About</source>
         <translation>Про застосунок</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="86"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="87"/>
         <source>Version %1</source>
         <translation>Версія %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="102"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
         <translation>Розробка</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
         <source>show contributors</source>
         <translation>показати учасників</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="107"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="18"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
@@ -551,12 +563,12 @@
         <translation>Головна</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="113"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
         <source>Translations</source>
         <translation>Переклади</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="117"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="17"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
@@ -564,17 +576,17 @@
         <translation>Вихідний код</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="125"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="126"/>
         <source>Donations</source>
         <translation>Пожертви</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="131"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>License</source>
         <translation>Ліцензія</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="136"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="137"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>показати ліцензію</numerusform>
@@ -604,17 +616,22 @@
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Details</source>
         <translation>Подробиці</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="37"/>
         <source>Download license texts</source>
         <translation>Завантажити тексти ліцензій</translation>
     </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
+        <source>You are using a mobile data connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Ліцензія</numerusform>
@@ -623,12 +640,12 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="55"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="110"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
         <translation>Список змін</translation>
@@ -670,55 +687,82 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="24"/>
         <source>External Link</source>
-        <translation>Зовнішнє посилання</translation>
+        <translation type="vanished">Зовнішнє посилання</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
         <source>Copy text to clipboard</source>
-        <translation>Копіювати текст у буфер обміну</translation>
+        <translation type="vanished">Копіювати текст у буфер обміну</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Поділіться</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>Відкрити в браузері</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>Phone number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>External link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>Відкрити зовні</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="17"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
+        <source>Copy link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
+        <source>Copy text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation>Скопійовано до буфера обміну: %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
         <translation>Поділитися посиланням</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
         <source>Copy to clipboard</source>
-        <translation>Копіювати в буфер обміну</translation>
+        <translation type="vanished">Копіювати в буфер обміну</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
+        <source>No preview available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
+        <source>The page is taking too long to load.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
-        <location filename="../qml/pages/PinPage.qml" line="31"/>
+        <location filename="../qml/pages/PinPage.qml" line="20"/>
         <source>Please enter your security code</source>
         <translation>Введіть код безпеки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PinPage.qml" line="68"/>
+        <location filename="../qml/pages/PinPage.qml" line="99"/>
         <source>please try again</source>
         <translation>Спробуйте ще раз</translation>
     </message>
@@ -750,222 +794,222 @@
 <context>
     <name>SearchQueryDialog</name>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="97"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="103"/>
         <source>Any may match</source>
         <translation>Будь-який може збігатися</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="104"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="110"/>
         <source>All must match</source>
         <translation>Все повинно збігатися</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="113"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="119"/>
         <source>Back</source>
         <translation>Спина</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="114"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="120"/>
         <source>Search</source>
         <translation>Пошук</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="118"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
         <source>Title and entry</source>
         <translation>Назва та запис</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
         <source>Search contents</source>
         <translation>Пошук вмісту</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="150"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="156"/>
         <source>Search tags</source>
         <translation>Теги пошуку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="173"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="179"/>
         <source>Search syntax</source>
         <translation>Синтаксис пошуку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="181"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="187"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
         <translation>Скористайтеся спрощеним пошуком у звичайному тексті, якщо ви не впевнені, як ви писали щось у минулому: виберіть «звичайний текст» як синтаксис пошуку тут, а «спрощений» як режим пошуку в окремому налаштуванні.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="220"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="266"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="226"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="272"/>
         <source>Note</source>
         <translation>Примітка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="190"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="196"/>
         <source>plain text</source>
         <translation>звичайний текст</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="192"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
         <translation>Шукайте рядок у тому вигляді, в якому ви його ввели. Примітка: якщо для параметра &quot;Режим пошуку&quot; встановлено значення &quot;спрощений&quot;, до пошукового терміна буде застосовано деякі спрощення.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="204"/>
         <source>wildcard</source>
         <translation>Підставний символ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="200"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="206"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation>Цей параметр дозволяє шукати розширені шаблони. Використовуйте &quot;?&quot; для пошуку будь-якого окремого символу, а &quot;*&quot; для пошуку нуля або більше символів. Групи символів можна вказати у квадратних дужках. Використовуйте зворотний слеш для пошуку буквених &quot;?&quot; або &quot;*&quot;, наприклад, &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="208"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="214"/>
         <source>regular expression</source>
         <translation>регулярний вираз</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="210"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="216"/>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>Пошук за допомогою складних регулярних виразів. Використовуйте вертикальну риску &quot;|&quot; для пошуку за кількома термінами. Якщо ви хочете дізнатися більше про регулярні вирази, пошукайте в Інтернеті.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="231"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="237"/>
         <source>Search mode</source>
         <translation>Режим пошуку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="245"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="251"/>
         <source>simplified</source>
         <translation>спрощений</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="247"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="253"/>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
         <translation>Ігноруйте діакритичні знаки на символах, наприклад, &quot;ö&quot;, &quot;ó&quot; та &quot;õ&quot; під час пошуку &quot;o&quot;. Ігнорувати розділові знаки. Використовуйте цей режим, якщо ви не впевнені, як ви писали щось у минулому.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="254"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="260"/>
         <source>strict</source>
         <translation>суворий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="256"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="262"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
         <translation>Точно відповідати рядку запиту. Використовуйте цей режим, якщо ви точно знаєте, що шукаєте, або якщо ви хочете знайти рядок, що містить розділові знаки, такі як &quot;-&quot;, &quot;!&quot; або &quot;#&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="276"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="282"/>
         <source>Bookmarks</source>
         <translation>Закладки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="285"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="291"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
         <translation>всі записи</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="295"/>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
         <translation>Знаходьте записи незалежно від того, додані вони до закладок чи ні.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="294"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
         <translation>позначено</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="297"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
         <source>Find only bookmarked entries.</source>
         <translation>Знаходити лише додані до закладок записи.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="306"/>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation>не позначено</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="309"/>
         <source>Find only entries that are not bookmarked.</source>
         <translation>Знайдіть лише ті записи, які не мають закладок.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="319"/>
         <source>Selection</source>
         <translation>Вибір</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="322"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="328"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
         <translation>всі записи</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="332"/>
         <source>Find entries regardless of whether they are selected or not.</source>
         <translation>Знайдіть записи незалежно від того, виділені вони чи ні.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="331"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
         <translation>вибрано</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="334"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
         <source>Find only currently selected entries.</source>
         <translation>Шукати тільки вибрані записи.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="343"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
         <translation>не вибрано</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
         <source>Find only entries that are currently not selected.</source>
         <translation>Знайдіть лише ті записи, які наразі не вибрані.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="352"/>
         <source>Mood</source>
         <translation>Настрій</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="357"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="385"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="363"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="391"/>
         <source>From</source>
         <translation>Від</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="367"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="373"/>
         <source>To</source>
         <translation>До</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="376"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="382"/>
         <source>Entry date</source>
         <translation>Дата вступу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="386"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="394"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="392"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="400"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>будь-коли</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="393"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
         <source>Until</source>
         <translation>Доки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="402"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="408"/>
         <source>Press and hold to reset the date.</source>
         <translation>Натисніть і утримуйте, щоб скинути дату.</translation>
     </message>
@@ -1395,75 +1439,75 @@
         <translation>d MMM</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="370"/>
+        <location filename="../qml/harbour-captains-log.qml" line="373"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Виникла непередбачувана помилка. Будь ласка, перезапустіть застосунок та перевірте журнали.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="325"/>
-        <location filename="../qml/harbour-captains-log.qml" line="341"/>
+        <location filename="../qml/harbour-captains-log.qml" line="326"/>
+        <location filename="../qml/harbour-captains-log.qml" line="342"/>
         <source>Database backup</source>
         <translation>Резервне копіювання бази даних</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="335"/>
+        <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>Backup finished</source>
         <translation>Резервне копіювання завершено</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="336"/>
+        <location filename="../qml/harbour-captains-log.qml" line="337"/>
         <source>A database backup has been created in “%1”.</source>
         <translation>Резервна копія бази даних була створена в &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="383"/>
-        <location filename="../qml/harbour-captains-log.qml" line="431"/>
-        <location filename="../qml/harbour-captains-log.qml" line="470"/>
+        <location filename="../qml/harbour-captains-log.qml" line="386"/>
+        <location filename="../qml/harbour-captains-log.qml" line="434"/>
+        <location filename="../qml/harbour-captains-log.qml" line="476"/>
         <source>Error</source>
         <translation>Помилка</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="400"/>
+        <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>The local data folder at “%1” is not writable.</source>
         <translation>Локальна тека даних за адресою &quot;%1&quot; не призначена для запису.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="403"/>
+        <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to load the database due to an unknown error.</source>
         <translation>Не вдалося завантажити базу даних через невідому помилку.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="406"/>
+        <location filename="../qml/harbour-captains-log.qml" line="409"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
         <translation>Не вдалося оновити базу даних за адресою &quot;%1&quot; до останньої версії. Подробиці: %2</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="410"/>
+        <location filename="../qml/harbour-captains-log.qml" line="413"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
         <translation>Не вдалося перенести файли для підтримки Sailjail з &quot;%1&quot; до &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="414"/>
+        <location filename="../qml/harbour-captains-log.qml" line="417"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
         <translation>Не вдалося оновити базу даних до останньої версії, оскільки файл версії відсутній за адресою &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="418"/>
+        <location filename="../qml/harbour-captains-log.qml" line="421"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
         <translation>Версія бази даних &quot;%1&quot; несумісна з цією версією застосунку. Остання підтримувана версія бази даних - &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="425"/>
+        <location filename="../qml/harbour-captains-log.qml" line="428"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
         <translation>Не вдається експортувати невідомий тип файлу &quot;%1&quot;. Будь ласка, повідомте про цю помилку.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="439"/>
+        <location filename="../qml/harbour-captains-log.qml" line="442"/>
         <source>Backup failed</source>
         <translation>Помилка резервного копіювання</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="470"/>
+        <location filename="../qml/harbour-captains-log.qml" line="476"/>
         <source>The database could not be loaded.</source>
         <translation>Не вдалося завантажити базу даних.</translation>
     </message>

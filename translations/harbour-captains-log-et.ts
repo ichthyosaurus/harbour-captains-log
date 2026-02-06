@@ -4,97 +4,97 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Development</source>
         <translation>Arendus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="45"/>
+        <location filename="../qml/pages/AboutPage.qml" line="44"/>
         <source>A simple diary application for keeping track of your thoughts.</source>
         <translation>Lihtne päevikurakendus, kuhu saad oma mõtteid talletada.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="83"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Programming</source>
         <translation>Koodi kirjutamine</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="94"/>
+        <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Translations</source>
         <translation>Tõlked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Ukrainian</source>
         <translation>ukraina keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="104"/>
+        <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Tamil</source>
         <translation>tamili keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>Swedish</source>
         <translation>rootsi keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Russian</source>
         <translation>vene keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="130"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Norwegian Bokmål</source>
         <translation>norra bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="142"/>
+        <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Indonesian</source>
         <translation>indoneesia keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>French</source>
         <translation>prantsuse keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <location filename="../qml/pages/AboutPage.qml" line="167"/>
         <source>Estonian</source>
         <translation>eesti keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="175"/>
+        <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>English</source>
         <translation>inglise keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="181"/>
+        <location filename="../qml/pages/AboutPage.qml" line="179"/>
         <source>Chinese</source>
         <translation>hiina keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>German</source>
         <translation>saksa keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Serbian</source>
         <translation>serbia keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Finnish</source>
         <translation>soome keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="87"/>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Icon Design</source>
         <translation>Ikooni kujundus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="136"/>
+        <location filename="../qml/pages/AboutPage.qml" line="134"/>
         <source>Italian</source>
         <translation>itaalia keel</translation>
     </message>
@@ -406,6 +406,19 @@
     </message>
 </context>
 <context>
+    <name>ExternalUrlPage</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
+        <source>Swipe left to preview.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
+        <source>You are using a mobile data connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="54"/>
@@ -457,62 +470,61 @@
 <context>
     <name>MySupportDialog</name>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="14"/>
+        <location filename="../qml/MySupportDialog.qml" line="13"/>
         <source>Donate on %1</source>
         <translation>Toeta meid %1 vahendusel</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="15"/>
+        <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
         <translation>Toetuseks sobib ka kohvitassi, pitsaviilu või teatripileti suurusjärgus summa.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="22"/>
+        <location filename="../qml/MySupportDialog.qml" line="21"/>
         <source>Translate on %1</source>
         <translation>Tõlgi %1&apos;i abil</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="23"/>
+        <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Help with translating this app in as many languages as possible.</source>
         <translation>Aita seda rakendust tõlkida nii paljudesse keeltesse, kui võimalik.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="30"/>
+        <location filename="../qml/MySupportDialog.qml" line="29"/>
         <source>Develop on %1</source>
         <translation>Osale arenduses %1i abil</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="31"/>
+        <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
         <translation>Osale rakenduse haldamisel ja pakendamisel, uue lähtekoodi kirjutamisel või oluliste veateadete koostamisel.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="37"/>
+        <location filename="../qml/MySupportDialog.qml" line="36"/>
         <source>Why should you care?</source>
         <translation>Miks see peaks oluline olema?</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="40"/>
+        <location filename="../qml/MySupportDialog.qml" line="39"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
         <translation>Seda tarkvara on hoole ja armastusega arendanud üks arendaja oma vabast ajast ning tulemus on sulle saadaval tasuta.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="46"/>
+        <location filename="../qml/MySupportDialog.qml" line="45"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
         <translation>Ma arendan avatud lähtekoodiga tarkvara, sest selline tegevus on eetiline, aga samas ka suurepärane hobi. Kuid samas kulub selliseks arendustööks palju aega ja märgatavaid jõupingutusi. Kuna Sailfishi kasutamine ja igapäevaelu on seotud kuludega, siis ma vajan sinu abi, et oleks võimalik selliste mitteäriliste projektidega tegeleda.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="56"/>
+        <location filename="../qml/MySupportDialog.qml" line="55"/>
         <source>Why donate?</source>
         <translation>Miks peaksid rahaliselt toetama?</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation>Jolla on tõstnud hindu ja proovib sundida (tasuta töötavaid) arendajaid maksma Sailfishi kasutamise eest tasu.</translation>
+        <translation type="vanished">Jolla on tõstnud hindu ja proovib sundida (tasuta töötavaid) arendajaid maksma Sailfishi kasutamise eest tasu.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="64"/>
+        <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation>Kui see on sul võimalik, siis sinu rahaline toetus võimaldab mul jätkata rakenduste loomist ja arendamist Sailfishile. Igasugune summa on teretulnud, kas kohvitassi või pitsaviilu jagu, aga ka enamgi.</translation>
     </message>
@@ -520,29 +532,29 @@
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="58"/>
         <source>About</source>
         <translation>Rakenduse teave</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="86"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="87"/>
         <source>Version %1</source>
         <translation>Versioon %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="102"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
         <translation>Arendus</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
         <source>show contributors</source>
         <translation>näita kaasautoreid</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="107"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="18"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
@@ -550,18 +562,18 @@
         <translation>Avaleht</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="110"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
         <translation>Muudatuste logi</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="113"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
         <source>Translations</source>
         <translation>Tõlked</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="117"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="17"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
@@ -569,17 +581,17 @@
         <translation>Lähtekood</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="125"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="126"/>
         <source>Donations</source>
         <translation>Rahalised toetused</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="131"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>License</source>
         <translation>Litsents</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="136"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="137"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>näita litsentsi</numerusform>
@@ -608,17 +620,22 @@
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Details</source>
         <translation>Lisateave</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="37"/>
         <source>Download license texts</source>
         <translation>Laadi alla litsentside tekstid</translation>
     </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
+        <source>You are using a mobile data connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Litsents</numerusform>
@@ -626,7 +643,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="55"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Märkus: kõige täpsema teabe saamiseks palun vaata lähtekoodi.</translation>
     </message>
@@ -667,55 +684,82 @@
 <context>
     <name>Opal.LinkHandler</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="24"/>
         <source>External Link</source>
-        <translation>Väline link</translation>
+        <translation type="vanished">Väline link</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
         <source>Copy text to clipboard</source>
-        <translation>Kopeeri tekst lõikelauale</translation>
+        <translation type="vanished">Kopeeri tekst lõikelauale</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Jaga</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>Ava veebibrauseris</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>Phone number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>External link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>Ava välise rakendusega</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="17"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
+        <source>Copy link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
+        <source>Copy text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation>Kopeerisin lõikelauale: %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
         <translation>Jaga linki</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
         <source>Copy to clipboard</source>
-        <translation>Kopeeri lõikelauale</translation>
+        <translation type="vanished">Kopeeri lõikelauale</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
+        <source>No preview available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
+        <source>The page is taking too long to load.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PinPage</name>
     <message>
-        <location filename="../qml/pages/PinPage.qml" line="31"/>
+        <location filename="../qml/pages/PinPage.qml" line="20"/>
         <source>Please enter your security code</source>
         <translation>Palun sisesta oma turvakood</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PinPage.qml" line="68"/>
+        <location filename="../qml/pages/PinPage.qml" line="99"/>
         <source>please try again</source>
         <translation>palun proovi uuesti</translation>
     </message>
@@ -747,222 +791,222 @@
 <context>
     <name>SearchQueryDialog</name>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="97"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="103"/>
         <source>Any may match</source>
         <translation>Vaste võib olla mõnele tingimusele</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="104"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="110"/>
         <source>All must match</source>
         <translation>Vaste peab olema kõikidele tingimustele</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="113"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="119"/>
         <source>Back</source>
         <translation>Tagasi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="114"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="120"/>
         <source>Search</source>
         <translation>Otsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="118"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
         <source>Title and entry</source>
         <translation>Pealkiri ja kirje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
         <source>Search contents</source>
         <translation>Otsi sisust</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="150"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="156"/>
         <source>Search tags</source>
         <translation>Otsi siltide hulgast</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="173"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="179"/>
         <source>Search syntax</source>
         <translation>Otsingusüntaks</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="181"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="187"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
         <translation>Kui sa pole kindel, kuidas sa minevikus andmeid otsisid või kirjutasid, siis kasuta lihtsustatud otsingut vormindamata teksti alusel. Selleks vali süntaksiks „vormindamata tekst“ ja eraldi seadistusena otsinguviisiks „lihtne“.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="220"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="266"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="226"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="272"/>
         <source>Note</source>
         <translation>Märkus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="190"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="196"/>
         <source>plain text</source>
         <translation>vormindamata tekst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="192"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
         <translation>Otsime sõnet nii, nagu sa selle oled sisestanud. Märkus: kui „Otsinguviis“ on „lihtne“ kasutame ka mõningaid lihtsustusi.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="204"/>
         <source>wildcard</source>
         <translation>metamärk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="200"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="206"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
         <translation>Selle valikuga saad kasutada laiemat otsingumustrit. Ühe tähemärgi asendamiseks sisesta „?“ ja mitte ühegi või mitme asendamiseks sisesta „*“. Tähemärkide rühma märgista nurksulgudega. Kui soovid otsida küsimärki „?“ või tärni „*“, siis kasuta tagurpidi kaldkriipsu, näiteks nii „%1“.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="208"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="214"/>
         <source>regular expression</source>
         <translation>regulaaravaldis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="210"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="216"/>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
         <translation>Otsingus saad kasutada keerukaid regulaaravaldisi. Mitme märksõna eraldamiseks kasuta püstkriipsu„|“. Lisateavet regulaaravaldiste kohta leiad internetist.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="231"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="237"/>
         <source>Search mode</source>
         <translation>Otsinguviis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="245"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="251"/>
         <source>simplified</source>
         <translation>lihtne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="247"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="253"/>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
         <translation>Sellise otsingu puhul eirame kirjavahemärke ja täpitähti ning „o“ otsingu puhul leiame ka „ö“, „ó“ ja „õ“. Kasuta seda otsingut näiteks siis, kui sa täpselt ei mäleta kuidas algselt logiraamatusse kirjutasid.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="254"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="260"/>
         <source>strict</source>
         <translation>range</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="256"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="262"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
         <translation>Otsime täpselt seda, mida otsinguväljale kirjutad. Kasuta seda võimalust siis, kui mäletad kuidas sa algselt logiraamatusse kirjutasid või kui tahad kaasata kirjavahemärke nagu „-“, „!“ või „#“.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="276"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="282"/>
         <source>Bookmarks</source>
         <translation>Järjehoidjad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="285"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="291"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
         <translation>kõik kirjed</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="289"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="295"/>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
         <translation>Otsi kirjeid sõltumata sellest, kas oled neile järjehoidja lisanud.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="294"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
         <translation>märgitud</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="297"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
         <source>Find only bookmarked entries.</source>
         <translation>Otsi vaid neid kirjeid, millele oled järjehoidja lisanud.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="306"/>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
         <translation>märkimata</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="309"/>
         <source>Find only entries that are not bookmarked.</source>
         <translation>Otsi vaid neid kirjeid, millele sa pole järjehoidjat lisanud.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="313"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="319"/>
         <source>Selection</source>
         <translation>Valik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="322"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="328"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
         <translation>kõik kirjed</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="326"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="332"/>
         <source>Find entries regardless of whether they are selected or not.</source>
         <translation>Otsi kirjeid sõltumata sellest, kas nad on valitud või mitte.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="331"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
         <translation>valitud</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="334"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
         <source>Find only currently selected entries.</source>
         <translation>Otsi vaid valitud kirjete seast.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="343"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
         <translation>valimata</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
         <source>Find only entries that are currently not selected.</source>
         <translation>Otsi vaid valimata kirjete seast.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="352"/>
         <source>Mood</source>
         <translation>Meeleolu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="357"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="385"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="363"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="391"/>
         <source>From</source>
         <translation>Alates</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="367"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="373"/>
         <source>To</source>
         <translation>Kuni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="376"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="382"/>
         <source>Entry date</source>
         <translation>Kirje kuupäev</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="386"/>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="394"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="392"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="400"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
         <translation>millal iganes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="393"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
         <source>Until</source>
         <translation>Kuni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchQueryDialog.qml" line="402"/>
+        <location filename="../qml/pages/SearchQueryDialog.qml" line="408"/>
         <source>Press and hold to reset the date.</source>
         <translation>Kuupäeva lähtestamiseks vajuta alla ja hoia all.</translation>
     </message>
@@ -1388,75 +1432,75 @@
         <translation>d MMM</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="370"/>
+        <location filename="../qml/harbour-captains-log.qml" line="373"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
         <translation>Tekkis ootamatu viga. Palun taaskäivita rakendus ja vaata rakenduse logidesse.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="325"/>
-        <location filename="../qml/harbour-captains-log.qml" line="341"/>
+        <location filename="../qml/harbour-captains-log.qml" line="326"/>
+        <location filename="../qml/harbour-captains-log.qml" line="342"/>
         <source>Database backup</source>
         <translation>Andmebaasi varundus</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="335"/>
+        <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>Backup finished</source>
         <translation>Varukoopia on valmis</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="336"/>
+        <location filename="../qml/harbour-captains-log.qml" line="337"/>
         <source>A database backup has been created in “%1”.</source>
         <translation>Andmebaasi varukoopia on siin: „%1“.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="383"/>
-        <location filename="../qml/harbour-captains-log.qml" line="431"/>
-        <location filename="../qml/harbour-captains-log.qml" line="470"/>
+        <location filename="../qml/harbour-captains-log.qml" line="386"/>
+        <location filename="../qml/harbour-captains-log.qml" line="434"/>
+        <location filename="../qml/harbour-captains-log.qml" line="476"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="400"/>
+        <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>The local data folder at “%1” is not writable.</source>
         <translation>Kohalikku andmekausta „%1“ ei õnnestu kirjutada.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="403"/>
+        <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to load the database due to an unknown error.</source>
         <translation>Andmebaasi laadimine ei õnnestunud tundmatu vea tõttu.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="406"/>
+        <location filename="../qml/harbour-captains-log.qml" line="409"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
         <translation>„%1“ asuva andmebaasi uuendamine viimasele versioonile ei õnnestunud. Üksikasjad: %2</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="410"/>
+        <location filename="../qml/harbour-captains-log.qml" line="413"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
         <translation>Sailjaili toe jaoks vajalik failide asukoha muutmine ei õnnestunud: „%1“ ↦ „%2“.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="414"/>
+        <location filename="../qml/harbour-captains-log.qml" line="417"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
         <translation>„%1“ asuva andmebaasi uuendamine viimasele versioonile ei õnnestunud, sest versiooninumber on puudu.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="418"/>
+        <location filename="../qml/harbour-captains-log.qml" line="421"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
         <translation>„%1“ andmebaasiversioon ei ühildu rakenduse selle versiooniga. Viimane toetatud andmebaasiversioon on „%2“.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="425"/>
+        <location filename="../qml/harbour-captains-log.qml" line="428"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
         <translation>Tundmatut failitüüpi „%1“ ei saa eksportida. Palun teata meile sellest veast.</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="439"/>
+        <location filename="../qml/harbour-captains-log.qml" line="442"/>
         <source>Backup failed</source>
         <translation>Varukoopa tegemine ei õnnestunud</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-captains-log.qml" line="470"/>
+        <location filename="../qml/harbour-captains-log.qml" line="476"/>
         <source>The database could not be loaded.</source>
         <translation>Andebaasi laadimine ei õnnestunud.</translation>
     </message>
