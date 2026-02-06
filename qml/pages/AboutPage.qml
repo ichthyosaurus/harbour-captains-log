@@ -79,7 +79,7 @@ A.AboutPageBase {
             groups: [
                 A.ContributionGroup {
                     title: qsTr("Programming")
-                    entries: ["Mirian Margiani", "Gabriel Berkigt"]
+                    entries: ["Mirian Margiani", "Gabriel Berkigt", "Smooth-E"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Icon Design")
