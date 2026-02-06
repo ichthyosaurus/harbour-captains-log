@@ -3,6 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2020 Gabriel Berkigt
  * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2025 Smooth-E
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -21,10 +22,10 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../components"
 
 Page {
     id: page
-    allowedOrientations: Orientation.All
 
     property string expectedCode: ""
     property alias enteredCode: pinField.text
@@ -32,20 +33,63 @@ Page {
 
     signal accepted
 
-    SilicaFlickable {
-        id: content
-        anchors.fill: parent
-        contentHeight: Screen.height
-        VerticalScrollDecorator { flickable: content }
+    allowedOrientations: Orientation.All
+    state: isLandscape ? "landscape" : "portrait"
+
+    states: [
+        State {
+            name: "landscape"
+
+            AnchorChanges {
+                target: infoContainer
+
+                anchors {
+                    verticalCenter: page.verticalCenter
+                    bottom: undefined
+                }
+            }
+
+            AnchorChanges {
+                target: keypadContainer
+                anchors.left: infoContainer.right
+            }
+        },
+        State {
+            name: "portrait"
+
+            AnchorChanges {
+                target: infoContainer
+
+                anchors {
+                    verticalCenter: undefined
+                    bottom: keypadContainer.top
+                }
+            }
+
+            AnchorChanges {
+                target: keypadContainer
+                anchors.left: page.left
+            }
+        }
+    ]
+
+    Column {
+        id: infoContainer
+
+        anchors {
+            left: parent.left
+            rightMargin: Theme.paddingLarge
+            leftMargin: Theme.paddingLarge
+        }
+
+        width: (isLandscape ? parent.width / 2 : parent.width) - Theme.paddingLarge * 2
+        height: childrenRect.height
+        spacing: Theme.paddingMedium
 
         Label {
             id: infoLabel
-            anchors {
-                top: parent.top; bottom: errorLabel.top
-                left: parent.left; right: parent.right
-                leftMargin: 3*Theme.paddingLarge; rightMargin: 3*Theme.paddingLarge
-            }
 
+            width: parent.width
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
@@ -58,80 +102,83 @@ Page {
 
         Label {
             id: errorLabel
-            property bool haveError: false
-            onHaveErrorChanged: opacity = haveError ? 1.0 : 0.0
 
-            anchors.bottom: pinRow.top
+            property bool haveError: false
+
             width: parent.width
             horizontalAlignment: Text.AlignHCenter
             color: Theme.secondaryColor
             text: qsTr("please try again")
-            Behavior on opacity { NumberAnimation { duration: 200 } }
-            opacity: 0
-        }
+            opacity: haveError ? 1 : 0
 
-        // input field with delete button
-        Row {
-            id: pinRow
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: keypad.top
-            width: parent.width * 0.66
-
-            TextField {
-                id: pinField
-                anchors.verticalCenter: deleteButton.verticalCenter
-                width: parent.width - deleteButton.width
-                readOnly: true
-                font.pixelSize: 1.5*Theme.fontSizeHuge
-                echoMode: TextInput.Password
-                passwordCharacter: "\u2022"
-                validator: IntValidator {bottom: 0; top: 9}
-                horizontalAlignment: Text.AlignRight
-                labelVisible: false
-                textTopMargin: 0
-                textMargin: 0
-                color: Theme.highlightColor
-                onTextChanged: {
-                    // reset color and error label after incorrect input
-                    color = Theme.highlightColor
-                    errorLabel.haveError = false
-                }
-            }
-
-            IconButton {
-                id: deleteButton
-                icon.source: "image://theme/icon-m-backspace-keypad"
-                visible: pinField.text.length === 0 ? false : true
-                onClicked: {
-                    var s = pinField.text
-                    pinField.text = s.substring(0, s.length-1)
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 200
                 }
             }
         }
 
-        BackgroundItem {
+        TextField {
+            id: pinField
+
+            width: keypad.width
+            readOnly: true
+            font.pixelSize: 1.5 * Theme.fontSizeHuge
+            echoMode: TextInput.Password
+            passwordCharacter: "\u2022"
+            horizontalAlignment: Text.AlignHCenter
+            labelVisible: false
+            textTopMargin: 0
+            textMargin: 0
+            color: Theme.highlightColor
+
+            validator: IntValidator {
+                bottom: 0
+                top: 9
+            }
+
+            onTextChanged: {
+                // reset color and error label after incorrect input
+                color = Theme.highlightColor
+                errorLabel.haveError = false
+            }
+        }
+    }
+
+    Item {
+        id: keypadContainer
+
+        anchors.bottom: parent.bottom
+        width: isLandscape ? parent.width / 2 : parent.width
+        height: isLandscape ? parent.height : parent.height / 2
+
+        Keypad {
+            id: keypad
+
+            anchors.centerIn: parent
+            vanityDialNumbersVisible: false
+            symbolsVisible: false
+
+            onClicked: {
+                if (errorLabel.haveError) {
+                    // delete wrong pin and try again
+                    pinField.text = number
+                } else {
+                    pinField.text = pinField.text + number
+                }
+            }
+        }
+
+        KeypadButton {
             id: enterButton
-            highlighted: down
-            highlightedColor: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
-            width: keypad._buttonWidth
-            height: keypad._buttonHeight
 
             anchors {
-                right: keypad.right; rightMargin: keypad._horizontalPadding
+                right: keypad.right
                 bottom: keypad.bottom
-                bottomMargin: 0
+                rightMargin: keypad._horizontalPadding
             }
 
-            Icon {
-                id: icon
-                anchors {
-                    centerIn: parent
-                    verticalCenterOffset: -Theme.fontSizeExtraSmall / 3
-                }
-                source: "image://theme/icon-m-accept"
-                highlighted: parent.highlighted
-                color: Theme.primaryColor
-            }
+            icon.source: "image://theme/icon-m-accept"
 
             onClicked: {
                 if (expectedCode === "" || pinField.text === expectedCode) {
@@ -144,26 +191,27 @@ Page {
             }
         }
 
-        Keypad {
-            id: keypad
+        KeypadButton {
+            id: deleteButton
+
             anchors {
-                bottom: parent.bottom; bottomMargin: Theme.paddingLarge
-                left: parent.left; leftMargin: Theme.horizontalPageMargin
-                right: parent.right; rightMargin: Theme.horizontalPageMargin
+                left: keypad.left
+                bottom: keypad.bottom
+                leftMargin: keypad._horizontalPadding
             }
 
-            vanityDialNumbersVisible: false
-            symbolsVisible: false
-            onClicked: {
-                if (errorLabel.haveError) pinField.text = number // delete wrong pin and try again
-                else pinField.text = pinField.text + number
-            }
-        }
+            icon.source: "image://theme/icon-m-backspace-keypad"
+            opacity: pinField.text.length > 0 ? 1 : 0
+            enabled: opacity === 1
+            visible: opacity > 0
 
-        Item {
-            id: spacer
-            width: parent.width
-            height: Theme.paddingLarge
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 200
+                }
+            }
+
+            onClicked: pinField.text = pinField.text.substring(0, pinField.text.length - 1)
         }
     }
 }
