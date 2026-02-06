@@ -80,6 +80,12 @@ Dialog {
         }
     }
 
+    Timer {
+        running: true
+        interval: 300
+        onTriggered: textField.forceActiveFocus()
+    }
+
     SilicaFlickable {
         id: flick
         anchors.fill: parent
