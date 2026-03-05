@@ -204,12 +204,12 @@
         <location filename="../qml/components/EntryElementSelectable.qml" line="78"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aggiunta da %1</translation>
     </message>
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation type="unfinished">umore: %1</translation>
+        <translation>stato: %1</translation>
     </message>
 </context>
 <context>
@@ -292,48 +292,48 @@
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="135"/>
         <source>Export a compressed copy of the actual database file. This database can later be put back into place. Use “Settings → Database backup” to create an internal backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esportare una copia compressa del file attuale del database. Questo database potrà essere ripristinato in seguito. Utilizzare &quot;Impostazioni → Backup del database&quot; per creare un backup interno.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="146"/>
         <source>Entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Voci</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="154"/>
         <source>All entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tutte le voci</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="158"/>
         <source>Selected entries</source>
         <comment>as in “which entries to export”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Voci selezionate</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="177"/>
         <source>Select entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona le voci</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ExportPage.qml" line="178"/>
         <source>%n entries selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n voce selezionata</numerusform>
+            <numerusform>%n voci selezionate</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="191"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Esportare</translation>
     </message>
     <message>
         <location filename="../qml/pages/ExportPage.qml" line="192"/>
         <source>Data is being exported to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>I dati vengono esportati in %1</translation>
     </message>
 </context>
 <context>
@@ -354,55 +354,55 @@
         <location filename="../qml/components/ExportTranslations.qml" line="13"/>
         <source>Addendum from {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aggiunta da {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="14"/>
         <source>Diary from {0} to {1}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Diario da {0} a {1}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="15"/>
         <source>last changed on {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>ultima modifica il {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="16"/>
         <source>Mood: {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Stato: {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="17"/>
         <source>Note: this requires “pandoc” and “lualatex”.</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Nota: questo richiede “pandoc” e “lualatex”.</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="18"/>
         <source>README.txt</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>LEGGIMI.txt</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="19"/>
         <source>Tags: {0}</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tag: {0}</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="20"/>
         <source>This file has been exported from Captain&apos;s Log on {0}.</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Questo file è stato esportato dal Registro del capitano il {0}.</translation>
     </message>
     <message>
         <location filename="../qml/components/ExportTranslations.qml" line="21"/>
         <source>You can convert this file to PDF using the following command:</source>
         <comment>This string is used in export templates and uses Python formatting. See https://strftime.org for how to format dates and https://docs.python.org/3/library/stdtypes.html#str.format for more information.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Puoi convertire questo file in PDF utilizzando il seguente comando:</translation>
     </message>
 </context>
 <context>
@@ -410,12 +410,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorri verso sinistra per visualizzare l&apos;anteprima.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai utilizzando una connessione dati mobile.</translation>
     </message>
 </context>
 <context>
@@ -428,27 +428,27 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Search</source>
-        <translation type="unfinished">Cerca</translation>
+        <translation>Ricerca</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="69"/>
         <source>Add new entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi nuova voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="58"/>
         <source>Settings and Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni ed Esportazione</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="87"/>
         <source>No entries yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Ancora nessuna voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="88"/>
         <source>Swipe left to add entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorri verso sinistra per aggiungere voci</translation>
     </message>
 </context>
 <context>
@@ -464,7 +464,7 @@
     <message>
         <location filename="../qml/components/LimitedDatePickerDialog.qml" line="19"/>
         <source>It is not possible to add entries for the future.</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è possibile aggiungere voci per il futuro.</translation>
     </message>
 </context>
 <context>
@@ -622,7 +622,7 @@
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai utilizzando una connessione dati mobile.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
@@ -707,12 +707,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia link</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia testo</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -727,12 +727,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
         <source>No preview available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna anteprima disponibile.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
         <source>The page is taking too long to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>La pagina impiega troppo tempo a caricarsi.</translation>
     </message>
 </context>
 <context>
@@ -740,12 +740,12 @@
     <message>
         <location filename="../qml/pages/PinPage.qml" line="20"/>
         <source>Please enter your security code</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci il tuo codice di sicurezza</translation>
     </message>
     <message>
         <location filename="../qml/pages/PinPage.qml" line="99"/>
         <source>please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>per favore riprova</translation>
     </message>
 </context>
 <context>
@@ -753,23 +753,23 @@
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="35"/>
         <source>Edit</source>
-        <translation type="unfinished">Modifica</translation>
+        <translation>Modificare</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="109"/>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Stato</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aggiunta da %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="227"/>
         <source>last edited on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ultima modifica il %1</translation>
     </message>
 </context>
 <context>
@@ -777,222 +777,222 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="103"/>
         <source>Any may match</source>
-        <translation type="unfinished"></translation>
+        <translation>Qualsiasi può corrispondere</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="110"/>
         <source>All must match</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti devono corrispondere</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="119"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Indietro</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="120"/>
         <source>Search</source>
-        <translation type="unfinished">Cerca</translation>
+        <translation>Ricerca</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
         <source>Title and entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Titolo e voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="130"/>
         <source>Search contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca contenuti</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="156"/>
         <source>Search tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca tag</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="179"/>
         <source>Search syntax</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca sintassi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="187"/>
         <source>Use simplified plain text searching if you are unsure how you spelled something in the past: select “plain text” as search syntax here, and “simplified” as search mode in the separate setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se non sei sicuro di come hai scritto qualcosa in passato, usa la ricerca semplificata in testo normale: seleziona &quot;testo normale&quot; come sintassi di ricerca qui e &quot;semplificato&quot; come modalità di ricerca nell&apos;impostazione separata.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="226"/>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="272"/>
         <source>Note</source>
-        <translation type="unfinished">Nota</translation>
+        <translation>Nota</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="196"/>
         <source>plain text</source>
-        <translation type="unfinished"></translation>
+        <translation>testo semplice</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="198"/>
         <source>Search for the string as you entered it. Note: some simplifications will be applied to the search term if the “Search mode” is set to “simplified”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca la stringa così come l&apos;hai inserita. Nota: se la &quot;Modalità di ricerca&quot; è impostata su &quot;semplificata&quot;, al termine di ricerca verranno applicate alcune semplificazioni.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="204"/>
         <source>wildcard</source>
-        <translation type="unfinished"></translation>
+        <translation>carattere jolly</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="206"/>
         <source>This option allows to search for extended patterns. Use “?” to match any single character, and “*” to match zero or more characters. Groups of characters can be defined in square brackets. Use a backslash to search for literal “?” or “*”, e.g. “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa opzione consente di cercare pattern estesi. Utilizzare &quot;?&quot; per trovare un singolo carattere e &quot;*&quot; per trovare zero o più caratteri. I gruppi di caratteri possono essere definiti tra parentesi quadre. Utilizzare una barra rovesciata per cercare &quot;?&quot; o &quot;*&quot; letterali, ad esempio &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="214"/>
         <source>regular expression</source>
-        <translation type="unfinished"></translation>
+        <translation>espressione regolare</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="216"/>
         <source>Search using complex regular expressions. Use the vertical bar “|” to search for multiple terms. Search the Internet if you want to learn more about regular expressions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca utilizzando espressioni regolari complesse. Utilizza la barra verticale &quot;|&quot; per cercare più termini. Cerca su Internet se desideri saperne di più sulle espressioni regolari.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="237"/>
         <source>Search mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modalità di ricerca</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="251"/>
         <source>simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>semplificato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="253"/>
         <source>Ignore diacritics on characters, matching e.g. “ö”, “ó”, and “õ” when searching for “o”. Ignore any punctuation marks. Use this mode when you are unsure how you spelled something in the past.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignora i segni diacritici sui caratteri, ad esempio &quot;ö&quot;, &quot;ó&quot; e &quot;õ&quot; quando cerchi &quot;o&quot;. Ignora eventuali segni di punteggiatura. Usa questa modalità quando non sei sicuro di come hai scritto qualcosa in passato.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="260"/>
         <source>strict</source>
-        <translation type="unfinished"></translation>
+        <translation>rigoroso</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="262"/>
         <source>Match the query string exactly. Use this mode when you know exactly what you are searching for, or when you want to search for a string containing punctuation marks like “-”, “!”, or “#”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrisponde esattamente alla stringa di query. Utilizza questa modalità quando sai esattamente cosa stai cercando o quando vuoi cercare una stringa contenente segni di punteggiatura come &quot;-&quot;, &quot;!&quot; o &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="282"/>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Segnalibri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="291"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are bookmarked or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>tutte le voci</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="295"/>
         <source>Find entries regardless of whether they are bookmarked or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trova le voci indipendentemente dal fatto che siano aggiunte ai preferiti o meno.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="300"/>
         <source>marked</source>
         <comment>search option, as in: “find only bookmarked entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>segnato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="303"/>
         <source>Find only bookmarked entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trova solo le voci aggiunte ai preferiti.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="306"/>
         <source>unmarked</source>
         <comment>search option, as in: “find only entries that are not bookmarked”</comment>
-        <translation type="unfinished"></translation>
+        <translation>non contrassegnato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="309"/>
         <source>Find only entries that are not bookmarked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trova solo le voci che non sono nei segnalibri.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="319"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selezione</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="328"/>
         <source>all entries</source>
         <comment>search option, as in: “find all entries, whether they are currently selected or not”</comment>
-        <translation type="unfinished"></translation>
+        <translation>tutte le voci</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="332"/>
         <source>Find entries regardless of whether they are selected or not.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trova le voci indipendentemente dal fatto che siano selezionate o meno.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="337"/>
         <source>selected</source>
         <comment>search option, as in: “find only selected entries”</comment>
-        <translation type="unfinished"></translation>
+        <translation>selezionato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="340"/>
         <source>Find only currently selected entries.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trova solo le voci attualmente selezionate.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="343"/>
         <source>unselected</source>
         <comment>search option, as in: “find only entries that are not selected</comment>
-        <translation type="unfinished"></translation>
+        <translation>deselezionato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="346"/>
         <source>Find only entries that are currently not selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trova solo le voci che al momento non sono selezionate.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="352"/>
         <source>Mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Stato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="363"/>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="391"/>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="373"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>A</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="382"/>
         <source>Entry date</source>
-        <translation type="unfinished"></translation>
+        <translation>Data di ingresso</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="392"/>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="400"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>in qualsiasi momento</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="399"/>
         <source>Until</source>
-        <translation type="unfinished"></translation>
+        <translation>Fino a</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="408"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tenere premuto per reimpostare la data.</translation>
     </message>
 </context>
 <context>
@@ -1000,46 +1000,46 @@
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="53"/>
         <source>Search</source>
-        <translation type="unfinished">Cerca</translation>
+        <translation>Ricerca</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchResultsPage.qml" line="54"/>
         <source>%n result(s)</source>
         <comment>search results</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n risultato</numerusform>
+            <numerusform>%n risultati</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="59"/>
         <source>No entries found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna voce trovata</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="60"/>
         <source>Swipe back to change search criteria</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorri indietro per modificare i criteri di ricerca</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="39"/>
         <source>Add new entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi nuova voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="44"/>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra anteprime</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="45"/>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra voci complete</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchResultsPage.qml" line="31"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Esportare</translation>
     </message>
 </context>
 <context>
@@ -1047,48 +1047,48 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="49"/>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancella selezione</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="55"/>
         <source>Show previews</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra anteprime</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="56"/>
         <source>Show full entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra voci complete</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="62"/>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona tutto</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="67"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="83"/>
         <source>Select %n</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Seleziona %n</numerusform>
+            <numerusform>Seleziona %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="89"/>
         <source>%n entries shown</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n voce visualizzata</numerusform>
+            <numerusform>%n voci visualizzate</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="100"/>
         <source>No entries found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna voce trovata</translation>
     </message>
 </context>
 <context>
@@ -1096,109 +1096,109 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="92"/>
         <source>Settings</source>
-        <translation type="unfinished">Impostazioni</translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>Activate code protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva la protezione del codice</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>Set Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Imposta il codice</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>Change Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambia codice</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="96"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Sicurezza</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Aspetto</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Enable mood tracking</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita il monitoraggio dello stato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>Disable this setting to disable all mood related features completely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Disattivare questa impostazione per disattivare completamente tutte le funzionalità relative allo stato.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>Note that entries will save your mood as “okay” if this setting is disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tieni presente che se questa impostazione è disabilitata, le voci salveranno il tuo stato come &quot;ok&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>Always ask for mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiedi sempre lo stato</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>This enables asking for your mood immediately when creating a new entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciò consente di chiedere immediatamente il tuo stato quando crei una nuova voce.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>Insights</source>
-        <translation type="unfinished"></translation>
+        <translation>Approfondimenti</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Voci</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
         <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished"></translation>
+        <translation>in qualsiasi momento</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
-        <translation type="unfinished"></translation>
+        <translation>Fino a</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="289"/>
         <source>Press and hold to reset the date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tenere premuto per reimpostare la data.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>Export data</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta dati</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>Please note that this code only prevents access to the app. The database is not encrypted, and the code is not stored securely.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si prega di notare che questo codice impedisce solo l&apos;accesso all&apos;app. Il database non è crittografato e il codice non è archiviato in modo sicuro.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>Export and backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Esportazione e backup</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
-        <translation type="unfinished">Backup del database</translation>
+        <translation>Backup del database</translation>
     </message>
 </context>
 <context>
@@ -1234,9 +1234,9 @@
     <message numerus="yes">
         <location filename="../qml/components/TagSuggestionsView.qml" line="112"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... e %n altro</numerusform>
+            <numerusform>... e altri %n</numerusform>
         </translation>
     </message>
 </context>
@@ -1245,88 +1245,88 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="143"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvare</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="142"/>
         <source>New Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="183"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Titolo</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="206"/>
         <source>Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="142"/>
         <source>Edit Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificare voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="168"/>
         <source>How did you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Come ti sei sentito?</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="168"/>
         <source>How do you feel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Come ti senti?</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="182"/>
         <source>Add a title</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungere un titolo</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="205"/>
         <source>What do you want to say?</source>
-        <translation type="unfinished"></translation>
+        <translation>Cosa vuoi dire?</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="153"/>
         <source>never</source>
-        <translation type="unfinished">mai</translation>
+        <translation>mai</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="123"/>
         <source>Discarded all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Scartate tutte le modifiche</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="125"/>
         <source>Discarded the entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Scartata la voce</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="144"/>
         <source>Discard</source>
-        <translation type="unfinished"></translation>
+        <translation>Scartare</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
-        <translation type="unfinished">Data</translation>
+        <translation>Data</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>
         <source>Last edited: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima modifica: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="169"/>
         <source>Your mood</source>
-        <translation type="unfinished"></translation>
+        <translation>Il tuo stato</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="235"/>
         <location filename="../qml/pages/WritePage.qml" line="236"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag</translation>
     </message>
 </context>
 <context>
@@ -1335,158 +1335,158 @@
         <location filename="../qml/harbour-captains-log.qml" line="132"/>
         <source>%1 (%2)</source>
         <comment>1: date, 2: time zone info</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2)</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="48"/>
         <source>Captain&apos;s Log</source>
         <comment>the app&apos;s name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Diario del capitano</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="50"/>
         <source>&apos;at&apos; hh&apos;:&apos;mm</source>
         <comment>time format, as in “at 10:00 (o&apos;clock)”</comment>
-        <translation type="unfinished"></translation>
+        <translation>&apos;alle&apos; hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="64"/>
         <source>fantastic</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>fantastico</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="65"/>
         <source>good</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>bene</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="66"/>
         <source>okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>va bene</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="67"/>
         <source>not okay</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>non va bene</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="68"/>
         <source>bad</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>cattivo</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="69"/>
         <source>horrible</source>
         <comment>as in “my mood is...”</comment>
-        <translation type="unfinished"></translation>
+        <translation>orribile</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="52"/>
         <source>d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>date and time format, as in “Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished"></translation>
+        <translation>dd MM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="58"/>
         <source>d MMM yyyy</source>
         <comment>date format, as in “Dec. 1st 2023”</comment>
-        <translation type="unfinished"></translation>
+        <translation>dd MM yyyy</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="54"/>
         <source>ddd d MMM yyyy, hh&apos;:&apos;mm</source>
         <comment>full date and time format, as in “Fri., Dec. 1st 2023, 10:00 o&apos;clock”</comment>
-        <translation type="unfinished"></translation>
+        <translation>dd MM yyyy, hh&apos;:&apos;mm</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="56"/>
         <source>ddd d MMM yyyy</source>
         <comment>full date format, as in “Fri., Dec. 1st 2023”</comment>
-        <translation type="unfinished"></translation>
+        <translation>dd MM yyyy</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="60"/>
         <source>d MMM</source>
         <comment>date format without year, as in “Dec. 1st”</comment>
-        <translation type="unfinished"></translation>
+        <translation>dd MM</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="373"/>
         <source>An unexpected error occurred. Please restart the app and check the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si è verificato un errore imprevisto. Riavvia l&apos;app e controlla i registri.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="326"/>
         <location filename="../qml/harbour-captains-log.qml" line="342"/>
         <source>Database backup</source>
-        <translation type="unfinished">Backup del database</translation>
+        <translation>Backup del database</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="336"/>
         <source>Backup finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup terminato</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="337"/>
         <source>A database backup has been created in “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>È stato creato un backup del database in “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="386"/>
         <location filename="../qml/harbour-captains-log.qml" line="434"/>
         <location filename="../qml/harbour-captains-log.qml" line="476"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="403"/>
         <source>The local data folder at “%1” is not writable.</source>
-        <translation type="unfinished"></translation>
+        <translation>La cartella dati locale in “%1” non è scrivibile.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="406"/>
         <source>Failed to load the database due to an unknown error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile caricare il database a causa di un errore sconosciuto.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="409"/>
         <source>Failed to update the database at “%1” to the latest version. Details: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aggiornare il database in &quot;%1&quot; all&apos;ultima versione. Dettagli: %2</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="413"/>
         <source>Failed to move files for Sailjail support from “%1” to “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile spostare i file per il supporto Sailjail da “%1” a “%2”.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="417"/>
         <source>Failed to update the database to its latest version because the version file is missing at “%1”.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile aggiornare il database alla versione più recente perché il file della versione è mancante in &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="421"/>
         <source>The database version “%1” is incompatible with this version of the app. The latest supported database version is “%2”.</source>
-        <translation type="unfinished"></translation>
+        <translation>La versione del database &quot;%1&quot; non è compatibile con questa versione dell&apos;app. L&apos;ultima versione del database supportata è &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="428"/>
         <source>Cannot export unknown file type “%1”. Please report this bug.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile esportare il tipo di file sconosciuto &quot;%1&quot;. Segnala questo bug.</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="442"/>
         <source>Backup failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup non riuscito</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="476"/>
         <source>The database could not be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile caricare il database.</translation>
     </message>
 </context>
 </TS>
