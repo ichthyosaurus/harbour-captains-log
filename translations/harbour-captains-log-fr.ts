@@ -130,7 +130,7 @@
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="14"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <location filename="../qml/components/DatePickerCombo.qml" line="16"/>
@@ -753,18 +753,18 @@
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="35"/>
         <source>Edit</source>
-        <translation type="unfinished">Modifier</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="109"/>
         <source>Mood</source>
-        <translation type="unfinished">Humeur</translation>
+        <translation>Humeur</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">Ajout du %1</translation>
+        <translation>Ajout du %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="227"/>
@@ -1161,7 +1161,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished">De</translation>
+        <translation>De</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
@@ -1310,7 +1310,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>
