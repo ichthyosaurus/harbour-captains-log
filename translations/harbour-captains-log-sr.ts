@@ -756,7 +756,7 @@
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="35"/>
         <source>Edit</source>
-        <translation type="unfinished">uredi</translation>
+        <translation>uredi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="109"/>
@@ -767,7 +767,7 @@
         <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">dodatak od %1</translation>
+        <translation>dodatak od %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="227"/>
@@ -1204,7 +1204,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
-        <translation type="unfinished">bekap baze podataka</translation>
+        <translation>bekap baze podataka</translation>
     </message>
 </context>
 <context>
@@ -1297,7 +1297,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="153"/>
         <source>never</source>
-        <translation type="unfinished">nikada</translation>
+        <translation>nikada</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="123"/>
@@ -1317,7 +1317,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
-        <translation type="unfinished">datum</translation>
+        <translation>datum</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>
@@ -1431,7 +1431,7 @@
         <location filename="../qml/harbour-captains-log.qml" line="326"/>
         <location filename="../qml/harbour-captains-log.qml" line="342"/>
         <source>Database backup</source>
-        <translation type="unfinished">bekap baze podataka</translation>
+        <translation>bekap baze podataka</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="336"/>

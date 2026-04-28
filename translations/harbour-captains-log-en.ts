@@ -1156,24 +1156,24 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="260"/>
         <source>Entries</source>
-        <translation type="unfinished">Entries</translation>
+        <translation>Entries</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="270"/>
         <source>From</source>
-        <translation type="unfinished">From</translation>
+        <translation>From</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="271"/>
         <location filename="../qml/pages/SettingsPage.qml" line="280"/>
         <source>anytime</source>
         <comment>search option, as in: “match all entries regardless of their date”</comment>
-        <translation type="unfinished">anytime</translation>
+        <translation>anytime</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="279"/>
         <source>Until</source>
-        <translation type="unfinished">Until</translation>
+        <translation>Until</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="289"/>

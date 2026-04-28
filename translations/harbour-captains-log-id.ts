@@ -195,7 +195,7 @@
     <message>
         <location filename="../qml/components/EntryElementFull.qml" line="86"/>
         <source>mood: %1</source>
-        <translation type="unfinished">suasana hati: %1</translation>
+        <translation>suasana hati: %1</translation>
     </message>
 </context>
 <context>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../qml/components/EntryElementSelectable.qml" line="111"/>
         <source>mood: %1</source>
-        <translation type="unfinished">suasana hati: %1</translation>
+        <translation>suasana hati: %1</translation>
     </message>
 </context>
 <context>
@@ -750,7 +750,7 @@
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="35"/>
         <source>Edit</source>
-        <translation type="unfinished">Ubah</translation>
+        <translation>Ubah</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="109"/>
@@ -1283,7 +1283,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="153"/>
         <source>never</source>
-        <translation type="unfinished">tidak pernah</translation>
+        <translation>tidak pernah</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="123"/>
@@ -1303,7 +1303,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
-        <translation type="unfinished">Tanggal</translation>
+        <translation>Tanggal</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>

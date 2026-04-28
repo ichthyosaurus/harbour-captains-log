@@ -761,7 +761,7 @@
         <location filename="../qml/pages/ReadPage.qml" line="157"/>
         <source>Addendum from %1</source>
         <comment>as in “Addendum written on May 5th to a diary entry on May 10th”</comment>
-        <translation type="unfinished">增编来自 %1</translation>
+        <translation>增编来自 %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ReadPage.qml" line="227"/>
@@ -789,7 +789,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="120"/>
         <source>Search</source>
-        <translation type="unfinished">搜索</translation>
+        <translation>搜索</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="124"/>
@@ -956,7 +956,7 @@
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="352"/>
         <source>Mood</source>
-        <translation type="unfinished">心情</translation>
+        <translation>心情</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchQueryDialog.qml" line="363"/>
@@ -1082,7 +1082,7 @@
     <message>
         <location filename="../qml/pages/SelectEntriesDialog.qml" line="100"/>
         <source>No entries found</source>
-        <translation type="unfinished">暂无事项</translation>
+        <translation>暂无事项</translation>
     </message>
 </context>
 <context>
@@ -1192,7 +1192,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="180"/>
         <source>Database backup</source>
-        <translation type="unfinished">数据库备份</translation>
+        <translation>数据库备份</translation>
     </message>
 </context>
 <context>
@@ -1303,7 +1303,7 @@
     <message>
         <location filename="../qml/pages/WritePage.qml" line="148"/>
         <source>Date</source>
-        <translation type="unfinished">日期</translation>
+        <translation>日期</translation>
     </message>
     <message>
         <location filename="../qml/pages/WritePage.qml" line="152"/>
@@ -1417,7 +1417,7 @@
         <location filename="../qml/harbour-captains-log.qml" line="326"/>
         <location filename="../qml/harbour-captains-log.qml" line="342"/>
         <source>Database backup</source>
-        <translation type="unfinished">数据库备份</translation>
+        <translation>数据库备份</translation>
     </message>
     <message>
         <location filename="../qml/harbour-captains-log.qml" line="336"/>
