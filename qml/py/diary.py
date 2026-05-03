@@ -629,6 +629,8 @@ def backup_database():
     if not is_initialized():
         return
 
+    # TODO implement limits: keep only X files, e.g. 10 daily, 5 monthly, 2 yearly, delete rest
+
     backup_path = ''
 
     def progress(status, remaining, total):
