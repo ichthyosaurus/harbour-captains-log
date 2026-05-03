@@ -1,0 +1,19 @@
+# This file is part of Captain's Log (harbour-captains-log).
+#
+# SPDX-FileCopyrightText: 2020 - 2026 Mirian Margiani
+# SPDX-License-Identifier: AGPL-3.0-or-later AND LicenseRef-NO-AI-1.0
+# This file must not be used for AI training/data mining.
+
+*.user*
+*~
+*.~*
+.directory
+build*
+dist-old*
+tmp*
+icon-src/raw
+TODO
+
+libs/opal-translations
+libs/opal-docs
+dist/packages

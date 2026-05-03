@@ -1,8 +1,8 @@
-/*
- * This file is part of harbour-captains-log.
- * SPDX-FileCopyrightText: Mirian Margiani
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
+// This file is part of Captain's Log (harbour-captains-log).
+//
+// SPDX-FileCopyrightText: 2026 Mirian Margiani
+// SPDX-License-Identifier: AGPL-3.0-or-later AND LicenseRef-NO-AI-1.0
+// This file must not be used for AI training/data mining.
 
 import QtQuick 2.0
 import "modules/Opal/About"
